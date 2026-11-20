@@ -32,7 +32,7 @@ part of the diagnostic work is deciding which numbers to trust.
 |---|---|---|
 | Deployment frequency | 2 releases per month | median 3 deployments per week per service |
 | Lead time for changes, commit to production (median) | 19 days | 3 days |
-| Change failure rate | 31 percent of releases | 18 percent of deployments |
+| Change failure rate | 31 percent of releases (4 of the last 13, over 26 weeks) | 18 percent of deployments |
 
 | Measure, whole organization | Value |
 |---|---|

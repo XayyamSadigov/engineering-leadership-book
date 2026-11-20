@@ -22,6 +22,10 @@ more useful than one with thirty fields they skip.
 | [Organizational design assessment](organizational-design-assessment.md) | Teams, spans, dependencies, ownership, and cognitive load in one assessment |
 | [Quarterly engineering review](quarterly-engineering-review.md) | A quarter's results, risks, and decisions for executives |
 | [Capacity planning model](capacity-planning-model.md) | Capacity by category with planned and cautious cases |
+| [Engineering strategy](engineering-strategy.md) | Diagnosis, guiding policies, and coherent actions on about two pages |
+| [Technology investment business case](technology-investment-business-case.md) | Cost, value channels, cost of delay, payback, and sensitivity for one investment |
+| [Stakeholder map](stakeholder-map.md) | One map per decision: power, interest, position, and an engagement plan |
+| [Executive update](executive-update.md) | A one-page update to executives: results, risks, and the decisions asked for |
 
 The remaining templates in the [curriculum](../curriculum.md) are planned and will be added with
 the chapters that teach them.

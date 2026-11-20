@@ -1,0 +1,32 @@
+week,manager,item,source
+baseline,all six,"Reviewed once a year on roadmap delivery only, against a one-line job description",baseline data (management and roles)
+baseline,Priya Raman,"Time: people 15%, delivery 35%, technical 45%, other 5%; still writes code; reviewed about 15 of Orders' 25 weekly Core merge requests; one-on-ones mostly cancelled",baseline data
+baseline,Marcus Oyelaran,"Time: people 15%, delivery 55%, technical 15%, other 15%; technical direction decided during incidents; 126 of 180 pages handled first by three ledger engineers",baseline data
+baseline,Elena Sokolova,"Time: people 35%, delivery 35%, technical 15%, other 15%; weekly operations review for two years; near-miss log with 17 entries, none about the payments-gateway configuration file",baseline data
+baseline,Daniel Cho,"Time: people 45%, delivery 35%, technical 5%, other 15%; weekly 30-minute one-on-ones with all 15, rarely cancelled, mostly status",baseline data
+baseline,Farah Haddad,"Time: people 25%, delivery 20%, technical 45%, other 10%; the team's data architect; one promotion to Senior in two years",baseline data
+baseline,Tom Becker,"Time: people 25%, delivery 50%, technical 10%, other 15%; reassigned 31 of Bram Verhoeven's 74 tickets without telling him; review said meets expectations",baseline data
+2,Priya Raman,"Agrees a cap of 8 hands-on hours a week; Aisha Bello leads bulk-ordering implementation; Rafael Duarte and Aisha Bello own order-capture reviews; Rafael takes the open bulk-upload test action",first quarter (timeline)
+4,all six,"Prevention allocation agreed per team (Billing 25%, Orders and Payments 10%, others 15%)",first quarter
+4-5,all six,"Trained as incident commanders with the staff engineers and three senior engineers; Marcus Oyelaran had asked to skip the training",first quarter; Chapter 41
+5,all six,Tier 1 operational minimums decided,first quarter; Chapter 39 (DL-04)
+quarter 1,all six,"65 open corrective actions triaged; every kept action has a manager owner",first quarter
+10,Priya Raman and Daniel Cho,"Quality engineers join; Priya has 16 reports, Daniel 17",first quarter
+quarter 2 start,Tom Becker,Drafts an expectations plan for Bram Verhoeven from a reconstruction of the baseline quarter; decision on it open,first quarter (starting points); Chapter 9
+quarter 2 start,Priya Raman,Asks whether Orders should adopt Payments and Integrations' operations review and near-miss log,first quarter (starting points); Chapter 11
+quarter 2,Marcus Oyelaran,"Billing reserves weeks 1 to 3 of quarter 2 for the ledger export; builds the ledger knowledge map; raises the tax-svc risk",first quarter (starting points); Chapters 12 16 30
+quarter 2,Farah Haddad,Data and Analytics drafts a team charter (search-svc ownership open),first quarter (starting points); Chapter 12
+14,Elena Sokolova,"ADR-0001 opened by Li Na Zhou; Victor Lindqvist tells Elena in passing to read the tables now",first quarter; Chapter 28
+14-15,Marcus Oyelaran,Stay interviews with the three ledger engineers,first quarter
+14-19,Daniel Cho,"One-on-ones: 84 of 90 held, 55 mainly status, news in 11",first quarter (starting points); Chapter 5
+16,Daniel Cho,"Team health check facilitated by Elena Sokolova: mobile red on 4 of 10 indicators",first quarter (starting points); Chapter 14
+16,Priya Raman,Hands-on time 8 hours a week at the monthly check,first quarter (quarter 2 facts)
+17,Daniel Cho,"Mateo Arango Ríos tells the director in a skip-level that he has done a lead's job for over a year",first quarter
+18,Tom Becker,"Environment waits fall from about 6 days to 2; other teams' requests on Platform Operations from 20 to 14 points",first quarter (starting points)
+19,Elena Sokolova,"Accounting integration live for the renewal customer, daily reconciliation running",first quarter (quarter 2 facts)
+20,Priya Raman,Hands-on time 10 hours a week,first quarter (quarter 2 facts)
+20,Marcus Oyelaran,"Tomasz Wierzbicki reports an outside offer 20 percent above base; handling open",first quarter (starting points)
+22,all six,One-page written expectation on the rubric's six dimensions,first quarter (quarter 2 facts)
+24,Priya Raman,Hands-on time 12 hours a week,first quarter (quarter 2 facts)
+26,all six,"Quarter 2: 17 Sev1 and Sev2, recurrences 3 of 17, tier 1 at minimums 11 of 15, corrective-action closure 78%",first quarter (quarter 2 results)
+26,Priya Raman,"Bulk ordering: 44 contractual items complete, release candidate in final acceptance, forecast to ship by the end of week 26",first quarter (quarter 2 facts)

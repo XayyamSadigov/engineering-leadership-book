@@ -431,6 +431,8 @@ numbers, with that caveat beside them.
 - **Tom Becker** says the 1.5 FTE held for migrations will be lost to product if the target decision
   slips past week 30, and asks for a date.
 - **Priya Raman** cannot yet say whether bulk ordering will need more than four weeks of support.
+- **Kwame Mensah** points out that rows 1, 3, and 6 repeat measures already in the quality block, and
+  that row 7's steward is Tom Becker's own team.
 - **Victor Lindqvist** asks each director for three OKRs for quarter 3 and suggests "Sev1 and Sev2
   incidents below 10" as a key result.
 

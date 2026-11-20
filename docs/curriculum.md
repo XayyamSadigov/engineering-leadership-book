@@ -3,7 +3,7 @@
 
 # Curriculum
 
-The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 43 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
+The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 49 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
 
 | Part | Chapters | On the site |
 |---|---|---|
@@ -16,8 +16,8 @@ The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are publishe
 | VII. Organizational Design | 33–36 | 4 of 4 |
 | VIII. Engineering Management Operating System | 37–39 | 3 of 3 |
 | IX. Engineering Directorship | 40–43 | 4 of 4 |
-| X. Product and Business Leadership | 44–46 | 0 of 3 |
-| XI. VP of Engineering | 47–49 | 0 of 3 |
+| X. Product and Business Leadership | 44–46 | 3 of 3 |
+| XI. VP of Engineering | 47–49 | 3 of 3 |
 | XII. CTO Leadership | 50–55 | 0 of 6 |
 | XIII. Advanced Leadership Problems | 56–59 | 0 of 4 |
 | XIV. Practical Management Systems and Playbooks | templates | 0 of 0 |
@@ -580,9 +580,9 @@ Primary sources: [watkins2003first](references/bibliography.md#watkins2003first)
 
 The economic and product context that engineering decisions serve.
 
-### Chapter 44 — Working with Product: Discovery and Outcome-Based Roadmaps
+### [Chapter 44 — Working with Product: Discovery and Outcome-Based Roadmaps](parts/10-business-leadership/44-working-with-product.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -592,9 +592,9 @@ After this chapter you can:
 
 Primary sources: [cagan2008inspired](references/bibliography.md#cagan2008inspired), [cagan2020empowered](references/bibliography.md#cagan2020empowered), [perri2018escaping](references/bibliography.md#perri2018escaping), [ries2011lean](references/bibliography.md#ries2011lean)
 
-### Chapter 45 — Business Models, Engineering Economics, and Investment Decisions
+### [Chapter 45 — Business Models, Engineering Economics, and Investment Decisions](parts/10-business-leadership/45-business-models-and-engineering-economics.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -604,9 +604,9 @@ After this chapter you can:
 
 Primary sources: [reinertsen2009principles](references/bibliography.md#reinertsen2009principles), [berman2006financial](references/bibliography.md#berman2006financial), [lafley2013playing](references/bibliography.md#lafley2013playing)
 
-### Chapter 46 — Stakeholder Management and Negotiation
+### [Chapter 46 — Stakeholder Management and Negotiation](parts/10-business-leadership/46-stakeholder-management-and-negotiation.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -620,9 +620,9 @@ Primary sources: [watkins2003first](references/bibliography.md#watkins2003first)
 
 Running the whole engineering function; directors, capacity, governance, and multi-year change.
 
-### Chapter 47 — The VP of Engineering: Managing Directors and the Portfolio
+### [Chapter 47 — The VP of Engineering: Managing Directors and the Portfolio](parts/11-vp-engineering/47-the-vp-of-engineering.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -632,9 +632,9 @@ After this chapter you can:
 
 Primary sources: [larson2024primer](references/bibliography.md#larson2024primer), [grove1983high](references/bibliography.md#grove1983high), [fournier2017manager](references/bibliography.md#fournier2017manager)
 
-### Chapter 48 — Capacity Strategy, Workforce Planning, and Enterprise Governance
+### [Chapter 48 — Capacity Strategy, Workforce Planning, and Enterprise Governance](parts/11-vp-engineering/48-capacity-strategy-workforce-planning-and-governance.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -644,9 +644,9 @@ After this chapter you can:
 
 Primary sources: [larson2024primer](references/bibliography.md#larson2024primer), [larson2019elegant](references/bibliography.md#larson2019elegant), [berman2006financial](references/bibliography.md#berman2006financial)
 
-### Chapter 49 — Multi-Year Transformation, Executive Communication, and Constructive Politics
+### [Chapter 49 — Multi-Year Transformation, Executive Communication, and Constructive Politics](parts/11-vp-engineering/49-multi-year-transformation-communication-and-politics.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -804,10 +804,10 @@ Reusable artifacts, each filled in with a Northstar example. This part has no ch
 | Architecture decision record | Planned |
 | [Quarterly engineering review](templates/quarterly-engineering-review.md) | On the site, awaiting human review |
 | [Capacity planning model](templates/capacity-planning-model.md) | On the site, awaiting human review |
-| Engineering strategy template | Planned |
-| Technology investment business case | Planned |
-| Stakeholder map | Planned |
-| Executive update | Planned |
+| [Engineering strategy template](templates/engineering-strategy.md) | On the site, awaiting human review |
+| [Technology investment business case](templates/technology-investment-business-case.md) | On the site, awaiting human review |
+| [Stakeholder map](templates/stakeholder-map.md) | On the site, awaiting human review |
+| [Executive update](templates/executive-update.md) | On the site, awaiting human review |
 | Leadership succession plan | Planned |
 | [90-day quality transformation plan](templates/ninety-day-quality-plan.md) | On the site, awaiting human review |
 
@@ -831,11 +831,11 @@ Primary sources: [forsgren2018accelerate](references/bibliography.md#forsgren201
 
 | Project | Status |
 |---|---|
-| P1: Build an Engineering Management Operating System | Planned |
+| P1: Build an Engineering Management Operating System | On the site, awaiting human review |
 | P2: Diagnose a Low-Performing Engineering Team | Planned |
 | P3: Create an Engineering Quality Transformation Plan | On the site, awaiting human review |
 | P4: Redesign an Organization of 80 Engineers | On the site, awaiting human review |
-| P5: Build a Delivery Performance and Reliability Scorecard | Planned |
-| P6: Create Engineering Manager Development and Succession Plans | Planned |
+| P5: Build a Delivery Performance and Reliability Scorecard | On the site, awaiting human review |
+| P6: Create Engineering Manager Development and Succession Plans | On the site, awaiting human review |
 | P7: Design a 12-Month Engineering Strategy | Planned |
 | P8: Build a CTO Technology Investment Proposal | Planned |

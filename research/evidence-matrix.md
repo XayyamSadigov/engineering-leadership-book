@@ -1153,3 +1153,152 @@ organizations (extends G22).
 | 13 | Director failure patterns table (eight patterns) | This book's recommendation | synthesis of claims 1–11 and earlier chapters | no single source |
 | 14 | Change-load arithmetic per manager (110-engineer example) | Illustrative | none | worked example with stated assumptions |
 | 15 | Northstar Excellence Day and the director's self-assessment | Illustrative | Northstar canon plus research/northstar-additions/ch43.md | fictional |
+
+## Chapter 44 — Working with Product: Discovery and Outcome-Based Roadmaps
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | A product idea must survive four risks (value, usability, feasibility, business viability), worked by product, design, and engineering together | Expert opinion | cagan2008inspired | idea-level (metadata-only) |
+| 2 | Empowered product teams are given problems to solve; feature teams are given features to ship | Expert opinion | cagan2020empowered | idea-level (metadata-only) |
+| 3 | The build trap: measuring output shipped instead of value created | Practitioner consensus (with 2) | perri2018escaping; cagan2020empowered | idea-level (metadata-only) |
+| 4 | Build the smallest thing that yields evidence (build-measure-learn) | Expert opinion | ries2011lean | idea-level (metadata-only) |
+| 5 | In one large market-driven company, four factors (scale, temporal aspects, common views, decision structures) affected requirements communication; gaps led to unmet customer expectations, quality issues, and wasted effort | Research finding (nine interviews, one company) | bjarnason2011requirements | abstract |
+| 6 | Controlled experiments are the best design for establishing causal links between changes and user behavior; the authors' experience is that teams learn more and earn better returns listening to customers than to the highest-paid person's opinion | Documented practice, peer-reviewed | kohavi2009controlled | abstract |
+| 7 | At Bing, many ideas moved key metrics by about 1 percent and were not well estimated in advance; experimentation identified negative features not deployed despite stakeholders' excitement | Documented practice, peer-reviewed | kohavi2013online | abstract |
+| 8 | A continuous experimentation model, checked in two startups, requires instrumented minimum viable features, managed experiment plans, and linking results to the product roadmap | Research finding (two startups) | fagerholm2017right | abstract (via GI journal-first record) |
+| 9 | Randomized experiments transfer poorly to small business-to-business products; weaker evidence types should be named | This book's recommendation | (reasoning from 6 and 7 and Northstar's customer count) | n/a |
+| 10 | Working contract clauses, discovery staffing as a capacity line, date classification by origin, five-step conversion | This book's recommendation | builds on 1 to 4 | n/a |
+| 11 | Northstar baseline: 7 of 17 items delivered; 5 of 17 dated before sizing; 27 of 212 defects "requirement misunderstood" | Illustrative (canon) | baseline-data.md | canon |
+| 12 | Ordering-area quarter-4 numbers, sample findings, contract draft | Illustrative (new) | research/northstar-additions/ch44.md | invented, arithmetic checked |
+
+## Chapter 45 — Business Models, Engineering Economics, and Investment Decisions
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | A business model describes how a firm delivers value, persuades customers to pay, and converts payments to profit; it embodies management's hypothesis about customers | Research (conceptual scholarship) | teece2010business | abstract |
+| 2 | Strategy as choices of where to play and how to win, used as a filter on investments | Expert opinion | lafley2013playing | idea-level |
+| 3 | Four benefit types (increase revenue, protect revenue, reduce costs, avoid costs) used to triage requirements | Practitioner (case report) | arnold2013blackswan | full text (author-hosted web version) |
+| 4 | Cost of delay defined as the value a feature could generate over a period if available now, including information value and decay | Practitioner | arnold2013blackswan | full text |
+| 5 | Urgency profiles (long life peak unaffected / affected, short life, external deadline) | Practitioner | arnold2013blackswan | full text; profile table wording is this book's |
+| 6 | Maersk Line: about $100M portfolio; one feature about $210,000 a week; 38 weeks in queues cost nearly $8M; outcomes confounded with other practices, no control group | Practitioner case report, caveats stated | arnold2013blackswan | full text; outcome figures deliberately not reported (internal inconsistencies) |
+| 7 | CD3 ranking and WSJF as a relative-scoring version | Practitioner / official documentation | safe-wsjf; arnold2013blackswan | full text; Chapter 15 owns the ranking |
+| 8 | Cost of delay is widely credited to Reinertsen; origin not established by any source read | Gap G6, partly addressed | reinertsen2009principles; safe-wsjf; arnold2013blackswan | metadata only (book); full text (SAFe, Arnold and Yüce) |
+| 9 | Opportunity cost is the value of the next best alternative; sunk costs should be ignored | Standard textbook definition | greenlaw2022economics | full text (section 2.1) |
+| 10 | Payback definition and four weaknesses; NPV definition, decision rule, cost of capital as rate, sensitivity profile | Standard textbook definition | dahlquist2022finance | full text (sections 16.1, 16.2) |
+| 11 | Irreversibility and the option value of waiting for better information | Research (economics), summary level | dixit1994investment | official summary |
+| 12 | Real-options techniques applied to software modularity give results consistent with Parnas's conclusions | Research finding (single worked example) | sullivan2001modularity | abstract |
+| 13 | Financial numbers rest on estimates and judgment; know which assumptions carry the result | Practitioner | berman2006financial | idea-level |
+| 14 | A dollar of avoided credits is worth more than a dollar of new revenue (margin reasoning) | This book's recommendation | — | reasoning from gross margin definition |
+| 15 | Three practitioner rules for real options (buy information, stage, value flexibility only if exercised) | This book's recommendation | — | synthesis of rows 11–12 |
+| 16 | Two guards: no sole authorship of decisive numbers; post-decision estimate review | This book's recommendation | — | — |
+| 17 | All Northstar figures, investments A–C, the week 34 note | Illustrative | — | canon plus additions in research/northstar-additions/ch45.md; recomputed twice |
+
+### Research gap G6 update (proposed for research-gaps.md)
+
+Searched on 2026-11-19. Arnold and Yüce (2013), read in full in the authors' own web version, cite
+Reinertsen (2009) on the importance of measuring cost of delay and Smith and Reinertsen's *Developing
+Products in Half the Time* (first published 1991 per Open Library) for related ideas, and describe CD3
+as a form of WSJF; they do not establish who coined cost of delay. Black Swan Farming's cost-of-delay
+page quotes Reinertsen without attributing the origin. Reinertsen's own site (reinertsenassociates.com)
+still failed TLS. Status: origin still unverified from a primary source; "widely credited to
+Reinertsen" remains the correct wording. Next step: Smith and Reinertsen (1991) or Reinertsen (2009)
+read directly, or a scholarly history of the term.
+
+## Chapter 46 — Stakeholder Management and Negotiation
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | The power-interest grid sorts stakeholders into players, subjects, context setters, and crowd, with suggested handling for each | Expert opinion (scholarly method paper) | eden2021modelling | full text (figure credited by the authors to their 1998 and 2011 work) |
+| 2 | Stakeholder positions can be issue-related; low-power stakeholders can become powerful through coalitions | Expert opinion | eden2021modelling | full text |
+| 3 | Record negative-avoidance goals; about a third of goals first proposed turn out to be strategies | Expert opinion | eden2021modelling | full text (authors' experience, not a measured rate) |
+| 4 | Stakeholders respond to each other's responses; presumptions about them are informed guesses | Expert opinion | eden2021modelling | full text |
+| 5 | Stakeholder analysis aims at proposals that are technically feasible and politically acceptable, and at building a coalition to adopt them | Expert opinion (review) | bryson2004what | abstract |
+| 6 | Prosocial negotiators were less contentious, solved more problems, and reached higher joint outcomes only when resistance to yielding was high or unknown | Research finding | dedreu2000influence | abstract; lab and student samples, moderators noted |
+| 7 | First offers advantage the mover and predict settlements; focusing on the opponent's alternatives, reservation price, or one's own target removes the advantage | Research finding | galinsky2001first | abstract; single-issue distributive negotiations |
+| 8 | Principled negotiation and the best alternative to a negotiated agreement | Practitioner | fisher1981getting | idea-level |
+| 9 | An error budget is a shared, objective measure that lets product and reliability engineers decide risk without political argument | Documented practice | google2017embracing | full text |
+| 10 | Directness with personal care; hard conversations touch feelings and identity | Practitioner | scott2017radical; stone1999difficult | idea-level |
+| 11 | A manager's time is the scarcest input and belongs on high-leverage work | Practitioner | grove1983high | idea-level |
+| 12 | New leaders should negotiate expectations explicitly with their own boss | Practitioner | watkins2003first | idea-level |
+| 13 | The five-part no; floor versus tradeable quality; the two floor tests; never negotiate a forecast | This book's recommendation | none | reasoning in chapter |
+| 14 | Payroll-export example and the Northstar case arithmetic (Poisson probabilities 0.587, 0.242, 0.070; 0.587⁴ ≈ 0.119; annual P(≤39 given mean 36) ≈ 0.726) | Illustrative | none | computed; Poisson is a stated simplification |
+
+## Chapter 47 — The VP of Engineering: Managing Directors and the Portfolio
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | The engineering executive is defined by responsibility for all of engineering; CTO, VP, and Head of Engineering titles are used inconsistently | Expert opinion | larson2023executive-job | full text |
+| 2 | The executive role is a distinct job with its own guide | Expert opinion | larson2024primer | idea-level |
+| 3 | Managers of managers support four to six managers (rough ceiling on directors per VP) | Practitioner opinion | larson2018sizing | full text |
+| 4 | Organizational outcomes are partially predicted by top managers' background characteristics; executives' experiences, values, and personalities shape interpretations and choices | Research finding (theory, propositions) | hambrick1984upper, hambrick2007upper | abstract |
+| 5 | Specific, difficult goals are effective; goals also narrow focus and cause neglect of non-goal areas | Research finding (review); disputed side effects | locke2006new, ordonez2009goals | abstract |
+| 6 | Peers as a leader's "first team"; peers' incentives often conflict; set explicit expectations; test first impressions, then make personnel changes quickly | Expert opinion | larson2023gelling, lencioni2002five | full text; Lencioni idea-level |
+| 7 | 56 software project managers' status reports biased 60 percent of the time; seek corroboration; aggressive auditing backfires; trust associated with reporting problems | Research finding (researchers' summary) | keil2014pitfalls | full text |
+| 8 | Formal versus real authority; superior's overload raises subordinates' real authority | Theoretical model | aghion1997formal | abstract |
+| 9 | A disengaged executive does more damage than a somewhat over-involved one | Expert opinion | larson2023micromanage | full text |
+| 10 | Executive planning in three parts; allocate coarsely to area leaders and infrequently, partly to avoid zero-sum competition; rewarded private headcount escalation makes the plan a fiction | Expert opinion | larson2023planning | full text |
+| 11 | Firms' internal capital allocations tend toward equality over business units (partition dependence); persists in experiments with experienced managers | Research finding (capital budgets; extension to engineering capacity is this book's) | bardolet2011capital | abstract |
+| 12 | Escalation of commitment to one's own failing course | Research finding, idea-level | staw1976knee | idea-level |
+| 13 | The executive merges CEO, peers', and engineering views as a company-first problem solver | Expert opinion | larson2023balancing | full text |
+| 14 | Role-by-decision table, company-shape table, two-kind goals, operating-review loop, rank-before-map allocation, VP decision table, failure modes, playbook | This book's recommendation | — | reasoning |
+| 15 | Halvard Commerce allocation example and all Northstar quarter 4 facts | Illustrative | — | arithmetic recomputed in session |
+
+Gaps: no study found of VP-of-Engineering roles, of engineering leadership team composition and
+outcomes, or of capacity allocation across engineering directors; the chapter relies on general
+management research (upper echelons, capital allocation) and practitioner writing. The Engineering
+Executive's Primer itself was not read (metadata only); its draft chapters on lethain.com were read.
+
+## Chapter 48 — Capacity Strategy, Workforce Planning, and Enterprise Governance
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Headcount planning and organization design are core engineering-executive work done with finance | Expert opinion | larson2024primer | idea-level |
+| 2 | Managers should read the numbers finance uses (fully loaded cost, budgets) | Practitioner | berman2006financial | idea-level |
+| 3 | New people consume the time of those who teach them; added people help late and cost early | Expert opinion | brooks1995mythical | idea-level (secondary source for the law) |
+| 4 | Recent departures associated with higher probability of customer-reported defects in one large project | Research finding | mockus2010volatility | abstract |
+| 5 | Turnover-induced knowledge loss can exceed three times the expected loss; successors reduce expected loss up to 15 percent | Research finding | rigby2016turnover | abstract |
+| 6 | People management skills strongly negatively related to turnover at one firm | Research finding | hoffman2021people | abstract |
+| 7 | Proximity to teammates increased coding feedback, most for newer and younger engineers; experienced engineers wrote less code | Research finding | emanuel2023proximity | abstract (working paper) |
+| 8 | Distributed work items took about 2.5 times as long as colocated ones; people involved strongly related to completion time | Research finding | herbsleb2003empirical | abstract |
+| 9 | Not enough evidence that offshoring reduced costs | Research finding (review) | smite2015cost (pending) | abstract |
+| 10 | Follow-the-sun review: 36 practices, 17 challenges; handovers and allocation make it hard to adopt | Research finding (review) | kroll2013followthesun (pending) | abstract |
+| 11 | Requirement keywords should be used sparingly, only where required for interoperation or to limit harm | Standard (analogy) | bradner1997rfc2119 | full text |
+| 12 | Heavyweight change approval hurts delivery performance with no evidence of lower change failure rates | Industry research | dora-cap-change-approval | full text |
+| 13 | Platforms should not rely on top-down mandates for adoption | Practitioner consensus | cncf-platforms-whitepaper | full text |
+| 14 | Exclusive mandated platform use associated with 6 percent lower throughput | Industry research | dora2024accelerate | full text (pp. 47–55) |
+| 15 | Formal structures adopted for legitimacy decouple from work | Expert opinion (theory) | meyer1977institutionalized | abstract |
+| 16 | Control loss compounds across hierarchical levels | Expert opinion (theoretical model, disputed) | williamson1967hierarchical | abstract plus secondary |
+| 17 | One company keeps the same span range at every level to avoid an additional layer | Documented practice | gitlab2026structure | full text |
+| 18 | Externality test for enterprise policies; owner, enforcement point, exception path, measure | This book's recommendation | — | reasoning |
+| 19 | Level mix bands per domain; no research-backed right mix | This book's recommendation (gap) | — | reasoning |
+| 20 | Place whole ownership per site; three vendor tests | This book's recommendation | — | reasoning from rows 8–10 |
+| 21 | Halvard and Northstar figures (Halvard groups 130, 110, 100, 90 plus platform 70, per maintainer rule) | Illustrative | — | invented, arithmetic shown |
+
+Research gap: no peer-reviewed evidence found on optimal engineering level mix, or on outcomes of
+contractor versus employee staffing in software organizations; the chapter labels both as this
+book's recommendation.
+
+## Chapter 49 — Multi-Year Transformation, Executive Communication, and Constructive Politics
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Transformation efforts fail partly by declaring victory too soon | Practitioner | kotter1995leading | official summary; idea-level |
+| 2 | Escalation of commitment: further resources committed to a failing course | Research finding (idea credited) | staw1976knee | idea-level |
+| 3 | Optimism bias and strategic misrepresentation are distinct causes of bad forecasts needing different remedies | Research finding | flyvbjerg2006nobel | full text |
+| 4 | Stage-gate: stages separated by gates with criteria and go/stop decisions | Practitioner (transfer to programs is this book's) | cooper1990stagegate | idea-level |
+| 5 | Strategy kernel: diagnosis, guiding policy, coherent actions | Expert opinion | rumelt2011good | idea-level |
+| 6 | Transformation is mainly people, culture, and organization rather than technology | Expert opinion | kane2019technology | idea-level |
+| 7 | Top management attention is limited; issue selling shapes it early in decision making | Research (conceptual) | dutton1993selling | abstract |
+| 8 | Managers' accounts stress packaging, involvement, and timing as issue-selling moves | Research finding (managers' accounts) | dutton2001moves | abstract |
+| 9 | Governing point first in executive writing | Practitioner | minto2002pyramid | idea-level |
+| 10 | Executive sponsorship can reduce candor; executives sometimes ignore reported bad news | Research summary by the researchers | keil2014pitfalls | full text |
+| 11 | Power and influence are how organizations get things done; diagnose whose support is needed | Expert opinion | pfeffer1992managing | idea-level |
+| 12 | A cohesive leadership team is the basis of organizational health | Expert opinion | lencioni2012advantage | idea-level |
+| 13 | Political skill uncorrelated with general mental ability; predicted managers' performance ratings in two samples | Research finding | ferris2005development | abstract |
+| 14 | Political skill relates to productivity, career success, reputation; predicts task performance beyond Big Five and GMA; three of four dimensions predict performance | Research finding (meta-analysis) | munyon2015political | abstract |
+| 15 | Perceived organizational politics correlates with strain, turnover intentions, lower satisfaction and performance (values as reported) | Research finding (meta-analysis, correlational) | chang2009perceptions | abstract |
+| 16 | Constructive politics defined by transcript, record, and interests tests | This book's recommendation | fisher1981getting (interests) | idea-level for interests |
+| 17 | Rational persuasion, inspirational appeal, consultation most effective; exchange not effective upward | Research finding | yukl1992consequences | abstract |
+| 18 | Succession better treated as a process than an event; put it in exit criteria | Research review + this book's recommendation | berns2017succession | abstract |
+| 19 | Gate rule (mandatory criteria, re-scope, stop) and staged funding | This book's recommendation | — | reasoning |
+| 20 | All Northstar and Halvard figures | Illustrative | — | fictional |

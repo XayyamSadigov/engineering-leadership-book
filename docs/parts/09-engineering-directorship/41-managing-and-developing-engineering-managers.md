@@ -91,8 +91,8 @@ director who has not seen a dimension tends to rate it "Solid", turning ignoranc
 evidence" is a finding about the director's information, and it sets an action: go and look.
 
 Three rules (**this book's recommendation**). Every rating cites a dated evidence item and its source.
-"Not yet" is rated only against an expectation the manager knew; where none was stated, the gap is the
-director's too, and it may inform development but not pay this cycle. And there is no composite: ratings
+Rate Not yet only against an expectation the manager knew before the behavior rated; facts from before
+the window are context. Where none was stated, the gap is the director's too, and it may inform development but not pay this cycle. And there is no composite: ratings
 are not averaged and managers are not ranked, because their teams sit in different parts of the system.
 
 ### Why the evidence rule exists
@@ -345,7 +345,9 @@ rotation, covering all 77 team engineers; its groups are where the checks below 
 | Tom Becker | Solid | Solid | Not yet | Not yet | Solid | Solid |
 
 Counted both ways: 16 Solid, 11 Not yet (two against unset expectations), 5 No evidence,
-4 Strong; 36 cells. Priya's outcomes cell waits for bulk ordering, due in week 26.
+4 Strong; 36 cells. Priya's outcomes cell waits for bulk ordering, due in week 26. Three Not yet cells
+(Daniel's operational ownership, Tom's people growth and team health) still rest on baseline-quarter
+facts; the director must re-source them from the window before week 27.
 
 **The evidence.**
 
@@ -472,7 +474,8 @@ you would know in two quarters whether it worked.
 
 - Rate managers on six dimensions with a dated, observable evidence item behind every rating.
 - Treat "No evidence" as a finding about your information, and go and look before rating.
-- Rate "Not yet" only against an expectation the manager knew; otherwise the gap is yours too.
+- Rate Not yet only against an expectation the manager knew before the behavior rated; facts from
+  before the window are context. Otherwise the gap is yours too.
 - Never average the dimensions or rank managers whose teams sit in different parts of the system.
 - Separate what the manager controls from what the system does, and rate the manager's response.
 - Use skip-levels to check the manager's channel; themes always go back to the manager, quotes never.

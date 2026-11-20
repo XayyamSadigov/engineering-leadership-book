@@ -113,8 +113,9 @@ weak answer. Where several answers are defensible, say so.
 
 The canonical description is `docs/case-studies/northstar/index.md` (company, people, system),
 `baseline-data.md` (the measured starting state, including the extended baseline by topic), and
-`first-quarter.md` (the director's first 90 days: decisions, timeline, day-90 results), with data
-files in `docs/case-studies/northstar/data/`. The CSV files win any disagreement. Use those names
+`first-quarter.md` (the director's first 90 days: decisions, timeline, day-90 results, and the
+later quarters of year 1), with data files in `docs/case-studies/northstar/data/`. The comparison
+company Halvard Systems (500 engineers) is fixed in `halvard.md` in the same folder. The CSV files win any disagreement. Use those names
 and numbers exactly. If a chapter needs a new fact, add it to the canonical pages first, check it
 against the existing data (recompute any aggregate it affects), then use it. Every Northstar passage
 must be recognizably fictional. Never put a real company into an invented story.

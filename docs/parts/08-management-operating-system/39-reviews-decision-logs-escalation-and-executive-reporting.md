@@ -230,15 +230,14 @@ an undated decision.
 |---|---|---|
 | Weekly operational review | Booked 30 minutes, averaged 75 (Chapter 37); 16 people (director, 6 managers, 3 staff engineers, 6 on-call leads), 4.33 weeks | 86.6 |
 | Monthly quality review | 45 minutes per team, 6 teams, 5 people each | 22.5 |
-| Monthly architecture review | 60 minutes, 5 people | 5.0 |
-| Quarterly talent review | 3 hours, 7 people, spread over 3 months | 7.0 |
-| Monthly executive report | Director 4 hours; 30 minutes from each manager | 7.0 |
-| Total | | 128.1 |
+| Quarterly talent review (proposed) | 3 hours, 7 people, spread over 3 months | 7.0 |
+| Monthly executive report (proposed) | Director 4 hours; 30 minutes from each manager | 7.0 |
+| Total | | 123.1 |
 
 Check: 1.25 × 16 × 4.33 = 86.6; 6 × 0.75 × 5 = 22.5; 3 × 7 ÷ 3 = 7.0; 4 + 6 × 0.5 = 7. Against 87
 people at about 160 hours a month (13,920 hours), that is about 0.9 percent of the organization's time.
-The director's share is about 16 hours (5.4 + 4.5 + 1.0 + 1.0 + 4.0 = 15.9), roughly 10 percent of a
-month; booked at 30 minutes, the review alone would cost 34.6 person-hours instead of 86.6. The
+The director's share is about 15 hours (5.4 + 4.5 + 1.0 + 4.0 = 14.9), roughly 9 percent of a
+month; booked at 30 minutes, the review alone would cost 34.6 person-hours, not 86.6. The
 meeting time is cheap; the expensive failure is a system that runs on schedule and carries distorted
 information, which no time budget shows.
 
@@ -332,7 +331,7 @@ Countermeasure: a "decisions needed" section that may say "none", and rarely doe
 In an organization of 50 to 150 engineers, the director designs these mechanisms and owns their
 integrity; managers and staff engineers run most of them. The director owns the report, the log, the
 escalation rules, and review agendas. Managers own the content they present. Staff engineers prepare
-the architecture review and own records in their domains (Chapter 29). A rotating log steward checks
+any architecture review and own records in their domains (Chapter 29). A rotating log steward checks
 that every entry has a decider and a date.
 
 An **escalation map** lists recurring dispute types with their deciders:
@@ -500,7 +499,7 @@ Orders adds a field. Given their history (the INC-417 thread, the INC-427 review
 dispute moves under the week 15 escalation path, write the joint case template you would give them,
 and say what you do if one of them escalates alone.
 
-**A2.** Ines Carvalho proposes to chair the monthly architecture review. In weeks 7 to 12 she rejected
+**A2.** Ines Carvalho proposes to restart and chair a monthly architecture review, lapsed since 2021. In weeks 7 to 12 she rejected
 8 of 14 Core design proposals, 5 without a reason. Design the review so that it inspects decisions
 rather than designers: who attends, what is sent beforehand, what the meeting may decide, and how you
 will know in two months whether it works.

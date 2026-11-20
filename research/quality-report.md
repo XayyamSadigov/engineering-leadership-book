@@ -6,8 +6,8 @@ reviewed by a person, and the known limitations a reader or reviewer should be a
 ## Automated validation
 
 Run `python tools/validate_book.py --build`. Last result recorded: **passed**, 2026-11-20, with
-chapters 1–43, nine templates, and projects 3 and 4 live (chapters, navigation, references, exercises, generated pages,
-single-file edition, `mkdocs build --strict`). No warnings: all 329 bibliography entries are verified. Mermaid: 118 of 118 diagrams render with mermaid-cli 11.
+chapters 1–49, 13 templates, and projects 1 and 3–6 live (chapters, navigation, references, exercises, generated pages,
+single-file edition, `mkdocs build --strict`). No warnings: all 358 bibliography entries are verified. Mermaid: 135 of 135 diagrams render with mermaid-cli 11.
 All diagrams of chapters 1–4 and 15–18 measured in a headless browser at 390 px; one squeezed diagram
 (chapter 2) fixed. `ruff check tools`: clean. Browser check of all nine Part V chapters at
 390 px: no horizontal page overflow; six squeezed left-to-right diagrams redrawn top-to-bottom, and a
@@ -73,6 +73,21 @@ verified). The reviewer reported 30 findings (a wrong "needed by" date in the ch
 exemption shown as live in Project 4's data; Billing's pre-week-10 size used in quarter 3; contradictory
 skip-level rules; templates written as if quarter-2 results did not exist; repetition of escalation and
 skip-levels); the key arithmetic findings were verified by the maintainer; all 30 fixed.
+
+## Wave 6 (chapters 44–49, four templates, projects 1, 5, 6), 2026-11-20
+
+Six chapter authors, one templates author, one projects author. The authors coordinated shared facts
+directly; the maintainer settled one conflict (Halvard's product group sizes) with a single final rule
+and wrote the merged facts into the canon: quarter 3 results, quarter 4 events, a new `halvard.md`
+page, and three counting rules (Core change failure rate windows, the year-1 tier 1 list, quarter
+length) that resolved non-integer rates the projects author found. 29 sources merged (358 in total,
+all verified). Two independent reviewers reported 48 findings (8 high): chapters set in quarter 4
+still using quarter 2 as the latest quarter, the director's year-2 counter contradicting the
+continuation proposal, the open VP question settled in passing, a headcount option not framed as an
+exception to the 87-seat rule, and a year-2 criterion on the year-1 tier 1 list. Three issues in
+earlier chapters (38, 39, 41 and the manager rubric) were confirmed and fixed. The maintainer verified
+the reviewers' arithmetic before the fixes; all 48 findings were fixed by the original authors. Two
+diagrams squeezed at 390 px (chapters 45 and 48) were redrawn.
 
 ## Human review status
 

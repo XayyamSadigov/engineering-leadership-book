@@ -481,7 +481,7 @@ parts:
       - n: 44
         slug: working-with-product
         title: "Working with Product: Discovery and Outcome-Based Roadmaps"
-        status: planned
+        status: review
         objectives:
           - Establish a working contract between engineering and product management.
           - Take part in discovery so that feasibility and risk shape options early.
@@ -490,7 +490,7 @@ parts:
       - n: 45
         slug: business-models-and-engineering-economics
         title: Business Models, Engineering Economics, and Investment Decisions
-        status: planned
+        status: review
         objectives:
           - Read your company's business model and locate engineering's effect on revenue, margin, and risk.
           - Quantify cost of delay and opportunity cost with stated assumptions.
@@ -499,7 +499,7 @@ parts:
       - n: 46
         slug: stakeholder-management-and-negotiation
         title: Stakeholder Management and Negotiation
-        status: planned
+        status: review
         objectives:
           - Map stakeholders by interest and influence and plan engagement.
           - Negotiate scope, time, and quality trade-offs without conceding the quality floor.
@@ -515,7 +515,7 @@ parts:
       - n: 47
         slug: the-vp-of-engineering
         title: "The VP of Engineering: Managing Directors and the Portfolio"
-        status: planned
+        status: review
         objectives:
           - Define the VP role against the director and CTO roles in different company shapes.
           - Manage directors through goals, operating reviews, and staffing decisions.
@@ -524,7 +524,7 @@ parts:
       - n: 48
         slug: capacity-strategy-workforce-planning-and-governance
         title: Capacity Strategy, Workforce Planning, and Enterprise Governance
-        status: planned
+        status: review
         objectives:
           - Build a workforce plan covering level mix, location strategy, and vendor use.
           - Govern quality and delivery across the enterprise with few, enforced policies.
@@ -533,7 +533,7 @@ parts:
       - n: 49
         slug: multi-year-transformation-communication-and-politics
         title: Multi-Year Transformation, Executive Communication, and Constructive Politics
-        status: planned
+        status: review
         objectives:
           - Structure a multi-year transformation into fundable stages with exit criteria.
           - Communicate to executives in their terms, with an explicit ask.
@@ -686,19 +686,19 @@ templates:
   - {id: t12, file: architecture-decision-record.md, title: Architecture decision record, status: planned}
   - {id: t13, file: quarterly-engineering-review.md, title: Quarterly engineering review, status: review}
   - {id: t14, file: capacity-planning-model.md, title: Capacity planning model, status: review}
-  - {id: t15, file: engineering-strategy.md, title: Engineering strategy template, status: planned}
-  - {id: t16, file: technology-investment-business-case.md, title: Technology investment business case, status: planned}
-  - {id: t17, file: stakeholder-map.md, title: Stakeholder map, status: planned}
-  - {id: t18, file: executive-update.md, title: Executive update, status: planned}
+  - {id: t15, file: engineering-strategy.md, title: Engineering strategy template, status: review}
+  - {id: t16, file: technology-investment-business-case.md, title: Technology investment business case, status: review}
+  - {id: t17, file: stakeholder-map.md, title: Stakeholder map, status: review}
+  - {id: t18, file: executive-update.md, title: Executive update, status: review}
   - {id: t19, file: leadership-succession-plan.md, title: Leadership succession plan, status: planned}
   - {id: t20, file: ninety-day-quality-plan.md, title: 90-day quality transformation plan, status: review}
 
 projects:
-  - {id: p1, title: Build an Engineering Management Operating System, status: planned}
+  - {id: p1, title: Build an Engineering Management Operating System, status: review}
   - {id: p2, title: Diagnose a Low-Performing Engineering Team, status: planned}
   - {id: p3, title: Create an Engineering Quality Transformation Plan, status: review}
   - {id: p4, title: Redesign an Organization of 80 Engineers, status: review}
-  - {id: p5, title: Build a Delivery Performance and Reliability Scorecard, status: planned}
-  - {id: p6, title: Create Engineering Manager Development and Succession Plans, status: planned}
+  - {id: p5, title: Build a Delivery Performance and Reliability Scorecard, status: review}
+  - {id: p6, title: Create Engineering Manager Development and Succession Plans, status: review}
   - {id: p7, title: Design a 12-Month Engineering Strategy, status: planned}
   - {id: p8, title: Build a CTO Technology Investment Proposal, status: planned}

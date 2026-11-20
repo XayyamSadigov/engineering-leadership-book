@@ -19,7 +19,7 @@ the director's first day.
 | Prevention allocation, quarter 1 | 12 FTE in total: Billing 25 percent, Orders and Payments and Integrations 10 percent (renewal commitments), other teams 15 percent, computed on baseline team sizes (11.55 FTE), plus 15 percent of the three staff engineers (0.45 FTE); 2 FTE of it earmarked for security work | 27, 26 |
 | Severity definitions | Published week 3, written by the director with Kwame Mensah and Sofia Alvarez. Sev1: the order or payment path unavailable for any customer, or any wrong financial record visible to customers | 25 |
 | Baseline re-rating under the new definitions | INC-401 and INC-427 would be Sev1, making the baseline 9 Sev1 and 21 Sev2. The baseline page keeps the original ratings; the total of 30 is unchanged | 25 |
-| Tier 1 list | The 15 proposed tier 1 components are used for all counts in quarter 1. notification-svc moves to tier 2 and to Orders from quarter 2 | 24 |
+| Tier 1 list | The 15 proposed tier 1 components are used for all counts in quarter 1. notification-svc moves to tier 2 and to Orders from quarter 2. Reporting rule: year 1 readiness counts (quarters 1 to 4) keep the original list of 15 so that quarters compare; year 2 reports use the current list of 14 | 24 |
 | Tier 1 minimums | Four operational minimums are measured: owning team, complete user-facing alerts, runbook, on-call rotation. The fifth enterprise minimum, deployment through an auditable pipeline with automated rollback, is a standard tracked separately (Chapter 20) | 20, 24, 27 |
 | Standards | 52 rules triaged: 14 kept as mandatory (9 tool-checked, 5 by review), 17 turned into guidance, 21 retired; plus 5 tier 1 minimums (owner, user-facing alerts, runbook, on-call, auditable pipeline with automated rollback) | 20 |
 | Standard owners | Kwame Mensah: operational minimums and pipelines. Ines Carvalho: Core code. Li Na Zhou: data, migration, and configuration. Decisions within 10 working days; exemptions recorded with expiry of at most two quarters | 20 |
@@ -57,7 +57,7 @@ the director's first day.
 | Recurrences | 11 of 30 | 5 of 21 | 25 |
 | Customer-detected share | 47% | 29% | 27 |
 | Core releases | 2 per month | 11 in the quarter (weekly from week 5) | 27, 23 |
-| Core change failure rate | 31% | 22% | 27 |
+| Core change failure rate | 31% (4 of the 13 releases in the 26 weeks before the director arrived) | 22% (2 of the 9 weekly releases from week 5; the two fortnightly releases of weeks 1–4 are not counted, because the measure was redefined with the weekly cadence) | 27 |
 | Core main branch red | 22% of working hours | 9% over the last four weeks | 23 |
 | Pipeline failures unrelated to the change | 9% | 4% | 22 |
 | Flaky tests quarantined | — | 140 | 22, 23 |
@@ -163,3 +163,41 @@ decision avoidance Chapter 13 describes. The year-2 proposal is the first docume
 | Operating system redesign | Proposed for week 27: a hard 45-minute operational review, a weekly 75-minute leadership team meeting replacing the managers' meeting and product sync, a monthly business review, a quarterly talent review | 37 |
 | Engineering Excellence Day | Launched by the director in week 27 without the managers or Amara Okafor; Fridays of weeks 28, 32, 36; participation 64, 41, 23 engineers; 71 items merged, none touching the priced debt register; one Sev3 from a core/scheduler change; stopped in week 37 after a one-page note to the managers | 43 |
 | Skip-level rotation | Proposed: two groups of three a week plus one individual slot, covering all 77 team engineers in the quarter | 40 |
+
+### Quarter 3 results
+
+| Measure | Quarter 2 | Quarter 3 | Chapter |
+|---|---|---|---|
+| Sev1 and Sev2 incidents | 17 (3 Sev1) | 14 (2 Sev1, 12 Sev2); the first quarter at or below the mandate's 15 | 49 |
+| Availability, contractual paths | 99.86% | 99.89% (about 144 of 131,040 minutes unavailable; 99.9% allows about 131) | 49 |
+| Service credits | $95,000 | $60,000 | 49 |
+| Unplanned work | 28% | 25% (20 FTE of 80), between the planned 22% and the cautious 28% | 49 |
+| Tier 1 meeting the four operational minimums | 11 of 15 | 13 of 15 | 49 |
+| Level mix, week 40 | 44 Engineers, 33 Seniors, 3 Staff (on arrival) | 39 Engineers, 38 Seniors, 3 Staff after five promotions to Senior in the quarter 3 cycle | 48 |
+
+Quarter length: the baseline quarter is the 90-day calendar quarter before the director arrived; the
+director's quarters are 13 weeks (91 days, 131,040 minutes), so availability allowances from quarter 1
+on use 91 days (99.9 percent allows about 131 minutes). These are the latest measured figures
+available to anyone in quarter 4. Quarter 4 results are not
+recorded; any chapter set in weeks 40–52 uses quarter 3 as the latest quarter.
+
+## Quarter 4 (weeks 40–52)
+
+None of the decisions below has a recorded outcome. Chapters set in quarter 4 leave each of them open.
+
+| Week | Fact | Chapter |
+|---|---|---|
+| — | Economic assumptions: gross margin 72 percent; Finance's discount rate 10 percent a year; one engineer-week costs about $3,558 ($185,000 ÷ 52); average ARR per customer about $74,000; the 40 largest customers about $1.17M each | 45 |
+| — | Bogotá engineers cost about $110,000 a year fully loaded, including the office, which puts the US-based average at about $202,000 ((87 × $185,000 − 16 × $110,000) ÷ 71) | 48 |
+| — | Keiko Ashworth, one of Amara Okafor's three product managers, is the product manager for the ordering area (Orders and Customer Experience's ordering screens), Minneapolis. The other two cover billing and payments, and data and customer reporting | 44 |
+| 39–40 | Orders sizes price-list effective dates at 14 engineer-weeks in week 39; Greg Tanaka then gives an existing distributor week 46 as the date. Orders forecasts weeks 44 to 46 from a week 40 start | 44 |
+| 40 | A top-40 distributor complains, via Sofia Alvarez, about time spent correcting orders. Data and Analytics defines a corrected order (cancelled and re-entered, amended, or credited for an ordering error within 72 hours): 7,800 of about 600,000 submissions in the last 28 days of quarter 3 (1.3 percent). A sample of 400 corrections in weeks 40–41 finds 340 errors (about 1.1 percent of orders): price changes 130, wrong unit 85, duplicate submissions 70 (no idempotency key on order submission), wrong delivery site 35, other 20 | 44 |
+| 41 | Victor Lindqvist asks for the engineering page of the year-2 board plan, due week 45, proposing the headline "Sev1 and Sev2 incidents below 10 per quarter" with flat headcount | 46 |
+| 41 | Rajiv Menon asks for a year-2 workforce plan with the budget pack. The director drafts a working contract with product and sends it to Amara Okafor | 48, 44 |
+| 42 | Amara Okafor answers the working contract with three conditions (named discovery engineers only if paid from the product line; no external date before sizing only if deal requests are sized within five working days; no replacement of ordering items by an outcome target while the board pack reports roadmap items delivered) | 44 |
+| 42 | The director's counter for the board page (a draft): Sev1 and Sev2 at or below 40 over year 2 as a rolling four-quarter total, reported with the severity audit; 99.9% availability every quarter; prevention funded as in the continuation proposal (6 FTE in quarters 5–6, 5 FTE in quarters 7–8) with flat headcount; two consecutive quarters above 12 reopen the prevention allocation | 46, 49 |
+| 44 | Year-2 organization proposal (see above); decision week 46 | 35, 36 |
+| 45 | Victor Lindqvist asks whether Northstar needs a VP of Engineering in year 2 or whether the director grows into the role; recommendation due week 48. A VP takes one of the 87 seats, so engineers fall from 79 to 78 under the main proposal | 47 |
+| 45 | The director drafts a two-year continuation of the quality program: stage 2 "Hold" (quarters 5–6, 6 FTE prevention, $150,000 of tooling, gate week 78) and stage 3 "Converge" (quarters 7–8, 5 FTE, $100,000 of tooling only if a CI target is chosen, gate week 104), after a stage 1 gate in week 56; no headcount request; "VP or second layer" listed as an open question. One-on-ones with executives weeks 46–47, executive team meeting week 49, decisions requested by week 51 | 49 |
+| 46–47 | Executive positions on the continuation: Victor supports staging; Helena Marsh focuses on renewals (six of the 40 largest customers renew in quarters 5 to 8); Rajiv wants operating expense flat and the $150,000 offset in the $4.2M cloud and tooling budget; Greg Tanaka wants the prevention engineers on deal features and in week 47 privately offers support in exchange for two engineers outside the portfolio forum, which the director declines and writes into the proposal as an option; Amara wants the allocation fixed per stage; Sofia wants customer incident notifications kept | 49 |
+| 49 | Workforce plan draft to Victor and Rajiv with four options (A like-for-like, B shaped backfills, C two requisitions held ahead, which would need an exception to the 87-seat rule, D a fixed-scope vendor contract) and the rule "no customer date without an engineering estimate and a named owner"; Greg Tanaka objects to the rule. The recommendation is left open | 48 |

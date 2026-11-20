@@ -108,6 +108,7 @@ nav:
       - "Company and organization": case-studies/northstar/index.md
       - "Baseline data": case-studies/northstar/baseline-data.md
       - "The first quarter": case-studies/northstar/first-quarter.md
+      - "Halvard Systems (comparison company)": case-studies/northstar/halvard.md
   - "VI. Technical Leadership and Architecture":
       - "Chapter 28 — Architecture Decision-Making and Governance": parts/06-technical-leadership/28-architecture-decision-making-and-governance.md
       - "Chapter 29 — Staff and Principal Engineers": parts/06-technical-leadership/29-staff-and-principal-engineers.md
@@ -128,6 +129,14 @@ nav:
       - "Chapter 41 — Managing and Developing Engineering Managers": parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md
       - "Chapter 42 — Cross-Functional Dependencies, Portfolio Management, and Influence Without Authority": parts/09-engineering-directorship/42-cross-functional-dependencies-portfolio-and-influence.md
       - "Chapter 43 — Leading Organizational Change and Director Failure Patterns": parts/09-engineering-directorship/43-leading-change-and-director-failure-patterns.md
+  - "X. Product and Business Leadership":
+      - "Chapter 44 — Working with Product: Discovery and Outcome-Based Roadmaps": parts/10-business-leadership/44-working-with-product.md
+      - "Chapter 45 — Business Models, Engineering Economics, and Investment Decisions": parts/10-business-leadership/45-business-models-and-engineering-economics.md
+      - "Chapter 46 — Stakeholder Management and Negotiation": parts/10-business-leadership/46-stakeholder-management-and-negotiation.md
+  - "XI. VP of Engineering":
+      - "Chapter 47 — The VP of Engineering: Managing Directors and the Portfolio": parts/11-vp-engineering/47-the-vp-of-engineering.md
+      - "Chapter 48 — Capacity Strategy, Workforce Planning, and Enterprise Governance": parts/11-vp-engineering/48-capacity-strategy-workforce-planning-and-governance.md
+      - "Chapter 49 — Multi-Year Transformation, Executive Communication, and Constructive Politics": parts/11-vp-engineering/49-multi-year-transformation-communication-and-politics.md
   - "XIV. Templates and playbooks":
       - "Template library": templates/index.md
       - "Engineering quality scorecard": templates/engineering-quality-scorecard.md
@@ -139,12 +148,22 @@ nav:
       - "Organizational design assessment": templates/organizational-design-assessment.md
       - "Quarterly engineering review": templates/quarterly-engineering-review.md
       - "Capacity planning model": templates/capacity-planning-model.md
+      - "Engineering strategy": templates/engineering-strategy.md
+      - "Technology investment business case": templates/technology-investment-business-case.md
+      - "Stakeholder map": templates/stakeholder-map.md
+      - "Executive update": templates/executive-update.md
   - Projects:
       - "Overview": projects/index.md
+      - "Project 1 — Management operating system": projects/p1-management-operating-system.md
+      - "Project 1 solution": projects/solutions/p1-solution.md
       - "Project 3 — Quality transformation plan": projects/p3-quality-transformation-plan.md
       - "Project 3 solution": projects/solutions/p3-solution.md
       - "Project 4 — Redesign an organization of 80 engineers": projects/p4-redesign-an-80-engineer-organization.md
       - "Project 4 solution": projects/solutions/p4-solution.md
+      - "Project 5 — Delivery and reliability scorecard": projects/p5-delivery-and-reliability-scorecard.md
+      - "Project 5 solution": projects/solutions/p5-solution.md
+      - "Project 6 — Manager development and succession": projects/p6-manager-development-and-succession.md
+      - "Project 6 solution": projects/solutions/p6-solution.md
   - Exercises and solutions:
       - "Index": exercises/index.md
       - "Chapter 1 solutions": solutions/ch01-solutions.md
@@ -190,6 +209,12 @@ nav:
       - "Chapter 41 solutions": solutions/ch41-solutions.md
       - "Chapter 42 solutions": solutions/ch42-solutions.md
       - "Chapter 43 solutions": solutions/ch43-solutions.md
+      - "Chapter 44 solutions": solutions/ch44-solutions.md
+      - "Chapter 45 solutions": solutions/ch45-solutions.md
+      - "Chapter 46 solutions": solutions/ch46-solutions.md
+      - "Chapter 47 solutions": solutions/ch47-solutions.md
+      - "Chapter 48 solutions": solutions/ch48-solutions.md
+      - "Chapter 49 solutions": solutions/ch49-solutions.md
   - References:
       - "Bibliography": references/bibliography.md
       - "Evidence labels": references/evidence-labels.md

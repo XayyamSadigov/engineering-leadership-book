@@ -29,7 +29,7 @@ renegotiated commitments and personal heroics and ignores whether the team is ge
 4. Rate **Not yet**, **Solid**, or **Strong** against the level descriptions. Rate **No evidence**
    when the window holds none; never fill the gap with impression. Two "No evidence" ratings are a
    finding about the director's own signal sources. Rate **Not yet** only against an expectation
-   the manager knew about at the start of the window.
+   the manager knew before the behavior rated; facts from before the window are context.
 5. Read outcomes in context: what the team controls, what it inherited, and what a shared system
    (a release train, another team) decided for it.
 6. Agree at most two development goals, each with an observable change and a check date.

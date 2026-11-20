@@ -98,6 +98,9 @@ rejected, 5 without a reason. Rotate the chair among the three staff engineers, 
 chair while the staff engineers own the content. Ines attends as a domain owner, with the same rules as
 everyone.
 
+**Why it lapsed.** The review is a restart: Northstar has held none since 2021, and nothing replaced it. Ask
+why it stopped before reviving it, or the same cause will stop it again.
+
 **Before the meeting.** Each proposal arrives as a short decision record with options and a named
 decider, two working days ahead. Written comments are due a day before; a rejection without a written
 reason is not accepted.

@@ -14,12 +14,12 @@ documents a real leader would produce. Each takes about 12 to 20 hours.
 
 | Project | Title | Builds on | Status |
 |---|---|---|---|
-| P1 | Build an Engineering Management Operating System | Chapter 37 | Planned |
+| P1 | [Build an Engineering Management Operating System](p1-management-operating-system.md) | Chapter 37, with Chapters 38 and 39 | Available |
 | P2 | Diagnose a Low-Performing Engineering Team | Chapter 56 | Planned |
 | P3 | [Create an Engineering Quality Transformation Plan](p3-quality-transformation-plan.md) | Part V, Chapters 19 to 27 | Available |
 | P4 | [Redesign an Organization of 80 Engineers](p4-redesign-an-80-engineer-organization.md) | Part VII, Chapters 33 to 36 | Available |
-| P5 | Build a Delivery Performance and Reliability Scorecard | Chapter 38 | Planned |
-| P6 | Create Engineering Manager Development and Succession Plans | Chapter 41 | Planned |
+| P5 | [Build a Delivery Performance and Reliability Scorecard](p5-delivery-and-reliability-scorecard.md) | Chapters 18, 24, 27, and 38 | Available |
+| P6 | [Create Engineering Manager Development and Succession Plans](p6-manager-development-and-succession.md) | Chapters 36 and 41 | Available |
 | P7 | Design a 12-Month Engineering Strategy | Chapter 51 | Planned |
 | P8 | Build a CTO Technology Investment Proposal | Chapter 52 | Planned |
 
@@ -45,8 +45,11 @@ documents a real leader would produce. Each takes about 12 to 20 hours.
 
 ## Solutions
 
+- [Project 1 solution](solutions/p1-solution.md)
 - [Project 3 solution](solutions/p3-solution.md)
 - [Project 4 solution](solutions/p4-solution.md)
+- [Project 5 solution](solutions/p5-solution.md)
+- [Project 6 solution](solutions/p6-solution.md)
 
 All Northstar people, figures, and events are fictional. See the note on the
 [Northstar overview](../case-studies/northstar/index.md).

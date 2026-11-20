@@ -1,0 +1,25 @@
+measure,unit,baseline_quarter,quarter_1,quarter_2,quarter_2_numerator,quarter_2_denominator,source,note
+Sev1 and Sev2 incidents,incidents,30,21,17,,,first quarter; baseline data,"Quarter 2: 3 Sev1 and 14 Sev2. Under the week-3 definitions the baseline would be 9 Sev1 and 21 Sev2; the baseline page keeps 7 and 23"
+Incidents triggered via Core releases,incidents,9,4,2,,,first quarter,
+Recurrences,incidents,11,5,3,3,17,first quarter,Recurrence of a failure mode seen in an earlier review
+Customer-detected share,percent,47,29,29,5,17,first quarter,Baseline 14 of 30; quarter 1 about 6 of 21
+Core releases,releases per quarter,6,11,13,,,first quarter,Baseline 2 per month; weekly from week 5
+Core change failure rate,percent,31,22,23,3,13,first quarter,Baseline 4 of 13 releases over the 26 weeks before arrival; quarter 1 2 of the 9 weekly releases from week 5 (weeks 1–4 fortnightly releases not counted); 72-hour linking rule applied by hand
+Unplanned work,percent of capacity,34,31,28,,,first quarter,Two-week sample of ticket types per team
+Tier 1 components at four operational minimums,components,3 of 15,8 of 15,11 of 15,11,15,first quarter,notification-svc moved to tier 2 from quarter 2; year-1 counts (quarters 1 to 4) keep the original 15; year 2 uses the current 14
+Corrective-action closure,percent,32,70,78,21,27,first quarter,Baseline 31 of 96 over two quarters; quarter 1 26 of 37
+Availability on the contractual paths,percent,99.62,,99.86,,,first quarter; baseline data,Quarter 1 not recorded; synthetic checks from one region; mobile path not covered
+Service credits,US dollars,410000,,95000,,,first quarter; baseline data,Quarter 1 not recorded
+Committed roadmap items delivered,items,7 of 17,,,,,baseline data,Not recorded in the canon after the baseline quarter
+Time to restore (median),minutes,190,,,,,baseline data,Not recorded after the baseline quarter
+Time to restore (90th percentile),hours,14,,,,,baseline data,Not recorded after the baseline quarter
+Core lead time for changes (median),days,19,,,,,baseline data,Services and frontends 3 days at baseline
+Core main branch red,percent of working hours,22,9,,,,first quarter,Quarter 1 figure is the last four weeks of the quarter
+Pipeline failures unrelated to the change,percent of runs,9,4,,,,first quarter,
+Contract-tested tier 1 boundaries,boundaries,0,4,,,,first quarter,
+Open critical vulnerabilities,vulnerabilities,11,3,,,,first quarter,Quarter 1: all 3 under recorded exceptions
+Median wait for a test environment,days,about 6,,about 2 (week 18),,,first quarter (starting points for quarter 2),Re-sample in week 18
+Other teams' requests on Platform Operations,points of team capacity,20,,14 (week 18),,,first quarter (starting points for quarter 2),Re-sample in week 18
+Billing pages,pages per quarter,180,,,,,baseline data,"Baseline: 126 handled first by the three ledger engineers; 64 after hours, 54 of them by the same three; 61 needed no action"
+Median wait for first review on a Core merge request,working hours,21,,,,,baseline data,
+Core main-branch pipeline duration,minutes,74,,,,,baseline data,

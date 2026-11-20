@@ -5,7 +5,7 @@
 
 Every source the book cites, with what was verified and how much of the source was actually read when the entry was created. An entry marked *bibliographic metadata only* means the citation details were checked against a publisher or catalog page; it does not mean the work was read in full for this project. Chapters cite by linking to the anchors on this page.
 
-329 entries. Grouped by evidence class, then alphabetically by id.
+358 entries. Grouped by evidence class, then alphabetically by id.
 
 ## Scholarly research
 
@@ -103,6 +103,18 @@ Alberto Bacchelli, and Christian Bird (2013). “Expectations, Outcomes, and Cha
 - Supports (abstract): Understanding the code and the change is the central challenge of review, and the tools of the time gave little support for it.
 - Caveats: Single-company study (Microsoft), 2013; based on observation, interviews, surveys and manual classification of review comments. Author order follows Crossref; the Microsoft Research page lists Bird first.
 
+### bardolet2011capital {#bardolet2011capital}
+
+David Bardolet, Craig R. Fox, and Dan Lovallo (2011). “Corporate capital allocation: a behavioral perspective”. Strategic Management Journal, vol. 32, no. 13, pp. 1465-1483.
+
+- DOI: [10.1002/smj.966](https://doi.org/10.1002/smj.966) · <https://doi.org/10.1002/smj.966>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The authors argue that cross-subsidization in multibusiness firms reflects a more general tendency toward even allocation over divisions, driven at least in part by naive diversification, and that this produces partition dependence, in which allocations vary systematically with the divisions into which the firm is organized.
+- Supports (abstract): An archival study found firms' internal capital allocations biased toward equality over the number of business units into which the firm is partitioned.
+- Supports (abstract): Two experiments with experienced managers allocating capital in a hypothetical firm, which removes agency conflicts, found allocations still varied systematically with the divisional and subdivisional structure and with centralized or decentralized allocation.
+- Caveats: Abstract only. About capital budgets across business units, not engineering capacity across directors; applying it to headcount allocation is this book's extension. Effect sizes were not read and are not stated.
+
 ### beecham2008motivation {#beecham2008motivation}
 
 Sarah Beecham et al. (2008). “Motivation in Software Engineering: A systematic literature review”. Information and Software Technology, vol. 50, no. 9-10, pp. 860-878.
@@ -194,6 +206,18 @@ Terese Besker, Antonio Martini, and Jan Bosch (2019). “Software Developer Prod
 - Supports (abstract): Developers reported wasting on average 23% of their time because of technical debt, were frequently forced to introduce new technical debt, and most commonly spent the extra time on additional testing.
 - Caveats: Self-reported time. The size of the replication dataset is not stated in the abstract and was not read. The 23% figure is an average of reported waste, not a measured productivity loss.
 
+### bjarnason2011requirements {#bjarnason2011requirements}
+
+Elizabeth Bjarnason, Krzysztof Wnuk, and Björn Regnell (2011). “Requirements are slipping through the gaps - A case study on causes & effects of communication gaps in large-scale software development”. 2011 IEEE 19th International Requirements Engineering Conference (RE 2011), pp. 37-46.
+
+- DOI: [10.1109/re.2011.6051639](https://doi.org/10.1109/re.2011.6051639) · <https://doi.org/10.1109/re.2011.6051639>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): An explanatory case study using semi-structured interviews with nine practitioners at one large market-driven software company.
+- Supports (abstract): Four main factors affect requirements communication, namely scale, temporal aspects, common views, and decision structures.
+- Supports (abstract): Communication gaps lead to failure to meet customers' expectations, quality issues, and wasted effort.
+- Caveats: Nine interviews at one company; qualitative and explanatory, no measured effect sizes. Abstract reconstructed from OpenAlex's inverted index.
+
 ### bloom2024hybrid {#bloom2024hybrid}
 
 Nicholas Bloom, Ruobing Han, and James Liang (2024). “Hybrid working from home improves retention without damaging performance”. Nature, vol. 630, no. 8018, pp. 920-925.
@@ -206,6 +230,17 @@ Nicholas Bloom, Ruobing Han, and James Liang (2024). “Hybrid working from home
 - Supports (abstract): Equivalence tests found no effect on performance grades over the following two years, no overall difference in promotions, and no effect on lines of code written by computer engineers.
 - Supports (abstract): The 395 managers in the trial moved from expecting a negative productivity effect (about -2.6 percent) before the experiment to a positive one (about +1.0 percent) afterwards.
 - Caveats: One firm in one country; hybrid (two home days), not fully remote; the randomization method was not read. Performance measured by review grades, promotions, and lines of code, which are coarse. nature.com redirected to an identity-provider page; abstract read via the Europe PMC record (PMC11208135).
+
+### bryson2004what {#bryson2004what}
+
+John M. Bryson (2004). “What to Do When Stakeholders Matter: Stakeholder Identification and Analysis Techniques”. Public Management Review, vol. 6, no. 1, pp. 21-53.
+
+- DOI: [10.1080/14719030410001675722](https://doi.org/10.1080/14719030410001675722) · <https://doi.org/10.1080/14719030410001675722>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, doi.
+- Supports (abstract): The article reviews a range of stakeholder identification and analysis techniques for organizing participation, formulating problems and searching for solutions, building a winning coalition around proposal development, review, and adoption, and implementing, monitoring, and evaluating interventions.
+- Supports (abstract): It argues that wise use of stakeholder analyses can help frame issues so that they are solvable in ways that are technically feasible and politically acceptable.
+- Caveats: Abstract only (OpenAlex record; Crossref carries none, and the publisher page was not fetched). Written for public-sector managers. Which specific techniques the article describes was not read and is not claimed.
 
 ### buchgeher2023adr {#buchgeher2023adr}
 
@@ -298,6 +333,17 @@ Marcelo Cataldo, James D. Herbsleb, and Kathleen M. Carley (2008). “Socio-tech
 - Supports (abstract): Logical dependencies mattered more for coordination needs than call and data dependencies.
 - Caveats: Abstract read from the OpenAlex record (Crossref has the short title only). Setting, sample, and effect sizes not read; one organization is likely and was not confirmed.
 
+### chang2009perceptions {#chang2009perceptions}
+
+Chu-Hsiang Daisy Chang, Christopher C. Rosen, and Paul E. Levy (2009). “The Relationship Between Perceptions of Organizational Politics and Employee Attitudes, Strain, and Behavior: A Meta-Analytic Examination”. Academy of Management Journal 52(4), pp. 779-801.
+
+- DOI: [10.5465/amj.2009.43670894](https://doi.org/10.5465/amj.2009.43670894) · <https://doi.org/10.5465/amj.2009.43670894>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Meta-analytic bivariate relationships between perceived organizational politics and: strain (.48), turnover intentions (.43), job satisfaction (-.57), affective commitment (-.54), task performance (-.20), and organizational citizenship behaviors toward individuals (-.16) and organizations (-.20).
+- Supports (abstract): Work attitudes mediated the effects of perceived politics on turnover intentions, and attitudes and strain mediated its effects on performance; exploratory analyses suggested perceived politics act as a hindrance stressor.
+- Caveats: Abstract only. Correlations, not causal estimates; the measure is employees' perception that their workplace is political (self-serving behavior), not the political skill of any manager. Number of studies not read.
+
 ### chillarege1992orthogonal {#chillarege1992orthogonal}
 
 Ram Chillarege et al. (1992). “Orthogonal Defect Classification - A Concept for In-Process Measurements”. IEEE Transactions on Software Engineering, vol. 18, no. 11, pp. 943-956.
@@ -377,6 +423,18 @@ Alexandre Decan, Tom Mens, and Eleni Constantinou (2018). “On the impact of se
 - Supports (abstract): An empirical study of nearly 400 security reports over a six-year period in the npm dependency network of over 610,000 packages, analysing how and when vulnerabilities are discovered and fixed and to what extent they affect dependent packages given dependency constraints.
 - Caveats: Abstract only; no quantitative finding is claimed. One ecosystem (npm), data to 2017.
 
+### dedreu2000influence {#dedreu2000influence}
+
+Carsten K. W. De Dreu, Laurie R. Weingart, and Seungwoo Kwon (2000). “Influence of Social Motives on Integrative Negotiation: A Meta-Analytic Review and Test of Two Theories”. Journal of Personality and Social Psychology, vol. 78, no. 5, pp. 889-905.
+
+- DOI: [10.1037/0022-3514.78.5.889](https://doi.org/10.1037/0022-3514.78.5.889) · <https://doi.org/10.1037/0022-3514.78.5.889>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, doi.
+- Supports (abstract): A meta-analysis of 28 studies tested the Theory of Cooperation and Competition (Deutsch) against Dual Concern Theory (Pruitt and Rubin).
+- Supports (abstract): Consistent with Dual Concern Theory, negotiators were less contentious, engaged in more problem solving, and achieved higher joint outcomes when they had a prosocial rather than an egoistic motive, but only when resistance to yielding was high (or unknown) rather than low.
+- Supports (abstract): Study characteristics moderated effects, including participation inducement (class exercise, participant pool), publication status, and the treatment of dyads that reached no agreement.
+- Caveats: Abstract only (PubMed record, PMID 10821196); effect sizes not read. The studies are mostly experimental negotiations with students or participant pools, as the moderators named in the abstract indicate; applying the result to internal negotiations between executives is the book's inference.
+
 ### dedreu2003task {#dedreu2003task}
 
 Carsten K. W. De Dreu, and Laurie R. Weingart (2003). “Task versus relationship conflict, team performance, and team member satisfaction: A meta-analysis”. Journal of Applied Psychology, vol. 88, no. 4, pp. 741-749.
@@ -427,6 +485,38 @@ Torgeir Dingsøyr, Nils Brede Moe, Tor Erlend Fægri, and Eva Amdahl Seim (2018)
 - Supports (full-text): Many coordination arenas were used (including Scrum of Scrums, a Metascrum, demos, forums and instant messaging), the arenas changed over time, and participants stressed informal coordination; the authors note that extra roles and arenas led to less team autonomy.
 - Caveats: Single case; the authors have no measure of the total effectiveness of the coordination arenas beyond the programme being recognized as a success. Open access under CC BY 4.0 (Crossref license field).
 
+### dixit1994investment {#dixit1994investment}
+
+Avinash K. Dixit, and Robert S. Pindyck (1994). *Investment under Uncertainty*. Princeton University Press.
+
+- ISBN-13: 9780691034102 · <https://press.princeton.edu/books/hardcover/9780691034102/investment-under-uncertainty>
+- Evidence class: Scholarly research. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-19): title, authors, year, publisher, isbn13, url.
+- Supports (official-summary): The publisher's description says the book stresses the irreversibility of most investment decisions and ongoing uncertainty, and recognizes the option value of waiting for better (but never complete) information, using an analogy with financial options.
+- Caveats: Summary only; no claim about the book's models or results.
+
+### dutton1993selling {#dutton1993selling}
+
+Jane E. Dutton, and Susan J. Ashford (1993). “Selling Issues to Top Management”. Academy of Management Review 18(3), pp. 397ff..
+
+- DOI: [10.5465/amr.1993.9309035145](https://doi.org/10.5465/amr.1993.9309035145) · <https://doi.org/10.5465/amr.1993.9309035145>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, doi.
+- Supports (abstract): The article treats top management's time and attention as critical but limited resources, and develops issue selling as a process central to explaining where top management allocates its attention, in the early stages of organizational decision making.
+- Supports (abstract): It frames issue selling from three perspectives (upward influence, claiming behaviors, impression management) and derives testable propositions.
+- Caveats: Abstract only; a conceptual article with propositions, not an empirical test. The publisher page returned 403; the last page number was not available in the OpenAlex record, so the page range is not verified.
+
+### dutton2001moves {#dutton2001moves}
+
+Jane E. Dutton, Susan J. Ashford, Regina M. O'Neill, and Katherine A. Lawrence (2001). “Moves That Matter: Issue Selling and Organizational Change”. Academy of Management Journal 44(4), pp. 716-736.
+
+- DOI: [10.2307/3069412](https://doi.org/10.2307/3069412) · <https://doi.org/10.2307/3069412>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Using 82 accounts of issue selling, the study examined managers' implicit theories of how to shape change from below by directing top management's attention.
+- Supports (abstract): The study reports the importance of issue-selling moves including packaging, involvement, and timing, and identifies three kinds of contextual knowledge critical to executing those moves.
+- Caveats: Abstract only. The three kinds of contextual knowledge are not named in the abstract and are not named in the book. Accounts are managers' own reports (one organization per the published study is not confirmed here), so the findings are about what managers believe works.
+
 ### dyba2008empirical {#dyba2008empirical}
 
 Tore Dybå, and Torgeir Dingsøyr (2008). “Empirical studies of agile software development: A systematic review”. Information and Software Technology, vol. 50, no. 9-10, pp. 833-859.
@@ -448,6 +538,21 @@ Lillian T. Eby et al. (2008). “Does mentoring matter? A multidisciplinary meta
 - Supports (abstract): Across youth, academic, and workplace mentoring, mentoring was associated with a wide range of favorable behavioral, attitudinal, health-related, relational, motivational, and career outcomes, but the effects were generally small.
 - Supports (abstract): Effects were larger for academic and workplace mentoring than for youth mentoring.
 - Caveats: Associations, not causal estimates. Only the abstract of the PMC author manuscript was read.
+
+### eden2021modelling {#eden2021modelling}
+
+Colin Eden, and Fran Ackermann (2021). “Modelling Stakeholder Dynamics for Supporting Group Decision and Negotiation: Theory to Practice”. Group Decision and Negotiation, vol. 30, no. 5, pp. 1001-1025.
+
+- DOI: [10.1007/s10726-021-09745-y](https://doi.org/10.1007/s10726-021-09745-y) · <https://doi.org/10.1007/s10726-021-09745-y>
+- Evidence class: Scholarly research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, doi.
+- Supports (full-text): The article proposes a six-step modelling process for a decision-making team to think through how stakeholders will respond to a proposed decision, including how stakeholders respond to each other's responses, so that the decision is politically feasible.
+- Supports (full-text): Step 1 places stakeholders on a power-interest grid; the figure (taken from Eden and Ackermann 1998 and Ackermann and Eden 2011) names four categories, players (high power, high interest), subjects (low power, high interest), context setters (high power, low interest), and crowd (low on both), with suggested handling for each (players deserve sustained management attention; context setters' awareness may be raised; subjects may form coalitions that give them power).
+- Supports (full-text): Positions on the grid are relative and can be issue-related; in the illustrative case the team could not place the media because their power and interest depended on the issue.
+- Supports (full-text): The article stresses that lower-power stakeholders may form, or be formed into, coalitions and so become powerful.
+- Supports (full-text): It recommends surfacing each key player's core goals, including negative-avoidance goals (outcomes the stakeholder wants to avoid), and notes that about a third of goals first proposed turn out to be strategies rather than goals.
+- Supports (full-text): The authors note others use power, legitimacy, and urgency as dimensions (citing Mitchell, Agle, and Wood 1997), and warn that presumptions about stakeholders' goals and responses are informed guesses that can be over-trusted.
+- Caveats: A method paper illustrated by one anonymized case (an airport security organization, conducted over 15 years before publication); it does not test whether the method improves outcomes. Open access under CC BY 4.0; read in full from the authors' institutional repository copy (published version).
 
 ### edmondson1999psychological {#edmondson1999psychological}
 
@@ -496,6 +601,18 @@ Neil A. Ernst et al. (2015). “Measure it? Manage it? Ignore it? Software pract
 - Supports (abstract): Respondents valued the metaphor for communication, but existing tools were not found helpful for managing the details of technical debt.
 - Caveats: Survey of practitioner perceptions in three organizations; it reports what respondents believe are sources of debt, not measured costs. Abstract reconstructed from OpenAlex; ACM DL not fetched.
 
+### fagerholm2017right {#fagerholm2017right}
+
+Fabian Fagerholm, Alejandro Sanchez Guinea, Hanna Mäenpää, and Jürgen Münch (2017). “The RIGHT model for Continuous Experimentation”. Journal of Systems and Software, vol. 123, pp. 292-305.
+
+- DOI: [10.1016/j.jss.2016.03.034](https://doi.org/10.1016/j.jss.2016.03.034) · <https://doi.org/10.1016/j.jss.2016.03.034>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): An initial model of continuous experimentation was derived analytically from prior work and checked against case study findings from two startup companies.
+- Supports (abstract): The model's requirements include building minimum viable products or features with instrumentation, designing and managing experiment plans, linking experiment results with the product roadmap, and managing a flexible business strategy.
+- Supports (abstract): Main challenges include designing experiments quickly, instrumenting software to collect data, and feeding results back into product development and business strategy.
+- Caveats: Two startups only. The abstract was read on the Gesellschaft fuer Informatik digital library record of the journal-first presentation at Software Engineering 2017 (same title and authors, LNI); ScienceDirect returned 403 and the author repository at Reutlingen University was behind a bot check.
+
 ### felps2006bad {#felps2006bad}
 
 Will Felps, Terence R. Mitchell, and Eliza Byington (2006). “How, When, and Why Bad Apples Spoil the Barrel: Negative Group Members and Dysfunctional Groups”. Research in Organizational Behavior, vol. 27, pp. 175-222.
@@ -507,6 +624,18 @@ Will Felps, Terence R. Mitchell, and Eliza Byington (2006). “How, When, and Wh
 - Supports (abstract): It defines the negative member as someone who withholds effort, expresses negative affect, or violates important interpersonal norms.
 - Supports (abstract): It proposes that teammates react with perceptions of inequity, negative mood, and reduced trust, leading to defensive responses (such as lashing out, mood maintenance, or withdrawal) that affect group outcomes such as cooperation and creativity, and it discusses moderators and mitigating actions.
 - Caveats: Theoretical review; the 30 to 40 percent figure attributed to this paper in press coverage comes from a separate experiment and was not verified here, so the book does not use it.
+
+### ferris2005development {#ferris2005development}
+
+Gerald R. Ferris et al. (2005). “Development and Validation of the Political Skill Inventory”. Journal of Management 31(1), pp. 126-152.
+
+- DOI: [10.1177/0149206304271386](https://doi.org/10.1177/0149206304271386) · <https://doi.org/10.1177/0149206304271386>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Three investigations involving seven samples reported a consistent factor structure and construct and criterion-related validity evidence for the Political Skill Inventory.
+- Supports (abstract): Political skill was positively related to self-monitoring, political savvy, and emotional intelligence, negatively related to trait anxiety, and not correlated with general mental ability.
+- Supports (abstract): The inventory predicted performance ratings of managers in two samples.
+- Caveats: Abstract only; the four dimension names used in the chapter (social astuteness, interpersonal influence, networking ability, apparent sincerity) are taken from the Munyon et al. 2015 abstract, not from this abstract. Sample details and effect sizes not read.
 
 ### floyd1992middle {#floyd1992middle}
 
@@ -577,6 +706,18 @@ Jonas Fritzsch, Justus Bogner, Stefan Wagner, and Alfred Zimmermann (2019). “M
 - Supports (abstract): Maintainability and scalability were the primary migration drivers. Because of the complexity of their legacy systems, most companies preferred a rewrite over splitting existing code bases, often because no suitable decomposition approach was available.
 - Supports (abstract): Finding the right service cut was a major technical challenge, alongside building expertise in new technologies; organizational challenges included mindset change and smooth collaboration between teams, especially in large traditional companies adopting agile processes at the same time.
 - Caveats: Interview study of companies that chose to migrate, so it describes intentions and challenges, not outcomes compared with not migrating. Venue from the arXiv DOI field; the proceedings page was not read, so the venue is not in verified_fields.
+
+### galinsky2001first {#galinsky2001first}
+
+Adam D. Galinsky, and Thomas Mussweiler (2001). “First Offers as Anchors: The Role of Perspective-Taking and Negotiator Focus”. Journal of Personality and Social Psychology, vol. 81, no. 4, pp. 657-669.
+
+- DOI: [10.1037/0022-3514.81.4.657](https://doi.org/10.1037/0022-3514.81.4.657) · <https://doi.org/10.1037/0022-3514.81.4.657>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, doi.
+- Supports (abstract): Three experiments on distributive (buyer and seller) negotiations found that whichever party made the first offer obtained a better outcome, and that first offers strongly predicted final settlement prices.
+- Supports (abstract): The first-offer advantage was eliminated when the negotiator who did not make the first offer focused on information inconsistent with it, namely the opponent's alternatives to the negotiation, the opponent's reservation price, or the negotiator's own target.
+- Supports (abstract): The effects occurred in both face-to-face and e-mail negotiations.
+- Caveats: Abstract only (PubMed record, PMID 11642352); effect sizes and participant samples not read. Laboratory negotiations over a single distributive issue (price); generalization to multi-issue negotiations inside a firm, where parties have continuing relationships, is the book's inference.
 
 ### gall1998logical {#gall1998logical}
 
@@ -669,6 +810,26 @@ Sarah J. Hall et al. (2017). “The effect of working on-call on stress physiolo
 - Supports (abstract): Eight studies met inclusion criteria; working on-call from home appears to adversely affect sleep quantity and, in most cases, sleep quality.
 - Supports (abstract): Data on stress physiology were insufficient for meaningful conclusions, and the studies did not separate on-call nights with and without calls.
 - Caveats: Small evidence base; occupations other than software. Online 2016, issue June 2017.
+
+### hambrick1984upper {#hambrick1984upper}
+
+Donald C. Hambrick, and Phyllis A. Mason (1984). “Upper Echelons: The Organization as a Reflection of Its Top Managers”. Academy of Management Review, vol. 9, no. 2, p. 193 onward.
+
+- DOI: [10.5465/amr.1984.4277628](https://doi.org/10.5465/amr.1984.4277628) · <https://doi.org/10.5465/amr.1984.4277628>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The paper synthesizes previously fragmented literatures on top managers into an "upper echelons perspective", which holds that organizational outcomes (strategic choices and performance levels) are partially predicted by managerial background characteristics; it offers propositions and methodological suggestions.
+- Caveats: A theory paper with propositions, not an empirical test. Abstract read via OpenAlex; full text not read. Concerns top management teams of firms, not engineering leadership teams. Crossref and OpenAlex give only the first page (193); the last page was not confirmed and is not stated.
+
+### hambrick2007upper {#hambrick2007upper}
+
+Donald C. Hambrick (2007). “Upper Echelons Theory: An Update”. Academy of Management Review, vol. 32, no. 2, pp. 334-343.
+
+- DOI: [10.5465/amr.2007.24345254](https://doi.org/10.5465/amr.2007.24345254) · <https://doi.org/10.5465/amr.2007.24345254>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The abstract states the central premise of upper echelons theory as executives' experiences, values, and personalities greatly influencing their interpretations of the situations they face and, in turn, their choices; the article recaps the 1984 paper, discusses later refinements, and proposes avenues for future research.
+- Caveats: An invited essay, not an empirical study. Abstract only; the refinements it discusses were not read and are not used.
 
 ### herbsleb2003empirical {#herbsleb2003empirical}
 
@@ -892,6 +1053,41 @@ Avraham N. Kluger, and Angelo DeNisi (1996). “The effects of feedback interven
 - Supports (abstract): Feedback intervention theory proposes that feedback shifts attention among task learning, task motivation, and meta-task (including self-related) processes, and the results suggest effectiveness decreases as attention moves toward the self and away from the task.
 - Supports (abstract): The effects are further moderated by task characteristics that the authors describe as still poorly understood.
 - Caveats: Pools heterogeneous studies published up to the mid-1990s; study settings not read; not specific to managers or software teams. Abstract read from Kluger's university-hosted abstract file; APA PsycNet page did not render.
+
+### kohavi2009controlled {#kohavi2009controlled}
+
+Ron Kohavi, Roger Longbotham, Dan Sommerfield, and Randal M. Henne (2009). “Controlled experiments on the web: survey and practical guide”. Data Mining and Knowledge Discovery, vol. 18, no. 1, pp. 140-181.
+
+- DOI: [10.1007/s10618-008-0114-1](https://doi.org/10.1007/s10618-008-0114-1) · <https://doi.org/10.1007/s10618-008-0114-1>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Controlled experiments (randomized experiments, A/B tests) are described as the best scientific design for establishing a causal relationship between changes and user-observable behavior.
+- Supports (abstract): The authors report from their experience that significant learning and return on investment are seen when development teams listen to their customers rather than to the highest-paid person's opinion.
+- Supports (abstract): The paper reviews ingredients and limitations (technical and organizational) of controlled experiments, including statistical power, sample size, and variance reduction.
+- Caveats: Experience-based guide from large consumer web properties, not a controlled study of product organizations. Published online 30 July 2008, in print February 2009 (Crossref); the print year is recorded. Author names as given by Crossref. Abstract reconstructed from OpenAlex's inverted index.
+
+### kohavi2013online {#kohavi2013online}
+
+Ron Kohavi et al. (2013). “Online controlled experiments at large scale”. Proceedings of the 19th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2013), pp. 1168-1176.
+
+- DOI: [10.1145/2487575.2488217](https://doi.org/10.1145/2487575.2488217) · <https://doi.org/10.1145/2487575.2488217>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Running experiments at large scale requires addressing challenges in three areas, cultural and organizational, engineering, and trustworthiness.
+- Supports (abstract): At Bing, many ideas impact key metrics by about 1 percent and are not well estimated a priori.
+- Supports (abstract): The experimentation system identified many negative features that were not deployed despite key stakeholders' early excitement.
+- Caveats: Documented practice at one very large consumer search engine (Microsoft Bing); not a controlled study and not representative of small business-to-business products. Abstract reconstructed from OpenAlex's inverted index.
+
+### kroll2013followthesun {#kroll2013followthesun}
+
+Josiane Kroll, Sajid Ibrahim Hashmi, Ita Richardson, and Jorge L. N. Audy (2013). “A Systematic Literature Review of Best Practices and Challenges in Follow-the-Sun Software Development”. 2013 IEEE 8th International Conference on Global Software Engineering Workshops (ICGSEW), pp. 18-23.
+
+- DOI: [10.1109/ICGSEW.2013.10](https://doi.org/10.1109/ICGSEW.2013.10) · <https://doi.org/10.1109/ICGSEW.2013.10>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Follow-the-sun development is described as a strategy to reduce the length of projects developed across globally distributed locations; because of communication and collaboration challenges, companies find it difficult to adopt during task allocation and daily project handovers.
+- Supports (abstract): A systematic literature review of papers published between 1990 and 2012 identified 36 best practices and 17 challenges for follow-the-sun implementation.
+- Caveats: Workshop paper; the abstract does not list the practices or challenges or say whether any study measured outcomes. Abstract read as reconstructed by OpenAlex.
 
 ### kruchten2012technical {#kruchten2012technical}
 
@@ -1207,6 +1403,19 @@ Joseph E. Mroz, Joseph A. Allen, Dana C. Verhoeven, and Marissa L. Shuffler (201
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
 - Supports (abstract): A review of the psychological science of workplace meetings, focused on activities before, during, and after meetings that facilitate success, ending with concrete recommendations and a checklist.
 - Caveats: Abstract only; the recommendations and checklist were not read and are not reported.
+
+### munyon2015political {#munyon2015political}
+
+Timothy P. Munyon, James K. Summers, Katina W. Thompson, and Gerald R. Ferris (2015). “Political Skill and Work Outcomes: A Theoretical Extension, Meta-Analytic Investigation, and Agenda for the Future”. Personnel Psychology 68(1), pp. 143-184.
+
+- DOI: [10.1111/peps.12066](https://doi.org/10.1111/peps.12066) · <https://doi.org/10.1111/peps.12066>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A meta-analysis found political skill positively related to self-efficacy, job satisfaction, organizational commitment, work productivity, organizational citizenship behavior, career success, and personal reputation, and negatively related to physiological strain.
+- Supports (abstract): Political skill was not significantly related to psychological strain or to perceptions of organizational politics.
+- Supports (abstract): Political skill predicted task performance after controlling for the Big Five personality characteristics and general mental ability; personal reputation and self-efficacy partially mediated the political skill and task performance relationship.
+- Supports (abstract): In a post hoc test of the dimensions, networking ability, interpersonal influence, and apparent sincerity, but not social astuteness, predicted task performance.
+- Caveats: Abstract only; number of studies, sample sizes, and effect sizes were not read and are not reported. Correlational studies across occupations, not engineering leaders specifically. Crossref gives online publication 13 January 2014 and print issue March 2015; the book uses the print year. OpenAlex lists the year as 2013.
 
 ### murray2023just {#murray2023just}
 
@@ -1555,6 +1764,16 @@ Jonathan Sillito, and Esdras Kutomi (2020). “Failures and Fixes: A Study of So
 - Supports (abstract): Among the 11 reported observations are that failures can cascade through a system into major outages and that engineers often learn a system's scaling limits only when those limits are exceeded.
 - Caveats: Small qualitative sample (30 incidents); public postmortems are a self-selected set. It studies incident response rather than measuring whether postmortems improve outcomes; no peer-reviewed source quantifying the benefit of blameless postmortems or of on-call practices was confirmed in this session.
 
+### smite2015cost {#smite2015cost}
+
+Darja Šmite, Fabio Calefato, and Claes Wohlin (2015). “Cost Savings in Global Software Engineering: Where's the Evidence?”. IEEE Software 32(4), pp. 26-32.
+
+- DOI: [10.1109/MS.2015.102](https://doi.org/10.1109/MS.2015.102) · <https://doi.org/10.1109/MS.2015.102>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Researchers examined published studies of global software engineering to determine whether offshoring actually yielded cost savings, and concluded that not enough evidence existed to reach the verdict that offshoring reduced costs.
+- Caveats: The abstract is three sentences long (read as reconstructed by OpenAlex from the publisher's abstract); the review's method, number of studies, and any partial findings were not read. Absence of evidence of savings is not evidence that offshoring raises cost.
+
 ### smith2001keeping {#smith2001keeping}
 
 H. Jeff Smith, Mark Keil, and Gordon Depledge (2001). “Keeping Mum as the Project Goes Under: Toward an Explanatory Model”. Journal of Management Information Systems, vol. 18, no. 2, pp. 189-227.
@@ -1640,6 +1859,16 @@ Viktoria Stray, Nils Brede Moe, Henrik Vedal, and Marthe Berntzen (2022). “Usi
 - Supports (abstract): The use of OKRs facilitated knowledge sharing, helped the teams align their goals, and provided inter-team insights; the authors conclude that projects using OKRs need to support members in formulating key results that align and motivate teams toward the same mission.
 - Caveats: One project, two teams, interview data; no outcome or performance measure. Supports OKRs as a coordination aid, not as a performance intervention. The ScholarSpace landing page was behind a browser check; the DOI resolves to the handle URL above (HTTP redirect confirmed). Page range was not confirmed and is omitted. Licensed CC BY-NC-ND per OpenAlex.
 
+### sullivan2001modularity {#sullivan2001modularity}
+
+Kevin J. Sullivan, William G. Griswold, Yuanfang Cai, and Ben Hallen (2001). “The Structure and Value of Modularity in Software Design”. Proceedings of ESEC/FSE-9 (8th European Software Engineering Conference and 9th ACM SIGSOFT Symposium on Foundations of Software Engineering), pp. 99-108.
+
+- DOI: [10.1145/503209.503224](https://doi.org/10.1145/503209.503224) · <https://doi.org/10.1145/503209.503224>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The paper evaluates a theory that uses design structure matrices to model designs and real options techniques to value them, applies it to Parnas's KWIC designs, and reports options results consistent with Parnas's conclusions, suggesting potential to inform software design.
+- Caveats: One worked example (KWIC); shows the reasoning is applicable, not that it predicts outcomes.
+
 ### sweller1988cognitive {#sweller1988cognitive}
 
 John Sweller (1988). “Cognitive Load During Problem Solving: Effects on Learning”. Cognitive Science, vol. 12, no. 2, pp. 257-285.
@@ -1661,6 +1890,16 @@ Davide Taibi, Valentina Lenarduzzi, and Claus Pahl (2017). “Processes, Motivat
 - Supports (abstract): Based on a survey of practitioners who had migrated, the paper compares three migration processes and ranks motivations and issues; maintainability and scalability were consistently ranked the most important motivations.
 - Supports (abstract): Return on investment was expected to take longer, but respondents considered the reduced maintenance effort in the long run to compensate highly for this.
 - Caveats: Sample size and selection are not stated in the abstract; respondents are practitioners who migrated, so benefits are self-reported by those who chose the approach.
+
+### teece2010business {#teece2010business}
+
+David J. Teece (2010). “Business Models, Business Strategy and Innovation”. Long Range Planning, vol. 43, no. 2-3, pp. 172-194.
+
+- DOI: [10.1016/j.lrp.2009.07.003](https://doi.org/10.1016/j.lrp.2009.07.003) · <https://doi.org/10.1016/j.lrp.2009.07.003>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The abstract describes a business model as the design of the value creation, delivery, and capture mechanisms an enterprise employs; its essence is how the enterprise delivers value to customers, entices them to pay, and converts payments to profit, reflecting management's hypothesis about what customers want and how to meet it profitably.
+- Caveats: Conceptual article; abstract only. Used for the definition, not for any finding.
 
 ### theeboom2014coaching {#theeboom2014coaching}
 
@@ -2381,6 +2620,20 @@ Kevin Alwell (2021). “Measuring enterprise developer productivity”. The GitH
 - Supports (full-text): The post advises that no single measure supports conclusions about productivity on its own and that teams should use at least three of the dimensions; it calls activity the most common and most misused productivity measure.
 - Caveats: Secondary summary on the blog of GitHub (the SPACE first author's employer in 2021), not the paper itself; attribute the 'at least three' advice to this summary unless the paper is read.
 
+### arnold2013blackswan {#arnold2013blackswan}
+
+Joshua J. Arnold, and Özlem Yüce (2013). “Black Swan Farming Using Cost of Delay: Discover, Nurture and Speed Up Delivery of Value”. 2013 Agile Conference (Nashville, TN), pp. 101-116, IEEE.
+
+- DOI: [10.1109/AGILE.2013.16](https://doi.org/10.1109/AGILE.2013.16) · <https://blackswanfarming.com/black-swan-farming-using-cost-of-delay>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (full-text): Defines a feature's cost of delay as the value it could generate over a period if it were available now, including the value of information, and how both decay with time.
+- Supports (full-text): At Maersk Line, requirements were triaged in under a week into four benefit types (increase revenue, protect revenue, reduce costs, avoid costs), with assumptions exposed and challenged in weekly sessions; the stated aim was accuracy rather than precision.
+- Supports (full-text): Describes urgency profiles (short life-cycle with peak affected by delay; long life-cycle with peak affected; long life-cycle with peak unaffected) and external deadlines; ranks work by CD3, described as a form of WSJF.
+- Supports (full-text): Cost of delay was applied across a portfolio of about $100M; one feature had a cost of delay of about $210,000 a week, and its 38 weeks in queues cost nearly $8M of missed opportunity.
+- Supports (full-text): Cites Reinertsen (2009) on the importance of measuring cost of delay and Smith and Reinertsen's earlier book for related ideas, without establishing who originated the term.
+- Caveats: Single-company case report with no control group; cost of delay was introduced together with other lean-agile practices and the authors do not attribute outcomes to it alone; some reported figures are internally inconsistent (cycle time, return per dollar), so the chapter reports none of the outcome figures. First author advocates the method commercially.
+
 ### atlassian-daci {#atlassian-daci}
 
 Atlassian (2026). “DACI: A Decision-Making Framework”. Atlassian Team Playbook.
@@ -2595,6 +2848,16 @@ Ollie Cook et al. (2018). “On-Call (The Site Reliability Workbook, Chapter 8)�
 - Supports (full-text): States that out-of-hours on-call work should be compensated.
 - Caveats: Google practice plus one Evernote case (Garrett Plasky). Licence CC BY-NC-ND 4.0.
 
+### cooper1990stagegate {#cooper1990stagegate}
+
+Robert G. Cooper (1990). “Stage-gate systems: A new tool for managing new products”. Business Horizons 33(3), pp. 44-54.
+
+- DOI: [10.1016/0007-6813(90)90040-I](https://doi.org/10.1016/0007-6813(90)90040-I) · <https://doi.org/10.1016/0007-6813(90)90040-I>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (metadata (idea credited only)): Credited at idea level only for the widely known stage-gate idea, that a development effort is divided into stages separated by gates at which the work is reviewed against stated criteria and a decision is made to continue, stop, hold, or rework.
+- Caveats: Metadata only; no abstract available in Crossref or OpenAlex. Written about new-product development, not organizational transformation; the transfer is the book's.
+
 ### cunningham1992wycash {#cunningham1992wycash}
 
 Ward Cunningham (1992). “The WyCash Portfolio Management System”. OOPSLA '92 Experience Report.
@@ -2605,6 +2868,17 @@ Ward Cunningham (1992). “The WyCash Portfolio Management System”. OOPSLA '92
 - Supports (full-text): Cunningham likens shipping first-time code to going into debt: a little debt speeds development so long as it is paid back promptly with a rewrite.
 - Supports (full-text): He warns that the danger arises when the debt is not repaid: time spent on not-quite-right code counts as interest, and an engineering organisation can be brought to a standstill under the load.
 - Caveats: An experience report, not an empirical study; the debt passage is a short section of it. Author-hosted copy dated March 26, 1992. No DOI was confirmed from the page.
+
+### dahlquist2022finance {#dahlquist2022finance}
+
+Julie Dahlquist, and Rainford Knight (2022). *Principles of Finance*. OpenStax, Rice University.
+
+- <https://openstax.org/books/principles-finance/pages/16-1-payback-period-method>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, publisher, url.
+- Supports (full-text): The payback period is the time a project takes to recover its initial cost from its cash flows; its weaknesses are that it ignores the time value of money, uses an arbitrary cutoff, ignores cash flows after payback, and does not adjust for risk.
+- Supports (full-text): NPV is the present value of cash inflows minus the present value of outflows; accept positive and reject negative NPV; the discount rate should in theory be the firm's cost of capital, which is hard to estimate, so an NPV profile is recommended to test sensitivity.
+- Caveats: Introductory textbook; standard definitions, not evidence about software investments. evidence_class recorded as practitioner for lack of a textbook class; the maintainer may prefer another class.
 
 ### dodds2021trophy {#dodds2021trophy}
 
@@ -2888,6 +3162,17 @@ V. A. Graicunas (1937). *Relationship in Organization*. In L. Gulick and L. Urwi
 - Supports (official-summary): Graicunas is known for counting the potential relationships (direct single, cross, and direct group) a manager has with subordinates and showing that they grow much faster than the number of subordinates; on secondary accounts he suggested a maximum of about five, and probably four, subordinates.
 - Caveats: Historical. Neither the 1933 nor the 1937 text was read; details rest on two secondary pages (a consultant's essay and Wikipedia). The relationship count assumes every possible relationship is active, which nobody believes; cite as history, not evidence.
 
+### greenlaw2022economics {#greenlaw2022economics}
+
+Steven A. Greenlaw, David Shapiro, and Daniel MacDonald (2022). *Principles of Economics: 3e*. OpenStax, Rice University.
+
+- <https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, publisher, url.
+- Supports (full-text): Opportunity cost is what must be given up to obtain what one chooses, the value of the next best alternative.
+- Supports (full-text): Sunk costs are costs incurred in the past that cannot be recovered and should be ignored in decisions, which should rest on future costs and benefits.
+- Caveats: Introductory textbook definitions only.
+
 ### grove1983high {#grove1983high}
 
 Andrew S. Grove (1983). *High Output Management*. Vintage. Latest edition: Vintage paperback, 1995 (publisher page shows no edition statement).
@@ -3122,6 +3407,41 @@ Will Larson (2023). “Getting a job as an engineering executive”. Irrational 
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
 - Supports (full-text): The post defines the engineering executive as the functional leadership role responsible for all of engineering at a company, independent of title, and observes that companies use the CTO, VP of Engineering, and Head of Engineering titles inconsistently.
 - Caveats: Dated January 8, 2023. An unedited draft chapter; the published book may differ.
+
+### larson2023gelling {#larson2023gelling}
+
+Will Larson (2023). “Gelling your Engineering leadership team.”. Irrational Exuberance (lethain.com); unedited chapter of The Engineering Executive's Primer.
+
+- <https://lethain.com/gelling-engineering-leadership-team/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The post takes from Lencioni the idea that a leader's peers are their "first team", and notes that a leader's incentives are often at odds with peers' incentives, which makes being a good peer harder than being a good manager.
+- Supports (full-text): It advises an executive taking over a leadership team to form a view of it early, test first impressions before acting, make necessary personnel changes quickly, and set explicit expectations with the direct reports, including how they will be judged and how to resolve tension between peers' goals.
+- Supports (full-text): It attributes competition among leadership-team peers partly to habits learned in bureaucratic or shrinking companies, where capturing existing capacity pays better than creating new capacity, and to the executive not enforcing norms.
+- Caveats: Dated July 11, 2023. Practitioner opinion; an unedited draft chapter.
+
+### larson2023micromanage {#larson2023micromanage}
+
+Will Larson (2023). “Better to micromanage than be disengaged.”. Irrational Exuberance (lethain.com).
+
+- <https://lethain.com/better-micromanage-than-disengaged/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The post argues that an executive who is too disengaged does more damage than one who is somewhat too involved, because absent leaders leave decisions stalled and problems with struggling leaders unaddressed, and that a pursuit of distance to avoid micromanagement can turn into ignoring the team.
+- Caveats: Dated February 6, 2023. Practitioner opinion from one author's experience.
+
+### larson2023planning {#larson2023planning}
+
+Will Larson (2023). “How to plan as an engineering executive.”. Irrational Exuberance (lethain.com); unedited chapter of The Engineering Executive's Primer.
+
+- <https://lethain.com/planning/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The post divides executive planning into an annual financial plan (including headcount), a functional portfolio allocation (the share of engineering capacity for internal priorities versus cross-functional requests, set as monthly percentages), and a roadmap agreed with product and sales.
+- Supports (full-text): It recommends allocating at a coarse level, to an area's leader rather than to teams inside the area, so that the leader can make trade-offs within it.
+- Supports (full-text): It recommends changing allocations infrequently, partly because frequent changes make teams compete for allocation in a zero-sum way, and warns against judging an investment's value from early results.
+- Supports (full-text): It warns that if the CEO rewards private headcount escalations, those become the real process and the jointly made plan becomes a fiction.
+- Caveats: Dated April 10, 2023. Practitioner opinion; an unedited draft chapter, and the published book may differ.
 
 ### larson2024primer {#larson2024primer}
 
@@ -3361,6 +3681,16 @@ Melissa Perri (2018). *Escaping the Build Trap: How Effective Product Management
 - ISBN-13: 9781491973790 · <https://openlibrary.org/books/OL28421513M/Escaping_the_Build_Trap>
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, isbn13.
+
+### pfeffer1992managing {#pfeffer1992managing}
+
+Jeffrey Pfeffer (1992). *Managing with Power*. Harvard Business School Press.
+
+- ISBN-13: 9780875843148 · <https://openlibrary.org/works/OL2694266W>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, authors, year, publisher, isbn13.
+- Supports (metadata (idea credited only)): Credited at idea level only for its widely known argument that power and influence are how things get done in organizations, and that managers should diagnose who depends on whom and whose support a decision needs rather than treat politics as something to avoid.
+- Caveats: Metadata only. A subtitle is commonly listed for this book but was not shown in the Open Library search record, so it is omitted.
 
 ### reilly-being-glue {#reilly-being-glue}
 

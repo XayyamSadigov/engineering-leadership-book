@@ -11532,3 +11532,1025 @@
     basis: metadata (idea credited only)
   caveats: Metadata only; no abstract was available through Crossref, OpenAlex, or Semantic Scholar, and
     the APA page did not render. It is an essay, not an empirical study.
+- id: kohavi2009controlled
+  type: journal-article
+  title: 'Controlled experiments on the web: survey and practical guide'
+  authors:
+  - Ron Kohavi
+  - Roger Longbotham
+  - Dan Sommerfield
+  - Randal M. Henne
+  year: 2009
+  venue: Data Mining and Knowledge Discovery, vol. 18, no. 1, pp. 140-181
+  doi: 10.1007/s10618-008-0114-1
+  url: https://doi.org/10.1007/s10618-008-0114-1
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1007/s10618-008-0114-1
+  - https://api.openalex.org/works/doi:10.1007/s10618-008-0114-1?select=title,publication_year,abstract_inverted_index,primary_location
+  verified_on: '2026-11-19'
+  claims:
+  - text: Controlled experiments (randomized experiments, A/B tests) are described as the best scientific
+      design for establishing a causal relationship between changes and user-observable behavior.
+    basis: abstract
+  - text: The authors report from their experience that significant learning and return on investment
+      are seen when development teams listen to their customers rather than to the highest-paid person's
+      opinion.
+    basis: abstract
+  - text: The paper reviews ingredients and limitations (technical and organizational) of controlled experiments,
+      including statistical power, sample size, and variance reduction.
+    basis: abstract
+  caveats: Experience-based guide from large consumer web properties, not a controlled study of product
+    organizations. Published online 30 July 2008, in print February 2009 (Crossref); the print year is
+    recorded. Author names as given by Crossref. Abstract reconstructed from OpenAlex's inverted index.
+  access_notes: Springer full text not fetched.
+- id: kohavi2013online
+  type: conference-paper
+  title: Online controlled experiments at large scale
+  authors:
+  - Ron Kohavi
+  - Alex Deng
+  - Brian Frasca
+  - Toby Walker
+  - Ya Xu
+  - Nils Pohlmann
+  year: 2013
+  venue: Proceedings of the 19th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining
+    (KDD 2013), pp. 1168-1176
+  doi: 10.1145/2487575.2488217
+  url: https://doi.org/10.1145/2487575.2488217
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=Online+controlled+experiments+at+large+scale+Kohavi+2013&rows=2
+  - https://api.openalex.org/works/doi:10.1145/2487575.2488217?select=title,publication_year,abstract_inverted_index
+  verified_on: '2026-11-19'
+  claims:
+  - text: Running experiments at large scale requires addressing challenges in three areas, cultural and
+      organizational, engineering, and trustworthiness.
+    basis: abstract
+  - text: At Bing, many ideas impact key metrics by about 1 percent and are not well estimated a priori.
+    basis: abstract
+  - text: The experimentation system identified many negative features that were not deployed despite
+      key stakeholders' early excitement.
+    basis: abstract
+  caveats: Documented practice at one very large consumer search engine (Microsoft Bing); not a controlled
+    study and not representative of small business-to-business products. Abstract reconstructed from OpenAlex's
+    inverted index.
+  access_notes: dl.acm.org not fetched.
+- id: fagerholm2017right
+  type: journal-article
+  title: The RIGHT model for Continuous Experimentation
+  authors:
+  - Fabian Fagerholm
+  - Alejandro Sanchez Guinea
+  - Hanna Mäenpää
+  - Jürgen Münch
+  year: 2017
+  venue: Journal of Systems and Software, vol. 123, pp. 292-305
+  doi: 10.1016/j.jss.2016.03.034
+  url: https://doi.org/10.1016/j.jss.2016.03.034
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1016/j.jss.2016.03.034
+  - https://dl.gi.de/handle/20.500.12116/1286
+  verified_on: '2026-11-19'
+  claims:
+  - text: An initial model of continuous experimentation was derived analytically from prior work and
+      checked against case study findings from two startup companies.
+    basis: abstract
+  - text: The model's requirements include building minimum viable products or features with instrumentation,
+      designing and managing experiment plans, linking experiment results with the product roadmap, and
+      managing a flexible business strategy.
+    basis: abstract
+  - text: Main challenges include designing experiments quickly, instrumenting software to collect data,
+      and feeding results back into product development and business strategy.
+    basis: abstract
+  caveats: Two startups only. The abstract was read on the Gesellschaft fuer Informatik digital library
+    record of the journal-first presentation at Software Engineering 2017 (same title and authors, LNI);
+    ScienceDirect returned 403 and the author repository at Reutlingen University was behind a bot check.
+  access_notes: Full text not read.
+- id: bjarnason2011requirements
+  type: conference-paper
+  title: Requirements are slipping through the gaps - A case study on causes & effects of communication
+    gaps in large-scale software development
+  authors:
+  - Elizabeth Bjarnason
+  - Krzysztof Wnuk
+  - Björn Regnell
+  year: 2011
+  venue: 2011 IEEE 19th International Requirements Engineering Conference (RE 2011), pp. 37-46
+  doi: 10.1109/re.2011.6051639
+  url: https://doi.org/10.1109/re.2011.6051639
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=Requirements+are+slipping+through+the+gaps+communication+gaps+Bjarnason&rows=2
+  - https://api.openalex.org/works/doi:10.1109/re.2011.6051639?select=title,publication_year,abstract_inverted_index,authorships
+  verified_on: '2026-11-19'
+  claims:
+  - text: An explanatory case study using semi-structured interviews with nine practitioners at one large
+      market-driven software company.
+    basis: abstract
+  - text: Four main factors affect requirements communication, namely scale, temporal aspects, common
+      views, and decision structures.
+    basis: abstract
+  - text: Communication gaps lead to failure to meet customers' expectations, quality issues, and wasted
+      effort.
+    basis: abstract
+  caveats: Nine interviews at one company; qualitative and explanatory, no measured effect sizes. Abstract
+    reconstructed from OpenAlex's inverted index.
+  access_notes: IEEE Xplore not fetched.
+- id: arnold2013blackswan
+  type: conference-paper
+  title: 'Black Swan Farming Using Cost of Delay: Discover, Nurture and Speed Up Delivery of Value'
+  authors:
+  - Joshua J. Arnold
+  - Özlem Yüce
+  year: 2013
+  venue: 2013 Agile Conference (Nashville, TN), pp. 101-116, IEEE
+  doi: 10.1109/AGILE.2013.16
+  url: https://blackswanfarming.com/black-swan-farming-using-cost-of-delay
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=Black+Swan+Farming+Using+Cost+of+Delay+Arnold+Yuce&rows=2
+  - https://blackswanfarming.com/black-swan-farming-using-cost-of-delay
+  - https://blackswanfarming.com/experience-report-maersk-line/
+  - https://blackswanfarming.com/urgency-profiles/
+  - https://blackswanfarming.com/cost-of-delay/
+  verified_on: '2026-11-19'
+  access_notes: Full text read in the authors' own web reformatting of the IEEE paper, hosted on Arnold's
+    site (Black Swan Farming). The IEEE copy is paywalled and was not read. Crossref confirms title, authors,
+    venue, pages, and DOI (author name spelled Yuce there).
+  claims:
+  - text: Defines a feature's cost of delay as the value it could generate over a period if it were available
+      now, including the value of information, and how both decay with time.
+    basis: full-text
+  - text: At Maersk Line, requirements were triaged in under a week into four benefit types (increase
+      revenue, protect revenue, reduce costs, avoid costs), with assumptions exposed and challenged in
+      weekly sessions; the stated aim was accuracy rather than precision.
+    basis: full-text
+  - text: Describes urgency profiles (short life-cycle with peak affected by delay; long life-cycle with
+      peak affected; long life-cycle with peak unaffected) and external deadlines; ranks work by CD3,
+      described as a form of WSJF.
+    basis: full-text
+  - text: Cost of delay was applied across a portfolio of about $100M; one feature had a cost of delay
+      of about $210,000 a week, and its 38 weeks in queues cost nearly $8M of missed opportunity.
+    basis: full-text
+  - text: Cites Reinertsen (2009) on the importance of measuring cost of delay and Smith and Reinertsen's
+      earlier book for related ideas, without establishing who originated the term.
+    basis: full-text
+  caveats: Single-company case report with no control group; cost of delay was introduced together with
+    other lean-agile practices and the authors do not attribute outcomes to it alone; some reported figures
+    are internally inconsistent (cycle time, return per dollar), so the chapter reports none of the outcome
+    figures. First author advocates the method commercially.
+- id: teece2010business
+  type: journal-article
+  title: Business Models, Business Strategy and Innovation
+  authors:
+  - David J. Teece
+  year: 2010
+  venue: Long Range Planning, vol. 43, no. 2-3, pp. 172-194
+  doi: 10.1016/j.lrp.2009.07.003
+  url: https://doi.org/10.1016/j.lrp.2009.07.003
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=Business+models+business+strategy+and+innovation+Teece
+  - https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.lrp.2009.07.003?fields=title,abstract,year,venue,authors
+  verified_on: '2026-11-19'
+  access_notes: ScienceDirect returned 403; abstract read via Semantic Scholar's record of the DOI.
+  claims:
+  - text: The abstract describes a business model as the design of the value creation, delivery, and capture
+      mechanisms an enterprise employs; its essence is how the enterprise delivers value to customers,
+      entices them to pay, and converts payments to profit, reflecting management's hypothesis about what
+      customers want and how to meet it profitably.
+    basis: abstract
+  caveats: Conceptual article; abstract only. Used for the definition, not for any finding.
+- id: dahlquist2022finance
+  type: book
+  title: Principles of Finance
+  authors:
+  - Julie Dahlquist
+  - Rainford Knight
+  year: 2022
+  publisher: OpenStax, Rice University
+  url: https://openstax.org/books/principles-finance/pages/16-1-payback-period-method
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - publisher
+  - url
+  verified_via:
+  - https://openstax.org/books/principles-finance/pages/16-1-payback-period-method
+  - https://openstax.org/books/principles-finance/pages/16-2-net-present-value-npv-method
+  verified_on: '2026-11-19'
+  access_notes: Open textbook (CC BY-NC-SA), sections 16.1 (payback) and 16.2 (NPV) read in full.
+  claims:
+  - text: The payback period is the time a project takes to recover its initial cost from its cash flows;
+      its weaknesses are that it ignores the time value of money, uses an arbitrary cutoff, ignores cash
+      flows after payback, and does not adjust for risk.
+    basis: full-text
+  - text: NPV is the present value of cash inflows minus the present value of outflows; accept positive
+      and reject negative NPV; the discount rate should in theory be the firm's cost of capital, which
+      is hard to estimate, so an NPV profile is recommended to test sensitivity.
+    basis: full-text
+  caveats: Introductory textbook; standard definitions, not evidence about software investments. evidence_class
+    recorded as practitioner for lack of a textbook class; the maintainer may prefer another class.
+- id: greenlaw2022economics
+  type: book
+  title: Principles of Economics
+  subtitle: 3e
+  authors:
+  - Steven A. Greenlaw
+  - David Shapiro
+  - Daniel MacDonald
+  year: 2022
+  publisher: OpenStax, Rice University
+  url: https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - publisher
+  - url
+  verified_via:
+  - https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint
+  verified_on: '2026-11-19'
+  access_notes: Open textbook (CC BY-NC-SA 4.0), section 2.1 read in full. Third edition published December
+    14, 2022.
+  claims:
+  - text: Opportunity cost is what must be given up to obtain what one chooses, the value of the next
+      best alternative.
+    basis: full-text
+  - text: Sunk costs are costs incurred in the past that cannot be recovered and should be ignored in
+      decisions, which should rest on future costs and benefits.
+    basis: full-text
+  caveats: Introductory textbook definitions only.
+- id: dixit1994investment
+  type: book
+  title: Investment under Uncertainty
+  authors:
+  - Avinash K. Dixit
+  - Robert S. Pindyck
+  year: 1994
+  publisher: Princeton University Press
+  isbn13: '9780691034102'
+  url: https://press.princeton.edu/books/hardcover/9780691034102/investment-under-uncertainty
+  evidence_class: scholarly
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - publisher
+  - isbn13
+  - url
+  verified_via:
+  - https://press.princeton.edu/books/hardcover/9780691034102/investment-under-uncertainty
+  - https://hbr.org/1995/05/the-options-approach-to-capital-investment
+  verified_on: '2026-11-19'
+  access_notes: Publisher description read. The authors' 1995 HBR article (The Options Approach to Capital
+    Investment) was checked for title, authors, and issue only; its summary does not cover irreversibility
+    or the NPV rule, so it is not cited.
+  claims:
+  - text: The publisher's description says the book stresses the irreversibility of most investment decisions
+      and ongoing uncertainty, and recognizes the option value of waiting for better (but never complete)
+      information, using an analogy with financial options.
+    basis: official-summary
+  caveats: Summary only; no claim about the book's models or results.
+- id: sullivan2001modularity
+  type: conference-paper
+  title: The Structure and Value of Modularity in Software Design
+  authors:
+  - Kevin J. Sullivan
+  - William G. Griswold
+  - Yuanfang Cai
+  - Ben Hallen
+  year: 2001
+  venue: Proceedings of ESEC/FSE-9 (8th European Software Engineering Conference and 9th ACM SIGSOFT Symposium
+    on Foundations of Software Engineering), pp. 99-108
+  doi: 10.1145/503209.503224
+  url: https://doi.org/10.1145/503209.503224
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=The+structure+and+value+of+modularity+in+software+design+Sullivan
+  - https://api.openalex.org/works/doi:10.1145/503209.503224
+  verified_on: '2026-11-19'
+  access_notes: Abstract from OpenAlex; full text is closed. Also published in ACM SIGSOFT Software Engineering
+    Notes 26(5), DOI 10.1145/503271.503224. Full author names confirmed from the Crossref record https://api.crossref.org/works/10.1145/503209.503224.
+  claims:
+  - text: The paper evaluates a theory that uses design structure matrices to model designs and real options
+      techniques to value them, applies it to Parnas's KWIC designs, and reports options results consistent
+      with Parnas's conclusions, suggesting potential to inform software design.
+    basis: abstract
+  caveats: One worked example (KWIC); shows the reasoning is applicable, not that it predicts outcomes.
+- id: galinsky2001first
+  type: journal-article
+  title: 'First Offers as Anchors: The Role of Perspective-Taking and Negotiator Focus'
+  authors:
+  - Adam D. Galinsky
+  - Thomas Mussweiler
+  year: 2001
+  venue: Journal of Personality and Social Psychology, vol. 81, no. 4, pp. 657-669
+  doi: 10.1037/0022-3514.81.4.657
+  url: https://doi.org/10.1037/0022-3514.81.4.657
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1037/0022-3514.81.4.657
+  - https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=11642352&rettype=abstract&retmode=text
+  verified_on: '2026-11-20'
+  claims:
+  - text: Three experiments on distributive (buyer and seller) negotiations found that whichever party
+      made the first offer obtained a better outcome, and that first offers strongly predicted final settlement
+      prices.
+    basis: abstract
+  - text: The first-offer advantage was eliminated when the negotiator who did not make the first offer
+      focused on information inconsistent with it, namely the opponent's alternatives to the negotiation,
+      the opponent's reservation price, or the negotiator's own target.
+    basis: abstract
+  - text: The effects occurred in both face-to-face and e-mail negotiations.
+    basis: abstract
+  caveats: Abstract only (PubMed record, PMID 11642352); effect sizes and participant samples not read.
+    Laboratory negotiations over a single distributive issue (price); generalization to multi-issue negotiations
+    inside a firm, where parties have continuing relationships, is the book's inference.
+- id: dedreu2000influence
+  type: journal-article
+  title: 'Influence of Social Motives on Integrative Negotiation: A Meta-Analytic Review and Test of Two
+    Theories'
+  authors:
+  - Carsten K. W. De Dreu
+  - Laurie R. Weingart
+  - Seungwoo Kwon
+  year: 2000
+  venue: Journal of Personality and Social Psychology, vol. 78, no. 5, pp. 889-905
+  doi: 10.1037/0022-3514.78.5.889
+  url: https://doi.org/10.1037/0022-3514.78.5.889
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1037/0022-3514.78.5.889
+  - https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=10821196&rettype=abstract&retmode=text
+  verified_on: '2026-11-20'
+  claims:
+  - text: A meta-analysis of 28 studies tested the Theory of Cooperation and Competition (Deutsch) against
+      Dual Concern Theory (Pruitt and Rubin).
+    basis: abstract
+  - text: Consistent with Dual Concern Theory, negotiators were less contentious, engaged in more problem
+      solving, and achieved higher joint outcomes when they had a prosocial rather than an egoistic motive,
+      but only when resistance to yielding was high (or unknown) rather than low.
+    basis: abstract
+  - text: Study characteristics moderated effects, including participation inducement (class exercise,
+      participant pool), publication status, and the treatment of dyads that reached no agreement.
+    basis: abstract
+  caveats: Abstract only (PubMed record, PMID 10821196); effect sizes not read. The studies are mostly
+    experimental negotiations with students or participant pools, as the moderators named in the abstract
+    indicate; applying the result to internal negotiations between executives is the book's inference.
+- id: eden2021modelling
+  type: journal-article
+  title: 'Modelling Stakeholder Dynamics for Supporting Group Decision and Negotiation: Theory to Practice'
+  authors:
+  - Colin Eden
+  - Fran Ackermann
+  year: 2021
+  venue: Group Decision and Negotiation, vol. 30, no. 5, pp. 1001-1025
+  doi: 10.1007/s10726-021-09745-y
+  url: https://doi.org/10.1007/s10726-021-09745-y
+  evidence_class: scholarly
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1007/s10726-021-09745-y
+  - https://strathprints.strath.ac.uk/76383/7/Eden_Ackermann_GDN_2021_Modelling_stakeholder_dynamics_for_supporting_group_decision.pdf
+  - https://api.core.ac.uk/v3/outputs/426877439
+  verified_on: '2026-11-20'
+  claims:
+  - text: The article proposes a six-step modelling process for a decision-making team to think through
+      how stakeholders will respond to a proposed decision, including how stakeholders respond to each
+      other's responses, so that the decision is politically feasible.
+    basis: full-text
+  - text: Step 1 places stakeholders on a power-interest grid; the figure (taken from Eden and Ackermann
+      1998 and Ackermann and Eden 2011) names four categories, players (high power, high interest), subjects
+      (low power, high interest), context setters (high power, low interest), and crowd (low on both),
+      with suggested handling for each (players deserve sustained management attention; context setters'
+      awareness may be raised; subjects may form coalitions that give them power).
+    basis: full-text
+  - text: Positions on the grid are relative and can be issue-related; in the illustrative case the team
+      could not place the media because their power and interest depended on the issue.
+    basis: full-text
+  - text: The article stresses that lower-power stakeholders may form, or be formed into, coalitions and
+      so become powerful.
+    basis: full-text
+  - text: It recommends surfacing each key player's core goals, including negative-avoidance goals (outcomes
+      the stakeholder wants to avoid), and notes that about a third of goals first proposed turn out to
+      be strategies rather than goals.
+    basis: full-text
+  - text: The authors note others use power, legitimacy, and urgency as dimensions (citing Mitchell, Agle,
+      and Wood 1997), and warn that presumptions about stakeholders' goals and responses are informed
+      guesses that can be over-trusted.
+    basis: full-text
+  caveats: A method paper illustrated by one anonymized case (an airport security organization, conducted
+    over 15 years before publication); it does not test whether the method improves outcomes. Open access
+    under CC BY 4.0; read in full from the authors' institutional repository copy (published version).
+- id: bryson2004what
+  type: journal-article
+  title: 'What to Do When Stakeholders Matter: Stakeholder Identification and Analysis Techniques'
+  authors:
+  - John M. Bryson
+  year: 2004
+  venue: Public Management Review, vol. 6, no. 1, pp. 21-53
+  doi: 10.1080/14719030410001675722
+  url: https://doi.org/10.1080/14719030410001675722
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1080/14719030410001675722
+  - https://api.openalex.org/works/doi:10.1080/14719030410001675722
+  verified_on: '2026-11-20'
+  claims:
+  - text: The article reviews a range of stakeholder identification and analysis techniques for organizing
+      participation, formulating problems and searching for solutions, building a winning coalition around
+      proposal development, review, and adoption, and implementing, monitoring, and evaluating interventions.
+    basis: abstract
+  - text: It argues that wise use of stakeholder analyses can help frame issues so that they are solvable
+      in ways that are technically feasible and politically acceptable.
+    basis: abstract
+  caveats: Abstract only (OpenAlex record; Crossref carries none, and the publisher page was not fetched).
+    Written for public-sector managers. Which specific techniques the article describes was not read and
+    is not claimed.
+- id: hambrick1984upper
+  type: journal-article
+  title: 'Upper Echelons: The Organization as a Reflection of Its Top Managers'
+  authors:
+  - Donald C. Hambrick
+  - Phyllis A. Mason
+  year: 1984
+  venue: Academy of Management Review, vol. 9, no. 2, p. 193 onward
+  doi: 10.5465/amr.1984.4277628
+  url: https://doi.org/10.5465/amr.1984.4277628
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.5465/amr.1984.4277628
+  - https://api.crossref.org/works/10.5465/amr.1984.4277628
+  verified_on: '2026-11-19'
+  claims:
+  - text: The paper synthesizes previously fragmented literatures on top managers into an "upper echelons
+      perspective", which holds that organizational outcomes (strategic choices and performance levels)
+      are partially predicted by managerial background characteristics; it offers propositions and methodological
+      suggestions.
+    basis: abstract
+  caveats: A theory paper with propositions, not an empirical test. Abstract read via OpenAlex; full text
+    not read. Concerns top management teams of firms, not engineering leadership teams. Crossref and OpenAlex
+    give only the first page (193); the last page was not confirmed and is not stated.
+- id: hambrick2007upper
+  type: journal-article
+  title: 'Upper Echelons Theory: An Update'
+  authors:
+  - Donald C. Hambrick
+  year: 2007
+  venue: Academy of Management Review, vol. 32, no. 2, pp. 334-343
+  doi: 10.5465/amr.2007.24345254
+  url: https://doi.org/10.5465/amr.2007.24345254
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.5465/amr.2007.24345254
+  - https://api.crossref.org/works/10.5465/amr.2007.24345254
+  verified_on: '2026-11-19'
+  claims:
+  - text: The abstract states the central premise of upper echelons theory as executives' experiences,
+      values, and personalities greatly influencing their interpretations of the situations they face
+      and, in turn, their choices; the article recaps the 1984 paper, discusses later refinements, and
+      proposes avenues for future research.
+    basis: abstract
+  caveats: An invited essay, not an empirical study. Abstract only; the refinements it discusses were
+    not read and are not used.
+- id: bardolet2011capital
+  type: journal-article
+  title: 'Corporate capital allocation: a behavioral perspective'
+  authors:
+  - David Bardolet
+  - Craig R. Fox
+  - Dan Lovallo
+  year: 2011
+  venue: Strategic Management Journal, vol. 32, no. 13, pp. 1465-1483
+  doi: 10.1002/smj.966
+  url: https://doi.org/10.1002/smj.966
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works?filter=title.search:capital%20allocation%20behavioral%20perspective,publication_year:2011
+  - https://api.crossref.org/works/10.1002/smj.966
+  verified_on: '2026-11-19'
+  claims:
+  - text: The authors argue that cross-subsidization in multibusiness firms reflects a more general tendency
+      toward even allocation over divisions, driven at least in part by naive diversification, and that
+      this produces partition dependence, in which allocations vary systematically with the divisions
+      into which the firm is organized.
+    basis: abstract
+  - text: An archival study found firms' internal capital allocations biased toward equality over the
+      number of business units into which the firm is partitioned.
+    basis: abstract
+  - text: Two experiments with experienced managers allocating capital in a hypothetical firm, which removes
+      agency conflicts, found allocations still varied systematically with the divisional and subdivisional
+      structure and with centralized or decentralized allocation.
+    basis: abstract
+  caveats: Abstract only. About capital budgets across business units, not engineering capacity across
+    directors; applying it to headcount allocation is this book's extension. Effect sizes were not read
+    and are not stated.
+- id: larson2023planning
+  type: blog-post
+  title: How to plan as an engineering executive.
+  authors:
+  - Will Larson
+  year: 2023
+  venue: Irrational Exuberance (lethain.com); unedited chapter of The Engineering Executive's Primer
+  url: https://lethain.com/planning/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://lethain.com/planning/
+  - https://lethain.com/tags/executive/
+  verified_on: '2026-11-19'
+  claims:
+  - text: The post divides executive planning into an annual financial plan (including headcount), a functional
+      portfolio allocation (the share of engineering capacity for internal priorities versus cross-functional
+      requests, set as monthly percentages), and a roadmap agreed with product and sales.
+    basis: full-text
+  - text: It recommends allocating at a coarse level, to an area's leader rather than to teams inside
+      the area, so that the leader can make trade-offs within it.
+    basis: full-text
+  - text: It recommends changing allocations infrequently, partly because frequent changes make teams
+      compete for allocation in a zero-sum way, and warns against judging an investment's value from early
+      results.
+    basis: full-text
+  - text: It warns that if the CEO rewards private headcount escalations, those become the real process
+      and the jointly made plan becomes a fiction.
+    basis: full-text
+  caveats: Dated April 10, 2023. Practitioner opinion; an unedited draft chapter, and the published book
+    may differ.
+- id: larson2023gelling
+  type: blog-post
+  title: Gelling your Engineering leadership team.
+  authors:
+  - Will Larson
+  year: 2023
+  venue: Irrational Exuberance (lethain.com); unedited chapter of The Engineering Executive's Primer
+  url: https://lethain.com/gelling-engineering-leadership-team/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://lethain.com/gelling-engineering-leadership-team/
+  verified_on: '2026-11-19'
+  claims:
+  - text: The post takes from Lencioni the idea that a leader's peers are their "first team", and notes
+      that a leader's incentives are often at odds with peers' incentives, which makes being a good peer
+      harder than being a good manager.
+    basis: full-text
+  - text: It advises an executive taking over a leadership team to form a view of it early, test first
+      impressions before acting, make necessary personnel changes quickly, and set explicit expectations
+      with the direct reports, including how they will be judged and how to resolve tension between peers'
+      goals.
+    basis: full-text
+  - text: It attributes competition among leadership-team peers partly to habits learned in bureaucratic
+      or shrinking companies, where capturing existing capacity pays better than creating new capacity,
+      and to the executive not enforcing norms.
+    basis: full-text
+  caveats: Dated July 11, 2023. Practitioner opinion; an unedited draft chapter.
+- id: larson2023micromanage
+  type: blog-post
+  title: Better to micromanage than be disengaged.
+  authors:
+  - Will Larson
+  year: 2023
+  venue: Irrational Exuberance (lethain.com)
+  url: https://lethain.com/better-micromanage-than-disengaged/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://lethain.com/better-micromanage-than-disengaged/
+  verified_on: '2026-11-19'
+  claims:
+  - text: The post argues that an executive who is too disengaged does more damage than one who is somewhat
+      too involved, because absent leaders leave decisions stalled and problems with struggling leaders
+      unaddressed, and that a pursuit of distance to avoid micromanagement can turn into ignoring the
+      team.
+    basis: full-text
+  caveats: Dated February 6, 2023. Practitioner opinion from one author's experience.
+- id: smite2015cost
+  type: journal-article
+  title: 'Cost Savings in Global Software Engineering: Where''s the Evidence?'
+  authors:
+  - Darja Šmite
+  - Fabio Calefato
+  - Claes Wohlin
+  year: 2015
+  venue: IEEE Software 32(4), pp. 26-32
+  doi: 10.1109/MS.2015.102
+  url: https://doi.org/10.1109/MS.2015.102
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=Empirical+evidence+in+global+software+engineering+a+systematic+review+Smite+Wohlin&rows=3
+  - https://api.openalex.org/works/doi:10.1109/ms.2015.102
+  verified_on: '2026-11-19'
+  claims:
+  - text: Researchers examined published studies of global software engineering to determine whether offshoring
+      actually yielded cost savings, and concluded that not enough evidence existed to reach the verdict
+      that offshoring reduced costs.
+    basis: abstract
+  caveats: The abstract is three sentences long (read as reconstructed by OpenAlex from the publisher's
+    abstract); the review's method, number of studies, and any partial findings were not read. Absence
+    of evidence of savings is not evidence that offshoring raises cost.
+  access_notes: Crossref record confirmed title, authors, venue, volume, issue, and pages; OpenAlex supplied
+    the abstract. IEEE Xplore was not fetched.
+- id: kroll2013followthesun
+  type: conference-paper
+  title: A Systematic Literature Review of Best Practices and Challenges in Follow-the-Sun Software Development
+  authors:
+  - Josiane Kroll
+  - Sajid Ibrahim Hashmi
+  - Ita Richardson
+  - Jorge L. N. Audy
+  year: 2013
+  venue: 2013 IEEE 8th International Conference on Global Software Engineering Workshops (ICGSEW), pp.
+    18-23
+  doi: 10.1109/ICGSEW.2013.10
+  url: https://doi.org/10.1109/ICGSEW.2013.10
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works?search=follow-the-sun%20software%20development%20systematic%20literature%20review&per_page=5
+  - https://api.openalex.org/works/doi:10.1109/icgsew.2013.10
+  verified_on: '2026-11-19'
+  claims:
+  - text: Follow-the-sun development is described as a strategy to reduce the length of projects developed
+      across globally distributed locations; because of communication and collaboration challenges, companies
+      find it difficult to adopt during task allocation and daily project handovers.
+    basis: abstract
+  - text: A systematic literature review of papers published between 1990 and 2012 identified 36 best
+      practices and 17 challenges for follow-the-sun implementation.
+    basis: abstract
+  caveats: Workshop paper; the abstract does not list the practices or challenges or say whether any study
+    measured outcomes. Abstract read as reconstructed by OpenAlex.
+- id: munyon2015political
+  type: journal-article
+  title: 'Political Skill and Work Outcomes: A Theoretical Extension, Meta-Analytic Investigation, and
+    Agenda for the Future'
+  authors:
+  - Timothy P. Munyon
+  - James K. Summers
+  - Katina W. Thompson
+  - Gerald R. Ferris
+  year: 2015
+  venue: Personnel Psychology 68(1), pp. 143-184
+  doi: 10.1111/peps.12066
+  url: https://doi.org/10.1111/peps.12066
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1111/peps.12066
+  - https://api.crossref.org/works/10.1111/peps.12066
+  verified_on: '2026-11-19'
+  claims:
+  - text: A meta-analysis found political skill positively related to self-efficacy, job satisfaction,
+      organizational commitment, work productivity, organizational citizenship behavior, career success,
+      and personal reputation, and negatively related to physiological strain.
+    basis: abstract
+  - text: Political skill was not significantly related to psychological strain or to perceptions of organizational
+      politics.
+    basis: abstract
+  - text: Political skill predicted task performance after controlling for the Big Five personality characteristics
+      and general mental ability; personal reputation and self-efficacy partially mediated the political
+      skill and task performance relationship.
+    basis: abstract
+  - text: In a post hoc test of the dimensions, networking ability, interpersonal influence, and apparent
+      sincerity, but not social astuteness, predicted task performance.
+    basis: abstract
+  caveats: Abstract only; number of studies, sample sizes, and effect sizes were not read and are not
+    reported. Correlational studies across occupations, not engineering leaders specifically. Crossref
+    gives online publication 13 January 2014 and print issue March 2015; the book uses the print year.
+    OpenAlex lists the year as 2013.
+- id: ferris2005development
+  type: journal-article
+  title: Development and Validation of the Political Skill Inventory
+  authors:
+  - Gerald R. Ferris
+  - Darren C. Treadway
+  - Robert W. Kolodinsky
+  - Wayne A. Hochwarter
+  - Charles J. Kacmar
+  - Ceasar Douglas
+  - Dwight D. Frink
+  year: 2005
+  venue: Journal of Management 31(1), pp. 126-152
+  doi: 10.1177/0149206304271386
+  url: https://doi.org/10.1177/0149206304271386
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1177/0149206304271386
+  verified_on: '2026-11-19'
+  claims:
+  - text: Three investigations involving seven samples reported a consistent factor structure and construct
+      and criterion-related validity evidence for the Political Skill Inventory.
+    basis: abstract
+  - text: Political skill was positively related to self-monitoring, political savvy, and emotional intelligence,
+      negatively related to trait anxiety, and not correlated with general mental ability.
+    basis: abstract
+  - text: The inventory predicted performance ratings of managers in two samples.
+    basis: abstract
+  caveats: Abstract only; the four dimension names used in the chapter (social astuteness, interpersonal
+    influence, networking ability, apparent sincerity) are taken from the Munyon et al. 2015 abstract,
+    not from this abstract. Sample details and effect sizes not read.
+- id: chang2009perceptions
+  type: journal-article
+  title: 'The Relationship Between Perceptions of Organizational Politics and Employee Attitudes, Strain,
+    and Behavior: A Meta-Analytic Examination'
+  authors:
+  - Chu-Hsiang Daisy Chang
+  - Christopher C. Rosen
+  - Paul E. Levy
+  year: 2009
+  venue: Academy of Management Journal 52(4), pp. 779-801
+  doi: 10.5465/amj.2009.43670894
+  url: https://doi.org/10.5465/amj.2009.43670894
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.5465/amj.2009.43670894
+  verified_on: '2026-11-19'
+  claims:
+  - text: 'Meta-analytic bivariate relationships between perceived organizational politics and: strain
+      (.48), turnover intentions (.43), job satisfaction (-.57), affective commitment (-.54), task performance
+      (-.20), and organizational citizenship behaviors toward individuals (-.16) and organizations (-.20).'
+    basis: abstract
+  - text: Work attitudes mediated the effects of perceived politics on turnover intentions, and attitudes
+      and strain mediated its effects on performance; exploratory analyses suggested perceived politics
+      act as a hindrance stressor.
+    basis: abstract
+  caveats: Abstract only. Correlations, not causal estimates; the measure is employees' perception that
+    their workplace is political (self-serving behavior), not the political skill of any manager. Number
+    of studies not read.
+- id: dutton1993selling
+  type: journal-article
+  title: Selling Issues to Top Management
+  authors:
+  - Jane E. Dutton
+  - Susan J. Ashford
+  year: 1993
+  venue: Academy of Management Review 18(3), pp. 397ff.
+  doi: 10.5465/amr.1993.9309035145
+  url: https://doi.org/10.5465/amr.1993.9309035145
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.5465/amr.1993.9309035145
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article treats top management's time and attention as critical but limited resources, and
+      develops issue selling as a process central to explaining where top management allocates its attention,
+      in the early stages of organizational decision making.
+    basis: abstract
+  - text: It frames issue selling from three perspectives (upward influence, claiming behaviors, impression
+      management) and derives testable propositions.
+    basis: abstract
+  caveats: Abstract only; a conceptual article with propositions, not an empirical test. The publisher
+    page returned 403; the last page number was not available in the OpenAlex record, so the page range
+    is not verified.
+- id: dutton2001moves
+  type: journal-article
+  title: 'Moves That Matter: Issue Selling and Organizational Change'
+  authors:
+  - Jane E. Dutton
+  - Susan J. Ashford
+  - Regina M. O'Neill
+  - Katherine A. Lawrence
+  year: 2001
+  venue: Academy of Management Journal 44(4), pp. 716-736
+  doi: 10.2307/3069412
+  url: https://doi.org/10.2307/3069412
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.2307/3069412
+  verified_on: '2026-11-19'
+  claims:
+  - text: Using 82 accounts of issue selling, the study examined managers' implicit theories of how to
+      shape change from below by directing top management's attention.
+    basis: abstract
+  - text: The study reports the importance of issue-selling moves including packaging, involvement, and
+      timing, and identifies three kinds of contextual knowledge critical to executing those moves.
+    basis: abstract
+  caveats: Abstract only. The three kinds of contextual knowledge are not named in the abstract and are
+    not named in the book. Accounts are managers' own reports (one organization per the published study
+    is not confirmed here), so the findings are about what managers believe works.
+- id: cooper1990stagegate
+  type: journal-article
+  title: 'Stage-gate systems: A new tool for managing new products'
+  authors:
+  - Robert G. Cooper
+  year: 1990
+  venue: Business Horizons 33(3), pp. 44-54
+  doi: 10.1016/0007-6813(90)90040-I
+  url: https://doi.org/10.1016/0007-6813(90)90040-I
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1016/0007-6813(90)90040-I
+  - https://api.openalex.org/works/doi:10.1016/0007-6813(90)90040-I
+  verified_on: '2026-11-19'
+  claims:
+  - text: Credited at idea level only for the widely known stage-gate idea, that a development effort
+      is divided into stages separated by gates at which the work is reviewed against stated criteria
+      and a decision is made to continue, stop, hold, or rework.
+    basis: metadata (idea credited only)
+  caveats: Metadata only; no abstract available in Crossref or OpenAlex. Written about new-product development,
+    not organizational transformation; the transfer is the book's.
+- id: pfeffer1992managing
+  type: book
+  title: Managing with Power
+  authors:
+  - Jeffrey Pfeffer
+  year: 1992
+  publisher: Harvard Business School Press
+  isbn13: '9780875843148'
+  url: https://openlibrary.org/works/OL2694266W
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - publisher
+  - isbn13
+  verified_via:
+  - https://openlibrary.org/search.json?q=managing+with+power+pfeffer
+  verified_on: '2026-11-19'
+  claims:
+  - text: Credited at idea level only for its widely known argument that power and influence are how things
+      get done in organizations, and that managers should diagnose who depends on whom and whose support
+      a decision needs rather than treat politics as something to avoid.
+    basis: metadata (idea credited only)
+  caveats: Metadata only. A subtitle is commonly listed for this book but was not shown in the Open Library
+    search record, so it is omitted.
