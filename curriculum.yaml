@@ -68,7 +68,7 @@ parts:
       - n: 5
         slug: one-on-ones-coaching-and-mentorship
         title: One-on-Ones, Coaching, and Mentorship
-        status: planned
+        status: review
         objectives:
           - Run one-on-ones that surface information you would not otherwise get, and detect when they have decayed into status meetings.
           - Choose between directing, coaching, mentoring, and sponsoring for a given person and task.
@@ -77,7 +77,7 @@ parts:
       - n: 6
         slug: feedback-conflict-and-difficult-conversations
         title: Feedback, Conflict, and Difficult Conversations
-        status: planned
+        status: review
         objectives:
           - Give specific, behavioral feedback early, and adapt delivery across cultures without diluting the message.
           - Diagnose whether a conflict is about task, process, status, or values before intervening.
@@ -86,7 +86,7 @@ parts:
       - n: 7
         slug: hiring-and-structured-interviews
         title: Hiring and Structured Interviews
-        status: planned
+        status: review
         objectives:
           - Design a structured interview loop tied to a written role scorecard.
           - Explain what selection research does and does not support, and where engineering practice outruns the evidence.
@@ -95,7 +95,7 @@ parts:
       - n: 8
         slug: career-development-promotion-and-compensation
         title: Career Development, Promotion, and Compensation
-        status: planned
+        status: review
         objectives:
           - Build or repair a career ladder that describes scope and impact rather than tenure and tools.
           - Run a promotion process with calibration, and explain a "not yet" so that it is usable.
@@ -104,7 +104,7 @@ parts:
       - n: 9
         slug: performance-management-and-underperformance
         title: Performance Management and Underperformance
-        status: planned
+        status: review
         objectives:
           - Separate skill, will, role fit, and system causes of low performance before acting.
           - Run a fair, documented improvement process with a real chance of success and a clear end.
@@ -113,7 +113,7 @@ parts:
       - n: 10
         slug: motivation-retention-and-senior-engineers
         title: Motivation, Retention, and Managing Senior Engineers
-        status: planned
+        status: review
         objectives:
           - Identify what actually drives retention in your organization using exit and stay data instead of assumptions.
           - Manage engineers who are more expert than you, including highly opinionated ones.
@@ -129,7 +129,7 @@ parts:
       - n: 11
         slug: high-performance-trust-safety-and-accountability
         title: "High Performance: Trust, Psychological Safety, and Accountability"
-        status: planned
+        status: review
         objectives:
           - Define high performance in terms of outcomes, sustainability, and learning, not heroics.
           - Explain what psychological safety is, what the research measured, and why it is not the absence of standards.
@@ -138,7 +138,7 @@ parts:
       - n: 12
         slug: team-charters-working-agreements-and-knowledge-sharing
         title: Team Charters, Working Agreements, and Knowledge Sharing
-        status: planned
+        status: review
         objectives:
           - Write a team charter that states mission, boundaries, interfaces, and decision rights.
           - Negotiate working agreements that the team enforces on itself.
@@ -147,7 +147,7 @@ parts:
       - n: 13
         slug: decision-making-in-teams
         title: Decision-Making in Teams
-        status: planned
+        status: review
         objectives:
           - Match the decision method (consent, consult, delegate, decide) to reversibility and stakes.
           - Assign decision rights explicitly and record decisions so they survive personnel change.
@@ -156,7 +156,7 @@ parts:
       - n: 14
         slug: distributed-teams-team-health-and-dysfunction
         title: Distributed Teams, Team Health, and Diagnosing Dysfunction
-        status: planned
+        status: review
         objectives:
           - Design collaboration for distributed and hybrid teams using what the remote-work evidence supports.
           - Run a team health assessment and interpret it without turning it into a score to manage.

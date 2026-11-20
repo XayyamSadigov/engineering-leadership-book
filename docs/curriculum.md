@@ -3,13 +3,13 @@
 
 # Curriculum
 
-The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 17 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
+The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 27 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
 
 | Part | Chapters | On the site |
 |---|---|---|
 | I. Foundations of Engineering Leadership | 1–4 | 4 of 4 |
-| II. People Management | 5–10 | 0 of 6 |
-| III. Building High-Performing Teams | 11–14 | 0 of 4 |
+| II. People Management | 5–10 | 6 of 6 |
+| III. Building High-Performing Teams | 11–14 | 4 of 4 |
 | IV. Engineering Execution | 15–18 | 4 of 4 |
 | V. Software Quality and Engineering Excellence | 19–27 | 9 of 9 |
 | VI. Technical Leadership and Architecture | 28–32 | 0 of 5 |
@@ -79,9 +79,9 @@ Primary sources: [fournier2017manager](references/bibliography.md#fournier2017ma
 
 The individual-level craft; one-on-ones, feedback, hiring, growth, performance, and retention.
 
-### Chapter 5 — One-on-Ones, Coaching, and Mentorship
+### [Chapter 5 — One-on-Ones, Coaching, and Mentorship](parts/02-people-management/05-one-on-ones-coaching-and-mentorship.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -91,9 +91,9 @@ After this chapter you can:
 
 Primary sources: [grove1983high](references/bibliography.md#grove1983high), [fournier2017manager](references/bibliography.md#fournier2017manager), [zhuo2019making](references/bibliography.md#zhuo2019making), [wiseman2010multipliers](references/bibliography.md#wiseman2010multipliers)
 
-### Chapter 6 — Feedback, Conflict, and Difficult Conversations
+### [Chapter 6 — Feedback, Conflict, and Difficult Conversations](parts/02-people-management/06-feedback-conflict-and-difficult-conversations.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -103,9 +103,9 @@ After this chapter you can:
 
 Primary sources: [scott2017radical](references/bibliography.md#scott2017radical), [meyer2014culture](references/bibliography.md#meyer2014culture), [lencioni2002five](references/bibliography.md#lencioni2002five), [edmondson1999psychological](references/bibliography.md#edmondson1999psychological)
 
-### Chapter 7 — Hiring and Structured Interviews
+### [Chapter 7 — Hiring and Structured Interviews](parts/02-people-management/07-hiring-and-structured-interviews.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -115,9 +115,9 @@ After this chapter you can:
 
 Primary sources: [schmidt1998validity](references/bibliography.md#schmidt1998validity), [sackett2022revisiting](references/bibliography.md#sackett2022revisiting), [larson2019elegant](references/bibliography.md#larson2019elegant), [winters2020software](references/bibliography.md#winters2020software)
 
-### Chapter 8 — Career Development, Promotion, and Compensation
+### [Chapter 8 — Career Development, Promotion, and Compensation](parts/02-people-management/08-career-development-promotion-and-compensation.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -127,9 +127,9 @@ After this chapter you can:
 
 Primary sources: [larson2019elegant](references/bibliography.md#larson2019elegant), [fournier2017manager](references/bibliography.md#fournier2017manager), [larson2021staff](references/bibliography.md#larson2021staff)
 
-### Chapter 9 — Performance Management and Underperformance
+### [Chapter 9 — Performance Management and Underperformance](parts/02-people-management/09-performance-management-and-underperformance.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -139,9 +139,9 @@ After this chapter you can:
 
 Primary sources: [grove1983high](references/bibliography.md#grove1983high), [scott2017radical](references/bibliography.md#scott2017radical), [fournier2017manager](references/bibliography.md#fournier2017manager)
 
-### Chapter 10 — Motivation, Retention, and Managing Senior Engineers
+### [Chapter 10 — Motivation, Retention, and Managing Senior Engineers](parts/02-people-management/10-motivation-retention-and-senior-engineers.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -155,9 +155,9 @@ Primary sources: [wiseman2010multipliers](references/bibliography.md#wiseman2010
 
 The team as the unit of delivery; safety, accountability, agreements, decisions, and health.
 
-### Chapter 11 — High Performance: Trust, Psychological Safety, and Accountability
+### [Chapter 11 — High Performance: Trust, Psychological Safety, and Accountability](parts/03-high-performing-teams/11-high-performance-trust-safety-and-accountability.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -167,9 +167,9 @@ After this chapter you can:
 
 Primary sources: [edmondson1999psychological](references/bibliography.md#edmondson1999psychological), [rework-team-effectiveness](references/bibliography.md#rework-team-effectiveness), [lencioni2002five](references/bibliography.md#lencioni2002five), [forsgren2018accelerate](references/bibliography.md#forsgren2018accelerate)
 
-### Chapter 12 — Team Charters, Working Agreements, and Knowledge Sharing
+### [Chapter 12 — Team Charters, Working Agreements, and Knowledge Sharing](parts/03-high-performing-teams/12-team-charters-working-agreements-and-knowledge-sharing.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -179,9 +179,9 @@ After this chapter you can:
 
 Primary sources: [skelton2019team](references/bibliography.md#skelton2019team), [winters2020software](references/bibliography.md#winters2020software), [lencioni2012advantage](references/bibliography.md#lencioni2012advantage)
 
-### Chapter 13 — Decision-Making in Teams
+### [Chapter 13 — Decision-Making in Teams](parts/03-high-performing-teams/13-decision-making-in-teams.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -191,9 +191,9 @@ After this chapter you can:
 
 Primary sources: [marquet2013turn](references/bibliography.md#marquet2013turn), [drucker1967effective](references/bibliography.md#drucker1967effective), [lencioni2002five](references/bibliography.md#lencioni2002five), [grove1983high](references/bibliography.md#grove1983high)
 
-### Chapter 14 — Distributed Teams, Team Health, and Diagnosing Dysfunction
+### [Chapter 14 — Distributed Teams, Team Health, and Diagnosing Dysfunction](parts/03-high-performing-teams/14-distributed-teams-team-health-and-dysfunction.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 

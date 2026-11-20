@@ -269,3 +269,41 @@ Managers' time, reconstructed by each manager from two weeks of calendar and cha
 | Delivery numbers at baseline | Assembled by one Platform Operations engineer, about two days a month, in a spreadsheet joining the four CI systems' logs |
 | Engineering figures in the CEO's monthly board pack | Committed roadmap items delivered, and the Sev1 and Sev2 count |
 | Developer surveys | None in the two years before arrival |
+
+### Locations and working arrangements (Chapter 14)
+
+| Fact | Value |
+|---|---|
+| Headquarters | Minneapolis, Minnesota (US Central Time). All executives, the director, the six engineering managers, and the three staff engineers work there |
+| Working policy | Hybrid since two years before the director arrived: office anchor days Tuesday to Thursday; Monday and Friday at home by default |
+| Second engineering site | Bogotá, Colombia (UTC−5, zero or one hour from Minneapolis); Northstar's own office, opened about four years before the director arrived to hire mobile and integration engineers; same anchor days; no site manager, every Bogotá engineer reports to a Minneapolis-based manager |
+| Fully remote engineers | 12, all in the United States (zero to two hours from Minneapolis) |
+| Engineers by location | Minneapolis 52, Bogotá 16, remote US 12 |
+| By team | Orders: Minneapolis 12, remote 2. Billing: Minneapolis 10, remote 3. Payments and Integrations: Minneapolis 6, Bogotá 5, remote 1. Customer Experience: web Minneapolis 7 and remote 2; all 6 mobile engineers in Bogotá. Data and Analytics: Minneapolis 4, Bogotá 5, remote 2. Platform Operations: Minneapolis 10 (the 7 QA engineers and 3 infrastructure engineers), remote 2 (infrastructure) |
+| Travel | Ad hoc, no budget line; Bogotá engineers had visited Minneapolis at most once |
+
+### People, hiring, levels, and pay (Chapters 5–13)
+
+| Fact | Value |
+|---|---|
+| Customer Experience informal leads | Hannah Lindgren (web, Minneapolis) and Mateo Arango Ríos (mobile, Bogotá); neither holds a title. Mateo had done lead work for over a year without recognition |
+| Daniel Cho's one-on-ones | Weekly, 30 minutes, all 15 engineers, rarely cancelled; video meetings with Bogotá often rescheduled but held; mostly status |
+| Customer Experience signals | One board and one sprint for web and mobile; retrospectives held jointly over video with Minneapolis in one room; 6 of the last 8 retrospective actions were about web; two of the team's four Sev2 incidents at the mobile-bff and mobile boundary |
+| Billing ledger engineers | Three experts: Teodora Vasquez-Lund (Senior Engineer), Tomasz Wierzbicki (Engineer level, pay not reviewed in two years), and one other (Engineer level); two of them are promoted to Senior in the first calibrated cycle at the start of quarter 3 (Chapter 8); the backfill is Tamsin Achterberg, who joined about 24 weeks before the director arrived and can respond alone only on credit notes |
+| Billing ledger knowledge (respond alone / change safely) | Posting and journal rules 3/3; credit notes and adjustments 4/2; period close 2/1; schema migrations 2/2; currency and rounding 1/1 |
+| Billing–Orders friction | After INC-417 a two-day release-channel thread ("Orders' changes keep breaking the ledger" against "Billing should test its own code") with no manager response; the INC-427 review opened with blame of an Orders change; reviews did not record which team's change triggered a Core release incident; Victor Lindqvist's handover notes describe the friction and say he had "let the two of them sort it out" |
+| Hiring process | No common process: recruiter call, a 60-minute live algorithm exercise from a shared puzzle bank, an unstructured "team chat", a hiring manager conversation; a generic "Senior Software Engineer" posting; debriefs where the hiring manager spoke first; no tracking of how hires turned out |
+| Tamsin Achterberg's hire | 15 weeks from resignation to first day (3 waiting for approval, 6 sourcing and screening, 1 offer, 5 notice); about 40 applicants, 9 recruiter calls, 4 loops, 1 offer; strongest on the algorithm exercise, never changed a schema on a live system; unanimous 25-minute debrief |
+| Promotions | Decided by each manager, approved by Victor Lindqvist case by case, no calibration or written evidence. In the two years before arrival: 15 to Senior (Orders 3, Billing 1, Payments 2, Customer Experience 6, Data 1, Platform 2), none to Staff. Raise at promotion capped at 8 percent; annual raises about 3 percent |
+| Level mix at arrival (Engineer/Senior) | Orders 7/7, Billing 7/6, Payments 6/6, Customer Experience 8/7, Data 6/5, Platform Operations 10/2; total 44/33, plus 3 Staff |
+| Pay bands, base salary, US (fictional) | Engineer $100,000–$140,000 (midpoint $120,000); Senior $130,000–$175,000 ($152,500); Staff $170,000–$220,000 ($195,000). Bogotá has separate bands on the Colombian market |
+| Data and Analytics people | Sunil Varghese (Senior, US; designed the warehouse pipelines; base $138,000); Yusuf Demir (Engineer, Minneapolis); an unnamed senior data engineer hired from outside five months before arrival at $162,000 |
+| Ines Carvalho's reviews | Review comments often rejected designs without explanation; two Orders engineers had stopped proposing designs |
+| Departures in the 12 months before arrival, by team | Billing 2, Orders 2, Data and Analytics 2, Customer Experience 1, Payments and Integrations 1, Platform Operations 0. HR recorded one dropdown reason per leaver (compensation 4, career growth 2, personal 1, not recorded 1) and concluded attrition was a pay problem; exit interviews with 6 of 8. Recoded by the director early in quarter 2 (several factors per person): outside offer in hand 5; no career conversation in the previous six months 5; after-hours on-call or incident load 4 (including both Billing leavers); a triggering event in the six weeks before resigning 4; decisions waiting on or overruled by others 3; pay below peers in the same role 2 (both among the four recorded as compensation). One Data and Analytics leaver cited a senior title offered elsewhere |
+| The ledger engineer who left | Outside offer 18 percent above salary; paged three consecutive weekends before resigning; had asked six months earlier to come off the ledger escalation path; declined a 10 percent counter-offer made after resigning |
+| Bram Verhoeven | Senior infrastructure engineer in Platform Operations, six years at Northstar, built Core's Jenkins pipeline and remains its de facto first responder. Proposed consolidating the four build systems 18 months before arrival (shelved 12 months before). In the baseline quarter Tom Becker quietly reassigned 31 of his 74 tickets; his last review said "meets expectations"; 45 percent of his time went to Jenkins interrupts |
+| The shell-script deploy expert | Another, unnamed Platform Operations infrastructure engineer (not Bram Verhoeven) |
+| Engineer reviews | Annual written reviews; no calibration of ratings or promotions at baseline |
+| Payments and Integrations practice | A weekly 30-minute operations review for about two years (rotating facilitator; the engineer coming off on-call presents pages, near misses, and one surprise; Elena speaks last) and a near-miss log with 17 entries in the baseline quarter, none about the payments-gateway configuration file. Orders had no near-miss log |
+| core/permissions changes in the baseline quarter | 38 merge requests: Orders 17, Customer Experience 9, Billing 8, Payments and Integrations 4, Platform Operations 0. No Platform Operations infrastructure engineer has changed Core code |
+| Data and Analytics request load | Requests from other teams take 12 points of its capacity; the month-end reporting path was built by one data engineer who has since moved to warehouse pipelines |

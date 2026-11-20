@@ -77,6 +77,18 @@ nav:
       - "Chapter 2 — From Individual Contributor to Leader": parts/01-foundations/02-from-individual-contributor-to-leader.md
       - "Chapter 3 — Managerial Leverage and Systems Thinking": parts/01-foundations/03-managerial-leverage-and-systems-thinking.md
       - "Chapter 4 — The Leadership Ladder: Senior Engineer to CTO": parts/01-foundations/04-the-leadership-ladder.md
+  - "II. People Management":
+      - "Chapter 5 — One-on-Ones, Coaching, and Mentorship": parts/02-people-management/05-one-on-ones-coaching-and-mentorship.md
+      - "Chapter 6 — Feedback, Conflict, and Difficult Conversations": parts/02-people-management/06-feedback-conflict-and-difficult-conversations.md
+      - "Chapter 7 — Hiring and Structured Interviews": parts/02-people-management/07-hiring-and-structured-interviews.md
+      - "Chapter 8 — Career Development, Promotion, and Compensation": parts/02-people-management/08-career-development-promotion-and-compensation.md
+      - "Chapter 9 — Performance Management and Underperformance": parts/02-people-management/09-performance-management-and-underperformance.md
+      - "Chapter 10 — Motivation, Retention, and Managing Senior Engineers": parts/02-people-management/10-motivation-retention-and-senior-engineers.md
+  - "III. Building High-Performing Teams":
+      - "Chapter 11 — High Performance: Trust, Psychological Safety, and Accountability": parts/03-high-performing-teams/11-high-performance-trust-safety-and-accountability.md
+      - "Chapter 12 — Team Charters, Working Agreements, and Knowledge Sharing": parts/03-high-performing-teams/12-team-charters-working-agreements-and-knowledge-sharing.md
+      - "Chapter 13 — Decision-Making in Teams": parts/03-high-performing-teams/13-decision-making-in-teams.md
+      - "Chapter 14 — Distributed Teams, Team Health, and Diagnosing Dysfunction": parts/03-high-performing-teams/14-distributed-teams-team-health-and-dysfunction.md
   - "IV. Engineering Execution":
       - "Chapter 15 — Planning, Prioritization, and Delivery Methods": parts/04-execution/15-planning-prioritization-and-delivery-methods.md
       - "Chapter 16 — Flow: Lead Time, Dependencies, and Unplanned Work": parts/04-execution/16-flow-lead-time-dependencies-and-unplanned-work.md
@@ -108,6 +120,16 @@ nav:
       - "Chapter 2 solutions": solutions/ch02-solutions.md
       - "Chapter 3 solutions": solutions/ch03-solutions.md
       - "Chapter 4 solutions": solutions/ch04-solutions.md
+      - "Chapter 5 solutions": solutions/ch05-solutions.md
+      - "Chapter 6 solutions": solutions/ch06-solutions.md
+      - "Chapter 7 solutions": solutions/ch07-solutions.md
+      - "Chapter 8 solutions": solutions/ch08-solutions.md
+      - "Chapter 9 solutions": solutions/ch09-solutions.md
+      - "Chapter 10 solutions": solutions/ch10-solutions.md
+      - "Chapter 11 solutions": solutions/ch11-solutions.md
+      - "Chapter 12 solutions": solutions/ch12-solutions.md
+      - "Chapter 13 solutions": solutions/ch13-solutions.md
+      - "Chapter 14 solutions": solutions/ch14-solutions.md
       - "Chapter 15 solutions": solutions/ch15-solutions.md
       - "Chapter 16 solutions": solutions/ch16-solutions.md
       - "Chapter 17 solutions": solutions/ch17-solutions.md

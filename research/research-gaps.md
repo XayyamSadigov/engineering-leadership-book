@@ -2,7 +2,7 @@
 
 Questions the book needs evidence for and does not yet have. A chapter that touches a gap must admit
 it in the text. Each gap records what was searched, what was found, and what to do next.
-Updated 2026-11-20 after waves 1 (Part V) and 2 (Parts I and IV).
+Updated 2026-11-20 after waves 1 (Part V), 2 (Parts I and IV), and 3 (Parts II and III).
 
 ## Open
 
@@ -15,7 +15,7 @@ Updated 2026-11-20 after waves 1 (Part V) and 2 (Parts I and IV).
 | G7 | Exact wording of Campbell's law and Goodhart's popular phrasing | Ch 18, 20, 27 | Campbell 1979 metadata only; Strathern 1997 abstract lacks the phrase | Read before any quotation |
 | G8 | Span of control in software organizations | Ch 34, 35 | `rajan2006flattening` (general corporate hierarchies) only | Software-specific search |
 | G9 | Cost of technical debt measured on system data across many organizations | Ch 21 | Added `besker2019productivity`, `ernst2015measure` (survey of 1,831), `tornhill2022codered` (39 codebases, observational). No multi-company study on system data | Continue search; present figures only with their samples |
-| G10 | Structured interview validity after Sackett et al. 2022 | Ch 7 | Abstract gives no revised structured-interview figure | Read full paper |
+| G10 | Tables of Sackett et al. 2022 and 2023 | Ch 7 | Narrowed: the open-access 2023 paper (`sackett2023revisiting`) was read in full for the structured-interview estimate (.42); the tables of both papers were not read, and the chapter's work-sample figure is derived from two sentences | Check the work-sample figure against the tables during human review |
 | G11 | Prime Video monolith case has no live primary source | Ch 31 | Original URL redirects; InfoQ secondary report | Archived primary copy or label as secondary |
 | G12 | Reorganization outcomes | Ch 36 | Not yet searched | Organizational behavior literature |
 | G13 | Size of a standing capacity allocation for debt and prevention | Ch 21, 27, 38 | No research found; 10–20 percent presented as this book's recommendation | Search portfolio-allocation literature |
@@ -32,6 +32,14 @@ Updated 2026-11-20 after waves 1 (Part V) and 2 (Parts I and IV).
 | G24 | Peer-reviewed estimates of flow efficiency in software delivery; cost of interruptions (Parnin and Rugaber) | Ch 16 | Not found or not readable | Targeted search |
 | G25 | Planning fallacy full text (Buehler et al. 1994); Flyvbjerg 2008; McConnell's cone of uncertainty | Ch 17 | Only a course-hosted copy of Buehler exists (not used); others paywalled or unread | Read via a library |
 | G26 | Agile method outcome evidence beyond the 2008 systematic review | Ch 15 | `dyba2008empirical` (abstract), `kuhrmann2022agile` (survey) | Look for newer systematic reviews |
+| G27 | Validity of engineering interview formats (live coding, take-home, pair programming, system design) | Ch 7 | Only vendor blogs; `behroozi2020stress` covers stress in whiteboard interviews, not validity | Search SE and I-O psychology venues |
+| G28 | Critiques of groupthink theory (Esser 1998; Turner and Pratkanis 1998; Baron 2005) | Ch 13 | Metadata only; ScienceDirect returned 403 | Read via a library |
+| G29 | Whether counter-offers retain people | Ch 10 | Only a faculty study (`whitelewis2024counteroffers`), used for its equity warning; recruiter statistics deliberately excluded | Search |
+| G30 | Causal evidence that psychological safety improves software delivery | Ch 11 | Correlational and qualitative only (`lenberg2018psychological`, `verwijs2024double`); Frazier 2017 effect sizes unread | Read Frazier full text; search for intervention studies |
+| G31 | Evidence on team charters and working agreements | Ch 12 | One study of MBA student teams (`mathieu2009charters`); none on working agreements | Search |
+| G32 | Whether calibration meetings improve fairness in engineering organizations | Ch 8, 9 | None found; presented as practitioner consensus | Search |
+| G33 | Coaching by a person's own line manager (meta-analyses exclude it) | Ch 5 | `jones2016coaching` excludes manager coaching; none readable found | Search |
+| G34 | Whether office visits reduce attrition of remote or second-site engineers | Ch 14 | None found; the chapter's travel budget is framed as a bet with a break-even | Search |
 
 ## Closed
 

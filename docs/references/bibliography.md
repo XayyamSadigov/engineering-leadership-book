@@ -5,7 +5,7 @@
 
 Every source the book cites, with what was verified and how much of the source was actually read when the entry was created. An entry marked *bibliographic metadata only* means the citation details were checked against a publisher or catalog page; it does not mean the work was read in full for this project. Chapters cite by linking to the anchors on this page.
 
-179 entries. Grouped by evidence class, then alphabetically by id.
+242 entries. Grouped by evidence class, then alphabetically by id.
 
 ## Scholarly research
 
@@ -19,6 +19,18 @@ Muhammad Ovais Ahmad, Jouni Markkula, and Markku Oivo (2013). “Kanban in softw
 - Supports (abstract): A systematic literature review found 492 papers, of which 19 were primary studies of Kanban in software development.
 - Supports (abstract): Reported benefits included improved lead time, software quality, communication and coordination, consistency of delivery, and fewer customer-reported defects; reported challenges included lack of knowledge and training and organizational issues.
 - Caveats: Benefits are as reported by the primary studies, which the abstract does not grade for rigor; not evidence of causal effect. Small evidence base as of 2013.
+
+### allen2004mentoring {#allen2004mentoring}
+
+Tammy D. Allen et al. (2004). “Career Benefits Associated With Mentoring for Proteges: A Meta-Analysis”. Journal of Applied Psychology, vol. 89, no. 1, pp. 127-136.
+
+- DOI: [10.1037/0021-9010.89.1.127](https://doi.org/10.1037/0021-9010.89.1.127) · <https://doi.org/10.1037/0021-9010.89.1.127>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The meta-analysis examined objective (for example compensation) and subjective (for example career satisfaction) career outcomes of mentoring for proteges.
+- Supports (abstract): Findings were generally supportive of benefits, but effect sizes for objective outcomes were small.
+- Supports (abstract): Outcomes differed somewhat in how strongly they related to the type of mentoring provided, career or psychosocial.
+- Caveats: Correlational primary studies; mentored people may differ from non-mentored ones before mentoring starts. Abstract read through OpenAlex (abstract index), not the publisher page.
 
 ### anandayuvaraj2026learning {#anandayuvaraj2026learning}
 
@@ -43,6 +55,19 @@ Benjamin M. Artz, Amanda H. Goodall, and Andrew J. Oswald (2017). “Boss Compet
 - Supports (abstract): The findings draw on US and British data and include tentative instrumental-variable results.
 - Caveats: Survey data; not specific to software. Published online 2016-07-11, in print March 2017 (vol. 70, no. 2); the id uses the print year.
 
+### avelino2016truck {#avelino2016truck}
+
+Guilherme Avelino, Leonardo Passos, Andre Hora, and Marco Tulio Valente (2016). “A Novel Approach for Estimating Truck Factors”. 24th IEEE International Conference on Program Comprehension (ICPC 2016).
+
+- <https://arxiv.org/abs/1604.06766>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (abstract): The paper describes the truck factor as the minimum number of developers whose departure would leave a project in serious trouble, and notes there is no consensus on how to compute it.
+- Supports (abstract): It proposes an automated estimation method based on authorship in version-control history and applies it to 133 popular GitHub projects.
+- Supports (abstract): About 65 percent of the 133 systems had an estimated truck factor of 2 or less.
+- Supports (abstract): Developers of 67 of the systems were surveyed; in 84 percent of valid answers they agreed or partially agreed that the estimated main authors were the main authors, and 53 percent gave positive or partially positive feedback on the estimated truck factors.
+- Caveats: Open-source GitHub projects, not company teams; authorship from commit history is a proxy for knowledge. Venue taken from the arXiv comment ('Accepted at ICPC'); the proceedings DOI was not verified and is not recorded.
+
 ### bacchelli2013expectations {#bacchelli2013expectations}
 
 Alberto Bacchelli, and Christian Bird (2013). “Expectations, Outcomes, and Challenges of Modern Code Review”. 2013 35th International Conference on Software Engineering (ICSE), pp. 712-721.
@@ -55,6 +80,41 @@ Alberto Bacchelli, and Christian Bird (2013). “Expectations, Outcomes, and Cha
 - Supports (abstract): Understanding the code and the change is the central challenge of review, and the tools of the time gave little support for it.
 - Caveats: Single-company study (Microsoft), 2013; based on observation, interviews, surveys and manual classification of review comments. Author order follows Crossref; the Microsoft Research page lists Bird first.
 
+### beecham2008motivation {#beecham2008motivation}
+
+Sarah Beecham et al. (2008). “Motivation in Software Engineering: A systematic literature review”. Information and Software Technology, vol. 50, no. 9-10, pp. 860-878.
+
+- DOI: [10.1016/j.infsof.2007.09.004](https://doi.org/10.1016/j.infsof.2007.09.004) · <https://doi.org/10.1016/j.infsof.2007.09.004>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A systematic literature review of what motivates and demotivates software engineers, which finds that software engineers are likely to be motivated according to their characteristics (for example a need for variety), internal controls (for example personality), and external moderators (for example career stage).
+- Supports (abstract): The review concludes that existing models of motivation in software engineering are disparate and do not reflect the varied needs of engineers across career stages, cultures, and environments.
+- Caveats: The abstract read is the one on the University of Hertfordshire repository record for the report version of the review; the journal abstract was not available from Crossref or OpenAlex and may differ in wording. Crossref's online year is 2007; the issue is 2008.
+
+### behroozi2020stress {#behroozi2020stress}
+
+Mahnaz Behroozi, Shivani Shirolkar, Titus Barik, and Chris Parnin (2020). “Does stress impact technical interview performance?”. Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2020), pp. 481-492.
+
+- DOI: [10.1145/3368089.3409712](https://doi.org/10.1145/3368089.3409712) · <https://2020.esec-fse.org/details/fse-2020-papers/140/Does-Stress-Impact-Technical-Interview-Performance->
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A randomized controlled trial with 48 computer science students compared a traditional whiteboard interview with an interviewer watching against a private setting.
+- Supports (abstract): Performance was reduced by more than half simply by being watched by an interviewer, and stress and cognitive load were higher in the traditional setting.
+- Supports (abstract): The authors argue such interviews may measure how candidates handle performance anxiety rather than problem-solving ability, and propose private focus sessions and retrospective think-aloud.
+- Caveats: Students, not experienced engineers; one problem-solving task; a lab setting. It shows a measurement distortion, not the validity of technical interviews for predicting job performance.
+
+### bendersky2012status {#bendersky2012status}
+
+Corinne Bendersky, and Nicholas A. Hays (2012). “Status Conflict in Groups”. Organization Science, vol. 23, no. 2, pp. 323-340.
+
+- DOI: [10.1287/orsc.1110.0734](https://doi.org/10.1287/orsc.1110.0734) · <https://doi.org/10.1287/orsc.1110.0734>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Defines status conflicts as disputes over people's relative status (respect) positions in their group's social hierarchy.
+- Supports (abstract): Status conflict had a significant negative main effect on group performance and moderated the effects of task conflict on group performance.
+- Supports (abstract): Status conflict hurt performance by undermining information sharing more than other types of conflict did.
+- Caveats: Abstract read via the OpenAlex record; sample details not read. Not specific to software teams.
+
 ### benson2019promotions {#benson2019promotions}
 
 Alan Benson, Danielle Li, and Kelly Shue (2019). “Promotions and the Peter Principle”. The Quarterly Journal of Economics, vol. 134, no. 4, pp. 2085-2134.
@@ -66,6 +126,18 @@ Alan Benson, Danielle Li, and Kelly Shue (2019). “Promotions and the Peter Pri
 - Supports (abstract): The authors estimate that promoting workers with lower managerial potential is costly, and note that firms may either be promoting inefficiently or using promotions as incentives worth that cost.
 - Supports (abstract): Firms place less weight on sales performance in promotion decisions when managerial roles entail greater responsibility and when frontline workers have strong pay for performance.
 - Caveats: Sales workers, not engineers; managerial performance in this setting is not measured the way an engineering organization would measure it. Sample size differs between versions (working paper 214 firms, published article 131 firms); cite 131 with the 2019 journal version. The published abstract was read via the Crossref record.
+
+### benson2026potential {#benson2026potential}
+
+Alan Benson, Danielle Li, and Kelly Shue (2026). “"Potential" and the Gender Promotion Gap”. American Economic Review, vol. 116, no. 2, pp. 375-417.
+
+- DOI: [10.1257/aer.20220831](https://doi.org/10.1257/aer.20220831) · <https://doi.org/10.1257/aer.20220831>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, doi.
+- Supports (abstract): Using data on 29,809 management-track employees of a large retail chain, women received substantially lower potential ratings despite receiving higher performance ratings.
+- Supports (abstract): Differences in potential ratings account for approximately half of the gender promotion gap, and women subsequently outperform male colleagues, so the lower potential ratings were not accurate forecasts.
+- Supports (abstract): The authors identify strategic retention and stereotyping as mechanisms.
+- Caveats: One retail chain; management-track employees, not engineers.
 
 ### besker2018technical {#besker2018technical}
 
@@ -88,6 +160,19 @@ Terese Besker, Antonio Martini, and Jan Bosch (2019). “Software Developer Prod
 - Supports (abstract): Developers reported wasting on average 23% of their time because of technical debt, were frequently forced to introduce new technical debt, and most commonly spent the extra time on additional testing.
 - Caveats: Self-reported time. The size of the replication dataset is not stated in the abstract and was not read. The 23% figure is an average of reported waste, not a measured productivity loss.
 
+### bloom2024hybrid {#bloom2024hybrid}
+
+Nicholas Bloom, Ruobing Han, and James Liang (2024). “Hybrid working from home improves retention without damaging performance”. Nature, vol. 630, no. 8018, pp. 920-925.
+
+- DOI: [10.1038/s41586-024-07500-2](https://doi.org/10.1038/s41586-024-07500-2) · <https://doi.org/10.1038/s41586-024-07500-2>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A six-month randomized controlled trial with 1,612 employees of a Chinese technology company in 2021-2022 compared hybrid working (two days a week from home) with full-time office work.
+- Supports (abstract): Hybrid working improved job satisfaction and reduced quit rates by about one third, with significant reductions for non-managers, women, and employees with long commutes.
+- Supports (abstract): Equivalence tests found no effect on performance grades over the following two years, no overall difference in promotions, and no effect on lines of code written by computer engineers.
+- Supports (abstract): The 395 managers in the trial moved from expecting a negative productivity effect (about -2.6 percent) before the experiment to a positive one (about +1.0 percent) afterwards.
+- Caveats: One firm in one country; hybrid (two home days), not fully remote; the randomization method was not read. Performance measured by review grades, promotions, and lines of code, which are coarse. nature.com redirected to an identity-provider page; abstract read via the Europe PMC record (PMC11208135).
+
 ### buehler1994exploring {#buehler1994exploring}
 
 Roger Buehler, Dale W. Griffin, and Michael Ross (1994). “Exploring the "planning fallacy": Why people underestimate their task completion times”. Journal of Personality and Social Psychology, vol. 67, no. 3, pp. 366-381.
@@ -109,6 +194,50 @@ Donald T. Campbell (1979). “Assessing the impact of planned social change”. 
 - Verified against a fetched page (2026-11-18): title, authors, year, venue, doi.
 - Caveats: Metadata only. The passage usually cited as Campbell's law (quantitative social indicators used for decision-making become subject to corruption pressures) was not read on a fetched page, so no claim is recorded; quote it from the article with a page number. Crossref also lists a 2011 reprint: Journal of MultiDisciplinary Evaluation 7(15):3-43, DOI 10.56645/jmde.v7i15.297, which may be easier to access.
 
+### campion1997review {#campion1997review}
+
+Michael A. Campion, David K. Palmer, and James E. Campion (1997). “A review of structure in the selection interview”. Personnel Psychology, vol. 50, no. 3, pp. 655-702.
+
+- DOI: [10.1111/j.1744-6570.1997.tb00709.x](https://doi.org/10.1111/j.1744-6570.1997.tb00709.x) · <https://doi.org/10.1111/j.1744-6570.1997.tb00709.x>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The review identifies 15 components of interview structure, some improving the content of the interview and some improving the evaluation process.
+- Supports (abstract): For each component it reviews effects on reliability, validity, and user reactions, and concludes that interviews can be enhanced by using many of these components.
+- Caveats: The 15 components are not listed in the abstract, so the chapter does not enumerate them as Campion et al.'s list.
+
+### castilla2008gender {#castilla2008gender}
+
+Emilio J. Castilla (2008). “Gender, Race, and Meritocracy in Organizational Careers”. American Journal of Sociology, vol. 113, no. 6, pp. 1479-1526.
+
+- DOI: [10.1086/588738](https://doi.org/10.1086/588738) · <https://doi.org/10.1086/588738>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, doi.
+- Supports (abstract): Using personnel data from a large service organization, the study finds performance-reward bias, in which women and minorities receive less compensation than white men with equal performance evaluation scores; gender, race, and nationality differences continue to affect salary growth after performance ratings are taken into account.
+- Supports (abstract): The author argues that merit-based policies with limited transparency and accountability can increase ascriptive bias and reduce workplace equity.
+- Caveats: One organization, a service firm, not software. Abstract read via OpenAlex; the publisher page returned 403.
+
+### castilla2010paradox {#castilla2010paradox}
+
+Emilio J. Castilla, and Stephen Benard (2010). “The Paradox of Meritocracy in Organizations”. Administrative Science Quarterly, vol. 55, no. 4, pp. 543-676.
+
+- DOI: [10.2189/asqu.2010.55.4.543](https://doi.org/10.2189/asqu.2010.55.4.543) · <https://doi.org/10.2189/asqu.2010.55.4.543>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, doi.
+- Supports (abstract): In three experiments with 445 participants with managerial experience, who made bonus, promotion, and termination recommendations for employee profiles, participants favored a male employee over an equally qualified female employee with a larger monetary reward when the organization was explicitly presented as meritocratic.
+- Supports (abstract): The authors call this the paradox of meritocracy and conclude that efforts to reward merit may carry unrecognized risks.
+- Caveats: Laboratory-style experiments with hypothetical employee profiles, not field data. Crossref gives the page range as 543-676; the article itself is shorter, so cite volume and issue.
+
+### castilla2015accounting {#castilla2015accounting}
+
+Emilio J. Castilla (2015). “Accounting for the Gap: A Firm Study Manipulating Organizational Accountability and Transparency in Pay Decisions”. Organization Science, vol. 26, no. 2, pp. 311-333.
+
+- DOI: [10.1287/orsc.2014.0950](https://doi.org/10.1287/orsc.2014.0950) · <https://doi.org/10.1287/orsc.2014.0950>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, doi.
+- Supports (abstract): In a longitudinal field study of performance-based reward decisions for almost 9,000 employees of a large private company, women, ethnic minorities, and non-US-born employees received lower rewards than US-born white men with the same performance scores, job, unit, manager, and human capital before the company introduced accountability and transparency procedures into its performance-reward system.
+- Supports (abstract): After the procedures were adopted, the pay gap in performance-based rewards was reduced.
+- Caveats: One company; the abstract does not describe the procedures in detail or the size of the reduction.
+
 ### chillarege1992orthogonal {#chillarege1992orthogonal}
 
 Ram Chillarege et al. (1992). “Orthogonal Defect Classification - A Concept for In-Process Measurements”. IEEE Transactions on Software Engineering, vol. 18, no. 11, pp. 943-956.
@@ -120,6 +249,29 @@ Ram Chillarege et al. (1992). “Orthogonal Defect Classification - A Concept fo
 - Supports (abstract): It uses the distribution of defect types to track a product's progress through development, and the distribution of defect triggers to assess how effective and complete inspection and testing are, with results from pilot projects.
 - Caveats: Abstract-level only; no pilot results are reported in this book. The seventh author is recorded as Crossref gives it ('M.-Y. Wong'); confirm the full name from the paper. The IBM page summary listed six authors; Crossref lists seven, and Crossref is followed here.
 
+### cullen2023equilibrium {#cullen2023equilibrium}
+
+Zoë B. Cullen, and Bobak Pakzad-Hurson (2023). “Equilibrium Effects of Pay Transparency”. Econometrica, vol. 91, no. 3, pp. 765-802.
+
+- DOI: [10.3982/ECTA19788](https://doi.org/10.3982/ECTA19788) · <https://doi.org/10.3982/ECTA19788>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, doi.
+- Supports (abstract): The authors' bargaining model predicts that pay transparency reduces workers' individual bargaining power and lowers average wages, because employers credibly refuse to pay a high wage to any one worker to avoid costly renegotiation with others.
+- Supports (abstract): In an event study of US state laws protecting private-sector workers' right to discuss salaries with coworkers, wages declined by approximately 2 percent, with the smallest declines where workers had low individual bargaining power.
+- Caveats: Concerns laws on coworker pay discussion in the US, not an employer publishing its own bands or ranges in job postings; effects on pay gaps are not stated in the abstract.
+
+### dana2013belief {#dana2013belief}
+
+Jason Dana, Robyn Dawes, and Nathanial Peterson (2013). “Belief in the unstructured interview: The persistence of an illusion”. Judgment and Decision Making, vol. 8, no. 5, pp. 512-520.
+
+- DOI: [10.1017/S1930297500003612](https://doi.org/10.1017/S1930297500003612) · <https://www.cambridge.org/core/product/identifier/S1930297500003612/type/journal_article>
+- Evidence class: Scholarly research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (full-text): In three studies with Carnegie Mellon students, participants predicting other students' semester grade point average formed confident impressions even from interviews in which the interviewee answered by a secret random system.
+- Supports (full-text): Adding an unstructured interview to background information made predictions less accurate than the background information alone (dilution).
+- Supports (full-text): Most participants said they would rather have a random interview than no interview; the authors recommend that those making screening decisions not use unstructured interviews.
+- Caveats: Student participants, a grade-prediction task, and small samples (76, 64, and 169 participants); not an employment setting. The chapter uses it for the mechanism (sensemaking and dilution), not for an effect size.
+
 ### decan2018impact {#decan2018impact}
 
 Alexandre Decan, Tom Mens, and Eleni Constantinou (2018). “On the impact of security vulnerabilities in the npm package dependency network”. Proceedings of the 15th International Conference on Mining Software Repositories (MSR 2018), ACM, pp. 181-191.
@@ -129,6 +281,32 @@ Alexandre Decan, Tom Mens, and Eleni Constantinou (2018). “On the impact of se
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
 - Supports (abstract): An empirical study of nearly 400 security reports over a six-year period in the npm dependency network of over 610,000 packages, analysing how and when vulnerabilities are discovered and fixed and to what extent they affect dependent packages given dependency constraints.
 - Caveats: Abstract only; no quantitative finding is claimed. One ecosystem (npm), data to 2017.
+
+### dedreu2003task {#dedreu2003task}
+
+Carsten K. W. De Dreu, and Laurie R. Weingart (2003). “Task versus relationship conflict, team performance, and team member satisfaction: A meta-analysis”. Journal of Applied Psychology, vol. 88, no. 4, pp. 741-749.
+
+- DOI: [10.1037/0021-9010.88.4.741](https://doi.org/10.1037/0021-9010.88.4.741) · <https://doi.org/10.1037/0021-9010.88.4.741>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Relationship conflict showed strong negative correlations with team performance and team member satisfaction.
+- Supports (abstract): Contrary to the prediction in prior theory and textbooks, task conflict also showed strong negative correlations with team performance and satisfaction.
+- Supports (abstract): Conflict had stronger negative relations with performance in highly complex tasks (decision making, project, mixed) than in production tasks.
+- Supports (abstract): Task conflict was less negatively related to performance when task and relationship conflict were weakly correlated.
+- Caveats: Correlational meta-analysis; later partly contradicted by de Wit, Greer, and Jehn (2012). Not specific to software teams.
+
+### dewit2012paradox {#dewit2012paradox}
+
+Frank R. C. de Wit, Lindred L. Greer, and Karen A. Jehn (2012). “The paradox of intragroup conflict: A meta-analysis”. Journal of Applied Psychology, vol. 97, no. 2, pp. 360-390.
+
+- DOI: [10.1037/a0024844](https://doi.org/10.1037/a0024844) · <https://doi.org/10.1037/a0024844>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Meta-analysis of 116 empirical studies of intragroup conflict (8,880 groups) and group outcomes.
+- Supports (abstract): Stable negative relationships were found between relationship conflict and process conflict and group outcomes.
+- Supports (abstract): In contrast to De Dreu and Weingart (2003), no strong negative association was found between task conflict and group performance.
+- Supports (abstract): Task conflict and performance were more positively related where task and relationship conflict were weakly associated, in top management teams, and where performance was measured as financial performance or decision quality.
+- Caveats: Correlational; heterogeneous samples; not specific to software teams. Epub 2011, issue 2012.
 
 ### dyba2008empirical {#dyba2008empirical}
 
@@ -140,6 +318,17 @@ Tore Dybå, and Torgeir Dingsøyr (2008). “Empirical studies of agile software
 - Supports (abstract): A systematic review of empirical studies of agile software development up to and including 2005 identified 36 empirical studies, grouped into four themes (introduction and adoption, human and social factors, perceptions of agile methods, comparative studies).
 - Supports (abstract): The review examined benefits, limitations, and the strength of evidence, and concluded that the field needs more and better empirical studies of agile software development.
 - Caveats: Covers studies only up to 2005. The overall strength-of-evidence grade is in the full text, which was not read (publisher page 403); do not state the grade.
+
+### eby2008mentoring {#eby2008mentoring}
+
+Lillian T. Eby et al. (2008). “Does mentoring matter? A multidisciplinary meta-analysis comparing mentored and non-mentored individuals”. Journal of Vocational Behavior, vol. 72, no. 2, pp. 254-267.
+
+- DOI: [10.1016/j.jvb.2007.04.005](https://doi.org/10.1016/j.jvb.2007.04.005) · <https://pmc.ncbi.nlm.nih.gov/articles/PMC2352144/>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (abstract): Across youth, academic, and workplace mentoring, mentoring was associated with a wide range of favorable behavioral, attitudinal, health-related, relational, motivational, and career outcomes, but the effects were generally small.
+- Supports (abstract): Effects were larger for academic and workplace mentoring than for youth mentoring.
+- Caveats: Associations, not causal estimates. Only the abstract of the PMC author manuscript was read.
 
 ### edmondson1999psychological {#edmondson1999psychological}
 
@@ -153,6 +342,29 @@ Amy Edmondson (1999). “Psychological Safety and Learning Behavior in Work Team
 - Supports (abstract): Learning behaviour mediated the relationship between team psychological safety and team performance.
 - Caveats: One manufacturing company, 51 teams; not a software setting. Correlational field study.
 
+### edmondson2014psychological {#edmondson2014psychological}
+
+Amy C. Edmondson, and Zhike Lei (2014). “Psychological Safety: The History, Renaissance, and Future of an Interpersonal Construct”. Annual Review of Organizational Psychology and Organizational Behavior, vol. 1, no. 1, pp. 23-43.
+
+- DOI: [10.1146/annurev-orgpsych-031413-091305](https://doi.org/10.1146/annurev-orgpsych-031413-091305) · <https://doi.org/10.1146/annurev-orgpsych-031413-091305>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The review defines psychological safety as people's perceptions of the consequences of taking interpersonal risks in a particular context such as a workplace.
+- Supports (abstract): It traces the construct to organizational scholars in the 1960s, with a renaissance of research from the 1990s, and reports that organizational research has linked it to voice, teamwork, team learning, and organizational learning.
+- Supports (abstract): It reviews research at the individual, group, and organizational levels and proposes directions for future theoretical and methodological work.
+- Caveats: Narrative review; only the abstract (from the Crossref record) was read, so no specific findings from the body are used.
+
+### emanuel2023proximity {#emanuel2023proximity}
+
+Natalia Emanuel, Emma Harrington, and Amanda Pallais (2023). *The Power of Proximity to Coworkers*. NBER Working Paper 31880.
+
+- DOI: [10.3386/w31880](https://doi.org/10.3386/w31880) · <https://www.nber.org/papers/w31880>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (abstract): The study follows software engineers at a Fortune 500 firm and uses office closures in 2020 and later return-to-office mandates as shocks to how close engineers sat to their teammates, comparing colocated with already-distributed teams.
+- Supports (abstract): Sitting near teammates increased the coding feedback engineers received, with the largest gains for newer and younger engineers, while experienced engineers wrote less code when near teammates.
+- Caveats: Working paper (revised 2026; the NBER page says it is published in the Quarterly Journal of Economics, not verified here). One firm. The abstract was read as rendered on the NBER page.
+
 ### ernst2015measure {#ernst2015measure}
 
 Neil A. Ernst et al. (2015). “Measure it? Manage it? Ignore it? Software practitioners and technical debt”. Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2015), pp. 50-60.
@@ -164,6 +376,18 @@ Neil A. Ernst et al. (2015). “Measure it? Manage it? Ignore it? Software pract
 - Supports (abstract): Respondents identified architectural decisions as the most important source of technical debt.
 - Supports (abstract): Respondents valued the metaphor for communication, but existing tools were not found helpful for managing the details of technical debt.
 - Caveats: Survey of practitioner perceptions in three organizations; it reports what respondents believe are sources of debt, not measured costs. Abstract reconstructed from OpenAlex; ACM DL not fetched.
+
+### felps2006bad {#felps2006bad}
+
+Will Felps, Terence R. Mitchell, and Eliza Byington (2006). “How, When, and Why Bad Apples Spoil the Barrel: Negative Group Members and Dysfunctional Groups”. Research in Organizational Behavior, vol. 27, pp. 175-222.
+
+- DOI: [10.1016/S0191-3085(06)27005-9](https://doi.org/10.1016/S0191-3085(06)27005-9) · <https://doi.org/10.1016/S0191-3085(06)27005-9>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The paper reviews and integrates research on how a single persistently negative group member harms teammates and group functioning; it is a review and model, not a single experiment.
+- Supports (abstract): It defines the negative member as someone who withholds effort, expresses negative affect, or violates important interpersonal norms.
+- Supports (abstract): It proposes that teammates react with perceptions of inequity, negative mood, and reduced trust, leading to defensive responses (such as lashing out, mood maintenance, or withdrawal) that affect group outcomes such as cooperation and creativity, and it discusses moderators and mitigating actions.
+- Caveats: Theoretical review; the 30 to 40 percent figure attributed to this paper in press coverage comes from a separate experiment and was not verified here, so the book does not use it.
 
 ### flyvbjerg2006nobel {#flyvbjerg2006nobel}
 
@@ -189,6 +413,17 @@ Nicole Forsgren et al. (2021). “The SPACE of Developer Productivity: There's m
 - Supports (abstract): The article introduces the SPACE framework as a way to reason about productivity across several dimensions and to choose better measures.
 - Caveats: The names of the five SPACE dimensions were NOT read on a fetched page in this session (queue.acm.org returned 403), so they are deliberately not recorded here; verify from the full text before printing them. A reprint exists in Communications of the ACM 64(6):46-53, DOI 10.1145/3453928 (Crossref).
 
+### frazier2017psychological {#frazier2017psychological}
+
+M. Lance Frazier et al. (2017). “Psychological Safety: A Meta-Analytic Review and Extension”. Personnel Psychology, vol. 70, no. 1, pp. 113-165.
+
+- DOI: [10.1111/peps.12183](https://doi.org/10.1111/peps.12183) · <https://doi.org/10.1111/peps.12183>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The meta-analysis aggregates 136 independent samples representing over 22,000 individuals and nearly 5,000 groups on the antecedents and outcomes of psychological safety.
+- Supports (abstract): It compares effect sizes of antecedents, examines whether psychological safety relates to task performance and organizational citizenship behaviors beyond related constructs such as positive leader relations and work engagement, tests whether research design and national culture alter the relationships, and compares effects at the individual and group levels.
+- Caveats: Only the abstract was read; it states what was tested but not the effect sizes or which antecedents were strongest, so no specific result is claimed. Crossref gives online publication on 2016-10-14; the issue is 2017 (vol. 70, no. 1).
+
 ### garvin1984product {#garvin1984product}
 
 David A. Garvin (1984). “What Does "Product Quality" Really Mean?”. MIT Sloan Management Review, Fall 1984.
@@ -200,6 +435,29 @@ David A. Garvin (1984). “What Does "Product Quality" Really Mean?”. MIT Sloa
 - Supports (landing-page text (article page at sloanreview.mit.edu)): It identifies five major approaches to defining quality: transcendent, product-based, user-based, manufacturing-based, and value-based.
 - Supports (landing-page text (article page at sloanreview.mit.edu)): The eight dimensions are performance, features, reliability, conformance, durability, serviceability, aesthetics, and perceived quality.
 - Caveats: A conceptual management article about manufactured products, not an empirical software study. Volume, issue, and page numbers were not confirmed on a fetched page and are not recorded. The page is behind a paywall for full reading; only what the fetched page displayed is claimed.
+
+### gibbs2023wfh {#gibbs2023wfh}
+
+Michael Gibbs, Friederike Mengel, and Christoph Siemroth (2023). “Work from Home and Productivity: Evidence from Personnel and Analytics Data on Information Technology Professionals”. Journal of Political Economy Microeconomics, vol. 1, no. 1, pp. 7-41.
+
+- DOI: [10.1086/721803](https://doi.org/10.1086/721803) · <https://doi.org/10.1086/721803>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract (IZA working-paper version, DP 14336, April 2021)): Using personnel and analytics data on more than 10,000 skilled professionals at a large Asian IT services company, the study compares productivity before and during pandemic work from home.
+- Supports (abstract (working-paper version)): Total hours worked rose, including after-hours work, while average output did not rise, so measured productivity fell.
+- Supports (abstract (working-paper version)): Time in meetings and coordination rose, while uninterrupted working time, networking, coaching, and one-on-one meetings with supervisors fell; the authors attribute much of the decline to higher communication and coordination costs.
+- Caveats: Abstract read for the IZA working paper only; the published JPE Micro article (metadata via Crossref) was not read and its point estimates may differ, so the book does not print a percentage. Pandemic conditions (forced, sudden, with children at home), not a chosen remote policy. One firm.
+
+### griffeth2000meta {#griffeth2000meta}
+
+Rodger W. Griffeth, Peter W. Hom, and Stefan Gaertner (2000). “A Meta-Analysis of Antecedents and Correlates of Employee Turnover: Update, Moderator Tests, and Research Implications for the Next Millennium”. Journal of Management, vol. 26, no. 3, pp. 463-488.
+
+- DOI: [10.1177/014920630002600305](https://doi.org/10.1177/014920630002600305) · <https://doi.org/10.1177/014920630002600305>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The article is a comprehensive meta-analysis of turnover antecedents, extending an earlier one by Hom and Griffeth (1995), and describes itself as the most wide-ranging quantitative review to date of the predictive strength of numerous antecedents.
+- Supports (abstract): It identifies various moderators of antecedent-turnover correlations.
+- Caveats: The abstract states no effect sizes and names no specific antecedent, so the chapter credits the article only for being a broad meta-analysis that found moderators. Not specific to software engineers.
 
 ### gutfleisch2023champions {#gutfleisch2023champions}
 
@@ -283,6 +541,17 @@ Mitchell Hoffman, and Steven Tadelis (2021). “People Management Skills, Employ
 - Supports (abstract): Better people managers are more likely to receive higher subjective performance ratings and to be promoted.
 - Caveats: One firm. Abstract read is that of the NBER working paper (w24360, revised April 2020) and its SSRN version; the published JPE abstract was not read and may differ in wording.
 
+### hom2017hundred {#hom2017hundred}
+
+Peter W. Hom, Thomas W. Lee, Jason D. Shaw, and John P. Hausknecht (2017). “One hundred years of employee turnover theory and research”. Journal of Applied Psychology, vol. 102, no. 3, pp. 530-545.
+
+- DOI: [10.1037/apl0000103](https://doi.org/10.1037/apl0000103) · <https://doi.org/10.1037/apl0000103>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A narrative review of a century of turnover research, which tracks twenty-first-century interest in the psychology of staying (rather than leaving) and in attitudinal trajectories as predictors of turnover.
+- Supports (abstract): It discusses rising scholarship on collective turnover, given the importance of human capital flight to practitioners and to HR strategy.
+- Caveats: Narrative review; abstract only. A figshare record exists but lists the work as all rights reserved and offered no file, so full text was not read.
+
 ### ibarra1999provisional {#ibarra1999provisional}
 
 Herminia Ibarra (1999). “Provisional Selves: Experimenting with Image and Identity in Professional Adaptation”. Administrative Science Quarterly, vol. 44, no. 4, pp. 764-791.
@@ -316,6 +585,18 @@ Brittany Johnson, Yoonki Song, Emerson Murphy-Hill, and Robert Bowdidge (2013). 
 - Supports (abstract): An interview study of 20 developers found that all felt static analysis tools were beneficial, but that false positives and the way warnings are presented, among other things, were barriers to use.
 - Caveats: Small qualitative sample (20 interviews). The DOI was taken from search results and not seen on a fetched publisher page, so it is not in verified_fields; confirm before printing it.
 
+### jones2016coaching {#jones2016coaching}
+
+Rebecca J. Jones, Stephen A. Woods, and Yves R. F. Guillaume (2016). “The effectiveness of workplace coaching: A meta-analysis of learning and performance outcomes from coaching”. Journal of Occupational and Organizational Psychology, vol. 89, no. 2, pp. 249-277.
+
+- DOI: [10.1111/joop.12119](https://doi.org/10.1111/joop.12119) · <https://doi.org/10.1111/joop.12119>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, venue, doi, url.
+- Supports (abstract): The meta-analysis (k = 17) covers workplace coaching by internal or external coaches and explicitly excludes manager-subordinate and peer coaching.
+- Supports (abstract): Coaching had positive effects on organizational outcomes overall (delta = 0.36), with skill-based 0.28, affective 0.51, and individual-level results 1.24.
+- Supports (abstract): Effects were stronger for internal than external coaches, and smaller when multisource feedback was used; format (face-to-face versus blended) and duration did not moderate the effect.
+- Caveats: Small number of studies (k = 17). Excludes coaching by a person's own manager, so it does not directly speak to managerial coaching. Published online April 2015 per Crossref; volume 89 issue 2 is the 2016 issue (year taken from the volume, not confirmed on a publisher page, so not in verified_fields).
+
 ### jorgensen2004review {#jorgensen2004review}
 
 Magne Jørgensen (2004). “A review of studies on expert estimation of software development effort”. Journal of Systems and Software, vol. 70, no. 1-2, pp. 37-60.
@@ -341,6 +622,19 @@ René Just et al. (2014). “Are mutants a valid substitute for real faults in s
 - Supports (abstract): Using 357 real faults in five open-source applications (321,000 lines in total) and both developer-written and generated test suites, the authors found a statistically significant correlation between mutant detection and real fault detection, independently of code coverage.
 - Supports (abstract): The abstract also notes inherent limitations of mutation analysis.
 - Caveats: Five Java open-source applications; correlation, and the paper reports that some real faults are not coupled to the mutants studied.
+
+### kluger1996effects {#kluger1996effects}
+
+Avraham N. Kluger, and Angelo DeNisi (1996). “The effects of feedback interventions on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory”. Psychological Bulletin, vol. 119, no. 2, pp. 254-284.
+
+- DOI: [10.1037/0033-2909.119.2.254](https://doi.org/10.1037/0033-2909.119.2.254) · <https://doi.org/10.1037/0033-2909.119.2.254>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A meta-analysis of 607 effect sizes (23,663 observations) found that feedback interventions improved performance on average (d = .41) but that over one third of them decreased performance.
+- Supports (abstract): The authors report that the decreases could not be explained by sampling error, feedback sign, or existing theories.
+- Supports (abstract): Feedback intervention theory proposes that feedback shifts attention among task learning, task motivation, and meta-task (including self-related) processes, and the results suggest effectiveness decreases as attention moves toward the self and away from the task.
+- Supports (abstract): The effects are further moderated by task characteristics that the authors describe as still poorly understood.
+- Caveats: Pools heterogeneous studies published up to the mid-1990s; study settings not read; not specific to managers or software teams. Abstract read from Kluger's university-hosted abstract file; APA PsycNet page did not render.
 
 ### kruchten2012technical {#kruchten2012technical}
 
@@ -378,6 +672,29 @@ Edward P. Lazear, Kathryn L. Shaw, and Christopher T. Stanton (2015). “The Val
 - Supports (abstract): Under a separate normalization, the average boss is about 1.75 times as productive as the average worker.
 - Caveats: One firm; technology-based service workers, not software engineers. The abstract read is that of the NBER working paper (w18317, revised 2013) and its SSRN version; Crossref holds no abstract for the published 2015 article, so the published wording was not compared.
 
+### lee1994unfolding {#lee1994unfolding}
+
+Thomas W. Lee, and Terence R. Mitchell (1994). “An Alternative Approach: The Unfolding Model of Voluntary Employee Turnover”. Academy of Management Review, vol. 19, no. 1, pp. 51-89.
+
+- DOI: [10.5465/amr.1994.9410122008](https://doi.org/10.5465/amr.1994.9410122008) · <https://doi.org/10.5465/amr.1994.9410122008>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Models voluntary turnover as four distinctive decision paths, each involving distinctive foci, psychological processes, and external events, drawing on decision making, statistics, and social psychology.
+- Caveats: Theory paper; no data. The abstract does not use the word 'shock'; the chapter does not attribute that term to the source. OpenAlex confirms authors, volume 19, issue 1, and first page 51; the last page (89) is from common citation and was not confirmed (OpenAlex lists 51-51; Crossref returned no JSON for this DOI during the session).
+
+### lenberg2018psychological {#lenberg2018psychological}
+
+Per Lenberg, and Robert Feldt (2018). “Psychological Safety and Norm Clarity in Software Engineering Teams”. Proceedings of the 11th International Workshop on Cooperative and Human Aspects of Software Engineering (CHASE 2018), ACM, pp. 79-86.
+
+- DOI: [10.1145/3195836.3195847](https://doi.org/10.1145/3195836.3195847) · <https://arxiv.org/abs/1802.01378>
+- Evidence class: Scholarly research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (full-text): A survey of 217 practitioners in 38 agile software teams at five Swedish organizations, analysed with multiple linear regression.
+- Supports (full-text): Both psychological safety and team norm clarity were associated with self-assessed team performance and job satisfaction; norm clarity was the stronger predictor (the authors report about 30 percent stronger for performance and 71 percent for satisfaction).
+- Supports (full-text): Psychological safety was measured with items adapted from Edmondson's scale and norm clarity with three items from Wageman, Hackman, and Lehman's team diagnostic survey; the two were moderately correlated, and norm clarity did not moderate the effect of psychological safety.
+- Supports (full-text): The authors name self-assessed performance as a threat to validity and describe the model as a first-order approximation that omits many factors.
+- Caveats: Cross-sectional, self-reported, one country, 38 teams; performance is self-assessed. Read as the arXiv preprint (submitted to CHASE 2018); the ACM published version (dl.acm.org returned 403) was not compared.
+
 ### li2015systematic {#li2015systematic}
 
 Zengyang Li, Paris Avgeriou, and Peng Liang (2015). “A systematic mapping study on technical debt and its management”. Journal of Systems and Software, vol. 101, pp. 193-220.
@@ -411,6 +728,29 @@ John D. C. Little (2011). “OR FORUM—Little's Law as Viewed on Its 50th Anniv
 - Supports (full text): Over a finite time window, in particular one where the system is empty at start and end, the relationship holds exactly for the measured data; the author frames finite-window use as measurement rather than forecasting.
 - Supports (full text): In operations management the law is commonly written as throughput = work in process / cycle time; the law does not by itself tell managers how to handle trade-offs.
 - Caveats: The law describes averages and does not establish causation; predicting the effect of a WIP reduction requires the additional assumption that throughput is unchanged.
+
+### lorenz2011social {#lorenz2011social}
+
+Jan Lorenz, Heiko Rauhut, Frank Schweitzer, and Dirk Helbing (2011). “How social influence can undermine the wisdom of crowd effect”. Proceedings of the National Academy of Sciences, vol. 108, no. 22, pp. 9020-9025.
+
+- DOI: [10.1073/pnas.1008636108](https://doi.org/10.1073/pnas.1008636108) · <https://europepmc.org/articles/PMC3107299>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): In an experiment with 144 subjects answering factual estimation questions, mild social influence (seeing others' average or full estimates) reduced the diversity of estimates without improving accuracy and undermined the wisdom-of-crowd effect.
+- Supports (abstract): After estimates converged, participants' confidence increased.
+- Caveats: Factual estimation questions, not hiring judgments. The chapter uses it as evidence for the mechanism behind independent ratings, labeled as an extension.
+
+### lu2012hiddenprofiles {#lu2012hiddenprofiles}
+
+Li Lu, Y. Connie Yuan, and Poppy Lauretta McLeod (2012). “Twenty-Five Years of Hidden Profiles in Group Decision Making: A Meta-Analysis”. Personality and Social Psychology Review, vol. 16, no. 1, pp. 54-75.
+
+- DOI: [10.1177/1088868311417243](https://doi.org/10.1177/1088868311417243) · <https://doi.org/10.1177/1088868311417243>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A meta-analysis of 65 hidden-profile studies found that groups mentioned common information much more than unique information, and that groups in which unique information had to be pooled were much less likely to reach the correct solution than groups given full information.
+- Supports (abstract): The share of available unique information that was mentioned was the stronger of two pooling measures in predicting decision quality.
+- Supports (abstract): Communication medium did not affect unique-information pooling or decision quality; group size, information load, proportion of unique information, task demonstrability, and hidden-profile strength moderated the effects.
+- Caveats: Published online 2011, print issue 2012. Abstract only. The underlying studies are mostly laboratory tasks with a demonstrably correct answer, unlike most engineering decisions.
 
 ### luo2014flaky {#luo2014flaky}
 
@@ -448,6 +788,18 @@ Mika V. Mäntylä et al. (2013). “On Rapid Releases and Software Testing”. 2
 - Supports (abstract): Rapid releases made it more difficult to build a large testing community, and Mozilla increased contractor resources to sustain testing.
 - Caveats: One open-source project. Crossref lists author order Mäntylä, Khomh, Adams, Engström, Petersen. An extended journal version exists (Empirical Software Engineering, 2015) but was not verified here. Abstract reconstructed from OpenAlex.
 
+### mathieu2009charters {#mathieu2009charters}
+
+John E. Mathieu, and Tammy L. Rapp (2009). “Laying the Foundation for Successful Team Performance Trajectories: The Roles of Team Charters and Performance Strategies”. Journal of Applied Psychology, vol. 94, no. 1, pp. 90-103.
+
+- DOI: [10.1037/a0013257](https://doi.org/10.1037/a0013257) · <https://doi.org/10.1037/a0013257>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The study followed 32 teams of MBA students in a business strategy simulation over time and examined team charters (laying a foundation for teamwork) and performance strategies (for taskwork).
+- Supports (abstract): Teams with high-quality performance strategies outperformed teams with poorer strategies.
+- Supports (abstract): Charter quality interacted with performance strategy quality; the highest sustained performance came from teams high on both.
+- Caveats: Student teams in a simulation, not software teams; 32 teams. Effect sizes and how charter quality was rated were not read.
+
 ### mcintosh2014impact {#mcintosh2014impact}
 
 Shane McIntosh, Yasutaka Kamei, Bram Adams, and Ahmed E. Hassan (2014). “The impact of code review coverage and code review participation on software quality: a case study of the Qt, VTK, and ITK projects”. Proceedings of the 11th Working Conference on Mining Software Repositories (MSR 2014), pp. 192-201.
@@ -478,6 +830,17 @@ John W. Meyer, and Brian Rowan (1977). “Institutionalized Organizations: Forma
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
 - Supports (abstract): The abstract argues that many formal organizational structures reflect rationalized institutional rules that organizations adopt to gain legitimacy, resources, and stability, and that such organizations decouple structures from each other and from ongoing activities, replacing coordination, inspection, and evaluation with a logic of confidence and good faith.
 - Caveats: A theoretical sociology paper about organizations in general (schools are a main example), not an empirical study of software organizations. Applying it to engineering standards is this book's analogy. The publisher page returned 403; the abstract was read on a JSTOR-derived copy hosted on a university site, with citation details confirmed via Crossref.
+
+### mitchell2001why {#mitchell2001why}
+
+Terence R. Mitchell et al. (2001). “Why People Stay: Using Job Embeddedness to Predict Voluntary Turnover”. Academy of Management Journal, vol. 44, no. 6, pp. 1102-1121.
+
+- DOI: [10.2307/3069391](https://doi.org/10.2307/3069391) · <https://doi.org/10.2307/3069391>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Introduces job embeddedness, which assesses on- and off-the-job factors - a person's links to other people, teams and groups; their perceived fit with job, organization and community; and what they say they would sacrifice if they left.
+- Supports (abstract): In two samples, job embeddedness predicted both intent to leave and voluntary turnover, and explained significant incremental variance over job satisfaction, organizational commitment, job alternatives, and job search.
+- Caveats: Two samples, neither in software (the abstract does not name the settings). Crossref gives author initials only; full given names (Terence, Brooks, Thomas, Chris, Miriam) follow common citation of this article and should be checked against the publisher page by the human reviewer.
 
 ### murray2023just {#murray2023just}
 
@@ -545,6 +908,17 @@ Leslie A. Perlow (1999). “The Time Famine: Toward a Sociology of Work Time”.
 - Supports (abstract): Altering the way the software engineers used their time at work enhanced their collective productivity.
 - Caveats: One team, qualitative, 1990s; the abstract does not describe how productivity was measured. The publisher page (journals.sagepub.com) returned HTTP 403; the abstract was read from the Crossref and OpenAlex records. A full-text copy on a course page was not used.
 
+### pulakos2011broken {#pulakos2011broken}
+
+Elaine D. Pulakos, and Ryan S. O'Leary (2011). “Why Is Performance Management Broken?”. Industrial and Organizational Psychology, vol. 4, no. 2, pp. 146-164.
+
+- DOI: [10.1111/j.1754-9434.2011.01315.x](https://doi.org/10.1111/j.1754-9434.2011.01315.x) · <https://doi.org/10.1111/j.1754-9434.2011.01315.x>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The authors argue that performance management has been reduced to prescribed steps within formal administrative systems disconnected from the day-to-day activities that determine its effectiveness, such as communicating clear expectations, setting short-term objectives, and continual guidance.
+- Supports (abstract): They argue against an exclusive focus on redesigning formal system features and for more attention to manager-employee communication and the manager-employee relationship.
+- Caveats: A focal (position) article in a commentary journal, arguing from the literature; not an empirical study.
+
 ### rahman2016feature {#rahman2016feature}
 
 Md Tajmilur Rahman, Louis-Philippe Querel, Peter C. Rigby, and Bram Adams (2016). “Feature toggles: practitioner practices and a case study”. Proceedings of the 13th International Conference on Mining Software Repositories (MSR 2016), pp. 201-211.
@@ -593,6 +967,56 @@ Peter C. Rigby, and Christian Bird (2013). “Convergent contemporary software p
 - Supports (abstract): The authors introduce a knowledge-sharing measure and report that review increases the number of distinct files a developer knows about by 66 to 150 percent, depending on the project.
 - Caveats: Observational; the converged values themselves (for example the typical review interval or number of reviewers) are not stated in the abstract and were not read. Abstract reconstructed from OpenAlex's inverted index.
 
+### rigby2016turnover {#rigby2016turnover}
+
+Peter C. Rigby, Yue Cai Zhu, Samuel M. Donadelli, and Audris Mockus (2016). “Quantifying and Mitigating Turnover-Induced Knowledge Loss: Case Studies of Chrome and a Project at Avaya”. Proceedings of the 38th International Conference on Software Engineering (ICSE 2016), pp. 1006-1016.
+
+- DOI: [10.1145/2884781.2884851](https://doi.org/10.1145/2884781.2884851) · <https://doi.org/10.1145/2884781.2884851>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The authors measure abandoned source files (files whose knowledgeable developers have left) in Chrome and a project at Avaya and adapt financial risk analysis to assess susceptibility to developer turnover.
+- Supports (abstract): Historical loss distributions show projects are susceptible to losses more than three times the expected loss, and historical simulations show losses over five times the expected loss.
+- Supports (abstract): Monte Carlo simulations of disaster scenarios indicate that simplistic truck-factor estimates exaggerate the potential for loss.
+- Supports (abstract): A successor-recommendation method recommended the correct successor 34 to 48 percent of the time, and having successors reduced expected loss by as much as 15 percent.
+- Supports (abstract): The abstract notes that previous research shows people maintaining abandoned code have reduced productivity and are more likely to make mistakes.
+- Caveats: Two projects; knowledge is measured from file authorship. The prior research on reduced productivity is cited by the authors and was not read here.
+
+### rivera2019scaling {#rivera2019scaling}
+
+Lauren A. Rivera, and András Tilcsik (2019). “Scaling Down Inequality: Rating Scales, Gender Bias, and the Architecture of Evaluation”. American Sociological Review, vol. 84, no. 2, pp. 248-274.
+
+- DOI: [10.1177/0003122419833601](https://doi.org/10.1177/0003122419833601) · <https://doi.org/10.1177/0003122419833601>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, doi.
+- Supports (abstract): In a quasi-natural experiment at a large North American university, whether teaching was rated on a 6-point or a 10-point scale significantly affected the size of the gender gap in evaluations in the most male-dominated fields; a survey experiment replicated the finding.
+- Supports (abstract): The authors conclude that seemingly minor technical aspects of rating tools can have a major effect on how men and women are evaluated.
+- Caveats: University teaching evaluations, not workplace performance or promotion decisions.
+
+### rubenstein2018surveying {#rubenstein2018surveying}
+
+Alex L. Rubenstein, Marion B. Eberly, Thomas W. Lee, and Terence R. Mitchell (2018). “Surveying the forest: A meta-analysis, moderator investigation, and future-oriented discussion of the antecedents of voluntary employee turnover”. Personnel Psychology, vol. 71, no. 1, pp. 23-65.
+
+- DOI: [10.1111/peps.12226](https://doi.org/10.1111/peps.12226) · <https://doi.org/10.1111/peps.12226>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A comprehensive meta-analysis of voluntary turnover predictors that updates effect sizes of traditional predictors and examines multiple newer antecedents.
+- Supports (abstract): Its moderator tests provide insight into the context-dependent nature of many antecedent-turnover relationships.
+- Supports (abstract): The authors offer research recommendations that break from the traditional turnover paradigm.
+- Caveats: Published online 30 March 2017; in the 2018 volume 71 issue 1, which the id uses. The abstract gives no effect sizes; the chapter does not report any. Not specific to software engineers.
+
+### ryan2000self {#ryan2000self}
+
+Richard M. Ryan, and Edward L. Deci (2000). “Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being”. American Psychologist, vol. 55, no. 1, pp. 68-78.
+
+- DOI: [10.1037/0003-066X.55.1.68](https://doi.org/10.1037/0003-066X.55.1.68) · <https://doi.org/10.1037/0003-066X.55.1.68>
+- Evidence class: Scholarly research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (full-text): Self-determination theory postulates three innate psychological needs, competence, autonomy, and relatedness, which when satisfied yield enhanced self-motivation and well-being and when thwarted lead to diminished motivation and well-being.
+- Supports (full-text): The article reports that expected tangible rewards made contingent on task performance reliably undermine intrinsic motivation (citing a 1999 meta-analysis by Deci, Koestner, and Ryan, against contrary claims by Eisenberger and Cameron), and that threats, deadlines, directives, pressured evaluations, and imposed goals also diminish it.
+- Supports (full-text): Choice, acknowledgment of feelings, and opportunities for self-direction enhance intrinsic motivation.
+- Supports (full-text): It cites a study (Baard, Deci, and Ryan, 1998) in which employees' satisfaction of the three needs at work predicted their performance and well-being at work.
+- Caveats: A review by the theory's originators. The reward-undermining effect is contested in the literature (the article itself names the opposing view); the chapter labels it as contested and does not apply it to salary.
+
 ### sackett2022revisiting {#sackett2022revisiting}
 
 Paul R. Sackett, Charlene Zhang, Christopher M. Berry, and Filip Lievens (2022). “Revisiting meta-analytic estimates of validity in personnel selection: Addressing systematic overcorrection for restriction of range”. Journal of Applied Psychology, vol. 107, no. 11, pp. 2040-2068.
@@ -604,6 +1028,22 @@ Paul R. Sackett, Charlene Zhang, Christopher M. Berry, and Filip Lievens (2022).
 - Supports (abstract): In their revised estimates, structured interviews emerge as the top-ranked selection procedure.
 - Supports (abstract): Most procedures that ranked high before still rank high, but mean validity estimates fall by roughly .10 to .20.
 - Caveats: The abstract does not give a specific revised figure for cognitive ability, so none is recorded here. The paper also pairs validity with Black-White subgroup differences (validity-diversity trade-offs). First published online 2021-12-30; PMID 34968080. Full text is paywalled and was not read.
+
+### sackett2023revisiting {#sackett2023revisiting}
+
+Paul R. Sackett, Charlene Zhang, Christopher M. Berry, and Filip Lievens (2023). “Revisiting the design of selection systems in light of new findings regarding the validity of widely used predictors”. Industrial and Organizational Psychology, vol. 16, no. 3, pp. 283-300.
+
+- DOI: [10.1017/iop.2023.24](https://doi.org/10.1017/iop.2023.24) · <https://www.cambridge.org/core/product/A20984B138319E3D432E643978BF026D/core-reader>
+- Evidence class: Scholarly research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (full-text): Open access (CC BY 4.0). Builds on Sackett et al. (2022), which identified flaws in how range-restriction corrections had been applied and offered revised operational validity estimates that are often quite different from the prior ones.
+- Supports (full-text): Structured interviews top the revised list with a mean validity of .42; the standard deviation is .19 and the 80 percent credibility interval runs from .18 to .66, so the authors suggest reading the figure as ".42, plus or minus .24".
+- Supports (full-text): The predictors at the top are job-specific ones, such as structured interviews, job knowledge tests, work sample tests, and empirically keyed biodata (biodata mean .38).
+- Supports (full-text): Relative to earlier estimates, revised validities are .21 lower for work sample tests, .20 lower for cognitive ability, and .19 lower for unstructured interviews; the revised cognitive ability estimate cited is .31.
+- Supports (full-text): The revised assessment-center estimate rises from .29 to .33, which moves assessment centers to a tie with work samples for fourth place in the ranking.
+- Supports (full-text): The authors write that cognitive ability is no longer the stand-out predictor it was in prior work and that the findings lead to a reduced role for it in selection.
+- Supports (full-text): The authors state that considerable uncertainty remains about many predictors, that the meta-analyses reviewed use overall job performance as the criterion, and that many meta-analyses do not separate predictive from concurrent studies.
+- Caveats: The revised table itself is an image that was not read; only figures stated in the text are recorded. The work-sample mean of .33 is inferred from two sentences (assessment centers revised to .33 and tied with work samples) and should be checked against the table. Criterion is mostly supervisor ratings of overall job performance across many occupations, not software engineering specifically. Read through the publisher's open-access reader, so it is the legitimate route to the 2022 estimates.
 
 ### sadowski2018modern {#sadowski2018modern}
 
@@ -627,6 +1067,34 @@ Frank L. Schmidt, and John E. Hunter (1998). “The validity and utility of sele
 - Supports (abstract): The abstract names the best-performing combinations as GMA plus a work sample test (mean validity .63), GMA plus an integrity test (.65), and GMA plus a structured interview (.63).
 - Caveats: SUPERSEDED IN PART: Sackett et al. 2022 (sackett2022revisiting) argue these estimates were inflated by overcorrection for range restriction and revise them downward. Cite the two together. The abstract was reconstructed from OpenAlex's inverted index, so check the exact figures against the publisher abstract before printing them.
 
+### scullen2000latent {#scullen2000latent}
+
+Steven E. Scullen, Michael K. Mount, and Maynard Goff (2000). “Understanding the Latent Structure of Job Performance Ratings”. Journal of Applied Psychology, vol. 85, no. 6, pp. 956-970.
+
+- DOI: [10.1037/0021-9010.85.6.956](https://doi.org/10.1037/0021-9010.85.6.956) · <https://doi.org/10.1037/0021-9010.85.6.956>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The study estimated the effects of five factors on performance ratings (ratee general performance, ratee performance on a specific dimension, the rater's idiosyncratic rating tendencies, the rater's organizational perspective, and random measurement error).
+- Supports (abstract): Data were two large samples of managers (n = 2,350 and n = 2,142) who received developmental ratings on three performance dimensions from seven raters (two bosses, two peers, two subordinates, and self).
+- Supports (abstract): Idiosyncratic rater effects accounted for over half of the rating variance in both data sets (62 percent and 53 percent).
+- Supports (abstract): The combined effects of general and dimensional ratee performance (21 percent and 25 percent) were less than half the size of the idiosyncratic rater effects.
+- Supports (abstract): Average random error effects were 11 percent and 18 percent.
+- Supports (abstract): In two large data sets of managers (n = 2,350 and n = 2,142) rated on three performance dimensions by seven raters (two bosses, two peers, two subordinates, and self), idiosyncratic rater effects accounted for over half of the rating variance (62 and 53 percent).
+- Supports (abstract): The combined effects of the ratee's general and dimensional performance (21 and 25 percent) were less than half the size of the idiosyncratic rater effects.
+- Caveats: Ratings were developmental (multi-source feedback for managers), not administrative ratings tied to pay; ratees were managers, not engineers. Crossref holds no abstract; the abstract was read from the OpenAlex record of the article. APA PsycNet did not render to automated fetch.
+
+### scullen2005forced {#scullen2005forced}
+
+Steven E. Scullen, Paul K. Bergey, and Lynda Aiman-Smith (2005). “Forced Distribution Rating Systems and the Improvement of Workforce Potential: A Baseline Simulation”. Personnel Psychology, vol. 58, no. 1, pp. 1-32.
+
+- DOI: [10.1111/j.1744-6570.2005.00361.x](https://doi.org/10.1111/j.1744-6570.2005.00361.x) · <https://doi.org/10.1111/j.1744-6570.2005.00361.x>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A simulation of forced distribution rating systems that require firing a set percentage of the workforce each year, interacting with rating reliability, selection validity, selection ratio, and voluntary turnover.
+- Supports (abstract): Results suggest such a system could noticeably improve average workforce performance potential, with most of the improvement in the first several years.
+- Supports (abstract): Improvement depends largely on the percentage fired and on voluntary turnover; more firing and lower voluntary turnover give greater improvement.
+- Caveats: A simulation, not a field study; the outcome modeled is workforce performance potential. The abstract does not report effects on cooperation, morale, or legal exposure, so the book does not attribute any such findings to it.
+
 ### sillito2020failures {#sillito2020failures}
 
 Jonathan Sillito, and Esdras Kutomi (2020). “Failures and Fixes: A Study of Software System Incident Response”. 2020 IEEE International Conference on Software Maintenance and Evolution (ICSME), pp. 185-195.
@@ -638,6 +1106,17 @@ Jonathan Sillito, and Esdras Kutomi (2020). “Failures and Fixes: A Study of So
 - Supports (abstract): Among the 11 reported observations are that failures can cascade through a system into major outages and that engineers often learn a system's scaling limits only when those limits are exceeded.
 - Caveats: Small qualitative sample (30 incidents); public postmortems are a self-selected set. It studies incident response rather than measuring whether postmortems improve outcomes; no peer-reviewed source quantifying the benefit of blameless postmortems or of on-call practices was confirmed in this session.
 
+### stasser1985pooling {#stasser1985pooling}
+
+Garold Stasser, and William Titus (1985). “Pooling of unshared information in group decision making: Biased information sampling during discussion”. Journal of Personality and Social Psychology, vol. 48, no. 6, pp. 1467-1478.
+
+- DOI: [10.1037/0022-3514.48.6.1467](https://doi.org/10.1037/0022-3514.48.6.1467) · <https://doi.org/10.1037/0022-3514.48.6.1467>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The authors propose a biased sampling model in which group discussion tends to dwell on information members already share and on information that supports their existing preferences, so unshared information is often not pooled.
+- Supports (abstract): In a simulated political caucus where members' pre-discussion information was distributed so that each member's view was biased against the best candidate, groups tended to choose the candidate with initial plurality support rather than the best one, and discussion tended to reinforce members' distorted impressions.
+- Caveats: Abstract read via the OpenAlex record (publisher abstract); the full text is paywalled and was not read. A laboratory study with students and a constructed task; the founding study of the hidden-profile paradigm.
+
 ### strathern1997improving {#strathern1997improving}
 
 Marilyn Strathern (1997). “'Improving ratings': audit in the British University system”. European Review, vol. 5, no. 3, pp. 305-321.
@@ -647,6 +1126,18 @@ Marilyn Strathern (1997). “'Improving ratings': audit in the British Universit
 - Verified against a fetched page (2026-11-18): title, authors, year, venue, doi, url.
 - Supports (abstract): The abstract presents the paper as an anthropological commentary on the 'audit explosion' in British universities, arguing that audit does more than monitor and acquires a momentum that can threaten the institutions it evaluates.
 - Caveats: The popular wording of Goodhart's law ('when a measure becomes a target, it ceases to be a good measure') does NOT appear in the abstract or on the landing page read. Its attribution to this paper is therefore unverified here; confirm the sentence and page number in the full text. No primary source by Goodhart himself was verified in this session.
+
+### theeboom2014coaching {#theeboom2014coaching}
+
+Tim Theeboom, Bianca Beersma, and Annelies E. M. van Vianen (2014). “Does coaching work? A meta-analysis on the effects of coaching on individual level outcomes in an organizational context”. The Journal of Positive Psychology, vol. 9, no. 1, pp. 1-18.
+
+- DOI: [10.1080/17439760.2013.837499](https://doi.org/10.1080/17439760.2013.837499) · <https://research.vu.nl/en/publications/does-coaching-work-a-meta-analysis-on-the-effects-of-coaching-on-/>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (abstract): The meta-analysis examined five individual-level outcome categories of coaching in organizations, performance and skills, well-being, coping, work attitudes, and goal-directed self-regulation.
+- Supports (abstract): Coaching had significant positive effects on all five, with effect sizes from g = 0.43 (coping) to g = 0.74 (goal-directed self-regulation).
+- Supports (abstract): The authors note that coaching research had been limited and lacked a solid theoretical basis.
+- Caveats: Number of included studies and the share involving professional coaches versus managers were not read (secondary sites say 18 studies; not confirmed). Published online 2013, issue 2014.
 
 ### tornhill2022codered {#tornhill2022codered}
 
@@ -679,6 +1170,41 @@ Bogdan Vasilescu et al. (2015). “Quality and productivity outcomes relating to
 - Verified against a fetched page (2026-11-18): title, authors, year, venue, doi.
 - Supports (abstract): Analysing historical data from GitHub projects, the authors report that continuous integration is associated with higher team productivity, in the sense that teams integrate more outside contributions, with no observable reduction in code quality.
 - Caveats: Observational study of open-source GitHub projects; the authors themselves note many confounding factors. 'Productivity' here means pull-request integration, not business output. Page numbers were not confirmed. Abstract reconstructed from OpenAlex's inverted index.
+
+### verwijs2024double {#verwijs2024double}
+
+Christiaan Verwijs, and Daniel Russo (2024). “The Double-Edged Sword of Diversity: How Diversity, Conflict, and Psychological Safety Impact Software Teams”. IEEE Transactions on Software Engineering, vol. 50, no. 1, pp. 141-157.
+
+- DOI: [10.1109/TSE.2023.3339881](https://doi.org/10.1109/TSE.2023.3339881) · <https://arxiv.org/abs/2301.12954>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (abstract): The study analysed survey data from 1,118 participants in 161 software teams with covariance-based structural equation modeling.
+- Supports (abstract): Psychological safety was directly associated with better teamwork and less conflict, but did not moderate the relationship between diversity and team effectiveness.
+- Supports (abstract): Age diversity was associated with higher team effectiveness and gender diversity with more relational conflict.
+- Caveats: Only the arXiv abstract (v2, revised 2023-11-16) was read; survey-based and cross-sectional. The arXiv title says "Software Teams"; v1 said "Agile Software Teams". Published-version metadata from Crossref.
+
+### wageman2005team {#wageman2005team}
+
+Ruth Wageman, J. Richard Hackman, and Erin Lehman (2005). “Team Diagnostic Survey: Development of an Instrument”. The Journal of Applied Behavioral Science, vol. 41, no. 4, pp. 373-398.
+
+- DOI: [10.1177/0021886305281984](https://doi.org/10.1177/0021886305281984) · <https://doi.org/10.1177/0021886305281984>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The article describes the development of the Team Diagnostic Survey, an instrument for diagnosing a team's strengths and weaknesses and for research on teams, grounded in existing research on team effectiveness.
+- Supports (abstract): The instrument assesses how well a team is structured, supported, and led, together with members' work processes and affective reactions; analyses of data from 2,474 members of 321 teams support its psychometric properties.
+- Caveats: Instrument-development paper; it validates the measure, not any intervention. Item content not read.
+
+### whitelewis2024counteroffers {#whitelewis2024counteroffers}
+
+Damani K. White-Lewis, KerryAnn O'Meara, Kiernan Mathews, and Nicholas Havey (2024). “Counteroffers for faculty at research universities: who gets them, who doesn't, and what factors produce them?”. Higher Education, vol. 89, no. 2, pp. 535-552.
+
+- DOI: [10.1007/s10734-024-01234-w](https://doi.org/10.1007/s10734-024-01234-w) · <https://doi.org/10.1007/s10734-024-01234-w>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, venue, doi.
+- Supports (abstract): The authors state that few studies empirically examine the counteroffer process, and describe retention offers in practice as nebulous, inefficient, discretionary, and inequitable.
+- Supports (abstract): In institutional and survey data from 650 faculty (COACHE), women and racially minoritized scholars were less likely to receive counteroffers.
+- Supports (abstract): Other factors associated with receiving a counteroffer included the faculty member's desire to leave and whether they notified leadership.
+- Caveats: US research-university faculty, not engineers. Crossref's issued date is 7 May 2024 (online); the print year of volume 89 issue 2 was not confirmed. Says nothing about whether counteroffers retain people.
 
 ### yang2022remote {#yang2022remote}
 
@@ -728,6 +1254,19 @@ DORA (Google Cloud) (n.d.). “Capabilities: Continuous integration”. dora.dev
 - Supports (full-text): Treats fixing a broken build as the team's top priority, and lists leaving broken builds in place instead of fixing or reverting them quickly as a pitfall.
 - Supports (full-text): Says DORA research points to an upper limit of about ten minutes for the feedback from automated tests, with a few minutes as the goal.
 - Caveats: No update date shown on the page, hence year null. The ten-minute figure is reported on the page as research-based without the underlying analysis; treat as industry guidance.
+
+### dora-cap-generative-culture {#dora-cap-generative-culture}
+
+DORA (Google Cloud) (n.d.). “Capabilities: Generative organizational culture”. dora.dev.
+
+- <https://dora.dev/capabilities/generative-organizational-culture/>
+- Evidence class: Industry research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, venue, url.
+- Supports (full-text): The page describes Ron Westrum's typology of pathological (power-oriented), bureaucratic (rule-oriented), and generative (performance-oriented) cultures, distinguished by how they handle information, including whether messengers are punished, neglected, or trained.
+- Supports (full-text): It states that DORA's research found that high-trust cultures that promote information flow predict software delivery and organizational performance.
+- Supports (full-text): It states that the 2019 State of DevOps Report found psychological safety predictive of software delivery performance, organizational performance, and productivity, and refers to a two-year Google study of team effectiveness.
+- Supports (full-text): It measures culture with a perception survey of six statements answered on a seven-point scale, and lists pitfalls including punishing bad news and treating culture as only a technology or process issue.
+- Caveats: Undated web guide; the 2019 finding is reported secondhand by DORA, and the 2019 report itself was not read. Survey-based, correlational, vendor-sponsored research.
 
 ### dora-cap-small-batches {#dora-cap-small-batches}
 
@@ -833,6 +1372,20 @@ Nicole Forsgren, Jez Humble, and Gene Kim (2018). *Accelerate: The Science of Le
 - Evidence class: Industry research. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, isbn13.
 
+### ibarra2010promotions {#ibarra2010promotions}
+
+Herminia Ibarra, Nancy M. Carter, and Christine Silva (2010). “Why Men Still Get More Promotions Than Women”. Harvard Business Review, September 2010.
+
+- <https://herminiaibarra.com/why-men-still-get-more-promotions-than-women/>
+- Evidence class: Industry research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The article distinguishes sponsorship, in which the mentor goes beyond feedback and advice and uses their influence with senior executives on the protege's behalf, from ordinary mentoring; men and women both reported getting career advice from mentors, but it was mostly men who described being sponsored.
+- Supports (full-text): The article reports that the more senior the mentor, the faster the mentee's advancement.
+- Supports (full-text): It draws on a 2008 Catalyst survey of more than 4,000 high-potential MBA graduates, a 2010 follow-up survey of the same population, and interviews with 40 high-potential men and women at one multinational.
+- Supports (full-text): The follow-up found that the men had received 15 percent more promotions, and that mentoring relationships were not leading to as many promotions for women as for men.
+- Supports (full-text): The authors conclude that high-potential women were overmentored and undersponsored relative to their male peers.
+- Caveats: Survey and interview research reported in a practitioner magazine, not peer-reviewed; MBA graduates, not engineers; 2008 to 2010 data. The mechanism (sponsorship) is the authors' interpretation.
+
 ### memon2017taming {#memon2017taming}
 
 Atif Memon et al. (2017). “Taming Google-Scale Continuous Testing”. 2017 IEEE/ACM 39th International Conference on Software Engineering, Software Engineering in Practice Track (ICSE-SEIP), pp. 233-242.
@@ -888,9 +1441,11 @@ Google re:Work (2015). “Understand team effectiveness”. Google re:Work.
 
 - <https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness>
 - Evidence class: Industry research. Access for this bibliography: full text read.
-- Verified against a fetched page (2026-11-18): title, authors, year, venue, url.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, url.
 - Supports (full-text): The guide reports that Google's Project Aristotle studied 180 teams (115 engineering project teams and 65 sales pods).
 - Supports (full-text): It lists five dynamics of effective teams in this order: psychological safety, dependability, structure and clarity, meaning, impact.
+- Supports (full-text): The guide states that Google's team effectiveness research combined executive, team-leader, and team-member ratings with sales performance against quarterly quota to assess effectiveness.
+- Supports (full-text): The guide reports that who is on a team mattered less than how team members interact, structure their work, and view their contributions.
 - Caveats: Company self-report, not peer-reviewed; methods are described only at guide level. The page carries an editor's note that it is preserved as a record of the findings and that some references reflect its original era. 'Originally published 2015' is the date shown on the page.
 
 ## Standard or framework
@@ -1021,6 +1576,22 @@ Cybersecurity and Infrastructure Security Agency (2026). “Known Exploited Vuln
 - Supports (full-text): CISA describes the KEV catalog as an authoritative list of vulnerabilities known to have been exploited and states that organizations should use it as an input to their vulnerability management prioritization framework.
 - Caveats: Continuously updated catalog; year is the access year. US-government source.
 
+### eu2023paytransparency {#eu2023paytransparency}
+
+European Parliament and Council of the European Union (2023). *Directive (EU) 2023/970 of the European Parliament and of the Council of 10 May 2023 to strengthen the application of the principle of equal pay for equal work or work of equal value between men and women through pay transparency and enforcement mechanisms*. Official Journal of the European Union, L 132, 17 May 2023, p. 21.
+
+- <http://publications.europa.eu/resource/celex/32023L0970>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, url.
+- Supports (full text): Article 5 gives job applicants the right to information on the initial pay or its range, based on objective, gender-neutral criteria, and forbids employers to ask applicants about their pay history.
+- Supports (full text): Article 6 requires employers to make easily accessible to workers the criteria used to determine pay, pay levels, and pay progression, which must be objective and gender neutral; Member States may exempt employers with fewer than 50 workers from the pay progression part.
+- Supports (full text): Article 7 gives workers the right to request in writing their individual pay level and average pay levels by sex for workers doing the same work or work of equal value, and prohibits contractual terms that stop workers disclosing their pay.
+- Supports (full text): Article 9 requires gender pay gap reporting by employers with 250 or more workers annually from 7 June 2027, by those with 150 to 249 every three years from 7 June 2027, and by those with 100 to 149 every three years from 7 June 2031.
+- Supports (full text): Article 10 requires a joint pay assessment with workers' representatives where reporting shows a difference in average pay between women and men of at least 5 percent in a category of workers that is neither justified by objective, gender-neutral criteria nor remedied within six months.
+- Supports (full text): Article 4 requires pay structures that allow work of equal value to be compared on objective, gender-neutral criteria including skills, effort, responsibility, and working conditions.
+- Supports (full text): Article 34 sets the transposition deadline for Member States at 7 June 2026.
+- Caveats: A directive binds Member States, not employers directly; obligations reach employers through national transposing law, which varies and was incomplete in many Member States at the deadline (secondary reports, not verified here). Legal text, not evidence that transparency changes outcomes. EUR-Lex pages were blocked by a bot challenge; the Official Journal text was read through the EU Publications Office resource URL.
+
 ### nist-ssdf-project {#nist-ssdf-project}
 
 National Institute of Standards and Technology, Computer Security Resource Center (2026). “Secure Software Development Framework (SSDF) project page”. NIST CSRC.
@@ -1031,6 +1602,18 @@ National Institute of Standards and Technology, Computer Security Resource Cente
 - Supports (full-text): The SSDF practices are organized into four groups: Prepare the Organization (PO), Protect the Software (PS), Produce Well-Secured Software (PW), and Respond to Vulnerabilities (RV).
 - Supports (full-text): SP 800-218A, a community profile for generative AI and dual-use foundation models, augments SP 800-218 rather than replacing it.
 - Caveats: Project page, updated October 6, 2026 (page date, not a publication date). Use it for the practice-group names; cite SP 800-218 itself (nist2022ssdf) for the framework.
+
+### rework-structured-interviewing {#rework-structured-interviewing}
+
+re:Work Editorial Team (2026). “A guide to structured interviewing for better hiring practices”. Google re:Work.
+
+- <https://rework.withgoogle.com/intl/en/guides/a-guide-to-structured-interviewing-for-better-hiring-practices>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): Google describes structured interviewing as assessing all candidates for a job with the same questions, scored on the same scale, against predetermined qualifications, and says it is hard to build and maintain.
+- Supports (full-text): Its approach has four components: vetted role-relevant questions, recorded feedback on answers, standardized rubrics describing poor, borderline, solid, and outstanding answers, and interviewer training and calibration.
+- Supports (full-text): It recommends defining the attributes needed for success before writing questions, and uses behavioral (past experience) and hypothetical (job-related scenario) questions with planned follow-ups.
+- Caveats: Documented practice of one company, not evidence of outcomes. The page does not discuss independent feedback before discussion or hiring committees. Updated March 2026; the older guide URL (rework.withgoogle.com/guides/hiring-use-structured-interviewing) returned 404.
 
 ### safe-wsjf {#safe-wsjf}
 
@@ -1112,6 +1695,26 @@ Kevin Alwell (2021). “Measuring enterprise developer productivity”. The GitH
 - Supports (full-text): The post advises that no single measure supports conclusions about productivity on its own and that teams should use at least three of the dimensions; it calls activity the most common and most misused productivity measure.
 - Caveats: Secondary summary on the blog of GitHub (the SPACE first author's employer in 2021), not the paper itself; attribute the 'at least three' advice to this summary unless the paper is read.
 
+### atlassian-daci {#atlassian-daci}
+
+Atlassian (2026). “DACI: A Decision-Making Framework”. Atlassian Team Playbook.
+
+- <https://www.atlassian.com/team-playbook/plays/daci>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, venue, url.
+- Supports (full-text): DACI assigns four roles to a decision, a Driver who coordinates and keeps the decision to its date, a single Approver who makes the call, Contributors who have a voice but no vote, and Informed people who are told the outcome; the play recommends one Driver and one Approver and recording the outcome in a shared document.
+- Caveats: A vendor's practitioner playbook; year is the access year (the page carries no publication date). Not evidence that the framework improves outcomes.
+
+### bain-rapid {#bain-rapid}
+
+Bain & Company (2023). “RAPID Decision Making”. Bain & Company Insights, published October 13, 2023.
+
+- <https://www.bain.com/insights/rapid-tool-to-clarify-decision-accountability/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): RAPID assigns the roles Recommend, Agree, Perform, Input, and Decide; the page says there is one recommender, that the Agree role (for mandatory requirements such as legal ones) should be assigned sparingly, and that ideally each decision has a single decider.
+- Caveats: A consulting firm's description of its own trademarked tool. Not independent evidence of effect.
+
 ### beck2001manifesto {#beck2001manifesto}
 
 Kent Beck et al. (2001). “Manifesto for Agile Software Development”. agilemanifesto.org.
@@ -1160,6 +1763,17 @@ Betsy Beyer et al. (eds.) (2018). *The Site Reliability Workbook: Practical Ways
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, isbn13, free_online.
 
+### bezos2016letter {#bezos2016letter}
+
+Jeff Bezos (2017). *2016 Letter to Shareholders*. Amazon (aboutamazon.com), published April 17, 2017.
+
+- <https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The letter argues that reversible decisions ("two-way doors") can use a lightweight process because being wrong is cheap to undo, and that most decisions should probably be made with about 70 percent of the information one wishes one had.
+- Supports (full-text): It recommends recognizing and correcting bad decisions quickly, using "disagree and commit" (including by the boss), and escalating fundamental misalignment early rather than letting debate run until the side with more stamina wins.
+- Caveats: One company's chief executive describing his own practice in a shareholder letter (documented practice, not research). The page byline reads Amazon Staff; the letter is signed by Jeff Bezos.
+
 ### brooks1995mythical {#brooks1995mythical}
 
 Frederick P. Brooks (1995). *The Mythical Man-Month: Essays on Software Engineering, Anniversary Edition*. Addison-Wesley Professional (2nd edition), ISBN 978-0-201-83595-3, 336 pp..
@@ -1186,6 +1800,19 @@ Marty Cagan, and Chris Jones (2020). *Empowered: Ordinary People, Extraordinary 
 - ISBN-13: 9781119691297 · <https://www.wiley.com/en-us/EMPOWERED%3A+Ordinary+People%2C+Extraordinary+Products-p-9781119691297>
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, isbn13.
+
+### chen2020knowledge {#chen2020knowledge}
+
+Nina Chen, and Mark Barolak (2020). *Knowledge Sharing: Chapter 3 of Software Engineering at Google*. O'Reilly Media (free online edition on abseil.io).
+
+- <https://abseil.io/resources/swe-book/html/ch03.html>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, url.
+- Supports (full-text): The chapter names obstacles to learning in an organization, including information islands, single points of failure (related to the bus factor), all-or-nothing expertise, parroting, and areas of code people are afraid to touch.
+- Supports (full-text): It treats psychological safety, feeling safe to ask and to admit not knowing, as the foundation of knowledge sharing.
+- Supports (full-text): It presents written and one-to-one knowledge as complementary (one-to-one help is precise but does not scale; documents scale but need maintenance), and lists ways to scale knowledge such as office hours, talks, documentation, code review, and canonical sources with owners.
+- Supports (full-text): It notes that doing a task for someone is faster in the short term but keeps the knowledge in one person.
+- Caveats: Documented practice at one very large company. CC BY-NC-ND 4.0; summarize and cite only.
 
 ### cockburn2004crystal {#cockburn2004crystal}
 
@@ -1283,6 +1910,15 @@ Abi Noda (n.d.). “DevEx: What actually drives productivity”. DX (getdx.com) 
 - Supports (official-summary): The page says the measurement approach combines system data with developer surveys.
 - Caveats: Vendor page; DX sells developer-experience measurement. Used only to name the dimensions of noda2023devex, whose full text could not be read (ACM 403; an author-hosted PDF on michaelagreiler.com returned 404). Undated.
 
+### edmondson2018fearless {#edmondson2018fearless}
+
+Amy C. Edmondson (2018). *The Fearless Organization: Creating Psychological Safety in the Workplace for Learning, Innovation, and Growth*. Wiley.
+
+- ISBN-13: 9781119477242 · <https://www.wiley.com/en-us/The+Fearless+Organization%3A+Creating+Psychological+Safety+in+the+Workplace+for+Learning%2C+Innovation%2C+and+Growth-p-9781119477242>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, subtitle, authors, year, isbn13, url.
+- Caveats: Metadata only. Credited only for the idea it is widely known for, that psychological safety and performance standards are separate dimensions and high performance needs both. Its quadrant names are not quoted.
+
 ### ford2017building {#ford2017building}
 
 Neal Ford, Rebecca Parsons, and Patrick Kua (2017). *Building Evolutionary Architectures: Support Constant Change*. O'Reilly Media. Latest edition: 2nd Edition, subtitle 'Automated Software Governance', authors Neal Ford, Rebecca Parsons, Patrick Kua, Pramod Sadalage (Open Library gives 2023).
@@ -1352,6 +1988,14 @@ David A. Garvin (2013). “How Google Sold Its Engineers on Management”. Harva
 - Supports (abstract): Describes Google's Project Oxygen, which set out to test whether managers matter in a technical organization where high-performing engineers doubted it, and concluded that they do.
 - Supports (abstract): The article reports that teams of higher-scoring managers had lower turnover, and that retention was more closely related to manager quality than to seniority, performance, tenure, or promotions.
 - Caveats: A case article about one company, written with the company's cooperation; Google's internal data and analysis are not published.
+
+### gilbert1978human {#gilbert1978human}
+
+Thomas F. Gilbert (1978). *Human Competence: Engineering Worthy Performance*. McGraw-Hill. Tribute edition: Pfeiffer, 2007 (ISBN 9780787996154).
+
+- ISBN-13: 9780787996154 · <https://openlibrary.org/works/OL6674978W>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, subtitle, authors, year, isbn13.
 
 ### gitlab2026engineering {#gitlab2026engineering}
 
@@ -1463,6 +2107,15 @@ Andrew S. Grove (1983). *High Output Management*. Vintage. Latest edition: Vinta
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, authors, publisher, year, isbn13.
 
+### harvey1974abilene {#harvey1974abilene}
+
+Jerry B. Harvey (1974). “The Abilene Paradox: The Management of Agreement”. Organizational Dynamics, vol. 3, no. 1, pp. 63-80.
+
+- DOI: [10.1016/0090-2616(74)90005-9](https://doi.org/10.1016/0090-2616(74)90005-9) · <https://doi.org/10.1016/0090-2616(74)90005-9>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Caveats: Metadata only (no abstract in the record). Credited only for the idea it is widely known for, a group agreeing on a course of action that its members privately do not want. An essay, not an empirical study.
+
 ### hodgson2017featuretoggles {#hodgson2017featuretoggles}
 
 Pete Hodgson (2017). “Feature Toggles (aka Feature Flags)”. martinfowler.com.
@@ -1483,6 +2136,17 @@ Jez Humble, and David Farley (2010). *Continuous Delivery: Reliable Software Rel
 - ISBN-13: 9780321601919 · <https://www.pearson.com/en-us/subject-catalog/p/continuous-delivery-reliable-software-releases-through-build-test-and-deployment-automation/P200000009113/9780321601919>
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, isbn13.
+
+### kahneman2011bigdecision {#kahneman2011bigdecision}
+
+Daniel Kahneman, Dan Lovallo, and Olivier Sibony (2011). “The Big Idea: Before You Make That Big Decision...”. Harvard Business Review, June 2011.
+
+- <https://hbr.org/2011/06/the-big-idea-before-you-make-that-big-decision>
+- Evidence class: Practitioner literature. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (official-summary): The article's opening argues that awareness of cognitive biases such as confirmation bias, anchoring, and loss aversion has done little to improve the quality of business decisions, and that for big bets executives typically rely on a team's proposal.
+- Supports (official-summary): The article is known for a checklist of questions a decision maker asks about a team's recommendation to detect the team's biases (idea level only; the checklist itself was not read).
+- Caveats: Only the opening and summary were accessible. No checklist item is quoted or listed in the book.
 
 ### kane2019technology {#kane2019technology}
 
@@ -1507,6 +2171,18 @@ Gene Kim et al. (2016). *The DevOps Handbook: How to Create World-Class Agility,
 - ISBN-13: 9781950508402 · <https://itrevolution.com/product/the-devops-handbook-second-edition/>
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, latest_edition, isbn13.
+
+### kniberg2014squad {#kniberg2014squad}
+
+Henrik Kniberg, and Kristian Lindwall (2014). “Squad Health Check model – visualizing what to improve”. Spotify Engineering blog, 16 September 2014.
+
+- <https://engineering.atspotify.com/2014/09/squad-health-check-model>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): Describes a facilitated self-assessment workshop in which a team rates about ten indicators (such as easy to release, tech quality, mission, fun, learning, support) as green, yellow, or red, with a trend, using cards that give an example of a good and a bad state.
+- Supports (full-text): The team itself is the main audience; managers and coaches get a summary to spot patterns and decide where to help.
+- Supports (full-text): The authors warn against comparing teams, say the model only works in a high-trust environment because the data is self-reported and easy to game, and describe it as a support tool rather than a judgment tool.
+- Caveats: Documented practice at one company, written by its agile coaches; no outcome data.
 
 ### kolny2023primevideo {#kolny2023primevideo}
 
@@ -1631,6 +2307,14 @@ James Lewis, and Martin Fowler (2014). “Microservices: a definition of this ne
 - Supports (full-text): It names nine characteristics: componentization via services, organized around business capabilities, products not projects, smart endpoints and dumb pipes, decentralized governance, decentralized data management, infrastructure automation, design for failure, evolutionary design.
 - Caveats: A descriptive essay by practitioners, dated 25 March 2014; it offers characteristics, not a formal definition or empirical evidence.
 
+### mager1997analyzing {#mager1997analyzing}
+
+Robert F. Mager, and Peter Pipe (1997). *Analyzing Performance Problems: Or, You Really Oughta Wanna*. Center for Effective Performance. 3rd edition, completely revised (1997). First edition 1970.
+
+- ISBN-13: 9781879618176 · <https://openlibrary.org/works/OL532312W>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, subtitle, authors, publisher, year, isbn13.
+
 ### majors2017pendulum {#majors2017pendulum}
 
 Charity Majors (2017). “The Engineer/Manager Pendulum”. charity.wtf.
@@ -1650,6 +2334,18 @@ Charity Majors, Liz Fong-Jones, and George Miranda (2022). *Observability Engine
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-19): title, subtitle, authors, publisher, year, isbn13.
 - Caveats: Authors work for an observability vendor (Honeycomb). Credit only for the widely known idea that observability is the ability to ask new questions of a running system, distinct from monitoring of predefined signals. A web search listed a possible second edition (2026) at one retailer; not verified.
+
+### manshreck2020documentation {#manshreck2020documentation}
+
+Tom Manshreck (2020). *Documentation: Chapter 10 of Software Engineering at Google*. O'Reilly Media (free online edition on abseil.io).
+
+- <https://abseil.io/resources/swe-book/html/ch10.html>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, url.
+- Supports (full-text): The chapter argues documentation works best when treated like code, with owners, source control, review, issue tracking, and periodic evaluation, and describes Google moving away from a shared wiki toward documentation kept in source control.
+- Supports (full-text): It recommends writing for an identified audience, keeping each document to one type (reference, design doc, tutorial, conceptual, landing page), keeping documents fresh through owners and review dates, and deprecating obsolete documents.
+- Supports (full-text): It argues engineers can usually document their own work, and that technical writers are most useful for documentation that crosses team boundaries.
+- Caveats: Documented practice at one very large company. CC BY-NC-ND 4.0; summarize and cite only. Edited by Riona MacNamara per the chapter page; the book is curated by Winters, Manshreck, and Wright (see winters2020software).
 
 ### marquet2013turn {#marquet2013turn}
 
@@ -1729,6 +2425,18 @@ John Micco (2016). “Flaky Tests at Google and How We Mitigate Them”. Google 
 - Supports (full-text): Mitigations described include rerunning failed tests, marking a test flaky so it reports failure only after three consecutive failures, and a tool that automatically quarantines highly flaky tests and files a bug; the post notes that quarantine can mask a real bug.
 - Caveats: One company's 2016 figures, in a blog post rather than a peer-reviewed paper. Software Engineering at Google (2020) reports a different, lower rate (about 0.15 percent), apparently measured differently; do not combine the two.
 
+### nygard2011adr {#nygard2011adr}
+
+Michael Nygard (2011). “Documenting Architecture Decisions”. Cognitect blog.
+
+- <https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The post proposes architecture decision records, short documents of one or two pages with a title, context, decision, status, and consequences (including negative ones), kept in the project repository and numbered sequentially.
+- Supports (full-text): A reversed decision keeps its record, marked superseded with a reference to its replacement.
+- Supports (full-text): The stated motivation is that without the rationale, later team members can only accept past decisions blindly or reverse them blindly.
+- Caveats: Dated November 15, 2011. Chapter 28 owns architecture decision records in depth.
+
 ### orosz2023measuring {#orosz2023measuring}
 
 Gergely Orosz, and Kent Beck (2023). “Measuring developer productivity? A response to McKinsey”. The Pragmatic Engineer (newsletter).
@@ -1784,6 +2492,30 @@ Ian Robinson (2006). “Consumer-Driven Contracts: A Service Evolution Pattern�
 - Supports (full-text): In consumer-driven contracts, each consumer states the parts of a provider's contract it depends on as checkable expectations; the provider runs the combined expectations as tests, which tells it which changes would break which consumers.
 - Supports (full-text): The pattern addresses the lockstep coupling that arises when consumers validate a provider's entire schema, so that services can evolve independently.
 - Caveats: Pattern description, not outcome evidence; predates current tooling such as Pact.
+
+### rogelberg2024unlocking {#rogelberg2024unlocking}
+
+Steven G. Rogelberg (2024). “Unlocking the Potential of 1:1 Meetings”. Next Big Idea Club magazine (author's summary of his book Glad We Met, Oxford University Press, 2024).
+
+- <https://nextbigideaclub.com/magazine/unlocking-potential-11-meetings/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The author, an organizational scientist, reports from his research that nearly half of employees found their one-on-ones lacking in substance and suboptimal.
+- Supports (full-text): He reports that the strongest predictor of a one-on-one's value is the direct report's active participation, with the report speaking for roughly half to nine tenths of the time.
+- Supports (full-text): He reports that having a plan for what will be discussed strongly predicts effectiveness, and that both managers and direct reports rated meetings highest when the direct report created the agenda.
+- Supports (full-text): He reports that managers' self-ratings of their one-on-one skills appear inflated.
+- Supports (full-text): He states that the evidence is most aligned with a weekly or every-other-week cadence.
+- Caveats: A researcher's popular summary of his own survey work, published January 9, 2024. The underlying studies, samples, and methods are not described on the page and were not read; the book itself was not read. Treat as expert opinion informed by unreviewed survey data. A 2022 Harvard Business Review article by the same author (hbr.org/2022/11/make-the-most-of-your-one-on-one-meetings) was fetched but its findings were behind the paywall and are not used.
+
+### rogers2006whohasd {#rogers2006whohasd}
+
+Paul Rogers, and Marcia W. Blenko (2006). “Who Has the D? How Clear Decision Roles Enhance Organizational Performance”. Harvard Business Review, January 2006.
+
+- <https://hbr.org/2006/01/who-has-the-d-how-clear-decision-roles-enhance-organizational-performance>
+- Evidence class: Practitioner literature. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (official-summary): The article argues that company performance depends on making the right decisions quickly and executing them consistently, and is known for proposing clear decision roles as the remedy.
+- Caveats: Only the opening paragraphs were accessible; the RAPID roles are cited from bain-rapid, not from this article.
 
 ### rumelt2011good {#rumelt2011good}
 
@@ -1859,6 +2591,15 @@ Matthew Skelton, and Manuel Pais (2019). *Team Topologies: Organizing Business a
 - ISBN-13: 9781966280002 · <https://itrevolution.com/product/team-topologies/>
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, isbn13.
+
+### stone1999difficult {#stone1999difficult}
+
+Douglas Stone, Bruce Patton, and Sheila Heen (1999). *Difficult Conversations: How to Discuss What Matters Most*. Viking. Later editions: Penguin, 2010 (10th anniversary edition, ISBN 9780143118442).
+
+- ISBN-13: 9780670883394 · <https://openlibrary.org/isbn/0670883395>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, subtitle, authors, publisher, year, isbn13.
+- Caveats: Metadata only. Credited only for its widely known idea that a difficult conversation has three layers (what happened, feelings, identity) and for favoring a learning stance over message delivery.
 
 ### threatmodeling-manifesto2020 {#threatmodeling-manifesto2020}
 

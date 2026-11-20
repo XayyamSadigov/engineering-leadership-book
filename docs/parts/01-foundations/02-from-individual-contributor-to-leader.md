@@ -214,12 +214,12 @@ Assumptions: a 40-hour working week; Orders has 14 engineers; Priya reviewed abo
 | Product, release train, cross-team | 5 | 5 |
 | Incidents and escalations | 6 | 5 |
 | Team planning and rituals | 3 | 3 |
-| One-on-ones | 2 (nominally weekly; about one in three took place) | 2 (30 minutes every two weeks, all 14, with preparation) |
+| One-on-ones | 2 (nominally weekly; about one in three took place) | 4 (30 minutes every two weeks for all 14 is 3.5 hours a week, plus preparation) |
 | Hiring | 2 | 2 |
 | Feedback and career conversations | 2 | 2 |
 | Coaching delegated work | 0 | 4 |
 | Email and admin | 2 | 2 |
-| Unallocated | 0 | 7 |
+| Unallocated | 0 | 5 |
 | **Total** | **40** | **40** |
 
 Three things follow from the table.
@@ -233,7 +233,7 @@ since engineers switch tasks, but each switch adds work in progress and makes ba
 Second, eight hours a week is enough to read designs, pair occasionally, and take small fixes off the
 critical path. It is not enough to own a committed feature, and that is the intent.
 
-Third, the budget has 7 unallocated hours. A new manager's week fills with escalations; a budget
+Third, the budget has 5 unallocated hours. A new manager's week fills with escalations; a budget
 with no slack is broken by Tuesday, and the hours lost are usually one-on-ones.
 
 ## Decision Framework

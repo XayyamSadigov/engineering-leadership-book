@@ -477,3 +477,237 @@ Disputed claim D1: McKinsey content is now read; the book's position is unchange
 chapter. Suggested update to `disputed-claims.md` (for the maintainer): replace "Not verified" in D1 with
 a summary of the article's proposals as recorded in the pending entry, and set Status to resolved for
 reading.
+
+## Chapter 5 — One-on-Ones, Coaching, and Mentorship
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Nearly half of employees find their one-on-ones lacking in substance; report participation is the strongest predictor of value; a plan predicts effectiveness; both sides rate meetings highest when the report sets the agenda; managers' self-ratings appear inflated; evidence fits weekly or every-other-week cadence | Expert opinion (researcher's summary of his own survey work; methods not read) | rogelberg2024unlocking | full text of the summary; underlying studies not read |
+| 2 | The one-on-one is the subordinate's meeting, with their agenda, and a high-leverage activity | Practitioner | grove1983high | idea-level |
+| 3 | One-on-ones are for the person, not the project | Practitioner consensus | fournier2017manager; zhuo2019making | idea-level |
+| 4 | Leaders who supply every answer diminish others' thinking | Practitioner | wiseman2010multipliers | idea-level |
+| 5 | Coaching in organizations has significant positive effects on five outcome categories, g = 0.43 to 0.74 | Research finding | theeboom2014coaching | abstract |
+| 6 | Workplace coaching by internal or external coaches (k = 17) has positive effects; stronger for internal coaches; manager coaching excluded | Research finding | jones2016coaching | abstract (Crossref) |
+| 7 | Mentoring is associated with favorable career and other outcomes, with generally small effects, small for objective outcomes | Research finding (correlational) | allen2004mentoring; eby2008mentoring | abstract |
+| 8 | Sponsorship differs from mentoring; mostly men described being sponsored; men received 15 percent more promotions at follow-up (MBA graduates) | Industry research | ibarra2010promotions | full text on author's site |
+| 9 | No meta-analysis of managerial (line-manager) coaching was read | Gap statement | — | see final report |
+| 10 | All Northstar figures, the cadence arithmetic, and the case-study sample | Illustrative | — | fictional, recomputed in session |
+
+Book's own recommendations (labeled in the text): the channel design (report-owned agenda, status
+elsewhere, deeper-question rotation, visible follow-through); the decay-signal table and its
+thresholds; the four-mode table and decision diagram; the running record format and monthly summary;
+the cadence decision table; the enterprise floor, pulse, skip-level rule, and sponsorship map.
+
+## Chapter 6 — Feedback, Conflict, and Difficult Conversations
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Feedback interventions improved performance on average (d = .41, 607 effect sizes, 23,663 observations) but over one third decreased performance | Research finding | kluger1996effects | abstract (author-hosted) |
+| 2 | Feedback effectiveness decreases as attention moves from the task toward the self (feedback intervention theory) | Research finding (theory tested by moderator analyses) | kluger1996effects | abstract |
+| 3 | Specific, behavioral, early feedback works better than trait-level or delayed feedback | Practitioner consensus, consistent with claim 2 | kluger1996effects; scott2017radical | abstract; idea-level |
+| 4 | Caring personally and challenging directly; ruinous empathy as the common failure | Expert opinion | scott2017radical | idea-level (metadata-only) |
+| 5 | Business cultures differ in how directly negative feedback is delivered; upgrading and downgrading words | Expert opinion | meyer2014culture | idea-level (metadata-only) |
+| 6 | Relationship conflict correlates strongly and negatively with team performance and satisfaction | Research finding | dedreu2003task; dewit2012paradox | abstract |
+| 7 | Task conflict correlated negatively with performance in 2003 meta-analysis, especially in complex tasks; not strongly negative in 2012 meta-analysis (116 studies, 8,880 groups) | Research finding, contested | dedreu2003task; dewit2012paradox | abstract |
+| 8 | Task conflict is less harmful or more positive when weakly associated with relationship conflict | Research finding (both meta-analyses agree) | dedreu2003task; dewit2012paradox | abstract |
+| 9 | Process conflict has a stable negative relationship with group outcomes | Research finding | dewit2012paradox | abstract |
+| 10 | Status conflict is distinct, has a negative effect on group performance, moderates task conflict effects, and undermines information sharing | Research finding | bendersky2012status | abstract |
+| 11 | Values conflict as a separate category | This book's recommendation (practitioner distinction; not measured in sources read) | none | gap: no verified source read |
+| 12 | Unresolved process conflict at a boundary becomes relationship conflict; find the oldest layer | This book's recommendation | none | reasoning |
+| 13 | Teams that avoid conflict end in artificial harmony | Expert opinion | lencioni2002five | idea-level (metadata-only) |
+| 14 | A difficult conversation has three layers: what happened, feelings, identity; prefer a learning stance | Expert opinion | stone1999difficult | idea-level (metadata-only) |
+| 15 | Five-part preparation including a plan for when it goes badly | This book's recommendation | none | synthesis |
+| 16 | Team psychological safety associated with learning behavior, which mediated its link to performance | Research finding | edmondson1999psychological | abstract |
+| 17 | Feedback delay cost (900-line merge requests, about 40 days of extra waiting over 10 weeks) | Illustrative | none | worked example with stated assumptions |
+| 18 | Northstar Billing–Orders conflict is a process conflict that surfaced as status and relationship conflict | Illustrative | Northstar canon; northstar-additions/ch06.md | fictional case |
+
+## Chapter 7 — Hiring and Structured Interviews
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Validity coefficients are correlations with later performance, usually supervisor ratings; meta-analyses correct for range restriction | Research (method description) | sackett2022revisiting; sackett2023revisiting | abstract (2022); full text (2023) |
+| 2 | Schmidt and Hunter reported the highest validity for GMA combined with a work sample, integrity test, or structured interview, in the low-to-mid .60s | Research finding, superseded in part | schmidt1998validity | abstract (via OpenAlex inverted index) |
+| 3 | Range-restriction corrections overcorrected; most estimates fall by roughly .10 to .20; structured interviews rank first | Research finding | sackett2022revisiting | abstract |
+| 4 | Structured interview mean .42, SD .19, 80% credibility interval .18 to .66, ".42, plus or minus .24" | Research finding | sackett2023revisiting | full text (open access) |
+| 5 | Biodata .38; cognitive ability .31, about .20 lower, no longer the stand-out predictor; work samples .21 lower, tied with assessment centers (.33) for fourth; unstructured interviews .19 lower | Research finding | sackett2023revisiting | full text; work-sample .33 inferred from two sentences (see caveat) |
+| 6 | Top predictors are job-specific; considerable uncertainty remains | Research finding | sackett2023revisiting | full text |
+| 7 | 15 components of interview structure, in content and evaluation; interviews can be improved by them | Research finding (review) | campion1997review | abstract |
+| 8 | Google's structured interviewing: four components, attributes defined first, behavioral and hypothetical questions, rubrics; hard to maintain | Documented practice | rework-structured-interviewing | full text |
+| 9 | Interviewers form confident impressions from random answers; unstructured interviews dilute valid information; people prefer random interviews to none | Research finding (students, GPA prediction) | dana2013belief | full text |
+| 10 | Being watched halves performance on a whiteboard problem; higher stress and cognitive load | Research finding (48 students, lab) | behroozi2020stress | abstract |
+| 11 | No peer-reviewed validity study found for live coding, take-home, pair-programming, or system-design interviews | Research gap (proposed new gap) | — | search in session; not exhaustive |
+| 12 | Social influence reduces diversity of estimates without improving accuracy and raises confidence | Research finding (estimation tasks), applied to debriefs as an extension | lorenz2011social | abstract |
+| 13 | Hiring treated as an instrumented funnel/system | Practitioner (idea-level) | larson2019elegant | metadata only |
+| 14 | Translation of r = .42 into share of above-median hires (64%; 56% and 73% at the interval edges) | Illustrative computation | — | bivariate normal, 50% selection ratio; arithmetic in chapter |
+| 15 | All Northstar facts, loop costs (8.75 h per loop, 47 h per hire, 9.4 engineer-weeks a year) | Illustrative | — | fictional; recomputed |
+
+Book's own recommendations (labeled in the text): the two added
+requirements; the debrief protocol and diagram; the attribute-to-method table; the decision-rule
+table; the failure-mode catalogue; the playbook; post-hire tracking milestones.
+
+Research gap G10: narrowed, not closed. The 2023 open-access article states the revised
+structured-interview figure (.42) in its text; the 2022 paper's own table was not read, and the
+2023 article's table (an image) was not read.
+
+## Chapter 8 — Career Development, Promotion, and Compensation
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Career ladders are organizational infrastructure that make expectations explicit; leveling and performance processes are systems to design | Practitioner consensus | fournier2017manager; larson2019elegant | idea-level (metadata only) |
+| 2 | Reaching staff level usually takes sponsorship and visible work; staff roles take several archetypes | Expert opinion | larson2021staff; larson-staff-archetypes | idea-level (book); full text (archetypes page) |
+| 3 | Idiosyncratic rater effects accounted for over half of rating variance (62 and 53 percent); ratee performance 21 and 25 percent | Research finding, limits stated (developmental ratings of managers) | scullen2000latent | abstract |
+| 4 | Women and minorities received less salary growth than white men with equal performance scores in one organization | Research finding | castilla2008gender | abstract |
+| 5 | An explicitly meritocratic framing increased reward bias favoring men in three experiments (445 participants) | Research finding (experimental) | castilla2010paradox | abstract |
+| 6 | Women received lower "potential" ratings despite higher performance; potential explained about half the gender promotion gap; the ratings were poor forecasts | Research finding (one retail chain) | benson2026potential | abstract |
+| 7 | Firms weight current performance heavily in promotion (Peter Principle) | Research finding; cross-reference to Chapter 2 | benson2019promotions | abstract |
+| 8 | Introducing accountability and transparency into reward decisions reduced a reward gap in one firm (almost 9,000 employees) | Research finding (one firm) | castilla2015accounting | abstract |
+| 9 | Rating-scale design (6 versus 10 points) changed the gender gap in teaching evaluations | Research finding (university setting) | rivera2019scaling | abstract |
+| 10 | No verified study shows that calibration meetings as engineering organizations run them improve fairness | Gap stated in text; practice labeled practitioner consensus and book's recommendation | — | search in session found none |
+| 11 | EU Directive 2023/970: applicant pay information and pay-history ban (Art. 5), accessible pay criteria (Art. 6), right to information (Art. 7), gap reporting (Art. 9), joint pay assessment at 5 percent (Art. 10) | Standard (legal text; not outcome evidence; national transposition varies) | eu2023paytransparency | full text |
+| 12 | US state laws protecting coworker pay discussion were followed by wage declines of about 2 percent | Research finding (one form of transparency, US) | cullen2023equilibrium | abstract |
+| 13 | Useful criticism combines caring personally with challenging directly | Expert opinion | scott2017radical | idea-level |
+| 14 | All Northstar figures: promotion history, level mix, bands, salaries, quarter-3 cycle | Illustrative | — | fictional; recomputed in session |
+
+Book's own recommendations in the chapter (labeled in the text): the five ladder dimensions; removing
+years and tools; the scope-availability check; calibration countermeasures (packets, independent
+readers, decision rule, facilitator, budget not quota, outcome review); the five-part "not yet"; the
+three grounds for pay decisions and the pay decision diagram; equity review thresholds (0.90 to 1.10,
+10 percent peer gaps); separate funding for equity adjustments; publishing bands only after cleanup.
+
+## Chapter 9 — Performance Management and Underperformance
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Performance problems are often reduced to two reasons, capability and motivation | Expert opinion | grove1983high | idea-level (metadata-only) |
+| 2 | Diagnose a performance discrepancy before choosing a remedy; if the person could do it when it truly mattered, training is not the remedy | Expert opinion | mager1997analyzing | idea-level (metadata-only) |
+| 3 | Most performance deficits come from the environment (information, resources, incentives) rather than the individual | Expert opinion | gilbert1978human | idea-level (metadata-only) |
+| 4 | Four causes (system, skill, will, role fit), with confirming and disconfirming evidence | This book's synthesis | grove1983high; mager1997analyzing; gilbert1978human | synthesis |
+| 5 | Expectations should be checkable by a third party, with evidence and support named | This book's recommendation | — | reasoning |
+| 6 | Individual activity counts are not performance measures | This book's recommendation (owned by Ch 18, D1) | — | cross-reference |
+| 7 | Performance management has been reduced to formal administrative steps disconnected from daily expectations and guidance; attention should shift to manager-employee communication | Research (position paper) | pulakos2011broken | abstract |
+| 8 | Five properties of an improvement process with a real chance of success | This book's recommendation | pulakos2011broken (supporting) | reasoning |
+| 9 | Legal and HR boundaries (consistency, facts, protected circumstances, no pretext); involve HR before a formal plan | This book's recommendation, jurisdiction-neutral | — | reasoning |
+| 10 | A negative group member (withholding effort, negative affect, norm violation) triggers inequity perceptions, negative mood, and reduced trust, leading to defensive responses that damage cooperation | Research finding (review and model) | felps2006bad | abstract |
+| 11 | Avoiding hard messages out of kindness harms the person and the team | Expert opinion | scott2017radical | idea-level (metadata-only) |
+| 12 | Idiosyncratic rater effects accounted for 62% and 53% of rating variance; ratee performance 21% and 25% (developmental ratings of managers, two samples) | Research finding | scullen2000latent | abstract |
+| 13 | A single rating is weak evidence; never start or end a process on a rating alone | This book's recommendation | scullen2000latent (extending) | reasoning |
+| 14 | Simulated forced distribution with firing noticeably improves workforce potential, mostly in the first several years, depending on percentage fired and voluntary turnover | Research finding (simulation) | scullen2005forced | abstract |
+| 15 | Permanent forced ranking is not advisable for engineering; at most a one-time correction | This book's recommendation | scullen2005forced (interpreting) | reasoning; cooperation effects not measured in the source |
+| 16 | Bram Verhoeven case, costs and time reconstruction | Illustrative | Northstar (fictional) | invented; see research/northstar-additions/ch09.md |
+
+## Chapter 10 — Motivation, Retention, and Managing Senior Engineers
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | A broad meta-analysis of turnover antecedents found moderators of antecedent-turnover relationships | Research finding | griffeth2000meta | abstract; no effect sizes reported |
+| 2 | An updated meta-analysis found many antecedent-turnover relationships context-dependent | Research finding | rubenstein2018surveying | abstract |
+| 3 | Imported "top reasons" lists are a weak guide; measure your own organization | This book's recommendation | griffeth2000meta; rubenstein2018surveying | inference from rows 1-2 |
+| 4 | Voluntary turnover follows several distinct decision paths involving external events | Research (theory) | lee1994unfolding | abstract |
+| 5 | Job embeddedness (links, fit, sacrifice) predicts intent to leave and turnover beyond satisfaction, commitment, alternatives, and search | Research finding | mitchell2001why | abstract; non-software samples |
+| 6 | Turnover research has turned toward the psychology of staying and collective turnover | Research (review) | hom2017hundred | abstract |
+| 7 | Competence, autonomy, and relatedness needs support motivation and well-being; choice raises and imposed goals and deadlines lower intrinsic motivation | Research finding (review by theory's originators) | ryan2000self | full text |
+| 8 | Contingent tangible rewards undermine intrinsic motivation | Contested; stated as such | ryan2000self | full text; the paper names the opposing view |
+| 9 | Software engineers' motivation varies by characteristics, personality, and career stage | Research finding (systematic review) | beecham2008motivation | abstract (repository report version) |
+| 10 | People-management skill strongly and negatively related to attrition at one tech firm | Research finding | hoffman2021people | abstract; cross-reference to Chapter 1 |
+| 11 | Developer experience as friction in daily work, measured by pairing feedback with system data | Research (framework), used as Chapter 18 uses it | noda2023devex | abstract, via Chapter 18 |
+| 12 | Stay interviews as a structured way to collect embeddedness data | Practitioner consensus; no cited test of effect | none | stated as a gap in the chapter |
+| 13 | Split of ownership between expert (judgment), manager (decision rights, constraints, consequences), and joint record | This book's recommendation | marquet2013turn (idea), larson2021staff (idea) | idea-level |
+| 14 | Staff archetypes: tech lead, architect, solver, right hand | Practitioner (expert opinion) | larson-staff-archetypes | full text |
+| 15 | Leaders differ in how much of others' capability they draw out (multipliers, diminishers) | Expert opinion | wiseman2010multipliers | idea-level |
+| 16 | Few studies examine counter-offers; they are discretionary and can be inequitable; women and racially minoritized faculty less likely to receive them | Research finding (one study, faculty) | whitelewis2024counteroffers | abstract |
+| 17 | Popular counter-offer attrition statistics are from recruiting firms with undisclosed methods and are not repeated | Research gap | none | search in session found no peer-reviewed source |
+| 18 | Counter-offer decision rules (peer equity check, pay fixes only pay, de-risk knowledge) | This book's recommendation | whitelewis2024counteroffers (equity warning) | reasoning |
+| 19 | All Northstar exit data, stay interviews, Tomasz Wierzbicki's offer, and cost figures | Illustrative | Northstar canon and research/northstar-additions/ch10.md | invented; assumptions stated |
+
+## Chapter 11 — High Performance: Trust, Psychological Safety, and Accountability
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Psychological safety is people's perception of the consequences of taking interpersonal risks in a context | Research (review definition) | edmondson2014psychological | abstract |
+| 2 | Research has linked psychological safety to voice, teamwork, team learning, and organizational learning | Research finding (review) | edmondson2014psychological | abstract |
+| 3 | In 51 teams in one manufacturing company, safety was associated with learning behavior, which mediated its association with performance; team efficacy was not associated once safety was controlled | Research finding | edmondson1999psychological | abstract (Crossref) |
+| 4 | A meta-analysis pooled 136 samples (over 22,000 individuals, nearly 5,000 groups) and tested safety's relation to task performance beyond related constructs | Research finding (scope only; no effect sizes claimed) | frazier2017psychological | abstract |
+| 5 | Project Aristotle studied 180 teams and lists five dynamics in order, psychological safety first and dependability second | Industry research | rework-team-effectiveness | full text (bibliography claims) |
+| 6 | Effectiveness in Aristotle combined executive, team-leader and team-member ratings with sales performance; how a team worked together mattered more than who was on it | Industry research | rework-team-effectiveness | full text, page re-read 2026-11-20; not yet in the bibliography entry's claims (maintainer: add or cut) |
+| 7 | In 38 Swedish agile teams (217 respondents), safety and norm clarity both predicted self-assessed performance and satisfaction; norm clarity stronger (about 30% and 71%) | Research finding | lenberg2018psychological | full text (arXiv preprint) |
+| 8 | In 161 software teams (1,118 participants), safety was directly associated with better teamwork and less conflict | Research finding | verwijs2024double | abstract |
+| 9 | Westrum typology by treatment of messengers; DORA states high-trust, information-flow cultures predict delivery and organizational performance; DORA reports its 2019 survey found safety predictive of delivery, organizational performance, productivity | Industry research | dora-cap-generative-culture; forsgren2018accelerate | full text (guide); idea-level (book) |
+| 10 | Safety and performance standards are separate dimensions; high performance needs both | Practitioner (expert opinion) | edmondson2018fearless | idea-level (metadata-only) |
+| 11 | Dysfunctions pyramid: absence of trust at the base, avoidance of accountability and inattention to results above | Expert opinion | lencioni2002five | idea-level (metadata-only) |
+| 12 | Just culture balances safety and accountability; engineers are not "off the hook" | Practitioner | allspaw2012blameless | full text |
+| 13 | No controlled study showing that raising safety causes better software delivery outcomes was found | Research gap | — | search in session; see report |
+| 14 | Three tests of high performance (outcomes, sustainability, learning); four accountability elements; four team states and the diagnosis path | This book's recommendation | — | synthesis |
+| 15 | Northstar comparison of Payments and Integrations and Orders; near-miss log; operations review; 630 recurrence minutes | Illustrative | incidents-last-quarter.csv; research/northstar-additions/ch11.md | computed from canon data plus chapter additions |
+
+## Chapter 12 — Team Charters, Working Agreements, and Knowledge Sharing
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | In 32 MBA student teams in a simulation, high-quality performance strategies predicted performance, and charter quality interacted with strategy quality; teams high on both sustained the highest performance | Research finding | mathieu2009charters | abstract |
+| 2 | Google's Project Aristotle lists structure and clarity among five dynamics of effective teams, after psychological safety and dependability | Industry research | rework-team-effectiveness | full text |
+| 3 | Leaders should create and repeat clarity about a few basic questions (organizational health) | Expert opinion | lencioni2012advantage | idea-level |
+| 4 | Teams should present a deliberate team API and choose interaction modes with neighbors | Expert opinion (practitioner) | skelton2019team | idea-level |
+| 5 | Team psychological safety is associated with learning behavior, which mediates its link to performance (51 manufacturing teams) | Research finding | edmondson1999psychological | abstract |
+| 6 | Truck factor defined as the minimum number of departures that put a project in serious trouble; about 65 percent of 133 GitHub projects had an estimated truck factor of 2 or less; surveyed developers mostly agreed with the identified main authors | Research finding | avelino2016truck | abstract |
+| 7 | Projects are exposed to turnover losses several times the expected loss; simple truck-factor estimates exaggerate potential loss; successors reduce expected loss by up to 15 percent | Research finding | rigby2016turnover | abstract |
+| 8 | Code review increased the number of distinct files a developer knew about by 66 to 150 percent, depending on the project | Research finding | rigby2013convergent | abstract |
+| 9 | Single points of failure (bus factor) are a main obstacle to learning; written and one-to-one knowledge are complements; doing a task for someone keeps knowledge in one person | Documented practice | chen2020knowledge | full chapter |
+| 10 | Documentation treated like code (owners, source control, review, deprecation), written for a named audience, one type per document | Documented practice | manshreck2020documentation | full chapter |
+| 11 | Working agreements that work are observable, owned by the team, and checked at a fixed retrospective | This book's recommendation | — | author synthesis |
+| 12 | Remove, spread, then write down, in order of durability; the truck factor is a screen, not a measure | This book's recommendation | extends avelino2016truck, rigby2016turnover, rigby2013convergent | reasoning shown in chapter |
+| 13 | Billing ledger knowledge map, pairing cost, Data and Analytics charter, and case-study details | Illustrative | — | fictional; recorded in research/northstar-additions/ch12.md; aggregates checked against baseline-data.md and the CSV files |
+
+Book's own recommendations in the chapter: the "named moment of use" test for documents; the
+documentation practice table; the single-person-area decision diagram and mechanism table; the
+playbook; the knowledge-risk register.
+
+## Chapter 13 — Decision-Making in Teams
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Reversible decisions ("two-way doors") deserve a lightweight process; most decisions can be made with about 70 percent of desired information | Documented practice | bezos2016letter | full text |
+| 2 | Disagree and commit, quick correction of bad decisions, and early escalation of misalignment | Documented practice | bezos2016letter | full text |
+| 3 | Effective executives make few, fundamental decisions and build action into the decision | Practitioner | drucker1967effective | idea-level |
+| 4 | DACI roles: one Driver, one Approver, Contributors with voice but no vote, Informed; record the outcome | Practitioner | atlassian-daci | full text |
+| 5 | RAPID roles; Agree assigned sparingly; ideally one decider | Practitioner | bain-rapid | full text |
+| 6 | Performance depends on making the right decisions quickly and executing them; clear decision roles as remedy | Practitioner | rogers2006whohasd | official summary |
+| 7 | No evidence found that role models (RACI, DACI, RAPID) improve outcomes | This book's assessment | atlassian-daci; bain-rapid | absence noted |
+| 8 | Decision records: context, decision, status, consequences; superseded not deleted; rationale prevents blind acceptance or reversal | Practitioner | nygard2011adr | full text |
+| 9 | Discussion favors shared and preference-consistent information; groups chose the initial plurality option over the best one | Research finding | stasser1985pooling | abstract |
+| 10 | Across 65 studies, groups mention common information more, fail more often when unique information must be pooled; medium has no effect | Research finding | lu2012hiddenprofiles | abstract |
+| 11 | Team psychological safety associated with learning behavior | Research finding | edmondson1999psychological | abstract |
+| 12 | Abilene paradox: agreement on a course members privately reject | Expert opinion | harvey1974abilene | idea-level |
+| 13 | Awareness of biases has done little to improve decisions; executives rely on team proposals; checklist for reviewing a recommendation | Practitioner (authors include researchers) | kahneman2011bigdecision | official summary; checklist idea-level only |
+| 14 | Free discussion, clear decision, full support | Practitioner | grove1983high | idea-level |
+| 15 | Commitment depends on having been heard | Practitioner | lencioni2002five | idea-level |
+| 16 | Moving decisions to the people with the information | Practitioner | marquet2013turn | idea-level |
+| 17 | Groupthink as a complete model is weakly supported | Not asserted; gap admitted in text | none | review literature verified only at metadata level (Esser 1998) |
+| 18 | Four-part decision model, method selector, decision framework table, record fields | This book's recommendation | none | synthesis |
+| 19 | Decision log example (36 decisions) and core/permissions change counts | Illustrative | Northstar additions ch13 | invented |
+
+Research gap: abstracts for Esser (1998), Turner and Pratkanis (1998), and Baron (2005) on groupthink were
+not available from legitimate open sources (OpenAlex records have no abstract; ScienceDirect returned 403),
+so the chapter does not cite the groupthink critique literature.
+
+## Chapter 14 — Distributed Teams, Team Health, and Diagnosing Dysfunction
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Distributed work items took about 2.5 times as long as similar colocated ones; the number of people involved was strongly related to calendar time; replicated at a second organization | Research finding | herbsleb2003empirical | abstract |
+| 2 | Firm-wide remote work at one large technology company made collaboration networks more static and siloed with fewer bridges; synchronous communication fell and asynchronous rose | Research finding, one firm, pandemic conditions | yang2022remote | abstract |
+| 3 | During pandemic work from home at one IT services firm, hours rose while output did not; coordination time rose while uninterrupted work, coaching, and supervisor one-on-ones fell | Research finding, one firm, pandemic conditions; no percentage printed | gibbs2023wfh | abstract of the IZA working paper; published version metadata only |
+| 4 | In a randomized trial (1,612 employees, two home days a week) quits fell by about a third with no effect on performance grades, promotions, or engineers' lines of code; managers' expectations moved from negative to slightly positive | Research finding, one firm | bloom2024hybrid | abstract (Europe PMC record) |
+| 5 | Proximity to teammates increased coding feedback, most for newer and younger engineers; experienced engineers wrote less code | Research finding, one firm, working paper | emanuel2023proximity | abstract (NBER page) |
+| 6 | No study shows one working arrangement is best for software teams; hybrid with anchor days is a low-risk default; full distance needs deliberate compensations; juniors gain most from time together (book's position on D5) | This book's recommendation | rows 1-5 | synthesis |
+| 7 | National cultures differ in norms for negative feedback, disagreement, and decisions, and misreading them damages trust | Expert opinion | meyer2014culture | idea-level |
+| 8 | The Team Diagnostic Survey assesses how well a team is structured, supported, and led, plus processes and members' reactions; psychometrics supported on 321 teams | Research finding (instrument validation) | wageman2005team | abstract (Crossref) |
+| 9 | The squad health check is a facilitated self-assessment of about ten indicators in traffic-light colors with a trend; works only in high trust; teams should not be compared; support tool, not judgment tool | Documented practice | kniberg2014squad | full text |
+| 10 | Survey scores became distorted once tied to reviews and manager pressure | Practitioner (opinion piece with an anecdote) | orosz2023measuring | full text |
+| 11 | Dysfunctions stack from absent trust to inattention to results; the visible symptom sits on top of a lower cause | Expert opinion (business fable) | lencioni2002five | idea-level |
+| 12 | Developer productivity cannot be captured by one metric (background for not reducing health to a score; referenced via Chapter 18, not cited directly) | Industry/scholarly | forsgren2021space | abstract; not cited in chapter 14 |
+| 13 | Channel-by-channel compensations, health-check rules, the four-layer diagnosis order, the remedy decision diagram, the four-hour overlap heuristic | This book's recommendation | — | reasoning, drawing on rows 1-11 |
+| 14 | All Northstar figures: locations, travel cost model ($3,000 per trip, $114,000 a year), departure cost (~$76,000), Customer Experience health check results | Illustrative | — | fictional; recomputed in session; locations recorded in research/northstar-additions/ch14.md |
+
+Book's own recommendations in the chapter (labeled in the text): the D5 position, the compensation
+table, the six health-check rules, the layer order (structure, leadership, relationships, individuals),
+the decision table for arrangements, and the playbook.

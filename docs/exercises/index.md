@@ -11,6 +11,16 @@ Exercises live at the end of each chapter, in three levels: **Foundational** (F)
 | 2. From Individual Contributor to Leader | [Exercises](../parts/01-foundations/02-from-individual-contributor-to-leader.md#exercises) | [Solutions](../solutions/ch02-solutions.md) |
 | 3. Managerial Leverage and Systems Thinking | [Exercises](../parts/01-foundations/03-managerial-leverage-and-systems-thinking.md#exercises) | [Solutions](../solutions/ch03-solutions.md) |
 | 4. The Leadership Ladder: Senior Engineer to CTO | [Exercises](../parts/01-foundations/04-the-leadership-ladder.md#exercises) | [Solutions](../solutions/ch04-solutions.md) |
+| 5. One-on-Ones, Coaching, and Mentorship | [Exercises](../parts/02-people-management/05-one-on-ones-coaching-and-mentorship.md#exercises) | [Solutions](../solutions/ch05-solutions.md) |
+| 6. Feedback, Conflict, and Difficult Conversations | [Exercises](../parts/02-people-management/06-feedback-conflict-and-difficult-conversations.md#exercises) | [Solutions](../solutions/ch06-solutions.md) |
+| 7. Hiring and Structured Interviews | [Exercises](../parts/02-people-management/07-hiring-and-structured-interviews.md#exercises) | [Solutions](../solutions/ch07-solutions.md) |
+| 8. Career Development, Promotion, and Compensation | [Exercises](../parts/02-people-management/08-career-development-promotion-and-compensation.md#exercises) | [Solutions](../solutions/ch08-solutions.md) |
+| 9. Performance Management and Underperformance | [Exercises](../parts/02-people-management/09-performance-management-and-underperformance.md#exercises) | [Solutions](../solutions/ch09-solutions.md) |
+| 10. Motivation, Retention, and Managing Senior Engineers | [Exercises](../parts/02-people-management/10-motivation-retention-and-senior-engineers.md#exercises) | [Solutions](../solutions/ch10-solutions.md) |
+| 11. High Performance: Trust, Psychological Safety, and Accountability | [Exercises](../parts/03-high-performing-teams/11-high-performance-trust-safety-and-accountability.md#exercises) | [Solutions](../solutions/ch11-solutions.md) |
+| 12. Team Charters, Working Agreements, and Knowledge Sharing | [Exercises](../parts/03-high-performing-teams/12-team-charters-working-agreements-and-knowledge-sharing.md#exercises) | [Solutions](../solutions/ch12-solutions.md) |
+| 13. Decision-Making in Teams | [Exercises](../parts/03-high-performing-teams/13-decision-making-in-teams.md#exercises) | [Solutions](../solutions/ch13-solutions.md) |
+| 14. Distributed Teams, Team Health, and Diagnosing Dysfunction | [Exercises](../parts/03-high-performing-teams/14-distributed-teams-team-health-and-dysfunction.md#exercises) | [Solutions](../solutions/ch14-solutions.md) |
 | 15. Planning, Prioritization, and Delivery Methods | [Exercises](../parts/04-execution/15-planning-prioritization-and-delivery-methods.md#exercises) | [Solutions](../solutions/ch15-solutions.md) |
 | 16. Flow: Lead Time, Dependencies, and Unplanned Work | [Exercises](../parts/04-execution/16-flow-lead-time-dependencies-and-unplanned-work.md#exercises) | [Solutions](../solutions/ch16-solutions.md) |
 | 17. Predictability and Managing Uncertainty | [Exercises](../parts/04-execution/17-predictability-and-managing-uncertainty.md#exercises) | [Solutions](../solutions/ch17-solutions.md) |

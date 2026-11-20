@@ -6,9 +6,9 @@ reviewed by a person, and the known limitations a reader or reviewer should be a
 ## Automated validation
 
 Run `python tools/validate_book.py --build`. Last result recorded: **passed**, 2026-11-20, with
-chapters 1–4 and 15–27 live (chapters, navigation, references, exercises, generated pages,
+chapters 1–27 live (chapters, navigation, references, exercises, generated pages,
 single-file edition, `mkdocs build --strict`). 1 warning: the one unverified bibliography entry
-(`kolny2023primevideo`), which no chapter cites. Mermaid: 48 of 48 diagrams render with mermaid-cli 11.
+(`kolny2023primevideo`), which no chapter cites. Mermaid: 75 of 75 diagrams render with mermaid-cli 11.
 All diagrams of chapters 1–4 and 15–18 measured in a headless browser at 390 px; one squeezed diagram
 (chapter 2) fixed. `ruff check tools`: clean. Browser check of all nine Part V chapters at
 390 px: no horizontal page overflow; six squeezed left-to-right diagrams redrawn top-to-bottom, and a
@@ -33,15 +33,30 @@ invent first-quarter events, read sources only from legitimate hosts). Authors c
 shared facts (renewal dates, Rafael Duarte, a source sample size of 131 versus 214 firms); the
 maintainer fixed the renewal dates as canon (accounting integration week 19, bulk ordering week 26)
 and merged 44 sources, one duplicate source consolidated. An independent reviewer reported 20
-findings (two numeric errors in Priya Raman's time and one-on-one arithmetic, one introduced by the
-maintainer's own canon merge; staff mandates contradicting chapter 27; two unsupported numbers
+findings (a numeric inconsistency in Priya Raman's time split, introduced by the maintainer's own canon
+merge; a claimed one-on-one arithmetic error that was itself wrong, applied, and reverted after a
+wave 3 author caught it (30 minutes every two weeks for 14 people is 3.5 hours a week); staff mandates contradicting chapter 27; two unsupported numbers
 attributed to a metadata-only source; repetition of manager-effect studies across chapters 1, 2,
 and 4). All 20 fixed.
+
+## Wave 3 (chapters 5–14), 2026-11-20
+
+Ten authors in parallel. New brief rules: each chapter assigned one Northstar team; Chapter 14 alone
+decides locations, answering other authors on request. Authors resolved most shared facts directly
+(names, Customer Experience leads, review cadence, who the script expert is). The maintainer resolved
+a name collision (two authors used the same new name), a departures-by-team conflict, Tomasz
+Wierzbicki's level, and the flat-headcount rule for promotions to manager. 63 sources merged (242 in
+total), one duplicate consolidated. A wave 3 author caught a wrong arithmetic "fix" from the wave 2
+review (one-on-one hours in chapter 2); it was reverted. The wave 3 reviewer reported 16 findings
+(Bram Verhoeven's timeline placed in quarter 1, two arithmetic errors verified by the maintainer before
+fixing, canon facts not merged, repetition of Edmondson, Lencioni, and Scullen et al.); all fixed.
+Chapters 7, 9, and 10 end 3 to 15 words over the 5,000-word guide.
 
 ## Human review status
 
 | Item | Status | Self-review | Human review |
 |---|---|---|---|
+| Chapters 5–14 and solutions | review | Author self-review; independent AI review (16 findings, all fixed) | **Not done** |
 | Chapters 1–4 and 15–18 and solutions | review | Author self-review; independent AI review (20 findings, all fixed) | **Not done** |
 | Chapters 19–26 and solutions | review | Author self-review against the checklist; independent AI cross-chapter review; fixes applied | **Not done** |
 | Chapter 27 and solutions | review | As above; trimmed to remove re-teaching of chapters 18–25 | **Not done** |

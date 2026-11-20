@@ -80,7 +80,10 @@ bibliography found that firm-wide remote work at a large technology company was 
 more siloed collaboration networks and more asynchronous communication (`yang2022remote`; confirm
 exact wording from the abstract before writing Chapter 14).
 
-**Book's position.** Not yet taken. **Owner:** Chapter 14.
+**Book's position (taken in Chapter 14).** No study shows that one working arrangement is best for
+software teams. Hybrid with anchor days is a low-risk default; fully remote work needs deliberate
+compensations (bridges between groups, structured feedback); newer engineers gain most from time
+together. Labeled as this book's recommendation. **Owner:** Chapter 14.
 
 ## D6. Are blameless reviews effective?
 
@@ -103,3 +106,14 @@ evidence gap plainly. **Owner:** Chapter 25.
 technical direction; teams decide within guardrails. Practitioner sources differ by company shape.
 
 **Book's position.** Not yet taken. **Owner:** Chapter 28.
+
+## D8. How much do structured interviews and cognitive tests predict job performance?
+
+**Positions.** The long-cited estimates of Schmidt and Hunter (`schmidt1998validity`) placed general
+cognitive ability at the top of selection methods. Sackett et al. (`sackett2022revisiting`,
+`sackett2023revisiting`) argue those estimates were inflated by range-restriction corrections and
+revise several of them downward, leaving structured interviews among the most valid methods.
+
+**Book's position (Chapter 7).** Use the revised estimates, state them with their uncertainty, and
+prefer structured interviews and job-related work samples; do not present any single number as settled.
+Gap G10 records what was not read.

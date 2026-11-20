@@ -1479,13 +1479,19 @@
   - url
   verified_via:
   - https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness
-  verified_on: '2026-11-18'
+  verified_on: '2026-11-20'
   claims:
   - text: The guide reports that Google's Project Aristotle studied 180 teams (115 engineering project
       teams and 65 sales pods).
     basis: full-text
   - text: 'It lists five dynamics of effective teams in this order: psychological safety, dependability,
       structure and clarity, meaning, impact.'
+    basis: full-text
+  - text: The guide states that Google's team effectiveness research combined executive, team-leader,
+      and team-member ratings with sales performance against quarterly quota to assess effectiveness.
+    basis: full-text
+  - text: The guide reports that who is on a team mattered less than how team members interact, structure
+      their work, and view their contributions.
     basis: full-text
   caveats: Company self-report, not peer-reviewed; methods are described only at guide level. The page
     carries an editor's note that it is preserved as a record of the findings and that some references
@@ -6251,3 +6257,2263 @@
     noda2023devex, whose full text could not be read (ACM 403; an author-hosted PDF on michaelagreiler.com
     returned 404). Undated.
   access_notes: Fetched with WebFetch on 2026-11-20.
+- id: rogelberg2024unlocking
+  type: magazine-article
+  title: Unlocking the Potential of 1:1 Meetings
+  authors:
+  - Steven G. Rogelberg
+  year: 2024
+  venue: Next Big Idea Club magazine (author's summary of his book Glad We Met, Oxford University Press,
+    2024)
+  url: https://nextbigideaclub.com/magazine/unlocking-potential-11-meetings/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://nextbigideaclub.com/magazine/unlocking-potential-11-meetings/
+  verified_on: '2026-11-19'
+  claims:
+  - text: The author, an organizational scientist, reports from his research that nearly half of employees
+      found their one-on-ones lacking in substance and suboptimal.
+    basis: full-text
+  - text: He reports that the strongest predictor of a one-on-one's value is the direct report's active
+      participation, with the report speaking for roughly half to nine tenths of the time.
+    basis: full-text
+  - text: He reports that having a plan for what will be discussed strongly predicts effectiveness, and
+      that both managers and direct reports rated meetings highest when the direct report created the
+      agenda.
+    basis: full-text
+  - text: He reports that managers' self-ratings of their one-on-one skills appear inflated.
+    basis: full-text
+  - text: He states that the evidence is most aligned with a weekly or every-other-week cadence.
+    basis: full-text
+  caveats: A researcher's popular summary of his own survey work, published January 9, 2024. The underlying
+    studies, samples, and methods are not described on the page and were not read; the book itself was
+    not read. Treat as expert opinion informed by unreviewed survey data. A 2022 Harvard Business Review
+    article by the same author (hbr.org/2022/11/make-the-most-of-your-one-on-one-meetings) was fetched
+    but its findings were behind the paywall and are not used.
+  access_notes: Page fetched in full. Oxford University Press product page for Glad We Met (ISBN 9780197641873)
+    returned an empty page; book details are from the author's text and a bookseller listing, not verified.
+- id: theeboom2014coaching
+  type: journal-article
+  title: Does coaching work? A meta-analysis on the effects of coaching on individual level outcomes in
+    an organizational context
+  authors:
+  - Tim Theeboom
+  - Bianca Beersma
+  - Annelies E. M. van Vianen
+  year: 2014
+  venue: The Journal of Positive Psychology, vol. 9, no. 1, pp. 1-18
+  doi: 10.1080/17439760.2013.837499
+  url: https://research.vu.nl/en/publications/does-coaching-work-a-meta-analysis-on-the-effects-of-coaching-on-/
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://research.vu.nl/en/publications/does-coaching-work-a-meta-analysis-on-the-effects-of-coaching-on-/
+  - https://api.crossref.org/works/10.1080/17439760.2013.837499
+  verified_on: '2026-11-19'
+  claims:
+  - text: The meta-analysis examined five individual-level outcome categories of coaching in organizations,
+      performance and skills, well-being, coping, work attitudes, and goal-directed self-regulation.
+    basis: abstract
+  - text: Coaching had significant positive effects on all five, with effect sizes from g = 0.43 (coping)
+      to g = 0.74 (goal-directed self-regulation).
+    basis: abstract
+  - text: The authors note that coaching research had been limited and lacked a solid theoretical basis.
+    basis: abstract
+  caveats: Number of included studies and the share involving professional coaches versus managers were
+    not read (secondary sites say 18 studies; not confirmed). Published online 2013, issue 2014.
+  access_notes: Publisher page (tandfonline.com) returned 403; abstract read on the Vrije Universiteit
+    Amsterdam research portal.
+- id: jones2016coaching
+  type: journal-article
+  title: 'The effectiveness of workplace coaching: A meta-analysis of learning and performance outcomes
+    from coaching'
+  authors:
+  - Rebecca J. Jones
+  - Stephen A. Woods
+  - Yves R. F. Guillaume
+  year: 2016
+  venue: Journal of Occupational and Organizational Psychology, vol. 89, no. 2, pp. 249-277
+  doi: 10.1111/joop.12119
+  url: https://doi.org/10.1111/joop.12119
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://api.crossref.org/works/10.1111/joop.12119
+  verified_on: '2026-11-19'
+  claims:
+  - text: The meta-analysis (k = 17) covers workplace coaching by internal or external coaches and explicitly
+      excludes manager-subordinate and peer coaching.
+    basis: abstract
+  - text: Coaching had positive effects on organizational outcomes overall (delta = 0.36), with skill-based
+      0.28, affective 0.51, and individual-level results 1.24.
+    basis: abstract
+  - text: Effects were stronger for internal than external coaches, and smaller when multisource feedback
+      was used; format (face-to-face versus blended) and duration did not moderate the effect.
+    basis: abstract
+  caveats: Small number of studies (k = 17). Excludes coaching by a person's own manager, so it does not
+    directly speak to managerial coaching. Published online April 2015 per Crossref; volume 89 issue 2
+    is the 2016 issue (year taken from the volume, not confirmed on a publisher page, so not in verified_fields).
+  access_notes: Wiley pages returned 403; abstract read from the Crossref record supplied by the publisher.
+- id: allen2004mentoring
+  type: journal-article
+  title: 'Career Benefits Associated With Mentoring for Proteges: A Meta-Analysis'
+  authors:
+  - Tammy D. Allen
+  - Lillian T. Eby
+  - Mark L. Poteet
+  - Elizabeth Lentz
+  - Lizzette Lima
+  year: 2004
+  venue: Journal of Applied Psychology, vol. 89, no. 1, pp. 127-136
+  doi: 10.1037/0021-9010.89.1.127
+  url: https://doi.org/10.1037/0021-9010.89.1.127
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0021-9010.89.1.127
+  - https://api.openalex.org/works/doi:10.1037/0021-9010.89.1.127
+  verified_on: '2026-11-19'
+  claims:
+  - text: The meta-analysis examined objective (for example compensation) and subjective (for example
+      career satisfaction) career outcomes of mentoring for proteges.
+    basis: abstract
+  - text: Findings were generally supportive of benefits, but effect sizes for objective outcomes were
+      small.
+    basis: abstract
+  - text: Outcomes differed somewhat in how strongly they related to the type of mentoring provided, career
+      or psychosocial.
+    basis: abstract
+  caveats: Correlational primary studies; mentored people may differ from non-mentored ones before mentoring
+    starts. Abstract read through OpenAlex (abstract index), not the publisher page.
+  access_notes: APA PsycNet not fetched; Crossref confirmed bibliographic fields, OpenAlex supplied the
+    abstract.
+- id: eby2008mentoring
+  type: journal-article
+  title: Does mentoring matter? A multidisciplinary meta-analysis comparing mentored and non-mentored
+    individuals
+  authors:
+  - Lillian T. Eby
+  - Tammy D. Allen
+  - Sarah C. Evans
+  - Thomas Ng
+  - David L. DuBois
+  year: 2008
+  venue: Journal of Vocational Behavior, vol. 72, no. 2, pp. 254-267
+  doi: 10.1016/j.jvb.2007.04.005
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2352144/
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC2352144/
+  - https://api.crossref.org/works/10.1016/j.jvb.2007.04.005
+  verified_on: '2026-11-19'
+  claims:
+  - text: Across youth, academic, and workplace mentoring, mentoring was associated with a wide range
+      of favorable behavioral, attitudinal, health-related, relational, motivational, and career outcomes,
+      but the effects were generally small.
+    basis: abstract
+  - text: Effects were larger for academic and workplace mentoring than for youth mentoring.
+    basis: abstract
+  caveats: Associations, not causal estimates. Only the abstract of the PMC author manuscript was read.
+  access_notes: Author manuscript in PubMed Central (PMCID PMC2352144).
+- id: ibarra2010promotions
+  type: magazine-article
+  title: Why Men Still Get More Promotions Than Women
+  authors:
+  - Herminia Ibarra
+  - Nancy M. Carter
+  - Christine Silva
+  year: 2010
+  venue: Harvard Business Review, September 2010
+  url: https://herminiaibarra.com/why-men-still-get-more-promotions-than-women/
+  evidence_class: industry-research
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://herminiaibarra.com/why-men-still-get-more-promotions-than-women/
+  - https://hbr.org/2010/09/why-men-still-get-more-promotions-than-women
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article distinguishes sponsorship, in which the mentor goes beyond feedback and advice and
+      uses their influence with senior executives on the protege's behalf, from ordinary mentoring; men
+      and women both reported getting career advice from mentors, but it was mostly men who described
+      being sponsored.
+    basis: full-text
+  - text: The article reports that the more senior the mentor, the faster the mentee's advancement.
+    basis: full-text
+  - text: It draws on a 2008 Catalyst survey of more than 4,000 high-potential MBA graduates, a 2010 follow-up
+      survey of the same population, and interviews with 40 high-potential men and women at one multinational.
+    basis: full-text
+  - text: The follow-up found that the men had received 15 percent more promotions, and that mentoring
+      relationships were not leading to as many promotions for women as for men.
+    basis: full-text
+  - text: The authors conclude that high-potential women were overmentored and undersponsored relative
+      to their male peers.
+    basis: full-text
+  caveats: Survey and interview research reported in a practitioner magazine, not peer-reviewed; MBA graduates,
+    not engineers; 2008 to 2010 data. The mechanism (sponsorship) is the authors' interpretation.
+  access_notes: Full text read on the first author's own website, which republishes the article and links
+    the HBR original; the HBR page shows only a summary.
+- id: kluger1996effects
+  type: journal-article
+  title: 'The effects of feedback interventions on performance: A historical review, a meta-analysis,
+    and a preliminary feedback intervention theory'
+  authors:
+  - Avraham N. Kluger
+  - Angelo DeNisi
+  year: 1996
+  venue: Psychological Bulletin, vol. 119, no. 2, pp. 254-284
+  doi: 10.1037/0033-2909.119.2.254
+  url: https://doi.org/10.1037/0033-2909.119.2.254
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0033-2909.119.2.254
+  - https://pluto.huji.ac.il/~mskluger/files/Download/Kluger%20&%20%20DeNisi%20abstract.doc
+  - https://api.openalex.org/works/doi:10.1037/0033-2909.119.2.254
+  verified_on: '2026-11-19'
+  claims:
+  - text: A meta-analysis of 607 effect sizes (23,663 observations) found that feedback interventions
+      improved performance on average (d = .41) but that over one third of them decreased performance.
+    basis: abstract
+  - text: The authors report that the decreases could not be explained by sampling error, feedback sign,
+      or existing theories.
+    basis: abstract
+  - text: Feedback intervention theory proposes that feedback shifts attention among task learning, task
+      motivation, and meta-task (including self-related) processes, and the results suggest effectiveness
+      decreases as attention moves toward the self and away from the task.
+    basis: abstract
+  - text: The effects are further moderated by task characteristics that the authors describe as still
+      poorly understood.
+    basis: abstract
+  caveats: Pools heterogeneous studies published up to the mid-1990s; study settings not read; not specific
+    to managers or software teams. Abstract read from Kluger's university-hosted abstract file; APA PsycNet
+    page did not render.
+  access_notes: Crossref record has no abstract. The abstract was read from the first author's institution-hosted
+    file (pluto.huji.ac.il) and matched the OpenAlex record.
+- id: dedreu2003task
+  type: journal-article
+  title: 'Task versus relationship conflict, team performance, and team member satisfaction: A meta-analysis'
+  authors:
+  - Carsten K. W. De Dreu
+  - Laurie R. Weingart
+  year: 2003
+  venue: Journal of Applied Psychology, vol. 88, no. 4, pp. 741-749
+  doi: 10.1037/0021-9010.88.4.741
+  url: https://doi.org/10.1037/0021-9010.88.4.741
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0021-9010.88.4.741
+  - https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=12940412&rettype=abstract&retmode=text
+  verified_on: '2026-11-19'
+  claims:
+  - text: Relationship conflict showed strong negative correlations with team performance and team member
+      satisfaction.
+    basis: abstract
+  - text: Contrary to the prediction in prior theory and textbooks, task conflict also showed strong negative
+      correlations with team performance and satisfaction.
+    basis: abstract
+  - text: Conflict had stronger negative relations with performance in highly complex tasks (decision
+      making, project, mixed) than in production tasks.
+    basis: abstract
+  - text: Task conflict was less negatively related to performance when task and relationship conflict
+      were weakly correlated.
+    basis: abstract
+  caveats: Correlational meta-analysis; later partly contradicted by de Wit, Greer, and Jehn (2012). Not
+    specific to software teams.
+- id: dewit2012paradox
+  type: journal-article
+  title: 'The paradox of intragroup conflict: A meta-analysis'
+  authors:
+  - Frank R. C. de Wit
+  - Lindred L. Greer
+  - Karen A. Jehn
+  year: 2012
+  venue: Journal of Applied Psychology, vol. 97, no. 2, pp. 360-390
+  doi: 10.1037/a0024844
+  url: https://doi.org/10.1037/a0024844
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/a0024844
+  - https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=21842974&rettype=abstract&retmode=text
+  verified_on: '2026-11-19'
+  claims:
+  - text: Meta-analysis of 116 empirical studies of intragroup conflict (8,880 groups) and group outcomes.
+    basis: abstract
+  - text: Stable negative relationships were found between relationship conflict and process conflict
+      and group outcomes.
+    basis: abstract
+  - text: In contrast to De Dreu and Weingart (2003), no strong negative association was found between
+      task conflict and group performance.
+    basis: abstract
+  - text: Task conflict and performance were more positively related where task and relationship conflict
+      were weakly associated, in top management teams, and where performance was measured as financial
+      performance or decision quality.
+    basis: abstract
+  caveats: Correlational; heterogeneous samples; not specific to software teams. Epub 2011, issue 2012.
+- id: bendersky2012status
+  type: journal-article
+  title: Status Conflict in Groups
+  authors:
+  - Corinne Bendersky
+  - Nicholas A. Hays
+  year: 2012
+  venue: Organization Science, vol. 23, no. 2, pp. 323-340
+  doi: 10.1287/orsc.1110.0734
+  url: https://doi.org/10.1287/orsc.1110.0734
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=Status+conflict+in+groups+Bendersky+Hays+Organization+Science&rows=2
+  - https://api.openalex.org/works/doi:10.1287/orsc.1110.0734
+  verified_on: '2026-11-19'
+  claims:
+  - text: Defines status conflicts as disputes over people's relative status (respect) positions in their
+      group's social hierarchy.
+    basis: abstract
+  - text: Status conflict had a significant negative main effect on group performance and moderated the
+      effects of task conflict on group performance.
+    basis: abstract
+  - text: Status conflict hurt performance by undermining information sharing more than other types of
+      conflict did.
+    basis: abstract
+  caveats: Abstract read via the OpenAlex record; sample details not read. Not specific to software teams.
+- id: stone1999difficult
+  type: book
+  title: Difficult Conversations
+  subtitle: How to Discuss What Matters Most
+  authors:
+  - Douglas Stone
+  - Bruce Patton
+  - Sheila Heen
+  year: 1999
+  publisher: Viking
+  isbn13: '9780670883394'
+  edition_note: 'Later editions: Penguin, 2010 (10th anniversary edition, ISBN 9780143118442).'
+  url: https://openlibrary.org/isbn/0670883395
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - subtitle
+  - authors
+  - publisher
+  - year
+  - isbn13
+  verified_via:
+  - https://openlibrary.org/isbn/0670883395.json
+  - https://openlibrary.org/isbn/9780143118442.json
+  - https://openlibrary.org/search.json?q=difficult+conversations+stone+patton+heen
+  verified_on: '2026-11-19'
+  caveats: Metadata only. Credited only for its widely known idea that a difficult conversation has three
+    layers (what happened, feelings, identity) and for favoring a learning stance over message delivery.
+  access_notes: The 1999 Viking edition record gives the statement of responsibility as Douglas Stone,
+    Bruce Patton, Sheila Heen. Open Library's aggregated work record also lists Roger Fisher; his role
+    was not verified, so he is not listed as an author here.
+- id: sackett2023revisiting
+  type: journal-article
+  title: Revisiting the design of selection systems in light of new findings regarding the validity of
+    widely used predictors
+  authors:
+  - Paul R. Sackett
+  - Charlene Zhang
+  - Christopher M. Berry
+  - Filip Lievens
+  year: 2023
+  venue: Industrial and Organizational Psychology, vol. 16, no. 3, pp. 283-300
+  doi: 10.1017/iop.2023.24
+  url: https://www.cambridge.org/core/product/A20984B138319E3D432E643978BF026D/core-reader
+  evidence_class: scholarly
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://www.cambridge.org/core/product/A20984B138319E3D432E643978BF026D/core-reader
+  verified_on: '2026-11-19'
+  claims:
+  - text: Open access (CC BY 4.0). Builds on Sackett et al. (2022), which identified flaws in how range-restriction
+      corrections had been applied and offered revised operational validity estimates that are often quite
+      different from the prior ones.
+    basis: full-text
+  - text: Structured interviews top the revised list with a mean validity of .42; the standard deviation
+      is .19 and the 80 percent credibility interval runs from .18 to .66, so the authors suggest reading
+      the figure as ".42, plus or minus .24".
+    basis: full-text
+  - text: The predictors at the top are job-specific ones, such as structured interviews, job knowledge
+      tests, work sample tests, and empirically keyed biodata (biodata mean .38).
+    basis: full-text
+  - text: Relative to earlier estimates, revised validities are .21 lower for work sample tests, .20 lower
+      for cognitive ability, and .19 lower for unstructured interviews; the revised cognitive ability
+      estimate cited is .31.
+    basis: full-text
+  - text: The revised assessment-center estimate rises from .29 to .33, which moves assessment centers
+      to a tie with work samples for fourth place in the ranking.
+    basis: full-text
+  - text: The authors write that cognitive ability is no longer the stand-out predictor it was in prior
+      work and that the findings lead to a reduced role for it in selection.
+    basis: full-text
+  - text: The authors state that considerable uncertainty remains about many predictors, that the meta-analyses
+      reviewed use overall job performance as the criterion, and that many meta-analyses do not separate
+      predictive from concurrent studies.
+    basis: full-text
+  caveats: The revised table itself is an image that was not read; only figures stated in the text are
+    recorded. The work-sample mean of .33 is inferred from two sentences (assessment centers revised to
+    .33 and tied with work samples) and should be checked against the table. Criterion is mostly supervisor
+    ratings of overall job performance across many occupations, not software engineering specifically.
+    Read through the publisher's open-access reader, so it is the legitimate route to the 2022 estimates.
+  access_notes: Page states "This is an Open Access article, distributed under the terms of the Creative
+    Commons Attribution licence". Published online 2023-05-09. The final ~36,000 characters of the page
+    (late sections and references) were not read.
+- id: campion1997review
+  type: journal-article
+  title: A review of structure in the selection interview
+  authors:
+  - Michael A. Campion
+  - David K. Palmer
+  - James E. Campion
+  year: 1997
+  venue: Personnel Psychology, vol. 50, no. 3, pp. 655-702
+  doi: 10.1111/j.1744-6570.1997.tb00709.x
+  url: https://doi.org/10.1111/j.1744-6570.1997.tb00709.x
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.title=A+review+of+structure+in+the+selection+interview&query.author=Campion&rows=2
+  verified_on: '2026-11-19'
+  claims:
+  - text: The review identifies 15 components of interview structure, some improving the content of the
+      interview and some improving the evaluation process.
+    basis: abstract
+  - text: For each component it reviews effects on reliability, validity, and user reactions, and concludes
+      that interviews can be enhanced by using many of these components.
+    basis: abstract
+  caveats: The 15 components are not listed in the abstract, so the chapter does not enumerate them as
+    Campion et al.'s list.
+  access_notes: Abstract from the Crossref record; full text paywalled and not read.
+- id: dana2013belief
+  type: journal-article
+  title: 'Belief in the unstructured interview: The persistence of an illusion'
+  authors:
+  - Jason Dana
+  - Robyn Dawes
+  - Nathanial Peterson
+  year: 2013
+  venue: Judgment and Decision Making, vol. 8, no. 5, pp. 512-520
+  doi: 10.1017/S1930297500003612
+  url: https://www.cambridge.org/core/product/identifier/S1930297500003612/type/journal_article
+  evidence_class: scholarly
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.title=Belief+in+the+unstructured+interview+persistence+of+an+illusion&rows=2
+  - https://www.cambridge.org/core/product/identifier/S1930297500003612/type/journal_article
+  verified_on: '2026-11-19'
+  claims:
+  - text: In three studies with Carnegie Mellon students, participants predicting other students' semester
+      grade point average formed confident impressions even from interviews in which the interviewee answered
+      by a secret random system.
+    basis: full-text
+  - text: Adding an unstructured interview to background information made predictions less accurate than
+      the background information alone (dilution).
+    basis: full-text
+  - text: Most participants said they would rather have a random interview than no interview; the authors
+      recommend that those making screening decisions not use unstructured interviews.
+    basis: full-text
+  caveats: Student participants, a grade-prediction task, and small samples (76, 64, and 169 participants);
+    not an employment setting. The chapter uses it for the mechanism (sensemaking and dilution), not for
+    an effect size.
+  access_notes: Open access on Cambridge Core (the page states a Creative Commons licence; Crossref records
+    CC BY-NC-ND 3.0, the page CC BY 3.0). The Gwern-hosted copy was not used.
+- id: behroozi2020stress
+  type: conference-paper
+  title: Does stress impact technical interview performance?
+  authors:
+  - Mahnaz Behroozi
+  - Shivani Shirolkar
+  - Titus Barik
+  - Chris Parnin
+  year: 2020
+  venue: Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium
+    on the Foundations of Software Engineering (ESEC/FSE 2020), pp. 481-492
+  doi: 10.1145/3368089.3409712
+  url: https://2020.esec-fse.org/details/fse-2020-papers/140/Does-Stress-Impact-Technical-Interview-Performance-
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://2020.esec-fse.org/details/fse-2020-papers/140/Does-Stress-Impact-Technical-Interview-Performance-
+  - https://api.crossref.org/works/10.1145/3368089.3409712
+  verified_on: '2026-11-19'
+  claims:
+  - text: A randomized controlled trial with 48 computer science students compared a traditional whiteboard
+      interview with an interviewer watching against a private setting.
+    basis: abstract
+  - text: Performance was reduced by more than half simply by being watched by an interviewer, and stress
+      and cognitive load were higher in the traditional setting.
+    basis: abstract
+  - text: The authors argue such interviews may measure how candidates handle performance anxiety rather
+      than problem-solving ability, and propose private focus sessions and retrospective think-aloud.
+    basis: abstract
+  caveats: Students, not experienced engineers; one problem-solving task; a lab setting. It shows a measurement
+    distortion, not the validity of technical interviews for predicting job performance.
+  access_notes: Abstract from the conference programme page; full text not read (no author-hosted copy
+    was confirmed in this session).
+- id: lorenz2011social
+  type: journal-article
+  title: How social influence can undermine the wisdom of crowd effect
+  authors:
+  - Jan Lorenz
+  - Heiko Rauhut
+  - Frank Schweitzer
+  - Dirk Helbing
+  year: 2011
+  venue: Proceedings of the National Academy of Sciences, vol. 108, no. 22, pp. 9020-9025
+  doi: 10.1073/pnas.1008636108
+  url: https://europepmc.org/articles/PMC3107299
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1073/pnas.1008636108&format=json&resultType=core
+  verified_on: '2026-11-19'
+  claims:
+  - text: In an experiment with 144 subjects answering factual estimation questions, mild social influence
+      (seeing others' average or full estimates) reduced the diversity of estimates without improving
+      accuracy and undermined the wisdom-of-crowd effect.
+    basis: abstract
+  - text: After estimates converged, participants' confidence increased.
+    basis: abstract
+  caveats: Factual estimation questions, not hiring judgments. The chapter uses it as evidence for the
+    mechanism behind independent ratings, labeled as an extension.
+  access_notes: Abstract from the Europe PMC record; pnas.org returned 403. Full text in PMC was not read.
+- id: rework-structured-interviewing
+  type: web-guide
+  title: A guide to structured interviewing for better hiring practices
+  authors:
+  - re:Work Editorial Team
+  year: 2026
+  venue: Google re:Work
+  url: https://rework.withgoogle.com/intl/en/guides/a-guide-to-structured-interviewing-for-better-hiring-practices
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://rework.withgoogle.com/intl/en/guides/a-guide-to-structured-interviewing-for-better-hiring-practices
+  verified_on: '2026-11-19'
+  claims:
+  - text: Google describes structured interviewing as assessing all candidates for a job with the same
+      questions, scored on the same scale, against predetermined qualifications, and says it is hard to
+      build and maintain.
+    basis: full-text
+  - text: 'Its approach has four components: vetted role-relevant questions, recorded feedback on answers,
+      standardized rubrics describing poor, borderline, solid, and outstanding answers, and interviewer
+      training and calibration.'
+    basis: full-text
+  - text: It recommends defining the attributes needed for success before writing questions, and uses
+      behavioral (past experience) and hypothetical (job-related scenario) questions with planned follow-ups.
+    basis: full-text
+  caveats: Documented practice of one company, not evidence of outcomes. The page does not discuss independent
+    feedback before discussion or hiring committees. Updated March 2026; the older guide URL (rework.withgoogle.com/guides/hiring-use-structured-interviewing)
+    returned 404.
+  access_notes: Full page read.
+- id: castilla2008gender
+  type: journal-article
+  title: Gender, Race, and Meritocracy in Organizational Careers
+  authors:
+  - Emilio J. Castilla
+  year: 2008
+  venue: American Journal of Sociology, vol. 113, no. 6, pp. 1479-1526
+  doi: 10.1086/588738
+  url: https://doi.org/10.1086/588738
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1086/588738
+  - https://api.openalex.org/works/doi:10.1086/588738
+  verified_on: '2026-11-20'
+  claims:
+  - text: Using personnel data from a large service organization, the study finds performance-reward bias,
+      in which women and minorities receive less compensation than white men with equal performance evaluation
+      scores; gender, race, and nationality differences continue to affect salary growth after performance
+      ratings are taken into account.
+    basis: abstract
+  - text: The author argues that merit-based policies with limited transparency and accountability can
+      increase ascriptive bias and reduce workplace equity.
+    basis: abstract
+  caveats: One organization, a service firm, not software. Abstract read via OpenAlex; the publisher page
+    returned 403.
+- id: castilla2010paradox
+  type: journal-article
+  title: The Paradox of Meritocracy in Organizations
+  authors:
+  - Emilio J. Castilla
+  - Stephen Benard
+  year: 2010
+  venue: Administrative Science Quarterly, vol. 55, no. 4, pp. 543-676
+  doi: 10.2189/asqu.2010.55.4.543
+  url: https://doi.org/10.2189/asqu.2010.55.4.543
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.2189/asqu.2010.55.4.543
+  verified_on: '2026-11-20'
+  claims:
+  - text: In three experiments with 445 participants with managerial experience, who made bonus, promotion,
+      and termination recommendations for employee profiles, participants favored a male employee over
+      an equally qualified female employee with a larger monetary reward when the organization was explicitly
+      presented as meritocratic.
+    basis: abstract
+  - text: The authors call this the paradox of meritocracy and conclude that efforts to reward merit may
+      carry unrecognized risks.
+    basis: abstract
+  caveats: Laboratory-style experiments with hypothetical employee profiles, not field data. Crossref
+    gives the page range as 543-676; the article itself is shorter, so cite volume and issue.
+- id: castilla2015accounting
+  type: journal-article
+  title: 'Accounting for the Gap: A Firm Study Manipulating Organizational Accountability and Transparency
+    in Pay Decisions'
+  authors:
+  - Emilio J. Castilla
+  year: 2015
+  venue: Organization Science, vol. 26, no. 2, pp. 311-333
+  doi: 10.1287/orsc.2014.0950
+  url: https://doi.org/10.1287/orsc.2014.0950
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1287/orsc.2014.0950
+  verified_on: '2026-11-20'
+  claims:
+  - text: In a longitudinal field study of performance-based reward decisions for almost 9,000 employees
+      of a large private company, women, ethnic minorities, and non-US-born employees received lower rewards
+      than US-born white men with the same performance scores, job, unit, manager, and human capital before
+      the company introduced accountability and transparency procedures into its performance-reward system.
+    basis: abstract
+  - text: After the procedures were adopted, the pay gap in performance-based rewards was reduced.
+    basis: abstract
+  caveats: One company; the abstract does not describe the procedures in detail or the size of the reduction.
+- id: rivera2019scaling
+  type: journal-article
+  title: 'Scaling Down Inequality: Rating Scales, Gender Bias, and the Architecture of Evaluation'
+  authors:
+  - Lauren A. Rivera
+  - András Tilcsik
+  year: 2019
+  venue: American Sociological Review, vol. 84, no. 2, pp. 248-274
+  doi: 10.1177/0003122419833601
+  url: https://doi.org/10.1177/0003122419833601
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1177/0003122419833601
+  verified_on: '2026-11-20'
+  claims:
+  - text: In a quasi-natural experiment at a large North American university, whether teaching was rated
+      on a 6-point or a 10-point scale significantly affected the size of the gender gap in evaluations
+      in the most male-dominated fields; a survey experiment replicated the finding.
+    basis: abstract
+  - text: The authors conclude that seemingly minor technical aspects of rating tools can have a major
+      effect on how men and women are evaluated.
+    basis: abstract
+  caveats: University teaching evaluations, not workplace performance or promotion decisions.
+- id: benson2026potential
+  type: journal-article
+  title: '"Potential" and the Gender Promotion Gap'
+  authors:
+  - Alan Benson
+  - Danielle Li
+  - Kelly Shue
+  year: 2026
+  venue: American Economic Review, vol. 116, no. 2, pp. 375-417
+  doi: 10.1257/aer.20220831
+  url: https://doi.org/10.1257/aer.20220831
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1257/aer.20220831
+  - https://api.openalex.org/works/doi:10.1257/aer.20220831
+  verified_on: '2026-11-20'
+  claims:
+  - text: Using data on 29,809 management-track employees of a large retail chain, women received substantially
+      lower potential ratings despite receiving higher performance ratings.
+    basis: abstract
+  - text: Differences in potential ratings account for approximately half of the gender promotion gap,
+      and women subsequently outperform male colleagues, so the lower potential ratings were not accurate
+      forecasts.
+    basis: abstract
+  - text: The authors identify strategic retention and stereotyping as mechanisms.
+    basis: abstract
+  caveats: One retail chain; management-track employees, not engineers.
+- id: cullen2023equilibrium
+  type: journal-article
+  title: Equilibrium Effects of Pay Transparency
+  authors:
+  - Zoë B. Cullen
+  - Bobak Pakzad-Hurson
+  year: 2023
+  venue: Econometrica, vol. 91, no. 3, pp. 765-802
+  doi: 10.3982/ECTA19788
+  url: https://doi.org/10.3982/ECTA19788
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.3982/ECTA19788
+  verified_on: '2026-11-20'
+  claims:
+  - text: The authors' bargaining model predicts that pay transparency reduces workers' individual bargaining
+      power and lowers average wages, because employers credibly refuse to pay a high wage to any one
+      worker to avoid costly renegotiation with others.
+    basis: abstract
+  - text: In an event study of US state laws protecting private-sector workers' right to discuss salaries
+      with coworkers, wages declined by approximately 2 percent, with the smallest declines where workers
+      had low individual bargaining power.
+    basis: abstract
+  caveats: Concerns laws on coworker pay discussion in the US, not an employer publishing its own bands
+    or ranges in job postings; effects on pay gaps are not stated in the abstract.
+- id: eu2023paytransparency
+  type: standard
+  title: Directive (EU) 2023/970 of the European Parliament and of the Council of 10 May 2023 to strengthen
+    the application of the principle of equal pay for equal work or work of equal value between men and
+    women through pay transparency and enforcement mechanisms
+  authors:
+  - European Parliament and Council of the European Union
+  year: 2023
+  venue: Official Journal of the European Union, L 132, 17 May 2023, p. 21
+  url: http://publications.europa.eu/resource/celex/32023L0970
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - http://publications.europa.eu/resource/celex/32023L0970
+  verified_on: '2026-11-20'
+  claims:
+  - text: Article 5 gives job applicants the right to information on the initial pay or its range, based
+      on objective, gender-neutral criteria, and forbids employers to ask applicants about their pay history.
+    basis: full text
+  - text: Article 6 requires employers to make easily accessible to workers the criteria used to determine
+      pay, pay levels, and pay progression, which must be objective and gender neutral; Member States
+      may exempt employers with fewer than 50 workers from the pay progression part.
+    basis: full text
+  - text: Article 7 gives workers the right to request in writing their individual pay level and average
+      pay levels by sex for workers doing the same work or work of equal value, and prohibits contractual
+      terms that stop workers disclosing their pay.
+    basis: full text
+  - text: Article 9 requires gender pay gap reporting by employers with 250 or more workers annually from
+      7 June 2027, by those with 150 to 249 every three years from 7 June 2027, and by those with 100
+      to 149 every three years from 7 June 2031.
+    basis: full text
+  - text: Article 10 requires a joint pay assessment with workers' representatives where reporting shows
+      a difference in average pay between women and men of at least 5 percent in a category of workers
+      that is neither justified by objective, gender-neutral criteria nor remedied within six months.
+    basis: full text
+  - text: Article 4 requires pay structures that allow work of equal value to be compared on objective,
+      gender-neutral criteria including skills, effort, responsibility, and working conditions.
+    basis: full text
+  - text: Article 34 sets the transposition deadline for Member States at 7 June 2026.
+    basis: full text
+  caveats: A directive binds Member States, not employers directly; obligations reach employers through
+    national transposing law, which varies and was incomplete in many Member States at the deadline (secondary
+    reports, not verified here). Legal text, not evidence that transparency changes outcomes. EUR-Lex
+    pages were blocked by a bot challenge; the Official Journal text was read through the EU Publications
+    Office resource URL.
+- id: scullen2000latent
+  type: journal-article
+  title: Understanding the Latent Structure of Job Performance Ratings
+  authors:
+  - Steven E. Scullen
+  - Michael K. Mount
+  - Maynard Goff
+  year: 2000
+  venue: Journal of Applied Psychology, vol. 85, no. 6, pp. 956-970
+  doi: 10.1037/0021-9010.85.6.956
+  url: https://doi.org/10.1037/0021-9010.85.6.956
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0021-9010.85.6.956
+  - https://api.openalex.org/works/doi:10.1037/0021-9010.85.6.956
+  verified_on: '2026-11-19'
+  claims:
+  - text: The study estimated the effects of five factors on performance ratings (ratee general performance,
+      ratee performance on a specific dimension, the rater's idiosyncratic rating tendencies, the rater's
+      organizational perspective, and random measurement error).
+    basis: abstract
+  - text: Data were two large samples of managers (n = 2,350 and n = 2,142) who received developmental
+      ratings on three performance dimensions from seven raters (two bosses, two peers, two subordinates,
+      and self).
+    basis: abstract
+  - text: Idiosyncratic rater effects accounted for over half of the rating variance in both data sets
+      (62 percent and 53 percent).
+    basis: abstract
+  - text: The combined effects of general and dimensional ratee performance (21 percent and 25 percent)
+      were less than half the size of the idiosyncratic rater effects.
+    basis: abstract
+  - text: Average random error effects were 11 percent and 18 percent.
+    basis: abstract
+  - text: In two large data sets of managers (n = 2,350 and n = 2,142) rated on three performance dimensions
+      by seven raters (two bosses, two peers, two subordinates, and self), idiosyncratic rater effects
+      accounted for over half of the rating variance (62 and 53 percent).
+    basis: abstract
+  - text: The combined effects of the ratee's general and dimensional performance (21 and 25 percent)
+      were less than half the size of the idiosyncratic rater effects.
+    basis: abstract
+  caveats: Ratings were developmental (multi-source feedback for managers), not administrative ratings
+    tied to pay; ratees were managers, not engineers. Crossref holds no abstract; the abstract was read
+    from the OpenAlex record of the article. APA PsycNet did not render to automated fetch.
+  access_notes: Metadata from Crossref; abstract from OpenAlex (reconstructed from its abstract index).
+- id: scullen2005forced
+  type: journal-article
+  title: 'Forced Distribution Rating Systems and the Improvement of Workforce Potential: A Baseline Simulation'
+  authors:
+  - Steven E. Scullen
+  - Paul K. Bergey
+  - Lynda Aiman-Smith
+  year: 2005
+  venue: Personnel Psychology, vol. 58, no. 1, pp. 1-32
+  doi: 10.1111/j.1744-6570.2005.00361.x
+  url: https://doi.org/10.1111/j.1744-6570.2005.00361.x
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1111/j.1744-6570.2005.00361.x
+  verified_on: '2026-11-19'
+  claims:
+  - text: A simulation of forced distribution rating systems that require firing a set percentage of the
+      workforce each year, interacting with rating reliability, selection validity, selection ratio, and
+      voluntary turnover.
+    basis: abstract
+  - text: Results suggest such a system could noticeably improve average workforce performance potential,
+      with most of the improvement in the first several years.
+    basis: abstract
+  - text: Improvement depends largely on the percentage fired and on voluntary turnover; more firing and
+      lower voluntary turnover give greater improvement.
+    basis: abstract
+  caveats: A simulation, not a field study; the outcome modeled is workforce performance potential. The
+    abstract does not report effects on cooperation, morale, or legal exposure, so the book does not attribute
+    any such findings to it.
+  access_notes: Metadata and abstract from Crossref.
+- id: pulakos2011broken
+  type: journal-article
+  title: Why Is Performance Management Broken?
+  authors:
+  - Elaine D. Pulakos
+  - Ryan S. O'Leary
+  year: 2011
+  venue: Industrial and Organizational Psychology, vol. 4, no. 2, pp. 146-164
+  doi: 10.1111/j.1754-9434.2011.01315.x
+  url: https://doi.org/10.1111/j.1754-9434.2011.01315.x
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1111/j.1754-9434.2011.01315.x
+  verified_on: '2026-11-19'
+  claims:
+  - text: The authors argue that performance management has been reduced to prescribed steps within formal
+      administrative systems disconnected from the day-to-day activities that determine its effectiveness,
+      such as communicating clear expectations, setting short-term objectives, and continual guidance.
+    basis: abstract
+  - text: They argue against an exclusive focus on redesigning formal system features and for more attention
+      to manager-employee communication and the manager-employee relationship.
+    basis: abstract
+  caveats: A focal (position) article in a commentary journal, arguing from the literature; not an empirical
+    study.
+  access_notes: Metadata and abstract from Crossref.
+- id: felps2006bad
+  type: journal-article
+  title: 'How, When, and Why Bad Apples Spoil the Barrel: Negative Group Members and Dysfunctional Groups'
+  authors:
+  - Will Felps
+  - Terence R. Mitchell
+  - Eliza Byington
+  year: 2006
+  venue: Research in Organizational Behavior, vol. 27, pp. 175-222
+  doi: 10.1016/S0191-3085(06)27005-9
+  url: https://doi.org/10.1016/S0191-3085(06)27005-9
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1016/S0191-3085(06)27005-9
+  - https://repub.eur.nl/pub/19964
+  verified_on: '2026-11-19'
+  claims:
+  - text: The paper reviews and integrates research on how a single persistently negative group member
+      harms teammates and group functioning; it is a review and model, not a single experiment.
+    basis: abstract
+  - text: It defines the negative member as someone who withholds effort, expresses negative affect, or
+      violates important interpersonal norms.
+    basis: abstract
+  - text: It proposes that teammates react with perceptions of inequity, negative mood, and reduced trust,
+      leading to defensive responses (such as lashing out, mood maintenance, or withdrawal) that affect
+      group outcomes such as cooperation and creativity, and it discusses moderators and mitigating actions.
+    basis: abstract
+  caveats: Theoretical review; the 30 to 40 percent figure attributed to this paper in press coverage
+    comes from a separate experiment and was not verified here, so the book does not use it.
+  access_notes: Metadata from Crossref; abstract read on the Erasmus University repository record. Publisher
+    page (ScienceDirect) returned HTTP 403.
+- id: mager1997analyzing
+  type: book
+  title: Analyzing Performance Problems
+  subtitle: Or, You Really Oughta Wanna
+  authors:
+  - Robert F. Mager
+  - Peter Pipe
+  year: 1997
+  publisher: Center for Effective Performance
+  edition_note: 3rd edition, completely revised (1997). First edition 1970.
+  isbn13: '9781879618176'
+  url: https://openlibrary.org/works/OL532312W
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - subtitle
+  - authors
+  - publisher
+  - year
+  - isbn13
+  verified_via:
+  - https://openlibrary.org/isbn/9781879618176.json
+  - https://openlibrary.org/search.json?q=analyzing+performance+problems+mager+pipe
+  verified_on: '2026-11-19'
+  access_notes: Open Library edition record gives the 3rd edition (Center for Effective Performance, Atlanta,
+    1997) with the long subtitle "how to figure out why people aren't doing what they should be, and what
+    to do about it"; the short "You Really Oughta Wanna" appears as the alternative title. Credited only
+    for its widely known idea of diagnosing a performance discrepancy before choosing training.
+- id: gilbert1978human
+  type: book
+  title: Human Competence
+  subtitle: Engineering Worthy Performance
+  authors:
+  - Thomas F. Gilbert
+  year: 1978
+  publisher: McGraw-Hill
+  edition_note: 'Tribute edition: Pfeiffer, 2007 (ISBN 9780787996154).'
+  isbn13: '9780787996154'
+  url: https://openlibrary.org/works/OL6674978W
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - subtitle
+  - authors
+  - year
+  - isbn13
+  verified_via:
+  - https://openlibrary.org/isbn/9780787996154.json
+  - https://openlibrary.org/search.json?q=human+competence+engineering+worthy+performance+gilbert
+  verified_on: '2026-11-19'
+  access_notes: Open Library work record gives first publication 1978 with McGraw-Hill among publishers;
+    the edition record is the Pfeiffer tribute edition of 2007. The 1978 publisher was not confirmed on
+    an edition-level record. Credited only for the widely known behavior engineering model (environmental
+    versus individual causes of performance).
+- id: griffeth2000meta
+  type: journal-article
+  title: 'A Meta-Analysis of Antecedents and Correlates of Employee Turnover: Update, Moderator Tests,
+    and Research Implications for the Next Millennium'
+  authors:
+  - Rodger W. Griffeth
+  - Peter W. Hom
+  - Stefan Gaertner
+  year: 2000
+  venue: Journal of Management, vol. 26, no. 3, pp. 463-488
+  doi: 10.1177/014920630002600305
+  url: https://doi.org/10.1177/014920630002600305
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1177/014920630002600305
+  - https://api.openalex.org/works/https://doi.org/10.1177/014920630002600305
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article is a comprehensive meta-analysis of turnover antecedents, extending an earlier one
+      by Hom and Griffeth (1995), and describes itself as the most wide-ranging quantitative review to
+      date of the predictive strength of numerous antecedents.
+    basis: abstract
+  - text: It identifies various moderators of antecedent-turnover correlations.
+    basis: abstract
+  caveats: The abstract states no effect sizes and names no specific antecedent, so the chapter credits
+    the article only for being a broad meta-analysis that found moderators. Not specific to software engineers.
+  access_notes: Abstract from Crossref and OpenAlex. Publisher full text is paywalled and was not read.
+- id: rubenstein2018surveying
+  type: journal-article
+  title: 'Surveying the forest: A meta-analysis, moderator investigation, and future-oriented discussion
+    of the antecedents of voluntary employee turnover'
+  authors:
+  - Alex L. Rubenstein
+  - Marion B. Eberly
+  - Thomas W. Lee
+  - Terence R. Mitchell
+  year: 2018
+  venue: Personnel Psychology, vol. 71, no. 1, pp. 23-65
+  doi: 10.1111/peps.12226
+  url: https://doi.org/10.1111/peps.12226
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1111/peps.12226
+  - https://api.openalex.org/works/https://doi.org/10.1111/peps.12226
+  verified_on: '2026-11-19'
+  claims:
+  - text: A comprehensive meta-analysis of voluntary turnover predictors that updates effect sizes of
+      traditional predictors and examines multiple newer antecedents.
+    basis: abstract
+  - text: Its moderator tests provide insight into the context-dependent nature of many antecedent-turnover
+      relationships.
+    basis: abstract
+  - text: The authors offer research recommendations that break from the traditional turnover paradigm.
+    basis: abstract
+  caveats: Published online 30 March 2017; in the 2018 volume 71 issue 1, which the id uses. The abstract
+    gives no effect sizes; the chapter does not report any. Not specific to software engineers.
+  access_notes: Abstract from Crossref and OpenAlex. Full text paywalled, not read.
+- id: hom2017hundred
+  type: journal-article
+  title: One hundred years of employee turnover theory and research
+  authors:
+  - Peter W. Hom
+  - Thomas W. Lee
+  - Jason D. Shaw
+  - John P. Hausknecht
+  year: 2017
+  venue: Journal of Applied Psychology, vol. 102, no. 3, pp. 530-545
+  doi: 10.1037/apl0000103
+  url: https://doi.org/10.1037/apl0000103
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/apl0000103
+  - https://api.semanticscholar.org/graph/v1/paper/DOI:10.1037/apl0000103?fields=title,year,venue,abstract,tldr
+  verified_on: '2026-11-19'
+  claims:
+  - text: A narrative review of a century of turnover research, which tracks twenty-first-century interest
+      in the psychology of staying (rather than leaving) and in attitudinal trajectories as predictors
+      of turnover.
+    basis: abstract
+  - text: It discusses rising scholarship on collective turnover, given the importance of human capital
+      flight to practitioners and to HR strategy.
+    basis: abstract
+  caveats: Narrative review; abstract only. A figshare record exists but lists the work as all rights
+    reserved and offered no file, so full text was not read.
+  access_notes: Abstract from Semantic Scholar; metadata from Crossref.
+- id: mitchell2001why
+  type: journal-article
+  title: 'Why People Stay: Using Job Embeddedness to Predict Voluntary Turnover'
+  authors:
+  - Terence R. Mitchell
+  - Brooks C. Holtom
+  - Thomas W. Lee
+  - Chris J. Sablynski
+  - Miriam Erez
+  year: 2001
+  venue: Academy of Management Journal, vol. 44, no. 6, pp. 1102-1121
+  doi: 10.2307/3069391
+  url: https://doi.org/10.2307/3069391
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.2307/3069391
+  - https://api.openalex.org/works/https://doi.org/10.2307/3069391
+  verified_on: '2026-11-19'
+  claims:
+  - text: Introduces job embeddedness, which assesses on- and off-the-job factors - a person's links to
+      other people, teams and groups; their perceived fit with job, organization and community; and what
+      they say they would sacrifice if they left.
+    basis: abstract
+  - text: In two samples, job embeddedness predicted both intent to leave and voluntary turnover, and
+      explained significant incremental variance over job satisfaction, organizational commitment, job
+      alternatives, and job search.
+    basis: abstract
+  caveats: Two samples, neither in software (the abstract does not name the settings). Crossref gives
+    author initials only; full given names (Terence, Brooks, Thomas, Chris, Miriam) follow common citation
+    of this article and should be checked against the publisher page by the human reviewer.
+  access_notes: Abstract from OpenAlex. The AOM journal page returned 403 to automated fetch.
+- id: lee1994unfolding
+  type: journal-article
+  title: 'An Alternative Approach: The Unfolding Model of Voluntary Employee Turnover'
+  authors:
+  - Thomas W. Lee
+  - Terence R. Mitchell
+  year: 1994
+  venue: Academy of Management Review, vol. 19, no. 1, pp. 51-89
+  doi: 10.5465/amr.1994.9410122008
+  url: https://doi.org/10.5465/amr.1994.9410122008
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/https://doi.org/10.5465/amr.1994.9410122008
+  verified_on: '2026-11-19'
+  claims:
+  - text: Models voluntary turnover as four distinctive decision paths, each involving distinctive foci,
+      psychological processes, and external events, drawing on decision making, statistics, and social
+      psychology.
+    basis: abstract
+  caveats: Theory paper; no data. The abstract does not use the word 'shock'; the chapter does not attribute
+    that term to the source. OpenAlex confirms authors, volume 19, issue 1, and first page 51; the last
+    page (89) is from common citation and was not confirmed (OpenAlex lists 51-51; Crossref returned no
+    JSON for this DOI during the session).
+  access_notes: Title, year and abstract from OpenAlex. Crossref request failed.
+- id: ryan2000self
+  type: journal-article
+  title: Self-determination theory and the facilitation of intrinsic motivation, social development, and
+    well-being
+  authors:
+  - Richard M. Ryan
+  - Edward L. Deci
+  year: 2000
+  venue: American Psychologist, vol. 55, no. 1, pp. 68-78
+  doi: 10.1037/0003-066X.55.1.68
+  url: https://doi.org/10.1037/0003-066X.55.1.68
+  evidence_class: scholarly
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0003-066X.55.1.68
+  - https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf
+  verified_on: '2026-11-19'
+  claims:
+  - text: Self-determination theory postulates three innate psychological needs, competence, autonomy,
+      and relatedness, which when satisfied yield enhanced self-motivation and well-being and when thwarted
+      lead to diminished motivation and well-being.
+    basis: full-text
+  - text: The article reports that expected tangible rewards made contingent on task performance reliably
+      undermine intrinsic motivation (citing a 1999 meta-analysis by Deci, Koestner, and Ryan, against
+      contrary claims by Eisenberger and Cameron), and that threats, deadlines, directives, pressured
+      evaluations, and imposed goals also diminish it.
+    basis: full-text
+  - text: Choice, acknowledgment of feelings, and opportunities for self-direction enhance intrinsic motivation.
+    basis: full-text
+  - text: It cites a study (Baard, Deci, and Ryan, 1998) in which employees' satisfaction of the three
+      needs at work predicted their performance and well-being at work.
+    basis: full-text
+  caveats: A review by the theory's originators. The reward-undermining effect is contested in the literature
+    (the article itself names the opposing view); the chapter labels it as contested and does not apply
+    it to salary.
+  access_notes: Full text read from the PDF hosted on the Center for Self-Determination Theory site, which
+    the authors founded.
+- id: beecham2008motivation
+  type: journal-article
+  title: 'Motivation in Software Engineering: A systematic literature review'
+  authors:
+  - Sarah Beecham
+  - Nathan Baddoo
+  - Tracy Hall
+  - Hugh Robinson
+  - Helen Sharp
+  year: 2008
+  venue: Information and Software Technology, vol. 50, no. 9-10, pp. 860-878
+  doi: 10.1016/j.infsof.2007.09.004
+  url: https://doi.org/10.1016/j.infsof.2007.09.004
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1016/j.infsof.2007.09.004
+  - https://api.openalex.org/works/https://doi.org/10.1016/j.infsof.2007.09.004
+  - https://uhra.herts.ac.uk/handle/2299/989
+  verified_on: '2026-11-19'
+  claims:
+  - text: A systematic literature review of what motivates and demotivates software engineers, which finds
+      that software engineers are likely to be motivated according to their characteristics (for example
+      a need for variety), internal controls (for example personality), and external moderators (for example
+      career stage).
+    basis: abstract
+  - text: The review concludes that existing models of motivation in software engineering are disparate
+      and do not reflect the varied needs of engineers across career stages, cultures, and environments.
+    basis: abstract
+  caveats: The abstract read is the one on the University of Hertfordshire repository record for the report
+    version of the review; the journal abstract was not available from Crossref or OpenAlex and may differ
+    in wording. Crossref's online year is 2007; the issue is 2008.
+  access_notes: Metadata from Crossref and OpenAlex; abstract (report version) from the authors' institutional
+    repository. Publisher page returned 403.
+- id: whitelewis2024counteroffers
+  type: journal-article
+  title: 'Counteroffers for faculty at research universities: who gets them, who doesn''t, and what factors
+    produce them?'
+  authors:
+  - Damani K. White-Lewis
+  - KerryAnn O'Meara
+  - Kiernan Mathews
+  - Nicholas Havey
+  year: 2024
+  venue: Higher Education, vol. 89, no. 2, pp. 535-552
+  doi: 10.1007/s10734-024-01234-w
+  url: https://doi.org/10.1007/s10734-024-01234-w
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1007/s10734-024-01234-w
+  verified_on: '2026-11-19'
+  claims:
+  - text: The authors state that few studies empirically examine the counteroffer process, and describe
+      retention offers in practice as nebulous, inefficient, discretionary, and inequitable.
+    basis: abstract
+  - text: In institutional and survey data from 650 faculty (COACHE), women and racially minoritized scholars
+      were less likely to receive counteroffers.
+    basis: abstract
+  - text: Other factors associated with receiving a counteroffer included the faculty member's desire
+      to leave and whether they notified leadership.
+    basis: abstract
+  caveats: US research-university faculty, not engineers. Crossref's issued date is 7 May 2024 (online);
+    the print year of volume 89 issue 2 was not confirmed. Says nothing about whether counteroffers retain
+    people.
+  access_notes: Abstract from Crossref.
+- id: edmondson2014psychological
+  type: journal-article
+  title: 'Psychological Safety: The History, Renaissance, and Future of an Interpersonal Construct'
+  authors:
+  - Amy C. Edmondson
+  - Zhike Lei
+  year: 2014
+  venue: Annual Review of Organizational Psychology and Organizational Behavior, vol. 1, no. 1, pp. 23-43
+  doi: 10.1146/annurev-orgpsych-031413-091305
+  url: https://doi.org/10.1146/annurev-orgpsych-031413-091305
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1146/annurev-orgpsych-031413-091305
+  verified_on: '2026-11-19'
+  claims:
+  - text: The review defines psychological safety as people's perceptions of the consequences of taking
+      interpersonal risks in a particular context such as a workplace.
+    basis: abstract
+  - text: It traces the construct to organizational scholars in the 1960s, with a renaissance of research
+      from the 1990s, and reports that organizational research has linked it to voice, teamwork, team
+      learning, and organizational learning.
+    basis: abstract
+  - text: It reviews research at the individual, group, and organizational levels and proposes directions
+      for future theoretical and methodological work.
+    basis: abstract
+  caveats: Narrative review; only the abstract (from the Crossref record) was read, so no specific findings
+    from the body are used.
+  access_notes: Abstract taken from the Crossref record; the publisher page was not fetched.
+- id: frazier2017psychological
+  type: journal-article
+  title: 'Psychological Safety: A Meta-Analytic Review and Extension'
+  authors:
+  - M. Lance Frazier
+  - Stav Fainshmidt
+  - Ryan L. Klinger
+  - Amir Pezeshkan
+  - Veselina Vracheva
+  year: 2017
+  venue: Personnel Psychology, vol. 70, no. 1, pp. 113-165
+  doi: 10.1111/peps.12183
+  url: https://doi.org/10.1111/peps.12183
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1111/peps.12183
+  verified_on: '2026-11-19'
+  claims:
+  - text: The meta-analysis aggregates 136 independent samples representing over 22,000 individuals and
+      nearly 5,000 groups on the antecedents and outcomes of psychological safety.
+    basis: abstract
+  - text: It compares effect sizes of antecedents, examines whether psychological safety relates to task
+      performance and organizational citizenship behaviors beyond related constructs such as positive
+      leader relations and work engagement, tests whether research design and national culture alter the
+      relationships, and compares effects at the individual and group levels.
+    basis: abstract
+  caveats: Only the abstract was read; it states what was tested but not the effect sizes or which antecedents
+    were strongest, so no specific result is claimed. Crossref gives online publication on 2016-10-14;
+    the issue is 2017 (vol. 70, no. 1).
+  access_notes: Abstract from the Crossref record; the Wiley page was not fetched.
+- id: lenberg2018psychological
+  type: conference-paper
+  title: Psychological Safety and Norm Clarity in Software Engineering Teams
+  authors:
+  - Per Lenberg
+  - Robert Feldt
+  year: 2018
+  venue: Proceedings of the 11th International Workshop on Cooperative and Human Aspects of Software Engineering
+    (CHASE 2018), ACM, pp. 79-86
+  doi: 10.1145/3195836.3195847
+  url: https://arxiv.org/abs/1802.01378
+  evidence_class: scholarly
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://api.crossref.org/works/10.1145/3195836.3195847
+  - https://arxiv.org/abs/1802.01378v1
+  - https://ar5iv.arxiv.org/html/1802.01378
+  verified_on: '2026-11-19'
+  claims:
+  - text: A survey of 217 practitioners in 38 agile software teams at five Swedish organizations, analysed
+      with multiple linear regression.
+    basis: full-text
+  - text: Both psychological safety and team norm clarity were associated with self-assessed team performance
+      and job satisfaction; norm clarity was the stronger predictor (the authors report about 30 percent
+      stronger for performance and 71 percent for satisfaction).
+    basis: full-text
+  - text: Psychological safety was measured with items adapted from Edmondson's scale and norm clarity
+      with three items from Wageman, Hackman, and Lehman's team diagnostic survey; the two were moderately
+      correlated, and norm clarity did not moderate the effect of psychological safety.
+    basis: full-text
+  - text: The authors name self-assessed performance as a threat to validity and describe the model as
+      a first-order approximation that omits many factors.
+    basis: full-text
+  caveats: Cross-sectional, self-reported, one country, 38 teams; performance is self-assessed. Read as
+    the arXiv preprint (submitted to CHASE 2018); the ACM published version (dl.acm.org returned 403)
+    was not compared.
+  access_notes: arXiv preprint posted by the authors; full text read through ar5iv, summarized, not quoted.
+- id: verwijs2024double
+  type: journal-article
+  title: 'The Double-Edged Sword of Diversity: How Diversity, Conflict, and Psychological Safety Impact
+    Software Teams'
+  authors:
+  - Christiaan Verwijs
+  - Daniel Russo
+  year: 2024
+  venue: IEEE Transactions on Software Engineering, vol. 50, no. 1, pp. 141-157
+  doi: 10.1109/TSE.2023.3339881
+  url: https://arxiv.org/abs/2301.12954
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://arxiv.org/abs/2301.12954
+  - https://api.crossref.org/works?query.bibliographic=Double-Edged+Sword+of+Diversity+Conflict+Psychological+Safety+Software+Teams+Verwijs
+  verified_on: '2026-11-19'
+  claims:
+  - text: The study analysed survey data from 1,118 participants in 161 software teams with covariance-based
+      structural equation modeling.
+    basis: abstract
+  - text: Psychological safety was directly associated with better teamwork and less conflict, but did
+      not moderate the relationship between diversity and team effectiveness.
+    basis: abstract
+  - text: Age diversity was associated with higher team effectiveness and gender diversity with more relational
+      conflict.
+    basis: abstract
+  caveats: Only the arXiv abstract (v2, revised 2023-11-16) was read; survey-based and cross-sectional.
+    The arXiv title says "Software Teams"; v1 said "Agile Software Teams". Published-version metadata
+    from Crossref.
+  access_notes: arXiv abstract page fetched; full text not read.
+- id: dora-cap-generative-culture
+  type: web-guide
+  title: 'Capabilities: Generative organizational culture'
+  authors:
+  - DORA (Google Cloud)
+  year: null
+  venue: dora.dev
+  url: https://dora.dev/capabilities/generative-organizational-culture/
+  evidence_class: industry-research
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://dora.dev/capabilities/generative-organizational-culture/
+  verified_on: '2026-11-19'
+  claims:
+  - text: The page describes Ron Westrum's typology of pathological (power-oriented), bureaucratic (rule-oriented),
+      and generative (performance-oriented) cultures, distinguished by how they handle information, including
+      whether messengers are punished, neglected, or trained.
+    basis: full-text
+  - text: It states that DORA's research found that high-trust cultures that promote information flow
+      predict software delivery and organizational performance.
+    basis: full-text
+  - text: It states that the 2019 State of DevOps Report found psychological safety predictive of software
+      delivery performance, organizational performance, and productivity, and refers to a two-year Google
+      study of team effectiveness.
+    basis: full-text
+  - text: It measures culture with a perception survey of six statements answered on a seven-point scale,
+      and lists pitfalls including punishing bad news and treating culture as only a technology or process
+      issue.
+    basis: full-text
+  caveats: Undated web guide; the 2019 finding is reported secondhand by DORA, and the 2019 report itself
+    was not read. Survey-based, correlational, vendor-sponsored research.
+  access_notes: Fetched with WebFetch on 2026-11-19 through a summarizing fetcher; paraphrase only.
+- id: edmondson2018fearless
+  type: book
+  title: The Fearless Organization
+  subtitle: Creating Psychological Safety in the Workplace for Learning, Innovation, and Growth
+  authors:
+  - Amy C. Edmondson
+  year: 2018
+  publisher: Wiley
+  isbn13: '9781119477242'
+  url: https://www.wiley.com/en-us/The+Fearless+Organization%3A+Creating+Psychological+Safety+in+the+Workplace+for+Learning%2C+Innovation%2C+and+Growth-p-9781119477242
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - subtitle
+  - authors
+  - year
+  - isbn13
+  - url
+  verified_via:
+  - https://www.wiley.com/en-us/The+Fearless+Organization%3A+Creating+Psychological+Safety+in+the+Workplace+for+Learning%2C+Innovation%2C+and+Growth-p-9781119477242
+  verified_on: '2026-11-19'
+  claims: []
+  caveats: Metadata only. Credited only for the idea it is widely known for, that psychological safety
+    and performance standards are separate dimensions and high performance needs both. Its quadrant names
+    are not quoted.
+  access_notes: Wiley product page (dated November 2018, 256 pages); the page lists exploring the link
+    between psychological safety and high performance and achieving accountability among the book's topics.
+    The page does not print the imprint name; publisher recorded as Wiley from the host.
+- id: avelino2016truck
+  type: conference-paper
+  title: A Novel Approach for Estimating Truck Factors
+  authors:
+  - Guilherme Avelino
+  - Leonardo Passos
+  - Andre Hora
+  - Marco Tulio Valente
+  year: 2016
+  venue: 24th IEEE International Conference on Program Comprehension (ICPC 2016)
+  url: https://arxiv.org/abs/1604.06766
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://arxiv.org/abs/1604.06766
+  verified_on: '2026-11-19'
+  claims:
+  - text: The paper describes the truck factor as the minimum number of developers whose departure would
+      leave a project in serious trouble, and notes there is no consensus on how to compute it.
+    basis: abstract
+  - text: It proposes an automated estimation method based on authorship in version-control history and
+      applies it to 133 popular GitHub projects.
+    basis: abstract
+  - text: About 65 percent of the 133 systems had an estimated truck factor of 2 or less.
+    basis: abstract
+  - text: Developers of 67 of the systems were surveyed; in 84 percent of valid answers they agreed or
+      partially agreed that the estimated main authors were the main authors, and 53 percent gave positive
+      or partially positive feedback on the estimated truck factors.
+    basis: abstract
+  caveats: Open-source GitHub projects, not company teams; authorship from commit history is a proxy for
+    knowledge. Venue taken from the arXiv comment ('Accepted at ICPC'); the proceedings DOI was not verified
+    and is not recorded.
+  access_notes: arXiv abstract page fetched. Full text not read.
+- id: rigby2016turnover
+  type: conference-paper
+  title: 'Quantifying and Mitigating Turnover-Induced Knowledge Loss: Case Studies of Chrome and a Project
+    at Avaya'
+  authors:
+  - Peter C. Rigby
+  - Yue Cai Zhu
+  - Samuel M. Donadelli
+  - Audris Mockus
+  year: 2016
+  venue: Proceedings of the 38th International Conference on Software Engineering (ICSE 2016), pp. 1006-1016
+  doi: 10.1145/2884781.2884851
+  url: https://doi.org/10.1145/2884781.2884851
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1145/2884781.2884851
+  - https://api.openalex.org/works/doi:10.1145/2884781.2884851
+  verified_on: '2026-11-19'
+  claims:
+  - text: The authors measure abandoned source files (files whose knowledgeable developers have left)
+      in Chrome and a project at Avaya and adapt financial risk analysis to assess susceptibility to developer
+      turnover.
+    basis: abstract
+  - text: Historical loss distributions show projects are susceptible to losses more than three times
+      the expected loss, and historical simulations show losses over five times the expected loss.
+    basis: abstract
+  - text: Monte Carlo simulations of disaster scenarios indicate that simplistic truck-factor estimates
+      exaggerate the potential for loss.
+    basis: abstract
+  - text: A successor-recommendation method recommended the correct successor 34 to 48 percent of the
+      time, and having successors reduced expected loss by as much as 15 percent.
+    basis: abstract
+  - text: The abstract notes that previous research shows people maintaining abandoned code have reduced
+      productivity and are more likely to make mistakes.
+    basis: abstract
+  caveats: Two projects; knowledge is measured from file authorship. The prior research on reduced productivity
+    is cited by the authors and was not read here.
+  access_notes: Metadata from Crossref (container title 'Proceedings of the 38th International Conference
+    on Software Engineering'); abstract from OpenAlex's inverted index. dl.acm.org not fetched.
+- id: mathieu2009charters
+  type: journal-article
+  title: 'Laying the Foundation for Successful Team Performance Trajectories: The Roles of Team Charters
+    and Performance Strategies'
+  authors:
+  - John E. Mathieu
+  - Tammy L. Rapp
+  year: 2009
+  venue: Journal of Applied Psychology, vol. 94, no. 1, pp. 90-103
+  doi: 10.1037/a0013257
+  url: https://doi.org/10.1037/a0013257
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/a0013257
+  - https://api.openalex.org/works/doi:10.1037/a0013257
+  verified_on: '2026-11-19'
+  claims:
+  - text: The study followed 32 teams of MBA students in a business strategy simulation over time and
+      examined team charters (laying a foundation for teamwork) and performance strategies (for taskwork).
+    basis: abstract
+  - text: Teams with high-quality performance strategies outperformed teams with poorer strategies.
+    basis: abstract
+  - text: Charter quality interacted with performance strategy quality; the highest sustained performance
+      came from teams high on both.
+    basis: abstract
+  caveats: Student teams in a simulation, not software teams; 32 teams. Effect sizes and how charter quality
+    was rated were not read.
+  access_notes: Abstract from OpenAlex; metadata from Crossref. Publisher page not fetched.
+- id: manshreck2020documentation
+  type: book
+  title: Documentation
+  subtitle: Chapter 10 of Software Engineering at Google
+  authors:
+  - Tom Manshreck
+  year: 2020
+  publisher: O'Reilly Media (free online edition on abseil.io)
+  url: https://abseil.io/resources/swe-book/html/ch10.html
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - url
+  verified_via:
+  - https://abseil.io/resources/swe-book/html/ch10.html
+  verified_on: '2026-11-19'
+  claims:
+  - text: The chapter argues documentation works best when treated like code, with owners, source control,
+      review, issue tracking, and periodic evaluation, and describes Google moving away from a shared
+      wiki toward documentation kept in source control.
+    basis: full-text
+  - text: It recommends writing for an identified audience, keeping each document to one type (reference,
+      design doc, tutorial, conceptual, landing page), keeping documents fresh through owners and review
+      dates, and deprecating obsolete documents.
+    basis: full-text
+  - text: It argues engineers can usually document their own work, and that technical writers are most
+      useful for documentation that crosses team boundaries.
+    basis: full-text
+  caveats: Documented practice at one very large company. CC BY-NC-ND 4.0; summarize and cite only. Edited
+    by Riona MacNamara per the chapter page; the book is curated by Winters, Manshreck, and Wright (see
+    winters2020software).
+  access_notes: Chapter page fetched and summarized; no text copied.
+- id: chen2020knowledge
+  type: book
+  title: Knowledge Sharing
+  subtitle: Chapter 3 of Software Engineering at Google
+  authors:
+  - Nina Chen
+  - Mark Barolak
+  year: 2020
+  publisher: O'Reilly Media (free online edition on abseil.io)
+  url: https://abseil.io/resources/swe-book/html/ch03.html
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - url
+  verified_via:
+  - https://abseil.io/resources/swe-book/html/ch03.html
+  verified_on: '2026-11-19'
+  claims:
+  - text: The chapter names obstacles to learning in an organization, including information islands, single
+      points of failure (related to the bus factor), all-or-nothing expertise, parroting, and areas of
+      code people are afraid to touch.
+    basis: full-text
+  - text: It treats psychological safety, feeling safe to ask and to admit not knowing, as the foundation
+      of knowledge sharing.
+    basis: full-text
+  - text: It presents written and one-to-one knowledge as complementary (one-to-one help is precise but
+      does not scale; documents scale but need maintenance), and lists ways to scale knowledge such as
+      office hours, talks, documentation, code review, and canonical sources with owners.
+    basis: full-text
+  - text: It notes that doing a task for someone is faster in the short term but keeps the knowledge in
+      one person.
+    basis: full-text
+  caveats: Documented practice at one very large company. CC BY-NC-ND 4.0; summarize and cite only.
+  access_notes: Chapter page fetched and summarized; no text copied.
+- id: stasser1985pooling
+  type: journal-article
+  title: 'Pooling of unshared information in group decision making: Biased information sampling during
+    discussion'
+  authors:
+  - Garold Stasser
+  - William Titus
+  year: 1985
+  venue: Journal of Personality and Social Psychology, vol. 48, no. 6, pp. 1467-1478
+  doi: 10.1037/0022-3514.48.6.1467
+  url: https://doi.org/10.1037/0022-3514.48.6.1467
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0022-3514.48.6.1467
+  - https://api.openalex.org/works/doi:10.1037/0022-3514.48.6.1467
+  verified_on: '2026-11-19'
+  claims:
+  - text: The authors propose a biased sampling model in which group discussion tends to dwell on information
+      members already share and on information that supports their existing preferences, so unshared information
+      is often not pooled.
+    basis: abstract
+  - text: In a simulated political caucus where members' pre-discussion information was distributed so
+      that each member's view was biased against the best candidate, groups tended to choose the candidate
+      with initial plurality support rather than the best one, and discussion tended to reinforce members'
+      distorted impressions.
+    basis: abstract
+  caveats: Abstract read via the OpenAlex record (publisher abstract); the full text is paywalled and
+    was not read. A laboratory study with students and a constructed task; the founding study of the hidden-profile
+    paradigm.
+- id: lu2012hiddenprofiles
+  type: journal-article
+  title: 'Twenty-Five Years of Hidden Profiles in Group Decision Making: A Meta-Analysis'
+  authors:
+  - Li Lu
+  - Y. Connie Yuan
+  - Poppy Lauretta McLeod
+  year: 2012
+  venue: Personality and Social Psychology Review, vol. 16, no. 1, pp. 54-75
+  doi: 10.1177/1088868311417243
+  url: https://doi.org/10.1177/1088868311417243
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1177/1088868311417243
+  verified_on: '2026-11-19'
+  claims:
+  - text: A meta-analysis of 65 hidden-profile studies found that groups mentioned common information
+      much more than unique information, and that groups in which unique information had to be pooled
+      were much less likely to reach the correct solution than groups given full information.
+    basis: abstract
+  - text: The share of available unique information that was mentioned was the stronger of two pooling
+      measures in predicting decision quality.
+    basis: abstract
+  - text: Communication medium did not affect unique-information pooling or decision quality; group size,
+      information load, proportion of unique information, task demonstrability, and hidden-profile strength
+      moderated the effects.
+    basis: abstract
+  caveats: Published online 2011, print issue 2012. Abstract only. The underlying studies are mostly laboratory
+    tasks with a demonstrably correct answer, unlike most engineering decisions.
+- id: nygard2011adr
+  type: blog-post
+  title: Documenting Architecture Decisions
+  authors:
+  - Michael Nygard
+  year: 2011
+  venue: Cognitect blog
+  url: https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+  verified_on: '2026-11-19'
+  claims:
+  - text: The post proposes architecture decision records, short documents of one or two pages with a
+      title, context, decision, status, and consequences (including negative ones), kept in the project
+      repository and numbered sequentially.
+    basis: full-text
+  - text: A reversed decision keeps its record, marked superseded with a reference to its replacement.
+    basis: full-text
+  - text: The stated motivation is that without the rationale, later team members can only accept past
+      decisions blindly or reverse them blindly.
+    basis: full-text
+  caveats: Dated November 15, 2011. Chapter 28 owns architecture decision records in depth.
+- id: bezos2016letter
+  type: report
+  title: 2016 Letter to Shareholders
+  authors:
+  - Jeff Bezos
+  year: 2017
+  venue: Amazon (aboutamazon.com), published April 17, 2017
+  url: https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders
+  verified_on: '2026-11-19'
+  claims:
+  - text: The letter argues that reversible decisions ("two-way doors") can use a lightweight process
+      because being wrong is cheap to undo, and that most decisions should probably be made with about
+      70 percent of the information one wishes one had.
+    basis: full-text
+  - text: It recommends recognizing and correcting bad decisions quickly, using "disagree and commit"
+      (including by the boss), and escalating fundamental misalignment early rather than letting debate
+      run until the side with more stamina wins.
+    basis: full-text
+  caveats: One company's chief executive describing his own practice in a shareholder letter (documented
+    practice, not research). The page byline reads Amazon Staff; the letter is signed by Jeff Bezos.
+- id: atlassian-daci
+  type: web-guide
+  title: 'DACI: A Decision-Making Framework'
+  authors:
+  - Atlassian
+  year: 2026
+  venue: Atlassian Team Playbook
+  url: https://www.atlassian.com/team-playbook/plays/daci
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://www.atlassian.com/team-playbook/plays/daci
+  verified_on: '2026-11-19'
+  claims:
+  - text: DACI assigns four roles to a decision, a Driver who coordinates and keeps the decision to its
+      date, a single Approver who makes the call, Contributors who have a voice but no vote, and Informed
+      people who are told the outcome; the play recommends one Driver and one Approver and recording the
+      outcome in a shared document.
+    basis: full-text
+  caveats: A vendor's practitioner playbook; year is the access year (the page carries no publication
+    date). Not evidence that the framework improves outcomes.
+- id: bain-rapid
+  type: web-guide
+  title: RAPID Decision Making
+  authors:
+  - Bain & Company
+  year: 2023
+  venue: Bain & Company Insights, published October 13, 2023
+  url: https://www.bain.com/insights/rapid-tool-to-clarify-decision-accountability/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.bain.com/insights/rapid-tool-to-clarify-decision-accountability/
+  verified_on: '2026-11-19'
+  claims:
+  - text: RAPID assigns the roles Recommend, Agree, Perform, Input, and Decide; the page says there is
+      one recommender, that the Agree role (for mandatory requirements such as legal ones) should be assigned
+      sparingly, and that ideally each decision has a single decider.
+    basis: full-text
+  caveats: A consulting firm's description of its own trademarked tool. Not independent evidence of effect.
+- id: rogers2006whohasd
+  type: magazine-article
+  title: Who Has the D? How Clear Decision Roles Enhance Organizational Performance
+  authors:
+  - Paul Rogers
+  - Marcia W. Blenko
+  year: 2006
+  venue: Harvard Business Review, January 2006
+  url: https://hbr.org/2006/01/who-has-the-d-how-clear-decision-roles-enhance-organizational-performance
+  evidence_class: practitioner
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://hbr.org/2006/01/who-has-the-d-how-clear-decision-roles-enhance-organizational-performance
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article argues that company performance depends on making the right decisions quickly and
+      executing them consistently, and is known for proposing clear decision roles as the remedy.
+    basis: official-summary
+  caveats: Only the opening paragraphs were accessible; the RAPID roles are cited from bain-rapid, not
+    from this article.
+- id: kahneman2011bigdecision
+  type: magazine-article
+  title: 'The Big Idea: Before You Make That Big Decision...'
+  authors:
+  - Daniel Kahneman
+  - Dan Lovallo
+  - Olivier Sibony
+  year: 2011
+  venue: Harvard Business Review, June 2011
+  url: https://hbr.org/2011/06/the-big-idea-before-you-make-that-big-decision
+  evidence_class: practitioner
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://hbr.org/2011/06/the-big-idea-before-you-make-that-big-decision
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article's opening argues that awareness of cognitive biases such as confirmation bias, anchoring,
+      and loss aversion has done little to improve the quality of business decisions, and that for big
+      bets executives typically rely on a team's proposal.
+    basis: official-summary
+  - text: The article is known for a checklist of questions a decision maker asks about a team's recommendation
+      to detect the team's biases (idea level only; the checklist itself was not read).
+    basis: official-summary
+  caveats: Only the opening and summary were accessible. No checklist item is quoted or listed in the
+    book.
+- id: harvey1974abilene
+  type: journal-article
+  title: 'The Abilene Paradox: The Management of Agreement'
+  authors:
+  - Jerry B. Harvey
+  year: 1974
+  venue: Organizational Dynamics, vol. 3, no. 1, pp. 63-80
+  doi: 10.1016/0090-2616(74)90005-9
+  url: https://doi.org/10.1016/0090-2616(74)90005-9
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1016/0090-2616(74)90005-9
+  verified_on: '2026-11-19'
+  claims: []
+  caveats: Metadata only (no abstract in the record). Credited only for the idea it is widely known for,
+    a group agreeing on a course of action that its members privately do not want. An essay, not an empirical
+    study.
+- id: bloom2024hybrid
+  type: journal-article
+  title: Hybrid working from home improves retention without damaging performance
+  authors:
+  - Nicholas Bloom
+  - Ruobing Han
+  - James Liang
+  year: 2024
+  venue: Nature, vol. 630, no. 8018, pp. 920-925
+  doi: 10.1038/s41586-024-07500-2
+  url: https://doi.org/10.1038/s41586-024-07500-2
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/s41586-024-07500-2&resultType=core&format=json
+  verified_on: '2026-11-19'
+  claims:
+  - text: A six-month randomized controlled trial with 1,612 employees of a Chinese technology company
+      in 2021-2022 compared hybrid working (two days a week from home) with full-time office work.
+    basis: abstract
+  - text: Hybrid working improved job satisfaction and reduced quit rates by about one third, with significant
+      reductions for non-managers, women, and employees with long commutes.
+    basis: abstract
+  - text: Equivalence tests found no effect on performance grades over the following two years, no overall
+      difference in promotions, and no effect on lines of code written by computer engineers.
+    basis: abstract
+  - text: The 395 managers in the trial moved from expecting a negative productivity effect (about -2.6
+      percent) before the experiment to a positive one (about +1.0 percent) afterwards.
+    basis: abstract
+  caveats: One firm in one country; hybrid (two home days), not fully remote; the randomization method
+    was not read. Performance measured by review grades, promotions, and lines of code, which are coarse.
+    nature.com redirected to an identity-provider page; abstract read via the Europe PMC record (PMC11208135).
+  access_notes: Abstract from Europe PMC REST record; full text on PMC not read.
+- id: gibbs2023wfh
+  type: journal-article
+  title: 'Work from Home and Productivity: Evidence from Personnel and Analytics Data on Information Technology
+    Professionals'
+  authors:
+  - Michael Gibbs
+  - Friederike Mengel
+  - Christoph Siemroth
+  year: 2023
+  venue: Journal of Political Economy Microeconomics, vol. 1, no. 1, pp. 7-41
+  doi: 10.1086/721803
+  url: https://doi.org/10.1086/721803
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1086/721803
+  - https://www.iza.org/publications/dp/14336
+  verified_on: '2026-11-19'
+  claims:
+  - text: Using personnel and analytics data on more than 10,000 skilled professionals at a large Asian
+      IT services company, the study compares productivity before and during pandemic work from home.
+    basis: abstract (IZA working-paper version, DP 14336, April 2021)
+  - text: Total hours worked rose, including after-hours work, while average output did not rise, so measured
+      productivity fell.
+    basis: abstract (working-paper version)
+  - text: Time in meetings and coordination rose, while uninterrupted working time, networking, coaching,
+      and one-on-one meetings with supervisors fell; the authors attribute much of the decline to higher
+      communication and coordination costs.
+    basis: abstract (working-paper version)
+  caveats: Abstract read for the IZA working paper only; the published JPE Micro article (metadata via
+    Crossref) was not read and its point estimates may differ, so the book does not print a percentage.
+    Pandemic conditions (forced, sudden, with children at home), not a chosen remote policy. One firm.
+  access_notes: journals.uchicago.edu returned 403; Essex repository and RePEc blocked by a TLS proxy
+    in this session.
+- id: emanuel2023proximity
+  type: report
+  title: The Power of Proximity to Coworkers
+  authors:
+  - Natalia Emanuel
+  - Emma Harrington
+  - Amanda Pallais
+  year: 2023
+  venue: NBER Working Paper 31880
+  doi: 10.3386/w31880
+  url: https://www.nber.org/papers/w31880
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://www.nber.org/papers/w31880
+  verified_on: '2026-11-19'
+  claims:
+  - text: The study follows software engineers at a Fortune 500 firm and uses office closures in 2020
+      and later return-to-office mandates as shocks to how close engineers sat to their teammates, comparing
+      colocated with already-distributed teams.
+    basis: abstract
+  - text: Sitting near teammates increased the coding feedback engineers received, with the largest gains
+      for newer and younger engineers, while experienced engineers wrote less code when near teammates.
+    basis: abstract
+  caveats: Working paper (revised 2026; the NBER page says it is published in the Quarterly Journal of
+    Economics, not verified here). One firm. The abstract was read as rendered on the NBER page.
+  access_notes: Abstract on the NBER landing page.
+- id: wageman2005team
+  type: journal-article
+  title: 'Team Diagnostic Survey: Development of an Instrument'
+  authors:
+  - Ruth Wageman
+  - J. Richard Hackman
+  - Erin Lehman
+  year: 2005
+  venue: The Journal of Applied Behavioral Science, vol. 41, no. 4, pp. 373-398
+  doi: 10.1177/0021886305281984
+  url: https://doi.org/10.1177/0021886305281984
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1177/0021886305281984
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article describes the development of the Team Diagnostic Survey, an instrument for diagnosing
+      a team's strengths and weaknesses and for research on teams, grounded in existing research on team
+      effectiveness.
+    basis: abstract
+  - text: The instrument assesses how well a team is structured, supported, and led, together with members'
+      work processes and affective reactions; analyses of data from 2,474 members of 321 teams support
+      its psychometric properties.
+    basis: abstract
+  caveats: Instrument-development paper; it validates the measure, not any intervention. Item content
+    not read.
+  access_notes: Abstract from the Crossref record.
+- id: kniberg2014squad
+  type: blog-post
+  title: Squad Health Check model – visualizing what to improve
+  authors:
+  - Henrik Kniberg
+  - Kristian Lindwall
+  year: 2014
+  venue: Spotify Engineering blog, 16 September 2014
+  url: https://engineering.atspotify.com/2014/09/squad-health-check-model
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://engineering.atspotify.com/2014/09/squad-health-check-model
+  verified_on: '2026-11-19'
+  claims:
+  - text: Describes a facilitated self-assessment workshop in which a team rates about ten indicators
+      (such as easy to release, tech quality, mission, fun, learning, support) as green, yellow, or red,
+      with a trend, using cards that give an example of a good and a bad state.
+    basis: full-text
+  - text: The team itself is the main audience; managers and coaches get a summary to spot patterns and
+      decide where to help.
+    basis: full-text
+  - text: The authors warn against comparing teams, say the model only works in a high-trust environment
+      because the data is self-reported and easy to game, and describe it as a support tool rather than
+      a judgment tool.
+    basis: full-text
+  caveats: Documented practice at one company, written by its agile coaches; no outcome data.
