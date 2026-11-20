@@ -1,0 +1,9 @@
+team,manager,engineers,minneapolis,bogota,remote_us,composition,components_owned,notes
+Orders,Priya Raman,16,14,0,2,"14 software engineers; 2 quality engineers","core/order-capture; core/catalog; core/pricing-rules; core/customer; pricing-svc; search-svc; notification-svc","core/customer from week 4; notification-svc from quarter 2; search-svc nominal, its authors are in Data and Analytics"
+Billing,Marcus Oyelaran,15,12,0,3,"13 software engineers; 2 quality engineers","core/invoicing; core/ledger; core/scheduler; tax-svc; invoice-render","core/scheduler from week 4; owns the order-to-invoice contract from quarter 2"
+Payments and Integrations,Elena Sokolova,13,7,5,1,"12 software engineers; 1 quality engineer","payments-gateway; bank-connectors; erp-sync; webhooks","webhooks from week 4"
+Customer Experience,Daniel Cho,17,9,6,2,"9 web engineers; 6 mobile engineers; 2 quality engineers","web-app; mobile-app; mobile-bff","all 6 mobile engineers in Bogotá, including Mateo Arango Ríos; notification-svc left in quarter 2"
+Data and Analytics,Farah Haddad,11,4,5,2,"8 data engineers; 3 software engineers","reporting-api; export-svc; warehouse pipelines","request load from other teams 12 points of capacity at baseline"
+Platform Operations,Tom Becker,5,3,0,2,"5 infrastructure engineers","auth-svc; ci-cd; cloud infrastructure; release train","auth-svc from week 4; two-person interrupt rotation from quarter 2"
+Staff engineers,Engineering Director,3,3,0,0,"Ines Carvalho; Kwame Mensah; Li Na Zhou",none owned,"standard owners from quarter 1"
+No owner,,0,0,0,0,,"core/permissions; document-store","core/permissions: exemption recorded in quarter 1 lapsed at week 39 without renewal; no owner; document-store orphaned since baseline"

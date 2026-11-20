@@ -341,3 +341,12 @@ Classified by the managers at the start of quarter 2; counts are the canon pair 
 
 Also in the baseline quarter: 4 Orders work items of a week or more touched both order capture and
 pricing, catalog, or search; Billing changed the order-to-invoice mapping twice for its own reasons.
+
+### Management system before the director (Chapters 37–39)
+
+| Fact | Value |
+|---|---|
+| Recurring forums at arrival | A weekly 60-minute managers' meeting inherited from before the director, about 42 of its 60 minutes spent on a status round |
+| Escalation | No written path; disputes reached Victor Lindqvist in conversation (his handover notes) |
+| Decision records | None at organization level (and no architecture decision records) |
+

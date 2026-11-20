@@ -17,6 +17,11 @@ more useful than one with thirty fields they skip.
 | [Technical debt register](technical-debt-register.md) | Debt recorded by recurring cost, with decisions and owners |
 | [Incident review](incident-review.md) | A blameless review that checks for recurrence and produces owned actions |
 | [90-day quality transformation plan](ninety-day-quality-plan.md) | The first quarter of a quality transformation, from diagnosis to an agreed capacity trade |
+| [Engineering Manager performance rubric](engineering-manager-rubric.md) | Six dimensions with observable evidence for assessing an engineering manager |
+| [Director competency matrix](director-competency-matrix.md) | A director's competencies across levels, for self-assessment and development |
+| [Organizational design assessment](organizational-design-assessment.md) | Teams, spans, dependencies, ownership, and cognitive load in one assessment |
+| [Quarterly engineering review](quarterly-engineering-review.md) | A quarter's results, risks, and decisions for executives |
+| [Capacity planning model](capacity-planning-model.md) | Capacity by category with planned and cautious cases |
 
 The remaining templates in the [curriculum](../curriculum.md) are planned and will be added with
 the chapters that teach them.

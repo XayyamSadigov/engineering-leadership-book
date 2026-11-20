@@ -466,8 +466,8 @@ all six. He wants to keep Scrum because "the team likes the rhythm". Prepare for
 what you want to learn from him, what data you bring, and what options you would put on the table,
 including keeping Scrum.
 
-**A2.** Greg Tanaka asks for a third deal feature to be committed for quarter 2, with a date he has
-already mentioned to the prospect. Orders' "now" horizon is full with bulk ordering. Write the reply
+**A2.** Suppose Greg Tanaka asks for a third deal feature to be committed for quarter 2, with a date
+he has already mentioned to the prospect (a hypothetical; Chapter 42 has his actual request in quarter 3). Orders' "now" horizon is full with bulk ordering. Write the reply
 you would send him, including what you need from him to rank the request and what it would displace.
 
 **A3.** Design the team-level roadmap cadence for Data and Analytics, which has no named method, a

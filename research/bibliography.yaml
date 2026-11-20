@@ -10338,3 +10338,1197 @@
   caveats: About chief executives and boards, not engineering managers; used only for the event-versus-process
     framing.
   access_notes: Abstract read in the OpenAlex record.
+- id: rogelberg2006not
+  type: journal-article
+  title: '"Not Another Meeting!" Are Meeting Time Demands Related to Employee Well-Being?'
+  authors:
+  - Steven G. Rogelberg
+  - Desmond J. Leach
+  - Peter B. Warr
+  - Jennifer L. Burnfield
+  year: 2006
+  venue: Journal of Applied Psychology, vol. 91, no. 1, pp. 83-96
+  doi: 10.1037/0021-9010.91.1.83
+  url: https://doi.org/10.1037/0021-9010.91.1.83
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1037/0021-9010.91.1.83
+  - https://api.crossref.org/works/10.1037/0021-9010.91.1.83
+  verified_on: '2026-11-19'
+  claims:
+  - text: Two internet surveys of employees working 35 hours or more a week (N=676, prescheduled meetings
+      in a typical week; N=304, meetings on the current day) found that the relationship between meeting
+      time demands and job attitudes and well-being was moderated by task interdependence, meeting experience
+      quality, and accomplishment striving.
+    basis: abstract
+  - text: Results depended somewhat on the study's time frame and on how meeting time demands were measured.
+    basis: abstract
+  - text: Perceived meeting effectiveness had a strong, direct relationship with job attitudes and well-being.
+    basis: abstract
+  caveats: Self-report, cross-sectional surveys; not specific to engineering or to leadership meetings.
+    Abstract read via OpenAlex; full text not read.
+- id: allen2013manager
+  type: journal-article
+  title: 'Manager-Led Group Meetings: A Context for Promoting Employee Engagement'
+  authors:
+  - Joseph A. Allen
+  - Steven G. Rogelberg
+  year: 2013
+  venue: Group & Organization Management, vol. 38, no. 5, pp. 543-569
+  doi: 10.1177/1059601113503040
+  url: https://doi.org/10.1177/1059601113503040
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1177/1059601113503040
+  - https://api.crossref.org/works/10.1177/1059601113503040
+  verified_on: '2026-11-19'
+  claims:
+  - text: Two time-separated internet surveys of 319 working adults found that the psychological conditions
+      for engagement mediated the relationship between managers' use and facilitation of meetings and
+      overall employee engagement.
+    basis: abstract
+  - text: Making workgroup meetings relevant, allowing employee voice, and managing the meeting's time
+      were associated with higher engagement.
+    basis: abstract
+  caveats: Self-report and correlational; general working population. Abstract only.
+- id: kauffeld2012meetings
+  type: journal-article
+  title: 'Meetings Matter: Effects of Team Meetings on Team and Organizational Success'
+  authors:
+  - Simone Kauffeld
+  - Nale Lehmann-Willenbrock
+  year: 2012
+  venue: Small Group Research, vol. 43, no. 2, pp. 130-158
+  doi: 10.1177/1046496411429599
+  url: https://doi.org/10.1177/1046496411429599
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1177/1046496411429599
+  - https://api.crossref.org/works/10.1177/1046496411429599
+  verified_on: '2026-11-19'
+  claims:
+  - text: Ninety-two regular team meetings were videotaped and their interaction coded; teams showing
+      more functional interaction, such as problem solving and action planning, were more satisfied with
+      their meetings, and better meetings were associated with higher team productivity.
+    basis: abstract
+  - text: Constructive meeting interaction was related to organizational success 2.5 years after the meeting.
+    basis: abstract
+  - text: Dysfunctional communication such as criticizing others or complaining had significant negative
+      relationships with these outcomes, more pronounced than the positive effects of functional interaction.
+    basis: abstract
+  caveats: Published online December 2011, print April 2012. Abstract only; sample setting and industries
+    not read. Correlational.
+- id: mroz2018meetings
+  type: journal-article
+  title: Do We Really Need Another Meeting? The Science of Workplace Meetings
+  authors:
+  - Joseph E. Mroz
+  - Joseph A. Allen
+  - Dana C. Verhoeven
+  - Marissa L. Shuffler
+  year: 2018
+  venue: Current Directions in Psychological Science, vol. 27, no. 6, pp. 484-491
+  doi: 10.1177/0963721418776307
+  url: https://doi.org/10.1177/0963721418776307
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1177/0963721418776307
+  - https://api.crossref.org/works/10.1177/0963721418776307
+  verified_on: '2026-11-19'
+  claims:
+  - text: A review of the psychological science of workplace meetings, focused on activities before, during,
+      and after meetings that facilitate success, ending with concrete recommendations and a checklist.
+    basis: abstract
+  caveats: Abstract only; the recommendations and checklist were not read and are not reported.
+- id: perlow2017stop
+  type: magazine-article
+  title: Stop the Meeting Madness
+  subtitle: How to free up time for meaningful work
+  authors:
+  - Leslie A. Perlow
+  - Constance Noonan Hadley
+  - Eunice Eun
+  year: 2017
+  venue: Harvard Business Review, July-August 2017
+  url: https://hbr.org/2017/07/stop-the-meeting-madness
+  evidence_class: practitioner
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://hbr.org/2017/07/stop-the-meeting-madness
+  verified_on: '2026-11-19'
+  claims:
+  - text: The accessible opening, based on the authors' interviews with hundreds of executives across
+      industries, reports that executives spend on average nearly 23 hours a week in meetings, up from
+      less than 10 hours in the 1960s, excluding unscheduled gatherings, and cites earlier research that
+      meetings have grown longer and more frequent.
+    basis: official-summary
+  caveats: Only the opening is accessible; the authors' recommended process is behind the paywall and
+    is not used. The method behind the 23-hour figure is not visible.
+- id: mankins2014weekly
+  type: blog-post
+  title: This Weekly Meeting Took Up 300,000 Hours a Year
+  authors:
+  - Michael C. Mankins
+  year: 2014
+  venue: HBR.org, April 29, 2014; republished by Bain & Company
+  url: https://www.bain.com/insights/this-weekly-meeting-took-up-300-thousand-hours-a-year-hbr/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.bain.com/insights/this-weekly-meeting-took-up-300-thousand-hours-a-year-hbr/
+  verified_on: '2026-11-19'
+  claims:
+  - text: At one large company, people spent about 300,000 hours a year just supporting the weekly executive
+      committee meeting.
+    basis: full-text
+  - text: The post proposes assessing whether communication and interaction take more time than the output
+      justifies, among five obstacles to workforce productivity.
+    basis: full-text
+  caveats: A consultant's short post about one unnamed company; the method is described in an HBR interactive
+    that was not read. Related to Mankins, Brahm, and Caimi, "Your Scarcest Resource", HBR May 2014, which
+    was not read (hbr.org returned 404 for the URL tried).
+- id: locke2002building
+  type: journal-article
+  title: 'Building a practically useful theory of goal setting and task motivation: A 35-year odyssey'
+  authors:
+  - Edwin A. Locke
+  - Gary P. Latham
+  year: 2002
+  venue: American Psychologist, vol. 57, no. 9, pp. 705-717
+  doi: 10.1037/0003-066X.57.9.705
+  url: https://doi.org/10.1037/0003-066X.57.9.705
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0003-066X.57.9.705
+  - https://api.openalex.org/works/doi:10.1037/0003-066X.57.9.705
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article summarizes 35 years of empirical research on goal-setting theory, covering its core
+      findings, the mechanisms by which goals operate, moderators of goal effects, goals as mediators
+      of incentives, external validity and practical significance, and the theory's limitations.
+    basis: abstract
+  caveats: Abstract only (from the OpenAlex record, which matches the Crossref metadata). The abstract
+    does not itself state the size or direction of the core findings; the chapter relies on locke2006new
+    for the 'specific, difficult goals' formulation. A narrative review by the theory's originators, largely
+    of laboratory and field studies of individual tasks, not of software organizations.
+  access_notes: APA PsycNet page not fetched; Crossref has no abstract; abstract read from OpenAlex.
+- id: locke2006new
+  type: journal-article
+  title: New Directions in Goal-Setting Theory
+  authors:
+  - Edwin A. Locke
+  - Gary P. Latham
+  year: 2006
+  venue: Current Directions in Psychological Science, vol. 15, no. 5, pp. 265-268
+  doi: 10.1111/j.1467-8721.2006.00449.x
+  url: https://doi.org/10.1111/j.1467-8721.2006.00449.x
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=Locke+Latham+New+directions+in+goal-setting+theory+Current+Directions
+  - https://api.openalex.org/works/doi:10.1111/j.1467-8721.2006.00449.x
+  verified_on: '2026-11-19'
+  claims:
+  - text: The abstract summarizes goal-setting theory regarding the effectiveness of specific, difficult
+      goals, the mediators and moderators of goal effects, the relation of goals to self-efficacy, and
+      the generality of goal effects across people, tasks, countries, time spans, experimental designs,
+      goal sources (self-set, set jointly, or assigned), and dependent variables.
+    basis: abstract
+  - text: The abstract lists group goal setting, learning goals, and macro-level goal setting among the
+      newer research directions.
+    basis: abstract
+  caveats: Abstract only. A short review by the theory's originators. The SAGE landing page returned 403;
+    the abstract was read from OpenAlex.
+  access_notes: journals.sagepub.com returned HTTP 403 to the fetcher.
+- id: ordonez2009goals
+  type: journal-article
+  title: 'Goals Gone Wild: The Systematic Side Effects of Overprescribing Goal Setting'
+  authors:
+  - Lisa D. Ordóñez
+  - Maurice E. Schweitzer
+  - Adam D. Galinsky
+  - Max H. Bazerman
+  year: 2009
+  venue: Academy of Management Perspectives, vol. 23, no. 1, pp. 6-16
+  doi: 10.5465/amp.2009.37007999
+  url: https://doi.org/10.5465/amp.2009.37007999
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.5465/amp.2009.37007999
+  - https://api.openalex.org/works/doi:10.5465/amp.2009.37007999
+  verified_on: '2026-11-19'
+  claims:
+  - text: The authors accept that hundreds of studies show specific, challenging goals can drive behavior
+      and boost performance, but argue that the benefits of goal setting have been overstated and its
+      systematic harms largely ignored.
+    basis: abstract
+  - text: The side effects they identify are a narrow focus that neglects non-goal areas, distorted risk
+      preferences, a rise in unethical behavior, inhibited learning, corrosion of organizational culture,
+      and reduced intrinsic motivation; they propose treating goal setting as a prescription-strength
+      intervention needing careful dosing and supervision.
+    basis: abstract
+  caveats: An argumentative essay, not a meta-analysis; its use of evidence is disputed by locke2009goal.
+    Abstract only.
+  access_notes: Abstract read from OpenAlex (matches the AOM 'Executive Overview').
+- id: locke2009goal
+  type: journal-article
+  title: Has Goal Setting Gone Wild, or Have Its Attackers Abandoned Good Scholarship?
+  authors:
+  - Edwin A. Locke
+  - Gary P. Latham
+  year: 2009
+  venue: Academy of Management Perspectives, vol. 23, no. 1, pp. 17-23
+  doi: 10.5465/amp.2009.37008000
+  url: https://doi.org/10.5465/amp.2009.37008000
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.5465/amp.2009.37008000
+  - https://api.openalex.org/works/doi:10.5465/amp.2009.37008000
+  verified_on: '2026-11-19'
+  claims:
+  - text: In a rejoinder to ordonez2009goals, Locke and Latham argue that the critique draws its central
+      theme from anecdotal evidence, cites the literature unrepresentatively, and that almost all the
+      pitfalls it lists had already been published by goal-setting researchers themselves.
+    basis: abstract
+  caveats: A rejoinder by interested parties; abstract only.
+  access_notes: Abstract read from OpenAlex.
+- id: stray2022okrs
+  type: conference-paper
+  title: 'Using Objectives and Key Results (OKRs) and Slack: A Case Study of Coordination in Large-Scale
+    Distributed Agile'
+  authors:
+  - Viktoria Stray
+  - Nils Brede Moe
+  - Henrik Vedal
+  - Marthe Berntzen
+  year: 2022
+  venue: Proceedings of the 55th Hawaii International Conference on System Sciences (HICSS)
+  doi: 10.24251/HICSS.2022.883
+  url: https://hdl.handle.net/10125/80225
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://api.openalex.org/works/doi:10.24251/HICSS.2022.883
+  - https://doi.org/10.24251/HICSS.2022.883
+  - https://api.crossref.org/works?query.bibliographic=Objectives+and+Key+Results+OKRs+Slack+coordination+large-scale+agile+Stray
+  verified_on: '2026-11-19'
+  claims:
+  - text: A qualitative case study of two teams in one large-scale agile project (meeting observations
+      and 17 interviews), analyzed through relational coordination theory.
+    basis: abstract
+  - text: The use of OKRs facilitated knowledge sharing, helped the teams align their goals, and provided
+      inter-team insights; the authors conclude that projects using OKRs need to support members in formulating
+      key results that align and motivate teams toward the same mission.
+    basis: abstract
+  caveats: One project, two teams, interview data; no outcome or performance measure. Supports OKRs as
+    a coordination aid, not as a performance intervention. The ScholarSpace landing page was behind a
+    browser check; the DOI resolves to the handle URL above (HTTP redirect confirmed). Page range was
+    not confirmed and is omitted. Licensed CC BY-NC-ND per OpenAlex.
+  access_notes: Abstract from OpenAlex; DOI redirect checked with a HEAD request. A preprint exists on
+    TechRxiv (10.36227/techrxiv.16892161).
+- id: smith2003reluctance
+  type: journal-article
+  title: 'The reluctance to report bad news on troubled software projects: a theoretical model'
+  authors:
+  - H. Jeff Smith
+  - Mark Keil
+  year: 2003
+  venue: Information Systems Journal, vol. 13, no. 1, pp. 69-95
+  doi: 10.1046/j.1365-2575.2003.00139.x
+  url: https://doi.org/10.1046/j.1365-2575.2003.00139.x
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=reluctance+to+report+bad+news+on+troubled+software+projects
+  - https://api.openalex.org/works/doi:10.1046/j.1365-2575.2003.00139.x
+  verified_on: '2026-11-19'
+  claims:
+  - text: A theory-development paper arguing that losses on troubled software projects are sometimes increased
+      because organizational members are reluctant to transmit negative status information, so evidence
+      of a failing course of action held in the lower ranks fails to travel up the hierarchy or is distorted
+      on the way, and decision makers with authority to change direction are unaware of the true status.
+    basis: abstract
+  - text: The paper develops a theoretical model of this reluctance, drawing on organizational behaviour,
+      communications, ethics, economics, information systems, and psychology, and points to future research
+      rather than reporting new empirical results.
+    basis: abstract
+  caveats: Theory paper, no new data. The abstract opens with project-failure percentages from another
+    account (the Standish-type figures); the book does not repeat them. Crossref issue date is December
+    2002 (online); the journal volume is 2003. Full text paywalled, not read.
+- id: smith2001keeping
+  type: journal-article
+  title: 'Keeping Mum as the Project Goes Under: Toward an Explanatory Model'
+  authors:
+  - H. Jeff Smith
+  - Mark Keil
+  - Gordon Depledge
+  year: 2001
+  venue: Journal of Management Information Systems, vol. 18, no. 2, pp. 189-227
+  doi: 10.1080/07421222.2001.11045677
+  url: https://doi.org/10.1080/07421222.2001.11045677
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=Keeping+mum+as+the+project+goes+under
+  - https://api.openalex.org/works/doi:10.1080/07421222.2001.11045677
+  verified_on: '2026-11-19'
+  claims:
+  - text: Presents a model of the reluctance to report negative project news and tests it in an experiment
+      manipulating the impact of project failure if the individual stays silent and the level of observed
+      wrongdoing; the factors explained a significant portion of the variance in reluctance to report,
+      with some differences between internal and external reporting.
+    basis: abstract
+  caveats: Experimental study; the abstract does not give sample, effect sizes, or setting details. Full
+    text paywalled, not read.
+- id: park2008mum
+  type: journal-article
+  title: 'Overcoming the Mum Effect in IT Project Reporting: Impacts of Fault Responsibility and Time
+    Urgency'
+  authors:
+  - ChongWoo Park
+  - Ghiyoung P. Im
+  - Mark Keil
+  year: 2008
+  venue: Journal of the Association for Information Systems, vol. 9, no. 7, pp. 409-431
+  doi: 10.17705/1jais.00163
+  url: https://aisel.aisnet.org/jais/vol9/iss7/1
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=Overcoming+the+mum+effect+in+IT+project+reporting
+  - https://api.openalex.org/works/doi:10.17705/1jais.00163
+  verified_on: '2026-11-19'
+  claims:
+  - text: Defines the mum effect as a project member's reluctance to report bad news about a troubled
+      project and describes it as recognized as an important contributor to project failure.
+    basis: abstract
+  - text: In a controlled laboratory experiment, fault responsibility and time urgency both affected willingness
+      to report bad news (fault responsibility directly and indirectly, time urgency only indirectly);
+      the authors suggest managers may raise willingness to report by stressing that the window to correct
+      defects before delivery is narrow.
+    basis: abstract
+  caveats: Laboratory experiment; the abstract does not describe the participants. The book uses only
+    the definition and the direction of the findings.
+- id: keil2014pitfalls
+  type: magazine-article
+  title: The Pitfalls of Project Status Reporting
+  authors:
+  - Mark Keil
+  - H. Jeff Smith
+  - Charalambos L. Iacovou
+  - Ronald L. Thompson
+  year: 2014
+  venue: MIT Sloan Management Review (Spring 2014)
+  url: https://sloanreview.mit.edu/article/the-pitfalls-of-project-status-reporting
+  evidence_class: scholarly
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://sloanreview.mit.edu/article/the-pitfalls-of-project-status-reporting
+  verified_on: '2026-11-19'
+  claims:
+  - text: The authors summarize about 14 studies they took part in over roughly 15 years (interviews,
+      surveys, and laboratory experiments) on how project status is reported.
+    basis: full-text
+  - text: Reviewing the records of 56 experienced software project managers, they report that the managers'
+      status reports were biased 60 percent of the time.
+    basis: full-text
+  - text: They advise executives not to rely on one report but to solicit the views of others close to
+      the project and look for corroboration.
+    basis: full-text
+  - text: They report that aggressive auditing can backfire into a cycle of distrust and more misreporting,
+      and that trust in supervisors was associated with willingness to report problems.
+    basis: full-text
+  - text: They report that executive sponsorship of a project can make employees less candid, and suggest
+      pairing powerful sponsors with powerful project managers.
+    basis: full-text
+  - text: They report that senior executives sometimes ignore bad news that is reported, and that reporters
+      without an official platform are more likely to be ignored.
+    basis: full-text
+  caveats: A practitioner-facing summary by the researchers of their own studies, several with student
+    or single-agency samples; generalization needs caution. Read through a summarizing fetcher; the two
+    short phrases checked verbatim were the 56 managers and the 60 percent figure.
+- id: bezos2017letter
+  type: web-guide
+  title: 2017 Letter to Shareholders
+  authors:
+  - Jeff Bezos
+  year: 2018
+  venue: About Amazon
+  url: https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - url
+  verified_via:
+  - https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders
+  verified_on: '2026-11-19'
+  claims:
+  - text: The letter states that Amazon does not use slide presentations in meetings but narratively structured
+      six-page memos, read silently by attendees at the start of each meeting.
+    basis: full-text
+  - text: It argues that weak memos often come from underestimating the scope of the work, that a great
+      memo can take a week or more with rewriting and feedback from colleagues, and that high standards
+      in a domain must be recognized and coached explicitly.
+    basis: full-text
+  caveats: One company's chief executive describing his own company's practice (documented practice, not
+    research). Page byline Amazon Staff, published April 18, 2018; the letter is signed by Jeff Bezos.
+    The six-page memo practice is in the 2017 letter, not the 2016 letter (bezos2016letter).
+- id: minto2002pyramid
+  type: book
+  title: The Pyramid Principle
+  subtitle: Logic in Writing and Thinking
+  authors:
+  - Barbara Minto
+  year: 2002
+  publisher: Pearson Education Ltd.
+  isbn13: '9780273659037'
+  url: https://openlibrary.org/works/OL3012477W
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - subtitle
+  - authors
+  - year
+  - isbn13
+  verified_via:
+  - https://openlibrary.org/search.json?q=minto+pyramid+principle
+  - https://openlibrary.org/isbn/9780273659037.json
+  - https://www.barbaraminto.com/
+  verified_on: '2026-11-19'
+  claims:
+  - text: Known for the idea that writing is easiest to grasp when the ideas are organized as a pyramid
+      under a single governing point, stated first, with supporting ideas grouped beneath it (idea level
+      only; the author's site states the principle in these terms).
+    basis: metadata (idea credited only)
+  caveats: Metadata only; credited for the idea it is known for. First published 1978 per Open Library;
+    the 2002 edition (ISBN 9780273659037) is the one verified. Publisher on the edition record is Pearson
+    Education Ltd.
+- id: floyd1992middle
+  type: journal-article
+  title: 'Middle management involvement in strategy and its association with strategic type: A research
+    note'
+  authors:
+  - Steven W. Floyd
+  - Bill Wooldridge
+  year: 1992
+  venue: Strategic Management Journal, vol. 13, no. S1, pp. 153-167
+  doi: 10.1002/smj.4250131012
+  url: https://doi.org/10.1002/smj.4250131012
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1002/smj.4250131012
+  - https://api.openalex.org/works?search=middle%20management%20involvement%20in%20strategy%20and%20its%20association%20with%20strategic%20type
+  verified_on: '2026-11-19'
+  claims:
+  - text: A study of the strategic involvement of 259 middle managers in 25 organizations, which develops
+      a typology of middle management roles in strategy from earlier clinical research and derives measures
+      for each role.
+    basis: abstract
+  - text: Middle managers in Prospector firms (in Miles and Snow's typology) reported significantly higher
+      levels of upward and divergent forms of strategic involvement than those in Analyzers and Defenders.
+    basis: abstract
+  caveats: Abstract read from the OpenAlex record (Crossref has no abstract); the publisher page was not
+    fetched. The names of the four roles in the typology are not in the abstract and are not used. Self-reported
+    survey data; not a software setting; early 1990s.
+  access_notes: Abstract only. A 1993 Long Range Planning record with the same title appears in OpenAlex;
+    the SMJ 1992 research note is the one cited.
+- id: floyd1997middle
+  type: journal-article
+  title: Middle Management's Strategic Influence and Organizational Performance
+  authors:
+  - Steven W. Floyd
+  - Bill Wooldridge
+  year: 1997
+  venue: Journal of Management Studies, vol. 34, no. 3, pp. 465-485
+  doi: 10.1111/1467-6486.00059
+  url: https://doi.org/10.1111/1467-6486.00059
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1111/1467-6486.00059
+  - https://api.openalex.org/works?search=middle%20management%27s%20strategic%20influence%20and%20organizational%20performance
+  verified_on: '2026-11-19'
+  claims:
+  - text: Among 259 middle managers, those in boundary-spanning sub-units reported more strategic influence
+      activity than others.
+    basis: abstract
+  - text: At the organizational level, firm performance was associated with more uniform levels of downward
+      strategic influence and more varied levels of upward influence among middle management cohorts.
+    basis: abstract
+  - text: The authors interpret middle managers' strategic influence as arising from their ability to
+      mediate between internal and external selection environments.
+    basis: abstract
+  caveats: Abstract read in Crossref and OpenAlex; full text not read. Same 259-manager sample as the
+    1992 note. Associations, not causal effects; self-reported influence; not a software setting.
+- id: wooldridge2008middle
+  type: journal-article
+  title: 'The Middle Management Perspective on Strategy Process: Contributions, Synthesis, and Future
+    Research'
+  authors:
+  - Bill Wooldridge
+  - Torsten Schmid
+  - Steven W. Floyd
+  year: 2008
+  venue: Journal of Management, vol. 34, no. 6, pp. 1190-1221
+  doi: 10.1177/0149206308324326
+  url: https://doi.org/10.1177/0149206308324326
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1177/0149206308324326
+  - https://api.openalex.org/works?search=the%20middle%20management%20perspective%20on%20strategy%20process
+  verified_on: '2026-11-19'
+  claims:
+  - text: A review of about 25 years of strategic management research on middle managers' contributions,
+      which it describes as diverse in focal constructs and relationships, and which it organizes to identify
+      the main constructs, relationships, and contributions.
+    basis: abstract
+  caveats: Abstract only; the review's conclusions and framework were not read and are not used.
+- id: milliken2003silence
+  type: journal-article
+  title: 'An Exploratory Study of Employee Silence: Issues that Employees Don''t Communicate Upward and
+    Why'
+  authors:
+  - Frances J. Milliken
+  - Elizabeth W. Morrison
+  - Patricia F. Hewlin
+  year: 2003
+  venue: Journal of Management Studies, vol. 40, no. 6, pp. 1453-1476
+  doi: 10.1111/1467-6486.00387
+  url: https://doi.org/10.1111/1467-6486.00387
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1111/1467-6486.00387
+  - https://api.openalex.org/works?search=an%20exploratory%20study%20of%20employee%20silence
+  verified_on: '2026-11-19'
+  claims:
+  - text: In interviews with 40 employees, most had been in situations where they were concerned about
+      an issue but did not raise it with a supervisor; the silence spanned a range of organizational issues.
+    basis: abstract
+  - text: The most frequently mentioned reason for staying silent was fear of being viewed or labeled
+      negatively and so damaging valued relationships.
+    basis: abstract
+  caveats: Exploratory and qualitative, 40 interviewees; abstract only. Says nothing about how often silence
+    occurs in software organizations or about remedies.
+- id: mintzberg1990job
+  type: magazine-article
+  title: 'The Manager''s Job: Folklore and Fact'
+  authors:
+  - Henry Mintzberg
+  year: 1990
+  venue: Harvard Business Review, March-April 1990 (HBR Classic; first published in HBR in 1975)
+  url: https://hbr.org/1990/03/the-managers-job-folklore-and-fact
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://hbr.org/1990/03/the-managers-job-folklore-and-fact
+  verified_on: '2026-11-19'
+  claims:
+  - text: Credited at idea level only for its widely known argument that managers' actual work is brief,
+      fragmented, interrupted, and mostly verbal, unlike the folklore of a manager who plans, organizes,
+      coordinates, and controls.
+    basis: metadata (idea credited only)
+  caveats: Paywalled; only the title, author, issue, and opening sentence were visible. The 1975 original
+    publication was not verified on a fetched page in this session (the 1990 page is a reprint); evidence_class
+    reflects the observational research the article summarizes, which was not read. No findings or figures
+    are used.
+- id: gitlab-skip-level
+  type: web-guide
+  title: Managing Effective Skip Level Meetings | The GitLab Handbook
+  authors:
+  - GitLab
+  year: 2026
+  venue: The GitLab Handbook (Create stage engineering page)
+  url: https://handbook.gitlab.com/handbook/engineering/devops/create/engineers/skip-level/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://handbook.gitlab.com/handbook/engineering/devops/create/engineers/skip-level/
+  verified_on: '2026-11-19'
+  claims:
+  - text: The page describes skip-level meetings run by a senior manager with engineers two levels down,
+      giving as purposes feedback from team members, praise, coaching, and learning about the team's health
+      (morale, internal processes, results) from a perspective other than the manager's.
+    basis: full-text
+  - text: Feedback from the meetings is shared with the engineer's manager by default; an engineer with
+      a sensitive topic can ask for a separate confidential meeting.
+    basis: full-text
+  - text: Engineers prepare by filling in a written template with questions such as the biggest challenge
+      facing the team and what they would change in the senior manager's position.
+    basis: full-text
+  caveats: One stage's template in a living company handbook, not a company-wide policy or evidence of
+    effect. No date was visible on the page; year is the access year, following gitlab2026engineering.
+    Licence of the handbook text is unclear (see gitlab2026engineering); paraphrase only.
+- id: lacerenza2017leadership
+  type: journal-article
+  title: 'Leadership training design, delivery, and implementation: A meta-analysis'
+  authors:
+  - Christina N. Lacerenza
+  - Denise L. Reyes
+  - Shannon L. Marlow
+  - Dana L. Joseph
+  - Eduardo Salas
+  year: 2017
+  venue: Journal of Applied Psychology, vol. 102, no. 12, pp. 1686-1718
+  doi: 10.1037/apl0000241
+  url: https://doi.org/10.1037/apl0000241
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/apl0000241
+  - https://api.openalex.org/works/doi:10.1037/apl0000241
+  verified_on: '2026-11-19'
+  claims:
+  - text: A meta-analysis of 335 independent samples estimated the effectiveness of leadership training
+      across four criteria (reactions, learning, transfer, results) and examined 15 moderators of design
+      and delivery.
+    basis: abstract
+  - text: Leadership training was substantially more effective than previously thought, improving reactions
+      (delta = .63), learning (.73), transfer (.82), and results (.72), with effects varying by design,
+      delivery, and implementation.
+    basis: abstract
+  - text: Moderator analyses support needs analysis, feedback, multiple delivery methods (especially practice),
+      spaced sessions, an on-site location, and face-to-face delivery that is not self-administered; content,
+      attendance policy, and duration also influenced effectiveness.
+    basis: abstract
+  caveats: Abstract only (Crossref holds no abstract; it was read from the OpenAlex record). Covers formal
+    leadership training programs, not on-the-job coaching by a manager's own boss; settings are not specific
+    to software. Effect sizes are as reported in the abstract; the correction method was not read.
+  access_notes: APA PsycNet page not fetched; Semantic Scholar elides the abstract at the publisher's
+    request.
+- id: day2014advances
+  type: journal-article
+  title: 'Advances in leader and leadership development: A review of 25 years of research and theory'
+  authors:
+  - David V. Day
+  - John W. Fleenor
+  - Leanne E. Atwater
+  - Rachel E. Sturm
+  - Rob A. McKee
+  year: 2014
+  venue: The Leadership Quarterly, vol. 25, no. 1, pp. 63-82
+  doi: 10.1016/j.leaqua.2013.11.004
+  url: https://doi.org/10.1016/j.leaqua.2013.11.004
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1016/j.leaqua.2013.11.004
+  - https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.leaqua.2013.11.004?fields=title,abstract,year,venue
+  verified_on: '2026-11-19'
+  claims:
+  - text: The review covers 25 years of theoretical and empirical literature on leader and leadership
+      development, primarily research published in The Leadership Quarterly.
+    basis: abstract
+  - text: Compared with the long history of leadership research, the systematic study of leadership development
+      has a moderately short history.
+    basis: abstract
+  - text: The review emphasizes multi-source (360-degree) feedback processes in how development emerges,
+      reviews longitudinal studies of leadership development, and discusses methodological issues.
+    basis: abstract
+  caveats: A narrative review drawing mainly on one journal; used only for its framing of the field, not
+    for any specific finding. Abstract read via Semantic Scholar's record; the publisher page was not
+    fetched.
+- id: smither2005multisource
+  type: journal-article
+  title: Does performance improve following multisource feedback? A theoretical model, meta-analysis,
+    and review of empirical findings
+  authors:
+  - James W. Smither
+  - Manuel London
+  - Richard R. Reilly
+  year: 2005
+  venue: Personnel Psychology, vol. 58, no. 1, pp. 33-66
+  doi: 10.1111/j.1744-6570.2005.514_1.x
+  url: https://doi.org/10.1111/j.1744-6570.2005.514_1.x
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1111/j.1744-6570.2005.514_1.x
+  verified_on: '2026-11-19'
+  claims:
+  - text: A meta-analysis of 24 longitudinal studies found that improvement in direct report, peer, and
+      supervisor ratings over time after multisource feedback is generally small.
+    basis: abstract
+  - text: The authors' framework and review suggest improvement is more likely when feedback indicates
+      change is necessary, recipients have a positive feedback orientation, perceive a need to change,
+      react positively, believe change is feasible, set appropriate goals, and take action.
+    basis: abstract
+  caveats: Abstract only (read from the publisher-supplied Crossref record). The moderators are a theoretical
+    framework supported by a review, not all tested meta-analytically. Not specific to software or engineering
+    managers.
+  access_notes: Wiley page not fetched.
+- id: yukl1992consequences
+  type: journal-article
+  title: Consequences of influence tactics used with subordinates, peers, and the boss
+  authors:
+  - Gary Yukl
+  - J. Bruce Tracey
+  year: 1992
+  venue: Journal of Applied Psychology 77(4), pp. 525-535
+  doi: 10.1037/0021-9010.77.4.525
+  url: https://doi.org/10.1037/0021-9010.77.4.525
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0021-9010.77.4.525
+  - https://api.openalex.org/works/doi:10.1037/0021-9010.77.4.525
+  verified_on: '2026-11-19'
+  claims:
+  - text: A field study related managers' use of nine influence tactics to target task commitment and
+      the managers' effectiveness, measured by questionnaires completed by each manager's subordinates,
+      peers, and boss.
+    basis: abstract
+  - text: The most effective tactics were rational persuasion, inspirational appeal, and consultation;
+      the least effective were pressure, coalition, and legitimating.
+    basis: abstract
+  - text: Ingratiation and exchange were moderately effective with subordinates and peers but not effective
+      with superiors.
+    basis: abstract
+  - text: Coalitions were used most in lateral and upward directions, rational persuasion most in an upward
+      direction, and personal appeal, exchange, and legitimating most in a lateral direction.
+    basis: abstract
+  caveats: Abstract only (Crossref has no abstract; the abstract was read from the OpenAlex record). Questionnaire
+    data, correlational, one field study; sample size not read. "Coalition" here means enlisting others
+    to pressure or persuade the target, which the chapter distinguishes from building a shared proposal
+    with peers.
+  access_notes: Metadata from Crossref (issued August 1992). APA PsycNET page not fetched.
+- id: higgins2003influence
+  type: journal-article
+  title: 'Influence tactics and work outcomes: a meta-analysis'
+  authors:
+  - Chad A. Higgins
+  - Timothy A. Judge
+  - Gerald R. Ferris
+  year: 2003
+  venue: Journal of Organizational Behavior 24(1), pp. 89-106
+  doi: 10.1002/job.181
+  url: https://doi.org/10.1002/job.181
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1002/job.181
+  verified_on: '2026-11-19'
+  claims:
+  - text: A meta-analysis estimating population correlations between influence tactics and work-related
+      outcomes found that ingratiation and rationality had positive effects on work outcomes.
+    basis: abstract
+  - text: Additional analyses suggested that these and other tactics had significant effects in certain
+      situations and on specific outcomes.
+    basis: abstract
+  caveats: Abstract only; number of studies and effect sizes not read. The outcomes are mainly career
+    and evaluation outcomes for the influencer (for example performance assessments), not whether a proposal
+    was adopted. Crossref gives online publication 12 December 2002; volume 24 issue 1 is the 2003 issue,
+    and the copyright line in the abstract says 2003, so year is the print year and is not in verified_fields.
+- id: crawford2019link
+  type: journal-article
+  title: To link or not to link? Multiple team membership and unit performance
+  authors:
+  - Eean R. Crawford
+  - Cody J. Reeves
+  - Greg L. Stewart
+  - Stacy L. Astrove
+  year: 2019
+  venue: Journal of Applied Psychology 104(3), pp. 341-356
+  doi: 10.1037/apl0000381
+  url: https://doi.org/10.1037/apl0000381
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/apl0000381
+  - https://api.openalex.org/works?search=multiple%20team%20membership%20team%20performance%20Bertolotti&per-page=3
+  verified_on: '2026-11-19'
+  claims:
+  - text: Using data from 849 primary care units of the Veterans Health Administration serving over 4.2
+      million patients, the authors found multiple team membership (people belonging to several teams
+      at once) negatively associated with unit performance.
+    basis: abstract
+  - text: The negative relationship was stronger when task complexity was higher.
+    basis: abstract
+  caveats: Abstract only; health-care units, not software; observational. The chapter uses it as indirect
+    support for limiting how many initiatives one person or team is spread across, labeled as an extension
+    to a different setting.
+- id: fisher1981getting
+  type: book
+  title: Getting to Yes
+  subtitle: Negotiating Agreement Without Giving In
+  authors:
+  - Roger Fisher
+  - William Ury
+  year: 1981
+  publisher: Houghton Mifflin
+  isbn10: 0395317576
+  url: https://openlibrary.org/isbn/0395317576
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - subtitle
+  - year
+  - publisher
+  verified_via:
+  - https://openlibrary.org/isbn/0395317576.json
+  - https://openlibrary.org/isbn/0140157352.json
+  - https://openlibrary.org/search.json?q=getting+to+yes+fisher+ury
+  verified_on: '2026-11-19'
+  claims: []
+  caveats: Metadata only. Credited only for its widely known idea of principled negotiation (separate
+    the people from the problem, focus on interests rather than positions, invent options for mutual gain,
+    insist on objective criteria) and the notion of a best alternative to a negotiated agreement. No quotation
+    or finding.
+  access_notes: The 1981 Houghton Mifflin record has no statement of responsibility; authorship (Fisher
+    and Ury, with Bruce Patton) is from the 1991 Penguin second-edition record ("by Roger Fisher and William
+    Ury, with Bruce Patton, editor") and the Open Library work record, so authors are not in verified_fields
+    for the first edition.
+- id: cohen1990influence
+  type: book
+  title: Influence Without Authority
+  authors:
+  - Allan R. Cohen
+  - David L. Bradford
+  year: 1990
+  publisher: John Wiley & Sons
+  isbn10: 0471622680
+  url: https://openlibrary.org/works/OL4313915W
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - publisher
+  verified_via:
+  - https://openlibrary.org/works/OL4313915W/editions.json?limit=10
+  - https://openlibrary.org/isbn/0471548944.json
+  verified_on: '2026-11-19'
+  claims: []
+  caveats: Metadata only. Credited only for its widely known idea that influence among peers works as
+    exchange, offering things the other party values (often called "currencies") in return for cooperation.
+    Later editions 2005 and 2017.
+  access_notes: Open Library lists a 1990 J. Wiley edition (ISBN 0471622680) with statement of responsibility
+    "Allan R. Cohen, David L. Bradford"; other 1991 printings exist.
+- id: hughes2011seventy
+  type: journal-article
+  title: Do 70 Per Cent of All Organizational Change Initiatives Really Fail?
+  authors:
+  - Mark Hughes
+  year: 2011
+  venue: Journal of Change Management, vol. 11, no. 4, pp. 451-464
+  doi: 10.1080/14697017.2011.630506
+  url: https://doi.org/10.1080/14697017.2011.630506
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1080/14697017.2011.630506
+  - https://api.openalex.org/works/doi:10.1080/14697017.2011.630506
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article critically reviews five separate published instances that identify a 70 per cent
+      organizational-change failure rate and finds, in each, no valid and reliable empirical evidence
+      for the figure.
+    basis: abstract
+  - text: It questions inherent change failure rates on the grounds of the ambiguity of change, its context
+      dependence, competing perceptions, timing, and measurability, and concludes that the popular narrative
+      of 70 per cent failure has no valid and reliable empirical support.
+    basis: abstract
+  caveats: Abstract read from the OpenAlex record (Crossref carries none; the publisher page returned
+    403). The five reviewed instances are not named here because the abstract does not name them. The
+    article shows the figure is unsupported; it does not establish any other failure rate.
+- id: kotter1995leading
+  type: magazine-article
+  title: 'Leading Change: Why Transformation Efforts Fail'
+  authors:
+  - John P. Kotter
+  year: 1995
+  venue: Harvard Business Review, March-April 1995
+  url: https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2
+  evidence_class: practitioner
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article's opening says the author watched more than 100 companies try to remake themselves
+      into significantly better competitors, under banners such as total quality management, reengineering,
+      restructuring, cultural change, and turnaround.
+    basis: official-summary
+  - text: The article is widely known for a sequence of errors that undermine transformation efforts,
+      among them not establishing enough urgency, not creating a powerful guiding coalition, not planning
+      for short-term wins, declaring victory too soon, and not anchoring changes in the culture (idea
+      level only; the body of the article was not read).
+    basis: official-summary
+  caveats: Only the opening of the article was accessible. It is a practitioner account based on the author's
+    observation, not a study with a stated method. The list of errors is credited at idea level and not
+    quoted. The later book (Leading Change, 1996) was not consulted.
+- id: kim2004removing
+  type: journal-article
+  title: 'Removing the Shadow of Suspicion: The Effects of Apology Versus Denial for Repairing Competence-
+    Versus Integrity-Based Trust Violations'
+  authors:
+  - Peter H. Kim
+  - Donald L. Ferrin
+  - Cecily D. Cooper
+  - Kurt T. Dirks
+  year: 2004
+  venue: Journal of Applied Psychology, vol. 89, no. 1, pp. 104-118
+  doi: 10.1037/0021-9010.89.1.104
+  url: https://doi.org/10.1037/0021-9010.89.1.104
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works?search=Removing%20the%20shadow%20of%20suspicion%20apology%20denial%20repair%20competence%20integrity%20trust%20violations
+  verified_on: '2026-11-19'
+  claims:
+  - text: In two studies, trust was repaired more successfully when the mistrusted party apologized for
+      a violation concerning competence but denied culpability for a violation concerning integrity.
+    basis: abstract
+  - text: Trust was also repaired more successfully when the party had apologized and later evidence showed
+      guilt, or had denied and later evidence showed innocence.
+    basis: abstract
+  caveats: Abstract only; samples, settings, and effect sizes were not read, so none are reported. These
+    are experimental studies of an alleged violation, not field studies of managers after a failed initiative;
+    the transfer to a director's failed change is this book's inference.
+- id: staw1976knee
+  type: journal-article
+  title: 'Knee-deep in the big muddy: a study of escalating commitment to a chosen course of action'
+  authors:
+  - Barry M. Staw
+  year: 1976
+  venue: Organizational Behavior and Human Performance, vol. 16, no. 1, pp. 27-44
+  doi: 10.1016/0030-5073(76)90005-2
+  url: https://doi.org/10.1016/0030-5073(76)90005-2
+  evidence_class: scholarly
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1016/0030-5073(76)90005-2
+  - https://api.openalex.org/works?search=Knee-deep%20in%20the%20big%20muddy%20escalating%20commitment%20chosen%20course%20of%20action
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article is known for introducing escalation of commitment, the tendency to commit further
+      resources to a failing course of action one chose oneself (idea level only).
+    basis: metadata (idea credited only)
+  caveats: Metadata only; the publisher page returned 403 and no abstract was available for the 1976 article,
+    so no finding, sample, or effect is reported.
+- id: weick1984small
+  type: journal-article
+  title: 'Small wins: Redefining the scale of social problems'
+  authors:
+  - Karl E. Weick
+  year: 1984
+  venue: American Psychologist, vol. 39, no. 1, pp. 40-49
+  doi: 10.1037/0003-066X.39.1.40
+  url: https://doi.org/10.1037/0003-066X.39.1.40
+  evidence_class: scholarly
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0003-066X.39.1.40
+  verified_on: '2026-11-19'
+  claims:
+  - text: The article is known for arguing that recasting large problems as a series of small, concrete,
+      completed outcomes ("small wins") makes them more tractable and builds momentum (idea level only).
+    basis: metadata (idea credited only)
+  caveats: Metadata only; no abstract was available through Crossref, OpenAlex, or Semantic Scholar, and
+    the APA page did not render. It is an essay, not an empirical study.

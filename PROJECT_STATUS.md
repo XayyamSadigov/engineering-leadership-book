@@ -1,10 +1,10 @@
 # Project status
 
-Last updated: 2026-11-20 (session 3: waves 2–4).
+Last updated: 2026-11-20 (session 3: waves 2–5).
 
-**Summary.** 36 of 60 chapters (Parts I–VII, chapters 1–36) are written and on the site in `review`
+**Summary.** 43 of 60 chapters (Parts I–IX, chapters 1–43), nine of 20 templates, and two of eight projects are written and on the site in `review`
 status. Each passed automated validation and an independent cross-chapter review; none has had human
-review. **24 chapters, 16 templates, 8 projects, and the capstone are not written.**
+review. **17 chapters, 11 templates, 6 projects, and the capstone are not written.**
 
 Published at https://github.com/XayyamSadigov/engineering-leadership-handbook (public) with the site at
 https://xayyamsadigov.github.io/engineering-leadership-handbook/. Both workflows passed on the first
@@ -16,17 +16,18 @@ replace it with a repository-scoped fine-grained token.
 
 | Area | State |
 |---|---|
-| Chapters | 1–36, each with a solutions file (288 exercises). Status `review` |
-| Templates | Engineering quality scorecard, technical debt register, incident review, 90-day quality plan. Status `review` |
-| Bibliography | 293 entries, all verified |
-| Research documents | research plan, reference analysis, source evaluation, evidence matrix (chapters 1–36), research gaps (38 open, 3 closed), disputed claims D1–D8 (positions taken on all), human review checklist, quality report |
-| Northstar canon | `index.md`; `baseline-data.md` with extended baseline (standards, debt, tests and pipeline, reliability, incidents, security, management and roles, planning and delivery, locations, people, hiring, levels and pay, architecture and estate, dependency causes); `first-quarter.md` (decisions incl. renewal dates, timeline, day 90, starting points for quarter 2, year-2 proposal); three CSV files |
-| Single-file edition | `dist/ENGINEERING_LEADERSHIP_HANDBOOK.md`, about 327,000 words |
+| Chapters | 1–43, each with a solutions file (344 exercises). Status `review` |
+| Templates | t03 EM rubric, t04 director matrix, t07 org design assessment, t08 quality scorecard, t09 debt register, t10 incident review, t13 quarterly review, t14 capacity model, t20 90-day plan. Status `review` |
+| Projects | P3 quality transformation plan, P4 redesign of an 80-engineer organization, each with a worked solution. Status `review` |
+| Bibliography | 329 entries, all verified |
+| Research documents | research plan, reference analysis, source evaluation, evidence matrix (chapters 1–43), research gaps (43 open, 3 closed), disputed claims D1–D8 (positions taken on all), human review checklist, quality report |
+| Northstar canon | `index.md`; `baseline-data.md` with extended baseline (standards, debt, tests and pipeline, reliability, incidents, security, management and roles, planning and delivery, locations, people, hiring, levels and pay, architecture and estate, dependency causes); `first-quarter.md` (decisions incl. renewal dates, timeline, day 90, starting points for quarter 2, quarter 2 results, quarter 3, year-2 proposal); three CSV files |
+| Single-file edition | `dist/ENGINEERING_LEADERSHIP_HANDBOOK.md`, about 405,000 words |
 
 ## Validation results (2026-11-20)
 
 - `python tools/validate_book.py --build`: **passed**, no warnings.
-- `tools/render_diagrams.py`: 98 of 98 render. Diagrams of chapters 1–18 and 28–36 measured at 390 px; chapters 19–27 checked visually.
+- `tools/render_diagrams.py`: 118 of 118 render. Diagrams of chapters 1–18 and 28–43 measured at 390 px; chapters 19–27 checked visually.
 - `ruff check tools`: clean.
 - GitHub Actions have **not** run (no repository).
 
@@ -48,16 +49,19 @@ replace it with a repository-scoped fine-grained token.
 5. Maintainer fixes the canon first, then parallel fixers on disjoint files; validate again.
 6. Commit (noreply author, no AI attribution) and push; check both workflows.
 7. Never change a decision already sent to parallel authors while they are working: messages arrive
-   late and each reversal creates a new round of divergence. Decide once, early.
+   late and each reversal creates a new round of divergence. Decide once, early. When authors share a
+   fact (a calendar, a count), name its owner chapter in the brief and send one FINAL rule to all of
+   them if they diverge.
 
 ## Next concrete tasks, in order
 
 1. **Human review** (priorities in `research/quality-report.md`).
-2. **Wave 5: Parts VIII and IX (37–43)** with templates t03, t04, t07, t13, t14.
-3. **Projects 3 and 4** (quality transformation plan; redesign an 80-engineer organization): all inputs
-   now exist (chapters 27, 33–36).
-4. Wave 6: Parts X and XI (44–49). Wave 7: Part XII (50–55). Wave 8: Part XIII (56–59), remaining
-   templates and projects, capstone (60).
+2. **Wave 6: Parts X and XI (44–49)** with templates t15 (engineering strategy), t16 (investment
+   business case), t17 (stakeholder map), t18 (executive update), and projects P1 (operating system,
+   chapter 37), P5 (scorecard, chapter 38), P6 (manager development and succession, chapters 36, 41).
+3. Wave 7: Part XII (50–55) with t05 (CTO matrix), t11 (risk register), t12 (ADR), P7, P8.
+4. Wave 8: Part XIII (56–59), t01, t02, t06, t19, P2, capstone (60).
+5. Waves of nine agents reach the 5-hour usage limit; resume agents with SendMessage after the reset.
 6. Backlog: PDF and EPUB builds; external link checker; a script that recomputes Northstar aggregates
    from the CSVs during validation; convert plain-text references to now-live chapters into links.
 

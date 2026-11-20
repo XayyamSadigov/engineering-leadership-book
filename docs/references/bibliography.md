@@ -5,7 +5,7 @@
 
 Every source the book cites, with what was verified and how much of the source was actually read when the entry was created. An entry marked *bibliographic metadata only* means the citation details were checked against a publisher or catalog page; it does not mean the work was read in full for this project. Chapters cite by linking to the anchors on this page.
 
-293 entries. Grouped by evidence class, then alphabetically by id.
+329 entries. Grouped by evidence class, then alphabetically by id.
 
 ## Scholarly research
 
@@ -43,6 +43,17 @@ Tammy D. Allen et al. (2004). “Career Benefits Associated With Mentoring for P
 - Supports (abstract): Findings were generally supportive of benefits, but effect sizes for objective outcomes were small.
 - Supports (abstract): Outcomes differed somewhat in how strongly they related to the type of mentoring provided, career or psychosocial.
 - Caveats: Correlational primary studies; mentored people may differ from non-mentored ones before mentoring starts. Abstract read through OpenAlex (abstract index), not the publisher page.
+
+### allen2013manager {#allen2013manager}
+
+Joseph A. Allen, and Steven G. Rogelberg (2013). “Manager-Led Group Meetings: A Context for Promoting Employee Engagement”. Group & Organization Management, vol. 38, no. 5, pp. 543-569.
+
+- DOI: [10.1177/1059601113503040](https://doi.org/10.1177/1059601113503040) · <https://doi.org/10.1177/1059601113503040>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Two time-separated internet surveys of 319 working adults found that the psychological conditions for engagement mediated the relationship between managers' use and facilitation of meetings and overall employee engagement.
+- Supports (abstract): Making workgroup meetings relevant, allowing employee voice, and managing the meeting's time were associated with higher engagement.
+- Caveats: Self-report and correlational; general working population. Abstract only.
 
 ### anandayuvaraj2026learning {#anandayuvaraj2026learning}
 
@@ -310,6 +321,17 @@ Lyra J. Colfer, and Carliss Y. Baldwin (2016). “The mirroring hypothesis: theo
 - Supports (abstract): Firms can strategically break the mirror with modular partitions inside their boundaries or relational contracts across them; studies of open collaborative projects, most of them software, were not supportive of the hypothesis.
 - Caveats: Abstract only (from the Crossref record). A narrative review; study-level details and counts per category not read.
 
+### crawford2019link {#crawford2019link}
+
+Eean R. Crawford, Cody J. Reeves, Greg L. Stewart, and Stacy L. Astrove (2019). “To link or not to link? Multiple team membership and unit performance”. Journal of Applied Psychology 104(3), pp. 341-356.
+
+- DOI: [10.1037/apl0000381](https://doi.org/10.1037/apl0000381) · <https://doi.org/10.1037/apl0000381>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Using data from 849 primary care units of the Veterans Health Administration serving over 4.2 million patients, the authors found multiple team membership (people belonging to several teams at once) negatively associated with unit performance.
+- Supports (abstract): The negative relationship was stronger when task complexity was higher.
+- Caveats: Abstract only; health-care units, not software; observational. The chapter uses it as indirect support for limiting how many initiatives one person or team is spread across, labeled as an extension to a different setting.
+
 ### cullen2023equilibrium {#cullen2023equilibrium}
 
 Zoë B. Cullen, and Bobak Pakzad-Hurson (2023). “Equilibrium Effects of Pay Transparency”. Econometrica, vol. 91, no. 3, pp. 765-802.
@@ -332,6 +354,18 @@ Jason Dana, Robyn Dawes, and Nathanial Peterson (2013). “Belief in the unstruc
 - Supports (full-text): Adding an unstructured interview to background information made predictions less accurate than the background information alone (dilution).
 - Supports (full-text): Most participants said they would rather have a random interview than no interview; the authors recommend that those making screening decisions not use unstructured interviews.
 - Caveats: Student participants, a grade-prediction task, and small samples (76, 64, and 169 participants); not an employment setting. The chapter uses it for the mechanism (sensemaking and dilution), not for an effect size.
+
+### day2014advances {#day2014advances}
+
+David V. Day et al. (2014). “Advances in leader and leadership development: A review of 25 years of research and theory”. The Leadership Quarterly, vol. 25, no. 1, pp. 63-82.
+
+- DOI: [10.1016/j.leaqua.2013.11.004](https://doi.org/10.1016/j.leaqua.2013.11.004) · <https://doi.org/10.1016/j.leaqua.2013.11.004>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The review covers 25 years of theoretical and empirical literature on leader and leadership development, primarily research published in The Leadership Quarterly.
+- Supports (abstract): Compared with the long history of leadership research, the systematic study of leadership development has a moderately short history.
+- Supports (abstract): The review emphasizes multi-source (360-degree) feedback processes in how development emerges, reviews longitudinal studies of leadership development, and discusses methodological issues.
+- Caveats: A narrative review drawing mainly on one journal; used only for its framing of the field, not for any specific finding. Abstract read via Semantic Scholar's record; the publisher page was not fetched.
 
 ### decan2018impact {#decan2018impact}
 
@@ -473,6 +507,29 @@ Will Felps, Terence R. Mitchell, and Eliza Byington (2006). “How, When, and Wh
 - Supports (abstract): It defines the negative member as someone who withholds effort, expresses negative affect, or violates important interpersonal norms.
 - Supports (abstract): It proposes that teammates react with perceptions of inequity, negative mood, and reduced trust, leading to defensive responses (such as lashing out, mood maintenance, or withdrawal) that affect group outcomes such as cooperation and creativity, and it discusses moderators and mitigating actions.
 - Caveats: Theoretical review; the 30 to 40 percent figure attributed to this paper in press coverage comes from a separate experiment and was not verified here, so the book does not use it.
+
+### floyd1992middle {#floyd1992middle}
+
+Steven W. Floyd, and Bill Wooldridge (1992). “Middle management involvement in strategy and its association with strategic type: A research note”. Strategic Management Journal, vol. 13, no. S1, pp. 153-167.
+
+- DOI: [10.1002/smj.4250131012](https://doi.org/10.1002/smj.4250131012) · <https://doi.org/10.1002/smj.4250131012>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A study of the strategic involvement of 259 middle managers in 25 organizations, which develops a typology of middle management roles in strategy from earlier clinical research and derives measures for each role.
+- Supports (abstract): Middle managers in Prospector firms (in Miles and Snow's typology) reported significantly higher levels of upward and divergent forms of strategic involvement than those in Analyzers and Defenders.
+- Caveats: Abstract read from the OpenAlex record (Crossref has no abstract); the publisher page was not fetched. The names of the four roles in the typology are not in the abstract and are not used. Self-reported survey data; not a software setting; early 1990s.
+
+### floyd1997middle {#floyd1997middle}
+
+Steven W. Floyd, and Bill Wooldridge (1997). “Middle Management's Strategic Influence and Organizational Performance”. Journal of Management Studies, vol. 34, no. 3, pp. 465-485.
+
+- DOI: [10.1111/1467-6486.00059](https://doi.org/10.1111/1467-6486.00059) · <https://doi.org/10.1111/1467-6486.00059>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Among 259 middle managers, those in boundary-spanning sub-units reported more strategic influence activity than others.
+- Supports (abstract): At the organizational level, firm performance was associated with more uniform levels of downward strategic influence and more varied levels of upward influence among middle management cohorts.
+- Supports (abstract): The authors interpret middle managers' strategic influence as arising from their ability to mediate between internal and external selection environments.
+- Caveats: Abstract read in Crossref and OpenAlex; full text not read. Same 259-manager sample as the 1992 note. Associations, not causal effects; self-reported influence; not a software setting.
 
 ### flyvbjerg2006nobel {#flyvbjerg2006nobel}
 
@@ -624,6 +681,17 @@ James D. Herbsleb, and Audris Mockus (2003). “An Empirical Study of Speed and 
 - Supports (abstract): The number of people involved was strongly related to the calendar time to complete a work item; the change-data analysis was replicated in a second organization with a different product and sites, confirming the main findings.
 - Caveats: Setting is geographic distribution across sites, not team boundaries within one site; applying it to cross-team dependencies is an inference. Observational, early 2000s.
 
+### higgins2003influence {#higgins2003influence}
+
+Chad A. Higgins, Timothy A. Judge, and Gerald R. Ferris (2003). “Influence tactics and work outcomes: a meta-analysis”. Journal of Organizational Behavior 24(1), pp. 89-106.
+
+- DOI: [10.1002/job.181](https://doi.org/10.1002/job.181) · <https://doi.org/10.1002/job.181>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, venue, doi.
+- Supports (abstract): A meta-analysis estimating population correlations between influence tactics and work-related outcomes found that ingratiation and rationality had positive effects on work outcomes.
+- Supports (abstract): Additional analyses suggested that these and other tactics had significant effects in certain situations and on specific outcomes.
+- Caveats: Abstract only; number of studies and effect sizes not read. The outcomes are mainly career and evaluation outcomes for the influencer (for example performance assessments), not whether a proposal was adopted. Crossref gives online publication 12 December 2002; volume 24 issue 1 is the 2003 issue, and the copyright line in the abstract says 2003, so year is the print year and is not in verified_fields.
+
 ### hill2019becoming {#hill2019becoming}
 
 Linda A. Hill (2019). *Becoming a Manager: How New Managers Master the Challenges of Leadership*. Harvard Business Review Press. Second edition, 2019 (448 pages). First edition 1992 (Harvard Business School Press), subtitled 'Mastery of a New Identity'; a 2003 printing (ISBN 9781591391821) carries the current subtitle.
@@ -670,6 +738,17 @@ Peter W. Hom, Thomas W. Lee, Jason D. Shaw, and John P. Hausknecht (2017). “On
 - Supports (abstract): A narrative review of a century of turnover research, which tracks twenty-first-century interest in the psychology of staying (rather than leaving) and in attitudinal trajectories as predictors of turnover.
 - Supports (abstract): It discusses rising scholarship on collective turnover, given the importance of human capital flight to practitioners and to HR strategy.
 - Caveats: Narrative review; abstract only. A figshare record exists but lists the work as all rights reserved and offered no file, so full text was not read.
+
+### hughes2011seventy {#hughes2011seventy}
+
+Mark Hughes (2011). “Do 70 Per Cent of All Organizational Change Initiatives Really Fail?”. Journal of Change Management, vol. 11, no. 4, pp. 451-464.
+
+- DOI: [10.1080/14697017.2011.630506](https://doi.org/10.1080/14697017.2011.630506) · <https://doi.org/10.1080/14697017.2011.630506>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The article critically reviews five separate published instances that identify a 70 per cent organizational-change failure rate and finds, in each, no valid and reliable empirical evidence for the figure.
+- Supports (abstract): It questions inherent change failure rates on the grounds of the ambiguity of change, its context dependence, competing perceptions, timing, and measurability, and concludes that the popular narrative of 70 per cent failure has no valid and reliable empirical support.
+- Caveats: Abstract read from the OpenAlex record (Crossref carries none; the publisher page returned 403). The five reviewed instances are not named here because the abstract does not name them. The article shows the figure is unsupported; it does not establish any other failure rate.
 
 ### ibarra1999provisional {#ibarra1999provisional}
 
@@ -752,6 +831,33 @@ René Just et al. (2014). “Are mutants a valid substitute for real faults in s
 - Supports (abstract): The abstract also notes inherent limitations of mutation analysis.
 - Caveats: Five Java open-source applications; correlation, and the paper reports that some real faults are not coupled to the mutants studied.
 
+### kauffeld2012meetings {#kauffeld2012meetings}
+
+Simone Kauffeld, and Nale Lehmann-Willenbrock (2012). “Meetings Matter: Effects of Team Meetings on Team and Organizational Success”. Small Group Research, vol. 43, no. 2, pp. 130-158.
+
+- DOI: [10.1177/1046496411429599](https://doi.org/10.1177/1046496411429599) · <https://doi.org/10.1177/1046496411429599>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Ninety-two regular team meetings were videotaped and their interaction coded; teams showing more functional interaction, such as problem solving and action planning, were more satisfied with their meetings, and better meetings were associated with higher team productivity.
+- Supports (abstract): Constructive meeting interaction was related to organizational success 2.5 years after the meeting.
+- Supports (abstract): Dysfunctional communication such as criticizing others or complaining had significant negative relationships with these outcomes, more pronounced than the positive effects of functional interaction.
+- Caveats: Published online December 2011, print April 2012. Abstract only; sample setting and industries not read. Correlational.
+
+### keil2014pitfalls {#keil2014pitfalls}
+
+Mark Keil, H. Jeff Smith, Charalambos L. Iacovou, and Ronald L. Thompson (2014). “The Pitfalls of Project Status Reporting”. MIT Sloan Management Review (Spring 2014).
+
+- <https://sloanreview.mit.edu/article/the-pitfalls-of-project-status-reporting>
+- Evidence class: Scholarly research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The authors summarize about 14 studies they took part in over roughly 15 years (interviews, surveys, and laboratory experiments) on how project status is reported.
+- Supports (full-text): Reviewing the records of 56 experienced software project managers, they report that the managers' status reports were biased 60 percent of the time.
+- Supports (full-text): They advise executives not to rely on one report but to solicit the views of others close to the project and look for corroboration.
+- Supports (full-text): They report that aggressive auditing can backfire into a cycle of distrust and more misreporting, and that trust in supervisors was associated with willingness to report problems.
+- Supports (full-text): They report that executive sponsorship of a project can make employees less candid, and suggest pairing powerful sponsors with powerful project managers.
+- Supports (full-text): They report that senior executives sometimes ignore bad news that is reported, and that reporters without an official platform are more likely to be ignored.
+- Caveats: A practitioner-facing summary by the researchers of their own studies, several with student or single-agency samples; generalization needs caution. Read through a summarizing fetcher; the two short phrases checked verbatim were the 56 managers and the 60 percent figure.
+
 ### khadka2014legacy {#khadka2014legacy}
 
 Ravi Khadka et al. (2014). “How do professionals perceive legacy systems and software modernization?”. Proceedings of the 36th International Conference on Software Engineering (ICSE 2014), pp. 36-47.
@@ -762,6 +868,17 @@ Ravi Khadka et al. (2014). “How do professionals perceive legacy systems and s
 - Supports (abstract): An exploratory study interviewed 26 industry practitioners about what makes a system legacy, the drivers of modernization, and its challenges, and validated the findings with a survey of 198 respondents.
 - Supports (abstract): The abstract reports that practitioners value their legacy systems highly and that modernization challenges are not only technical but also business and organizational.
 - Caveats: Abstract read via OpenAlex's reconstructed abstract; ACM DL and the Utrecht repository PDF returned 403. Interview and survey study of perceptions; it does not compare rewrite and incremental outcomes.
+
+### kim2004removing {#kim2004removing}
+
+Peter H. Kim, Donald L. Ferrin, Cecily D. Cooper, and Kurt T. Dirks (2004). “Removing the Shadow of Suspicion: The Effects of Apology Versus Denial for Repairing Competence- Versus Integrity-Based Trust Violations”. Journal of Applied Psychology, vol. 89, no. 1, pp. 104-118.
+
+- DOI: [10.1037/0021-9010.89.1.104](https://doi.org/10.1037/0021-9010.89.1.104) · <https://doi.org/10.1037/0021-9010.89.1.104>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): In two studies, trust was repaired more successfully when the mistrusted party apologized for a violation concerning competence but denied culpability for a violation concerning integrity.
+- Supports (abstract): Trust was also repaired more successfully when the party had apologized and later evidence showed guilt, or had denied and later evidence showed innocence.
+- Caveats: Abstract only; samples, settings, and effect sizes were not read, so none are reported. These are experimental studies of an alleged violation, not field studies of managers after a failed initiative; the transfer to a director's failed change is this book's inference.
 
 ### kluger1996effects {#kluger1996effects}
 
@@ -810,6 +927,18 @@ Raula Gaikovina Kula et al. (2018). “Do developers update their library depend
 - Supports (abstract): 81.5 percent of the studied systems kept outdated dependencies, and affected developers were not likely to respond to a security advisory.
 - Supports (abstract): In the authors' survey, 69 percent of interviewees said they were unaware of their vulnerable dependencies, and developers tended to see updating as extra effort and responsibility.
 - Caveats: Abstract only. Open-source projects on GitHub; may not transfer to company codebases. The arXiv record gives the journal year as 2017 (online first); the issue year 2018 was not confirmed on a fetched page, so year is not in verified_fields. The DOI resolved to the Springer page, which redirected to a login and was not read.
+
+### lacerenza2017leadership {#lacerenza2017leadership}
+
+Christina N. Lacerenza et al. (2017). “Leadership training design, delivery, and implementation: A meta-analysis”. Journal of Applied Psychology, vol. 102, no. 12, pp. 1686-1718.
+
+- DOI: [10.1037/apl0000241](https://doi.org/10.1037/apl0000241) · <https://doi.org/10.1037/apl0000241>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A meta-analysis of 335 independent samples estimated the effectiveness of leadership training across four criteria (reactions, learning, transfer, results) and examined 15 moderators of design and delivery.
+- Supports (abstract): Leadership training was substantially more effective than previously thought, improving reactions (delta = .63), learning (.73), transfer (.82), and results (.72), with effects varying by design, delivery, and implementation.
+- Supports (abstract): Moderator analyses support needs analysis, feedback, multiple delivery methods (especially practice), spaced sessions, an on-site location, and face-to-face delivery that is not self-administered; content, attendance policy, and duration also influenced effectiveness.
+- Caveats: Abstract only (Crossref holds no abstract; it was read from the OpenAlex record). Covers formal leadership training programs, not on-the-job coaching by a manager's own boss; settings are not specific to software. Effect sizes are as reported in the abstract; the correction method was not read.
 
 ### lazear2015value {#lazear2015value}
 
@@ -891,6 +1020,37 @@ John D. C. Little (2011). “OR FORUM—Little's Law as Viewed on Its 50th Anniv
 - Supports (full text): Over a finite time window, in particular one where the system is empty at start and end, the relationship holds exactly for the measured data; the author frames finite-window use as measurement rather than forecasting.
 - Supports (full text): In operations management the law is commonly written as throughput = work in process / cycle time; the law does not by itself tell managers how to handle trade-offs.
 - Caveats: The law describes averages and does not establish causation; predicting the effect of a WIP reduction requires the additional assumption that throughput is unchanged.
+
+### locke2002building {#locke2002building}
+
+Edwin A. Locke, and Gary P. Latham (2002). “Building a practically useful theory of goal setting and task motivation: A 35-year odyssey”. American Psychologist, vol. 57, no. 9, pp. 705-717.
+
+- DOI: [10.1037/0003-066X.57.9.705](https://doi.org/10.1037/0003-066X.57.9.705) · <https://doi.org/10.1037/0003-066X.57.9.705>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The article summarizes 35 years of empirical research on goal-setting theory, covering its core findings, the mechanisms by which goals operate, moderators of goal effects, goals as mediators of incentives, external validity and practical significance, and the theory's limitations.
+- Caveats: Abstract only (from the OpenAlex record, which matches the Crossref metadata). The abstract does not itself state the size or direction of the core findings; the chapter relies on locke2006new for the 'specific, difficult goals' formulation. A narrative review by the theory's originators, largely of laboratory and field studies of individual tasks, not of software organizations.
+
+### locke2006new {#locke2006new}
+
+Edwin A. Locke, and Gary P. Latham (2006). “New Directions in Goal-Setting Theory”. Current Directions in Psychological Science, vol. 15, no. 5, pp. 265-268.
+
+- DOI: [10.1111/j.1467-8721.2006.00449.x](https://doi.org/10.1111/j.1467-8721.2006.00449.x) · <https://doi.org/10.1111/j.1467-8721.2006.00449.x>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The abstract summarizes goal-setting theory regarding the effectiveness of specific, difficult goals, the mediators and moderators of goal effects, the relation of goals to self-efficacy, and the generality of goal effects across people, tasks, countries, time spans, experimental designs, goal sources (self-set, set jointly, or assigned), and dependent variables.
+- Supports (abstract): The abstract lists group goal setting, learning goals, and macro-level goal setting among the newer research directions.
+- Caveats: Abstract only. A short review by the theory's originators. The SAGE landing page returned 403; the abstract was read from OpenAlex.
+
+### locke2009goal {#locke2009goal}
+
+Edwin A. Locke, and Gary P. Latham (2009). “Has Goal Setting Gone Wild, or Have Its Attackers Abandoned Good Scholarship?”. Academy of Management Perspectives, vol. 23, no. 1, pp. 17-23.
+
+- DOI: [10.5465/amp.2009.37008000](https://doi.org/10.5465/amp.2009.37008000) · <https://doi.org/10.5465/amp.2009.37008000>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): In a rejoinder to ordonez2009goals, Locke and Latham argue that the critique draws its central theme from anecdotal evidence, cites the literature unrepresentatively, and that almost all the pitfalls it lists had already been published by goal-setting researchers themselves.
+- Caveats: A rejoinder by interested parties; abstract only.
 
 ### lorenz2011social {#lorenz2011social}
 
@@ -1005,6 +1165,17 @@ John W. Meyer, and Brian Rowan (1977). “Institutionalized Organizations: Forma
 - Supports (abstract): The abstract argues that many formal organizational structures reflect rationalized institutional rules that organizations adopt to gain legitimacy, resources, and stability, and that such organizations decouple structures from each other and from ongoing activities, replacing coordination, inspection, and evaluation with a logic of confidence and good faith.
 - Caveats: A theoretical sociology paper about organizations in general (schools are a main example), not an empirical study of software organizations. Applying it to engineering standards is this book's analogy. The publisher page returned 403; the abstract was read on a JSTOR-derived copy hosted on a university site, with citation details confirmed via Crossref.
 
+### milliken2003silence {#milliken2003silence}
+
+Frances J. Milliken, Elizabeth W. Morrison, and Patricia F. Hewlin (2003). “An Exploratory Study of Employee Silence: Issues that Employees Don't Communicate Upward and Why”. Journal of Management Studies, vol. 40, no. 6, pp. 1453-1476.
+
+- DOI: [10.1111/1467-6486.00387](https://doi.org/10.1111/1467-6486.00387) · <https://doi.org/10.1111/1467-6486.00387>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): In interviews with 40 employees, most had been in situations where they were concerned about an issue but did not raise it with a supervisor; the silence spanned a range of organizational issues.
+- Supports (abstract): The most frequently mentioned reason for staying silent was fear of being viewed or labeled negatively and so damaging valued relationships.
+- Caveats: Exploratory and qualitative, 40 interviewees; abstract only. Says nothing about how often silence occurs in software organizations or about remedies.
+
 ### mitchell2001why {#mitchell2001why}
 
 Terence R. Mitchell et al. (2001). “Why People Stay: Using Job Embeddedness to Predict Voluntary Turnover”. Academy of Management Journal, vol. 44, no. 6, pp. 1102-1121.
@@ -1026,6 +1197,16 @@ Audris Mockus (2010). “Organizational volatility and its effects on software d
 - Supports (abstract): In one large software project, proximity to an organizational change was significantly associated with reductions in software quality, measured as the probability of customer-reported defects.
 - Supports (abstract): Recent departures from the organization were associated with an increased probability of customer-reported defects.
 - Caveats: One large project, observational. A review on neverworkintheory.org notes that code complexity, not organizational change, was the main driver of defects, and that newcomers did not appear to raise defects; those points come from the review, not from the abstract, and the chapter uses only the abstract's claims. A later replication on Chrome (Donadelli, Zhu, and Rigby, 2015) reported different results for departures and was not read.
+
+### mroz2018meetings {#mroz2018meetings}
+
+Joseph E. Mroz, Joseph A. Allen, Dana C. Verhoeven, and Marissa L. Shuffler (2018). “Do We Really Need Another Meeting? The Science of Workplace Meetings”. Current Directions in Psychological Science, vol. 27, no. 6, pp. 484-491.
+
+- DOI: [10.1177/0963721418776307](https://doi.org/10.1177/0963721418776307) · <https://doi.org/10.1177/0963721418776307>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A review of the psychological science of workplace meetings, focused on activities before, during, and after meetings that facilitate success, ending with concrete recommendations and a checklist.
+- Caveats: Abstract only; the recommendations and checklist were not read and are not reported.
 
 ### murray2023just {#murray2023just}
 
@@ -1097,6 +1278,17 @@ Justice Opara-Martins, Reza Sahandi, and Feng Tian (2016). “Critical analysis 
 - Supports (abstract): They propose mitigations including contract terms, choosing vendors that support standard data formats, protocols, and APIs, and understanding dependencies among cloud solutions.
 - Caveats: Abstract only; survey-based; the mitigations are proposed, not tested in the abstract. Cloud services specifically, not commercial software components in general.
 
+### ordonez2009goals {#ordonez2009goals}
+
+Lisa D. Ordóñez, Maurice E. Schweitzer, Adam D. Galinsky, and Max H. Bazerman (2009). “Goals Gone Wild: The Systematic Side Effects of Overprescribing Goal Setting”. Academy of Management Perspectives, vol. 23, no. 1, pp. 6-16.
+
+- DOI: [10.5465/amp.2009.37007999](https://doi.org/10.5465/amp.2009.37007999) · <https://doi.org/10.5465/amp.2009.37007999>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The authors accept that hundreds of studies show specific, challenging goals can drive behavior and boost performance, but argue that the benefits of goal setting have been overstated and its systematic harms largely ignored.
+- Supports (abstract): The side effects they identify are a narrow focus that neglects non-goal areas, distorted risk preferences, a rise in unethical behavior, inhibited learning, corrosion of organizational culture, and reduced intrinsic motivation; they propose treating goal setting as a prescription-strength intervention needing careful dosing and supervision.
+- Caveats: An argumentative essay, not a meta-analysis; its use of evidence is disputed by locke2009goal. Abstract only.
+
 ### oreg2011recipients {#oreg2011recipients}
 
 Shaul Oreg, Maria Vakola, and Achilles Armenakis (2011). “Change Recipients' Reactions to Organizational Change”. The Journal of Applied Behavioral Science 47(4), pp. 461-524.
@@ -1107,6 +1299,17 @@ Shaul Oreg, Maria Vakola, and Achilles Armenakis (2011). “Change Recipients' R
 - Supports (abstract): The authors reviewed quantitative studies of change recipients' reactions published between 1948 and 2007; 79 met their criteria.
 - Supports (abstract): The review organizes reactions into a model in which antecedents include prechange factors (recipient characteristics and internal context) and change factors (the change process, perceived benefit or harm, and change content), and reactions lead to work-related and personal consequences.
 - Caveats: Only the abstract was read; specific effect sizes and the direction of individual antecedents are not used. The Crossref record carries no subtitle, so none is recorded.
+
+### park2008mum {#park2008mum}
+
+ChongWoo Park, Ghiyoung P. Im, and Mark Keil (2008). “Overcoming the Mum Effect in IT Project Reporting: Impacts of Fault Responsibility and Time Urgency”. Journal of the Association for Information Systems, vol. 9, no. 7, pp. 409-431.
+
+- DOI: [10.17705/1jais.00163](https://doi.org/10.17705/1jais.00163) · <https://aisel.aisnet.org/jais/vol9/iss7/1>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Defines the mum effect as a project member's reluctance to report bad news about a troubled project and describes it as recognized as an important contributor to project failure.
+- Supports (abstract): In a controlled laboratory experiment, fault responsibility and time urgency both affected willingness to report bad news (fault responsibility directly and indirectly, time urgency only indirectly); the authors suggest managers may raise willingness to report by stressing that the window to correct defects before delivery is narrow.
+- Caveats: Laboratory experiment; the abstract does not describe the participants. The book uses only the definition and the direction of the findings.
 
 ### parnas1972criteria {#parnas1972criteria}
 
@@ -1226,6 +1429,18 @@ Lauren A. Rivera, and András Tilcsik (2019). “Scaling Down Inequality: Rating
 - Supports (abstract): The authors conclude that seemingly minor technical aspects of rating tools can have a major effect on how men and women are evaluated.
 - Caveats: University teaching evaluations, not workplace performance or promotion decisions.
 
+### rogelberg2006not {#rogelberg2006not}
+
+Steven G. Rogelberg, Desmond J. Leach, Peter B. Warr, and Jennifer L. Burnfield (2006). “"Not Another Meeting!" Are Meeting Time Demands Related to Employee Well-Being?”. Journal of Applied Psychology, vol. 91, no. 1, pp. 83-96.
+
+- DOI: [10.1037/0021-9010.91.1.83](https://doi.org/10.1037/0021-9010.91.1.83) · <https://doi.org/10.1037/0021-9010.91.1.83>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Two internet surveys of employees working 35 hours or more a week (N=676, prescheduled meetings in a typical week; N=304, meetings on the current day) found that the relationship between meeting time demands and job attitudes and well-being was moderated by task interdependence, meeting experience quality, and accomplishment striving.
+- Supports (abstract): Results depended somewhat on the study's time frame and on how meeting time demands were measured.
+- Supports (abstract): Perceived meeting effectiveness had a strong, direct relationship with job attitudes and well-being.
+- Caveats: Self-report, cross-sectional surveys; not specific to engineering or to leadership meetings. Abstract read via OpenAlex; full text not read.
+
 ### rubenstein2018surveying {#rubenstein2018surveying}
 
 Alex L. Rubenstein, Marion B. Eberly, Thomas W. Lee, and Terence R. Mitchell (2018). “Surveying the forest: A meta-analysis, moderator investigation, and future-oriented discussion of the antecedents of voluntary employee turnover”. Personnel Psychology, vol. 71, no. 1, pp. 23-65.
@@ -1340,6 +1555,38 @@ Jonathan Sillito, and Esdras Kutomi (2020). “Failures and Fixes: A Study of So
 - Supports (abstract): Among the 11 reported observations are that failures can cascade through a system into major outages and that engineers often learn a system's scaling limits only when those limits are exceeded.
 - Caveats: Small qualitative sample (30 incidents); public postmortems are a self-selected set. It studies incident response rather than measuring whether postmortems improve outcomes; no peer-reviewed source quantifying the benefit of blameless postmortems or of on-call practices was confirmed in this session.
 
+### smith2001keeping {#smith2001keeping}
+
+H. Jeff Smith, Mark Keil, and Gordon Depledge (2001). “Keeping Mum as the Project Goes Under: Toward an Explanatory Model”. Journal of Management Information Systems, vol. 18, no. 2, pp. 189-227.
+
+- DOI: [10.1080/07421222.2001.11045677](https://doi.org/10.1080/07421222.2001.11045677) · <https://doi.org/10.1080/07421222.2001.11045677>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Presents a model of the reluctance to report negative project news and tests it in an experiment manipulating the impact of project failure if the individual stays silent and the level of observed wrongdoing; the factors explained a significant portion of the variance in reluctance to report, with some differences between internal and external reporting.
+- Caveats: Experimental study; the abstract does not give sample, effect sizes, or setting details. Full text paywalled, not read.
+
+### smith2003reluctance {#smith2003reluctance}
+
+H. Jeff Smith, and Mark Keil (2003). “The reluctance to report bad news on troubled software projects: a theoretical model”. Information Systems Journal, vol. 13, no. 1, pp. 69-95.
+
+- DOI: [10.1046/j.1365-2575.2003.00139.x](https://doi.org/10.1046/j.1365-2575.2003.00139.x) · <https://doi.org/10.1046/j.1365-2575.2003.00139.x>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A theory-development paper arguing that losses on troubled software projects are sometimes increased because organizational members are reluctant to transmit negative status information, so evidence of a failing course of action held in the lower ranks fails to travel up the hierarchy or is distorted on the way, and decision makers with authority to change direction are unaware of the true status.
+- Supports (abstract): The paper develops a theoretical model of this reluctance, drawing on organizational behaviour, communications, ethics, economics, information systems, and psychology, and points to future research rather than reporting new empirical results.
+- Caveats: Theory paper, no new data. The abstract opens with project-failure percentages from another account (the Standish-type figures); the book does not repeat them. Crossref issue date is December 2002 (online); the journal volume is 2003. Full text paywalled, not read.
+
+### smither2005multisource {#smither2005multisource}
+
+James W. Smither, Manuel London, and Richard R. Reilly (2005). “Does performance improve following multisource feedback? A theoretical model, meta-analysis, and review of empirical findings”. Personnel Psychology, vol. 58, no. 1, pp. 33-66.
+
+- DOI: [10.1111/j.1744-6570.2005.514_1.x](https://doi.org/10.1111/j.1744-6570.2005.514_1.x) · <https://doi.org/10.1111/j.1744-6570.2005.514_1.x>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A meta-analysis of 24 longitudinal studies found that improvement in direct report, peer, and supervisor ratings over time after multisource feedback is generally small.
+- Supports (abstract): The authors' framework and review suggest improvement is more likely when feedback indicates change is necessary, recipients have a positive feedback orientation, perceive a need to change, react positively, believe change is feasible, set appropriate goals, and take action.
+- Caveats: Abstract only (read from the publisher-supplied Crossref record). The moderators are a theoretical framework supported by a review, not all tested meta-analytically. Not specific to software or engineering managers.
+
 ### sosa2004misalignment {#sosa2004misalignment}
 
 Manuel E. Sosa, Steven D. Eppinger, and Craig M. Rowles (2004). “The Misalignment of Product Architecture and Organizational Structure in Complex Product Development”. Management Science 50(12), pp. 1674-1689.
@@ -1362,6 +1609,16 @@ Garold Stasser, and William Titus (1985). “Pooling of unshared information in 
 - Supports (abstract): In a simulated political caucus where members' pre-discussion information was distributed so that each member's view was biased against the best candidate, groups tended to choose the candidate with initial plurality support rather than the best one, and discussion tended to reinforce members' distorted impressions.
 - Caveats: Abstract read via the OpenAlex record (publisher abstract); the full text is paywalled and was not read. A laboratory study with students and a constructed task; the founding study of the hidden-profile paradigm.
 
+### staw1976knee {#staw1976knee}
+
+Barry M. Staw (1976). “Knee-deep in the big muddy: a study of escalating commitment to a chosen course of action”. Organizational Behavior and Human Performance, vol. 16, no. 1, pp. 27-44.
+
+- DOI: [10.1016/0030-5073(76)90005-2](https://doi.org/10.1016/0030-5073(76)90005-2) · <https://doi.org/10.1016/0030-5073(76)90005-2>
+- Evidence class: Scholarly research. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (metadata (idea credited only)): The article is known for introducing escalation of commitment, the tendency to commit further resources to a failing course of action one chose oneself (idea level only).
+- Caveats: Metadata only; the publisher page returned 403 and no abstract was available for the 1976 article, so no finding, sample, or effect is reported.
+
 ### strathern1997improving {#strathern1997improving}
 
 Marilyn Strathern (1997). “'Improving ratings': audit in the British University system”. European Review, vol. 5, no. 3, pp. 305-321.
@@ -1371,6 +1628,17 @@ Marilyn Strathern (1997). “'Improving ratings': audit in the British Universit
 - Verified against a fetched page (2026-11-18): title, authors, year, venue, doi, url.
 - Supports (abstract): The abstract presents the paper as an anthropological commentary on the 'audit explosion' in British universities, arguing that audit does more than monitor and acquires a momentum that can threaten the institutions it evaluates.
 - Caveats: The popular wording of Goodhart's law ('when a measure becomes a target, it ceases to be a good measure') does NOT appear in the abstract or on the landing page read. Its attribution to this paper is therefore unverified here; confirm the sentence and page number in the full text. No primary source by Goodhart himself was verified in this session.
+
+### stray2022okrs {#stray2022okrs}
+
+Viktoria Stray, Nils Brede Moe, Henrik Vedal, and Marthe Berntzen (2022). “Using Objectives and Key Results (OKRs) and Slack: A Case Study of Coordination in Large-Scale Distributed Agile”. Proceedings of the 55th Hawaii International Conference on System Sciences (HICSS).
+
+- DOI: [10.24251/HICSS.2022.883](https://doi.org/10.24251/HICSS.2022.883) · <https://hdl.handle.net/10125/80225>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (abstract): A qualitative case study of two teams in one large-scale agile project (meeting observations and 17 interviews), analyzed through relational coordination theory.
+- Supports (abstract): The use of OKRs facilitated knowledge sharing, helped the teams align their goals, and provided inter-team insights; the authors conclude that projects using OKRs need to support members in formulating key results that align and motivate teams toward the same mission.
+- Caveats: One project, two teams, interview data; no outcome or performance measure. Supports OKRs as a coordination aid, not as a performance intervention. The ScholarSpace landing page was behind a browser check; the DOI resolves to the handle URL above (HTTP redirect confirmed). Page range was not confirmed and is omitted. Licensed CC BY-NC-ND per OpenAlex.
 
 ### sweller1988cognitive {#sweller1988cognitive}
 
@@ -1485,6 +1753,16 @@ Yingying Wang, Harshavardhan Kadiyala, and Julia Rubin (2021). “Promises and c
 - Supports (abstract): Participants identified robust, shared infrastructure support established early as one of the main success factors, and named managing common code across services and supporting product variants as pressing challenges.
 - Caveats: Deliberately excludes newcomers, so it describes what experienced teams do, not whether microservices beat alternatives. Abstract read on the publisher page.
 
+### weick1984small {#weick1984small}
+
+Karl E. Weick (1984). “Small wins: Redefining the scale of social problems”. American Psychologist, vol. 39, no. 1, pp. 40-49.
+
+- DOI: [10.1037/0003-066X.39.1.40](https://doi.org/10.1037/0003-066X.39.1.40) · <https://doi.org/10.1037/0003-066X.39.1.40>
+- Evidence class: Scholarly research. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (metadata (idea credited only)): The article is known for arguing that recasting large problems as a series of small, concrete, completed outcomes ("small wins") makes them more tractable and builds momentum (idea level only).
+- Caveats: Metadata only; no abstract was available through Crossref, OpenAlex, or Semantic Scholar, and the APA page did not render. It is an essay, not an empirical study.
+
 ### whitelewis2024counteroffers {#whitelewis2024counteroffers}
 
 Damani K. White-Lewis, KerryAnn O'Meara, Kiernan Mathews, and Nicholas Havey (2024). “Counteroffers for faculty at research universities: who gets them, who doesn't, and what factors produce them?”. Higher Education, vol. 89, no. 2, pp. 535-552.
@@ -1508,6 +1786,16 @@ Oliver E. Williamson (1967). “Hierarchical Control and Optimum Firm Size”. J
 - Supports (official-summary): The article is known for modeling "control loss", a fraction of a superior's intentions lost at each hierarchical level, which compounds as levels are added.
 - Caveats: A theoretical economics model of firm size, not an empirical study of software organizations. The full text is paywalled and was not read; the control-loss description rests on secondary sources found by search, and later work disputes that control loss limits firm size.
 
+### wooldridge2008middle {#wooldridge2008middle}
+
+Bill Wooldridge, Torsten Schmid, and Steven W. Floyd (2008). “The Middle Management Perspective on Strategy Process: Contributions, Synthesis, and Future Research”. Journal of Management, vol. 34, no. 6, pp. 1190-1221.
+
+- DOI: [10.1177/0149206308324326](https://doi.org/10.1177/0149206308324326) · <https://doi.org/10.1177/0149206308324326>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A review of about 25 years of strategic management research on middle managers' contributions, which it describes as diverse in focal constructs and relationships, and which it organizes to identify the main constructs, relationships, and contributions.
+- Caveats: Abstract only; the review's conclusions and framework were not read and are not used.
+
 ### yang2022remote {#yang2022remote}
 
 Longqi Yang et al. (2022). “The effects of remote work on collaboration among information workers”. Nature Human Behaviour, vol. 6, no. 1, pp. 43-54.
@@ -1519,6 +1807,19 @@ Longqi Yang et al. (2022). “The effects of remote work on collaboration among 
 - Supports (abstract): Firm-wide remote work made the collaboration network more static and siloed, with fewer bridges between different parts of the organisation.
 - Supports (abstract): Synchronous communication decreased and asynchronous communication increased; the authors suggest this may make it harder to acquire and share new information across the network.
 - Caveats: One company, US employees, first half of 2020 (pandemic conditions). Measures collaboration patterns, not productivity or output. An erratum is listed (Nat Hum Behav 2022;6(1):164). First published online 2021-09-09.
+
+### yukl1992consequences {#yukl1992consequences}
+
+Gary Yukl, and J. Bruce Tracey (1992). “Consequences of influence tactics used with subordinates, peers, and the boss”. Journal of Applied Psychology 77(4), pp. 525-535.
+
+- DOI: [10.1037/0021-9010.77.4.525](https://doi.org/10.1037/0021-9010.77.4.525) · <https://doi.org/10.1037/0021-9010.77.4.525>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A field study related managers' use of nine influence tactics to target task commitment and the managers' effectiveness, measured by questionnaires completed by each manager's subordinates, peers, and boss.
+- Supports (abstract): The most effective tactics were rational persuasion, inspirational appeal, and consultation; the least effective were pressure, coalition, and legitimating.
+- Supports (abstract): Ingratiation and exchange were moderately effective with subordinates and peers but not effective with superiors.
+- Supports (abstract): Coalitions were used most in lateral and upward directions, rational persuasion most in an upward direction, and personal appeal, exchange, and legitimating most in a lateral direction.
+- Caveats: Abstract only (Crossref has no abstract; the abstract was read from the OpenAlex record). Questionnaire data, correlational, one field study; sample size not read. "Coalition" here means enlisting others to pressure or persuade the target, which the chapter distinguishes from building a shared proposal with peers.
 
 ### yukl1999determinants {#yukl1999determinants}
 
@@ -2159,6 +2460,17 @@ Jeff Bezos (2017). *2016 Letter to Shareholders*. Amazon (aboutamazon.com), publ
 - Supports (full-text): It recommends recognizing and correcting bad decisions quickly, using "disagree and commit" (including by the boss), and escalating fundamental misalignment early rather than letting debate run until the side with more stamina wins.
 - Caveats: One company's chief executive describing his own practice in a shareholder letter (documented practice, not research). The page byline reads Amazon Staff; the letter is signed by Jeff Bezos.
 
+### bezos2017letter {#bezos2017letter}
+
+Jeff Bezos (2018). “2017 Letter to Shareholders”. About Amazon.
+
+- <https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, url.
+- Supports (full-text): The letter states that Amazon does not use slide presentations in meetings but narratively structured six-page memos, read silently by attendees at the start of each meeting.
+- Supports (full-text): It argues that weak memos often come from underestimating the scope of the work, that a great memo can take a week or more with rewriting and feedback from colleagues, and that high standards in a domain must be recognized and coached explicitly.
+- Caveats: One company's chief executive describing his own company's practice (documented practice, not research). Page byline Amazon Staff, published April 18, 2018; the letter is signed by Jeff Bezos. The six-page memo practice is in the 2017 letter, not the 2016 letter (bezos2016letter).
+
 ### bottcher2018platforms {#bottcher2018platforms}
 
 Evan Bottcher (2018). “What I Talk About When I Talk About Platforms”. martinfowler.com.
@@ -2233,6 +2545,15 @@ Alistair Cockburn (2004). *Crystal Clear*. Addison-Wesley Professional.
 - Verified against a fetched page (2026-11-20): title, authors, year, publisher, isbn13.
 - Supports (official-summary): Cockburn's own biography page lists the 'walking skeleton' among the ideas he introduced, dated 1996 and described as a thinly connected functioning architecture.
 - Caveats: The book was not read. The subtitle was not returned by the catalogue record and is omitted; the author's page gives 2005 for the book while Open Library gives 2004. Cite only for the walking-skeleton idea, using the author's page.
+
+### cohen1990influence {#cohen1990influence}
+
+Allan R. Cohen, and David L. Bradford (1990). *Influence Without Authority*. John Wiley & Sons.
+
+- <https://openlibrary.org/works/OL4313915W>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, authors, year, publisher.
+- Caveats: Metadata only. Credited only for its widely known idea that influence among peers works as exchange, offering things the other party values (often called "currencies") in return for cooperation. Later editions 2005 and 2017.
 
 ### conway1968committees {#conway1968committees}
 
@@ -2332,6 +2653,15 @@ Amy C. Edmondson (2018). *The Fearless Organization: Creating Psychological Safe
 - Verified against a fetched page (2026-11-19): title, subtitle, authors, year, isbn13, url.
 - Caveats: Metadata only. Credited only for the idea it is widely known for, that psychological safety and performance standards are separate dimensions and high performance needs both. Its quadrant names are not quoted.
 
+### fisher1981getting {#fisher1981getting}
+
+Roger Fisher, and William Ury (1981). *Getting to Yes: Negotiating Agreement Without Giving In*. Houghton Mifflin.
+
+- <https://openlibrary.org/isbn/0395317576>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, subtitle, year, publisher.
+- Caveats: Metadata only. Credited only for its widely known idea of principled negotiation (separate the people from the problem, focus on interests rather than positions, invent options for mutual gain, insist on objective criteria) and the notion of a best alternative to a negotiated agreement. No quotation or finding.
+
 ### ford2017building {#ford2017building}
 
 Neal Ford, Rebecca Parsons, and Patrick Kua (2017). *Building Evolutionary Architectures: Support Constant Change*. O'Reilly Media. Latest edition: 2nd Edition, subtitle 'Automated Software Governance', authors Neal Ford, Rebecca Parsons, Patrick Kua, Pramod Sadalage (Open Library gives 2023).
@@ -2422,6 +2752,18 @@ Thomas F. Gilbert (1978). *Human Competence: Engineering Worthy Performance*. Mc
 - ISBN-13: 9780787996154 · <https://openlibrary.org/works/OL6674978W>
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-19): title, subtitle, authors, year, isbn13.
+
+### gitlab-skip-level {#gitlab-skip-level}
+
+GitLab (2026). “Managing Effective Skip Level Meetings | The GitLab Handbook”. The GitLab Handbook (Create stage engineering page).
+
+- <https://handbook.gitlab.com/handbook/engineering/devops/create/engineers/skip-level/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, venue, url.
+- Supports (full-text): The page describes skip-level meetings run by a senior manager with engineers two levels down, giving as purposes feedback from team members, praise, coaching, and learning about the team's health (morale, internal processes, results) from a perspective other than the manager's.
+- Supports (full-text): Feedback from the meetings is shared with the engineer's manager by default; an engineer with a sensitive topic can ask for a separate confidential meeting.
+- Supports (full-text): Engineers prepare by filling in a written template with questions such as the biggest challenge facing the team and what they would change in the senior manager's position.
+- Caveats: One stage's template in a living company handbook, not a company-wide policy or evidence of effect. No date was visible on the page; year is the access year, following gitlab2026engineering. Licence of the handbook text is unclear (see gitlab2026engineering); paraphrase only.
 
 ### gitlab2026engineering {#gitlab2026engineering}
 
@@ -2644,6 +2986,17 @@ Marcin Kolny (2023). “Scaling up the Prime Video audio/video monitoring servic
 - Supports (full-text): The post reports that the move reduced infrastructure cost by over 90 percent and increased scaling capability, and states that whether to use microservices and serverless components or a monolith has to be decided case by case.
 - Caveats: A first-hand account of one service, self-reported, with no published method for the cost figure. The subtitle on the page frames it as a move "from a distributed microservices architecture to a monolith application"; the scope is one monitoring service, not Prime Video's architecture, and the post does not claim Amazon or Prime Video abandoned microservices. Read from a Wayback Machine capture dated 2023-03-23 of the original URL; the post itself is dated Mar 22, 2023 on the page.
 
+### kotter1995leading {#kotter1995leading}
+
+John P. Kotter (1995). “Leading Change: Why Transformation Efforts Fail”. Harvard Business Review, March-April 1995.
+
+- <https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2>
+- Evidence class: Practitioner literature. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (official-summary): The article's opening says the author watched more than 100 companies try to remake themselves into significantly better competitors, under banners such as total quality management, reengineering, restructuring, cultural change, and turnaround.
+- Supports (official-summary): The article is widely known for a sequence of errors that undermine transformation efforts, among them not establishing enough urgency, not creating a powerful guiding coalition, not planning for short-term wins, declaring victory too soon, and not anchoring changes in the culture (idea level only; the body of the article was not read).
+- Caveats: Only the opening of the article was accessible. It is a practitioner account based on the author's observation, not a study with a stated method. The list of errors is credited at idea level and not quoted. The later book (Leading Change, 1996) was not consulted.
+
 ### lafley2013playing {#lafley2013playing}
 
 A.G. Lafley, and Roger L. Martin (2013). *Playing to Win: How Strategy Really Works*. Harvard Business Review Press.
@@ -2833,6 +3186,17 @@ Charity Majors, Liz Fong-Jones, and George Miranda (2022). *Observability Engine
 - Verified against a fetched page (2026-11-19): title, subtitle, authors, publisher, year, isbn13.
 - Caveats: Authors work for an observability vendor (Honeycomb). Credit only for the widely known idea that observability is the ability to ask new questions of a running system, distinct from monitoring of predefined signals. A web search listed a possible second edition (2026) at one retailer; not verified.
 
+### mankins2014weekly {#mankins2014weekly}
+
+Michael C. Mankins (2014). “This Weekly Meeting Took Up 300,000 Hours a Year”. HBR.org, April 29, 2014; republished by Bain & Company.
+
+- <https://www.bain.com/insights/this-weekly-meeting-took-up-300-thousand-hours-a-year-hbr/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): At one large company, people spent about 300,000 hours a year just supporting the weekly executive committee meeting.
+- Supports (full-text): The post proposes assessing whether communication and interaction take more time than the output justifies, among five obstacles to workforce productivity.
+- Caveats: A consultant's short post about one unnamed company; the method is described in an HBR interactive that was not read. Related to Mankins, Brahm, and Caimi, "Your Scarcest Resource", HBR May 2014, which was not read (hbr.org returned 404 for the URL tried).
+
 ### manshreck2020documentation {#manshreck2020documentation}
 
 Tom Manshreck (2020). *Documentation: Chapter 10 of Software Engineering at Google*. O'Reilly Media (free online edition on abseil.io).
@@ -2936,6 +3300,26 @@ John Micco (2016). “Flaky Tests at Google and How We Mitigate Them”. Google 
 - Supports (full-text): Mitigations described include rerunning failed tests, marking a test flaky so it reports failure only after three consecutive failures, and a tool that automatically quarantines highly flaky tests and files a bug; the post notes that quarantine can mask a real bug.
 - Caveats: One company's 2016 figures, in a blog post rather than a peer-reviewed paper. Software Engineering at Google (2020) reports a different, lower rate (about 0.15 percent), apparently measured differently; do not combine the two.
 
+### minto2002pyramid {#minto2002pyramid}
+
+Barbara Minto (2002). *The Pyramid Principle: Logic in Writing and Thinking*. Pearson Education Ltd..
+
+- ISBN-13: 9780273659037 · <https://openlibrary.org/works/OL3012477W>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, subtitle, authors, year, isbn13.
+- Supports (metadata (idea credited only)): Known for the idea that writing is easiest to grasp when the ideas are organized as a pyramid under a single governing point, stated first, with supporting ideas grouped beneath it (idea level only; the author's site states the principle in these terms).
+- Caveats: Metadata only; credited for the idea it is known for. First published 1978 per Open Library; the 2002 edition (ISBN 9780273659037) is the one verified. Publisher on the edition record is Pearson Education Ltd.
+
+### mintzberg1990job {#mintzberg1990job}
+
+Henry Mintzberg (1990). “The Manager's Job: Folklore and Fact”. Harvard Business Review, March-April 1990 (HBR Classic; first published in HBR in 1975).
+
+- <https://hbr.org/1990/03/the-managers-job-folklore-and-fact>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (metadata (idea credited only)): Credited at idea level only for its widely known argument that managers' actual work is brief, fragmented, interrupted, and mostly verbal, unlike the folklore of a manager who plans, organizes, coordinates, and controls.
+- Caveats: Paywalled; only the title, author, issue, and opening sentence were visible. The 1975 original publication was not verified on a fetched page in this session (the 1990 page is a reprint); evidence_class reflects the observational research the article summarizes, which was not read. No findings or figures are used.
+
 ### nygard2011adr {#nygard2011adr}
 
 Michael Nygard (2011). “Documenting Architecture Decisions”. Cognitect blog.
@@ -2959,6 +3343,16 @@ Gergely Orosz, and Kent Beck (2023). “Measuring developer productivity? A resp
 - Supports (full-text): They argue that measuring individuals changes behaviour and invites gaming, illustrated with an account of survey scores at Facebook becoming distorted once tied to reviews and manager pressure.
 - Supports (full-text): They conclude the McKinsey framework is likely to do more harm than good to engineering culture.
 - Caveats: Opinion piece by two practitioners, not empirical research; one side of a dispute. Dated August 29, 2023. A second part exists: https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity-part-2 (URL given on the page, not fetched).
+
+### perlow2017stop {#perlow2017stop}
+
+Leslie A. Perlow, Constance Noonan Hadley, and Eunice Eun (2017). “Stop the Meeting Madness: How to free up time for meaningful work”. Harvard Business Review, July-August 2017.
+
+- <https://hbr.org/2017/07/stop-the-meeting-madness>
+- Evidence class: Practitioner literature. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (official-summary): The accessible opening, based on the authors' interviews with hundreds of executives across industries, reports that executives spend on average nearly 23 hours a week in meetings, up from less than 10 hours in the 1960s, excluding unscheduled gatherings, and cites earlier research that meetings have grown longer and more frequent.
+- Caveats: Only the opening is accessible; the authors' recommended process is behind the paywall and is not used. The method behind the 23-hour figure is not visible.
 
 ### perri2018escaping {#perri2018escaping}
 

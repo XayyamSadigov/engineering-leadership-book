@@ -16,7 +16,7 @@ the director's first day.
 | Constraint | The Core release train | 27 |
 | Renewal commitments | Bulk ordering (Orders; asynchronous order files up to 20,000 lines across delivery sites; 5 Orders and 2 Customer Experience web engineers) due at the end of quarter 2 (week 26 from the director's first day). Accounting-system integration (Payments and Integrations; new erp-sync connector with daily reconciliation of posted invoices; 4 engineers) due at the end of week 6 of quarter 2 (week 19). Both are on track at day 90 and neither is due in quarter 1 | 15, 17 |
 | Director's role definition | Purpose: reliability and delivery of the whole organization. People: develop the six managers, give the staff engineers mandates. Delivery: own cross-team commitments and the capacity model. Technical: ensure cross-team decisions have an owner. Not doing: running a team's planning, responding to incidents, writing production code | 1 |
-| Prevention allocation, quarter 1 | 12 FTE in total: Billing 25 percent, Orders and Payments and Integrations 10 percent (renewal commitments), other teams 15 percent; 2 FTE of it earmarked for security work | 27, 26 |
+| Prevention allocation, quarter 1 | 12 FTE in total: Billing 25 percent, Orders and Payments and Integrations 10 percent (renewal commitments), other teams 15 percent, computed on baseline team sizes (11.55 FTE), plus 15 percent of the three staff engineers (0.45 FTE); 2 FTE of it earmarked for security work | 27, 26 |
 | Severity definitions | Published week 3, written by the director with Kwame Mensah and Sofia Alvarez. Sev1: the order or payment path unavailable for any customer, or any wrong financial record visible to customers | 25 |
 | Baseline re-rating under the new definitions | INC-401 and INC-427 would be Sev1, making the baseline 9 Sev1 and 21 Sev2. The baseline page keeps the original ratings; the total of 30 is unchanged | 25 |
 | Tier 1 list | The 15 proposed tier 1 components are used for all counts in quarter 1. notification-svc moves to tier 2 and to Orders from quarter 2 | 24 |
@@ -118,5 +118,48 @@ start of quarter 5 (week 53). The CTO decides; the outcome is open (Chapters 35 
 | Totals | 79 engineers, 7 managers, the director (87); the director has 10 direct reports |
 | Alternatives in the draft | B: keep Customer Experience whole with two subteams (80 engineers, 6 managers). C: also split Orders into Order Capture and Catalog and Pricing and grow the platform to 8 (78 engineers, 8 managers). D: two managers of managers (77 engineers, 9 managers) |
 | Transition plan | Decision week 46, announcement week 51, reporting lines week 53, search-svc week 54, all handoffs by week 57, review week 64; about 21 engineer-weeks of transition cost, excluding Mateo's seat |
+| Gap in the proposal | document-store is not assigned an owner, although the transition plan requires every component to appear exactly once in the ownership register by week 57 (a gap Project 4 asks the learner to find) |
 | Succession coverage (week 44) | 10 critical roles; none with a ready-now successor; 6 with interim cover; 4 with none (Billing manager, Data and Analytics manager, the core-domain and the data-and-integration staff roles) |
 
+The core/permissions exemption recorded in quarter 1 reached the two-quarter maximum at the end of
+quarter 3 (week 39) with the ownership decision still open; it lapsed without renewal, which is the
+decision avoidance Chapter 13 describes. The year-2 proposal is the first document to resolve it.
+
+
+## Quarter 2 results and the operating system (weeks 14–26)
+
+| Measure | Quarter 1 | Quarter 2 |
+|---|---|---|
+| Sev1 and Sev2 incidents | 21 | 17 (3 Sev1, 14 Sev2) |
+| of which via Core releases | 4 | 2 |
+| Recurrences | 5 of 21 | 3 of 17 |
+| Customer-detected share | 29% | 29% (5 of 17) |
+| Core releases | 11 | 13 (weekly) |
+| Core change failure rate | 22% | 23% (3 of 13) |
+| Unplanned work | 31% | 28% |
+| Tier 1 meeting the four operational minimums | 8 of 15 | 11 of 15 |
+| Corrective-action closure | 70% (26 of 37) | 78% (21 of 27) |
+| Availability, contractual paths | not recorded | 99.86% |
+| Service credits | not recorded | $95,000 |
+
+| Fact | Detail | Chapter |
+|---|---|---|
+| Renewal commitments at week 26 | The accounting integration has been live for the renewal customer since week 19, with daily reconciliation of posted invoices (no ledger read path is named; ADR-0001 stays open). Bulk ordering's 44 contractual items are complete and the release candidate is in final acceptance, forecast to ship by the end of week 26 | 39 |
+| The director's quarter 2 calendar | Recurring meetings: weekly operational review (booked 30 minutes, averaging 75), weekly 60-minute managers' meeting, weekly renewal check-in and product and engineering sync, weekly Billing and Orders sync from week 14, the release working group, a fortnightly staff group, one-on-ones (managers 45 minutes, staff engineers and Victor Lindqvist 30), monthly quality reviews, delivery review, and all-hands, and the quarterly reset: about 16.3 hours a week from week 16; about 25 hours of a 47-hour week in meetings | 37 |
+| Skip-levels | None in weeks 1–15. From week 16, individual skip-level conversations, four a week, 30 minutes (44 by week 26); Mateo Arango Ríos's week-17 conversation was the director's first with a mobile engineer. No group skip-levels before quarter 3 | 37, 40, 41 |
+| The director's firsthand time | Weeks 14–15 measured at 4.7 percent of the director's hours | 40 |
+| Organization decision log | Opened week 14, backfilled from quarter 1 decisions (DL-01 to DL-10); ADR-0001, tax-svc, and the CI target are open | 39 |
+| Escalation path | Published week 15: five working days for the parties, then a joint written case decided by the director within five working days and logged; to Victor Lindqvist only for customer commitments or the director's budget authority | 39 |
+| Reports to Victor Lindqvist | The week 26 report is the first written report since the day-90 report; proposed monthly from quarter 3 | 39 |
+| Manager expectations | A one-page written expectation on the rubric's six dimensions in week 22; draft ratings of the six managers in week 24 | 41 |
+| Priya Raman's hands-on time | 8, 10, and 12 hours a week at the week 16, 20, and 24 checks (cap 8) | 41 |
+
+## Quarter 3 (weeks 27–39)
+
+| Fact | Detail | Chapter |
+|---|---|---|
+| Capacity plan | Planned: unplanned work 22% (17.6 FTE), prevention 8 FTE (Billing 2.5, Orders 2.0, Customer Experience 1.5, Payments and Integrations 1.0, Data and Analytics 1.0), platform 4.5, product 49.9. Cautious: unplanned 28% (22.4 FTE), product 45.1. Committed about 35.6 FTE-quarters of estimated effort (about 463 engineer-weeks), targets 3.8, unfunded 22.6 of Amara Okafor's 62. A bulk-ordering support reserve of 8 engineer-weeks in weeks 27–30 | 38 |
+| Cross-team portfolio | At most three cross-team initiatives in progress (a one-quarter trial): multi-currency price lists and catalog export (Greg Tanaka's two deal features), customer incident status notifications (Sofia Alvarez), automated service-credit statements (Rajiv Menon, waiting until about week 33). In week 31 Greg Tanaka asks for a third deal feature, purchase approval rules; the week 34 portfolio forum's outcome is open | 42 |
+| Operating system redesign | Proposed for week 27: a hard 45-minute operational review, a weekly 75-minute leadership team meeting replacing the managers' meeting and product sync, a monthly business review, a quarterly talent review | 37 |
+| Engineering Excellence Day | Launched by the director in week 27 without the managers or Amara Okafor; Fridays of weeks 28, 32, 36; participation 64, 41, 23 engineers; 71 items merged, none touching the priced debt register; one Sev3 from a core/scheduler change; stopped in week 37 after a one-page note to the managers | 43 |
+| Skip-level rotation | Proposed: two groups of three a week plus one individual slot, covering all 77 team engineers in the quarter | 40 |

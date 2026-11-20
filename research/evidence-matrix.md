@@ -995,3 +995,161 @@ reasoning): the three tests for reorganizing; consult on problem, decide names p
 person before any group; effective within two weeks and handoffs by week six; tier 1 change freeze
 during ownership moves; the readiness gates; the four succession readiness levels and the coverage
 rule; the quarterly evolution cadence.
+
+## Chapter 37 — The Management Operating System: Cadences and Leadership Meetings
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | At one large company people spent about 300,000 hours a year supporting a weekly executive committee meeting | Expert opinion (consultant, one company) | mankins2014weekly | full text of a short post; method not read |
+| 2 | Meetings as the medium of managerial work; process-oriented versus mission-oriented meetings | Practitioner | grove1983high | idea-level (metadata only) |
+| 3 | Different leadership meeting types for different horizons; the leadership team as first team; cascading decisions | Practitioner | lencioni2012advantage | idea-level (metadata only) |
+| 4 | Time is the executive's scarcest resource; record it before managing it; many meetings signal malorganization | Practitioner | drucker1967effective | idea-level (metadata only) |
+| 5 | Meeting time demands relate to well-being depending on interdependence, meeting quality, and accomplishment striving; perceived effectiveness strongly related to attitudes and well-being | Research finding | rogelberg2006not | abstract |
+| 6 | Relevance, voice, and time management in manager-led meetings associated with engagement | Research finding (self-report, correlational) | allen2013manager | abstract |
+| 7 | Functional meeting interaction associated with satisfaction, productivity, and later organizational success; dysfunctional communication's negative effects stronger | Research finding | kauffeld2012meetings | abstract |
+| 8 | Meeting science organized before, during, and after meetings | Research review | mroz2018meetings | abstract |
+| 9 | Executives average nearly 23 hours a week in meetings, up from under 10 in the 1960s | Expert opinion | perlow2017stop | official summary (opening only) |
+| 10 | Interruptions and collective time use; changing time use improved a software team's productivity | Research finding (one team, qualitative) | perlow1999time | abstract |
+| 11 | Remote work in the pandemic raised meeting and coordination time and reduced uninterrupted time | Research finding (one firm) | gibbs2023wfh | abstract (working paper) |
+| 12 | Groups discuss shared information more than unique information and decide worse when unique information must be pooled | Research finding (laboratory) | lu2012hiddenprofiles; stasser1985pooling | abstract; transfer to engineering decisions is an inference |
+| 13 | Seven meeting jobs; one meeting, one job; four-step audit with a topic-by-forum matrix; horizon table; five design choices for a deciding leadership meeting; 12–16 recurring hours for a director | This book's recommendation | — | reasoning |
+| 14 | No study found that compares cadence frequencies or forum counts for leadership teams (research gap) | Research gap | — | searches in this session |
+| 15 | All Northstar calendar figures, topic matrix, quarter 3 proposal, and manager hour estimates | Illustrative | Northstar canon; northstar-additions/ch37.md | — |
+
+### Gaps recorded
+
+- Leach, Rogelberg, Warr, and Burnfield (2009), "Perceived meeting effectiveness: The role of design
+  characteristics", Journal of Business and Psychology 24(1): no abstract available through OpenAlex,
+  Crossref, or Semantic Scholar, and the publisher page required login. Not cited; it would support
+  claims about agendas, punctuality, and design features.
+- Mankins, Brahm, and Caimi, "Your Scarcest Resource", HBR May 2014: hbr.org returned 404 for the URL
+  tried; only the shorter Bain-hosted post was read.
+- No research located on the effect of cadence design (weekly versus fortnightly, number of forums) for
+  engineering or other leadership teams. Proposed for `research/research-gaps.md`.
+
+## Chapter 38 — Scorecards, Quarterly Planning, and Capacity Allocation
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Developer productivity cannot be captured by a single metric or dimension; used to justify a multi-area organization scorecard | Research finding (argument paper) | forsgren2021space | abstract |
+| 2 | Pairing indicators so that pushing one shows in the other; a manager's output is the output of the organization they influence | Practitioner | grove1983high | idea-level |
+| 3 | Setting DORA metrics as goals makes gaming more likely; aim is improvement over time, not team comparison | Industry research | dora-metrics-guide | full text, page dated 2026-01-05 |
+| 4 | OKRs as a format of a qualitative objective with measurable key results, popularized by Doerr and credited to Grove's practice at Intel | Practitioner consensus | doerr2018measure | idea-level |
+| 5 | Goal-setting reviews summarize research on the effectiveness of specific, difficult goals, mediators, moderators, and limits | Research finding | locke2002building; locke2006new | abstract |
+| 6 | Critics argue goal-setting benefits are overstated and list side effects (narrow focus, risk distortion, unethical behavior, inhibited learning, culture, intrinsic motivation) | Research (argument), disputed | ordonez2009goals | abstract |
+| 7 | Goal-setting researchers reply that the critique is anecdotal and that the pitfalls were already published | Research (rejoinder), disputed | locke2009goal | abstract |
+| 8 | In one case study of two teams, OKRs aided knowledge sharing, goal alignment, and inter-team insight; writing key results needed support | Research finding (qualitative, one project) | stray2022okrs | abstract |
+| 9 | No controlled study of OKRs' effect on software delivery found | Research gap | — | search in session |
+| 10 | Planning sequence, unfunded list, four-question allocation test, triggers, row owner versus data steward | This book's recommendation | — | synthesis |
+| 11 | All Northstar quarter 3 figures, the capacity cases, prevention split, scorecard proposal, and case requests | Illustrative | — | fictional; recomputed twice (see research/northstar-additions/ch38.md) |
+
+## Chapter 39 — Reviews, Decision Logs, Escalation, and Executive Reporting
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | A manager's output is the output of the organization they lead or influence; reviews inspect that output and its machinery | Practitioner | grove1983high | idea-level |
+| 2 | Evidence of a failing course of action in the lower ranks often fails to travel up the hierarchy or is distorted, so decision makers do not know the true status (the mum effect) | Research finding (theory) | smith2003reluctance | abstract |
+| 3 | The impact of project failure and observed wrongdoing explain part of the reluctance to report negative project news | Research finding (experiment) | smith2001keeping | abstract |
+| 4 | Fault responsibility and time urgency change willingness to report bad news; stressing a narrow correction window may help | Research finding (laboratory experiment) | park2008mum | abstract |
+| 5 | In records of 56 experienced software project managers, status reports were biased 60 percent of the time | Research finding (researchers' practitioner summary) | keil2014pitfalls | full-text |
+| 6 | Aggressive auditing can backfire into distrust and more misreporting; powerful sponsors reduce candor; reported bad news is sometimes ignored, especially without an official channel; corroborate with several people close to the work | Research finding (researchers' practitioner summary) | keil2014pitfalls | full-text |
+| 7 | How messengers are treated distinguishes cultures that pass information well | Industry research | dora-cap-generative-culture | full-text |
+| 8 | Decision records keep rationale so successors neither accept nor reverse decisions blindly | Practitioner | nygard2011adr | full-text |
+| 9 | A decision is unfinished until action and follow-up are built into it | Practitioner | drucker1967effective | idea-level |
+| 10 | Escalate fundamental misalignment early rather than letting debate run until the side with more stamina wins | Documented practice (one company) | bezos2016letter | full-text |
+| 11 | Formal authority (right to decide) differs from real authority, which depends on who holds the information | Research finding (formal model) | aghion1997formal | abstract |
+| 12 | Main point first, supporting ideas grouped beneath it | Practitioner | minto2002pyramid | idea-level |
+| 13 | Narrative six-page memos read silently in place of slides; a great memo can take a week or more | Documented practice (one company) | bezos2017letter | full-text |
+| 14 | The engineering executive solves the company's problem rather than advocating for one function | Practitioner (expert opinion) | larson2023balancing | full-text |
+| 15 | Practitioner guide to the engineering executive's role | Practitioner | larson2024primer | idea-level |
+| 16 | Review rules (data first, presenter names problems, every item ends in a decision), decision log fields, joint escalation with a clock, report structure and color definitions | This book's recommendation | — | synthesis of rows 1–14 |
+| 17 | Review system costs about 0.5 percent of organization time at Northstar's size | Illustrative | — | stated assumptions |
+
+## Chapter 40 — The Director's Job: Leading 50 to 150 Engineers
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | A manager's output is the output of the organization under their influence; prefer high-leverage work | Practitioner | grove1983high | idea-level |
+| 2 | Moving to managing managers means working through other managers | Practitioner | fournier2017manager | idea-level |
+| 3 | Engineering management as the design of systems | Practitioner | larson2019elegant | idea-level |
+| 4 | Organizational structures distort information reaching decision makers, more so in larger organizations; "control loss" compounds by level | Theoretical model, stated as such | williamson1967hierarchical | abstract; control loss official-summary |
+| 5 | In 40 interviews, most employees had withheld a concern from a supervisor; fear of being labeled negatively was the most frequent reason | Research finding (exploratory, small sample) | milliken2003silence | abstract |
+| 6 | Research on middle managers' role in strategy spans about 25 years and is diverse in constructs | Research finding (review) | wooldridge2008middle | abstract |
+| 7 | 259 middle managers in 25 organizations; Prospector firms' middle managers reported more upward and divergent strategic involvement | Research finding | floyd1992middle | abstract |
+| 8 | Boundary-spanning middle managers reported more strategic influence; performance associated with more uniform downward and more varied upward influence | Research finding (correlational) | floyd1997middle | abstract |
+| 9 | Interruption, crisis mentality, and rewards for heroics perpetuated a software team's time famine; changing time use raised collective productivity | Research finding (one team, qualitative) | perlow1999time | abstract |
+| 10 | Managerial work is brief, fragmented, and mostly conversation, unlike the planning folklore | Expert view, idea-level | mintzberg1990job | idea-level |
+| 11 | A documented skip-level practice: written template, purposes, feedback shared with the manager by default, confidential meeting on request | Documented practice | gitlab-skip-level | full text |
+| 12 | New leaders should learn deliberately with a plan | Practitioner | watkins2003first | idea-level |
+| 13 | The executive's job is to merge the CEO's, peers', and engineering's views into the company's problem | Expert opinion | larson2023balancing | full text |
+| 14 | Signal-source table, discrepancy diagram, firsthand-share threshold of about a tenth, calendar cuts by source and horizon, skip-level rule | This book's recommendation | — | reasoning |
+| 15 | Skip-level cost table; 0.7 per hop loss example; all Northstar shares, samples, and the quarter 3 proposal | Illustrative | — | arithmetic recomputed in session |
+
+Gaps: Athanassiades (1973) on upward distortion and Roberts and O'Reilly (1974) on upward communication
+failures were identified but only truncated abstracts were reachable (AOM returned 403); not cited. No
+study found on skip-level meetings' effects or on directors' time allocation and outcomes in software
+organizations (extends G22).
+
+## Chapter 41 — Managing and Developing Engineering Managers
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | A manager's output is the output of the organization under their influence | Practitioner | grove1983high | idea-level |
+| 2 | Idiosyncratic rater effects explained 62 and 53 percent of variance in multi-rater ratings of managers, more than twice the ratee-performance effect | Research finding | scullen2000latent | abstract |
+| 3 | Improvement after multisource feedback is generally small (24 longitudinal studies); more likely when change is seen as needed and feasible, goals are set, and action taken | Research finding (meta-analysis plus theoretical review) | smither2005multisource | abstract |
+| 4 | People management skills strongly and negatively related to attrition at one firm; not consistently to other outcomes | Research finding | hoffman2021people | abstract |
+| 5 | Project Oxygen: teams with highly effective managers had better results and lower turnover | Industry research (company self-report) | rework-great-managers | full text |
+| 6 | Managers value delegation for development but withhold important decisions from people seen as inexperienced | Research finding | yukl1999determinants | abstract |
+| 7 | Moving decisions to the people with information; leaders who amplify or diminish others | Expert opinion | marquet2013turn; wiseman2010multipliers | idea-level (metadata only) |
+| 8 | Leadership training (335 samples) improves reactions, learning, transfer, and results (.63, .73, .82, .72); needs analysis, feedback, practice, spacing, on-site, face-to-face moderate it | Research finding | lacerenza2017leadership | abstract |
+| 9 | Systematic study of leader development is fairly young; review emphasizes multisource feedback and longitudinal studies | Research finding (review framing) | day2014advances | abstract |
+| 10 | New managers learn the transition mainly from experience; many do not make it | Research finding (qualitative, publisher summary) | hill2019becoming | official summary |
+| 11 | Management path level by level; manager's job as purpose, people, process | Practitioner | fournier2017manager; zhuo2019making | idea-level (metadata only) |
+| 12 | Firms weight current performance in promotions though other traits predict managerial success | Research finding | benson2019promotions | abstract |
+| 13 | Sponsorship differs from mentoring; high-potential women over-mentored and under-sponsored | Industry research | ibarra2010promotions | full text |
+| 14 | Six-dimension rubric, four ratings, evidence rule, unset-expectation rule, no composite | This book's recommendation | builds on ch4 | reasoning |
+| 15 | Skip-level design, staff-review slot, decision flow for Not yet, bench principles, playbook | This book's recommendation | — | reasoning |
+| 16 | Director time model, attrition arithmetic, all Northstar ratings, Priya's quarter 2 hours, quarter 3 plans | Illustrative | — | fictional, recomputed in session |
+
+## Chapter 42 — Cross-Functional Dependencies, Portfolio Management, and Influence Without Authority
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Average work in progress equals throughput times time in system; exact for measured data over a window starting and ending empty; descriptive, not a trade-off rule | Research finding (theorem) | little2011law | full text |
+| 2 | Predicting the effect of a lower portfolio limit additionally assumes throughput holds | This book's recommendation | little2011law | full text (caveat) |
+| 3 | Sequencing work through a shared specialist delivers value earlier than parallel work | Illustrative | none | arithmetic |
+| 4 | DORA associates WIP limits with better delivery performance; failure modes include limits too high and limits raised when idle | Industry research | dora-cap-wip-limits | full text |
+| 5 | Multiple team membership negatively associated with unit performance, more so with complex tasks (health care) | Research finding, applied by extension | crawford2019link | abstract |
+| 6 | Development queues go unmanaged because they are invisible | Expert opinion | reinertsen2009principles | idea-level |
+| 7 | First estimate of a portfolio limit: throughput times acceptable lead time | This book's recommendation | none | reasoning |
+| 8 | Number of people involved is strongly related to a work item's calendar time | Research finding (distributed development) | herbsleb2003empirical | abstract |
+| 9 | Congruence between coordination patterns and coordination needs shortens modification-request resolution | Research finding | cataldo2008congruence | abstract |
+| 10 | Put cross-functional coordination in named intakes and policies rather than escalation | This book's recommendation | inference from rows 8-9 | reasoning |
+| 11 | Product teams should be given problems rather than stakeholder feature lists | Expert opinion | cagan2020empowered | idea-level |
+| 12 | Principled negotiation: interests over positions; best alternative to agreement | Practitioner (expert opinion) | fisher1981getting | idea-level |
+| 13 | Influence among peers as exchange of things the other values | Practitioner (expert opinion) | cohen1990influence | idea-level |
+| 14 | Rational persuasion, inspirational appeal, consultation most effective; pressure, coalition, legitimating least; exchange moderately effective with peers, not superiors | Research finding | yukl1992consequences | abstract |
+| 15 | Rationality and ingratiation positively related to work outcomes; other tactics situational | Research finding (meta-analysis) | higgins2003influence | abstract |
+| 16 | Escalate fundamental misalignment early; disagree and commit | Documented practice | bezos2016letter | full text |
+| 17 | Baseline: 9 of 17 committed items cross-team, 1 delivered; lead time 11/24/41 days by dependency count | Illustrative (Northstar canon) | baseline-data | canon |
+| 18 | Northstar quarter 3 portfolio, limit, and week 31 request | Illustrative | Chapter 38 draft; northstar-additions/ch42.md | addition |
+
+## Chapter 43 — Leading Organizational Change and Director Failure Patterns
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Kotter's account draws on observing more than 100 companies attempting transformation | Expert opinion | kotter1995leading | official summary (article opening) |
+| 2 | Kotter's article is known for a sequence of errors: too little urgency, no guiding coalition, no planned short-term wins, declaring victory too soon, not anchoring the change | Expert opinion | kotter1995leading | idea-level; body of article not read |
+| 3 | The "70 percent of change programs fail" figure has no valid and reliable empirical evidence in the five published sources reviewed; a single failure rate is hard to define | Research finding (about the evidence) | hughes2011seventy | abstract |
+| 4 | Reactions to change have antecedents before the change and in the change itself (process, perceived benefit or harm, content); how a change is run is a lever separate from what it is | Research finding (review), narrowed | oreg2011recipients | abstract |
+| 5 | The hard part of transformation is people, culture, and organization rather than technology | Expert opinion | kane2019technology | idea-level |
+| 6 | Strategy starts with a diagnosis, then a guiding policy and coherent actions | Expert opinion | rumelt2011good | idea-level |
+| 7 | A cohesive leadership team creates, repeats, and reinforces clarity | Expert opinion | lencioni2012advantage | idea-level |
+| 8 | Large problems become tractable as a series of small wins | Expert opinion (essay) | weick1984small | idea-level |
+| 9 | Early wins build a new leader's credibility | Expert opinion | watkins2003first | idea-level |
+| 10 | Escalation of commitment: committing more to a failing course one chose oneself | Research finding, idea-level credit only | staw1976knee | metadata; no finding reported |
+| 11 | In two studies, apology repaired trust better after competence violations and denial after integrity violations; apology worked better when guilt was later shown, denial when innocence was | Research finding | kim2004removing | abstract |
+| 12 | Most failed director initiatives are competence failures, so owning them is the fitting repair; explaining them away is a denial | This book's recommendation (inference from claim 11) | kim2004removing | inference stated as such in the chapter |
+| 13 | Director failure patterns table (eight patterns) | This book's recommendation | synthesis of claims 1–11 and earlier chapters | no single source |
+| 14 | Change-load arithmetic per manager (110-engineer example) | Illustrative | none | worked example with stated assumptions |
+| 15 | Northstar Excellence Day and the director's self-assessment | Illustrative | Northstar canon plus research/northstar-additions/ch43.md | fictional |

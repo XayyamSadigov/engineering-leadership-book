@@ -2,7 +2,7 @@
 
 Questions the book needs evidence for and does not yet have. A chapter that touches a gap must admit
 it in the text. Each gap records what was searched, what was found, and what to do next.
-Updated 2026-11-20 after waves 1–4 (Parts I–VII).
+Updated 2026-11-20 after waves 1–5 (Parts I–IX).
 
 ## Open
 
@@ -26,7 +26,7 @@ Updated 2026-11-20 after waves 1–4 (Parts I–VII).
 | G19 | Comparisons of test-portfolio shapes (pyramid, trophy, honeycomb); industrial studies of exploratory testing | Ch 22 | None found | Targeted search |
 | G20 | Draft standards that may change before publication: NIST SSDF 1.2 (SP 800-218r1 draft), CISA 2025 SBOM minimum elements draft | Ch 26 | Status confirmed as draft on 2026-11-19 | Re-check before human review |
 | G21 | Manager effects on outcomes in software teams specifically | Ch 1, 4 | Manager-effect studies found are economics papers on other workforces (`lazear2015value`, `hoffman2021people`, `artz2017boss`), read at working-paper abstract level | Search software engineering venues |
-| G22 | How engineering managers' time split relates to team outcomes | Ch 1 | Nothing found | Search |
+| G22 | How engineering managers' and directors' time split relates to outcomes; effects of skip-level meetings | Ch 1, 40, 41 | Nothing found | Search |
 | G23 | Full text of research on new managers (Hill) and on delegation (Leana 1986) | Ch 2 | Only publisher summaries; Leana returned 403 | Read via a library |
 | G24 | Peer-reviewed estimates of flow efficiency in software delivery; cost of interruptions (Parnin and Rugaber) | Ch 16 | Not found or not readable | Targeted search |
 | G25 | Planning fallacy full text (Buehler et al. 1994); Flyvbjerg 2008; McConnell's cone of uncertainty | Ch 17 | Only a course-hosted copy of Buehler exists (not used); others paywalled or unread | Read via a library |
@@ -46,6 +46,11 @@ Updated 2026-11-20 after waves 1–4 (Parts I–VII).
 | G39 | Rewrite versus incremental modernization outcomes | Ch 32 | None found; anti-rewrite position labeled expert opinion | Search |
 | G40 | Comparisons of component ownership models | Ch 31 | None found; ownership model labeled this book's recommendation | Search |
 | G41 | Empirical comparison of who should hold architecture decision rights in software organizations | Ch 28 | Only the Aghion and Tirole model (abstract) and practitioner sources | Search |
+| G42 | Which meeting cadences work for leadership teams | Ch 37 | Meeting science covers meeting quality, not cadence; Leach et al. 2009 abstract unreachable | Search |
+| G43 | Effects of OKRs on software delivery | Ch 38 | One qualitative case study (`stray2022okrs`); goal-setting research is general | Search |
+| G44 | Organization-level WIP limits for portfolios | Ch 42 | None found; the limit of three is this book's recommendation | Search |
+| G45 | Field evidence on recovering a manager's credibility after a failed initiative | Ch 43 | Only laboratory trust-repair experiments (`kim2004removing`); Staw 1976 and Weick 1984 unread beyond metadata | Search |
+| G46 | Upward information distortion classics (Athanassiades 1973; Roberts and O'Reilly 1974); organizational silence (Morrison and Milliken 2000) | Ch 39, 40 | Abstracts unreachable | Read via a library |
 
 ## Closed
 

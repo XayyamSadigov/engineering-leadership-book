@@ -119,12 +119,32 @@ nav:
       - "Chapter 34 — Spans, Layers, and Dependency Mapping": parts/07-organization-design/34-spans-layers-and-dependency-mapping.md
       - "Chapter 35 — Designing Organizations of 20, 50, 100, and 500 Engineers": parts/07-organization-design/35-designing-organizations-at-four-scales.md
       - "Chapter 36 — Reorganizations, Organizational Evolution, and Succession": parts/07-organization-design/36-reorganizations-evolution-and-succession.md
+  - "VIII. Engineering Management Operating System":
+      - "Chapter 37 — The Management Operating System: Cadences and Leadership Meetings": parts/08-management-operating-system/37-cadences-and-leadership-meetings.md
+      - "Chapter 38 — Scorecards, Quarterly Planning, and Capacity Allocation": parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md
+      - "Chapter 39 — Reviews, Decision Logs, Escalation, and Executive Reporting": parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md
+  - "IX. Engineering Directorship":
+      - "Chapter 40 — The Director's Job: Leading 50 to 150 Engineers": parts/09-engineering-directorship/40-the-directors-job.md
+      - "Chapter 41 — Managing and Developing Engineering Managers": parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md
+      - "Chapter 42 — Cross-Functional Dependencies, Portfolio Management, and Influence Without Authority": parts/09-engineering-directorship/42-cross-functional-dependencies-portfolio-and-influence.md
+      - "Chapter 43 — Leading Organizational Change and Director Failure Patterns": parts/09-engineering-directorship/43-leading-change-and-director-failure-patterns.md
   - "XIV. Templates and playbooks":
       - "Template library": templates/index.md
       - "Engineering quality scorecard": templates/engineering-quality-scorecard.md
       - "Technical debt register": templates/technical-debt-register.md
       - "Incident review": templates/incident-review.md
       - "90-day quality transformation plan": templates/ninety-day-quality-plan.md
+      - "Engineering Manager performance rubric": templates/engineering-manager-rubric.md
+      - "Director competency matrix": templates/director-competency-matrix.md
+      - "Organizational design assessment": templates/organizational-design-assessment.md
+      - "Quarterly engineering review": templates/quarterly-engineering-review.md
+      - "Capacity planning model": templates/capacity-planning-model.md
+  - Projects:
+      - "Overview": projects/index.md
+      - "Project 3 — Quality transformation plan": projects/p3-quality-transformation-plan.md
+      - "Project 3 solution": projects/solutions/p3-solution.md
+      - "Project 4 — Redesign an organization of 80 engineers": projects/p4-redesign-an-80-engineer-organization.md
+      - "Project 4 solution": projects/solutions/p4-solution.md
   - Exercises and solutions:
       - "Index": exercises/index.md
       - "Chapter 1 solutions": solutions/ch01-solutions.md
@@ -163,6 +183,13 @@ nav:
       - "Chapter 34 solutions": solutions/ch34-solutions.md
       - "Chapter 35 solutions": solutions/ch35-solutions.md
       - "Chapter 36 solutions": solutions/ch36-solutions.md
+      - "Chapter 37 solutions": solutions/ch37-solutions.md
+      - "Chapter 38 solutions": solutions/ch38-solutions.md
+      - "Chapter 39 solutions": solutions/ch39-solutions.md
+      - "Chapter 40 solutions": solutions/ch40-solutions.md
+      - "Chapter 41 solutions": solutions/ch41-solutions.md
+      - "Chapter 42 solutions": solutions/ch42-solutions.md
+      - "Chapter 43 solutions": solutions/ch43-solutions.md
   - References:
       - "Bibliography": references/bibliography.md
       - "Evidence labels": references/evidence-labels.md

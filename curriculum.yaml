@@ -401,7 +401,7 @@ parts:
       - n: 37
         slug: cadences-and-leadership-meetings
         title: "The Management Operating System: Cadences and Leadership Meetings"
-        status: planned
+        status: review
         objectives:
           - Design a set of weekly, monthly, and quarterly cadences in which each meeting has one job.
           - Run a leadership team meeting that makes decisions.
@@ -411,7 +411,7 @@ parts:
       - n: 38
         slug: scorecards-quarterly-planning-and-capacity-allocation
         title: Scorecards, Quarterly Planning, and Capacity Allocation
-        status: planned
+        status: review
         objectives:
           - Build an engineering scorecard with paired metrics and explicit owners.
           - Run quarterly planning that ends with funded commitments and named trade-offs.
@@ -421,7 +421,7 @@ parts:
       - n: 39
         slug: reviews-decision-logs-escalation-and-executive-reporting
         title: Reviews, Decision Logs, Escalation, and Executive Reporting
-        status: planned
+        status: review
         objectives:
           - Run quality, architecture, and talent reviews as inspection of the system.
           - Keep a decision log and define clean escalation.
@@ -437,7 +437,7 @@ parts:
       - n: 40
         slug: the-directors-job
         title: "The Director's Job: Leading 50 to 150 Engineers"
-        status: planned
+        status: review
         objectives:
           - Describe how information, time horizon, and leverage change when you manage managers.
           - Build your own signal sources so that you are not managed by your reports' summaries.
@@ -446,7 +446,7 @@ parts:
       - n: 41
         slug: managing-and-developing-engineering-managers
         title: Managing and Developing Engineering Managers
-        status: planned
+        status: review
         objectives:
           - Assess an engineering manager against a rubric with observable evidence.
           - Coach managers through skip-levels, staff reviews, and delegated decisions.
@@ -456,7 +456,7 @@ parts:
       - n: 42
         slug: cross-functional-dependencies-portfolio-and-influence
         title: Cross-Functional Dependencies, Portfolio Management, and Influence Without Authority
-        status: planned
+        status: review
         objectives:
           - Manage a portfolio of initiatives with explicit work-in-progress limits.
           - Resolve cross-functional dependencies structurally.
@@ -465,7 +465,7 @@ parts:
       - n: 43
         slug: leading-change-and-director-failure-patterns
         title: Leading Organizational Change and Director Failure Patterns
-        status: planned
+        status: review
         objectives:
           - Plan a change with a diagnosis, a coalition, early evidence, and reinforcement.
           - Recognize the common director failure patterns in yourself.
@@ -674,18 +674,18 @@ templates:
   # status as above. file is relative to docs/templates/
   - {id: t01, file: one-on-one.md, title: 1:1 template, status: planned}
   - {id: t02, file: career-development-plan.md, title: Career development plan, status: planned}
-  - {id: t03, file: engineering-manager-rubric.md, title: Engineering Manager performance rubric, status: planned}
-  - {id: t04, file: director-competency-matrix.md, title: Director competency matrix, status: planned}
+  - {id: t03, file: engineering-manager-rubric.md, title: Engineering Manager performance rubric, status: review}
+  - {id: t04, file: director-competency-matrix.md, title: Director competency matrix, status: review}
   - {id: t05, file: cto-competency-matrix.md, title: CTO competency matrix, status: planned}
   - {id: t06, file: team-health-assessment.md, title: Team health assessment, status: planned}
-  - {id: t07, file: organizational-design-assessment.md, title: Organizational design assessment, status: planned}
+  - {id: t07, file: organizational-design-assessment.md, title: Organizational design assessment, status: review}
   - {id: t08, file: engineering-quality-scorecard.md, title: Engineering quality scorecard, status: review}
   - {id: t09, file: technical-debt-register.md, title: Technical debt register, status: review}
   - {id: t10, file: incident-review.md, title: Incident review template, status: review}
   - {id: t11, file: risk-register.md, title: Risk register, status: planned}
   - {id: t12, file: architecture-decision-record.md, title: Architecture decision record, status: planned}
-  - {id: t13, file: quarterly-engineering-review.md, title: Quarterly engineering review, status: planned}
-  - {id: t14, file: capacity-planning-model.md, title: Capacity planning model, status: planned}
+  - {id: t13, file: quarterly-engineering-review.md, title: Quarterly engineering review, status: review}
+  - {id: t14, file: capacity-planning-model.md, title: Capacity planning model, status: review}
   - {id: t15, file: engineering-strategy.md, title: Engineering strategy template, status: planned}
   - {id: t16, file: technology-investment-business-case.md, title: Technology investment business case, status: planned}
   - {id: t17, file: stakeholder-map.md, title: Stakeholder map, status: planned}
@@ -696,8 +696,8 @@ templates:
 projects:
   - {id: p1, title: Build an Engineering Management Operating System, status: planned}
   - {id: p2, title: Diagnose a Low-Performing Engineering Team, status: planned}
-  - {id: p3, title: Create an Engineering Quality Transformation Plan, status: planned}
-  - {id: p4, title: Redesign an Organization of 80 Engineers, status: planned}
+  - {id: p3, title: Create an Engineering Quality Transformation Plan, status: review}
+  - {id: p4, title: Redesign an Organization of 80 Engineers, status: review}
   - {id: p5, title: Build a Delivery Performance and Reliability Scorecard, status: planned}
   - {id: p6, title: Create Engineering Manager Development and Succession Plans, status: planned}
   - {id: p7, title: Design a 12-Month Engineering Strategy, status: planned}

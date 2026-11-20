@@ -6,8 +6,8 @@ reviewed by a person, and the known limitations a reader or reviewer should be a
 ## Automated validation
 
 Run `python tools/validate_book.py --build`. Last result recorded: **passed**, 2026-11-20, with
-chapters 1–36 live (chapters, navigation, references, exercises, generated pages,
-single-file edition, `mkdocs build --strict`). No warnings: all 293 bibliography entries are verified. Mermaid: 98 of 98 diagrams render with mermaid-cli 11.
+chapters 1–43, nine templates, and projects 3 and 4 live (chapters, navigation, references, exercises, generated pages,
+single-file edition, `mkdocs build --strict`). No warnings: all 329 bibliography entries are verified. Mermaid: 118 of 118 diagrams render with mermaid-cli 11.
 All diagrams of chapters 1–4 and 15–18 measured in a headless browser at 390 px; one squeezed diagram
 (chapter 2) fixed. `ruff check tools`: clean. Browser check of all nine Part V chapters at
 390 px: no horizontal page overflow; six squeezed left-to-right diagrams redrawn top-to-bottom, and a
@@ -63,10 +63,22 @@ the canon, a quarter-2 move that the canon defers to year 2, an Orders split tha
 31 co-change data, two different hierarchies for the same 500-engineer example, repetition across
 chapters 33–35); arithmetic in the key findings verified by the maintainer; all 21 fixed.
 
+## Wave 5 (chapters 37–43, five templates, projects 3 and 4), 2026-11-20
+
+Seven chapter authors, one templates author, one projects author. All nine hit the 5-hour usage limit
+mid-work and were resumed with their context after it reset. Shared quarter-2 and quarter-3 facts (the
+director's calendar, skip-levels, quarter-2 results, quarter-3 capacity) needed several rounds of
+alignment; the maintainer sent one final rule per shared fact. 36 sources merged (329 in total, all
+verified). The reviewer reported 30 findings (a wrong "needed by" date in the chapter 39 example; a lapsed
+exemption shown as live in Project 4's data; Billing's pre-week-10 size used in quarter 3; contradictory
+skip-level rules; templates written as if quarter-2 results did not exist; repetition of escalation and
+skip-levels); the key arithmetic findings were verified by the maintainer; all 30 fixed.
+
 ## Human review status
 
 | Item | Status | Self-review | Human review |
 |---|---|---|---|
+| Chapters 37–43, templates t03 t04 t07 t13 t14, projects 3 and 4 | review | Author self-review; independent AI review (30 findings, all fixed) | **Not done** |
 | Chapters 28–36 and solutions | review | Author self-review; independent AI review (21 findings, all fixed) | **Not done** |
 | Chapters 5–14 and solutions | review | Author self-review; independent AI review (16 findings, all fixed) | **Not done** |
 | Chapters 1–4 and 15–18 and solutions | review | Author self-review; independent AI review (20 findings, all fixed) | **Not done** |

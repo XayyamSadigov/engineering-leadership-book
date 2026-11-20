@@ -3,7 +3,7 @@
 
 # Curriculum
 
-The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 36 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
+The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 43 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
 
 | Part | Chapters | On the site |
 |---|---|---|
@@ -14,8 +14,8 @@ The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are publishe
 | V. Software Quality and Engineering Excellence | 19–27 | 9 of 9 |
 | VI. Technical Leadership and Architecture | 28–32 | 5 of 5 |
 | VII. Organizational Design | 33–36 | 4 of 4 |
-| VIII. Engineering Management Operating System | 37–39 | 0 of 3 |
-| IX. Engineering Directorship | 40–43 | 0 of 4 |
+| VIII. Engineering Management Operating System | 37–39 | 3 of 3 |
+| IX. Engineering Directorship | 40–43 | 4 of 4 |
 | X. Product and Business Leadership | 44–46 | 0 of 3 |
 | XI. VP of Engineering | 47–49 | 0 of 3 |
 | XII. CTO Leadership | 50–55 | 0 of 6 |
@@ -488,9 +488,9 @@ Primary sources: [larson2019elegant](references/bibliography.md#larson2019elegan
 
 The recurring mechanisms that make an organization manageable; cadences, scorecards, reviews, and escalation.
 
-### Chapter 37 — The Management Operating System: Cadences and Leadership Meetings
+### [Chapter 37 — The Management Operating System: Cadences and Leadership Meetings](parts/08-management-operating-system/37-cadences-and-leadership-meetings.md)
 
-*Status: Planned* · *Project: P1*
+*Status: On the site, awaiting human review* · *Project: P1*
 
 After this chapter you can:
 
@@ -500,9 +500,9 @@ After this chapter you can:
 
 Primary sources: [grove1983high](references/bibliography.md#grove1983high), [lencioni2012advantage](references/bibliography.md#lencioni2012advantage), [drucker1967effective](references/bibliography.md#drucker1967effective)
 
-### Chapter 38 — Scorecards, Quarterly Planning, and Capacity Allocation
+### [Chapter 38 — Scorecards, Quarterly Planning, and Capacity Allocation](parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md)
 
-*Status: Planned* · *Project: P5*
+*Status: On the site, awaiting human review* · *Project: P5*
 
 After this chapter you can:
 
@@ -512,9 +512,9 @@ After this chapter you can:
 
 Primary sources: [doerr2018measure](references/bibliography.md#doerr2018measure), [grove1983high](references/bibliography.md#grove1983high), [dora-metrics-guide](references/bibliography.md#dora-metrics-guide), [forsgren2021space](references/bibliography.md#forsgren2021space)
 
-### Chapter 39 — Reviews, Decision Logs, Escalation, and Executive Reporting
+### [Chapter 39 — Reviews, Decision Logs, Escalation, and Executive Reporting](parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -528,9 +528,9 @@ Primary sources: [grove1983high](references/bibliography.md#grove1983high), [dru
 
 Leading through managers; the 50 to 150 engineer organization.
 
-### Chapter 40 — The Director's Job: Leading 50 to 150 Engineers
+### [Chapter 40 — The Director's Job: Leading 50 to 150 Engineers](parts/09-engineering-directorship/40-the-directors-job.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -540,9 +540,9 @@ After this chapter you can:
 
 Primary sources: [fournier2017manager](references/bibliography.md#fournier2017manager), [grove1983high](references/bibliography.md#grove1983high), [larson2019elegant](references/bibliography.md#larson2019elegant), [watkins2003first](references/bibliography.md#watkins2003first)
 
-### Chapter 41 — Managing and Developing Engineering Managers
+### [Chapter 41 — Managing and Developing Engineering Managers](parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md)
 
-*Status: Planned* · *Project: P6*
+*Status: On the site, awaiting human review* · *Project: P6*
 
 After this chapter you can:
 
@@ -552,9 +552,9 @@ After this chapter you can:
 
 Primary sources: [fournier2017manager](references/bibliography.md#fournier2017manager), [wiseman2010multipliers](references/bibliography.md#wiseman2010multipliers), [marquet2013turn](references/bibliography.md#marquet2013turn), [zhuo2019making](references/bibliography.md#zhuo2019making)
 
-### Chapter 42 — Cross-Functional Dependencies, Portfolio Management, and Influence Without Authority
+### [Chapter 42 — Cross-Functional Dependencies, Portfolio Management, and Influence Without Authority](parts/09-engineering-directorship/42-cross-functional-dependencies-portfolio-and-influence.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -564,9 +564,9 @@ After this chapter you can:
 
 Primary sources: [reinertsen2009principles](references/bibliography.md#reinertsen2009principles), [cagan2020empowered](references/bibliography.md#cagan2020empowered), [larson2024primer](references/bibliography.md#larson2024primer)
 
-### Chapter 43 — Leading Organizational Change and Director Failure Patterns
+### [Chapter 43 — Leading Organizational Change and Director Failure Patterns](parts/09-engineering-directorship/43-leading-change-and-director-failure-patterns.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -792,18 +792,18 @@ Reusable artifacts, each filled in with a Northstar example. This part has no ch
 |---|---|
 | 1:1 template | Planned |
 | Career development plan | Planned |
-| Engineering Manager performance rubric | Planned |
-| Director competency matrix | Planned |
+| [Engineering Manager performance rubric](templates/engineering-manager-rubric.md) | On the site, awaiting human review |
+| [Director competency matrix](templates/director-competency-matrix.md) | On the site, awaiting human review |
 | CTO competency matrix | Planned |
 | Team health assessment | Planned |
-| Organizational design assessment | Planned |
+| [Organizational design assessment](templates/organizational-design-assessment.md) | On the site, awaiting human review |
 | [Engineering quality scorecard](templates/engineering-quality-scorecard.md) | On the site, awaiting human review |
 | [Technical debt register](templates/technical-debt-register.md) | On the site, awaiting human review |
 | [Incident review template](templates/incident-review.md) | On the site, awaiting human review |
 | Risk register | Planned |
 | Architecture decision record | Planned |
-| Quarterly engineering review | Planned |
-| Capacity planning model | Planned |
+| [Quarterly engineering review](templates/quarterly-engineering-review.md) | On the site, awaiting human review |
+| [Capacity planning model](templates/capacity-planning-model.md) | On the site, awaiting human review |
 | Engineering strategy template | Planned |
 | Technology investment business case | Planned |
 | Stakeholder map | Planned |
@@ -833,8 +833,8 @@ Primary sources: [forsgren2018accelerate](references/bibliography.md#forsgren201
 |---|---|
 | P1: Build an Engineering Management Operating System | Planned |
 | P2: Diagnose a Low-Performing Engineering Team | Planned |
-| P3: Create an Engineering Quality Transformation Plan | Planned |
-| P4: Redesign an Organization of 80 Engineers | Planned |
+| P3: Create an Engineering Quality Transformation Plan | On the site, awaiting human review |
+| P4: Redesign an Organization of 80 Engineers | On the site, awaiting human review |
 | P5: Build a Delivery Performance and Reliability Scorecard | Planned |
 | P6: Create Engineering Manager Development and Succession Plans | Planned |
 | P7: Design a 12-Month Engineering Strategy | Planned |
