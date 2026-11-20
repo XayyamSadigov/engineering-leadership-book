@@ -1,0 +1,338 @@
+# Bibliographic verification, books 19-35. Fetched 2026-11-18.
+# Every recorded field comes from a page fetched in that session (see verified_via).
+# Not reachable in this session: oreilly.com and learning.oreilly.com (HTTP 403), mitpress.mit.edu (403),
+# store.hbr.org (404), penguinrandomhouse.com (404 / wrong page), Google Books API (429).
+# For those publishers the fallback source is Open Library (ISBN API), as allowed by the brief.
+# id convention: first author/editor surname + first-publication year + first title word, skipping a leading "The".
+
+- id: forsgren2018accelerate
+  type: book
+  title: "Accelerate"
+  subtitle: "The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations"
+  authors: ["Nicole Forsgren", "Jez Humble", "Gene Kim"]
+  role: authors
+  publisher: "IT Revolution Press"
+  year_first_published: 2018
+  latest_edition: null
+  isbn13: "9781942788331"
+  url: "https://itrevolution.com/product/accelerate/"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, isbn13]
+  verified_via:
+    - "https://itrevolution.com/product/accelerate/"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781942788331&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "Given data correct. Publisher page gives publication date March 27, 2018 and paperback ISBN 9781942788331; no later edition is listed there. Publisher name 'IT Revolution Press' taken from Open Library (the publisher page itself only shows the IT Revolution site branding). Open Library splits the title as 'Accelerate: The Science of Lean Software and DevOps' + subtitle 'Building and Scaling...'; the publisher page shows the form recorded here. No free full text indicated on the publisher page."
+
+- id: kim2016devops
+  type: book
+  title: "The DevOps Handbook"
+  subtitle: "How to Create World-Class Agility, Reliability, & Security in Technology Organizations"
+  authors: ["Gene Kim", "Jez Humble", "Patrick Debois", "John Willis", "Nicole Forsgren"]
+  role: authors
+  publisher: "IT Revolution Press"
+  year_first_published: 2016
+  latest_edition: "Second Edition (2021)"
+  isbn13: "9781950508402"
+  url: "https://itrevolution.com/product/the-devops-handbook-second-edition/"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, latest_edition, isbn13]
+  verified_via:
+    - "https://itrevolution.com/product/the-devops-handbook-second-edition/"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781942788003&format=json&jscmd=data"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781950508402&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "First edition (original publication date October 6, 2016; ISBN 9781942788003) has four authors per the Open Library by-statement: Gene Kim, Jez Humble, Patrick Debois, John Willis. The Second Edition (November 30, 2021; paperback ISBN 9781950508402) lists five authors on the publisher page, adding Nicole Forsgren ('new foreword and updated material by Dr. Nicole Forsgren'). The authors list here is the second-edition list; cite four authors for the 2016 edition. Publisher name 'IT Revolution Press' from Open Library."
+
+- id: beyer2016site
+  type: book
+  title: "Site Reliability Engineering"
+  subtitle: "How Google Runs Production Systems"
+  authors: ["Betsy Beyer", "Chris Jones", "Jennifer Petoff", "Niall Richard Murphy"]
+  role: editors
+  publisher: "O'Reilly Media"
+  year_first_published: 2016
+  latest_edition: "2nd Edition (2026)"
+  isbn13: "9781491929124"
+  url: "https://sre.google/books/"
+  free_online: "https://sre.google/sre-book/table-of-contents/"
+  verified_fields: [title, subtitle, authors, publisher, year, latest_edition, isbn13, free_online]
+  verified_via:
+    - "https://sre.google/books/"
+    - "https://sre.google/sre-book/table-of-contents/"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781491929124&format=json&jscmd=data"
+    - "https://books.google.az/books?id=iXnw0QEACAAJ&newbks=0&redir_esc=y"
+  access_level: full-text-available
+  access_notes: "First edition: Open Library by-statement 'edited by Betsy Beyer, Chris Jones, Jennifer Petoff, and Niall Richard Murphy', O'Reilly Media, 2016, ISBN 9781491929124 (the isbn13 recorded here is the FIRST edition). The free online text resolves and carries the footer 'Copyright (c) 2017 Google, Inc. Published by O'Reilly Media, Inc. Licensed under CC BY-NC-ND 4.0' - note the 2017 copyright line on the web version versus 2016 print publication. NEW: sre.google/books now also lists 'Site Reliability Engineering, 2nd Edition' with six editors (Betsy Beyer, Chris Jones, Christof Leng, David Huska, Jennifer Petoff, Niall Richard Murphy); the linked Google Books record gives edition 2, O'Reilly Media, publication date 2 Oct 2026, ISBN 9798341607682, 750 pages. The 2nd edition has only a 'Buy' link on sre.google/books - no free read-online link was shown for it, so the free full text applies to the first edition only. oreilly.com product page returned 403 and was not used."
+
+- id: beyer2018site
+  type: book
+  title: "The Site Reliability Workbook"
+  subtitle: "Practical Ways to Implement SRE"
+  authors: ["Betsy Beyer", "Niall Richard Murphy", "David K. Rensin", "Kent Kawahara", "Stephen Thorne"]
+  role: editors
+  publisher: "O'Reilly Media"
+  year_first_published: 2018
+  latest_edition: null
+  isbn13: "9781492029502"
+  url: "https://sre.google/books/"
+  free_online: "https://sre.google/workbook/table-of-contents/"
+  verified_fields: [title, subtitle, authors, publisher, year, isbn13, free_online]
+  verified_via:
+    - "https://sre.google/books/"
+    - "https://sre.google/workbook/table-of-contents/"
+    - "https://sre.google/workbook/editors/"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781492029502&format=json&jscmd=data"
+  access_level: full-text-available
+  access_notes: "Five editors confirmed on sre.google/books ('Betsy Beyer, Niall Richard Murphy, David K. Rensin, Kent Kawahara and Stephen Thorne'); the editors page spells the third as 'Dave Rensin'. Open Library's record for ISBN 9781492029502 lists only two of them (Murphy, Rensin) - incomplete, do not rely on it for the editor list; it does confirm title, subtitle, O'Reilly Media, Aug 04, 2018. Free online text resolves with footer 'Copyright (c) 2018 Google, Inc. Published by O'Reilly Media, Inc. Licensed under CC BY-NC-ND 4.0'. oreilly.com product page returned 403."
+
+- id: humble2010continuous
+  type: book
+  title: "Continuous Delivery"
+  subtitle: "Reliable Software Releases through Build, Test, and Deployment Automation"
+  authors: ["Jez Humble", "David Farley"]
+  role: authors
+  publisher: "Addison-Wesley Professional"
+  year_first_published: 2010
+  latest_edition: null
+  isbn13: "9780321601919"
+  url: "https://www.pearson.com/en-us/subject-catalog/p/continuous-delivery-reliable-software-releases-through-build-test-and-deployment-automation/P200000009113/9780321601919"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, isbn13]
+  verified_via:
+    - "https://www.pearson.com/en-us/subject-catalog/p/continuous-delivery-reliable-software-releases-through-build-test-and-deployment-automation/P200000009113/9780321601919"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9780321601919&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "Given data correct. Pearson page: published 27 July 2010, copyright line '(c) 2011', '1st edition', hardcover ISBN 9780321601919. Some citations therefore use 2011; first publication is 2010. No later edition listed."
+
+- id: winters2020software
+  type: book
+  title: "Software Engineering at Google"
+  subtitle: "Lessons Learned from Programming Over Time"
+  authors: ["Titus Winters", "Tom Manshreck", "Hyrum Wright"]
+  role: authors
+  publisher: "O'Reilly Media"
+  year_first_published: 2020
+  latest_edition: null
+  isbn13: "9781492082798"
+  url: "https://abseil.io/resources/swe-book"
+  free_online: "https://abseil.io/resources/swe-book/html/toc.html"
+  verified_fields: [title, subtitle, authors, publisher, year, isbn13, free_online]
+  verified_via:
+    - "https://abseil.io/resources/swe-book"
+    - "https://abseil.io/resources/swe-book/html/toc.html"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781492082798&format=json&jscmd=data"
+  access_level: full-text-available
+  access_notes: "Names correct. The abseil.io page says the book is 'Curated by Titus Winters, Tom Manshreck, and Hyrum Wright' - they compiled chapters by many Google contributors, so some bibliographies cite them as editors/curators; Open Library lists them as authors, recorded as authors here. Free HTML version resolves; terms stated on abseil.io: 'made available on abseil.io under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License' (CC BY-NC-ND 4.0). Subtitle, publisher, date (Mar 17, 2020) and ISBN from Open Library; oreilly.com returned 403. Whether a newer edition exists was not checked beyond these pages."
+
+- id: richards2020fundamentals
+  type: book
+  title: "Fundamentals of Software Architecture"
+  subtitle: "An Engineering Approach"
+  authors: ["Mark Richards", "Neal Ford"]
+  role: authors
+  publisher: "O'Reilly Media"
+  year_first_published: 2020
+  latest_edition: "2nd Edition (2025), subtitle 'A Modern Engineering Approach'"
+  isbn13: "9781098175511"
+  url: "https://openlibrary.org/books/OL57549130M/Fundamentals_of_Software_Architecture"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, latest_edition, isbn13]
+  verified_via:
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781492043454&format=json&jscmd=data"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781098175511&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "Verified via Open Library only (oreilly.com returned 403). First edition: subtitle 'An Engineering Approach', O'Reilly Media, Feb 11, 2020, ISBN 9781492043454. A second edition exists: 'Fundamentals of Software Architecture: A Modern Engineering Approach', same two authors, O'Reilly Media, publish date 2025-03-12, ISBN 9781098175511 (the isbn13 recorded here). Note the subtitle changed between editions. Open Library does not label the 2025 record as '2nd edition' explicitly; that it is the second edition is inferred from the new ISBN, date and changed subtitle - confirm the edition statement on the O'Reilly page if exact wording matters. url points to Open Library because the publisher URL could not be confirmed."
+
+- id: ford2017building
+  type: book
+  title: "Building Evolutionary Architectures"
+  subtitle: "Support Constant Change"
+  authors: ["Neal Ford", "Rebecca Parsons", "Patrick Kua"]
+  role: authors
+  publisher: "O'Reilly Media"
+  year_first_published: 2017
+  latest_edition: "2nd Edition, subtitle 'Automated Software Governance', authors Neal Ford, Rebecca Parsons, Patrick Kua, Pramod Sadalage (Open Library gives 2023)"
+  isbn13: "9781492097549"
+  url: "https://openlibrary.org/books/OL38504647M/Building_Evolutionary_Architectures"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, isbn13]
+  verified_via:
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781491986363&format=json&jscmd=data"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781492097549&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "Verified via Open Library only (oreilly.com returned 403). First edition: three authors (Neal Ford, Rebecca Parsons, Patrick Kua), subtitle 'Support Constant Change', O'Reilly Media, Oct 08, 2017, ISBN 9781491986363. Later edition: 'Building Evolutionary Architectures: Automated Software Governance', FOUR authors - adds Pramod Sadalage - ISBN 9781492097549 (the isbn13 recorded here). The authors field lists the first-edition authors; use the four-author list when citing the second edition. Second-edition year is UNCERTAIN: Open Library says only '2023'; the exact release date and the '2nd Edition' wording were not confirmed on a publisher page, so latest_edition is not in verified_fields."
+
+- id: kim2013phoenix
+  type: book
+  title: "The Phoenix Project"
+  subtitle: "A Novel about IT, DevOps, and Helping Your Business Win"
+  authors: ["Gene Kim", "Kevin Behr", "George Spafford"]
+  role: authors
+  publisher: "IT Revolution Press"
+  year_first_published: 2013
+  latest_edition: "4th Edition (2024)"
+  isbn13: "9781950508945"
+  url: "https://itrevolution.com/product/the-phoenix-project/"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, latest_edition, isbn13]
+  verified_via:
+    - "https://itrevolution.com/product/the-phoenix-project/"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9780988262591&format=json&jscmd=data"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781950508945&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "Three authors confirmed (Gene Kim, Kevin Behr, George Spafford). Publisher page: original publication date January 10, 2013; '4th Edition' publication date September 3, 2024, paperback ISBN 9781950508945. The same page still shows a '5th Anniversary Edition' page count (352), i.e. intermediate anniversary editions exist; their years were not verified. Publisher name 'IT Revolution Press' from Open Library (first edition ISBN 9780988262591, 2013)."
+
+- id: doerr2018measure
+  type: book
+  title: "Measure What Matters"
+  subtitle: "How Google, Bono, and the Gates Foundation Rock the World with OKRs"
+  authors: ["John Doerr"]
+  role: authors
+  publisher: "Portfolio"
+  year_first_published: 2018
+  latest_edition: null
+  isbn13: "9780525536222"
+  url: "https://openlibrary.org/books/OL27912272M/Measure_What_Matters_How_Google_Bono_and_the_Gates_Foundation_Rock_the_World_with_OKRs"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, isbn13]
+  verified_via:
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9780525536222&format=json&jscmd=data"
+    - "https://penguinrandomhouse.ca/books/546304/measure-what-matters-by-john-doerr-foreword-by-larry-page/9780525536222"
+  access_level: metadata-only
+  access_notes: "Given data correct; sole author John Doerr, with a foreword by Larry Page (shown in the Penguin Random House Canada page header - a foreword credit, not co-authorship). Subtitle, imprint Portfolio (Penguin Random House), date April 24, 2018 and ISBN from Open Library. The US publisher page could not be fetched (the guessed penguinrandomhouse.com URL resolved to a different book; the .ca page returned only title/author/foreword). Search results indicate a UK edition with a different subtitle ('OKRs: The Simple Idea that Drives 10x Growth') - not verified, mentioned only as a caution. url points to Open Library."
+
+- id: lafley2013playing
+  type: book
+  title: "Playing to Win"
+  subtitle: "How Strategy Really Works"
+  authors: ["A.G. Lafley", "Roger L. Martin"]
+  role: authors
+  publisher: "Harvard Business Review Press"
+  year_first_published: 2013
+  latest_edition: null
+  isbn13: "9781422187395"
+  url: "https://openlibrary.org/books/OL27143899M/Playing_to_win"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, isbn13]
+  verified_via:
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781422187395&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "Given data correct. Verified via Open Library only: by-statement 'A.G. Lafley, Roger L. Martin', Harvard Business Review Press, 2013, ISBN 9781422187395 (Open Library shows the title in lower case; capitalisation here is normalised). The HBR store page (store.hbr.org/product/.../11202) returned 404 in this session, so the publisher page is unconfirmed and url points to Open Library. Exact publication month not verified."
+
+- id: ries2011lean
+  type: book
+  title: "The Lean Startup"
+  subtitle: "How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses"
+  authors: ["Eric Ries"]
+  role: authors
+  publisher: "Crown Business"
+  year_first_published: 2011
+  latest_edition: null
+  isbn13: "9780307887894"
+  url: "https://openlibrary.org/books/OL24982481M/The_Lean_Startup"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, isbn13]
+  verified_via:
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9780307887894&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "Given data correct. Verified via Open Library only: Crown Business, September 13, 2011, ISBN 9780307887894. Penguin Random House pages could not be fetched (404), so the current imprint name (Crown Business has since been rebranded within Penguin Random House) and the publisher URL are unconfirmed; url points to Open Library."
+
+- id: perri2018escaping
+  type: book
+  title: "Escaping the Build Trap"
+  subtitle: "How Effective Product Management Creates Real Value"
+  authors: ["Melissa Perri"]
+  role: authors
+  publisher: "O'Reilly Media"
+  year_first_published: 2018
+  latest_edition: null
+  isbn13: "9781491973790"
+  url: "https://openlibrary.org/books/OL28421513M/Escaping_the_Build_Trap"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, isbn13]
+  verified_via:
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781491973790&format=json&jscmd=data"
+    - "https://openlibrary.org/works/OL33319097W/editions.json"
+    - "https://www.bookshare.org/browse/book/6424540"
+    - "http://www.uxmatters.com/mt/archives/2021/08/book-review-escaping-the-build-trap.php"
+  access_level: metadata-only
+  access_notes: "YEAR IS CONFLICTING, hence 'year' is not in verified_fields. Release date is given as November 2018 by two fetched sources (Open Library edition OL45220880M: '1 Nov. 2018'; UXmatters review: 'November 29, 2018'), while the Open Library record for ISBN 9781491973790 and Bookshare give 2019 (Bookshare: 'copyright year 2019'). Most likely released late 2018 with a 2019 copyright line; 2018 is recorded as first publication, but check the copyright page before printing. If 2019 is adopted, the id becomes perri2019escaping. The O'Reilly product and copyright pages returned 403. Subtitle confirmed by Bookshare, UXmatters and Open Library."
+
+- id: cagan2008inspired
+  type: book
+  title: "Inspired"
+  subtitle: "How to Create Tech Products Customers Love"
+  authors: ["Marty Cagan"]
+  role: authors
+  publisher: "Wiley"
+  year_first_published: 2008
+  latest_edition: "2nd Edition (2017)"
+  isbn13: "9781119387503"
+  url: "https://www.wiley.com/en-us/INSPIRED%3A+How+to+Create+Tech+Products+Customers+Love%2C+2nd+Edition-p-9781119387503"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, latest_edition, isbn13]
+  verified_via:
+    - "https://www.wiley.com/en-us/INSPIRED%3A+How+to+Create+Tech+Products+Customers+Love%2C+2nd+Edition-p-9781119387503"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781119387503&format=json&jscmd=data"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9780981690407&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "Title, subtitle, publisher and ISBN are those of the 2nd Edition (Wiley, hardcover December 2017, ISBN 978-1-119-38750-3). The first edition is a different publisher and subtitle: 'Inspired: How To Create Products Customers Love', SVPG Press, June 18, 2008, ISBN 9780981690407 (Open Library) - note 'Products' in the first edition versus 'Tech Products' in the second. The Wiley page styles the title in capitals ('INSPIRED')."
+
+- id: cagan2020empowered
+  type: book
+  title: "Empowered"
+  subtitle: "Ordinary People, Extraordinary Products"
+  authors: ["Marty Cagan", "Chris Jones"]
+  role: authors
+  publisher: "Wiley"
+  year_first_published: 2020
+  latest_edition: null
+  isbn13: "9781119691297"
+  url: "https://www.wiley.com/en-us/EMPOWERED%3A+Ordinary+People%2C+Extraordinary+Products-p-9781119691297"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, isbn13]
+  verified_via:
+    - "https://www.wiley.com/en-us/EMPOWERED%3A+Ordinary+People%2C+Extraordinary+Products-p-9781119691297"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781119691297&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "Wiley page credits 'Marty Cagan' and 'Chris Jones (With)' - i.e. the formal credit is 'Marty Cagan with Chris Jones', not two equal co-authors; Open Library lists both as authors. Wiley gives publication date December 2020 (hardcover ISBN 978-1-119-69129-7); Open Library's record says 2021 - the publisher's 2020 is recorded. This Chris Jones (SVPG) is a different person from the Chris Jones who co-edited the Google SRE book. The Wiley page styles the title in capitals ('EMPOWERED')."
+
+- id: berman2006financial
+  type: book
+  title: "Financial Intelligence"
+  subtitle: "A Manager's Guide to Knowing What the Numbers Really Mean"
+  authors: ["Karen Berman", "Joe Knight"]
+  role: authors
+  publisher: "Harvard Business Review Press"
+  year_first_published: 2006
+  latest_edition: "Revised Edition (2013)"
+  isbn13: "9781422144114"
+  url: "https://openlibrary.org/books/OL26075569M/Financial_Intelligence_A_Managers_Guide_To_Knowing_What_The_Numbers_Really_Mean"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, latest_edition, isbn13]
+  verified_via:
+    - "https://openlibrary.org/works/OL5822543W/editions.json"
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9781422144114&format=json&jscmd=data"
+    - "https://www.bookshare.org/browse/book/916068"
+    - "https://openlibrary.org/search.json?q=financial+intelligence+berman+knight&fields=title,subtitle,author_name,first_publish_year,publish_year,publisher,isbn,key&limit=5"
+  access_level: metadata-only
+  access_notes: "'With John Case' credit confirmed for the first edition: Open Library by-statement 'Karen Berman and Joe Knight ; with John Case.', Harvard Business School Press, 2006 (ISBN-10 1591397642). Revised edition confirmed: 'Financial Intelligence, Revised Edition', Harvard Business Review Press, 2013, ISBN 9781422144114 (ebook 9781422144121) per Bookshare and Open Library; both of those list John Case alongside Berman and Knight without stating his role, so the exact 'with' wording on the revised edition's title page was not confirmed on a fetched page. John Case is kept out of the authors list and should be cited as 'with John Case'. Publisher name changed between editions (Harvard Business School Press 2006, Harvard Business Review Press 2013). The HBR store page returned 404; url points to Open Library. Open Library's record for ISBN 9781591397649 carries a different working title ('The art of the financial statements', 2005) - apparently pre-publication cataloguing data, ignore it."
+
+- id: kane2019technology
+  type: book
+  title: "The Technology Fallacy"
+  subtitle: "How People Are the Real Key to Digital Transformation"
+  authors: ["Gerald C. Kane", "Anh Nguyen Phillips", "Jonathan R. Copulsky", "Garth R. Andrus"]
+  role: authors
+  publisher: "The MIT Press"
+  year_first_published: 2019
+  latest_edition: null
+  isbn13: "9780262039680"
+  url: "https://openlibrary.org/books/OL27337301M/The_Technology_Fallacy"
+  free_online: null
+  verified_fields: [title, subtitle, authors, publisher, year, isbn13]
+  verified_via:
+    - "https://openlibrary.org/api/books?bibkeys=ISBN:9780262039680&format=json&jscmd=data"
+  access_level: metadata-only
+  access_notes: "Four authors confirmed via Open Library: Gerald C. Kane, Anh Nguyen Phillips, Jonathan R. Copulsky, Garth R. Andrus; The MIT Press, Apr 16, 2019, ISBN 9780262039680 (hardcover). The MIT Press page (mitpress.mit.edu/9780262039680/the-technology-fallacy/) returned 403, so the publisher page, series name and any paperback edition/ISBN are unconfirmed; url points to Open Library. Whether MIT Press offers an open-access version was not checked - free_online is null because nothing was confirmed, not because absence was confirmed."

@@ -1,0 +1,25 @@
+component,type,ci_system,nominal_owner,ownership_status,proposed_tier,has_runbook,has_alerts,on_call_rotation
+core/order-capture,monolith module,Jenkins,Orders,clear,1,yes,partial,Orders
+core/catalog,monolith module,Jenkins,Orders,clear,2,no,partial,Orders
+core/pricing-rules,monolith module,Jenkins,Orders,clear,1,no,partial,Orders
+core/invoicing,monolith module,Jenkins,Billing,clear,1,yes,partial,Billing
+core/ledger,monolith module,Jenkins,Billing,clear,1,yes,partial,Billing
+core/customer,monolith module,Jenkins,none,shared by four teams,1,no,no,none
+core/permissions,monolith module,Jenkins,none,shared by four teams,1,no,no,none
+core/scheduler,monolith module,Jenkins,none,shared by four teams,2,no,no,none
+pricing-svc,service,Jenkins,Orders,clear,1,yes,yes,Orders
+search-svc,service,Jenkins,Orders,disputed (authors moved to Data and Analytics),2,no,partial,none
+tax-svc,service,Jenkins,Billing,clear,1,no,partial,Billing
+invoice-render,service,Jenkins,Billing,clear,2,no,no,Billing
+payments-gateway,service,GitLab CI,Payments and Integrations,clear,1,yes,yes,Payments and Integrations
+bank-connectors,service,GitLab CI,Payments and Integrations,clear,1,yes,yes,Payments and Integrations
+erp-sync,service,GitLab CI,Payments and Integrations,clear,2,no,partial,Payments and Integrations
+mobile-bff,service,GitLab CI,Customer Experience,clear,1,no,partial,Customer Experience
+reporting-api,service,GitLab CI,Data and Analytics,clear,2,yes,partial,Data and Analytics
+notification-svc,service,GitLab CI,Customer Experience,disputed (most commits from Orders and Billing),1,no,no,none
+webhooks,service,shell scripts,Payments and Integrations,orphaned (assigned by default),2,no,no,none
+auth-svc,service,shell scripts,Platform Operations,orphaned (author left; kept running by infrastructure),1,no,partial,Platform Operations
+document-store,service,shell scripts,none,orphaned,2,no,no,none
+export-svc,service,shell scripts,Data and Analytics,clear,3,no,no,none
+web-app,frontend,GitHub Actions,Customer Experience,clear,1,no,partial,Customer Experience
+mobile-app,frontend,GitHub Actions,Customer Experience,clear,1,no,partial,Customer Experience

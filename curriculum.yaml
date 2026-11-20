@@ -1,0 +1,704 @@
+# Single source of truth for the book's structure.
+# Tools read this file: tools/build_curriculum.py (docs/curriculum.md), tools/check_navigation.py,
+# tools/check_exercises.py, tools/build_single_file.py.
+#
+# status: planned   -> designed, not written; MUST NOT appear in mkdocs nav
+#         draft     -> file exists, not yet validated; MUST NOT appear in nav
+#         review    -> passes validate_book.py; in the nav with an "Awaiting human review" banner
+#         published -> passes validate_book.py and the human review checklist; MUST appear in nav
+#
+# sources: ids from research/bibliography.yaml that the chapter is expected to draw on.
+# A chapter may cite more; it may not cite an id that is missing from the bibliography.
+
+book:
+  title: The Engineering Leadership Handbook
+  subtitle: From Senior Engineer to Engineering Manager, Director, VP Engineering, and CTO
+  case_study: Northstar Technologies
+
+parts:
+  - number: 1
+    roman: I
+    slug: 01-foundations
+    title: Foundations of Engineering Leadership
+    summary: What the job is, how leverage works, and how the job changes at each level.
+    chapters:
+      - n: 1
+        slug: what-engineering-management-is
+        title: What Engineering Management Actually Is
+        status: review
+        objectives:
+          - Separate the three jobs that hide under one title (people management, delivery management, technical direction) and say which your role actually owns.
+          - Explain managerial output as the output of the organization under your influence, and use it to audit a calendar.
+          - Distinguish engineering leadership from people management and place staff-plus roles on the same map.
+        sources: [grove1983high, fournier2017manager, drucker1967effective, larson2019elegant]
+      - n: 2
+        slug: from-individual-contributor-to-leader
+        title: From Individual Contributor to Leader
+        status: review
+        objectives:
+          - Name the identity and feedback-loop changes of the first management role and plan the first 90 days.
+          - Delegate by outcome with an explicit level of control instead of by task.
+          - Decide deliberately how much hands-on technical work to keep, and what it costs the team.
+        sources: [fournier2017manager, zhuo2019making, watkins2003first, marquet2013turn]
+      - n: 3
+        slug: managerial-leverage-and-systems-thinking
+        title: Managerial Leverage and Systems Thinking
+        status: review
+        objectives:
+          - Model a team as stocks, flows, and feedback loops, and find the loop that is producing an unwanted result.
+          - Rank candidate interventions by leverage rather than by visibility.
+          - Recognize the constraint in a delivery system and stop optimizing non-constraints.
+        sources: [meadows2008thinking, goldratt1984goal, grove1983high, wiseman2010multipliers]
+      - n: 4
+        slug: the-leadership-ladder
+        title: "The Leadership Ladder: Senior Engineer to CTO"
+        status: review
+        objectives:
+          - Describe scope, time horizon, and primary output at each level from tech lead to CTO.
+          - Measure managerial effectiveness without confusing it with team activity.
+          - Choose between the management and staff-plus tracks using explicit criteria, and plan a switch.
+        sources: [fournier2017manager, larson2021staff, larson2024primer, larson2019elegant]
+
+  - number: 2
+    roman: II
+    slug: 02-people-management
+    title: People Management
+    summary: The individual-level craft; one-on-ones, feedback, hiring, growth, performance, and retention.
+    chapters:
+      - n: 5
+        slug: one-on-ones-coaching-and-mentorship
+        title: One-on-Ones, Coaching, and Mentorship
+        status: planned
+        objectives:
+          - Run one-on-ones that surface information you would not otherwise get, and detect when they have decayed into status meetings.
+          - Choose between directing, coaching, mentoring, and sponsoring for a given person and task.
+          - Keep a lightweight record that makes reviews and promotions evidence-based.
+        sources: [grove1983high, fournier2017manager, zhuo2019making, wiseman2010multipliers]
+      - n: 6
+        slug: feedback-conflict-and-difficult-conversations
+        title: Feedback, Conflict, and Difficult Conversations
+        status: planned
+        objectives:
+          - Give specific, behavioral feedback early, and adapt delivery across cultures without diluting the message.
+          - Diagnose whether a conflict is about task, process, status, or values before intervening.
+          - Prepare and conduct a difficult conversation, including what you will do if it goes badly.
+        sources: [scott2017radical, meyer2014culture, lencioni2002five, edmondson1999psychological]
+      - n: 7
+        slug: hiring-and-structured-interviews
+        title: Hiring and Structured Interviews
+        status: planned
+        objectives:
+          - Design a structured interview loop tied to a written role scorecard.
+          - Explain what selection research does and does not support, and where engineering practice outruns the evidence.
+          - Run a debrief that resists anchoring, and track hiring quality after the offer.
+        sources: [schmidt1998validity, sackett2022revisiting, larson2019elegant, winters2020software]
+      - n: 8
+        slug: career-development-promotion-and-compensation
+        title: Career Development, Promotion, and Compensation
+        status: planned
+        objectives:
+          - Build or repair a career ladder that describes scope and impact rather than tenure and tools.
+          - Run a promotion process with calibration, and explain a "not yet" so that it is usable.
+          - Make compensation decisions you can defend on internal equity and market grounds.
+        sources: [larson2019elegant, fournier2017manager, larson2021staff]
+      - n: 9
+        slug: performance-management-and-underperformance
+        title: Performance Management and Underperformance
+        status: planned
+        objectives:
+          - Separate skill, will, role fit, and system causes of low performance before acting.
+          - Run a fair, documented improvement process with a real chance of success and a clear end.
+          - Recognize the cost to the rest of the team of acting too late.
+        sources: [grove1983high, scott2017radical, fournier2017manager]
+      - n: 10
+        slug: motivation-retention-and-senior-engineers
+        title: Motivation, Retention, and Managing Senior Engineers
+        status: planned
+        objectives:
+          - Identify what actually drives retention in your organization using exit and stay data instead of assumptions.
+          - Manage engineers who are more expert than you, including highly opinionated ones.
+          - Decide when to counter-offer, when to let go, and how to protect the team either way.
+        sources: [wiseman2010multipliers, larson2021staff, noda2023devex, marquet2013turn]
+
+  - number: 3
+    roman: III
+    slug: 03-high-performing-teams
+    title: Building High-Performing Teams
+    summary: The team as the unit of delivery; safety, accountability, agreements, decisions, and health.
+    chapters:
+      - n: 11
+        slug: high-performance-trust-safety-and-accountability
+        title: "High Performance: Trust, Psychological Safety, and Accountability"
+        status: planned
+        objectives:
+          - Define high performance in terms of outcomes, sustainability, and learning, not heroics.
+          - Explain what psychological safety is, what the research measured, and why it is not the absence of standards.
+          - Combine high safety with high accountability, and diagnose teams that have only one.
+        sources: [edmondson1999psychological, rework-team-effectiveness, lencioni2002five, forsgren2018accelerate]
+      - n: 12
+        slug: team-charters-working-agreements-and-knowledge-sharing
+        title: Team Charters, Working Agreements, and Knowledge Sharing
+        status: planned
+        objectives:
+          - Write a team charter that states mission, boundaries, interfaces, and decision rights.
+          - Negotiate working agreements that the team enforces on itself.
+          - Reduce single points of knowledge failure without mandating documentation nobody reads.
+        sources: [skelton2019team, winters2020software, lencioni2012advantage]
+      - n: 13
+        slug: decision-making-in-teams
+        title: Decision-Making in Teams
+        status: planned
+        objectives:
+          - Match the decision method (consent, consult, delegate, decide) to reversibility and stakes.
+          - Assign decision rights explicitly and record decisions so they survive personnel change.
+          - Detect false consensus and decision avoidance.
+        sources: [marquet2013turn, drucker1967effective, lencioni2002five, grove1983high]
+      - n: 14
+        slug: distributed-teams-team-health-and-dysfunction
+        title: Distributed Teams, Team Health, and Diagnosing Dysfunction
+        status: planned
+        objectives:
+          - Design collaboration for distributed and hybrid teams using what the remote-work evidence supports.
+          - Run a team health assessment and interpret it without turning it into a score to manage.
+          - Diagnose a dysfunctional team from signals, and choose between coaching, restructuring, and leadership change.
+        sources: [yang2022remote, meyer2014culture, lencioni2002five, forsgren2021space]
+
+  - number: 4
+    roman: IV
+    slug: 04-execution
+    title: Engineering Execution
+    summary: Turning intent into delivered change; planning, flow, predictability, and measurement.
+    chapters:
+      - n: 15
+        slug: planning-prioritization-and-delivery-methods
+        title: Planning, Prioritization, and Delivery Methods
+        status: review
+        objectives:
+          - Choose and adapt a delivery method (Scrum, Kanban, or neither) from the shape of the work.
+          - Prioritize with explicit economic reasoning rather than stakeholder volume.
+          - Keep planning proportional to uncertainty.
+        sources: [reinertsen2009principles, kim2016devops, perri2018escaping, grove1983high]
+      - n: 16
+        slug: flow-lead-time-dependencies-and-unplanned-work
+        title: "Flow: Lead Time, Dependencies, and Unplanned Work"
+        status: review
+        objectives:
+          - Map a value stream and find where lead time actually accumulates.
+          - Reduce batch size and work in progress, and predict what happens when you do.
+          - Make unplanned work visible and manage cross-team dependencies as a design problem.
+        sources: [goldratt1984goal, kim2013phoenix, reinertsen2009principles, humble2010continuous]
+      - n: 17
+        slug: predictability-and-managing-uncertainty
+        title: Predictability and Managing Uncertainty
+        status: review
+        objectives:
+          - Forecast with ranges from historical throughput instead of single-point estimates.
+          - Communicate commitments, targets, and forecasts as three different things.
+          - Structure uncertain work so that risk is retired early.
+        sources: [reinertsen2009principles, brooks1995mythical, ries2011lean]
+      - n: 18
+        slug: measuring-engineering-productivity
+        title: "Measuring Engineering Productivity: DORA, SPACE, and Their Limits"
+        status: review
+        objectives:
+          - State what the DORA metrics measure, how the research was produced, and what it cannot tell you.
+          - Build a balanced measurement set using SPACE and developer-experience dimensions.
+          - Predict how each metric will be gamed and design against it; refuse individual productivity scoring with reasons.
+        sources: [dora-metrics-guide, forsgren2018accelerate, forsgren2021space, noda2023devex, mckinsey2023productivity, orosz2023measuring, campbell1979assessing]
+
+  - number: 5
+    roman: V
+    slug: 05-engineering-quality
+    title: Software Quality and Engineering Excellence
+    summary: The deepest part of the book; what quality is, who owns it, how it decays, and how to restore it at scale.
+    chapters:
+      - n: 19
+        slug: defining-measuring-and-owning-quality
+        title: Defining, Measuring, and Owning Software Quality
+        status: review
+        objectives:
+          - Define quality operationally for a product, separating external quality, internal quality, and delivery quality.
+          - Compare ownership models (team-owned, embedded QA, central QA, platform-enabled) and choose for a context.
+          - Select a small set of quality measures and state how each can mislead.
+        sources: [forsgren2018accelerate, winters2020software, humble2010continuous, dora-metrics-guide]
+      - n: 20
+        slug: engineering-standards-and-their-governance
+        title: Engineering Standards and Their Governance
+        status: review
+        objectives:
+          - Write standards that state intent, scope, and the exemption path.
+          - Enforce through paved roads and automation before review boards.
+          - Retire standards, and measure adoption without creating compliance theater.
+        sources: [winters2020software, ford2017building, skelton2019team]
+      - n: 21
+        slug: technical-debt
+        title: "Technical Debt: Identification, Economics, and Prioritization"
+        status: review
+        objectives:
+          - Use the debt metaphor precisely, and say where it breaks down.
+          - Build a debt register that records interest (recurring cost) rather than opinions about ugliness.
+          - Prioritize debt against features using a common economic frame and secure standing capacity for it.
+        sources: [cunningham1992wycash, fowler2009debtquadrant, kruchten2012technical, besker2018technical, reinertsen2009principles]
+      - n: 22
+        slug: testing-strategy-and-test-architecture
+        title: Testing Strategy and Test Architecture
+        status: review
+        objectives:
+          - Design a test portfolio from risk and feedback time instead of from a pyramid picture.
+          - Treat flaky tests as a reliability problem with an owner and a budget.
+          - Decide what manual testing remains valuable, and move regression gates out of the release path.
+        sources: [winters2020software, humble2010continuous, forsgren2018accelerate]
+      - n: 23
+        slug: code-review-ci-cd-and-release-engineering
+        title: Code Review, CI/CD, and Release Engineering
+        status: review
+        objectives:
+          - State what code review reliably achieves according to the evidence, and what it does not.
+          - Specify the properties of a trustworthy pipeline and a healthy main branch.
+          - Separate deploy from release, and choose a release strategy by risk tier.
+        sources: [sadowski2018modern, bacchelli2013expectations, humble2010continuous, kim2016devops, winters2020software]
+      - n: 24
+        slug: reliability-slos-and-operational-readiness
+        title: "Reliability Engineering: SLOs, Error Budgets, Observability, and Operational Readiness"
+        status: review
+        objectives:
+          - Write SLOs that reflect user experience and can be measured with data you have.
+          - Use error budgets as a decision mechanism between product and engineering, and know when they do not work.
+          - Define operational readiness for a service tier and review it without blocking delivery.
+        sources: [beyer2016sre, beyer2018workbook, aws-well-architected]
+      - n: 25
+        slug: incidents-postmortems-and-change-failure-analysis
+        title: Incidents, Postmortems, and Change Failure Analysis
+        status: review
+        objectives:
+          - Run incident response with clear roles and severity definitions that resist reclassification.
+          - Write blameless reviews that produce system changes, and track whether the actions land.
+          - Classify change failures and escaped defects to find the prevention point with the most leverage.
+        sources: [beyer2016sre, allspaw2012blameless, dora-metrics-guide, kim2016devops]
+      - n: 26
+        slug: security-and-software-supply-chain-quality
+        title: Security and Software Supply-Chain Quality
+        status: review
+        objectives:
+          - Treat security as a quality attribute with owners, budgets, and measures.
+          - Map engineering practice to the NIST CSF and SSDF without turning them into checklists.
+          - Raise supply-chain integrity incrementally using SLSA as a reference.
+        sources: [nist2024csf, nist2022ssdf, slsa-spec, aws-well-architected]
+      - n: 27
+        slug: quality-transformation-at-enterprise-scale
+        title: Quality Transformation at Enterprise Scale
+        status: review
+        objectives:
+          - Diagnose a quality decline as a system of reinforcing loops and locate its constraint.
+          - Sequence a 90-day transformation that reduces defect inflow before draining defect stock.
+          - Build a quality scorecard, predict how it will be gamed, and tie it to management accountability.
+          - Fund quality work with an explicit capacity model and protect delivery throughput while doing it.
+        sources: [beyer2016sre, campbell1979assessing, dora-metrics-guide, forsgren2018accelerate, goldratt1984goal, google2017embracing, grove1983high, humble2010continuous, kim2013phoenix, meadows2008thinking]
+        project: p3
+
+  - number: 6
+    roman: VI
+    slug: 06-technical-leadership
+    title: Technical Leadership and Architecture
+    summary: Who decides technical direction, how, and with what governance.
+    chapters:
+      - n: 28
+        slug: architecture-decision-making-and-governance
+        title: Architecture Decision-Making and Governance
+        status: planned
+        objectives:
+          - Assign architectural decision rights between managers, staff engineers, and teams.
+          - Use decision records and lightweight review so that governance speeds teams up.
+          - Recognize when an architecture board has become a queue.
+        sources: [richards2020fundamentals, ford2017building, larson2021staff, winters2020software]
+      - n: 29
+        slug: staff-and-principal-engineers
+        title: Staff and Principal Engineers
+        status: planned
+        objectives:
+          - Define staff-plus archetypes and scope them so that they have leverage and accountability.
+          - Partner with a staff engineer as a manager, including on disagreement.
+          - Avoid the two failure cases, the roaming critic and the overloaded hero.
+        sources: [larson2021staff, larson2019elegant, wiseman2010multipliers]
+      - n: 30
+        slug: technical-strategy-and-technology-selection
+        title: Technical Strategy, Technology Selection, and Build versus Buy
+        status: planned
+        objectives:
+          - Write a technical strategy with a diagnosis, guiding policy, and coherent actions.
+          - Evaluate build, buy, and adopt-open-source using total cost and strategic differentiation.
+          - Maintain a technology risk register covering end-of-life, concentration, and skills risk.
+        sources: [rumelt2011good, larson2024primer, richards2020fundamentals, aws-well-architected]
+      - n: 31
+        slug: service-boundaries-and-ownership
+        title: "Service Boundaries: Microservices, Modular Monoliths, and Ownership"
+        status: planned
+        objectives:
+          - Present the microservices and modular-monolith positions fairly and name the conditions that favor each.
+          - Draw service and module boundaries from change patterns and team structure.
+          - Establish a service ownership model with no orphaned components.
+        sources: [lewis2014microservices, fowler2015monolithfirst, kolny2023primevideo, skelton2019team, conway1968committees]
+      - n: 32
+        slug: platform-engineering-developer-experience-and-modernization
+        title: Platform Engineering, Developer Experience, and Legacy Modernization
+        status: planned
+        objectives:
+          - Run a platform as a product with adoption, not mandate, as the success measure.
+          - Measure developer experience and choose improvements by feedback-loop time and cognitive load.
+          - Plan incremental legacy modernization and justify not rewriting.
+        sources: [skelton2019team, noda2023devex, ford2017building, winters2020software]
+
+  - number: 7
+    roman: VII
+    slug: 07-organization-design
+    title: Organizational Design
+    summary: Structure as a design decision with predictable consequences for architecture and flow.
+    chapters:
+      - n: 33
+        slug: conways-law-team-topologies-and-cognitive-load
+        title: Conway's Law, Team Topologies, and Cognitive Load
+        status: planned
+        objectives:
+          - Apply Conway's observation in both directions, and state how strong the evidence is.
+          - Use team types and interaction modes as a vocabulary, and know where the model is thin.
+          - Estimate team cognitive load and act on it.
+        sources: [conway1968committees, skelton2019team, brooks1995mythical]
+      - n: 34
+        slug: spans-layers-and-dependency-mapping
+        title: Spans, Layers, and Dependency Mapping
+        status: planned
+        objectives:
+          - Set management spans from the nature of the work instead of a universal number.
+          - Count the cost of each added layer in decision latency and information loss.
+          - Map cross-team dependencies and use the map to redraw boundaries.
+        sources: [larson2019elegant, grove1983high, skelton2019team]
+      - n: 35
+        slug: designing-organizations-at-four-scales
+        title: Designing Organizations of 20, 50, 100, and 500 Engineers
+        status: planned
+        objectives:
+          - Describe what breaks at each scale transition and what structure answers it.
+          - Produce an organization design for a given headcount, architecture, and product portfolio.
+          - Sequence the introduction of managers of managers, platform teams, and staff-plus roles.
+        sources: [larson2019elegant, skelton2019team, fournier2017manager, larson2024primer]
+        project: p4
+      - n: 36
+        slug: reorganizations-evolution-and-succession
+        title: Reorganizations, Organizational Evolution, and Succession
+        status: planned
+        objectives:
+          - Decide whether a reorganization is the right tool, and estimate its transition cost.
+          - Plan and communicate a reorganization so that it is finished in weeks.
+          - Build succession coverage for every critical role.
+        sources: [larson2019elegant, watkins2003first, lencioni2012advantage]
+
+  - number: 8
+    roman: VIII
+    slug: 08-management-operating-system
+    title: Engineering Management Operating System
+    summary: The recurring mechanisms that make an organization manageable; cadences, scorecards, reviews, and escalation.
+    chapters:
+      - n: 37
+        slug: cadences-and-leadership-meetings
+        title: "The Management Operating System: Cadences and Leadership Meetings"
+        status: planned
+        objectives:
+          - Design a set of weekly, monthly, and quarterly cadences in which each meeting has one job.
+          - Run a leadership team meeting that makes decisions.
+          - Audit the system for redundancy and for missing loops.
+        sources: [grove1983high, lencioni2012advantage, drucker1967effective]
+        project: p1
+      - n: 38
+        slug: scorecards-quarterly-planning-and-capacity-allocation
+        title: Scorecards, Quarterly Planning, and Capacity Allocation
+        status: planned
+        objectives:
+          - Build an engineering scorecard with paired metrics and explicit owners.
+          - Run quarterly planning that ends with funded commitments and named trade-offs.
+          - Allocate capacity across product, quality, and platform work, and defend the split.
+        sources: [doerr2018measure, grove1983high, dora-metrics-guide, forsgren2021space]
+        project: p5
+      - n: 39
+        slug: reviews-decision-logs-escalation-and-executive-reporting
+        title: Reviews, Decision Logs, Escalation, and Executive Reporting
+        status: planned
+        objectives:
+          - Run quality, architecture, and talent reviews as inspection of the system.
+          - Keep a decision log and define clean escalation.
+          - Write executive reports that state status, risk, and the decision needed.
+        sources: [grove1983high, drucker1967effective, larson2024primer]
+
+  - number: 9
+    roman: IX
+    slug: 09-engineering-directorship
+    title: Engineering Directorship
+    summary: Leading through managers; the 50 to 150 engineer organization.
+    chapters:
+      - n: 40
+        slug: the-directors-job
+        title: "The Director's Job: Leading 50 to 150 Engineers"
+        status: planned
+        objectives:
+          - Describe how information, time horizon, and leverage change when you manage managers.
+          - Build your own signal sources so that you are not managed by your reports' summaries.
+          - Own engineering quality as an organizational property.
+        sources: [fournier2017manager, grove1983high, larson2019elegant, watkins2003first]
+      - n: 41
+        slug: managing-and-developing-engineering-managers
+        title: Managing and Developing Engineering Managers
+        status: planned
+        objectives:
+          - Assess an engineering manager against a rubric with observable evidence.
+          - Coach managers through skip-levels, staff reviews, and delegated decisions.
+          - Build a leadership bench and a succession plan for each management seat.
+        sources: [fournier2017manager, wiseman2010multipliers, marquet2013turn, zhuo2019making]
+        project: p6
+      - n: 42
+        slug: cross-functional-dependencies-portfolio-and-influence
+        title: Cross-Functional Dependencies, Portfolio Management, and Influence Without Authority
+        status: planned
+        objectives:
+          - Manage a portfolio of initiatives with explicit work-in-progress limits.
+          - Resolve cross-functional dependencies structurally.
+          - Influence peers and executives using interests, evidence, and coalition.
+        sources: [reinertsen2009principles, cagan2020empowered, larson2024primer]
+      - n: 43
+        slug: leading-change-and-director-failure-patterns
+        title: Leading Organizational Change and Director Failure Patterns
+        status: planned
+        objectives:
+          - Plan a change with a diagnosis, a coalition, early evidence, and reinforcement.
+          - Recognize the common director failure patterns in yourself.
+          - Recover credibility after a failed initiative.
+        sources: [watkins2003first, kane2019technology, lencioni2012advantage, rumelt2011good]
+
+  - number: 10
+    roman: X
+    slug: 10-business-leadership
+    title: Product and Business Leadership
+    summary: The economic and product context that engineering decisions serve.
+    chapters:
+      - n: 44
+        slug: working-with-product
+        title: "Working with Product: Discovery and Outcome-Based Roadmaps"
+        status: planned
+        objectives:
+          - Establish a working contract between engineering and product management.
+          - Take part in discovery so that feasibility and risk shape options early.
+          - Convert a feature roadmap into an outcome roadmap, and handle the dates that remain.
+        sources: [cagan2008inspired, cagan2020empowered, perri2018escaping, ries2011lean]
+      - n: 45
+        slug: business-models-and-engineering-economics
+        title: Business Models, Engineering Economics, and Investment Decisions
+        status: planned
+        objectives:
+          - Read your company's business model and locate engineering's effect on revenue, margin, and risk.
+          - Quantify cost of delay and opportunity cost with stated assumptions.
+          - Compare portfolio investments using a common economic frame.
+        sources: [reinertsen2009principles, berman2006financial, lafley2013playing]
+      - n: 46
+        slug: stakeholder-management-and-negotiation
+        title: Stakeholder Management and Negotiation
+        status: planned
+        objectives:
+          - Map stakeholders by interest and influence and plan engagement.
+          - Negotiate scope, time, and quality trade-offs without conceding the quality floor.
+          - Say no in a way that preserves the relationship and offers a path.
+        sources: [watkins2003first, grove1983high, scott2017radical]
+
+  - number: 11
+    roman: XI
+    slug: 11-vp-engineering
+    title: VP of Engineering
+    summary: Running the whole engineering function; directors, capacity, governance, and multi-year change.
+    chapters:
+      - n: 47
+        slug: the-vp-of-engineering
+        title: "The VP of Engineering: Managing Directors and the Portfolio"
+        status: planned
+        objectives:
+          - Define the VP role against the director and CTO roles in different company shapes.
+          - Manage directors through goals, operating reviews, and staffing decisions.
+          - Run the engineering portfolio as an allocation problem.
+        sources: [larson2024primer, grove1983high, fournier2017manager]
+      - n: 48
+        slug: capacity-strategy-workforce-planning-and-governance
+        title: Capacity Strategy, Workforce Planning, and Enterprise Governance
+        status: planned
+        objectives:
+          - Build a workforce plan covering level mix, location strategy, and vendor use.
+          - Govern quality and delivery across the enterprise with few, enforced policies.
+          - Build management systems that scale without adding layers.
+        sources: [larson2024primer, larson2019elegant, berman2006financial]
+      - n: 49
+        slug: multi-year-transformation-communication-and-politics
+        title: Multi-Year Transformation, Executive Communication, and Constructive Politics
+        status: planned
+        objectives:
+          - Structure a multi-year transformation into fundable stages with exit criteria.
+          - Communicate to executives in their terms, with an explicit ask.
+          - Work organizational politics constructively, and develop successors.
+        sources: [kane2019technology, rumelt2011good, lencioni2012advantage, larson2024primer]
+
+  - number: 12
+    roman: XII
+    slug: 12-cto-leadership
+    title: CTO Leadership
+    summary: Technology as a company-level concern; strategy, capital, risk, and the board.
+    chapters:
+      - n: 50
+        slug: what-a-cto-actually-does
+        title: What a CTO Actually Does
+        status: planned
+        objectives:
+          - Distinguish the CTO archetypes and the CTO, CIO, and VP Engineering splits.
+          - Design the CTO's own leadership team and operating rhythm.
+          - Identify what only the CTO can do, and delegate the rest.
+        sources: [larson2024primer, fournier2017manager, drucker1967effective]
+      - n: 51
+        slug: enterprise-technology-strategy
+        title: Enterprise Technology Strategy and the Three-Year Roadmap
+        status: planned
+        objectives:
+          - Derive technology strategy from business strategy with explicit choices about where to be excellent.
+          - Build a three-year roadmap with horizons, options, and decision points.
+          - Test the strategy for coherence and for what it says no to.
+        sources: [rumelt2011good, lafley2013playing, larson2024primer, kane2019technology]
+        project: p7
+      - n: 52
+        slug: technology-investment-budgeting-and-financial-literacy
+        title: Technology Investment, Budgeting, and Financial Literacy
+        status: planned
+        objectives:
+          - Read an income statement, balance sheet, and cash-flow statement as a technology leader.
+          - Build and defend an engineering budget, including capitalized and expensed work.
+          - Write an investment case with scenarios and stated assumptions.
+        sources: [berman2006financial, larson2024primer, reinertsen2009principles]
+        project: p8
+      - n: 53
+        slug: risk-governance-regulation-and-security-strategy
+        title: Risk, Governance, Regulation, and Security Strategy
+        status: planned
+        objectives:
+          - Maintain an enterprise technology risk register with owners and treatment decisions.
+          - Set a security strategy using recognized frameworks and report it to non-specialists.
+          - Meet regulatory obligations through engineering controls.
+        sources: [nist2024csf, nist2022ssdf, slsa-spec, aws-well-architected]
+      - n: 54
+        slug: data-and-ai-strategy
+        title: Data and AI Strategy
+        status: planned
+        objectives:
+          - Assess data foundations before committing to AI initiatives.
+          - Choose where to buy, build, or wait on AI capabilities, and govern their use in engineering.
+          - Evaluate claims about AI productivity with the same evidence standards as any other metric.
+        sources: [kane2019technology, forsgren2021space, noda2023devex]
+      - n: 55
+        slug: boards-due-diligence-and-executive-decision-making
+        title: Boards, Due Diligence, and Executive Decision-Making
+        status: planned
+        objectives:
+          - Communicate technology status and risk to a board.
+          - Run or survive technology due diligence.
+          - Make and record executive decisions under uncertainty and disagreement.
+        sources: [larson2024primer, drucker1967effective, berman2006financial]
+
+  - number: 13
+    roman: XIII
+    slug: 13-advanced-problems
+    title: Advanced Leadership Problems
+    summary: The situations where standard practice is not enough.
+    chapters:
+      - n: 56
+        slug: recovering-a-failing-engineering-organization
+        title: Recovering a Failing Engineering Organization
+        status: planned
+        objectives:
+          - Triage a failing organization in the first 30 days.
+          - Reverse declining quality and rebuild trust with stakeholders in parallel.
+          - Decide which leaders to keep, coach, or replace.
+        sources: [watkins2003first, kim2013phoenix, goldratt1984goal, lencioni2002five]
+        project: p2
+      - n: 57
+        slug: crises-executive-disagreement-and-resistance
+        title: Crises, Executive Disagreement, and Resistance to Change
+        status: planned
+        objectives:
+          - Lead through a major incident or public failure, including external communication.
+          - Disagree with executives productively, and decide when to commit and when to escalate.
+          - Read resistance to change as information.
+        sources: [beyer2016sre, allspaw2012blameless, grove1983high, edmondson1999psychological]
+      - n: 58
+        slug: layoffs-reductions-and-mergers
+        title: Layoffs, Reductions, and Mergers and Acquisitions
+        status: planned
+        objectives:
+          - Plan a reduction responsibly, with selection criteria, communication, and continuity of ownership.
+          - Lead the remaining organization afterwards.
+          - Integrate an acquired engineering team and its technology.
+        sources: [larson2024primer, watkins2003first, conway1968committees]
+      - n: 59
+        slug: transformation-under-constraint-and-scaling-without-bureaucracy
+        title: Transformation Under Budget Constraint and Scaling Without Bureaucracy
+        status: planned
+        objectives:
+          - Run a technical transformation with flat or shrinking budget.
+          - Distinguish process that carries load from process that only carries history.
+          - Remove management overhead safely.
+        sources: [goldratt1984goal, meadows2008thinking, larson2019elegant, reinertsen2009principles]
+
+  - number: 14
+    roman: XIV
+    slug: 14-playbooks
+    title: Practical Management Systems and Playbooks
+    summary: Reusable artifacts, each filled in with a Northstar example. This part has no chapters; it is the template library.
+    chapters: []
+
+  - number: 15
+    roman: XV
+    slug: 15-capstone
+    title: "Capstone: Build and Transform an Engineering Organization"
+    summary: Ten stages at Northstar Technologies, first as Engineering Director and then as CTO.
+    chapters:
+      - n: 60
+        slug: capstone-northstar
+        title: "Capstone: Transforming Northstar Technologies"
+        status: planned
+        objectives:
+          - Diagnose an 80-engineer organization from data and interviews.
+          - Produce the ownership model, scorecard, debt priorities, accountability design, and 90-day plan.
+          - Extend the work into a 12-month strategy, an investment case, and a three-year CTO technology strategy.
+        sources: [forsgren2018accelerate, skelton2019team, rumelt2011good, berman2006financial, beyer2016sre]
+
+templates:
+  # status as above. file is relative to docs/templates/
+  - {id: t01, file: one-on-one.md, title: 1:1 template, status: planned}
+  - {id: t02, file: career-development-plan.md, title: Career development plan, status: planned}
+  - {id: t03, file: engineering-manager-rubric.md, title: Engineering Manager performance rubric, status: planned}
+  - {id: t04, file: director-competency-matrix.md, title: Director competency matrix, status: planned}
+  - {id: t05, file: cto-competency-matrix.md, title: CTO competency matrix, status: planned}
+  - {id: t06, file: team-health-assessment.md, title: Team health assessment, status: planned}
+  - {id: t07, file: organizational-design-assessment.md, title: Organizational design assessment, status: planned}
+  - {id: t08, file: engineering-quality-scorecard.md, title: Engineering quality scorecard, status: review}
+  - {id: t09, file: technical-debt-register.md, title: Technical debt register, status: review}
+  - {id: t10, file: incident-review.md, title: Incident review template, status: review}
+  - {id: t11, file: risk-register.md, title: Risk register, status: planned}
+  - {id: t12, file: architecture-decision-record.md, title: Architecture decision record, status: planned}
+  - {id: t13, file: quarterly-engineering-review.md, title: Quarterly engineering review, status: planned}
+  - {id: t14, file: capacity-planning-model.md, title: Capacity planning model, status: planned}
+  - {id: t15, file: engineering-strategy.md, title: Engineering strategy template, status: planned}
+  - {id: t16, file: technology-investment-business-case.md, title: Technology investment business case, status: planned}
+  - {id: t17, file: stakeholder-map.md, title: Stakeholder map, status: planned}
+  - {id: t18, file: executive-update.md, title: Executive update, status: planned}
+  - {id: t19, file: leadership-succession-plan.md, title: Leadership succession plan, status: planned}
+  - {id: t20, file: ninety-day-quality-plan.md, title: 90-day quality transformation plan, status: review}
+
+projects:
+  - {id: p1, title: Build an Engineering Management Operating System, status: planned}
+  - {id: p2, title: Diagnose a Low-Performing Engineering Team, status: planned}
+  - {id: p3, title: Create an Engineering Quality Transformation Plan, status: planned}
+  - {id: p4, title: Redesign an Organization of 80 Engineers, status: planned}
+  - {id: p5, title: Build a Delivery Performance and Reliability Scorecard, status: planned}
+  - {id: p6, title: Create Engineering Manager Development and Succession Plans, status: planned}
+  - {id: p7, title: Design a 12-Month Engineering Strategy, status: planned}
+  - {id: p8, title: Build a CTO Technology Investment Proposal, status: planned}

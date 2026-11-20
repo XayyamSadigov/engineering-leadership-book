@@ -1,0 +1,126 @@
+site_name: The Engineering Leadership Handbook
+site_description: >-
+  An open-source, evidence-informed textbook on building, leading, scaling, and transforming
+  software engineering organizations, from senior engineer to CTO.
+site_url: https://xayyamsadigov.github.io/engineering-leadership-handbook/
+repo_url: https://github.com/XayyamSadigov/engineering-leadership-handbook
+repo_name: XayyamSadigov/engineering-leadership-handbook
+edit_uri: edit/main/docs/
+docs_dir: docs
+copyright: Text CC BY 4.0 · Code MIT · Northstar Technologies is fictional
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - navigation.indexes
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: amber
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: amber
+      toggle: {icon: material/weather-sunny, name: Light mode}
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc: {permalink: true}
+  - pymdownx.details
+  - pymdownx.highlight: {anchor_linenums: true}
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist: {custom_checkbox: true}
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
+
+# Only published chapters and templates are listed here. tools/check_navigation.py enforces it
+# against curriculum.yaml. The single-file edition follows this order.
+nav:
+  - Home: index.md
+  - About this book: about.md
+  - How to use this book: how-to-use.md
+  - Learning roadmaps: learning-roadmaps.md
+  - Curriculum: curriculum.md
+  - "I. Foundations of Engineering Leadership":
+      - "Chapter 1 — What Engineering Management Actually Is": parts/01-foundations/01-what-engineering-management-is.md
+      - "Chapter 2 — From Individual Contributor to Leader": parts/01-foundations/02-from-individual-contributor-to-leader.md
+      - "Chapter 3 — Managerial Leverage and Systems Thinking": parts/01-foundations/03-managerial-leverage-and-systems-thinking.md
+      - "Chapter 4 — The Leadership Ladder: Senior Engineer to CTO": parts/01-foundations/04-the-leadership-ladder.md
+  - "IV. Engineering Execution":
+      - "Chapter 15 — Planning, Prioritization, and Delivery Methods": parts/04-execution/15-planning-prioritization-and-delivery-methods.md
+      - "Chapter 16 — Flow: Lead Time, Dependencies, and Unplanned Work": parts/04-execution/16-flow-lead-time-dependencies-and-unplanned-work.md
+      - "Chapter 17 — Predictability and Managing Uncertainty": parts/04-execution/17-predictability-and-managing-uncertainty.md
+      - "Chapter 18 — Measuring Engineering Productivity: DORA, SPACE, and Their Limits": parts/04-execution/18-measuring-engineering-productivity.md
+  - "V. Software Quality and Engineering Excellence":
+      - "Chapter 19 — Defining, Measuring, and Owning Software Quality": parts/05-engineering-quality/19-defining-measuring-and-owning-quality.md
+      - "Chapter 20 — Engineering Standards and Their Governance": parts/05-engineering-quality/20-engineering-standards-and-their-governance.md
+      - "Chapter 21 — Technical Debt: Identification, Economics, and Prioritization": parts/05-engineering-quality/21-technical-debt.md
+      - "Chapter 22 — Testing Strategy and Test Architecture": parts/05-engineering-quality/22-testing-strategy-and-test-architecture.md
+      - "Chapter 23 — Code Review, CI/CD, and Release Engineering": parts/05-engineering-quality/23-code-review-ci-cd-and-release-engineering.md
+      - "Chapter 24 — Reliability Engineering: SLOs, Error Budgets, Observability, and Operational Readiness": parts/05-engineering-quality/24-reliability-slos-and-operational-readiness.md
+      - "Chapter 25 — Incidents, Postmortems, and Change Failure Analysis": parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md
+      - "Chapter 26 — Security and Software Supply-Chain Quality": parts/05-engineering-quality/26-security-and-software-supply-chain-quality.md
+      - "Chapter 27 — Quality Transformation at Enterprise Scale": parts/05-engineering-quality/27-quality-transformation-at-enterprise-scale.md
+  - "Case study: Northstar Technologies":
+      - "Company and organization": case-studies/northstar/index.md
+      - "Baseline data": case-studies/northstar/baseline-data.md
+      - "The first quarter": case-studies/northstar/first-quarter.md
+  - "XIV. Templates and playbooks":
+      - "Template library": templates/index.md
+      - "Engineering quality scorecard": templates/engineering-quality-scorecard.md
+      - "Technical debt register": templates/technical-debt-register.md
+      - "Incident review": templates/incident-review.md
+      - "90-day quality transformation plan": templates/ninety-day-quality-plan.md
+  - Exercises and solutions:
+      - "Index": exercises/index.md
+      - "Chapter 1 solutions": solutions/ch01-solutions.md
+      - "Chapter 2 solutions": solutions/ch02-solutions.md
+      - "Chapter 3 solutions": solutions/ch03-solutions.md
+      - "Chapter 4 solutions": solutions/ch04-solutions.md
+      - "Chapter 15 solutions": solutions/ch15-solutions.md
+      - "Chapter 16 solutions": solutions/ch16-solutions.md
+      - "Chapter 17 solutions": solutions/ch17-solutions.md
+      - "Chapter 18 solutions": solutions/ch18-solutions.md
+      - "Chapter 19 solutions": solutions/ch19-solutions.md
+      - "Chapter 20 solutions": solutions/ch20-solutions.md
+      - "Chapter 21 solutions": solutions/ch21-solutions.md
+      - "Chapter 22 solutions": solutions/ch22-solutions.md
+      - "Chapter 23 solutions": solutions/ch23-solutions.md
+      - "Chapter 24 solutions": solutions/ch24-solutions.md
+      - "Chapter 25 solutions": solutions/ch25-solutions.md
+      - "Chapter 26 solutions": solutions/ch26-solutions.md
+      - "Chapter 27 solutions": solutions/ch27-solutions.md
+  - References:
+      - "Bibliography": references/bibliography.md
+      - "Evidence labels": references/evidence-labels.md

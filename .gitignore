@@ -1,0 +1,26 @@
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ruff_cache/
+.pytest_cache/
+
+# Local agent tooling
+.claude-flow/
+.claude/
+.playwright-mcp/
+
+# Site and binary builds (generated in CI; the Markdown single-file edition in dist/ IS committed)
+site/
+dist/*.pdf
+dist/*.epub
+
+# Secrets
+.env
+.env.*

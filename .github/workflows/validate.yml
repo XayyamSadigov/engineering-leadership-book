@@ -1,0 +1,37 @@
+name: Validate book
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install "mkdocs>=1.6,<2" "mkdocs-material>=9.5,<10" "pyyaml>=6" ruff
+      - name: Lint tools
+        run: ruff check tools
+      - name: Structure, links, references, exercises, generated files, strict site build
+        run: python tools/validate_book.py --build
+
+  diagrams:
+    # Renders every Mermaid block with the real Mermaid parser. validate_book.py only lints them.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "pyyaml>=6"
+      - run: npm install --global @mermaid-js/mermaid-cli@11
+      - run: python tools/render_diagrams.py

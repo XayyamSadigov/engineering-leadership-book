@@ -1,0 +1,8 @@
+team,manager,engineers,composition,primary_components,deploys_per_month,median_lead_time_days,change_failure_rate_pct,sev1_sev2_last_quarter,escaped_defects_last_quarter,unplanned_work_pct
+Orders,Priya Raman,14,14 software engineers,"core/order-capture; core/catalog; core/pricing-rules; pricing-svc; search-svc",11,18,29,7,51,36
+Billing,Marcus Oyelaran,13,13 software engineers,"core/invoicing; core/ledger; tax-svc; invoice-render",8,21,34,8,58,41
+Payments and Integrations,Elena Sokolova,12,12 software engineers,"payments-gateway; bank-connectors; erp-sync; webhooks",22,4,21,6,31,33
+Customer Experience,Daniel Cho,15,"9 web engineers; 6 mobile engineers","web-app; mobile-app; mobile-bff; notification-svc",26,6,17,4,44,28
+Data and Analytics,Farah Haddad,11,"8 data engineers; 3 software engineers","reporting-api; export-svc; warehouse pipelines",11,5,12,2,19,24
+Platform Operations,Tom Becker,12,"5 infrastructure engineers; 7 QA engineers","ci-cd; cloud infrastructure; release train; manual regression suite",14,3,15,3,9,46
+Staff engineers,Engineering Director,3,"Ines Carvalho (core domain); Kwame Mensah (infrastructure and reliability); Li Na Zhou (data and integration)",none owned,,,,,,20

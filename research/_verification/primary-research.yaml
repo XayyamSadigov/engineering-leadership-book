@@ -1,0 +1,769 @@
+# Verified primary-research bibliography. Session dates: 2026-11-18/19.
+# Every field comes from a page fetched in that session; nothing is filled from memory.
+# Fetch tool note: page text was read through a summarising fetcher, so claims are paraphrases, not verbatim quotes.
+
+# ---------- Delivery performance and productivity ----------
+
+- id: dora2026software
+  type: web-guide
+  title: "DORA's software delivery performance metrics"
+  authors: ["DORA (Google Cloud)"]
+  year: 2026
+  venue: "dora.dev guides"
+  doi: null
+  url: "https://dora.dev/guides/dora-metrics/"
+  evidence_class: industry-research
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://dora.dev/guides/dora-metrics-four-keys/", "https://dora.dev/guides/dora-metrics/"]
+  claims:
+    - text: "The current guide (last updated January 5, 2026) lists five software delivery performance metrics, not four: change lead time, deployment frequency, failed deployment recovery time, change fail rate, and deployment rework rate."
+      basis: full-text
+    - text: "The guide groups the metrics into two factors. Throughput: change lead time, deployment frequency, failed deployment recovery time. Instability: change fail rate, deployment rework rate."
+      basis: full-text
+    - text: "Change lead time is defined as the time for a change to go from committed to version control to deployed in production; change fail rate as the ratio of deployments that require immediate intervention after deployment; deployment rework rate as the ratio of deployments that are unplanned and happen as a result of a production incident."
+      basis: full-text
+  caveats: "Date-sensitive. The metric set and grouping have changed over time (the 'four keys' name survives only in the old URL slug). Failed deployment recovery time sits under throughput, not stability, in this version. Re-check the page before publication."
+  access_notes: "The old URL /guides/dora-metrics-four-keys/ returns a redirect (1 hop) to /guides/dora-metrics/, confirmed with a HEAD request. Page shows 'Last updated: January 5, 2026'."
+
+- id: dora2025state
+  type: report
+  title: "State of AI-assisted Software Development 2025"
+  authors: ["DORA (Google Cloud)"]
+  year: 2025
+  venue: "DORA / Google Cloud"
+  doi: null
+  url: "https://dora.dev/research/2025/dora-report/"
+  evidence_class: industry-research
+  access_level: official-summary
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://dora.dev/research/", "https://dora.dev/research/2025/", "https://dora.dev/research/2025/dora-report/"]
+  claims:
+    - text: "The report's landing page summarises its central finding as AI acting primarily as an amplifier of an organisation's existing strengths and weaknesses."
+      basis: official-summary
+    - text: "The landing page states that the greatest returns on AI investment come from focusing on the underlying organisational (sociotechnical) system rather than on the tools."
+      basis: official-summary
+  caveats: "Only the landing-page summary was read, not the report PDF. Survey-based industry research sponsored by a vendor. The dora.dev research archive listed 2025 as the most recent yearly report on 2026-11-18 (years listed: 2014-2025); no 2026 report was listed."
+  access_notes: "Publication date is not stated on the page. Research partners named on the page: IT Revolution (premier), GitHub, GitLab, SkillBench, Workhelix. The 2025 report is not titled 'State of DevOps'."
+
+- id: forsgren2021space
+  type: magazine-article
+  title: "The SPACE of Developer Productivity: There's more to it than you think"
+  authors: ["Nicole Forsgren", "Margaret-Anne Storey", "Chandra Maddila", "Thomas Zimmermann", "Brian Houck", "Jenna Butler"]
+  year: 2021
+  venue: "ACM Queue, vol. 19, no. 1, pp. 20-48"
+  doi: "10.1145/3454122.3454124"
+  url: "https://queue.acm.org/detail.cfm?id=3454124"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi, url]
+  verified_via: ["https://api.crossref.org/works?query.bibliographic=The+SPACE+of+Developer+Productivity+Forsgren+Storey", "https://www.microsoft.com/en-us/research/publication/the-space-of-developer-productivity-theres-more-to-it-than-you-think/"]
+  claims:
+    - text: "The abstract argues that developer productivity is about more than an individual's activity levels or the efficiency of engineering systems, and that it cannot be captured by a single metric or dimension."
+      basis: abstract
+    - text: "The article introduces the SPACE framework as a way to reason about productivity across several dimensions and to choose better measures."
+      basis: abstract
+  caveats: "The names of the five SPACE dimensions were NOT read on a fetched page in this session (queue.acm.org returned 403), so they are deliberately not recorded here; verify from the full text before printing them. A reprint exists in Communications of the ACM 64(6):46-53, DOI 10.1145/3453928 (Crossref)."
+  access_notes: "queue.acm.org returned HTTP 403 to the fetcher and to curl; web.archive.org is blocked for the fetcher. Metadata from Crossref; abstract from the Microsoft Research publication page, which links to the Queue URL above. Queue is free to read in a browser."
+
+- id: noda2023devex
+  type: magazine-article
+  title: "DevEx: What Actually Drives Productivity"
+  authors: ["Abi Noda", "Margaret-Anne Storey", "Nicole Forsgren", "Michaela Greiler"]
+  year: 2023
+  venue: "ACM Queue, vol. 21, no. 2, pp. 35-53"
+  doi: "10.1145/3595878"
+  url: "https://queue.acm.org/detail.cfm?id=3595878"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi]
+  verified_via: ["https://api.crossref.org/works/10.1145/3595878", "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1145/3595878?fields=title,authors,year,venue,abstract"]
+  claims:
+    - text: "The abstract frames developer experience as how developers feel about and experience their daily work, including the friction they meet."
+      basis: abstract
+    - text: "The authors propose a framework for understanding developer experience plus a measurement approach that combines developer feedback with data from engineering systems."
+      basis: abstract
+    - text: "The abstract asserts that improving developer experience supports business outcomes such as efficiency, product quality and retention; this is the authors' argument, not a result quantified in the abstract."
+      basis: abstract
+  caveats: "The three named DevEx dimensions were not read on a fetched page (queue.acm.org 403) and are not recorded. One author is affiliated with a company selling developer-experience measurement; treat as practitioner-oriented scholarship."
+  access_notes: "URL not fetched successfully (403); it follows the Queue pattern and the article id matches the DOI suffix, but the url field is therefore not in verified_fields."
+
+- id: mckinsey2023yes
+  type: blog-post
+  title: "Yes, you can measure software developer productivity"
+  authors: ["McKinsey & Company"]
+  year: 2023
+  venue: "McKinsey & Company Insights"
+  doi: null
+  url: "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/yes-you-can-measure-software-developer-productivity"
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields: []
+  verified_via: []
+  claims: []
+  caveats: "DISPUTED source: see orosz2023measuring for the published response. Individual byline, exact publication date and the article's own claims could not be read. Do not attribute specific metrics or claims to this article until the page is read directly."
+  access_notes: "Could not be confirmed directly: mckinsey.com timed out on every attempt (fetcher x3, curl x2, .com.br mirror). The title and three mckinsey.com URL variants (/industries/technology-media-and-telecommunications/..., /capabilities/people-and-organization/..., /capabilities/operations/...) appeared in web-search result listings only. Year 2023 is inferred from the response article dated 2023-08-29."
+
+- id: orosz2023measuring
+  type: blog-post
+  title: "Measuring developer productivity? A response to McKinsey"
+  authors: ["Gergely Orosz", "Kent Beck"]
+  year: 2023
+  venue: "The Pragmatic Engineer (newsletter)"
+  doi: null
+  url: "https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity"
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity"]
+  claims:
+    - text: "The authors argue that most of the new metrics McKinsey proposes measure effort or output rather than outcomes or impact."
+      basis: full-text
+    - text: "They argue that measuring individuals changes behaviour and invites gaming, illustrated with an account of survey scores at Facebook becoming distorted once tied to reviews and manager pressure."
+      basis: full-text
+    - text: "They conclude the McKinsey framework is likely to do more harm than good to engineering culture."
+      basis: full-text
+  caveats: "Opinion piece by two practitioners, not empirical research; one side of a dispute. Dated August 29, 2023. A second part exists: https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity-part-2 (URL given on the page, not fetched)."
+  access_notes: "Free-to-read portion fetched; part of the newsletter may be subscriber-only."
+
+- id: sadowski2018modern
+  type: conference-paper
+  title: "Modern Code Review: A Case Study at Google"
+  authors: ["Caitlin Sadowski", "Emma Söderberg", "Luke Church", "Michal Sipko", "Alberto Bacchelli"]
+  year: 2018
+  venue: "Proceedings of the 40th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP '18), pp. 181-190"
+  doi: "10.1145/3183519.3183525"
+  url: "https://research.google/pubs/modern-code-review-a-case-study-at-google/"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi, url]
+  verified_via: ["https://api.crossref.org/works?query.bibliographic=Modern+Code+Review+A+Case+Study+at+Google+Sadowski", "https://research.google/pubs/modern-code-review-a-case-study-at-google/"]
+  claims:
+    - text: "The paper is an exploratory study of modern (lightweight, tool-based) code review at Google, covering motivations, current practice, and developers' satisfaction and challenges."
+      basis: abstract
+    - text: "Its data are 12 interviews, a survey with 44 respondents, and review logs covering 9 million reviewed changes."
+      basis: abstract
+  caveats: "Single-company case study (Google); small interview and survey samples. Crossref records the title as 'Modern code review' with the subtitle separate. Findings beyond the abstract were not read."
+  access_notes: "Abstract read on the research.google publication page; PDF is linked from there but was not read."
+
+- id: bacchelli2013expectations
+  type: conference-paper
+  title: "Expectations, Outcomes, and Challenges of Modern Code Review"
+  authors: ["Alberto Bacchelli", "Christian Bird"]
+  year: 2013
+  venue: "2013 35th International Conference on Software Engineering (ICSE), pp. 712-721"
+  doi: "10.1109/ICSE.2013.6606617"
+  url: "https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi, url]
+  verified_via: ["https://api.crossref.org/works?query.bibliographic=Expectations+Outcomes+and+Challenges+of+Modern+Code+Review+Bacchelli+Bird", "https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/"]
+  claims:
+    - text: "Studying tool-based code review at Microsoft, the authors found that finding defects is the main stated motivation for review, but reviews deliver less defect-finding and more other benefits than expected."
+      basis: abstract
+    - text: "The other benefits named in the abstract are knowledge transfer, increased team awareness, and alternative solutions to problems."
+      basis: abstract
+    - text: "Understanding the code and the change is the central challenge of review, and the tools of the time gave little support for it."
+      basis: abstract
+  caveats: "Single-company study (Microsoft), 2013; based on observation, interviews, surveys and manual classification of review comments. Author order follows Crossref; the Microsoft Research page lists Bird first."
+  access_notes: "Abstract read on the Microsoft Research publication page."
+
+# ---------- Teams and psychology ----------
+
+- id: edmondson1999psychological
+  type: journal-article
+  title: "Psychological Safety and Learning Behavior in Work Teams"
+  authors: ["Amy Edmondson"]
+  year: 1999
+  venue: "Administrative Science Quarterly, vol. 44, no. 2, pp. 350-383"
+  doi: "10.2307/2666999"
+  url: "https://doi.org/10.2307/2666999"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi]
+  verified_via: ["https://api.crossref.org/works/10.2307/2666999"]
+  claims:
+    - text: "The paper introduces the construct of team psychological safety and tests it in a field study of 51 work teams in a manufacturing company."
+      basis: abstract
+    - text: "Team psychological safety was associated with team learning behaviour, whereas team efficacy was not once psychological safety was controlled for."
+      basis: abstract
+    - text: "Learning behaviour mediated the relationship between team psychological safety and team performance."
+      basis: abstract
+  caveats: "One manufacturing company, 51 teams; not a software setting. Correlational field study."
+  access_notes: "journals.sagepub.com returned 403; metadata and abstract come from the Crossref record. The doi.org URL itself was not fetched."
+
+- id: google2015understand
+  type: web-guide
+  title: "Understand team effectiveness"
+  authors: ["Google re:Work"]
+  year: 2015
+  venue: "Google re:Work"
+  doi: null
+  url: "https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness"
+  evidence_class: industry-research
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness"]
+  claims:
+    - text: "The guide reports that Google's Project Aristotle studied 180 teams (115 engineering project teams and 65 sales pods)."
+      basis: full-text
+    - text: "It lists five dynamics of effective teams in this order: psychological safety, dependability, structure and clarity, meaning, impact."
+      basis: full-text
+  caveats: "Company self-report, not peer-reviewed; methods are described only at guide level. The page carries an editor's note that it is preserved as a record of the findings and that some references reflect its original era. 'Originally published 2015' is the date shown on the page."
+  access_notes: "MOVED: the older URLs https://rework.withgoogle.com/guides/understanding-team-effectiveness/ and https://rework.withgoogle.com/en/guides/understanding-team-effectiveness both return a 404 page. The live URL uses /intl/en/ and the slug 'understand-team-effectiveness'. No explicit 'archived' banner was seen."
+
+- id: yang2022effects
+  type: journal-article
+  title: "The effects of remote work on collaboration among information workers"
+  authors: ["Longqi Yang", "David Holtz", "Sonia Jaffe", "Siddharth Suri", "Shilpi Sinha", "Jeffrey Weston", "Connor Joyce", "Neha Shah", "Kevin Sherman", "Brent Hecht", "Jaime Teevan"]
+  year: 2022
+  venue: "Nature Human Behaviour, vol. 6, no. 1, pp. 43-54"
+  doi: "10.1038/s41562-021-01196-4"
+  url: "https://www.nature.com/articles/s41562-021-01196-4"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi]
+  verified_via: ["https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/s41562-021-01196-4&format=json&resultType=core"]
+  claims:
+    - text: "Using communication and work-hour data on about 61,182 US Microsoft employees over the first six months of 2020, the authors estimate the effect of firm-wide remote work, using workers who were already remote as a comparison."
+      basis: abstract
+    - text: "Firm-wide remote work made the collaboration network more static and siloed, with fewer bridges between different parts of the organisation."
+      basis: abstract
+    - text: "Synchronous communication decreased and asynchronous communication increased; the authors suggest this may make it harder to acquire and share new information across the network."
+      basis: abstract
+  caveats: "One company, US employees, first half of 2020 (pandemic conditions). Measures collaboration patterns, not productivity or output. An erratum is listed (Nat Hum Behav 2022;6(1):164). First published online 2021-09-09."
+  access_notes: "nature.com redirected to an identity-provider cookie page and was not followed; metadata and abstract from the Europe PMC record. The record flags the article as not open access, though a free copy is indicated; licence not verified."
+
+- id: conway1968how
+  type: magazine-article
+  title: "How Do Committees Invent?"
+  authors: ["Melvin E. Conway"]
+  year: 1968
+  venue: "Datamation, April 1968"
+  doi: null
+  url: "https://www.melconway.com/Home/Committees_Paper.html"
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://www.melconway.com/Home/Committees_Paper.html"]
+  claims:
+    - text: "Conway's thesis is that organisations which design systems are constrained to produce designs that are copies of the communication structures of those organisations."
+      basis: full-text
+  caveats: "An argued essay, not an empirical study. Author-hosted reprint; the page carries the note 'Copyright 1968, F. D. Thompson Publications, Inc. Reprinted by permission of Datamation magazine'. Volume and page numbers were not read on the page."
+  access_notes: "Author-hosted copy fetched in full."
+
+- id: brooks1995mythical
+  type: book
+  title: "The Mythical Man-Month: Essays on Software Engineering, Anniversary Edition"
+  authors: ["Frederick P. Brooks"]
+  year: 1995
+  venue: "Addison-Wesley Professional (2nd edition), ISBN 978-0-201-83595-3, 336 pp."
+  doi: null
+  url: "https://www.informit.com/store/mythical-man-month-essays-on-software-engineering-anniversary-9780201835953"
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://www.informit.com/store/mythical-man-month-essays-on-software-engineering-anniversary-9780201835953", "https://en.wikipedia.org/wiki/Brooks%27s_law"]
+  claims:
+    - text: "Brooks's law is commonly stated as: adding manpower to a late software project makes it later; it is attributed to Brooks's 1975 book."
+      basis: official-summary
+    - text: "According to the secondary source read, Brooks himself called the law an 'outrageous oversimplification' and explained it by ramp-up time, communication overhead growing with headcount, and limited divisibility of some tasks."
+      basis: official-summary
+  caveats: "The book text was not read. Both claims rest on a SECONDARY source (Wikipedia, 'Brooks's law'), not the book or publisher page; the publisher page does not mention the law. Confirm wording and page number from the book before quoting. Original edition year 1975 comes from Wikipedia only; the original 1975 publisher was not confirmed. Publisher page gives publication date Aug 2, 1995 (copyright 1996)."
+  access_notes: "Publisher store page fetched for metadata only."
+
+- id: schmidt1998validity
+  type: journal-article
+  title: "The validity and utility of selection methods in personnel psychology: Practical and theoretical implications of 85 years of research findings"
+  authors: ["Frank L. Schmidt", "John E. Hunter"]
+  year: 1998
+  venue: "Psychological Bulletin, vol. 124, no. 2, pp. 262-274"
+  doi: "10.1037/0033-2909.124.2.262"
+  url: "https://doi.org/10.1037/0033-2909.124.2.262"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi]
+  verified_via: ["https://api.crossref.org/works/10.1037/0033-2909.124.2.262", "https://api.openalex.org/works/doi:10.1037/0033-2909.124.2.262?select=title,publication_year,primary_location,abstract_inverted_index"]
+  claims:
+    - text: "The article summarises 85 years of personnel-selection research, reporting meta-analytic validity for 19 selection procedures and for general mental ability (GMA) paired with each of the other 18."
+      basis: abstract
+    - text: "The abstract names the best-performing combinations as GMA plus a work sample test (mean validity .63), GMA plus an integrity test (.65), and GMA plus a structured interview (.63)."
+      basis: abstract
+  caveats: "SUPERSEDED IN PART: Sackett et al. 2022 (sackett2022revisiting) argue these estimates were inflated by overcorrection for range restriction and revise them downward. Cite the two together. The abstract was reconstructed from OpenAlex's inverted index, so check the exact figures against the publisher abstract before printing them."
+  access_notes: "Publisher page (APA PsycNet) not fetched; Semantic Scholar had no abstract. doi.org URL not fetched."
+
+- id: sackett2022revisiting
+  type: journal-article
+  title: "Revisiting meta-analytic estimates of validity in personnel selection: Addressing systematic overcorrection for restriction of range"
+  authors: ["Paul R. Sackett", "Charlene Zhang", "Christopher M. Berry", "Filip Lievens"]
+  year: 2022
+  venue: "Journal of Applied Psychology, vol. 107, no. 11, pp. 2040-2068"
+  doi: "10.1037/apl0000994"
+  url: "https://doi.org/10.1037/apl0000994"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi]
+  verified_via: ["https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1037/apl0000994&format=json&resultType=core"]
+  claims:
+    - text: "The authors argue that the range-restriction corrections used in earlier meta-analyses often overcorrect, so the validity of many selection procedures for predicting job performance has been overestimated."
+      basis: abstract
+    - text: "In their revised estimates, structured interviews emerge as the top-ranked selection procedure."
+      basis: abstract
+    - text: "Most procedures that ranked high before still rank high, but mean validity estimates fall by roughly .10 to .20."
+      basis: abstract
+  caveats: "The abstract does not give a specific revised figure for cognitive ability, so none is recorded here. The paper also pairs validity with Black-White subgroup differences (validity-diversity trade-offs). First published online 2021-12-30; PMID 34968080. Full text is paywalled and was not read."
+  access_notes: "PubMed returned only a cookie notice; abstract and metadata from the Europe PMC record."
+
+# ---------- Quality, debt, reliability, security ----------
+
+- id: cunningham1992wycash
+  type: conference-paper
+  title: "The WyCash Portfolio Management System"
+  authors: ["Ward Cunningham"]
+  year: 1992
+  venue: "OOPSLA '92 Experience Report"
+  doi: null
+  url: "https://c2.com/doc/oopsla92.html"
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://c2.com/doc/oopsla92.html"]
+  claims:
+    - text: "Cunningham likens shipping first-time code to going into debt: a little debt speeds development so long as it is paid back promptly with a rewrite."
+      basis: full-text
+    - text: "He warns that the danger arises when the debt is not repaid: time spent on not-quite-right code counts as interest, and an engineering organisation can be brought to a standstill under the load."
+      basis: full-text
+  caveats: "An experience report, not an empirical study; the debt passage is a short section of it. Author-hosted copy dated March 26, 1992. No DOI was confirmed from the page."
+  access_notes: "Author-hosted copy on c2.com fetched in full."
+
+- id: fowler2009technical
+  type: blog-post
+  title: "Technical Debt Quadrant"
+  authors: ["Martin Fowler"]
+  year: 2009
+  venue: "martinfowler.com (bliki)"
+  doi: null
+  url: "https://martinfowler.com/bliki/TechnicalDebtQuadrant.html"
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://martinfowler.com/bliki/TechnicalDebtQuadrant.html"]
+  claims:
+    - text: "Fowler classifies technical debt on two axes, reckless versus prudent and deliberate versus inadvertent, giving four combinations."
+      basis: full-text
+    - text: "He argues that prudent-inadvertent debt is unavoidable even for good teams, because they learn what the design should have been only while building it."
+      basis: full-text
+  caveats: "Practitioner essay. Dated 14 October 2009 on the page. The on-page title is 'Technical Debt Quadrant' (with spaces); 'TechnicalDebtQuadrant' is only the URL slug."
+  access_notes: "Fetched in full."
+
+- id: kruchten2012technical
+  type: journal-article
+  title: "Technical Debt: From Metaphor to Theory and Practice"
+  authors: ["Philippe Kruchten", "Robert L. Nord", "Ipek Ozkaya"]
+  year: 2012
+  venue: "IEEE Software, vol. 29, no. 6, pp. 18-21"
+  doi: "10.1109/MS.2012.167"
+  url: "https://doi.org/10.1109/MS.2012.167"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi]
+  verified_via: ["https://api.crossref.org/works?query.bibliographic=Technical+Debt+From+Metaphor+to+Theory+and+Practice+Kruchten+Nord+Ozkaya", "https://api.openalex.org/works/doi:10.1109/MS.2012.167?select=title,publication_year,primary_location,abstract_inverted_index"]
+  claims:
+    - text: "The abstract says the technical debt metaphor was introduced about two decades earlier to explain to non-technical stakeholders the need for what is now called refactoring."
+      basis: abstract
+    - text: "Because the term had come to cover many different phenomena, the article proposes an organising structure for the field and introduces the issue's technical-debt articles."
+      basis: abstract
+  caveats: "This is a 4-page guest editors' introduction to a special issue, not an empirical study. The 'technical debt landscape' figure often cited from it was not read here."
+  access_notes: "IEEE Xplore not fetched; abstract reconstructed from OpenAlex. doi.org URL not fetched."
+
+- id: besker2018technical
+  type: conference-paper
+  title: "Technical Debt Cripples Software Developer Productivity: A Longitudinal Study on Developers' Daily Software Development Work"
+  authors: ["Terese Besker", "Antonio Martini", "Jan Bosch"]
+  year: 2018
+  venue: "Proceedings of the 2018 International Conference on Technical Debt (TechDebt '18), pp. 105-114"
+  doi: "10.1145/3194164.3194178"
+  url: "https://research.chalmers.se/en/publication/507477"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi, url]
+  verified_via: ["https://api.crossref.org/works?query.bibliographic=Besker+Martini+Bosch+Technical+Debt+Cripples+Software+Developer+Productivity+wasted+time", "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1145/3194164.3194178?fields=title,authors,year,venue,abstract,externalIds", "https://research.chalmers.se/en/publication/507477"]
+  claims:
+    - text: "In a longitudinal study that surveyed 43 software developers, with follow-up interviews of 16 practitioners, developers reported wasting on average 23% of their development time because of technical debt."
+      basis: abstract
+  caveats: "Self-reported time, 43 developers; the figure is an average of reported waste, not a measured productivity loss, and should not be generalised as 'a quarter of all engineering time'. Study duration is not stated in the abstract. A journal replication and extension exists: Besker, Martini, Bosch, Journal of Systems and Software 156 (2019) 41-61, DOI 10.1016/j.jss.2019.06.004 (metadata from Crossref; its abstract was not read)."
+  access_notes: "dl.acm.org returned 403. Headline figure read on the Chalmers research record; the full subtitle comes from the Semantic Scholar record (Crossref gives only the main title)."
+
+- id: google2017service
+  type: web-guide
+  title: "Service Level Objectives (Site Reliability Engineering, Chapter 4)"
+  authors: ["Chris Jones", "John Wilkes", "Niall Murphy", "Cody Smith"]
+  year: 2017
+  venue: "Site Reliability Engineering: How Google Runs Production Systems (O'Reilly Media), online edition at sre.google"
+  doi: null
+  url: "https://sre.google/sre-book/service-level-objectives/"
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://sre.google/sre-book/service-level-objectives/"]
+  claims:
+    - text: "An SLI is defined as a carefully defined quantitative measure of some aspect of the level of service provided; an SLO is a target value or range of values for a service level measured by an SLI."
+      basis: full-text
+    - text: "An SLA is described as an explicit or implicit contract with users that includes consequences of meeting or missing the SLOs it contains; without an explicit consequence, the chapter treats the commitment as an SLO."
+      basis: full-text
+  caveats: "Describes one company's practice. Year 2017 is the copyright year shown on the page ('Copyright 2017 Google, Inc.'); the print publication year was not verified. Chapter edited by Betsy Beyer. Page states licence CC BY-NC-ND 4.0."
+  access_notes: "Free online chapter, fetched in full."
+
+- id: google2017embracing
+  type: web-guide
+  title: "Embracing Risk (Site Reliability Engineering, Chapter 3)"
+  authors: ["Marc Alvidrez"]
+  year: 2017
+  venue: "Site Reliability Engineering: How Google Runs Production Systems (O'Reilly Media), online edition at sre.google"
+  doi: null
+  url: "https://sre.google/sre-book/embracing-risk/"
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://sre.google/sre-book/embracing-risk/"]
+  claims:
+    - text: "The chapter argues that 100% is probably never the right reliability target, and that reliability should be matched to the risk the business is willing to accept."
+      basis: full-text
+    - text: "An error budget is derived from the service's SLO and measured uptime; while budget remains, releases can proceed, and when it is exhausted releases slow or stop while reliability is improved."
+      basis: full-text
+    - text: "The error budget is presented as a shared, objective metric that lets product development and SRE decide how much risk to take without negotiation by politics."
+      basis: full-text
+  caveats: "Describes Google's practice; no outcome data. The error-budget section ('Motivation for Error Budgets') is credited on the page to Mark Roth, edited by Carmela Quinito; the main chapter is edited by Kavita Guliani. Year is the page's copyright year."
+  access_notes: "Free online chapter, fetched in full."
+
+- id: google2017postmortem
+  type: web-guide
+  title: "Postmortem Culture: Learning from Failure (Site Reliability Engineering, Chapter 15)"
+  authors: ["John Lunney", "Sue Lueder"]
+  year: 2017
+  venue: "Site Reliability Engineering: How Google Runs Production Systems (O'Reilly Media), online edition at sre.google"
+  doi: null
+  url: "https://sre.google/sre-book/postmortem-culture/"
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://sre.google/sre-book/postmortem-culture/"]
+  claims:
+    - text: "A postmortem is described as a written record of an incident covering its impact, the actions taken to mitigate or resolve it, its root causes, and follow-up actions to prevent recurrence."
+      basis: full-text
+    - text: "A blameless postmortem focuses on the contributing causes without indicting any individual or team, assuming everyone acted with good intentions on the information they had."
+      basis: full-text
+    - text: "Listed postmortem triggers include user-visible downtime or degradation beyond a threshold, any data loss, on-call intervention such as a rollback, resolution time above a threshold, and a monitoring failure; teams are advised to define the criteria before an incident."
+      basis: full-text
+  caveats: "Describes Google's practice; no outcome data. Edited by Gary O'Connor. Year is the page's copyright year."
+  access_notes: "Free online chapter, fetched in full."
+
+- id: allspaw2012blameless
+  type: blog-post
+  title: "Blameless PostMortems and a Just Culture"
+  authors: ["John Allspaw"]
+  year: 2012
+  venue: "Etsy Code as Craft"
+  doi: null
+  url: "https://www.etsy.com/codeascraft/blameless-postmortems"
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields: []
+  verified_via: []
+  claims: []
+  caveats: "Not confirmed from the primary page. The date (May 22, 2012) and an older URL (codeascraft.com/2012/05/22/blameless-postmortems/) come from secondary pages in search results only. Read the post in a browser before quoting it."
+  access_notes: "etsy.com returned HTTP 403 to both the fetcher and curl; web.archive.org is blocked for the fetcher. A web search listed this URL (and localised variants such as /de/ and /pl/) under the Code as Craft banner, which suggests the post is still live at this address, but the content was not read."
+
+- id: nist2024cybersecurity
+  type: standard
+  title: "The NIST Cybersecurity Framework (CSF) 2.0"
+  authors: ["National Institute of Standards and Technology"]
+  year: 2024
+  venue: "NIST Cybersecurity White Paper, NIST CSWP 29"
+  doi: "10.6028/NIST.CSWP.29"
+  url: "https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final"
+  evidence_class: standard
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, doi, url]
+  verified_via: ["https://www.nist.gov/cyberframework", "https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final", "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf"]
+  claims:
+    - text: "CSF 2.0 organises cybersecurity outcomes under six Core Functions: GOVERN (GV), IDENTIFY (ID), PROTECT (PR), DETECT (DE), RESPOND (RS) and RECOVER (RC)."
+      basis: full-text
+    - text: "GOVERN is placed at the centre of the functions wheel because it informs how an organisation implements the other five; the document says CSF 2.0 adds emphasis on governance and supply chains."
+      basis: full-text
+    - text: "The framework describes desired outcomes and does not prescribe how to achieve them; the Core is explicitly not a checklist of actions, and the order of functions does not imply sequence or importance."
+      basis: full-text
+  caveats: "Published February 26, 2024. Before version 2.0 the document was titled 'Framework for Improving Critical Infrastructure Cybersecurity'; that title is not used for 2.0. Voluntary framework."
+  access_notes: "PDF downloaded from nvlpubs.nist.gov; pages 1-9 (of 32) were extracted and read. It is a CSWP (white paper), not a Special Publication."
+
+- id: souppaya2022secure
+  type: standard
+  title: "Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities"
+  authors: ["Murugiah Souppaya", "Karen Scarfone", "Donna Dodson"]
+  year: 2022
+  venue: "NIST Special Publication 800-218"
+  doi: "10.6028/NIST.SP.800-218"
+  url: "https://csrc.nist.gov/pubs/sp/800/218/final"
+  evidence_class: standard
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi, url]
+  verified_via: ["https://csrc.nist.gov/pubs/sp/800/218/final"]
+  claims:
+    - text: "The SSDF is described as a core set of high-level secure software development practices that can be integrated into each SDLC implementation."
+      basis: abstract
+    - text: "Its stated aims are to reduce the number of vulnerabilities in released software, limit the impact of undetected or unaddressed ones, and address root causes; it also offers a common vocabulary for purchasers and suppliers."
+      basis: abstract
+  caveats: "The four practice-group names were not on the landing page read and are not recorded here; take them from the document itself. Final dated February 3, 2022; supersedes NIST CSWP 13 (2020-04-23). The landing page lists SP 800-218A as a related publication part; no newer revision was noted on that page on 2026-11-18, but re-check for a revision before publication."
+  access_notes: "CSRC landing page and abstract read; the PDF itself was not."
+
+- id: slsaundatedspecification
+  type: standard
+  title: "SLSA Specification, Version 1.2"
+  authors: ["SLSA (Supply-chain Levels for Software Artifacts) project"]
+  year: null
+  venue: "slsa.dev"
+  doi: null
+  url: "https://slsa.dev/spec/v1.2/"
+  evidence_class: standard
+  access_level: full-text
+  verified_fields: [title, authors, venue, url]
+  verified_via: ["https://slsa.dev/", "https://slsa.dev/spec/", "https://slsa.dev/spec/v1.2/build-track-basics", "https://slsa.dev/spec/v1.2/source-requirements"]
+  claims:
+    - text: "As of 2026-11-18 the current specification shown at slsa.dev/spec/ is Version 1.2, with status Approved; v1.1 and a working draft are also listed."
+      basis: full-text
+    - text: "v1.2 defines two tracks. Build track: Build L0 (no guarantees), L1 (provenance showing how the package was built), L2 (signed provenance generated by a hosted build platform), L3 (hardened build platform)."
+      basis: full-text
+    - text: "Source track: Source L1 (version controlled), L2 (history and provenance), L3 (continuous technical controls), L4 (two-party review)."
+      basis: full-text
+  caveats: "Date-sensitive. The release date of v1.2 was not seen on the pages read, hence year null and an id without a year. The single four-level ladder (SLSA 1-4) of the pre-1.0 specification no longer describes the current spec; levels are now per track, and the Build track tops out at L3."
+  access_notes: "Official documentation pages fetched in full. The slsa.dev home page still speaks loosely of levels of increasing assurance; the track pages are authoritative."
+
+- id: aws2026well
+  type: web-guide
+  title: "AWS Well-Architected Framework"
+  authors: ["Amazon Web Services"]
+  year: 2026
+  venue: "AWS documentation"
+  doi: null
+  url: "https://docs.aws.amazon.com/wellarchitected/latest/framework/framework.md"
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://docs.aws.amazon.com/wellarchitected/latest/framework/framework.md", "https://docs.aws.amazon.com/wellarchitected/latest/framework/definitions.md"]
+  claims:
+    - text: "The framework is based on six pillars: operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability."
+      basis: full-text
+    - text: "The framework describes a review as a constructive conversation about architectural decisions and not an audit mechanism."
+      basis: full-text
+    - text: "As of the November 16, 2026 update the framework ships as two custom lenses, Well-Architected Cloud Foundations and Well-Architected Cloud Workloads, the latter containing the updated pillars."
+      basis: full-text
+  caveats: "Vendor guidance, date-sensitive: the page shows 'Last updated: November 16, 2026', two days before it was read, so the structure had just changed. Sources describing five pillars predate the sustainability pillar. How the Cloud Foundations lens maps onto the pillars was not established from the pages read."
+  access_notes: "MOVED: the previously common URLs .../latest/framework/welcome.html and .../latest/framework/the-pillars-of-the-framework.html both return HTTP 404. The .md URLs above were fetched in full; the equivalent .html page names were not confirmed."
+
+- id: fowler2015monolith
+  type: blog-post
+  title: "Monolith First"
+  authors: ["Martin Fowler"]
+  year: 2015
+  venue: "martinfowler.com (bliki)"
+  doi: null
+  url: "https://martinfowler.com/bliki/MonolithFirst.html"
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://martinfowler.com/bliki/MonolithFirst.html"]
+  claims:
+    - text: "Fowler reports observing that almost all successful microservice stories began with a monolith that was later broken up, while systems built as microservices from scratch often ran into serious trouble."
+      basis: full-text
+    - text: "His reasons are that early on speed of feedback matters most and microservices add overhead, and that good service boundaries are hard to find up front and harder to refactor across services than within a monolith."
+      basis: full-text
+  caveats: "Based on the author's anecdotal observation; he states the evidence is sparse and the view is not unanimous, and links a dissenting piece arguing against starting with a monolith. A footnote warns that many monoliths are too entangled to split cleanly. Dated 3 June 2015. On-page title is 'Monolith First'."
+  access_notes: "Fetched in full."
+
+- id: lewis2014microservices
+  type: blog-post
+  title: "Microservices: a definition of this new architectural term"
+  authors: ["James Lewis", "Martin Fowler"]
+  year: 2014
+  venue: "martinfowler.com"
+  doi: null
+  url: "https://martinfowler.com/articles/microservices.html"
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://martinfowler.com/articles/microservices.html"]
+  claims:
+    - text: "The article describes the microservice style as building a single application as a suite of small, independently deployable services, each running in its own process, communicating by lightweight mechanisms and built around business capabilities."
+      basis: full-text
+    - text: "It names nine characteristics: componentization via services, organized around business capabilities, products not projects, smart endpoints and dumb pipes, decentralized governance, decentralized data management, infrastructure automation, design for failure, evolutionary design."
+      basis: full-text
+  caveats: "A descriptive essay by practitioners, dated 25 March 2014; it offers characteristics, not a formal definition or empirical evidence."
+  access_notes: "Fetched in full."
+
+- id: kolny2023scaling
+  type: blog-post
+  title: "Scaling up the Prime Video audio/video monitoring service and reducing costs by 90%"
+  authors: ["Marcin Kolny"]
+  year: 2023
+  venue: "Prime Video Tech blog (primevideotech.com)"
+  doi: null
+  url: "https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90"
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields: []
+  verified_via: ["https://www.infoq.com/news/2023/05/prime-ec2-ecs-saves-costs/"]
+  claims:
+    - text: "According to InfoQ's report of the post (secondary source), the Prime Video audio/video quality monitoring service was moved from serverless components (AWS Step Functions and Lambda, with intermediate data in S3) to a single process running on ECS on EC2, and the team reported a 90% reduction in operational costs."
+      basis: official-summary
+  caveats: "NO LONGER LIVE at the original address. The claim comes from a secondary news report (InfoQ, Rafal Gancarz, May 3, 2023), not the post itself. Scope is one monitoring service, not Prime Video as a whole; the cost figure is self-reported and the case is widely over-generalised as 'Amazon abandoned microservices'. Title, author attribution and the date March 22, 2023 come from search-result snippets and the URL slug, not from the post."
+  access_notes: "On 2026-11-18 the original URL returned 301 to https://www.aboutamazon.com/what-we-do/entertainment/ (a generic page, confirmed with curl). No current official copy was found; web.archive.org is blocked for the fetcher, so an archived snapshot could not be confirmed. Cite with an archive link once one is checked by hand."
+
+- id: reinertsen2009principles
+  type: book
+  title: "The Principles of Product Development Flow"
+  authors: ["Donald G. Reinertsen"]
+  year: 2009
+  venue: "Celeritas Publishing, ISBN 9781935401001"
+  doi: null
+  url: "https://openlibrary.org/search.json?title=principles+of+product+development+flow&author=reinertsen"
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields: [title, authors, year, venue]
+  verified_via: ["https://openlibrary.org/search.json?title=principles+of+product+development+flow&author=reinertsen&fields=title,subtitle,author_name,first_publish_year,publisher,isbn&limit=2"]
+  claims: []
+  caveats: "Book metadata only. The attribution of cost of delay and WSJF to this book was NOT verified on any fetched page; the subtitle was not returned by the catalogue record either. Verify from the book before stating that it is the origin of WSJF."
+  access_notes: "The author's site (reinertsenassociates.com) failed with an expired TLS certificate. Metadata from the Open Library search API; the url field is a catalogue query, not a stable landing page, and should be replaced."
+
+- id: campbell1979assessing
+  type: journal-article
+  title: "Assessing the impact of planned social change"
+  authors: ["Donald T. Campbell"]
+  year: 1979
+  venue: "Evaluation and Program Planning, vol. 2, no. 1, pp. 67-90"
+  doi: "10.1016/0149-7189(79)90048-X"
+  url: "https://doi.org/10.1016/0149-7189(79)90048-X"
+  evidence_class: scholarly
+  access_level: metadata-only
+  verified_fields: [title, authors, year, venue, doi]
+  verified_via: ["https://api.crossref.org/works?query.bibliographic=Campbell+Assessing+the+impact+of+planned+social+change+Evaluation+and+Program+Planning+1979"]
+  claims: []
+  caveats: "Metadata only. The passage usually cited as Campbell's law (quantitative social indicators used for decision-making become subject to corruption pressures) was not read on a fetched page, so no claim is recorded; quote it from the article with a page number. Crossref also lists a 2011 reprint: Journal of MultiDisciplinary Evaluation 7(15):3-43, DOI 10.56645/jmde.v7i15.297, which may be easier to access."
+  access_notes: "Crossref record only; publisher page and doi.org URL not fetched."
+
+- id: strathern1997improving
+  type: journal-article
+  title: "'Improving ratings': audit in the British University system"
+  authors: ["Marilyn Strathern"]
+  year: 1997
+  venue: "European Review, vol. 5, no. 3, pp. 305-321"
+  doi: "10.1002/(SICI)1234-981X(199707)5:3<305::AID-EURO184>3.0.CO;2-4"
+  url: "https://www.cambridge.org/core/journals/european-review/article/improving-ratings-audit-in-the-british-university-system/FC2EE640C0C44E3DB87C29FB666E9AAB"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi, url]
+  verified_via: ["https://www.cambridge.org/core/journals/european-review/article/improving-ratings-audit-in-the-british-university-system/FC2EE640C0C44E3DB87C29FB666E9AAB"]
+  claims:
+    - text: "The abstract presents the paper as an anthropological commentary on the 'audit explosion' in British universities, arguing that audit does more than monitor and acquires a momentum that can threaten the institutions it evaluates."
+      basis: abstract
+  caveats: "The popular wording of Goodhart's law ('when a measure becomes a target, it ceases to be a good measure') does NOT appear in the abstract or on the landing page read. Its attribution to this paper is therefore unverified here; confirm the sentence and page number in the full text. No primary source by Goodhart himself was verified in this session."
+  access_notes: "Cambridge Core landing page read; full text paywalled. The DOI is recorded exactly as the page shows it (a legacy Wiley-style DOI); test that it resolves before printing."
+
+- id: gitlab2026engineering
+  type: web-guide
+  title: "Engineering | The GitLab Handbook"
+  authors: ["GitLab"]
+  year: 2026
+  venue: "The GitLab Handbook"
+  doi: null
+  url: "https://handbook.gitlab.com/handbook/engineering/"
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields: [title, authors, year, venue, url]
+  verified_via: ["https://handbook.gitlab.com/handbook/engineering/", "https://handbook.gitlab.com/", "https://gitlab.com/gitlab-com/content-sites/handbook/-/raw/main/LICENSE"]
+  claims:
+    - text: "The engineering section of the GitLab Handbook is publicly readable at handbook.gitlab.com/handbook/engineering/."
+      basis: full-text
+    - text: "The handbook site footer reads '(c) 2026 GitLab All Rights Reserved' and states no Creative Commons or other content licence; the LICENSE file in the source repository is the MIT License (copyright GitLab B.V.), worded as covering the GitLab software."
+      basis: full-text
+  caveats: "LICENCE IS NOT CLEAR-CUT: do not assume the handbook text is CC BY-SA. The site says All Rights Reserved; the repository LICENSE is MIT but is worded for software. For an open-source textbook, link and paraphrase rather than copy, or get the terms confirmed. A living document: content changes daily; year is the footer's copyright year."
+  access_notes: "The engineering page is very long (about 230k characters, mostly navigation); its body content was not summarised and no last-modified date was seen. Source repository linked from the footer: gitlab.com/gitlab-com/content-sites/handbook."
+
+# ---------- Additional sources (item 26) ----------
+
+- id: rajan2006flattening
+  type: journal-article
+  title: "The Flattening Firm: Evidence from Panel Data on the Changing Nature of Corporate Hierarchies"
+  authors: ["Raghuram G. Rajan", "Julie Wulf"]
+  year: 2006
+  venue: "Review of Economics and Statistics, vol. 88, no. 4, pp. 759-773"
+  doi: "10.1162/rest.88.4.759"
+  url: "https://www.nber.org/papers/w9633"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi, url]
+  verified_via: ["https://api.crossref.org/works/10.1162/rest.88.4.759", "https://www.nber.org/papers/w9633"]
+  claims:
+    - text: "Using data on job descriptions, reporting relationships and pay in over 300 large US firms, the authors find that corporate hierarchies became flatter: more positions report directly to the CEO (a wider CEO span of control) and fewer levels separate division heads from the CEO."
+      basis: abstract
+    - text: "Division managers who moved closer to the CEO received higher pay and larger long-term incentives, which the authors read as evidence that authority was delegated downward."
+      basis: abstract
+  caveats: "Large US firms and senior management layers only, in an earlier period; says nothing directly about engineering team size or an optimal span of control. Abstract read on the NBER working-paper page (WP 9633, April 2003), which cites the published version; the journal text was not read."
+  access_notes: "url points to the free NBER working-paper version; the DOI is for the journal article."
+
+- id: hilton2016usage
+  type: conference-paper
+  title: "Usage, costs, and benefits of continuous integration in open-source projects"
+  authors: ["Michael Hilton", "Timothy Tunnell", "Kai Huang", "Darko Marinov", "Danny Dig"]
+  year: 2016
+  venue: "Proceedings of the 31st IEEE/ACM International Conference on Automated Software Engineering (ASE 2016), pp. 426-437"
+  doi: "10.1145/2970276.2970358"
+  url: "https://doi.org/10.1145/2970276.2970358"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi]
+  verified_via: ["https://api.crossref.org/works?query.bibliographic=Hilton+Tunnell+Huang+Marinov+Dig+Usage+costs+and+benefits+of+continuous+integration+in+open-source+projects", "https://api.openalex.org/works/doi:10.1145/2970276.2970358?select=title,publication_year,primary_location,abstract_inverted_index"]
+  claims:
+    - text: "The study analysed 34,544 open-source GitHub projects and 1,529,291 builds, and surveyed 442 developers, to examine how CI is used and why projects do or do not adopt it."
+      basis: abstract
+    - text: "The abstract reports that the evidence suggests CI helps projects release more often, and that CI is widely adopted by the most popular projects with adoption still growing."
+      basis: abstract
+  caveats: "Open-source GitHub projects in 2016; observational, so the release-frequency association is not proof of causation and may not transfer to closed-source enterprise teams. Abstract reconstructed from OpenAlex's inverted index; check the figures against the paper before printing."
+  access_notes: "dl.acm.org blocks the fetcher (403 on a sibling page); doi.org URL not fetched."
+
+- id: vasilescu2015quality
+  type: conference-paper
+  title: "Quality and productivity outcomes relating to continuous integration in GitHub"
+  authors: ["Bogdan Vasilescu", "Yue Yu", "Huaimin Wang", "Premkumar Devanbu", "Vladimir Filkov"]
+  year: 2015
+  venue: "Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2015)"
+  doi: "10.1145/2786805.2786850"
+  url: "https://doi.org/10.1145/2786805.2786850"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi]
+  verified_via: ["https://api.semanticscholar.org/graph/v1/paper/DOI:10.1145/2786805.2786850?fields=title,authors,year,venue,abstract,externalIds", "https://api.openalex.org/works/doi:10.1145/2786805.2786850?select=title,publication_year,primary_location,abstract_inverted_index,authorships"]
+  claims:
+    - text: "Analysing historical data from GitHub projects, the authors report that continuous integration is associated with higher team productivity, in the sense that teams integrate more outside contributions, with no observable reduction in code quality."
+      basis: abstract
+  caveats: "Observational study of open-source GitHub projects; the authors themselves note many confounding factors. 'Productivity' here means pull-request integration, not business output. Page numbers were not confirmed. Abstract reconstructed from OpenAlex's inverted index."
+  access_notes: "Publisher page not fetched; doi.org URL not fetched."
+
+- id: sillito2020failures
+  type: conference-paper
+  title: "Failures and Fixes: A Study of Software System Incident Response"
+  authors: ["Jonathan Sillito", "Esdras Kutomi"]
+  year: 2020
+  venue: "2020 IEEE International Conference on Software Maintenance and Evolution (ICSME), pp. 185-195"
+  doi: "10.1109/ICSME46990.2020.00027"
+  url: "https://arxiv.org/abs/2008.11192"
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields: [title, authors, year, venue, doi, url]
+  verified_via: ["https://arxiv.org/abs/2008.11192", "https://api.crossref.org/works?query.bibliographic=Sillito+Kutomi+Failures+and+Fixes+A+Study+of+Software+System+Incident+Response"]
+  claims:
+    - text: "The authors qualitatively analysed 30 software system incidents, 15 from in-depth interviews with engineers and 15 from publicly published incident reports (mostly postmortems), covering how failures occurred and how they were detected, investigated and mitigated."
+      basis: abstract
+    - text: "Among the 11 reported observations are that failures can cascade through a system into major outages and that engineers often learn a system's scaling limits only when those limits are exceeded."
+      basis: abstract
+  caveats: "Small qualitative sample (30 incidents); public postmortems are a self-selected set. It studies incident response rather than measuring whether postmortems improve outcomes; no peer-reviewed source quantifying the benefit of blameless postmortems or of on-call practices was confirmed in this session."
+  access_notes: "arXiv preprint page read (free full text available there, not read beyond the abstract); published-version metadata from Crossref."
