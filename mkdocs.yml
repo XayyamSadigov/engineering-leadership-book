@@ -108,6 +108,17 @@ nav:
       - "Company and organization": case-studies/northstar/index.md
       - "Baseline data": case-studies/northstar/baseline-data.md
       - "The first quarter": case-studies/northstar/first-quarter.md
+  - "VI. Technical Leadership and Architecture":
+      - "Chapter 28 — Architecture Decision-Making and Governance": parts/06-technical-leadership/28-architecture-decision-making-and-governance.md
+      - "Chapter 29 — Staff and Principal Engineers": parts/06-technical-leadership/29-staff-and-principal-engineers.md
+      - "Chapter 30 — Technical Strategy, Technology Selection, and Build versus Buy": parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md
+      - "Chapter 31 — Service Boundaries: Microservices, Modular Monoliths, and Ownership": parts/06-technical-leadership/31-service-boundaries-and-ownership.md
+      - "Chapter 32 — Platform Engineering, Developer Experience, and Legacy Modernization": parts/06-technical-leadership/32-platform-engineering-developer-experience-and-modernization.md
+  - "VII. Organizational Design":
+      - "Chapter 33 — Conway's Law, Team Topologies, and Cognitive Load": parts/07-organization-design/33-conways-law-team-topologies-and-cognitive-load.md
+      - "Chapter 34 — Spans, Layers, and Dependency Mapping": parts/07-organization-design/34-spans-layers-and-dependency-mapping.md
+      - "Chapter 35 — Designing Organizations of 20, 50, 100, and 500 Engineers": parts/07-organization-design/35-designing-organizations-at-four-scales.md
+      - "Chapter 36 — Reorganizations, Organizational Evolution, and Succession": parts/07-organization-design/36-reorganizations-evolution-and-succession.md
   - "XIV. Templates and playbooks":
       - "Template library": templates/index.md
       - "Engineering quality scorecard": templates/engineering-quality-scorecard.md
@@ -143,6 +154,15 @@ nav:
       - "Chapter 25 solutions": solutions/ch25-solutions.md
       - "Chapter 26 solutions": solutions/ch26-solutions.md
       - "Chapter 27 solutions": solutions/ch27-solutions.md
+      - "Chapter 28 solutions": solutions/ch28-solutions.md
+      - "Chapter 29 solutions": solutions/ch29-solutions.md
+      - "Chapter 30 solutions": solutions/ch30-solutions.md
+      - "Chapter 31 solutions": solutions/ch31-solutions.md
+      - "Chapter 32 solutions": solutions/ch32-solutions.md
+      - "Chapter 33 solutions": solutions/ch33-solutions.md
+      - "Chapter 34 solutions": solutions/ch34-solutions.md
+      - "Chapter 35 solutions": solutions/ch35-solutions.md
+      - "Chapter 36 solutions": solutions/ch36-solutions.md
   - References:
       - "Bibliography": references/bibliography.md
       - "Evidence labels": references/evidence-labels.md

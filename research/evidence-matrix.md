@@ -711,3 +711,287 @@ so the chapter does not cite the groupthink critique literature.
 Book's own recommendations in the chapter (labeled in the text): the D5 position, the compensation
 table, the six health-check rules, the layer order (structure, leadership, relationships, individuals),
 the decision table for arrangements, and the playbook.
+
+## Chapter 28 — Architecture Decision-Making and Governance
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Architectures erode and become costly to change partly because design decisions stay implicit; treat an architecture as a set of explicit decisions | Expert opinion (research position paper) | jansen2005architecture | abstract |
+| 2 | An architectural decision is a justified design choice addressing an architecturally significant requirement; an ADR records one decision and its rationale; the collection is the decision log | Practitioner | adr-github-io | full text |
+| 3 | Formal authority (right to decide) differs from real authority (effective control); real authority follows information; more real authority for the informed party raises initiative and costs the superior control; overload and urgency raise subordinates' real authority | Research finding (formal economic model) | aghion1997formal | abstract |
+| 4 | Setting technical direction is core staff engineer work with long feedback loops; the architect is one of four staff archetypes; people overestimate how much formal authority helps them | Expert opinion | larson-staffeng-actually-do; larson-staff-archetypes; larson-staffeng-reporting | full text |
+| 5 | ADRs: short numbered records with context, decision, status, consequences, kept in the repository, superseded not deleted | Practitioner | nygard2011adr | full text |
+| 6 | Lightweight ADRs were in Thoughtworks' Adopt ring Nov 2017 to May 2018; records belong in source control rather than a wiki | Practitioner consensus | thoughtworks-radar-lightweight-adr | full text |
+| 7 | ADR adoption in open source is low but growing; about half of repositories with ADRs hold one to five records; systematic use is a team activity over time; Nygard's template is most used | Research finding (open source only, no outcome measure) | buchgeher2023adr | abstract |
+| 8 | Design docs: informal, before coding, centered on trade-offs and alternatives; staged review from comments to formal meetings; formal review can slow development; skip when the solution is obvious | Documented practice | ubl2020designdocs; manshreck2020documentation | full text |
+| 9 | Fitness functions: automated, continuous checks of architectural characteristics, buildable from existing tests, metrics, monitors | Practitioner | ford2017building; thoughtworks-radar-fitness-function | idea-level (book); full text (Radar) |
+| 10 | Systems mirror the communication structures of the organizations that design them | Practitioner (argued essay) | conway1968committees | full text |
+| 11 | Board-as-queue arithmetic and the illustrative 120-engineer organization | Illustrative | — (arithmetic; queue logic cross-referenced to Chapter 20) | recomputed: 90/13 = 6.9/week; (6.9 − 4) × 13 ≈ 38; 38/4 = 9.5 weeks; 30/4 = 7.5; 10/52 ≈ 19% |
+| 12 | All Northstar facts in the case study, including ADR-0001 options and estimates | Illustrative | — | fictional; see research/northstar-additions/ch28.md; 5 ≤ 6 reserved engineer-weeks; 16 − 6 = 10 |
+
+Book's own recommendations in the chapter (labeled in the text): the reversal test for "architectural";
+the decision-rights table and its conditions (the D7 position); the five practices that keep a decision
+log alive; feedback review over approval gates; the three architecture-specific board failures and their
+signals; pairing ADRs with fitness functions owned by the decider; the routing and decision framework
+tables; the playbook.
+
+### Proposed new text for disputed claim D7 (for `research/disputed-claims.md`)
+
+**Positions.** Managers own decisions because they own outcomes and staffing; staff-plus engineers own
+technical direction; teams decide within guardrails. Practitioner sources differ by company shape.
+
+**Book's position (Chapter 28).** Split the right by what the decision is mainly about, and give each
+decision one named decider. Teams decide design inside their own components. Cross-team interfaces and
+data contracts are decided by a technical leader with a written mandate for the domain (or the
+providing team's technical lead), after written consultation of consumers; affected managers hold an
+agreement right limited to capacity and dates. Organization-wide direction is decided by a small forum
+of technical leaders with one named signer, the director or CTO agreeing on cost and risk. Trade-offs
+of date, money, or risk appetite go to the director or CTO. Conditions: a technical leader holds the
+right only with a written mandate, time to do the work, and accountability for consequences (review
+trigger, involvement when the decision fails); otherwise the manager decides by default and says so; in
+small organizations one person may wear both hats; disagreements between technical leaders escalate to
+the owner of the trade-off; executive overrules are recorded as superseding decisions. **Evidence:**
+the formal/real authority model of Aghion and Tirole (`aghion1997formal`, abstract level) and
+practitioner sources (`larson-staffeng-actually-do`, `larson-staff-archetypes`,
+`larson-staffeng-reporting`); no empirical study comparing these arrangements in software
+organizations was found. **Owner:** Chapter 28.
+
+## Chapter 29 — Staff and Principal Engineers
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | No peer-reviewed study of staff or principal engineer roles and their outcomes was found | Research gap, stated in text | — | search in session |
+| 2 | Shared leadership is positively related to team effectiveness, more for attitudes, processes, and emergent states than performance, and more for complex work | Research finding (correlational, not software-specific) | wang2014shared | abstract |
+| 3 | In agile software teams leadership is shared dynamically and is a property of the team rather than a role | Research finding (qualitative, 13 interviews) | gren2022agile | abstract |
+| 4 | About 65 percent of 133 open-source projects had an estimated truck factor of two or fewer | Research finding (open source) | avelino2016truck | abstract |
+| 5 | Four staff archetypes (tech lead, architect, solver, right hand); companies emphasize one or two; right hand mainly in very large organizations | Expert opinion | larson-staff-archetypes | full text |
+| 6 | Staff work: direction, mentorship and sponsorship, engineering perspective, exploration, glue; coding reduced; feedback loops of weeks to years | Expert opinion | larson-staffeng-actually-do | full text |
+| 7 | Reporting line should follow the archetype; people overestimate formal authority | Expert opinion | larson-staffeng-reporting | full text |
+| 8 | Staff authority is borrowed from the organization through the sponsor; never surprise the manager; feed context | Expert opinion | larson-staffeng-authority | full text |
+| 9 | Snacking, preening, chasing ghosts; existential issues first, growth, finishing, work only you can do | Expert opinion | larson-staffeng-what-matters | full text |
+| 10 | Staff work in three pillars (big picture, execution, leveling up); staff engineer as force multiplier | Expert opinion | reilly2022staff | official summary (author's book page) |
+| 11 | Glue work is technical leadership that often goes unrewarded at promotion; managers should track and share it | Expert opinion | reilly-being-glue | full text |
+| 12 | Leaders who multiply versus diminish others' intelligence | Practitioner | wiseman2010multipliers | idea-level |
+| 13 | Task conflict lacks a stable negative link to performance; relationship and process conflict are negative | Research finding | dewit2012paradox | abstract |
+| 14 | Status conflict harms group performance, mainly by undermining information sharing | Research finding | bendersky2012status | abstract |
+| 15 | Over a third of feedback interventions decreased performance; effectiveness falls as attention moves to the self | Research finding (meta-analysis, pre-1996 studies) | kluger1996effects | abstract |
+| 16 | Directives and pressured evaluation undermine motivation; choice and acknowledgment support it | Research finding (review by the theory's originators) | ryan2000self | full text |
+| 17 | Staff engineer as bet on owned decisions; five-part scope; disagreement rule with one written appeal; measure pairs; principal and distinguished level table | This book's recommendation | larson2021staff (context) | synthesis |
+| 18 | All Northstar figures (time sample, design reviews, cost of unscheduled hours, draft scopes, coaching plan) | Illustrative | — | fictional, recomputed in session |
+
+Book's own recommendations in the chapter: the mental model and loop diagram; the five-part scope and
+five tests; the disagreement flow; the measure-pair table; the principal and distinguished table; the
+failure-mode detection signals; the playbook.
+
+## Chapter 30 — Technical Strategy, Technology Selection, and Build versus Buy
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Strategy has a kernel of diagnosis, guiding policy, and coherent action; goals and fluff are signs of bad strategy | Expert opinion | rumelt2011good | idea-level (metadata only) |
+| 2 | Coherent actions are the most important part; policies should be applicable, enforced, and create leverage; written strategies often describe an ideal rather than diagnose today | Expert opinion | larson2023engstrategy | full text |
+| 3 | Policies answer resource allocation, rules for all teams, and how decisions are made; actions sort into enforcements, escalations, transitions | Expert opinion | larson2023engstrategy | full text |
+| 4 | Staff-plus engineers can build strategy by extracting what several design documents share; review impact about two months after publishing | Expert opinion | larson2023engstrategy | full text |
+| 5 | Build what differentiates and can be staffed; buy or adopt commodity capabilities; compare on three-year TCO including exit | This book's recommendation | (synthesis) | reasoning shown in chapter |
+| 6 | Vendor lock-in risk grows with cloud migration; interoperability, portability, standards, and contract terms mitigate it | Research finding (survey, n=114) | opara-martins2016lockin | abstract |
+| 7 | 81.5 percent of 4,600+ GitHub projects kept outdated dependencies; developers rarely responded to advisories; 69 percent of those surveyed were unaware of vulnerable dependencies | Research finding (open source) | kula2018developers | abstract |
+| 8 | Vulnerability reach in a dependency network was studied across nearly 400 npm security reports over six years | Research finding (no quantitative result claimed) | decan2018impact | abstract |
+| 9 | Scorecard automates open-source health and security checks (maintenance, security policy, code review, pinned dependencies) | Official documentation | openssf-scorecard | full text |
+| 10 | Innovation tokens; boring means well-understood failure modes; additions carry long-term operational cost; commit to migrating off what is replaced | Expert opinion | mckinley2015boring | full text |
+| 11 | A radar uses Adopt, Trial, Assess, and Caution rings, is published twice yearly, and organizations are encouraged to build their own | Practitioner (publisher's description) | thoughtworks-radar-faq | full text |
+| 12 | Architecture is about trade-offs among quality characteristics | Expert opinion | richards2020fundamentals | idea-level (metadata only) |
+| 13 | Well-Architected has six pillars and frames reviews as conversations, not audits | Standard (vendor guidance) | aws-well-architected | full text |
+| 14 | Java LTS end-of-availability dates are published as minimums by at least one distribution | Official documentation | adoptium-support | full text |
+| 15 | About 65 percent of 133 popular GitHub projects had an estimated truck factor of two or less | Research finding (open source) | avelino2016truck | abstract |
+| 16 | A technology risk register for EOL, concentration, and skills risk, with owner, horizon, response, review date | This book's recommendation | (synthesis) | reasoning shown in chapter |
+| 17 | Northstar strategy draft, risk register, and tax-svc options and costs | Illustrative | Northstar canon plus research/northstar-additions/ch30.md | invented |
+
+Gaps: no peer-reviewed evidence was found on the outcomes of build-versus-buy decisions in software
+organizations. Li et al. (ICSE 2006, "An empirical study on decision making in off-the-shelf
+component-based development", DOI 10.1145/1134285.1134446) was located and its bibliographic data
+confirmed via Crossref, but no abstract could be read from a legitimate source (ACM returned 403), so it
+is not cited. No research evidence was found that technology radars or risk registers improve outcomes;
+the chapter labels them as recommendation and practitioner practice.
+
+## Chapter 31 — Service Boundaries: Microservices, Modular Monoliths, and Ownership
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Module effectiveness depends on the decomposition criteria; modules should hide design decisions likely to change | Research (design argument), idea-level for information hiding | parnas1972criteria | abstract; information-hiding criterion credited at idea level |
+| 2 | The microservice style: independently deployable services around business capabilities, with decentralized data, design for failure, products not projects | Practitioner | lewis2014microservices | full text |
+| 3 | Maintainability and scalability are the main migration drivers; finding the service cut is a major challenge; most companies rewrote rather than split | Research finding (qualitative, 14 systems, 10 companies) | fritzsch2019migration | abstract |
+| 4 | Practitioners rank maintainability and scalability highest; slow ROI judged worth reduced long-run maintenance | Research finding (survey of migrators) | taibi2017processes | abstract |
+| 5 | In one company, measured technical debt spiked when services were built, then grew more slowly than in the monolith | Research finding (single case, one tool) | lenarduzzi2020migrating | abstract |
+| 6 | Mature microservice teams often cut services by resource consumption rather than business capability and credit early shared infrastructure | Research finding (21 interviews, 37 survey respondents) | wang2021promises | abstract |
+| 7 | Almost all successful microservice stories began as monoliths; boundaries are hard to find up front; evidence sparse | Expert opinion | fowler2015monolithfirst | full text |
+| 8 | Prime Video moved one monitoring service from serverless components to a single process; scaling limit at about 5% of expected load; infrastructure cost down by over 90%; "case by case" | Documented practice (self-reported, one service) | kolny2023primevideo | full text from Wayback capture of 2023-03-23 |
+| 9 | Release history reveals logical coupling between modules and points to restructuring opportunities | Research finding (one industrial system) | gall1998logical | abstract |
+| 10 | Mined version histories reveal coupling undetectable by program analysis; top-3 suggestions correct >70% on eight OSS projects | Research finding | zimmermann2005mining | abstract |
+| 11 | Organizations design systems that copy their communication structures | Practitioner (argued essay); evidence owned by Ch 33 | conway1968committees | full text |
+| 12 | Size software responsibilities to what one team can hold in mind | Practitioner | skelton2019team | idea-level (metadata only) |
+| 13 | No controlled cross-organization comparison of the styles was found; choose by change patterns, team structure, and operational capability | This book's recommendation | — | synthesis of rows 2–10 |
+| 14 | Ownership model: one owning team per component, open contribution, interim owner with deadline | This book's recommendation | lewis2014microservices (products not projects) | synthesis |
+| 15 | All Northstar co-change figures, the module table, document-store callers, Ines Carvalho's proposal, the $18,500 service-cost example | Illustrative | — | fictional, recomputed twice |
+
+### Proposed updated text for D3 (research/disputed-claims.md)
+
+> ## D3. Microservices or a modular monolith?
+>
+> **Positions.** The case for microservices as independently deployable services organized around
+> business capabilities, with decentralized data and team ownership (`lewis2014microservices`); the
+> case for starting with a monolith and extracting services when boundaries are understood
+> (`fowler2015monolithfirst`, expert opinion with stated caveats); and accounts of teams folding
+> distributed components back into one process, of which the best known is Prime Video's
+> audio/video monitoring service (`kolny2023primevideo`, now **verified** from a Wayback Machine
+> capture of the original post: one service, serverless components replaced by a single process,
+> self-reported infrastructure cost reduction of over 90 percent, and an explicit "case by case"
+> conclusion; it is not evidence that Amazon or Prime Video abandoned microservices).
+>
+> **Evidence.** No controlled comparison of the two styles across organizations was found. Studies of
+> migrations are qualitative or survey-based and sample organizations that chose to migrate:
+> maintainability and scalability are the main motives and the service cut the main challenge
+> (`fritzsch2019migration`, `taibi2017processes`); one case shows technical debt growing more slowly
+> after extraction (`lenarduzzi2020migrating`); mature teams credit shared infrastructure built early
+> (`wang2021promises`). Change history carries real coupling signal for drawing boundaries
+> (`gall1998logical`, `zimmermann2005mining`). The mirroring hypothesis is covered in Chapter 33.
+>
+> **Book's position (taken in Chapter 31).** The decision follows from change patterns, team
+> ownership, runtime needs, and operational capability, not from fashion. Separate the module,
+> deployment, data, and ownership boundaries and choose the weakest one that solves the problem.
+> Where the platform cannot yet give every service a pipeline, monitoring, and on-call, an
+> organization under about 100 engineers is usually better served by a well-modularized monolith
+> with a few services extracted for clear reasons. This is this book's recommendation, not a
+> research finding.
+
+### Proposed update for G11 (research/research-gaps.md)
+
+G11 can be closed: the Prime Video post was read in full from a Wayback Machine capture
+(20230323220106) of the original URL; `kolny2023primevideo` is replaced in
+`research/pending-sources/ch31.yaml` with access_level full-text and an `archive_url`.
+
+### Gaps recorded
+
+- Soldani et al. 2018 (systematic grey literature review, JSS) was located but its abstract states no
+  findings; not cited.
+- Bogner et al. on evolvability assurance of microservices was not found on arXiv in this session;
+  not cited.
+- No study found that measures outcomes of ownership models (single-owner versus shared) for software
+  components; the ownership model is this book's recommendation.
+
+## Chapter 32 — Platform Engineering, Developer Experience, and Legacy Modernization
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | A platform is a foundation of self-service capabilities arranged as a compelling internal product; it cannot succeed on mandate alone | Expert opinion | bottcher2018platforms | full text |
+| 2 | Platforms should be built and evolved like products with users involved early, not adopted by top-down mandate; a platform can be very thin | Practitioner consensus | cncf-platforms-whitepaper | full text (web version) |
+| 3 | A platform team exists to reduce delivery teams' cognitive load; the thinnest viable platform | Practitioner | skelton2019team | idea-level |
+| 4 | Platform users report 8% higher individual productivity, 10% higher team performance, 6% higher organizational performance, but 8% lower throughput and 14% lower change stability | Industry research | dora2024accelerate | full text of platform chapter, pp. 49, 53–54 |
+| 5 | Developer independence associated with about 5% higher productivity; exclusive mandated platform use associated with 6% lower throughput; not collecting feedback negative | Industry research | dora2024accelerate | full text, pp. 51, 53 |
+| 6 | Platform pitfalls: no user research, rigid standards, ticket-ops, big-bang launch, golden cage; clear task feedback most associated with positive user experience (2025 data) | Industry research | dora-cap-platform-engineering | full text of capability page (summary of report data) |
+| 7 | DevEx frames developer experience as friction in daily work measured by combining feedback and system data; dimensions feedback loops, cognitive load, flow | Research (practitioner-oriented); vendor summary for dimension names | noda2023devex; dx-devex-report | abstract; official summary |
+| 8 | Platform measures fall into satisfaction, organizational efficiency, and delivery outcomes | Practitioner consensus | cncf-platforms-whitepaper | full text |
+| 9 | Strangler fig: incremental replacement, earlier value, lower risk, learning; requires transitional architecture; seams rare | Expert opinion | fowler2024stranglerfig | full text |
+| 10 | Rewriting a large product from scratch discards embedded fixes and stalls the product | Expert opinion, anecdotal | spolsky2000never | full text |
+| 11 | Practitioners value legacy systems highly; modernization challenges are business and organizational as well as technical | Research finding | khadka2014legacy | abstract |
+| 12 | Many monoliths are too entangled to split cleanly | Expert opinion | fowler2015monolithfirst | full text |
+| 13 | Fitness functions guard architectural properties automatically | Practitioner | ford2017building | idea-level |
+| 14 | No controlled or large-sample evidence compares rewrite and incremental modernization outcomes | Research gap, admitted in text | — | search in session found none verifiable |
+| 15 | All Northstar figures, the roadmap, capacity arithmetic, and adoption measures | Illustrative | — | fictional; recomputed in session |
+
+Book's own recommendations in the chapter: mandate outcomes, not tools; the feedback-loop selection
+rule (latency and frequency first, cognitive load second, ticket-bound capabilities discounted);
+pairing adoption measures with outcomes and denominators; the modernization decision table and its
+rule that every step has a removal date and a success measure; the failure-mode catalogue; the
+playbook.
+
+## Chapter 33 — Conway's Law, Team Topologies, and Cognitive Load
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Organizations that design systems are constrained to produce designs copying their communication structures | Expert opinion | conway1968committees | full text (essay; no empirical data) |
+| 2 | Conway also argued that organizing a design team already makes design decisions, that organizations must stay flexible as the design changes, and that communication paths grow roughly with the square of headcount | Expert opinion | conway1968committees | full text, read 2026-11-19 (beyond the bibliography entry's recorded claim; maintainer may add these claims) |
+| 3 | In matched pairs of same-function products, those built by loosely coupled open source communities were significantly more modular than those from tightly coupled commercial firms | Research finding | maccormack2012mirroring | abstract (working-paper version); no magnitude cited |
+| 4 | Across 142 studies, mirroring is prevalent but not universal; partial mirroring likely better in dynamic industries; firms can break the mirror; open collaborative projects did not support the hypothesis; mirroring conserves cognitive resources | Research finding (review) | colfer2016mirroring | abstract |
+| 5 | When coordination matches coordination needs from technical dependencies, modification requests resolve significantly faster; logical dependencies matter more than call or data dependencies | Research finding | cataldo2008congruence | abstract |
+| 6 | Distributed work items took about 2.5 times as long; more people involved meant longer calendar time | Research finding (applied to team boundaries as inference) | herbsleb2003empirical | abstract |
+| 7 | The reverse Conway maneuver is promoted by Team Topologies; its effect on existing systems is not established by the evidence read | Practitioner (idea level); evidence gap is this book's reading | skelton2019team; maccormack2012mirroring | idea-level; abstract |
+| 8 | Four team types and three interaction modes as defined by the authors | Practitioner consensus | teamtopologies-key-concepts; skelton2019team | official summary; idea-level |
+| 9 | No peer-reviewed validation of the team-type taxonomy found | Research gap | none | search in this session |
+| 10 | Conventional problem solving consumes processing capacity otherwise available for schema acquisition | Research finding (individual learners) | sweller1988cognitive | abstract |
+| 11 | Team cognitive load (intrinsic, extraneous, germane) is a transfer from learning research to teams; no validated team instrument found | Practitioner idea; transfer labelled; research gap | skelton2019team; teamtopologies-key-concepts; sweller1988cognitive | idea-level; official summary; abstract |
+| 12 | Cognitive load is one dimension of developer experience | Practitioner | dx-devex-report | official summary |
+| 13 | Adding people adds communication and ramp-up overhead | Expert opinion | brooks1995mythical | idea-level (secondary summary) |
+| 14 | Dunbar-style group-size thresholds are not used for software teams | This book's recommendation | none | Dunbar not read; software team-size study (Rodríguez et al., JSS 2012) abstract unavailable |
+| 15 | Teams of about five to nine; separate team from reporting group | This book's recommendation | none | reasoning from rows 2, 6, 13 |
+| 16 | Match the move to the kind of load (platform, facilitation, move or split) | This book's recommendation | skelton2019team (vocabulary) | synthesis |
+| 17 | All Northstar figures, knowledge counts, and capacity arithmetic | Illustrative | Northstar canon; research/northstar-additions/ch33.md | fictional |
+
+## Chapter 34 — Spans, Layers, and Dependency Mapping
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Graicunas counted manager–subordinate relationships, which grow far faster than headcount, and suggested a maximum of about four or five | History (practitioner) | graicunas1937relationship | idea-level, secondary pages; presented as history only |
+| 2 | Large US firms flattened: wider CEO spans, fewer levels between division heads and CEO, authority delegated downward | Research finding | rajan2006flattening | abstract |
+| 3 | Average span in Gallup's US panel rose from 10.9 to 12.1 (2024–2025), median about six | Industry research | harter2026span | full text |
+| 4 | Manager talent matters more than span; less talented managers lose engagement as team size and hands-on workload rise | Industry research | harter2026span | full text |
+| 5 | More reports associated with lower engagement for remote and hybrid managers, minimal effect on-site | Industry research | harter2026span | full text |
+| 6 | Managers' median individual-contributor time is 40 percent; above that, engagement lower and worse with team size | Industry research | harter2026span | full text |
+| 7 | Managers should support six to eight engineers; managers of managers four to six managers | Expert opinion | larson2018sizing | full text |
+| 8 | No software-specific outcome study of span found (gap G8) | Research gap | — | search in this session |
+| 9 | Span set from five factors; default eight to ten, range five to twelve | This book's recommendation | (consistent with Ch 1, Ch 4) | reasoning |
+| 10 | Organizational structures distort information reaching decision makers; control loss compounds across levels | Theoretical model | williamson1967hierarchical | abstract (opening); control-loss idea via secondary sources |
+| 11 | Latency per hop and 80 percent information retention per level | Illustrative | — | stated assumptions |
+| 12 | Systems copy organizations' communication structures | Practitioner (essay) | conway1968committees | full text |
+| 13 | Organizational and system boundaries moderate whether design interfaces are matched by team interactions | Research finding | sosa2004misalignment | abstract |
+| 14 | Congruence between coordination needs and actual coordination reduces modification-request resolution time | Research finding | cataldo2008congruence | abstract (canonical entry: ch33 pending) |
+| 15 | Organizational complexity metrics predicted failure-prone Windows Vista binaries better than code metrics | Research finding | nagappan2008organizational | abstract-level claims (canonical entry: ch35 pending, full text) |
+| 16 | Cross-site work items took about 2.5 times as long | Research finding | herbsleb2003empirical | abstract (via Ch 16) |
+| 17 | Teams designed for fast flow with few deliberate interactions | Practitioner | skelton2019team | idea-level |
+| 18 | Recount the dependency matrix on every proposed boundary | This book's recommendation | — | reasoning |
+| 19 | All Northstar numbers, link classification, quarter 2 analysis, and the assessment of the Chapter 35 year-2 proposal | Illustrative | Northstar canon; northstar-additions/ch34.md; northstar-additions/ch35.md | — |
+
+## Chapter 35 — Designing Organizations of 20, 50, 100, and 500 Engineers
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | n people have n(n−1)/2 possible communication paths; adding people to a late project is widely stated to make it later, and Brooks called the law an oversimplification | Expert opinion (classic); formula is arithmetic | brooks1995mythical; nagappan2008organizational | idea-level / official-summary (secondary); formula as stated in the Nagappan full text |
+| 2 | Organizational measures of ownership diffusion predicted failure-prone binaries in Windows Vista (precision 0.87, recall 0.84 over 50 splits), better than churn, complexity, coverage, dependency, or pre-release defect models | Research finding | nagappan2008organizational | full text; one system, authors disclaim generalization |
+| 3 | Number of people involved strongly related to calendar time to complete a work item | Research finding | herbsleb2003empirical | abstract; distributed setting, application to team boundaries is an inference |
+| 4 | Coordination congruent with coordination needs reduced modification-request resolution time | Research finding | cataldo2008congruence | abstract (OpenAlex record) |
+| 5 | Systems mirror the communication structure of the organizations that design them | Expert opinion (classic essay) | conway1968committees | full text |
+| 6 | No validated optimal team size, span, or layer threshold exists for software organizations | This book's assessment; gap G8 | rajan2006flattening (context only) | literature gap |
+| 7 | What breaks at about 20, 50, 100, and 500 engineers and which structures answer it | Practitioner consensus / this book's recommendation | larson2019elegant; fournier2017manager; skelton2019team | idea-level |
+| 8 | The management job changes at each level (engineers, managers, organization) | Practitioner | fournier2017manager | idea-level |
+| 9 | Organization design treated as an engineering problem with explicit sizing rules, planned ahead, changed rarely | Practitioner | larson2019elegant | idea-level |
+| 10 | GitLab documents a target range for direct reports, the same at every level to avoid a layer, sized for six months ahead; and a dual career path forking above Senior | Documented practice | gitlab2026structure | full text |
+| 11 | Platform teams provide internal services used by self-service, run as a product | Practitioner | skelton2019team | idea-level |
+| 12 | Four staff archetypes; the right hand appears mainly in very large organizations | Expert opinion | larson-staff-archetypes | full text |
+| 13 | Staff-plus reporting line trade-off; formal authority is overestimated | Expert opinion | larson-staffeng-reporting | full text |
+| 14 | Large US firms flattened, with wider CEO spans and authority delegated downward | Research finding (context) | rajan2006flattening | abstract; corporate hierarchies only |
+| 15 | A 12-team, 175-person programme used many coordination arenas that changed over time; extra roles and arenas reduced team autonomy | Research finding (single case) | dingsoyr2018exploring | full text |
+| 16 | Structure is a core responsibility of the engineering executive | Practitioner | larson2024primer | idea-level |
+| 17 | Sequencing order: platform team and staff mandate before a management layer; check process first | This book's recommendation | — | reasoning in chapter |
+| 18 | Fernwick, Brackenridge Freight, Halvard Systems, and the Northstar year 2 proposal | Illustrative | — | fictional |
+
+## Chapter 36 — Reorganizations, Organizational Evolution, and Succession
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | A systematic review of 39 longitudinal studies (2000–2012) found restructuring, with and without staff reductions, mainly harmed employee well-being, short and long term | Research finding, limits stated (mergers and downsizing; well-being not delivery) | dejong2016restructuring (pending-sources/ch36.yaml) | abstract |
+| 2 | Intervening variables include job control, communication, information, training, procedural justice, job insecurity, change acceptance | Research finding | dejong2016restructuring | abstract |
+| 3 | A review of 79 quantitative studies groups antecedents of reactions to change into prechange factors and change process, perceived benefit or harm, and content | Research finding (review structure only) | oreg2011recipients | abstract |
+| 4 | In one large software project, proximity to organizational change was associated with more customer-reported defects; recent departures likewise | Research finding, one project, observational | mockus2010volatility | abstract |
+| 5 | Consulting-firm surveys on reorganization failure rates are not used | Gap statement | — | research gap G12 |
+| 6 | Reorganizations are expensive and should be reserved for structural problems | Expert opinion | larson2019elegant | idea-level |
+| 7 | Leaders should agree on a few answers and repeat them far more than feels necessary | Expert opinion | lencioni2012advantage | idea-level |
+| 8 | A new role needs a transition plan: diagnose, early wins, relationships | Expert opinion | watkins2003first | idea-level |
+| 9 | Succession research has mostly treated succession as an event; practice treats it as a process | Research finding (review) | berns2017succession | abstract |
+| 10 | Knowledge concentration and the truck factor (cited as a pointer to Chapter 12, which owns the topic) | Research finding, open source | avelino2016truck (existing entry) | abstract |
+| 11 | In Chrome and a project at Avaya, designated successors reduced expected loss from turnover by up to 15 percent; extending this to management roles is labeled as the book's inference | Research finding, two projects | rigby2016turnover (existing entry) | abstract |
+| 12 | Transition-cost model (ramp-up, handoff, management, risk), ramp-up figures, payback arithmetic | This book's recommendation; figures illustrative | — | no research gives engineer ramp-up after a team change |
+| 13 | All Northstar facts, the reorganization transition plan, and the succession table | Illustrative | — | fictional; additions in northstar-additions/ch36.md |
+
+Book's own recommendations in the chapter (labeled as such in the text or clearly the author's
+reasoning): the three tests for reorganizing; consult on problem, decide names privately; tell each
+person before any group; effective within two weeks and handoffs by week six; tier 1 change freeze
+during ownership moves; the readiness gates; the four succession readiness levels and the coverage
+rule; the quarterly evolution cadence.

@@ -2,7 +2,7 @@
 
 Questions the book needs evidence for and does not yet have. A chapter that touches a gap must admit
 it in the text. Each gap records what was searched, what was found, and what to do next.
-Updated 2026-11-20 after waves 1 (Part V), 2 (Parts I and IV), and 3 (Parts II and III).
+Updated 2026-11-20 after waves 1–4 (Parts I–VII).
 
 ## Open
 
@@ -13,10 +13,9 @@ Updated 2026-11-20 after waves 1 (Part V), 2 (Parts I and IV), and 3 (Parts II a
 | G5 | SPACE and DevEx full texts unread | Ch 18 | Dimension names taken from the first author's own blog post (`forsgren2023navigating`), a GitHub blog (`alwell2021measuring`), and a vendor page (`dx-devex-report`); ACM, Queue, and CACM returned 403 | Read the papers; replace the secondary sources for the dimension names |
 | G6 | Origin of cost of delay and WSJF | Ch 15, 21, 45 | WSJF verified as a SAFe method (`safe-wsjf`); attribution of cost of delay to Reinertsen not verified (book is metadata only) | Verify from publisher material or a secondary scholarly source |
 | G7 | Exact wording of Campbell's law and Goodhart's popular phrasing | Ch 18, 20, 27 | Campbell 1979 metadata only; Strathern 1997 abstract lacks the phrase | Read before any quotation |
-| G8 | Span of control in software organizations | Ch 34, 35 | `rajan2006flattening` (general corporate hierarchies) only | Software-specific search |
+| G8 | Span of control in software organizations | Ch 34, 35 | `rajan2006flattening` (corporate hierarchies), `harter2026span` (Gallup, all industries), `larson2018sizing` (practitioner); no software-specific outcome study | Keep the 8–10 default as this book's recommendation; search for software-specific evidence |
 | G9 | Cost of technical debt measured on system data across many organizations | Ch 21 | Added `besker2019productivity`, `ernst2015measure` (survey of 1,831), `tornhill2022codered` (39 codebases, observational). No multi-company study on system data | Continue search; present figures only with their samples |
 | G10 | Tables of Sackett et al. 2022 and 2023 | Ch 7 | Narrowed: the open-access 2023 paper (`sackett2023revisiting`) was read in full for the structured-interview estimate (.42); the tables of both papers were not read, and the chapter's work-sample figure is derived from two sentences | Check the work-sample figure against the tables during human review |
-| G11 | Prime Video monolith case has no live primary source | Ch 31 | Original URL redirects; InfoQ secondary report | Archived primary copy or label as secondary |
 | G12 | Reorganization outcomes | Ch 36 | Not yet searched | Organizational behavior literature |
 | G13 | Size of a standing capacity allocation for debt and prevention | Ch 21, 27, 38 | No research found; 10–20 percent presented as this book's recommendation | Search portfolio-allocation literature |
 | G14 | On-call load and health among software engineers | Ch 24, 25 | `nicol2004oncall`, `hall2017oncall` cover on-call work generally (largely healthcare); no software-specific peer-reviewed study | Search CHI/CSCW and SE venues |
@@ -40,11 +39,19 @@ Updated 2026-11-20 after waves 1 (Part V), 2 (Parts I and IV), and 3 (Parts II a
 | G32 | Whether calibration meetings improve fairness in engineering organizations | Ch 8, 9 | None found; presented as practitioner consensus | Search |
 | G33 | Coaching by a person's own line manager (meta-analyses exclude it) | Ch 5 | `jones2016coaching` excludes manager coaching; none readable found | Search |
 | G34 | Whether office visits reduce attrition of remote or second-site engineers | Ch 14 | None found; the chapter's travel budget is framed as a bet with a break-even | Search |
+| G35 | Validation of the Team Topologies team-type taxonomy; a validated instrument for team cognitive load | Ch 33 | None found; cognitive load transfer from Sweller labeled as analogy | Search |
+| G36 | Team size and productivity in software (Rodríguez et al. 2012) | Ch 33, 35 | Abstract unreachable (ScienceDirect 403) | Read via a library |
+| G37 | Outcomes of staff and principal engineer roles | Ch 29 | Only adjacent research (shared leadership, truck factor) | Search |
+| G38 | Outcomes of build-versus-buy decisions; value of technology radars and risk registers | Ch 30 | None found; Li et al. 2006 abstract unreadable | Search |
+| G39 | Rewrite versus incremental modernization outcomes | Ch 32 | None found; anti-rewrite position labeled expert opinion | Search |
+| G40 | Comparisons of component ownership models | Ch 31 | None found; ownership model labeled this book's recommendation | Search |
+| G41 | Empirical comparison of who should hold architecture decision rights in software organizations | Ch 28 | Only the Aghion and Tirole model (abstract) and practitioner sources | Search |
 
 ## Closed
 
 | # | Gap | Resolution |
 |---|---|---|
+| G11 | Prime Video monolith case had no live primary source | Read in full from a Wayback Machine capture (2023-03-23) of the original post on 2026-11-20; `kolny2023primevideo` verified |
 | G3 | The 2023 McKinsey developer productivity article was unread | Read in full from a Wayback Machine snapshot (2023-08-20) of the original URL on 2026-11-20; entry `mckinsey2023productivity` verified. Its exhibits are images and were not read |
 | G2 | Allspaw's "Blameless PostMortems and a Just Culture" unread | Read in full from a Wayback Machine copy (2013-06-09) of the original URL on 2026-11-19; entry `allspaw2012blameless` verified |
 

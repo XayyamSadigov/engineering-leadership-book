@@ -45,17 +45,31 @@ period, and the book says so with numbers (Chapter 27). **Owner:** Chapters 18 a
 
 ## D3. Microservices or a modular monolith?
 
-**Positions.** The case for microservices as independently deployable services aligned with business
-capabilities (`lewis2014microservices`); the case for starting with a monolith and extracting
-services when boundaries are understood (`fowler2015monolithfirst`); and widely discussed accounts of
-teams consolidating distributed components back into a single service, of which the Prime Video case
-is the best known (`kolny2023primevideo`, **unverified**: the original post no longer resolves).
+**Positions.** The case for microservices as independently deployable services organized around
+business capabilities, with decentralized data and team ownership (`lewis2014microservices`); the
+case for starting with a monolith and extracting services when boundaries are understood
+(`fowler2015monolithfirst`, expert opinion with stated caveats); and accounts of teams folding
+distributed components back into one process, of which the best known is Prime Video's
+audio/video monitoring service (`kolny2023primevideo`, now **verified** from a Wayback Machine
+capture of the original post: one service, serverless components replaced by a single process,
+self-reported infrastructure cost reduction of over 90 percent, and an explicit "case by case"
+conclusion; it is not evidence that Amazon or Prime Video abandoned microservices).
 
-**Book's position.** Draft: the decision follows from team structure, change patterns, and
-operational capability, not from fashion; most organizations under 100 engineers are better served by
-a well-modularized monolith with a few extracted services than by many services. To be written up
-with evidence in Chapter 31. The Prime Video case must not be cited until a stable primary source is
-found.
+**Evidence.** No controlled comparison of the two styles across organizations was found. Studies of
+migrations are qualitative or survey-based and sample organizations that chose to migrate:
+maintainability and scalability are the main motives and the service cut the main challenge
+(`fritzsch2019migration`, `taibi2017processes`); one case shows technical debt growing more slowly
+after extraction (`lenarduzzi2020migrating`); mature teams credit shared infrastructure built early
+(`wang2021promises`). Change history carries real coupling signal for drawing boundaries
+(`gall1998logical`, `zimmermann2005mining`). The mirroring hypothesis is covered in Chapter 33.
+
+**Book's position (taken in Chapter 31).** The decision follows from change patterns, team
+ownership, runtime needs, and operational capability, not from fashion. Separate the module,
+deployment, data, and ownership boundaries and choose the weakest one that solves the problem.
+Where the platform cannot yet give every service a pipeline, monitoring, and on-call, an
+organization under about 100 engineers is usually better served by a well-modularized monolith
+with a few services extracted for clear reasons. This is this book's recommendation, not a
+research finding.
 
 ## D4. Centralized QA, embedded QA, or no separate QA role?
 
@@ -105,7 +119,21 @@ evidence gap plainly. **Owner:** Chapter 25.
 **Positions.** Managers own decisions because they own outcomes and staffing; staff-plus engineers own
 technical direction; teams decide within guardrails. Practitioner sources differ by company shape.
 
-**Book's position.** Not yet taken. **Owner:** Chapter 28.
+**Book's position (Chapter 28).** Split the right by what the decision is mainly about, and give each
+decision one named decider. Teams decide design inside their own components. Cross-team interfaces and
+data contracts are decided by a technical leader with a written mandate for the domain (or the
+providing team's technical lead), after written consultation of consumers; affected managers hold an
+agreement right limited to capacity and dates. Organization-wide direction is decided by a small forum
+of technical leaders with one named signer, the director or CTO agreeing on cost and risk. Trade-offs
+of date, money, or risk appetite go to the director or CTO. Conditions: a technical leader holds the
+right only with a written mandate, time to do the work, and accountability for consequences (review
+trigger, involvement when the decision fails); otherwise the manager decides by default and says so; in
+small organizations one person may wear both hats; disagreements between technical leaders escalate to
+the owner of the trade-off; executive overrules are recorded as superseding decisions. **Evidence:**
+the formal/real authority model of Aghion and Tirole (`aghion1997formal`, abstract level) and
+practitioner sources (`larson-staffeng-actually-do`, `larson-staff-archetypes`,
+`larson-staffeng-reporting`); no empirical study comparing these arrangements in software
+organizations was found. **Owner:** Chapter 28.
 
 ## D8. How much do structured interviews and cognitive tests predict job performance?
 

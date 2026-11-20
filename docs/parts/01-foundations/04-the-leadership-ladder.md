@@ -195,8 +195,8 @@ Northstar's role structure as the director finds it. All figures are **illustrat
 
 **Spans.** The six teams hold 77 engineers (14, 13, 12, 15, 11, 12): 12.8 per manager on average,
 from 11 (Data and Analytics) to 15 (Customer Experience). This book's recommendation (Chapter 1; gap
-G8) is that people work crowds out the rest above about eight to ten reports; Chapter 33 owns team
-sizing. A manager with 12 to 15 reports has little time for people growth and leverage.
+G8) is that people work crowds out the rest above about eight to ten reports; Chapter 34 owns spans
+and Chapter 33 team sizing. A manager with 12 to 15 reports has little time for people growth and leverage.
 
 **Tech leads.** A tech lead per team of six to ten engineers (**this book's recommendation**) gives
 eight to twelve for 77 team engineers. Northstar has none with the title; each team relies

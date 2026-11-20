@@ -301,7 +301,7 @@ template:
 | An engineer ready to own technical direction? | Name them tech lead, in writing, with a decision scope | Manager holds it temporarily, with a plan to grow or hire a tech lead |
 | Delivery depends heavily on other teams? | Add program support or a director-level dependency process | Manager owns delivery |
 | The area needs cross-team technical direction? | A staff-plus engineer with a written mandate | Team tech leads suffice |
-| More than about eight to ten direct reports? | People work will crowd out the rest; plan a split (Chapter 33 covers team design) | Proceed |
+| More than about eight to ten direct reports? | People work will crowd out the rest; plan a split (Chapter 34 covers spans, Chapter 33 team design) | Proceed |
 
 Two criteria apply whatever the answers. Every job has exactly one named owner per team, and the
 owner has time in their calendar to do it. A role definition that assigns technical direction to a

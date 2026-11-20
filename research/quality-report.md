@@ -6,9 +6,8 @@ reviewed by a person, and the known limitations a reader or reviewer should be a
 ## Automated validation
 
 Run `python tools/validate_book.py --build`. Last result recorded: **passed**, 2026-11-20, with
-chapters 1–27 live (chapters, navigation, references, exercises, generated pages,
-single-file edition, `mkdocs build --strict`). 1 warning: the one unverified bibliography entry
-(`kolny2023primevideo`), which no chapter cites. Mermaid: 75 of 75 diagrams render with mermaid-cli 11.
+chapters 1–36 live (chapters, navigation, references, exercises, generated pages,
+single-file edition, `mkdocs build --strict`). No warnings: all 293 bibliography entries are verified. Mermaid: 98 of 98 diagrams render with mermaid-cli 11.
 All diagrams of chapters 1–4 and 15–18 measured in a headless browser at 390 px; one squeezed diagram
 (chapter 2) fixed. `ruff check tools`: clean. Browser check of all nine Part V chapters at
 390 px: no horizontal page overflow; six squeezed left-to-right diagrams redrawn top-to-bottom, and a
@@ -52,10 +51,23 @@ review (one-on-one hours in chapter 2); it was reverted. The wave 3 reviewer rep
 fixing, canon facts not merged, repetition of Edmondson, Lencioni, and Scullen et al.); all fixed.
 Chapters 7, 9, and 10 end 3 to 15 words over the 5,000-word guide.
 
+## Wave 4 (chapters 28–36), 2026-11-20
+
+Nine authors in parallel. The maintainer changed the shared year-2 reorganization proposal while the
+authors were working; messages crossed, and three chapters had to be realigned twice before a final
+decision (Chapter 35's current version) was sent to all three. Lesson recorded in PROJECT_STATUS: a
+decision sent to parallel authors is not changed in flight. 52 sources merged (293 in total, all
+verified); the Prime Video post was read from an archived copy, closing gap G11. Disputed claims D3 and
+D7 now have positions. The independent reviewer reported 21 findings (an exercise premise contradicting
+the canon, a quarter-2 move that the canon defers to year 2, an Orders split that ignored the chapter
+31 co-change data, two different hierarchies for the same 500-engineer example, repetition across
+chapters 33–35); arithmetic in the key findings verified by the maintainer; all 21 fixed.
+
 ## Human review status
 
 | Item | Status | Self-review | Human review |
 |---|---|---|---|
+| Chapters 28–36 and solutions | review | Author self-review; independent AI review (21 findings, all fixed) | **Not done** |
 | Chapters 5–14 and solutions | review | Author self-review; independent AI review (16 findings, all fixed) | **Not done** |
 | Chapters 1–4 and 15–18 and solutions | review | Author self-review; independent AI review (20 findings, all fixed) | **Not done** |
 | Chapters 19–26 and solutions | review | Author self-review against the checklist; independent AI cross-chapter review; fixes applied | **Not done** |
@@ -94,7 +106,6 @@ Chapters 7, 9, and 10 end 3 to 15 words over the 5,000-word guide.
 - Most practitioner books are cited at idea level only; they were verified bibliographically and not
   read for this project. See `research/source-evaluation.md`.
 - Most scholarly sources were read at abstract level only.
-- One bibliography entry is unverified and uncitable (Prime Video 2023).
 - SPACE and DevEx dimension names come from the first author's blog, a GitHub blog, and a vendor page, because the papers' publisher pages returned 403 (gap G5).
 - Open research gaps are listed in `research/research-gaps.md` (G1, G3–G20).
 - Drafting is AI-assisted throughout. The specific risk is confident prose that a source does not

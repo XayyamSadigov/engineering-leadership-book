@@ -5,9 +5,21 @@
 
 Every source the book cites, with what was verified and how much of the source was actually read when the entry was created. An entry marked *bibliographic metadata only* means the citation details were checked against a publisher or catalog page; it does not mean the work was read in full for this project. Chapters cite by linking to the anchors on this page.
 
-242 entries. Grouped by evidence class, then alphabetically by id.
+293 entries. Grouped by evidence class, then alphabetically by id.
 
 ## Scholarly research
+
+### aghion1997formal {#aghion1997formal}
+
+Philippe Aghion, and Jean Tirole (1997). “Formal and Real Authority in Organizations”. Journal of Political Economy, vol. 105, no. 1, pp. 1-29.
+
+- DOI: [10.1086/262063](https://doi.org/10.1086/262063) · <https://doi.org/10.1086/262063>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The paper distinguishes formal authority (the right to decide) from real authority (effective control over decisions), and argues that real authority depends on who holds the relevant information, which in turn depends on how formal authority is allocated.
+- Supports (abstract): Increasing a subordinate's real authority promotes their initiative but costs the superior control.
+- Supports (abstract): Factors the paper examines as raising subordinates' real authority within a formally centralized structure include the superior's overload, lenient rules, urgency of decisions, reputation, performance measurement, and multiple superiors.
+- Caveats: A formal economic model, not an empirical study of software organizations. Abstract read via the OpenAlex record (Crossref record had no abstract); full text not read.
 
 ### ahmad2013kanban {#ahmad2013kanban}
 
@@ -139,6 +151,17 @@ Alan Benson, Danielle Li, and Kelly Shue (2026). “"Potential" and the Gender P
 - Supports (abstract): The authors identify strategic retention and stereotyping as mechanisms.
 - Caveats: One retail chain; management-track employees, not engineers.
 
+### berns2017succession {#berns2017succession}
+
+Kristin V. D. Berns, and Patricia Klarner (2017). “A Review of the CEO Succession Literature and a Future Research Program”. Academy of Management Perspectives 31(2), pp. 83-108.
+
+- DOI: [10.5465/amp.2015.0183](https://doi.org/10.5465/amp.2015.0183) · <https://doi.org/10.5465/amp.2015.0183>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The review integrates five decades of research on the predictors, consequences, and contingencies of CEO succession.
+- Supports (abstract): It finds that empirical research has frequently treated CEO succession as an event, contrary to practical evidence that succession is a continuous process, and proposes research on the succession process.
+- Caveats: About chief executives and boards, not engineering managers; used only for the event-versus-process framing.
+
 ### besker2018technical {#besker2018technical}
 
 Terese Besker, Antonio Martini, and Jan Bosch (2018). “Technical Debt Cripples Software Developer Productivity: A Longitudinal Study on Developers' Daily Software Development Work”. Proceedings of the 2018 International Conference on Technical Debt (TechDebt '18), pp. 105-114.
@@ -172,6 +195,18 @@ Nicholas Bloom, Ruobing Han, and James Liang (2024). “Hybrid working from home
 - Supports (abstract): Equivalence tests found no effect on performance grades over the following two years, no overall difference in promotions, and no effect on lines of code written by computer engineers.
 - Supports (abstract): The 395 managers in the trial moved from expecting a negative productivity effect (about -2.6 percent) before the experiment to a positive one (about +1.0 percent) afterwards.
 - Caveats: One firm in one country; hybrid (two home days), not fully remote; the randomization method was not read. Performance measured by review grades, promotions, and lines of code, which are coarse. nature.com redirected to an identity-provider page; abstract read via the Europe PMC record (PMC11208135).
+
+### buchgeher2023adr {#buchgeher2023adr}
+
+Georg Buchgeher et al. (2023). “Using Architecture Decision Records in Open Source Projects: An MSR Study on GitHub”. IEEE Access, vol. 11, pp. 63725-63740.
+
+- DOI: [10.1109/ACCESS.2023.3287654](https://doi.org/10.1109/ACCESS.2023.3287654) · <https://doi.org/10.1109/ACCESS.2023.3287654>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A mining study of open source GitHub repositories found that ADR adoption is still low, although the number of repositories using ADRs grows each year.
+- Supports (abstract): About half of the repositories with ADRs contain only one to five records, which the authors read as the practice having been tried but not fully adopted.
+- Supports (abstract): In repositories that use ADRs more systematically, recording decisions is a team activity of two or more contributors over a longer period, and most repositories use the template attributed to Michael Nygard.
+- Caveats: Open source repositories only; says nothing about ADR use inside companies or about effects on outcomes. Abstract read; the paper is gold open access (CC BY) but the full text was not read.
 
 ### buehler1994exploring {#buehler1994exploring}
 
@@ -238,6 +273,20 @@ Emilio J. Castilla (2015). “Accounting for the Gap: A Firm Study Manipulating 
 - Supports (abstract): After the procedures were adopted, the pay gap in performance-based rewards was reduced.
 - Caveats: One company; the abstract does not describe the procedures in detail or the size of the reduction.
 
+### cataldo2008congruence {#cataldo2008congruence}
+
+Marcelo Cataldo, James D. Herbsleb, and Kathleen M. Carley (2008). “Socio-technical congruence: a framework for assessing the impact of technical and work dependencies on software development productivity”. Proceedings of the Second ACM-IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM 2008), pp. 2-11.
+
+- DOI: [10.1145/1414004.1414008](https://doi.org/10.1145/1414004.1414008) · <https://doi.org/10.1145/1414004.1414008>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The paper argues that modularization has serious limitations in software development and uses congruence between the structure of technical dependencies and work dependencies to examine productivity.
+- Supports (abstract): In the empirical evaluation, when developers' coordination patterns were congruent with their coordination needs, the resolution time of modification requests was significantly reduced.
+- Supports (abstract): Call and data dependencies appeared to have far less impact than logical dependencies in driving coordination requirements.
+- Supports (abstract): When developers' coordination patterns were congruent with the coordination needs implied by technical dependencies, the resolution time of modification requests was significantly reduced.
+- Supports (abstract): Logical dependencies mattered more for coordination needs than call and data dependencies.
+- Caveats: Abstract read from the OpenAlex record (Crossref has the short title only). Setting, sample, and effect sizes not read; one organization is likely and was not confirmed.
+
 ### chillarege1992orthogonal {#chillarege1992orthogonal}
 
 Ram Chillarege et al. (1992). “Orthogonal Defect Classification - A Concept for In-Process Measurements”. IEEE Transactions on Software Engineering, vol. 18, no. 11, pp. 943-956.
@@ -248,6 +297,18 @@ Ram Chillarege et al. (1992). “Orthogonal Defect Classification - A Concept fo
 - Supports (abstract): The paper proposes Orthogonal Defect Classification, which classifies defects by their meaning so that the distributions of classes give feedback on the development process while it is under way.
 - Supports (abstract): It uses the distribution of defect types to track a product's progress through development, and the distribution of defect triggers to assess how effective and complete inspection and testing are, with results from pilot projects.
 - Caveats: Abstract-level only; no pilot results are reported in this book. The seventh author is recorded as Crossref gives it ('M.-Y. Wong'); confirm the full name from the paper. The IBM page summary listed six authors; Crossref lists seven, and Crossref is followed here.
+
+### colfer2016mirroring {#colfer2016mirroring}
+
+Lyra J. Colfer, and Carliss Y. Baldwin (2016). “The mirroring hypothesis: theory, evidence, and exceptions”. Industrial and Corporate Change, vol. 25, no. 5, pp. 709-738.
+
+- DOI: [10.1093/icc/dtw027](https://doi.org/10.1093/icc/dtw027) · <https://doi.org/10.1093/icc/dtw027>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The mirroring hypothesis predicts that organizational ties within a project, firm, or group of firms (communication, collocation, employment) will correspond to the technical dependencies in the work; the authors argue mirroring is an approach to technical problem-solving that conserves scarce cognitive resources.
+- Supports (abstract): A review of 142 empirical studies; industry and firm studies indicate mirroring is prevalent but not universal, and in technologically dynamic industries partial mirroring (knowledge boundaries drawn more broadly than operational boundaries) is likely to be a superior strategy.
+- Supports (abstract): Firms can strategically break the mirror with modular partitions inside their boundaries or relational contracts across them; studies of open collaborative projects, most of them software, were not supportive of the hypothesis.
+- Caveats: Abstract only (from the Crossref record). A narrative review; study-level details and counts per category not read.
 
 ### cullen2023equilibrium {#cullen2023equilibrium}
 
@@ -295,6 +356,18 @@ Carsten K. W. De Dreu, and Laurie R. Weingart (2003). “Task versus relationshi
 - Supports (abstract): Task conflict was less negatively related to performance when task and relationship conflict were weakly correlated.
 - Caveats: Correlational meta-analysis; later partly contradicted by de Wit, Greer, and Jehn (2012). Not specific to software teams.
 
+### dejong2016restructuring {#dejong2016restructuring}
+
+Tanja de Jong et al. (2016). “The impact of restructuring on employee well-being: a systematic review of longitudinal studies”. Work & Stress 30(1), pp. 91-114.
+
+- DOI: [10.1080/02678373.2015.1136710](https://doi.org/10.1080/02678373.2015.1136710) · <https://doi.org/10.1080/02678373.2015.1136710>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A systematic review of 39 longitudinal, peer-reviewed studies (2000-2012) found that restructuring events, with and without staff reductions, mainly have a negative impact on employee well-being, with most studies showing negative changes over time in both the short and the long term.
+- Supports (abstract): Some groups reacted less negatively, for example workers with high organizational status before a merger and workers who underwent a change in workgroup.
+- Supports (abstract): Variables that intervened in the relationship between restructuring and well-being included physical demands, job control, communication, provision of information, training, procedural justice, job insecurity, and change acceptance.
+- Caveats: Most included studies are outside software and many involve mergers or staff reductions, which are larger events than a team-boundary change. Well-being, not delivery, is the outcome. The authors call for more high-quality longitudinal research.
+
 ### dewit2012paradox {#dewit2012paradox}
 
 Frank R. C. de Wit, Lindred L. Greer, and Karen A. Jehn (2012). “The paradox of intragroup conflict: A meta-analysis”. Journal of Applied Psychology, vol. 97, no. 2, pp. 360-390.
@@ -307,6 +380,18 @@ Frank R. C. de Wit, Lindred L. Greer, and Karen A. Jehn (2012). “The paradox o
 - Supports (abstract): In contrast to De Dreu and Weingart (2003), no strong negative association was found between task conflict and group performance.
 - Supports (abstract): Task conflict and performance were more positively related where task and relationship conflict were weakly associated, in top management teams, and where performance was measured as financial performance or decision quality.
 - Caveats: Correlational; heterogeneous samples; not specific to software teams. Epub 2011, issue 2012.
+
+### dingsoyr2018exploring {#dingsoyr2018exploring}
+
+Torgeir Dingsøyr, Nils Brede Moe, Tor Erlend Fægri, and Eva Amdahl Seim (2018). “Exploring software development at the very large-scale: a revelatory case study and research agenda for agile method adaptation”. Empirical Software Engineering, vol. 23, no. 1, pp. 490-520 (online June 2017).
+
+- DOI: [10.1007/s10664-017-9524-2](https://doi.org/10.1007/s10664-017-9524-2) · <https://doi.org/10.1007/s10664-017-9524-2>
+- Evidence class: Scholarly research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (full-text): A retrospective interpretative case study of a four-year programme in Norway with 12 co-located development teams and 175 people, using group interviews with 24 participants and documents.
+- Supports (full-text): Agile methods were adapted and complemented with practices from traditional methods to handle the scale; key challenge areas were customer involvement, software architecture, and inter-team coordination.
+- Supports (full-text): Many coordination arenas were used (including Scrum of Scrums, a Metascrum, demos, forums and instant messaging), the arenas changed over time, and participants stressed informal coordination; the authors note that extra roles and arenas led to less team autonomy.
+- Caveats: Single case; the authors have no measure of the total effectiveness of the coordination arenas beyond the programme being recognized as a success. Open access under CC BY 4.0 (Crossref license field).
 
 ### dyba2008empirical {#dyba2008empirical}
 
@@ -424,6 +509,29 @@ M. Lance Frazier et al. (2017). “Psychological Safety: A Meta-Analytic Review 
 - Supports (abstract): It compares effect sizes of antecedents, examines whether psychological safety relates to task performance and organizational citizenship behaviors beyond related constructs such as positive leader relations and work engagement, tests whether research design and national culture alter the relationships, and compares effects at the individual and group levels.
 - Caveats: Only the abstract was read; it states what was tested but not the effect sizes or which antecedents were strongest, so no specific result is claimed. Crossref gives online publication on 2016-10-14; the issue is 2017 (vol. 70, no. 1).
 
+### fritzsch2019migration {#fritzsch2019migration}
+
+Jonas Fritzsch, Justus Bogner, Stefan Wagner, and Alfred Zimmermann (2019). “Microservices Migration in Industry: Intentions, Strategies, and Challenges”. 2019 IEEE International Conference on Software Maintenance and Evolution (ICSME).
+
+- DOI: [10.1109/ICSME.2019.00081](https://doi.org/10.1109/ICSME.2019.00081) · <https://arxiv.org/abs/1906.04702>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, doi, url.
+- Supports (abstract): A qualitative study of the migration of 14 systems to microservices, based on 16 in-depth interviews with software professionals from 10 companies across domains and sizes.
+- Supports (abstract): Maintainability and scalability were the primary migration drivers. Because of the complexity of their legacy systems, most companies preferred a rewrite over splitting existing code bases, often because no suitable decomposition approach was available.
+- Supports (abstract): Finding the right service cut was a major technical challenge, alongside building expertise in new technologies; organizational challenges included mindset change and smooth collaboration between teams, especially in large traditional companies adopting agile processes at the same time.
+- Caveats: Interview study of companies that chose to migrate, so it describes intentions and challenges, not outcomes compared with not migrating. Venue from the arXiv DOI field; the proceedings page was not read, so the venue is not in verified_fields.
+
+### gall1998logical {#gall1998logical}
+
+Harald Gall, Karin Hajek, and Mehdi Jazayeri (1998). “Detection of logical coupling based on product release history”. Proceedings of the International Conference on Software Maintenance (ICSM '98), Bethesda, MD, pp. 190-198.
+
+- DOI: [10.1109/ICSM.1998.738508](https://doi.org/10.1109/ICSM.1998.738508) · <https://doi.org/10.1109/ICSM.1998.738508>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The paper presents an approach that uses a system's release history (version numbers of programs, modules, and subsystems together with change reports) to uncover logical dependencies and common change patterns among modules, as an alternative to code-level coupling metrics for very large systems.
+- Supports (abstract): The approach was developed on 20 releases of a large telecommunications switching system and identifies logical coupling that can point to structural shortcomings and to restructuring or reengineering opportunities.
+- Caveats: One industrial system; the abstract reports no quantitative validation. Year 1998 is from Crossref's event record (ICSM-98, Bethesda); OpenAlex lists a wrong publication year (2002) for this DOI, and Crossref's issued date is empty. Third author's first name (Karin) from Semantic Scholar; Crossref gives the initial only.
+
 ### garvin1984product {#garvin1984product}
 
 David A. Garvin (1984). “What Does "Product Quality" Really Mean?”. MIT Sloan Management Review, Fall 1984.
@@ -447,6 +555,17 @@ Michael Gibbs, Friederike Mengel, and Christoph Siemroth (2023). “Work from Ho
 - Supports (abstract (working-paper version)): Total hours worked rose, including after-hours work, while average output did not rise, so measured productivity fell.
 - Supports (abstract (working-paper version)): Time in meetings and coordination rose, while uninterrupted working time, networking, coaching, and one-on-one meetings with supervisors fell; the authors attribute much of the decline to higher communication and coordination costs.
 - Caveats: Abstract read for the IZA working paper only; the published JPE Micro article (metadata via Crossref) was not read and its point estimates may differ, so the book does not print a percentage. Pandemic conditions (forced, sudden, with children at home), not a chosen remote policy. One firm.
+
+### gren2022agile {#gren2022agile}
+
+Lucas Gren, and Paul Ralph (2022). “What Makes Effective Leadership in Agile Software Development Teams?”. 44th International Conference on Software Engineering (ICSE 2022).
+
+- DOI: [10.1145/3510003.3510100](https://doi.org/10.1145/3510003.3510100) · <https://arxiv.org/abs/2201.08058>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (abstract): Interviews with thirteen professionals who identify as agile leaders, in various roles at ten software companies of varying sizes, indicate that leadership in these teams is shared dynamically among members, fosters a sense of belonging, and requires balancing agile culture against older milestone-driven cultures.
+- Supports (abstract): The authors conclude that agile leadership is a property of the team rather than a role, and that its effectiveness depends on members identifying with the team, accepting responsibility, and attending to cultural conflict.
+- Caveats: Qualitative, small sample (13 interviews); not a study of staff or principal engineers. Only the arXiv abstract page was read; the PDF did not text-extract in session. ACM DOI taken from the arXiv record and not resolved separately.
 
 ### griffeth2000meta {#griffeth2000meta}
 
@@ -575,6 +694,16 @@ Laura Inozemtseva, and Reid Holmes (2014). “Coverage is not strongly correlate
 - Supports (abstract): The authors conclude that coverage is useful for finding under-tested parts of a program but should not be used as a quality target.
 - Caveats: Effectiveness is measured with mutants, not real faults (see just2014mutants for evidence on that substitution); five open-source Java systems; generated suites, not developer-written suites as they evolve. Some later studies report different strengths of relationship.
 
+### jansen2005architecture {#jansen2005architecture}
+
+Anton Jansen, and Jan Bosch (2005). “Software Architecture as a Set of Architectural Design Decisions”. 5th Working IEEE/IFIP Conference on Software Architecture (WICSA'05), pp. 109-120.
+
+- DOI: [10.1109/WICSA.2005.61](https://doi.org/10.1109/WICSA.2005.61) · <https://doi.org/10.1109/WICSA.2005.61>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, venue, doi.
+- Supports (abstract): The authors argue that software architectures are costly to change, complex, and prone to erosion partly because knowledge of design decisions stays implicit, and propose viewing an architecture as a composition of explicit architectural design decisions to reduce that knowledge loss.
+- Caveats: A position and approach paper, not an outcome study. OpenAlex gives the publication date as 2006 and pages 109-120 (another record says 109-118); the conference took place in 2005, so year is the conference year and is not in verified_fields. First name 'Anton' taken from common citation; OpenAlex shows 'A. Jansen'.
+
 ### johnson2013why {#johnson2013why}
 
 Brittany Johnson, Yoonki Song, Emerson Murphy-Hill, and Robert Bowdidge (2013). “Why Don't Software Developers Use Static Analysis Tools to Find Bugs?”. 35th International Conference on Software Engineering (ICSE 2013), pp. 672-681.
@@ -623,6 +752,17 @@ René Just et al. (2014). “Are mutants a valid substitute for real faults in s
 - Supports (abstract): The abstract also notes inherent limitations of mutation analysis.
 - Caveats: Five Java open-source applications; correlation, and the paper reports that some real faults are not coupled to the mutants studied.
 
+### khadka2014legacy {#khadka2014legacy}
+
+Ravi Khadka et al. (2014). “How do professionals perceive legacy systems and software modernization?”. Proceedings of the 36th International Conference on Software Engineering (ICSE 2014), pp. 36-47.
+
+- DOI: [10.1145/2568225.2568318](https://doi.org/10.1145/2568225.2568318) · <https://doi.org/10.1145/2568225.2568318>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): An exploratory study interviewed 26 industry practitioners about what makes a system legacy, the drivers of modernization, and its challenges, and validated the findings with a survey of 198 respondents.
+- Supports (abstract): The abstract reports that practitioners value their legacy systems highly and that modernization challenges are not only technical but also business and organizational.
+- Caveats: Abstract read via OpenAlex's reconstructed abstract; ACM DL and the Utrecht repository PDF returned 403. Interview and survey study of perceptions; it does not compare rewrite and incremental outcomes.
+
 ### kluger1996effects {#kluger1996effects}
 
 Avraham N. Kluger, and Angelo DeNisi (1996). “The effects of feedback interventions on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory”. Psychological Bulletin, vol. 119, no. 2, pp. 254-284.
@@ -659,6 +799,18 @@ Marco Kuhrmann et al. (2022). “What Makes Agile Software Development Agile?”
 - Supports (abstract): The selection of practices had a stronger effect on the degree of agility than the methods used, and no method or practice explicitly guaranteed or prevented agility.
 - Caveats: Survey-based and self-reported; measures perceived agility, not delivery outcomes. Author names transcribed from the OpenAlex record (47 authors per Crossref); spelling of diacritics should be checked against the IEEE page.
 
+### kula2018developers {#kula2018developers}
+
+Raula Gaikovina Kula et al. (2018). “Do developers update their library dependencies? An empirical study on the impact of security advisories on library migration”. Empirical Software Engineering.
+
+- DOI: [10.1007/s10664-017-9521-5](https://doi.org/10.1007/s10664-017-9521-5) · <https://arxiv.org/abs/1709.04621>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, venue, doi, url.
+- Supports (abstract): The study analysed library migration across more than 4,600 GitHub projects and 2,700 library dependencies.
+- Supports (abstract): 81.5 percent of the studied systems kept outdated dependencies, and affected developers were not likely to respond to a security advisory.
+- Supports (abstract): In the authors' survey, 69 percent of interviewees said they were unaware of their vulnerable dependencies, and developers tended to see updating as extra effort and responsibility.
+- Caveats: Abstract only. Open-source projects on GitHub; may not transfer to company codebases. The arXiv record gives the journal year as 2017 (online first); the issue year 2018 was not confirmed on a fetched page, so year is not in verified_fields. The DOI resolved to the Springer page, which redirected to a login and was not read.
+
 ### lazear2015value {#lazear2015value}
 
 Edward P. Lazear, Kathryn L. Shaw, and Christopher T. Stanton (2015). “The Value of Bosses”. Journal of Labor Economics, vol. 33, no. 4, pp. 823-861.
@@ -681,6 +833,17 @@ Thomas W. Lee, and Terence R. Mitchell (1994). “An Alternative Approach: The U
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
 - Supports (abstract): Models voluntary turnover as four distinctive decision paths, each involving distinctive foci, psychological processes, and external events, drawing on decision making, statistics, and social psychology.
 - Caveats: Theory paper; no data. The abstract does not use the word 'shock'; the chapter does not attribute that term to the source. OpenAlex confirms authors, volume 19, issue 1, and first page 51; the last page (89) is from common citation and was not confirmed (OpenAlex lists 51-51; Crossref returned no JSON for this DOI during the session).
+
+### lenarduzzi2020migrating {#lenarduzzi2020migrating}
+
+Valentina Lenarduzzi, Francesco Lomio, Nyyti Saarimäki, and Davide Taibi (2020). “Does migrating a monolithic system to microservices decrease the technical debt?”. Journal of Systems and Software, article 110710.
+
+- DOI: [10.1016/j.jss.2020.110710](https://doi.org/10.1016/j.jss.2020.110710) · <https://arxiv.org/abs/1902.06282>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (abstract): A case study of one small and medium enterprise, analyzing more than four years of history of a 280,000-line project in which two teams extracted five business processes from a monolith as microservices, using SonarQube measurements and a qualitative study with the developers.
+- Supports (abstract): Technical debt (as measured by SonarQube) spiked when the new microservices were developed and, after a relatively short period, grew more slowly than in the monolithic system.
+- Caveats: One company, one system; technical debt as measured by one tool's rules. The arXiv title reads "Does Migrate a Monolithic System..."; the journal reference on arXiv gives JSS (2020) 110710 with this DOI. The journal page was not read.
 
 ### lenberg2018psychological {#lenberg2018psychological}
 
@@ -763,6 +926,17 @@ Qingzhou Luo, Farah Hariri, Lamyaa Eloussi, and Darko Marinov (2014). “An empi
 - Supports (abstract): The authors describe their work as the first extensive study of flaky tests, analysing 201 commits that likely fix flaky tests in 51 open-source projects, classifying common root causes and describing common fixing strategies.
 - Caveats: Open-source projects only, and the sample is fix commits, so it describes flakiness that developers chose to fix. The specific root-cause shares are in the paper body, which was not read; do not cite percentages from it.
 
+### maccormack2012mirroring {#maccormack2012mirroring}
+
+Alan MacCormack, Carliss Baldwin, and John Rusnak (2012). “Exploring the duality between product and organizational architectures: A test of the "mirroring" hypothesis”. Research Policy, vol. 41, no. 8, pp. 1309-1324.
+
+- DOI: [10.1016/j.respol.2012.04.011](https://doi.org/10.1016/j.respol.2012.04.011) · <https://doi.org/10.1016/j.respol.2012.04.011>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The study uses a natural experiment in the software industry, comparing matched pairs of products with the same function developed by tightly coupled commercial firms and by loosely coupled open source communities.
+- Supports (abstract): In all pairs examined, the product from the loosely coupled organization was significantly more modular, measured by the level of coupling between components (the potential for a change in one component to propagate to others); the authors report strong evidence for the mirroring hypothesis and substantial differences in magnitude.
+- Caveats: Abstract read on the Harvard Business School working-paper record (HBS WP 08-039, revised 2011) on RePEc; the journal abstract was not read (Crossref has none; ScienceDirect and the HBS page returned 403). The working-paper abstract gives the magnitude as up to a factor of eight; a search snippet gave a different figure for the journal version, so the book cites no number. Shows association between organizational form and the architecture of new products; does not test reorganizing an existing organization. Number of pairs not read.
+
 ### mantyla2012who {#mantyla2012who}
 
 Mika V. Mäntylä, Juha Itkonen, and Joonas Iivonen (2012). “Who tested my software? Testing as an organizationally cross-cutting activity”. Software Quality Journal, vol. 20, no. 1, pp. 145-172.
@@ -842,6 +1016,17 @@ Terence R. Mitchell et al. (2001). “Why People Stay: Using Job Embeddedness to
 - Supports (abstract): In two samples, job embeddedness predicted both intent to leave and voluntary turnover, and explained significant incremental variance over job satisfaction, organizational commitment, job alternatives, and job search.
 - Caveats: Two samples, neither in software (the abstract does not name the settings). Crossref gives author initials only; full given names (Terence, Brooks, Thomas, Chris, Miriam) follow common citation of this article and should be checked against the publisher page by the human reviewer.
 
+### mockus2010volatility {#mockus2010volatility}
+
+Audris Mockus (2010). “Organizational volatility and its effects on software defects”. Proceedings of the 18th ACM SIGSOFT International Symposium on Foundations of Software Engineering (FSE 2010), pp. 117-126.
+
+- DOI: [10.1145/1882291.1882311](https://doi.org/10.1145/1882291.1882311) · <https://doi.org/10.1145/1882291.1882311>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): In one large software project, proximity to an organizational change was significantly associated with reductions in software quality, measured as the probability of customer-reported defects.
+- Supports (abstract): Recent departures from the organization were associated with an increased probability of customer-reported defects.
+- Caveats: One large project, observational. A review on neverworkintheory.org notes that code complexity, not organizational change, was the main driver of defects, and that newcomers did not appear to raise defects; those points come from the review, not from the abstract, and the chapter uses only the abstract's claims. A later replication on Chrome (Donadelli, Zhu, and Rigby, 2015) reported different results for departures and was not read.
+
 ### murray2023just {#murray2023just}
 
 John S. Murray et al. (2023). “Requirements for implementing a 'just culture' within healthcare organisations: an integrative review”. BMJ Open Quality, 12(2), e002237.
@@ -852,6 +1037,21 @@ John S. Murray et al. (2023). “Requirements for implementing a 'just culture' 
 - Supports (full-text): An integrative review of 16 publications identified four requirements for implementing a just culture in healthcare organisations - leadership commitment, education and training, accountability, and open communication.
 - Supports (full-text): The authors describe the evidence on implementing just culture as relatively scant, state that most published just-culture literature is theoretical, and call for research on the effect of implementation on patient safety outcomes.
 - Caveats: Healthcare, not software. A review of requirements, not of outcomes; its value here is as a statement that outcome evidence is thin in the field where just culture originated.
+
+### nagappan2008organizational {#nagappan2008organizational}
+
+Nachiappan Nagappan, Brendan Murphy, and Victor R. Basili (2008). “The Influence of Organizational Structure on Software Quality: An Empirical Case Study”. Proceedings of the 30th International Conference on Software Engineering (ICSE 2008), pp. 521-530; also Microsoft Research Technical Report MSR-TR-2008-11.
+
+- DOI: [10.1145/1368088.1368160](https://doi.org/10.1145/1368088.1368160) · <https://www.microsoft.com/en-us/research/publication/the-influence-of-organizational-structure-on-software-quality-an-empirical-case-study/>
+- Evidence class: Scholarly research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (full-text): The paper defines eight organizational measures per binary, including number of engineers who edited it, number of ex-engineers, edit frequency, depth of master ownership, and the number of organizations contributing more than 10 percent of edits (organization intersection factor).
+- Supports (full-text): Applied to Windows Vista, the organizational measures were statistically significant predictors of failure-proneness; across 50 random splits the average precision was 0.87 and average recall 0.84.
+- Supports (full-text): The authors report that models built on organizational measures identified failure-prone binaries better than models built on code churn, complexity, coverage, dependencies, or pre-release defects.
+- Supports (full-text): The paper motivates the number-of-engineers measure with Brooks's n(n-1)/2 communication paths.
+- Supports (abstract): The authors define metrics of organizational complexity and, in a case study of Windows Vista, find them to be statistically significant predictors of failure-proneness of binaries.
+- Supports (abstract): The organizational metrics identified failure-prone binaries with higher precision and recall than traditional metrics such as churn, complexity, coverage, dependencies, and pre-release bugs.
+- Caveats: One system at one company (Windows Vista). The authors state that the results cannot be assumed to generalize beyond the environment studied. Correlational prediction, not a causal test.
 
 ### nguyenduc2023champions {#nguyenduc2023champions}
 
@@ -884,6 +1084,40 @@ Abi Noda, Margaret-Anne Storey, Nicole Forsgren, and Michaela Greiler (2023). �
 - Supports (abstract): The authors propose a framework for understanding developer experience plus a measurement approach that combines developer feedback with data from engineering systems.
 - Supports (abstract): The abstract asserts that improving developer experience supports business outcomes such as efficiency, product quality and retention; this is the authors' argument, not a result quantified in the abstract.
 - Caveats: The three named DevEx dimensions were not read on a fetched page (queue.acm.org 403) and are not recorded. One author is affiliated with a company selling developer-experience measurement; treat as practitioner-oriented scholarship.
+
+### opara-martins2016lockin {#opara-martins2016lockin}
+
+Justice Opara-Martins, Reza Sahandi, and Feng Tian (2016). “Critical analysis of vendor lock-in and its impact on cloud computing migration: a business perspective”. Journal of Cloud Computing, 5, article 4.
+
+- DOI: [10.1186/s13677-016-0054-z](https://doi.org/10.1186/s13677-016-0054-z) · <https://doi.org/10.1186/s13677-016-0054-z>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The paper treats vendor lock-in as a major obstacle to cloud adoption, rooted largely in a lack of standardization, and argues that most prior work looked at the technical rather than the business side.
+- Supports (abstract): From a survey of 114 participants, the authors conclude that lock-in risk grows as computing resources move from on-premise systems to the cloud, and they stress interoperability, portability, and standards.
+- Supports (abstract): They propose mitigations including contract terms, choosing vendors that support standard data formats, protocols, and APIs, and understanding dependencies among cloud solutions.
+- Caveats: Abstract only; survey-based; the mitigations are proposed, not tested in the abstract. Cloud services specifically, not commercial software components in general.
+
+### oreg2011recipients {#oreg2011recipients}
+
+Shaul Oreg, Maria Vakola, and Achilles Armenakis (2011). “Change Recipients' Reactions to Organizational Change”. The Journal of Applied Behavioral Science 47(4), pp. 461-524.
+
+- DOI: [10.1177/0021886310396550](https://doi.org/10.1177/0021886310396550) · <https://doi.org/10.1177/0021886310396550>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The authors reviewed quantitative studies of change recipients' reactions published between 1948 and 2007; 79 met their criteria.
+- Supports (abstract): The review organizes reactions into a model in which antecedents include prechange factors (recipient characteristics and internal context) and change factors (the change process, perceived benefit or harm, and change content), and reactions lead to work-related and personal consequences.
+- Caveats: Only the abstract was read; specific effect sizes and the direction of individual antecedents are not used. The Crossref record carries no subtitle, so none is recorded.
+
+### parnas1972criteria {#parnas1972criteria}
+
+David L. Parnas (1972). “On the criteria to be used in decomposing systems into modules”. Communications of the ACM 15(12), pp. 1053-1058.
+
+- DOI: [10.1145/361598.361623](https://doi.org/10.1145/361598.361623) · <https://doi.org/10.1145/361598.361623>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The paper discusses modularization as a way to improve a system's flexibility and comprehensibility while shortening development time, and argues that the effectiveness of a modularization depends on the criteria used to divide the system into modules.
+- Supports (abstract): It compares a conventional and an unconventional decomposition of one design problem and argues the unconventional one has distinct advantages for those goals.
+- Caveats: An argued design paper with a worked example, not an empirical study. The widely known criterion (decompose so that each module hides a design decision likely to change, "information hiding") is credited at idea level only; the full text was not read (dl.acm.org returned a bot challenge, 403).
 
 ### parry2022flaky {#parry2022flaky}
 
@@ -1106,6 +1340,17 @@ Jonathan Sillito, and Esdras Kutomi (2020). “Failures and Fixes: A Study of So
 - Supports (abstract): Among the 11 reported observations are that failures can cascade through a system into major outages and that engineers often learn a system's scaling limits only when those limits are exceeded.
 - Caveats: Small qualitative sample (30 incidents); public postmortems are a self-selected set. It studies incident response rather than measuring whether postmortems improve outcomes; no peer-reviewed source quantifying the benefit of blameless postmortems or of on-call practices was confirmed in this session.
 
+### sosa2004misalignment {#sosa2004misalignment}
+
+Manuel E. Sosa, Steven D. Eppinger, and Craig M. Rowles (2004). “The Misalignment of Product Architecture and Organizational Structure in Complex Product Development”. Management Science 50(12), pp. 1674-1689.
+
+- DOI: [10.1287/mnsc.1040.0289](https://doi.org/10.1287/mnsc.1040.0289) · <https://doi.org/10.1287/mnsc.1040.0289>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The study maps known design interfaces between system components onto observed team interactions and examines two mismatches, design interfaces not addressed by team interactions and team interactions not predicted by design interfaces.
+- Supports (abstract): It reports that organizational and system boundary effects moderate the effect of design interface strength and indirect team interactions on alignment, contingent on system modularity.
+- Caveats: Aircraft engine development, not software; one development process. Abstract read via OpenAlex's reconstructed abstract and the Crossref record; the full text (author-hosted PDF) could not be extracted.
+
 ### stasser1985pooling {#stasser1985pooling}
 
 Garold Stasser, and William Titus (1985). “Pooling of unshared information in group decision making: Biased information sampling during discussion”. Journal of Personality and Social Psychology, vol. 48, no. 6, pp. 1467-1478.
@@ -1126,6 +1371,28 @@ Marilyn Strathern (1997). “'Improving ratings': audit in the British Universit
 - Verified against a fetched page (2026-11-18): title, authors, year, venue, doi, url.
 - Supports (abstract): The abstract presents the paper as an anthropological commentary on the 'audit explosion' in British universities, arguing that audit does more than monitor and acquires a momentum that can threaten the institutions it evaluates.
 - Caveats: The popular wording of Goodhart's law ('when a measure becomes a target, it ceases to be a good measure') does NOT appear in the abstract or on the landing page read. Its attribution to this paper is therefore unverified here; confirm the sentence and page number in the full text. No primary source by Goodhart himself was verified in this session.
+
+### sweller1988cognitive {#sweller1988cognitive}
+
+John Sweller (1988). “Cognitive Load During Problem Solving: Effects on Learning”. Cognitive Science, vol. 12, no. 2, pp. 257-285.
+
+- DOI: [10.1207/s15516709cog1202_4](https://doi.org/10.1207/s15516709cog1202_4) · <https://doi.org/10.1207/s15516709cog1202_4>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Domain-specific knowledge in the form of schemas is the primary factor distinguishing experts from novices in problem-solving skill.
+- Supports (abstract): Conventional problem solving (means-ends analysis) requires a relatively large amount of cognitive processing capacity, which is then unavailable for schema acquisition; a computational model and experimental evidence support this.
+- Caveats: Learning research on individuals in instructional settings. Applying it to teams owning software is an analogy (made by Team Topologies), not a finding of this paper. The intrinsic, extraneous, and germane distinction comes from later cognitive load theory work, not read here.
+
+### taibi2017processes {#taibi2017processes}
+
+Davide Taibi, Valentina Lenarduzzi, and Claus Pahl (2017). “Processes, Motivations, and Issues for Migrating to Microservices Architectures: An Empirical Investigation”. IEEE Cloud Computing 4(5), pp. 22-32.
+
+- DOI: [10.1109/MCC.2017.4250931](https://doi.org/10.1109/MCC.2017.4250931) · <https://doi.org/10.1109/MCC.2017.4250931>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): Based on a survey of practitioners who had migrated, the paper compares three migration processes and ranks motivations and issues; maintainability and scalability were consistently ranked the most important motivations.
+- Supports (abstract): Return on investment was expected to take longer, but respondents considered the reduced maintenance effort in the long run to compensate highly for this.
+- Caveats: Sample size and selection are not stated in the abstract; respondents are practitioners who migrated, so benefits are self-reported by those who chose the approach.
 
 ### theeboom2014coaching {#theeboom2014coaching}
 
@@ -1194,6 +1461,30 @@ Ruth Wageman, J. Richard Hackman, and Erin Lehman (2005). “Team Diagnostic Sur
 - Supports (abstract): The instrument assesses how well a team is structured, supported, and led, together with members' work processes and affective reactions; analyses of data from 2,474 members of 321 teams support its psychometric properties.
 - Caveats: Instrument-development paper; it validates the measure, not any intervention. Item content not read.
 
+### wang2014shared {#wang2014shared}
+
+Danni Wang, David Waldman, and Zhen Zhang (2014). “A meta-analysis of shared leadership and team effectiveness”. Journal of Applied Psychology, 99(2), 181-198.
+
+- DOI: [10.1037/a0034531](https://doi.org/10.1037/a0034531) · <https://asu.elsevierpure.com/en/publications/a-meta-analysis-of-shared-leadership-and-team-effectiveness>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): A meta-analysis of 42 independent samples found an overall positive relationship between shared leadership and team effectiveness.
+- Supports (abstract): Shared leadership was more strongly related to team attitudinal outcomes, behavioral processes, and emergent states than to team performance, and its effects were stronger when team members' work was more complex.
+- Supports (abstract): Shared traditional forms of leadership (initiating structure, consideration) showed a weaker relationship with effectiveness than shared new-genre leadership or overall shared leadership, and shared leadership had effects on team performance beyond vertical leadership.
+- Caveats: Correlational; heterogeneous samples; not specific to software teams or to staff engineering roles. Read via the institutional research-portal abstract (the portal prints the overall correlation without a decimal point, so the coefficient is not quoted in the chapter).
+
+### wang2021promises {#wang2021promises}
+
+Yingying Wang, Harshavardhan Kadiyala, and Julia Rubin (2021). “Promises and challenges of microservices: an exploratory study”. Empirical Software Engineering 26(4), article 63.
+
+- DOI: [10.1007/s10664-020-09910-y](https://doi.org/10.1007/s10664-020-09910-y) · <https://link.springer.com/article/10.1007/s10664-020-09910-y>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi, url.
+- Supports (abstract): A mixed-method study of mature microservice teams (developing microservice-based applications for at least two years), using in-depth interviews with 21 practitioners and a follow-up survey with 37 respondents, covering 37 companies.
+- Supports (abstract): In several cases practitioners deviated from standard advice, for example splitting services by resource consumption and intended deployment infrastructure rather than by business capability, and some avoided multiple programming languages because it hindered reuse.
+- Supports (abstract): Participants identified robust, shared infrastructure support established early as one of the main success factors, and named managing common code across services and supporting product variants as pressing challenges.
+- Caveats: Deliberately excludes newcomers, so it describes what experienced teams do, not whether microservices beat alternatives. Abstract read on the publisher page.
+
 ### whitelewis2024counteroffers {#whitelewis2024counteroffers}
 
 Damani K. White-Lewis, KerryAnn O'Meara, Kiernan Mathews, and Nicholas Havey (2024). “Counteroffers for faculty at research universities: who gets them, who doesn't, and what factors produce them?”. Higher Education, vol. 89, no. 2, pp. 535-552.
@@ -1205,6 +1496,17 @@ Damani K. White-Lewis, KerryAnn O'Meara, Kiernan Mathews, and Nicholas Havey (20
 - Supports (abstract): In institutional and survey data from 650 faculty (COACHE), women and racially minoritized scholars were less likely to receive counteroffers.
 - Supports (abstract): Other factors associated with receiving a counteroffer included the faculty member's desire to leave and whether they notified leadership.
 - Caveats: US research-university faculty, not engineers. Crossref's issued date is 7 May 2024 (online); the print year of volume 89 issue 2 was not confirmed. Says nothing about whether counteroffers retain people.
+
+### williamson1967hierarchical {#williamson1967hierarchical}
+
+Oliver E. Williamson (1967). “Hierarchical Control and Optimum Firm Size”. Journal of Political Economy 75(2), pp. 123-138.
+
+- DOI: [10.1086/259258](https://doi.org/10.1086/259258) · <https://www.journals.uchicago.edu/doi/10.1086/259258>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The opening argues that organizational structures tend to distort the information that reaches decision makers, the more so in larger and more authoritarian organizations, and treats this as a basic reason to expect diminishing returns to scale.
+- Supports (official-summary): The article is known for modeling "control loss", a fraction of a superior's intentions lost at each hierarchical level, which compounds as levels are added.
+- Caveats: A theoretical economics model of firm size, not an empirical study of software organizations. The full text is paywalled and was not read; the control-loss description rests on secondary sources found by search, and later work disputes that control loss limits firm size.
 
 ### yang2022remote {#yang2022remote}
 
@@ -1228,6 +1530,17 @@ Gary Yukl, and Ping Ping Fu (1999). “Determinants of delegation and consultati
 - Supports (abstract): In surveys of managers and subordinates (two samples) plus interviews, delegation was higher when the subordinate was competent, shared the manager's task objectives, had worked longer with the manager, held a supervisory role, and had a favorable exchange relationship with the manager.
 - Supports (abstract): Managers saw developing and empowering subordinates as important reasons to delegate, but many were reluctant to give up control over important decisions or to give important tasks to inexperienced subordinates.
 - Caveats: Survey and interview data, correlational; sample sizes not stated on the page read; not a software setting.
+
+### zimmermann2005mining {#zimmermann2005mining}
+
+Thomas Zimmermann, Andreas Zeller, Peter Weißgerber, and Stephan Diehl (2005). “Mining version histories to guide software changes”. IEEE Transactions on Software Engineering 31(6), pp. 429-445.
+
+- DOI: [10.1109/TSE.2005.72](https://doi.org/10.1109/TSE.2005.72) · <https://doi.org/10.1109/TSE.2005.72>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
+- Supports (abstract): The authors apply data mining (association rules) to version histories to suggest and predict likely further changes after an initial change, to reveal coupling between items that program analysis cannot detect, and to prevent errors from incomplete changes.
+- Supports (abstract): In an evaluation on the histories of eight popular open source projects, the ROSE prototype's top three suggestions contained a correct location with a likelihood of more than 70 percent; predictive power was best for changes to existing software.
+- Caveats: Open source projects only; the 70 percent figure is for the top three suggestions of one tool, not a general accuracy of co-change analysis. An earlier ICSE 2004 paper of the same title exists; this entry is the TSE journal version.
 
 ## Industry research
 
@@ -1267,6 +1580,18 @@ DORA (Google Cloud) (n.d.). “Capabilities: Generative organizational culture�
 - Supports (full-text): It states that the 2019 State of DevOps Report found psychological safety predictive of software delivery performance, organizational performance, and productivity, and refers to a two-year Google study of team effectiveness.
 - Supports (full-text): It measures culture with a perception survey of six statements answered on a seven-point scale, and lists pitfalls including punishing bad news and treating culture as only a technology or process issue.
 - Caveats: Undated web guide; the 2019 finding is reported secondhand by DORA, and the 2019 report itself was not read. Survey-based, correlational, vendor-sponsored research.
+
+### dora-cap-platform-engineering {#dora-cap-platform-engineering}
+
+DORA (Google Cloud) (n.d.). “Capabilities: Platform engineering”. dora.dev capabilities (last updated 12 January 2026).
+
+- <https://dora.dev/capabilities/platform-engineering/>
+- Evidence class: Industry research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, url.
+- Supports (full-text (summary of report data)): The page states that DORA's 2025 data identified clear feedback on the outcome of a developer's tasks as the platform capability most correlated with a positive user experience.
+- Supports (full-text): Lists pitfalls including building without user research, central teams imposing rigid standards, operating as a reactive ticket queue, a late big-bang release, and a one-size-fits-all 'golden cage'.
+- Supports (full-text): Recommends a product-minded, user-centered approach, reducing cognitive load through self-service paths, starting with a minimum viable platform, and measuring impact with a balanced set of delivery, satisfaction, and adoption measures.
+- Caveats: Summarizes DORA survey research; survey-based and correlational. The page also reports adoption percentages for 2025 that are not used in the chapter. Read through a summarizing fetcher; paraphrase only.
 
 ### dora-cap-small-batches {#dora-cap-small-batches}
 
@@ -1353,6 +1678,19 @@ DORA (Google Cloud) (2023). *Accelerate State of DevOps Report 2023*. DORA / Goo
 - Supports (full-text): The methodology discusses confounding and spurious correlation explicitly and describes specifying causal models to decide what to control for, while acknowledging that not all sources of bias can be captured (pp. 65-66).
 - Caveats: Vendor-sponsored (Google Cloud, with listed sponsors). Survey-based, self-reported, cross-sectional within a year. Only the methodology and demographics sections and the opening pages were read for this entry; no findings from other chapters are recorded.
 
+### dora2024accelerate {#dora2024accelerate}
+
+DORA (Google Cloud) (2024). *Accelerate State of DevOps Report 2024*. DORA / Google Cloud (version 2024.3).
+
+- <https://dora.dev/research/2024/dora-report/2024-dora-accelerate-state-of-devops-report.pdf>
+- Evidence class: Industry research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text (platform engineering chapter)): Internal developer platform users had 8% higher individual productivity and 10% higher team performance, and organizational software delivery and operations performance was 6% higher with a platform (p. 49).
+- Supports (full-text (platform engineering chapter)): Throughput and change stability were 8% and 14% lower among platform users, which the report calls surprising and explains only with hypotheses (more handoffs; platforms letting bad changes through; organizations with instability and burnout being the ones that build platforms) (pp. 49, 53-54).
+- Supports (full-text (platform engineering chapter)): Developer independence (completing tasks without an enabling team) was associated with about a 5% productivity improvement at individual and team levels; not collecting platform feedback had a negative impact (p. 51).
+- Supports (full-text (platform engineering chapter)): Respondents required to use the platform exclusively for the entire application lifecycle reported a 6% decrease in throughput (p. 53).
+- Caveats: Only the platform engineering chapter (pp. 47-55) and the summary page were read for these claims. Vendor-sponsored, survey-based, self-reported, cross-sectional; percentages are model estimates, not controlled effects. PDF downloaded and text-extracted in this session; page numbers are the report's printed numbers.
+
 ### dora2025state {#dora2025state}
 
 DORA (Google Cloud) (2025). *State of AI-assisted Software Development 2025*. DORA / Google Cloud.
@@ -1371,6 +1709,20 @@ Nicole Forsgren, Jez Humble, and Gene Kim (2018). *Accelerate: The Science of Le
 - ISBN-13: 9781942788331 · <https://itrevolution.com/product/accelerate/>
 - Evidence class: Industry research. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, isbn13.
+
+### harter2026span {#harter2026span}
+
+Jim Harter (2026). *Span of Control: What's the Optimal Team Size for Managers?*. Gallup Workplace, January 13, 2026.
+
+- <https://www.gallup.com/workplace/700718/span-control-optimal-team-size.aspx>
+- Evidence class: Industry research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): Gallup reports that the average number of direct reports per manager in its US panel rose from 10.9 in 2024 to 12.1 in 2025, while the median stayed at about six; 66 percent of managers lead fewer than ten people and 13 percent lead 25 or more.
+- Supports (full-text): Gallup concludes that manager talent matters more than span of control; managers with medium or low talent lose engagement as team size and individual-contributor workload rise, while highly talented managers sustain engagement even with large teams.
+- Supports (full-text): For remote and hybrid managers, more direct reports were associated with lower engagement; for on-site managers, team size had minimal effect.
+- Supports (full-text): Ninety-seven percent of managers do some individual-contributor work, with a median of 40 percent of their time; managers above that level showed lower engagement, worsening with team size.
+- Supports (full-text): Method stated on the page includes US Gallup Panel surveys of 44,025 workers and 16,442 managers (2022 to 2024) and a meta-analysis of 312 studies covering 92,252 teams.
+- Caveats: Industry research by a survey and consulting firm; correlational, self-reported engagement, all occupations, not software teams specifically. Analysis method summarized on the page only.
 
 ### ibarra2010promotions {#ibarra2010promotions}
 
@@ -1542,6 +1894,17 @@ SLSA (Supply-chain Levels for Software Artifacts) project (n.d.). *SLSA Specific
 
 ## Official documentation
 
+### adoptium-support {#adoptium-support}
+
+Eclipse Adoptium (2026). “Temurin support (release roadmap)”. adoptium.net.
+
+- <https://adoptium.net/support/>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, url.
+- Supports (full-text): The page lists, per Java long-term-support release, an end-of-availability date stated as "at least" a given month (for example Java 11 and Java 17 at least October 2027, Java 21 at least December 2029).
+- Supports (full-text): It says binaries for long-term-support releases continue to be built as long as the corresponding upstream source is actively maintained, so the dates are minimums.
+- Caveats: One distribution's policy; other Java vendors publish different dates and paid support terms. Date-sensitive; the page shows no last-updated date. Year is the access year.
+
 ### aws-well-architected {#aws-well-architected}
 
 Amazon Web Services (2026). “AWS Well-Architected Framework”. AWS documentation.
@@ -1602,6 +1965,17 @@ National Institute of Standards and Technology, Computer Security Resource Cente
 - Supports (full-text): The SSDF practices are organized into four groups: Prepare the Organization (PO), Protect the Software (PS), Produce Well-Secured Software (PW), and Respond to Vulnerabilities (RV).
 - Supports (full-text): SP 800-218A, a community profile for generative AI and dual-use foundation models, augments SP 800-218 rather than replacing it.
 - Caveats: Project page, updated October 6, 2026 (page date, not a publication date). Use it for the practice-group names; cite SP 800-218 itself (nist2022ssdf) for the framework.
+
+### openssf-scorecard {#openssf-scorecard}
+
+Open Source Security Foundation (2026). “OpenSSF Scorecard”. scorecard.dev.
+
+- <https://scorecard.dev/>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, url.
+- Supports (full-text): Scorecard assesses open-source projects for security risks through automated checks (18 at the time of reading), grouped as holistic security (for example whether the project is maintained, has a security policy, and has unfixed vulnerabilities), source risk (for example code review and branch protection), and build risk (for example pinned dependencies and signed releases).
+- Supports (full-text): Each check returns a score out of 10 with a risk level, combined into an aggregate score; it can run as a GitHub Action or from the command line against any project.
+- Caveats: Describes security hygiene signals, not proof that a project is safe or will remain maintained. Year is the access year.
 
 ### rework-structured-interviewing {#rework-structured-interviewing}
 
@@ -1669,6 +2043,17 @@ John Coleman et al. (2025). “The Kanban Guide”. kanbanguides.org (version v2
 - Caveats: One of two main Kanban lineages; the Kanban Method associated with David J. Anderson and Kanban University is not covered by this entry and was not verified. The id uses Vacanti's name for findability, but the guide lists nine authors, Coleman first. The page's license statements differ (CC BY 4.0 in the License section; ShareAlike in the footer).
 
 ## Practitioner literature
+
+### adr-github-io {#adr-github-io}
+
+ADR GitHub organization (2026). “Architectural Decision Records (ADRs)”. adr.github.io.
+
+- <https://adr.github.io/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, venue, url.
+- Supports (full-text): The site defines an architectural decision as a justified design choice addressing an architecturally significant functional or non-functional requirement, an architecturally significant requirement as one with a measurable effect on a system's architecture and quality, an ADR as a record of one decision and its rationale, and the collection of a project's ADRs as its decision log.
+- Supports (full-text): The site points to several templates, including Nygard's and the Y-statement format, and to a comparison of seven templates.
+- Caveats: Community site; no individual maintainers named on the home page. Year is the access year.
 
 ### allspaw2012blameless {#allspaw2012blameless}
 
@@ -1774,6 +2159,18 @@ Jeff Bezos (2017). *2016 Letter to Shareholders*. Amazon (aboutamazon.com), publ
 - Supports (full-text): It recommends recognizing and correcting bad decisions quickly, using "disagree and commit" (including by the boss), and escalating fundamental misalignment early rather than letting debate run until the side with more stamina wins.
 - Caveats: One company's chief executive describing his own practice in a shareholder letter (documented practice, not research). The page byline reads Amazon Staff; the letter is signed by Jeff Bezos.
 
+### bottcher2018platforms {#bottcher2018platforms}
+
+Evan Bottcher (2018). “What I Talk About When I Talk About Platforms”. martinfowler.com.
+
+- <https://martinfowler.com/articles/talk-about-platforms.html>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): Defines a digital platform as a foundation of self-service APIs, tools, services, knowledge, and support arranged as a compelling internal product that lets delivery teams ship with less coordination.
+- Supports (full-text): Argues a platform cannot succeed on mandate alone because internal infrastructure teams hold a monopoly; teams should choose it because it is easier than building their own.
+- Supports (full-text): Argues that ticket-driven provisioning couples teams' backlogs and that self-service removes that dependency.
+- Caveats: Practitioner essay dated 5 March 2018. A figure in the essay about dependent tasks taking much longer cites other work and was not verified; it is not used.
+
 ### brooks1995mythical {#brooks1995mythical}
 
 Frederick P. Brooks (1995). *The Mythical Man-Month: Essays on Software Engineering, Anniversary Edition*. Addison-Wesley Professional (2nd edition), ISBN 978-0-201-83595-3, 336 pp..
@@ -1814,6 +2211,19 @@ Nina Chen, and Mark Barolak (2020). *Knowledge Sharing: Chapter 3 of Software En
 - Supports (full-text): It notes that doing a task for someone is faster in the short term but keeps the knowledge in one person.
 - Caveats: Documented practice at one very large company. CC BY-NC-ND 4.0; summarize and cite only.
 
+### cncf-platforms-whitepaper {#cncf-platforms-whitepaper}
+
+CNCF TAG App Delivery, Platforms Working Group (n.d.). *CNCF Platforms White Paper*. Cloud Native Computing Foundation, TAG App Delivery (version 1.0).
+
+- <https://tag-app-delivery.cncf.io/whitepapers/platforms/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, venue, url.
+- Supports (full-text): Defines a platform as an integrated set of capabilities shaped by users' needs, providing a consistent way to acquire and use common services; platform teams need not build the capabilities, and a platform can be as thin as a page of links to standard procedures.
+- Supports (full-text): Says platforms should be designed and evolved like products, with users involved early, and should not rely on top-down mandates for adoption.
+- Supports (full-text): Groups measures into user satisfaction and productivity (active users, retention, satisfaction, SPACE-type measures), organizational efficiency (time to fulfil requests, time for new services to reach production, time to a new user's first change), and delivery outcomes (DORA metrics).
+- Supports (full-text): Recommends starting with common, undifferentiated capabilities and a small group of engaged application teams.
+- Caveats: Community document with no listed authors; the web page gives no publication date (PDF labelled version 1.0; site footer 2025). Practitioner consensus, not evidence of outcomes.
+
 ### cockburn2004crystal {#cockburn2004crystal}
 
 Alistair Cockburn (2004). *Crystal Clear*. Addison-Wesley Professional.
@@ -1830,8 +2240,11 @@ Melvin E. Conway (1968). “How Do Committees Invent?”. Datamation, April 1968
 
 - <https://www.melconway.com/Home/Committees_Paper.html>
 - Evidence class: Practitioner literature. Access for this bibliography: full text read.
-- Verified against a fetched page (2026-11-18): title, authors, year, venue, url.
+- Verified against a fetched page (2026-11-20): title, authors, year, venue, url.
 - Supports (full-text): Conway's thesis is that organisations which design systems are constrained to produce designs that are copies of the communication structures of those organisations.
+- Supports (full-text): The essay argues that the way a design organization is structured constrains, before any design work begins, which designs it can produce.
+- Supports (full-text): It argues that design organizations should stay flexible, because the first design is rarely the best and the organization tends to preserve it.
+- Supports (full-text): It notes that the number of possible communication paths in an organization grows roughly with the square of its size, which pushes large organizations to restrict communication.
 - Caveats: An argued essay, not an empirical study. Author-hosted reprint; the page carries the note 'Copyright 1968, F. D. Thompson Publications, Inc. Reprinted by permission of Datamation magazine'. Volume and page numbers were not read on the page.
 
 ### cook1998complex {#cook1998complex}
@@ -1978,6 +2391,19 @@ Martin Fowler (2015). “Monolith First”. martinfowler.com (bliki).
 - Supports (full-text): His reasons are that early on speed of feedback matters most and microservices add overhead, and that good service boundaries are hard to find up front and harder to refactor across services than within a monolith.
 - Caveats: Based on the author's anecdotal observation; he states the evidence is sparse and the view is not unanimous, and links a dissenting piece arguing against starting with a monolith. A footnote warns that many monoliths are too entangled to split cleanly. Dated 3 June 2015. On-page title is 'Monolith First'.
 
+### fowler2024stranglerfig {#fowler2024stranglerfig}
+
+Martin Fowler (2024). “Strangler Fig”. martinfowler.com (bliki).
+
+- <https://martinfowler.com/bliki/StranglerFigApplication.html>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): Fowler describes modernizing a legacy system gradually, building new behavior alongside it and moving behavior across piece by piece, named after the strangler fig vine.
+- Supports (full-text): He argues that simple replacement plans fail because replacing a serious system takes long and users cannot wait, that existing behavior is hard to specify and partly unwanted, and that small steps carry less risk, return value earlier, and teach the team about the legacy system.
+- Supports (full-text): He states the approach requires transitional architecture, code that lets old and new coexist and is removed later, which people resist as waste, and argues the reduced risk and earlier value outweigh its cost.
+- Supports (full-text): He cautions that legacy systems rarely have clean seams and that without organizational change new systems can become as tangled as the old.
+- Caveats: Practitioner essay. The page is dated 22 August 2024; it revises a post from the early 2000s originally titled 'Strangler Application' (the footnote says it was later retitled). The on-page title is 'Strangler Fig'; the URL slug keeps 'StranglerFigApplication'. Read through a summarizing fetcher; paraphrase only.
+
 ### garvin2013google {#garvin2013google}
 
 David A. Garvin (2013). “How Google Sold Its Engineers on Management”. Harvard Business Review, December 2013 (reprint R1312D).
@@ -2007,6 +2433,17 @@ GitLab (2026). “Engineering | The GitLab Handbook”. The GitLab Handbook.
 - Supports (full-text): The engineering section of the GitLab Handbook is publicly readable at handbook.gitlab.com/handbook/engineering/.
 - Supports (full-text): The handbook site footer reads '(c) 2026 GitLab All Rights Reserved' and states no Creative Commons or other content licence; the LICENSE file in the source repository is the MIT License (copyright GitLab B.V.), worded as covering the GitLab software.
 - Caveats: LICENCE IS NOT CLEAR-CUT: do not assume the handbook text is CC BY-SA. The site says All Rights Reserved; the repository LICENSE is MIT but is worded for software. For an open-source textbook, link and paraphrase rather than copy, or get the terms confirmed. A living document: content changes daily; year is the footer's copyright year.
+
+### gitlab2026structure {#gitlab2026structure}
+
+GitLab (2026). “Organizational Structure | The GitLab Handbook”. The GitLab Handbook.
+
+- <https://handbook.gitlab.com/handbook/company/structure/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, venue, url.
+- Supports (full-text): The page sets a target range for a manager's direct reports, states that the range is the same at every level of the organization in order to avoid an additional layer, and advises sizing the number of reports on where the organization is expected to be six months ahead.
+- Supports (full-text): The page describes a dual career path that lets technical people advance without becoming people managers, including where there is not sufficient business need for another management layer, with the fork between the tracks generally above the Senior level.
+- Caveats: One company's documented practice, not evidence. A living page; content may change. Copyright terms as for gitlab2026engineering (site footer says All Rights Reserved), so summarize and link, never copy. Year is the site footer's copyright year, not a page date, so it is not in verified_fields.
 
 ### goldratt1984goal {#goldratt1984goal}
 
@@ -2099,6 +2536,16 @@ Chris Jones, John Wilkes, Niall Murphy, and Cody Smith (2017). “Service Level 
 - Supports (full-text): An SLA is described as an explicit or implicit contract with users that includes consequences of meeting or missing the SLOs it contains; without an explicit consequence, the chapter treats the commitment as an SLO.
 - Caveats: Describes one company's practice. Year 2017 is the copyright year shown on the page ('Copyright 2017 Google, Inc.'); the print publication year was not verified. Chapter edited by Betsy Beyer. Page states licence CC BY-NC-ND 4.0.
 
+### graicunas1937relationship {#graicunas1937relationship}
+
+V. A. Graicunas (1937). *Relationship in Organization*. In L. Gulick and L. Urwick (eds.), Papers on the Science of Administration, Institute of Public Administration, Columbia University; first published 1933 in the Bulletin of the International Management Institute.
+
+- <https://nickols.us/graicunas.htm>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue.
+- Supports (official-summary): Graicunas is known for counting the potential relationships (direct single, cross, and direct group) a manager has with subordinates and showing that they grow much faster than the number of subordinates; on secondary accounts he suggested a maximum of about five, and probably four, subordinates.
+- Caveats: Historical. Neither the 1933 nor the 1937 text was read; details rest on two secondary pages (a consultant's essay and Wikipedia). The relationship count assumes every possible relationship is active, which nobody believes; cite as history, not evidence.
+
 ### grove1983high {#grove1983high}
 
 Andrew S. Grove (1983). *High Output Management*. Vintage. Latest edition: Vintage paperback, 1995 (publisher page shows no edition statement).
@@ -2189,10 +2636,13 @@ Henrik Kniberg, and Kristian Lindwall (2014). “Squad Health Check model – vi
 Marcin Kolny (2023). “Scaling up the Prime Video audio/video monitoring service and reducing costs by 90%”. Prime Video Tech blog (primevideotech.com).
 
 - <https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90>
-- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
-- **Not verified.** Do not cite in a published chapter.
-- Supports (official-summary): According to InfoQ's report of the post (secondary source), the Prime Video audio/video quality monitoring service was moved from serverless components (AWS Step Functions and Lambda, with intermediate data in S3) to a single process running on ECS on EC2, and the team reported a 90% reduction in operational costs.
-- Caveats: NO LONGER LIVE at the original address. The claim comes from a secondary news report (InfoQ, Rafal Gancarz, May 3, 2023), not the post itself. Scope is one monitoring service, not Prime Video as a whole; the cost figure is self-reported and the case is widely over-generalised as 'Amazon abandoned microservices'. Title, author attribution and the date March 22, 2023 come from search-result snippets and the URL slug, not from the post.
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url, archive_url.
+- Supports (full-text): The post describes one service, Prime Video's tool for monitoring the audio/video quality of the live streams customers view, built by its Video Quality Analysis team; the service has three components (media converter, defect detectors, orchestration).
+- Supports (full-text): The first version was a distributed design on serverless components (AWS Step Functions orchestration, AWS Lambda, video frames passed through an S3 bucket). The authors call it a good choice for building quickly, but it hit a hard scaling limit at around 5 percent of the expected load, the orchestration reached account limits because of many state transitions per second of stream, and per-transition and S3 call costs were too high at scale.
+- Supports (full-text): The team moved all components into a single process on Amazon ECS and EC2, keeping data transfer in memory; the components themselves stayed the same, which let them reuse much of the code. Detectors now scale only vertically, so the service is cloned and each copy runs a subset of detectors behind a lightweight orchestration layer.
+- Supports (full-text): The post reports that the move reduced infrastructure cost by over 90 percent and increased scaling capability, and states that whether to use microservices and serverless components or a monolith has to be decided case by case.
+- Caveats: A first-hand account of one service, self-reported, with no published method for the cost figure. The subtitle on the page frames it as a move "from a distributed microservices architecture to a monolith application"; the scope is one monitoring service, not Prime Video's architecture, and the post does not claim Amazon or Prime Video abandoned microservices. Read from a Wayback Machine capture dated 2023-03-23 of the original URL; the post itself is dated Mar 22, 2023 on the page.
 
 ### lafley2013playing {#lafley2013playing}
 
@@ -2225,6 +2675,18 @@ Will Larson (2025). “What do Staff engineers actually do?”. StaffEng (staffe
 - Supports (full-text): It says staff engineers' feedback loops are much longer than a senior engineer's, spanning weeks, months, and years.
 - Caveats: Practitioner synthesis. Year is the site's copyright year.
 
+### larson-staffeng-authority {#larson-staffeng-authority}
+
+Will Larson (n.d.). “Staying aligned with authority”. StaffEng (staffeng.com), free online text of Staff Engineer: Leadership beyond the management track.
+
+- <https://staffeng.com/guides/staying-aligned-with-authority/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, venue, url.
+- Supports (full-text): Argues that a staff engineer's organizational authority is loaned by the wider organization and can be withdrawn, and that staying aligned with the sponsor, usually the direct manager, is essential.
+- Supports (full-text): Advises never surprising one's manager, treating a surprise as an incident to learn from, sending regular updates, and feeding the manager context from across the organization.
+- Supports (full-text): Advises advocating for one's own values without being removed from the room, and notes that organizations change slowly.
+- Caveats: Expert opinion from one practitioner. No date on the page; the site footer shows a copyright year only, so year is left null. The page does not directly address formal disagreement with a manager.
+
 ### larson-staffeng-reporting {#larson-staffeng-reporting}
 
 Will Larson (2025). “Where do Staff-plus engineers fit into the org?”. StaffEng (staffeng.com), free online text of Staff Engineer: Leadership beyond the management track.
@@ -2235,6 +2697,28 @@ Will Larson (2025). “Where do Staff-plus engineers fit into the org?”. Staff
 - Supports (full-text): The page argues that staff-plus reporting lines should follow the archetype, for example Architects reporting to a manager of managers or the CTO, and describes the trade-off between placing staff-plus engineers under leaf managers and under senior leaders (access to information and authority).
 - Supports (full-text): It cautions that people tend to overestimate how much formal authority will help them.
 - Caveats: Practitioner opinion. Year is the site's copyright year.
+
+### larson-staffeng-what-matters {#larson-staffeng-what-matters}
+
+Will Larson (n.d.). “Work on what matters”. StaffEng (staffeng.com), free online text of Staff Engineer: Leadership beyond the management track.
+
+- <https://staffeng.com/guides/work-on-what-matters/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, venue, url.
+- Supports (full-text): Warns against snacking (easy, low-impact work), preening (low-impact, high-visibility work), and chasing ghosts (pushing changes based on past experience rather than the current situation).
+- Supports (full-text): Recommends attending first to existential issues, then to important work with room and attention, fostering growth through onboarding, mentoring, and coaching, editing projects, finishing things, and work only you can do.
+- Caveats: Expert opinion. Footer copyright 2025; no publication date, so year is left null.
+
+### larson2018sizing {#larson2018sizing}
+
+Will Larson (2018). “Sizing engineering teams”. Irrational Exuberance (lethain.com), July 14, 2018.
+
+- <https://lethain.com/sizing-engineering-teams/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The essay recommends that managers support six to eight engineers; spans under four tend to become tech lead manager roles, and spans above eight or nine leave the manager acting mostly as a coach and safety net.
+- Supports (full-text): It recommends that managers of managers support four to six managers, and says managers with fewer than four managers reporting are usually still ramping up.
+- Caveats: Practitioner opinion from one author's experience at fast-growing technology companies; no data. The material later appeared in An Elegant Puzzle (larson2019elegant); the essay itself was read.
 
 ### larson2019elegant {#larson2019elegant}
 
@@ -2261,6 +2745,20 @@ Will Larson (2023). “Balancing your CEO, peers, and Engineering”. Irrational
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
 - Supports (full-text): The post argues that the CEO, executive peers, and the engineering organization each hold a valid but incomplete view of the problem, and that the engineering executive's job is to merge them and solve the problem the company actually has, as a company-first problem solver rather than an advocate for one function.
 - Caveats: Dated April 20, 2023. An unedited draft chapter; the published book may differ.
+
+### larson2023engstrategy {#larson2023engstrategy}
+
+Will Larson (2023). “Writing an engineering strategy.”. Irrational Exuberance (lethain.com).
+
+- <https://lethain.com/eng-strategies/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The post adopts Rumelt's three-part definition of strategy (diagnosis, guiding policies, coherent actions) and calls coherent actions the most important part.
+- Supports (full-text): It proposes structuring guiding policies around resource allocation, rules all teams must follow, and how decisions are made, and testing each policy for being applicable, enforced, and creating leverage.
+- Supports (full-text): It sorts coherent actions into enforcements, escalations, and transitions.
+- Supports (full-text): It argues that written strategies often fail because they describe an ideal instead of diagnosing today, and that undocumented strategies still exist in how an organization handles problems.
+- Supports (full-text): For staff-plus engineers it recommends writing several design documents and extracting what they have in common; for executives it describes a separate process that includes a small working group, workshopping the diagnosis one-on-one, and reviewing impact after about two months.
+- Caveats: Practitioner opinion from one author. Dated February 13, 2023; the author later expanded his strategy writing into a book that was not read for this project.
 
 ### larson2023executive-job {#larson2023executive-job}
 
@@ -2366,6 +2864,19 @@ Steve McConnell (2006). *Software Estimation: Demystifying the Black Art*. Micro
 - Supports (official-summary): The excerpt observes that when executives ask for an estimate they are often asking for a commitment or for a plan to meet a target.
 - Caveats: Only the publisher's excerpt of chapter 1 was read; the book's later material (including the cone of uncertainty) was not read and is not used.
 
+### mckinley2015boring {#mckinley2015boring}
+
+Dan McKinley (2015). “Choose Boring Technology”. mcfunley.com.
+
+- <https://mcfunley.com/choose-boring-technology>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The essay models a company as having a small, fixed budget of "innovation tokens" (about three) that each new, unproven technology spends.
+- Supports (full-text): It defines boring technology as technology whose capabilities and, above all, failure modes are well understood, and says boring is not the same as bad.
+- Supports (full-text): It argues that each added technology carries a long-term operational and cognitive cost that exceeds the short-term convenience of the "best tool for the job".
+- Supports (full-text): It recommends asking whether a problem can be solved with existing tools, writing down why the current stack is inadequate, discussing additions openly, and committing to migrate off what a new technology replaces.
+- Caveats: Practitioner opinion based on one author's experience (Etsy); dated March 30, 2015. Not evidence that the approach improves outcomes.
+
 ### mckinsey2023productivity {#mckinsey2023productivity}
 
 Chandra Gnanasambandam et al. (2023). “Yes, you can measure software developer productivity”. McKinsey & Company Insights (article dated August 17, 2023).
@@ -2456,6 +2967,28 @@ Melissa Perri (2018). *Escaping the Build Trap: How Effective Product Management
 - ISBN-13: 9781491973790 · <https://openlibrary.org/books/OL28421513M/Escaping_the_Build_Trap>
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, isbn13.
+
+### reilly-being-glue {#reilly-being-glue}
+
+Tanya Reilly (n.d.). “Being Glue”. No Idea Blog (noidea.dog); talk with slides, video, and sketchnotes.
+
+- <https://www.noidea.dog/glue>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, venue, url.
+- Supports (full-text): Defines glue work as the less visible work that keeps a team on track, such as unblocking colleagues, reviewing designs, onboarding, and improving processes, and calls it technical leadership that often goes unrewarded.
+- Supports (full-text): Describes glue work done early in a career as potentially career limiting, through a story of an engineer not promoted because she was judged to lack technical contribution.
+- Supports (full-text): Advises managers to track and deliberately share non-promotable work, to give specific feedback, and to make the job ladder match what they expect people to do.
+- Caveats: A practitioner talk; the page gives no date for this version (an earlier version was accepted for a 2019 conference, per the page). The author's full name is taken from her site's links and handles rather than a printed byline. Claims about gender and non-promotable work are reported by the talk, not tested here.
+
+### reilly2022staff {#reilly2022staff}
+
+Tanya Reilly (2022). *The Staff Engineer's Path: A Guide for Individual Contributors Navigating Growth and Change*. O'Reilly Media.
+
+- ISBN-13: 9781098118730 · <https://www.noidea.dog/staff>
+- Evidence class: Practitioner literature. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-19): title, subtitle, authors, publisher, year, isbn13.
+- Supports (official-summary): The author's book page organizes the book into three parts, big-picture thinking, project execution, and leveling up, and describes staff-plus engineers as force multipliers who influence others through mentorship, sponsorship, coaching, delegation, and reviews.
+- Caveats: Only the author's book page and catalog metadata were read; the book's detailed content is not used. Subtitle and publisher from Open Library (the author's page does not state them).
 
 ### reinertsen2009principles {#reinertsen2009principles}
 
@@ -2592,6 +3125,18 @@ Matthew Skelton, and Manuel Pais (2019). *Team Topologies: Organizing Business a
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, isbn13.
 
+### spolsky2000never {#spolsky2000never}
+
+Joel Spolsky (2000). “Things You Should Never Do, Part I”. Joel on Software.
+
+- <https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): Spolsky argues, using Netscape's long gap before version 6.0 as his main example, that rewriting a large commercial product from scratch is a strategic mistake.
+- Supports (full-text): He argues that code which looks messy often embodies fixes for real-world problems, that a rewrite discards that knowledge, and that the company ships an aging product while the rewrite is under way.
+- Supports (full-text): He recommends incremental refactoring and targeted rewrites of slow parts instead.
+- Caveats: Opinion essay argued from a handful of cases; dated 6 April 2000 (the page also shows a 2016 date, likely a later edit). Read through a summarizing fetcher; paraphrase only, no quotations.
+
 ### stone1999difficult {#stone1999difficult}
 
 Douglas Stone, Bruce Patton, and Sheila Heen (1999). *Difficult Conversations: How to Discuss What Matters Most*. Viking. Later editions: Penguin, 2010 (10th anniversary edition, ISBN 9780143118442).
@@ -2600,6 +3145,51 @@ Douglas Stone, Bruce Patton, and Sheila Heen (1999). *Difficult Conversations: H
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-19): title, subtitle, authors, publisher, year, isbn13.
 - Caveats: Metadata only. Credited only for its widely known idea that a difficult conversation has three layers (what happened, feelings, identity) and for favoring a learning stance over message delivery.
+
+### teamtopologies-key-concepts {#teamtopologies-key-concepts}
+
+Matthew Skelton, and Manuel Pais (n.d.). “Key concepts and practices for applying a Team Topologies approach to team-of-teams org design”. teamtopologies.com.
+
+- <https://teamtopologies.com/key-concepts>
+- Evidence class: Practitioner literature. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-19): title, venue, url.
+- Supports (official-summary): The page names four fundamental team types: stream-aligned (aligned to a flow of work, usually from a segment of the business domain), enabling (helps stream-aligned teams overcome obstacles and detects missing capabilities), complicated subsystem (where significant mathematics, calculation, or technical expertise is needed), and platform (provides a compelling internal product that speeds up stream-aligned teams).
+- Supports (official-summary): The page names three interaction modes: collaboration (working together for a period to discover new things), X-as-a-Service (one team provides, another consumes), and facilitation (one team helps and mentors another).
+- Supports (official-summary): The page states a principle that teams can only handle so much complexity before breaking down, and a pattern for managing team cognitive load; it gives no numeric team sizes.
+- Caveats: The authors' own site, which also sells training and consulting. Undated; authorship of the page is inferred from the site (the authors' company), not stated on the page. Conway's law and the reverse Conway maneuver were not mentioned on the page.
+
+### thoughtworks-radar-faq {#thoughtworks-radar-faq}
+
+Thoughtworks (2026). “Technology Radar FAQ”. thoughtworks.com.
+
+- <https://www.thoughtworks.com/radar/faq>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, url.
+- Supports (full-text): The Radar places items in four rings, Adopt, Trial, Assess, and Caution (the outermost ring is named Caution on the current page), and four quadrants (techniques, platforms, tools, languages and frameworks); the page says the rings matter more than the quadrants.
+- Supports (full-text): It describes the Radar as a twice-yearly snapshot and encourages organizations to build their own radars, offering a Build Your Own Radar tool.
+- Caveats: A consultancy's own description of its publication. The outermost ring was historically named Hold; the page read on 2026-11-19 names it Caution. Year is the access year.
+
+### thoughtworks-radar-fitness-function {#thoughtworks-radar-fitness-function}
+
+Thoughtworks Technology Advisory Board (2018). “Architectural fitness function”. Thoughtworks Technology Radar (techniques).
+
+- <https://www.thoughtworks.com/radar/techniques/architectural-fitness-function>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, year, venue, url.
+- Supports (full-text): The blip was in Trial in November 2017 and May 2018 and is no longer on the current edition.
+- Supports (full-text): It describes an architectural fitness function, borrowed from evolutionary computing via Building Evolutionary Architectures, as an objective assessment of an architectural characteristic that can be built from existing checks such as unit tests, metrics, and monitors, and recommends automated, continuous checks of those characteristics.
+- Caveats: Practitioner assessment; the Radar notes that blips not on the current edition may be outdated. Authors not stated on the page.
+
+### thoughtworks-radar-lightweight-adr {#thoughtworks-radar-lightweight-adr}
+
+Thoughtworks Technology Advisory Board (2018). “Lightweight Architecture Decision Records”. Thoughtworks Technology Radar (techniques).
+
+- <https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, year, venue, url.
+- Supports (full-text): The blip entered the Radar in Trial in November 2016, moved to Adopt in November 2017, and was last listed in Adopt in May 2018; it is not on the current edition.
+- Supports (full-text): It recommends capturing important architectural decisions with their context and consequences, and storing the records in source control rather than a wiki so they stay in sync with the code.
+- Caveats: A consultancy's practitioner assessment, not evidence of effect. Author attribution to the Technology Advisory Board is the Radar's general convention, not stated on the blip page, so authors is not in verified_fields. Last updated May 15, 2018.
 
 ### threatmodeling-manifesto2020 {#threatmodeling-manifesto2020}
 
@@ -2653,6 +3243,18 @@ Steven Thurgood (2018). “Example Error Budget Policy (The Site Reliability Wor
 - Supports (full-text): States that the policy is not intended as a punishment for missing SLOs.
 - Supports (full-text): Disagreements about the budget calculation or the actions it triggers are escalated to the CTO.
 - Caveats: An example document for a fictional 'Example Game Service', not a report of results. Document header names Steven Thurgood as author, David Ferguson as reviewer, Betsy Beyer as approver.
+
+### ubl2020designdocs {#ubl2020designdocs}
+
+Malte Ubl (2020). “Design Docs at Google”. Industrial Empathy (personal blog).
+
+- <https://www.industrialempathy.com/posts/design-docs-at-google/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
+- Supports (full-text): The post describes design docs as informal documents written by a system's primary authors before coding, recording the implementation strategy and key decisions with emphasis on trade-offs, with sections for context and scope, goals and non-goals, the design, alternatives considered, and cross-cutting concerns.
+- Supports (full-text): It describes review in stages, from a lightweight review by comments from a team list to a formal review meeting with senior engineers, warns that formal review can slow development, and suggests seeking key feedback directly rather than blocking on wide review.
+- Supports (full-text): It suggests about 10 to 20 pages for larger projects, 1 to 3 page mini design docs for incremental work, and skipping the doc when the solution is obvious and has no meaningful trade-offs.
+- Caveats: One engineer's account of practice at one large company, dated 6 July 2020; documented practice, not outcome evidence.
 
 ### vacanti2018when {#vacanti2018when}
 

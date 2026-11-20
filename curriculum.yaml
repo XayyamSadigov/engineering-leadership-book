@@ -305,7 +305,7 @@ parts:
       - n: 28
         slug: architecture-decision-making-and-governance
         title: Architecture Decision-Making and Governance
-        status: planned
+        status: review
         objectives:
           - Assign architectural decision rights between managers, staff engineers, and teams.
           - Use decision records and lightweight review so that governance speeds teams up.
@@ -314,7 +314,7 @@ parts:
       - n: 29
         slug: staff-and-principal-engineers
         title: Staff and Principal Engineers
-        status: planned
+        status: review
         objectives:
           - Define staff-plus archetypes and scope them so that they have leverage and accountability.
           - Partner with a staff engineer as a manager, including on disagreement.
@@ -323,7 +323,7 @@ parts:
       - n: 30
         slug: technical-strategy-and-technology-selection
         title: Technical Strategy, Technology Selection, and Build versus Buy
-        status: planned
+        status: review
         objectives:
           - Write a technical strategy with a diagnosis, guiding policy, and coherent actions.
           - Evaluate build, buy, and adopt-open-source using total cost and strategic differentiation.
@@ -332,7 +332,7 @@ parts:
       - n: 31
         slug: service-boundaries-and-ownership
         title: "Service Boundaries: Microservices, Modular Monoliths, and Ownership"
-        status: planned
+        status: review
         objectives:
           - Present the microservices and modular-monolith positions fairly and name the conditions that favor each.
           - Draw service and module boundaries from change patterns and team structure.
@@ -341,7 +341,7 @@ parts:
       - n: 32
         slug: platform-engineering-developer-experience-and-modernization
         title: Platform Engineering, Developer Experience, and Legacy Modernization
-        status: planned
+        status: review
         objectives:
           - Run a platform as a product with adoption, not mandate, as the success measure.
           - Measure developer experience and choose improvements by feedback-loop time and cognitive load.
@@ -357,7 +357,7 @@ parts:
       - n: 33
         slug: conways-law-team-topologies-and-cognitive-load
         title: Conway's Law, Team Topologies, and Cognitive Load
-        status: planned
+        status: review
         objectives:
           - Apply Conway's observation in both directions, and state how strong the evidence is.
           - Use team types and interaction modes as a vocabulary, and know where the model is thin.
@@ -366,7 +366,7 @@ parts:
       - n: 34
         slug: spans-layers-and-dependency-mapping
         title: Spans, Layers, and Dependency Mapping
-        status: planned
+        status: review
         objectives:
           - Set management spans from the nature of the work instead of a universal number.
           - Count the cost of each added layer in decision latency and information loss.
@@ -375,7 +375,7 @@ parts:
       - n: 35
         slug: designing-organizations-at-four-scales
         title: Designing Organizations of 20, 50, 100, and 500 Engineers
-        status: planned
+        status: review
         objectives:
           - Describe what breaks at each scale transition and what structure answers it.
           - Produce an organization design for a given headcount, architecture, and product portfolio.
@@ -385,7 +385,7 @@ parts:
       - n: 36
         slug: reorganizations-evolution-and-succession
         title: Reorganizations, Organizational Evolution, and Succession
-        status: planned
+        status: review
         objectives:
           - Decide whether a reorganization is the right tool, and estimate its transition cost.
           - Plan and communicate a reorganization so that it is finished in weeks.

@@ -1,10 +1,10 @@
 # Project status
 
-Last updated: 2026-11-20 (session 3: waves 2 and 3, first GitHub publication).
+Last updated: 2026-11-20 (session 3: waves 2–4).
 
-**Summary.** 27 of 60 chapters (Parts I–V, chapters 1–27) are written and on the site in `review`
+**Summary.** 36 of 60 chapters (Parts I–VII, chapters 1–36) are written and on the site in `review`
 status. Each passed automated validation and an independent cross-chapter review; none has had human
-review. **33 chapters, 16 templates, 8 projects, and the capstone are not written.**
+review. **24 chapters, 16 templates, 8 projects, and the capstone are not written.**
 
 Published at https://github.com/XayyamSadigov/engineering-leadership-handbook (public) with the site at
 https://xayyamsadigov.github.io/engineering-leadership-handbook/. Both workflows passed on the first
@@ -16,17 +16,17 @@ replace it with a repository-scoped fine-grained token.
 
 | Area | State |
 |---|---|
-| Chapters | 1–27, each with a solutions file (216 exercises). Status `review` |
+| Chapters | 1–36, each with a solutions file (288 exercises). Status `review` |
 | Templates | Engineering quality scorecard, technical debt register, incident review, 90-day quality plan. Status `review` |
-| Bibliography | 242 entries (105 scholarly); 241 verified |
-| Research documents | research plan, reference analysis, source evaluation, evidence matrix (chapters 1–27), research gaps (32 open, 2 closed), disputed claims D1–D8 (positions taken on D1, D2, D4, D5, D6, D8), human review checklist, quality report |
-| Northstar canon | `index.md`; `baseline-data.md` with extended baseline (standards, debt, tests and pipeline, reliability, incidents, security, management and roles, planning and delivery, locations, people, hiring, levels and pay); `first-quarter.md` (decisions incl. renewal dates, timeline, day 90, starting points for quarter 2); three CSV files |
-| Single-file edition | `dist/ENGINEERING_LEADERSHIP_HANDBOOK.md`, about 252,000 words |
+| Bibliography | 293 entries, all verified |
+| Research documents | research plan, reference analysis, source evaluation, evidence matrix (chapters 1–36), research gaps (38 open, 3 closed), disputed claims D1–D8 (positions taken on all), human review checklist, quality report |
+| Northstar canon | `index.md`; `baseline-data.md` with extended baseline (standards, debt, tests and pipeline, reliability, incidents, security, management and roles, planning and delivery, locations, people, hiring, levels and pay, architecture and estate, dependency causes); `first-quarter.md` (decisions incl. renewal dates, timeline, day 90, starting points for quarter 2, year-2 proposal); three CSV files |
+| Single-file edition | `dist/ENGINEERING_LEADERSHIP_HANDBOOK.md`, about 327,000 words |
 
 ## Validation results (2026-11-20)
 
-- `python tools/validate_book.py --build`: **passed**; 1 warning (unverified, uncited Prime Video entry).
-- `tools/render_diagrams.py`: 75 of 75 render. Diagrams of chapters 1–18 measured at 390 px; chapters 19–27 checked visually.
+- `python tools/validate_book.py --build`: **passed**, no warnings.
+- `tools/render_diagrams.py`: 98 of 98 render. Diagrams of chapters 1–18 and 28–36 measured at 390 px; chapters 19–27 checked visually.
 - `ruff check tools`: clean.
 - GitHub Actions have **not** run (no repository).
 
@@ -47,16 +47,17 @@ replace it with a repository-scoped fine-grained token.
    applied once and had to be reverted).
 5. Maintainer fixes the canon first, then parallel fixers on disjoint files; validate again.
 6. Commit (noreply author, no AI attribution) and push; check both workflows.
+7. Never change a decision already sent to parallel authors while they are working: messages arrive
+   late and each reversal creates a new round of divergence. Decide once, early.
 
 ## Next concrete tasks, in order
 
 1. **Human review** (priorities in `research/quality-report.md`).
-2. **Wave 4: Part VI (28–32) and Part VII (33–36)**, nine chapters. Chapter 28 owns disputed claim D7
-   and ADRs; chapter 31 owns D3 (microservices) and gap G11 (Prime Video source).
-3. **Project 3** (quality transformation plan): dataset, rubric, worked solution.
-4. Wave 5: Parts VIII and IX (37–43) with templates t03, t04, t07, t13, t14. Wave 6: Parts X and XI
-   (44–49). Wave 7: Part XII (50–55). Wave 8: Part XIII (56–59), remaining templates and projects,
-   capstone (60).
+2. **Wave 5: Parts VIII and IX (37–43)** with templates t03, t04, t07, t13, t14.
+3. **Projects 3 and 4** (quality transformation plan; redesign an 80-engineer organization): all inputs
+   now exist (chapters 27, 33–36).
+4. Wave 6: Parts X and XI (44–49). Wave 7: Part XII (50–55). Wave 8: Part XIII (56–59), remaining
+   templates and projects, capstone (60).
 6. Backlog: PDF and EPUB builds; external link checker; a script that recomputes Northstar aggregates
    from the CSVs during validation; convert plain-text references to now-live chapters into links.
 

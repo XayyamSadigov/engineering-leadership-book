@@ -307,3 +307,37 @@ Managers' time, reconstructed by each manager from two weeks of calendar and cha
 | Payments and Integrations practice | A weekly 30-minute operations review for about two years (rotating facilitator; the engineer coming off on-call presents pages, near misses, and one surprise; Elena speaks last) and a near-miss log with 17 entries in the baseline quarter, none about the payments-gateway configuration file. Orders had no near-miss log |
 | core/permissions changes in the baseline quarter | 38 merge requests: Orders 17, Customer Experience 9, Billing 8, Payments and Integrations 4, Platform Operations 0. No Platform Operations infrastructure engineer has changed Core code |
 | Data and Analytics request load | Requests from other teams take 12 points of its capacity; the month-end reporting path was built by one data engineer who has since moved to warehouse pipelines |
+
+### Architecture, technology estate, and platform (Chapters 28–33)
+
+| Fact | Value |
+|---|---|
+| Architecture decisions before arrival | No decision records or design documents in any repository. The principal architect who wrote the 2019 standards page chaired a monthly architecture review that stopped when they left in 2021; nothing replaced it. Decisions were made by whichever team built first, in chat threads, during incidents, or by Victor Lindqvist in unrecorded conversations |
+| Direct ledger reads | The older erp-sync connectors and the warehouse pipelines read 12 core/ledger tables directly through database read replicas |
+| Core schema | All eight Core modules share one production database schema; no module owns its tables by rule |
+| Core change history, baseline quarter | About 1,100 merge requests (14 mass changes excluded). Requests touching each module (from teams other than the post-week-4 owner): order-capture 250 (52), invoicing 230 (38), ledger 170 (12), pricing-rules 110 (7), catalog 80 (5), scheduler 45 (19), permissions 38 (canon split), customer 33 (18) |
+| Strongest co-change pairs | customer–permissions 67 percent of the smaller module's requests; scheduler–invoicing 60; order-capture–pricing-rules 53; invoicing–ledger 41 |
+| document-store callers | invoice-render (Billing) and core/order-capture (Orders) |
+| Core framework | A major version whose free community support has ended; no extended support purchased; migration estimated at 120 to 180 engineer-days. Versions are deliberately not named in this book |
+| Other estate risks | The XML library behind the oldest open critical is unmaintained upstream; one Jenkins controller with about 60 plugins and no standby; the configuration server is a single instance two major versions behind; nobody owned runtime and framework versions |
+| tax-svc | Calculates sales tax; about 2,300 rate-table rows updated monthly by hand by one Billing engineer; about 0.6 FTE a year of upkeep |
+| Platform Operations demand | About 25 test-environment requests a month at baseline |
+| Deployable units by build system | Jenkins 5 (Core counted once, pricing-svc, search-svc, tax-svc, invoice-render), GitLab CI 6, GitHub Actions 2, shell scripts 4; 17 in total |
+| Running cost of one CI system | About 0.5 FTE a year (against about 1.5 FTE for the four) |
+| Staff engineers' time, weeks 12–13 | Unscheduled questions and incident pulls: Ines Carvalho 8, Kwame Mensah 7, Li Na Zhou 9 hours a week (24 of 120, 20 percent). Ines rejected 8 of 14 Core design proposals in weeks 7–12, 5 of them without a reason |
+| Orders knowledge (week 14; engineers who can change it safely, of 14) | order-capture 9, pricing-rules 4, pricing-svc 5, core/customer 2, catalog 3, search-svc 0, notification-svc 0 operated (3 have committed to it) |
+
+### Heaviest dependency links by cause (Chapter 34)
+
+Classified by the managers at the start of quarter 2; counts are the canon pair counts above.
+
+| Link | Count | Cause |
+|---|---|---|
+| Orders → Billing | 9 | 6 order-to-invoice mapping changes in core/invoicing; 3 tax-svc |
+| Billing → Orders | 6 | 4 order data or status events from order-capture; 2 pricing-rules |
+| Customer Experience → Orders | 8 | 6 order API changes for order-entry screens (4 web, 2 mobile); 2 search-svc or pricing-svc |
+| Orders → Platform Operations | 8 | 5 test environments; 3 release train or pipeline changes |
+| Billing → Platform Operations | 7 | 4 test environments with ledger data; 3 migration or pipeline changes |
+
+Also in the baseline quarter: 4 Orders work items of a week or more touched both order capture and
+pricing, catalog, or search; Billing changed the order-to-invoice mapping twice for its own reasons.

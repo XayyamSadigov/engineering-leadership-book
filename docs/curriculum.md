@@ -3,7 +3,7 @@
 
 # Curriculum
 
-The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 27 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
+The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 36 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
 
 | Part | Chapters | On the site |
 |---|---|---|
@@ -12,8 +12,8 @@ The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are publishe
 | III. Building High-Performing Teams | 11–14 | 4 of 4 |
 | IV. Engineering Execution | 15–18 | 4 of 4 |
 | V. Software Quality and Engineering Excellence | 19–27 | 9 of 9 |
-| VI. Technical Leadership and Architecture | 28–32 | 0 of 5 |
-| VII. Organizational Design | 33–36 | 0 of 4 |
+| VI. Technical Leadership and Architecture | 28–32 | 5 of 5 |
+| VII. Organizational Design | 33–36 | 4 of 4 |
 | VIII. Engineering Management Operating System | 37–39 | 0 of 3 |
 | IX. Engineering Directorship | 40–43 | 0 of 4 |
 | X. Product and Business Leadership | 44–46 | 0 of 3 |
@@ -372,9 +372,9 @@ Primary sources: [beyer2016sre](references/bibliography.md#beyer2016sre), [campb
 
 Who decides technical direction, how, and with what governance.
 
-### Chapter 28 — Architecture Decision-Making and Governance
+### [Chapter 28 — Architecture Decision-Making and Governance](parts/06-technical-leadership/28-architecture-decision-making-and-governance.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -384,9 +384,9 @@ After this chapter you can:
 
 Primary sources: [richards2020fundamentals](references/bibliography.md#richards2020fundamentals), [ford2017building](references/bibliography.md#ford2017building), [larson2021staff](references/bibliography.md#larson2021staff), [winters2020software](references/bibliography.md#winters2020software)
 
-### Chapter 29 — Staff and Principal Engineers
+### [Chapter 29 — Staff and Principal Engineers](parts/06-technical-leadership/29-staff-and-principal-engineers.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -396,9 +396,9 @@ After this chapter you can:
 
 Primary sources: [larson2021staff](references/bibliography.md#larson2021staff), [larson2019elegant](references/bibliography.md#larson2019elegant), [wiseman2010multipliers](references/bibliography.md#wiseman2010multipliers)
 
-### Chapter 30 — Technical Strategy, Technology Selection, and Build versus Buy
+### [Chapter 30 — Technical Strategy, Technology Selection, and Build versus Buy](parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -408,9 +408,9 @@ After this chapter you can:
 
 Primary sources: [rumelt2011good](references/bibliography.md#rumelt2011good), [larson2024primer](references/bibliography.md#larson2024primer), [richards2020fundamentals](references/bibliography.md#richards2020fundamentals), [aws-well-architected](references/bibliography.md#aws-well-architected)
 
-### Chapter 31 — Service Boundaries: Microservices, Modular Monoliths, and Ownership
+### [Chapter 31 — Service Boundaries: Microservices, Modular Monoliths, and Ownership](parts/06-technical-leadership/31-service-boundaries-and-ownership.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -420,9 +420,9 @@ After this chapter you can:
 
 Primary sources: [lewis2014microservices](references/bibliography.md#lewis2014microservices), [fowler2015monolithfirst](references/bibliography.md#fowler2015monolithfirst), [kolny2023primevideo](references/bibliography.md#kolny2023primevideo), [skelton2019team](references/bibliography.md#skelton2019team), [conway1968committees](references/bibliography.md#conway1968committees)
 
-### Chapter 32 — Platform Engineering, Developer Experience, and Legacy Modernization
+### [Chapter 32 — Platform Engineering, Developer Experience, and Legacy Modernization](parts/06-technical-leadership/32-platform-engineering-developer-experience-and-modernization.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -436,9 +436,9 @@ Primary sources: [skelton2019team](references/bibliography.md#skelton2019team), 
 
 Structure as a design decision with predictable consequences for architecture and flow.
 
-### Chapter 33 — Conway's Law, Team Topologies, and Cognitive Load
+### [Chapter 33 — Conway's Law, Team Topologies, and Cognitive Load](parts/07-organization-design/33-conways-law-team-topologies-and-cognitive-load.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -448,9 +448,9 @@ After this chapter you can:
 
 Primary sources: [conway1968committees](references/bibliography.md#conway1968committees), [skelton2019team](references/bibliography.md#skelton2019team), [brooks1995mythical](references/bibliography.md#brooks1995mythical)
 
-### Chapter 34 — Spans, Layers, and Dependency Mapping
+### [Chapter 34 — Spans, Layers, and Dependency Mapping](parts/07-organization-design/34-spans-layers-and-dependency-mapping.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -460,9 +460,9 @@ After this chapter you can:
 
 Primary sources: [larson2019elegant](references/bibliography.md#larson2019elegant), [grove1983high](references/bibliography.md#grove1983high), [skelton2019team](references/bibliography.md#skelton2019team)
 
-### Chapter 35 — Designing Organizations of 20, 50, 100, and 500 Engineers
+### [Chapter 35 — Designing Organizations of 20, 50, 100, and 500 Engineers](parts/07-organization-design/35-designing-organizations-at-four-scales.md)
 
-*Status: Planned* · *Project: P4*
+*Status: On the site, awaiting human review* · *Project: P4*
 
 After this chapter you can:
 
@@ -472,9 +472,9 @@ After this chapter you can:
 
 Primary sources: [larson2019elegant](references/bibliography.md#larson2019elegant), [skelton2019team](references/bibliography.md#skelton2019team), [fournier2017manager](references/bibliography.md#fournier2017manager), [larson2024primer](references/bibliography.md#larson2024primer)
 
-### Chapter 36 — Reorganizations, Organizational Evolution, and Succession
+### [Chapter 36 — Reorganizations, Organizational Evolution, and Succession](parts/07-organization-design/36-reorganizations-evolution-and-succession.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 

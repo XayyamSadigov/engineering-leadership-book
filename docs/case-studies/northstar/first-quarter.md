@@ -92,7 +92,31 @@ reader. Their outcomes are deliberately not fixed.
 | Proposal to run the next two backfills as a structured hiring pilot (scorecard, work sample, facilitated debrief) | 7 |
 | Tom Becker's draft expectations plan for Bram Verhoeven, drafted at the start of quarter 2 from a reconstruction of the baseline quarter | 9 |
 | Ladder rewrite drafted (five dimensions, three levels); first calibrated promotion cycle at the start of quarter 3 (9 nominated, 5 promoted, 4 "not yet"); six underpaid US Senior Engineers identified | 8 |
+| ADR-0001, Northstar's first decision record, opened by Li Na Zhou in week 14: how integrations read posted ledger data. Options: read the tables (ready by week 19), a versioned export contract (5 of Billing's 6 reserved engineer-weeks; ready by week 19), or ledger posting events (about week 24). Li Na recommends the contract. Victor Lindqvist told Elena Sokolova in passing to "read the tables now and clean it up later". Nobody's decision rights are mapped | 28 |
+| Standing scopes for the three staff engineers drafted; a coaching plan for Ines Carvalho with checkpoints in weeks 20 and 26 | 29 |
+| A technical strategy draft (three policies: converge before adding; own order-to-cash logic, buy what changes for outside reasons; every tier 1 component on supported versions with two people who can change it) and a technology risk register TR-01 to TR-09; the tax-svc build, buy, or hybrid decision (three-year costs $373,500, $597,250, $329,750) | 30 |
+| Ines Carvalho's Core boundary proposal from co-change analysis: keep all eight modules in Core in quarter 2, carry out the permissions extraction inside Core, enforce module dependencies in the build; Rafael Duarte argues for extracting order-capture; Marcus Oyelaran wants no boundary work before week 19 | 31 |
+| Platform roadmap drafted by Tom Becker and Kwame Mensah: about 29 engineer-weeks of planned capacity; self-service environments, the deployment-event store, and CI consolidation phase 1 (the four shell-script services); GitLab CI proposed as the consolidation target, decision open | 32 |
+| Orders' structure options (Orders carries seven components and bulk ordering; about 2.6 engineers of capacity left for everything else in quarter 2) | 33 |
+| Span table and dependency analysis; the only boundary change made in quarter 2 is a Billing-owned order-to-invoice contract with contract tests on both sides (no people move); the analysis feeds the week 44 year-2 proposal | 34 |
 
 
 The flat-headcount constraint counts the whole engineering organization (87 people). Promoting an
 engineer into a new manager role is allowed only if that engineer's seat is not backfilled.
+
+## Year 2 proposal (quarter 4)
+
+In week 44 the director drafts a year-2 organization proposal for Victor Lindqvist, effective at the
+start of quarter 5 (week 53). The CTO decides; the outcome is open (Chapters 35 and 36).
+
+| Element | Proposal |
+|---|---|
+| Customer Experience | Splits into Web (Daniel Cho; 9 web engineers and 2 quality engineers, 11) and Mobile (Bogotá; Mateo Arango Ríos as manager, his engineering seat not backfilled; 5 engineers; mobile-app and mobile-bff with their own on-call rotation) |
+| core/permissions | Moves to Orders (Priya Raman's condition, after week 26, is met) |
+| search-svc | Moves from Orders to Data and Analytics |
+| Developer Platform | Platform Operations renamed and run as an internal product; Tom Becker and the same five engineers |
+| Totals | 79 engineers, 7 managers, the director (87); the director has 10 direct reports |
+| Alternatives in the draft | B: keep Customer Experience whole with two subteams (80 engineers, 6 managers). C: also split Orders into Order Capture and Catalog and Pricing and grow the platform to 8 (78 engineers, 8 managers). D: two managers of managers (77 engineers, 9 managers) |
+| Transition plan | Decision week 46, announcement week 51, reporting lines week 53, search-svc week 54, all handoffs by week 57, review week 64; about 21 engineer-weeks of transition cost, excluding Mateo's seat |
+| Succession coverage (week 44) | 10 critical roles; none with a ready-now successor; 6 with interim cover; 4 with none (Billing manager, Data and Analytics manager, the core-domain and the data-and-integration staff roles) |
+
