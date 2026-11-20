@@ -19,14 +19,14 @@ replace it with a repository-scoped fine-grained token.
 | Chapters | 1–27, each with a solutions file (216 exercises). Status `review` |
 | Templates | Engineering quality scorecard, technical debt register, incident review, 90-day quality plan. Status `review` |
 | Bibliography | 242 entries (105 scholarly); 241 verified |
-| Research documents | research plan, reference analysis, source evaluation, evidence matrix (chapters 1–4, 15–27), research gaps (24 open, 2 closed), disputed claims (D1, D4, D6 positions taken), human review checklist, quality report |
-| Northstar canon | `index.md`; `baseline-data.md` with extended baseline (standards, debt, tests and pipeline, reliability, incidents, security, management and roles, planning and delivery); `first-quarter.md` (decisions incl. renewal dates, timeline, day 90, starting points for quarter 2); three CSV files |
-| Single-file edition | `dist/ENGINEERING_LEADERSHIP_HANDBOOK.md`, about 167,000 words |
+| Research documents | research plan, reference analysis, source evaluation, evidence matrix (chapters 1–27), research gaps (32 open, 2 closed), disputed claims D1–D8 (positions taken on D1, D2, D4, D5, D6, D8), human review checklist, quality report |
+| Northstar canon | `index.md`; `baseline-data.md` with extended baseline (standards, debt, tests and pipeline, reliability, incidents, security, management and roles, planning and delivery, locations, people, hiring, levels and pay); `first-quarter.md` (decisions incl. renewal dates, timeline, day 90, starting points for quarter 2); three CSV files |
+| Single-file edition | `dist/ENGINEERING_LEADERSHIP_HANDBOOK.md`, about 252,000 words |
 
 ## Validation results (2026-11-20)
 
 - `python tools/validate_book.py --build`: **passed**; 1 warning (unverified, uncited Prime Video entry).
-- `tools/render_diagrams.py`: 48 of 48 render. Diagrams of chapters 1–4 and 15–18 measured at 390 px.
+- `tools/render_diagrams.py`: 75 of 75 render. Diagrams of chapters 1–18 measured at 390 px; chapters 19–27 checked visually.
 - `ruff check tools`: clean.
 - GitHub Actions have **not** run (no repository).
 
@@ -35,7 +35,7 @@ replace it with a repository-scoped fine-grained token.
 1. Shared brief (scratchpad copy of the wave 2 brief is the template: contract, research rules, legal
    sources only, topic lane for invented facts, no new first-quarter events, validation command) plus a
    per-chapter lane naming what the chapter owns and what it must leave to other chapters.
-2. Eight authors in parallel, each writing only its chapter, solutions, and side files
+2. Eight to ten authors in parallel, each assigned one Northstar team, each writing only its chapter, solutions, and side files
    (`research/pending-sources/`, `research/northstar-additions/`, `research/evidence-matrix-chNN.md`).
    Watch messages: settle shared facts (dates, characters) as canon immediately and tell the affected
    authors.
@@ -45,8 +45,8 @@ replace it with a repository-scoped fine-grained token.
 4. Independent reviewer reads the new chapters against the canon, each other, and earlier parts.
    Verify every arithmetic finding yourself before handing it to fixers (a wrong reviewer "fix" was
    applied once and had to be reverted).
-6. Commit (noreply author, no AI attribution) and push; check both workflows.
 5. Maintainer fixes the canon first, then parallel fixers on disjoint files; validate again.
+6. Commit (noreply author, no AI attribution) and push; check both workflows.
 
 ## Next concrete tasks, in order
 
