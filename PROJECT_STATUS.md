@@ -27,7 +27,7 @@ replace it with a repository-scoped fine-grained token.
 ## Validation results (2026-11-22)
 
 - `python tools/validate_book.py --build`: **passed**, no warnings.
-- `tools/render_diagrams.py`: 155 of 155 render (run with `npx -y -p @mermaid-js/mermaid-cli@11.4.2 sh -c '.venv/bin/python tools/render_diagrams.py'`). Diagrams of chapters 1–18 and 28–49 measured at 390 px; chapters 19–27 checked visually; chapters 50–55 not yet measured at 390 px.
+- `tools/render_diagrams.py`: 155 of 155 render (run with `npx -y -p @mermaid-js/mermaid-cli@11.4.2 sh -c '.venv/bin/python tools/render_diagrams.py'`). Diagrams of chapters 1–18 and 28–49 measured at 390 px; chapters 19–27 checked visually; chapters 50–55, templates, and projects 7–8 measured from rendered SVG widths (scale at 390 px 0.44–1.00, within the range already accepted for chapters 44–49, minimum 0.39); the two widest checked visually.
 - `ruff check tools`: clean.
 - GitHub Actions: both workflows pass on every push.
 
@@ -59,12 +59,11 @@ replace it with a repository-scoped fine-grained token.
 ## Next concrete tasks, in order
 
 1. **Human review** (priorities in `research/quality-report.md`).
-2. Measure the Part XII diagrams at 390 px.
-3. Wave 8: Part XIII (56–59), t01, t02, t06, t19, P2, capstone (60). Before launching, fix in the canon
+2. Wave 8: Part XIII (56–59), t01, t02, t06, t19, P2, capstone (60). Before launching, fix in the canon
    when and how the director becomes CTO (the capstone's second half) and decide which quarter 4
    outcomes the capstone may record; Part XII left all of them open.
-4. Waves of nine agents reach the 5-hour usage limit; resume agents with SendMessage after the reset.
-5. Backlog: PDF and EPUB builds; external link checker; a script that recomputes Northstar aggregates
+3. Waves of nine agents reach the 5-hour usage limit; resume agents with SendMessage after the reset.
+4. Backlog: PDF and EPUB builds; external link checker; a script that recomputes Northstar aggregates
    from the CSVs during validation; convert plain-text references to now-live chapters into links.
 
 ## How to resume
