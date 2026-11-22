@@ -14594,3 +14594,1076 @@
   caveats: >-
     Project page; individual maintainers are not named on it. Year is the 4.0.0 release year. Title
     is the page's top-level heading; the browser title is "About MADR | MADR".
+
+# Merged on 2026-11-22 from research/pending-sources/ (wave 8: chapters 56-59).
+# from ch56
+- id: staw1981threat
+  type: journal-article
+  title: 'Threat Rigidity Effects in Organizational Behavior: A Multilevel Analysis'
+  authors:
+  - Barry M. Staw
+  - Lance E. Sandelands
+  - Jane E. Dutton
+  year: 1981
+  venue: Administrative Science Quarterly, vol. 26, no. 4, pp. 501-524
+  doi: 10.2307/2392337
+  url: https://doi.org/10.2307/2392337
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.2307/2392337
+  - https://api.openalex.org/works/https://doi.org/10.2307/2392337
+  verified_on: '2026-11-22'
+  claims:
+  - text: The paper explores the case for a general threat-rigidity effect in individual, group, and
+      organizational behavior.
+    basis: abstract
+  - text: It summarizes evidence from multiple levels of analysis showing a restriction in information
+      processing and a constriction of control under threat conditions, and discusses possible
+      mechanisms and functional and dysfunctional consequences.
+    basis: abstract
+  caveats: Abstract only (via OpenAlex; Crossref gives page 501 as first page, last page 524 from the
+    standard citation and not re-confirmed on a fetched page). A multilevel review, not a study of
+    software organizations; the application to incident command and status reporting is this book's
+    inference.
+- id: trahms2013decline
+  type: journal-article
+  title: 'Organizational Decline and Turnaround: A Review and Agenda for Future Research'
+  authors:
+  - Cheryl A. Trahms
+  - Hermann Achidi Ndofor
+  - David G. Sirmon
+  year: 2013
+  venue: Journal of Management, vol. 39, no. 5, pp. 1277-1307
+  doi: 10.1177/0149206312471390
+  url: https://doi.org/10.1177/0149206312471390
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1177/0149206312471390
+  verified_on: '2026-11-22'
+  claims:
+  - text: The review states that in the 20 years since the previous review the scope of turnaround
+      research expanded dramatically but remains empirically and theoretically fragmented.
+    basis: abstract
+  - text: It reports that recent research has incorporated managerial cognition, strategic leadership,
+      and stakeholder management, and has identified simultaneous and complex resource-based actions
+      beyond the two-stage model of Pearce and Robbins's earlier review.
+    basis: abstract
+  - text: It catalogues twenty years of empirical evidence, develops a descriptive model of decline and
+      turnaround, and proposes a research agenda.
+    basis: abstract
+  caveats: Abstract only. Crossref returns the main title "Organizational Decline and Turnaround"; the
+    subtitle is the standard citation and was not shown on a fetched page, so title is not listed in
+    verified_fields. The research is about firms and financial performance, not engineering
+    organizations. The SAGE landing page was not fetched (publisher redirect).
+- id: mayer1995integrative
+  type: journal-article
+  title: An Integrative Model of Organizational Trust
+  authors:
+  - Roger C. Mayer
+  - James H. Davis
+  - F. David Schoorman
+  year: 1995
+  venue: Academy of Management Review, vol. 20, no. 3, pp. 709-734
+  doi: 10.5465/amr.1995.9508080335
+  url: https://doi.org/10.5465/amr.1995.9508080335
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.2307/258792
+  - https://api.openalex.org/works/https://doi.org/10.2307/258792
+  verified_on: '2026-11-22'
+  claims:
+  - text: The paper presents a definition of trust and a model of its antecedents and outcomes that
+      integrates research from multiple disciplines and differentiates trust from similar constructs,
+      with research propositions.
+    basis: abstract
+  - text: The model is known for naming ability, benevolence, and integrity as the factors of perceived
+      trustworthiness (idea level only; not stated in the abstract that was read).
+    basis: metadata (idea credited only)
+  caveats: The DOI 10.2307/258792 (JSTOR) and 10.5465/amr.1995.9508080335 (AOM) identify the same
+    article; OpenAlex resolves the JSTOR DOI to the AOM DOI. The AOM page returned 403. The three
+    trustworthiness factors are credited at idea level only; no finding is reported from the paper.
+    Last page 734 is the standard citation, not re-confirmed on a fetched page.
+- id: dirks2002trust
+  type: journal-article
+  title: 'Trust in Leadership: Meta-Analytic Findings and Implications for Research and Practice'
+  authors:
+  - Kurt T. Dirks
+  - Donald L. Ferrin
+  year: 2002
+  venue: Journal of Applied Psychology, vol. 87, no. 4, pp. 611-628
+  doi: 10.1037/0021-9010.87.4.611
+  url: https://doi.org/10.1037/0021-9010.87.4.611
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0021-9010.87.4.611
+  - https://api.openalex.org/works/https://doi.org/10.1037/0021-9010.87.4.611
+  verified_on: '2026-11-22'
+  claims:
+  - text: The meta-analysis (k = 106) estimates relationships between trust in leadership and key
+      outcomes, antecedents, and correlates from four decades of research.
+    basis: abstract
+  - text: Specifying the referent (direct leaders versus organizational leadership) and the type of
+      trust produces systematically different relationships; direct leaders such as supervisors appear
+      to be a particularly important referent of trust.
+    basis: abstract
+  caveats: Abstract only; effect sizes were not read and none are reported. Correlational.
+- id: watkins2014hit
+  type: magazine-article
+  title: 'Hit the ground running: Transitioning to new leadership roles'
+  authors:
+  - Michael D. Watkins
+  - Anouk Lavoie
+  - Susan Stehli
+  year: 2014
+  venue: IMD, insights@IMD No. 33 (May 2014)
+  url: https://www.imd.org/research-knowledge/organizational-behavior/articles/hit-the-ground-running-transitioning-to-new-leadership-roles/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.imd.org/research-knowledge/organizational-behavior/articles/hit-the-ground-running-transitioning-to-new-leadership-roles/
+  verified_on: '2026-11-22'
+  claims:
+  - text: The article describes Watkins's STARS framework (start-up, accelerated growth, sustaining
+      success, realignment, turnaround, shutdown), placing turnaround on the downward slope after
+      realignment, as a common language for discussing a business's situation.
+    basis: full-text
+  - text: It states that for leaders brought in to manage a turnaround, the crisis mode invites an
+      action-oriented and often more directive approach, while realignment calls for engaging people in
+      fixing the problem rather than telling them what is wrong.
+    basis: full-text
+  - text: It notes that people often have different visions of what stage the business is in, and
+      answers no to whether all leaders can handle each stage equally well.
+    basis: full-text
+  caveats: A short practitioner article from the author's institution (IMD), read through a page fetch
+    that returned the article text in summarized form with quoted sentences; only the quoted sentence
+    about turnaround is quoted in the chapter. Expert opinion, not research.
+# from ch57
+- id: coombs2007protecting
+  type: journal-article
+  title: 'Protecting Organization Reputations During a Crisis: The Development and Application of Situational
+    Crisis Communication Theory'
+  authors:
+  - W. Timothy Coombs
+  year: 2007
+  venue: Corporate Reputation Review, vol. 10, no. 3, pp. 163-176
+  doi: 10.1057/palgrave.crr.1550049
+  url: https://doi.org/10.1057/palgrave.crr.1550049
+  evidence_class: scholarly
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1057/palgrave.crr.1550049
+  - https://link.springer.com/content/pdf/10.1057/palgrave.crr.1550049.pdf
+  verified_on: '2026-11-22'
+  access_notes: Full text read from the publisher's free (bronze open access) PDF on link.springer.com,
+    linked from Semantic Scholar's open-access record.
+  claims:
+  - text: The paper presents Situational Crisis Communication Theory (SCCT) as an evidence-based framework,
+      built on experimental research rather than case studies, for anticipating how stakeholders react to
+      a crisis and to the response strategies used.
+    basis: full-text
+  - text: The first priority in a crisis is to protect stakeholders from harm, not the reputation; instructing
+      information tells stakeholders how to protect themselves, and adjusting information helps them cope
+      (what happened, corrective action, expressions of concern, which are not admissions of guilt).
+    basis: full-text
+  - text: Crisis types are grouped into victim, accidental, and preventable clusters by the crisis responsibility
+      stakeholders attribute; technical-error accidents fall in the accidental cluster, human-error accidents
+      in the preventable cluster.
+    basis: full-text
+  - text: Crisis history and an unfavorable prior relational reputation intensify attributions of crisis
+      responsibility and have a direct effect on reputation.
+    basis: full-text
+  - text: Primary response strategies form deny, diminish, and rebuild groups (bolstering is secondary); the
+      guidelines recommend rebuild strategies for accidental crises with a crisis history or unfavorable prior
+      reputation and for preventable crises, and warn that mixing deny strategies with diminish or rebuild
+      erodes the whole response.
+    basis: full-text
+  - text: Overly accommodative responses cost more and produce no greater reputational benefit than the
+      prescribed strategy; for example a full apology in an accidental crisis gave no greater benefit than
+      an excuse with adjusting information, and over-accommodation can make stakeholders think the crisis
+      is worse.
+    basis: full-text
+  caveats: Reputation-focused communication theory, mostly tested in experiments with scenario readers.
+    Not specific to software outages; mapping a software outage to a crisis cluster is this book's inference.
+- id: ford2008resistance
+  type: journal-article
+  title: 'Resistance to Change: The Rest of the Story'
+  authors:
+  - Jeffrey D. Ford
+  - Laurie W. Ford
+  - Angelo D'Amelio
+  year: 2008
+  venue: Academy of Management Review, vol. 33, no. 2, pp. 362-377
+  doi: 10.5465/amr.2008.31193235
+  url: https://doi.org/10.5465/amr.2008.31193235
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.5465/amr.2008.31193235
+  - https://api.openalex.org/works/doi:10.5465/amr.2008.31193235
+  verified_on: '2026-11-22'
+  access_notes: Publisher page (journals.aom.org) returned HTTP 403; abstract read from OpenAlex.
+  claims:
+  - text: The article argues that prevailing views of resistance tell a one-sided story favoring change
+      agents, treating resistance as an irrational, dysfunctional reaction located in change recipients.
+    basis: abstract
+  - text: It proposes that change agents contribute to resistance through their own actions and inactions,
+      and that resistance can be a resource for change.
+    basis: abstract
+  caveats: Conceptual article (theory, not an empirical test); abstract only.
+- id: piderit2000rethinking
+  type: journal-article
+  title: 'Rethinking Resistance and Recognizing Ambivalence: A Multidimensional View of Attitudes Toward
+    an Organizational Change'
+  authors:
+  - Sandy Kristin Piderit
+  year: 2000
+  venue: Academy of Management Review, vol. 25, no. 4, pp. 783-794
+  doi: 10.5465/amr.2000.3707722
+  url: https://doi.org/10.5465/amr.2000.3707722
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.5465/amr.2000.3707722
+  - https://api.semanticscholar.org/graph/v1/paper/DOI:10.5465/amr.2000.3707722
+  verified_on: '2026-11-22'
+  access_notes: Crossref lookup failed in session and the publisher page returned HTTP 403; author, volume,
+    issue, pages, and abstract from OpenAlex; surname confirmed by Semantic Scholar.
+  claims:
+  - text: The article reviews studies of resistance to change and proposes reconceptualizing individual
+      responses to change as multidimensional attitudes.
+    basis: abstract
+  - text: It raises the question of how to balance the organizational need to foster ambivalent attitudes
+      toward change against the individual need to limit the debilitating effects of ambivalence.
+    basis: abstract
+  caveats: Conceptual review; abstract only.
+- id: detert2007leadership
+  type: journal-article
+  title: 'Leadership Behavior and Employee Voice: Is the Door Really Open?'
+  authors:
+  - James R. Detert
+  - Ethan R. Burris
+  year: 2007
+  venue: Academy of Management Journal, vol. 50, no. 4, pp. 869-884
+  doi: 10.5465/amj.2007.26279183
+  url: https://doi.org/10.5465/amj.2007.26279183
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.5465/amj.2007.26279183
+  - https://api.openalex.org/works/doi:10.5465/amj.2007.26279183
+  verified_on: '2026-11-22'
+  access_notes: Publisher page returned HTTP 403; abstract read from OpenAlex.
+  claims:
+  - text: In a two-phase study of 3,149 employees and 223 managers in a restaurant chain, managerial openness
+      was more consistently related to subordinates' improvement-oriented voice than transformational leadership,
+      controlling for many individual differences.
+    basis: abstract
+  - text: The relationship was mediated by subordinates' perceptions of psychological safety, and leadership
+      behaviors had the strongest effect on the voice of the best-performing employees.
+    basis: abstract
+  caveats: One restaurant chain; correlational field data; abstract only.
+- id: weick1993collapse
+  type: journal-article
+  title: 'The Collapse of Sensemaking in Organizations: The Mann Gulch Disaster'
+  authors:
+  - Karl E. Weick
+  year: 1993
+  venue: Administrative Science Quarterly, vol. 38, no. 4, pp. 628-652
+  doi: 10.2307/2393339
+  url: https://doi.org/10.2307/2393339
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.2307/2393339
+  - https://api.openalex.org/works/doi:10.2307/2393339
+  verified_on: '2026-11-22'
+  access_notes: Crossref gives the first page (628) only; the end page is as commonly cited and not verified,
+    so venue is not in verified_fields. Abstract read from OpenAlex.
+  claims:
+  - text: The paper analyzes the deaths of 13 men in the Mann Gulch fire as the interactive disintegration
+      of role structure and sensemaking in a minimal organization.
+    basis: abstract
+  - text: It proposes four sources of resilience that make groups less vulnerable to disruptions of sensemaking
+      improvisation, virtual role systems, the attitude of wisdom, and norms of respectful interaction.
+    basis: abstract
+  caveats: A single historical case analyzed qualitatively; abstract only. Transfer to incident response is
+    this book's inference.
+- id: hirschman1970exit
+  type: book
+  title: Exit, Voice, and Loyalty
+  authors:
+  - Albert O. Hirschman
+  year: 1970
+  publisher: Harvard University Press
+  isbn13: '9780674276604'
+  url: https://openlibrary.org/works/OL2745855W
+  evidence_class: scholarly
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - publisher
+  - isbn13
+  verified_via:
+  - https://openlibrary.org/search.json?q=exit+voice+and+loyalty+hirschman&fields=title,subtitle,author_name,first_publish_year,publisher,isbn,key&limit=2
+  verified_on: '2026-11-22'
+  access_notes: Harvard University Press page returned no content to automated fetch. Subtitle not verified
+    and omitted. Credited for its well-known idea only.
+  claims:
+  - text: Known for the idea that members dissatisfied with an organization respond by exit (leaving) or voice
+      (speaking up to change it), and that loyalty makes voice more likely by raising the cost of exit (idea
+      level only).
+    basis: metadata (idea credited only)
+- id: atlassian2022outage
+  type: blog-post
+  title: Post-Incident Review on the Atlassian April 2022 outage
+  authors:
+  - Sri Viswanath
+  year: 2022
+  venue: Atlassian Engineering blog
+  url: https://www.atlassian.com/engineering/post-incident-review-april-2022-outage
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.atlassian.com/engineering/post-incident-review-april-2022-outage
+  verified_on: '2026-11-22'
+  access_notes: Dated April 29, 2022; opening letter signed by the co-founders. Author as listed under
+    "About This Article".
+  claims:
+  - text: 775 customers lost access to their Atlassian products, covering 883 sites; the outage spanned up
+      to 14 days for a subset; the first customers were restored on April 8 and all sites by April 18, 2022.
+    basis: full-text
+  - text: A script meant to delete a standalone app was run with site IDs instead of app IDs and deleted 883
+      sites between 07:38 and 08:01 UTC on April 5, 2022; the review names a communication gap between the
+      requesting and executing teams and an API that gave no warning about whether a site or an app was
+      being deleted.
+    basis: full-text
+  - text: The review says Atlassian did not acknowledge the incident quickly and consistently through multiple
+      channels; its first broad external message was a tweet on April 7 at 00:56 UTC.
+    basis: full-text
+  - text: Atlassian could not reach many customers because their contact information was deleted with their
+      sites, which also blocked customers from filing support tickets; the review says broader communication
+      should have started much earlier, that it should have been transparent about what it did and did not
+      know about restoration timelines, and commits to backing up key contacts outside the product and updating
+      its incident communications playbook.
+    basis: full-text
+  caveats: The company's own account of its incident. Documented practice from one organization.
+- id: gitlab2017postmortem
+  type: blog-post
+  title: Postmortem of database outage of January 31
+  authors:
+  - GitLab
+  year: 2017
+  venue: GitLab blog
+  url: https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/
+  verified_on: '2026-11-22'
+  access_notes: Published February 10, 2017, signed by the company. The post gives two slightly different
+    end times for the data-loss window (00:00 and 23:30 UTC); the chapter does not use either.
+  claims:
+  - text: GitLab.com was down for about 18 hours after an engineer accidentally deleted data on the primary
+      database while rebuilding a replica; the company estimated roughly 5,000 projects, 5,000 comments, and
+      700 new user accounts were affected.
+    basis: full-text
+  - text: Backups had silently failed (a version mismatch, and failure alerts rejected by email authentication),
+      and recovery used a staging snapshot from about six hours before the outage.
+    basis: full-text
+  - text: During the incident the team kept a publicly visible document of progress notes, streamed the recovery
+      on YouTube (peak of about 5,000 viewers), and posted updates to a status account on Twitter.
+    basis: full-text
+  - text: The public document initially named the engineer involved; the company said it would redact names
+      in future cases because other engineers might not be comfortable having their names published.
+    basis: full-text
+  caveats: The company's own account. Documented practice from one organization.
+# from ch58
+- id: dol2003warnemployer
+  type: report
+  title: "Employer's Guide to Advance Notice of Closings and Layoffs: Worker Adjustment and Retraining Notification (WARN) Act"
+  authors:
+  - U.S. Department of Labor, Employment and Training Administration
+  year: 2003
+  venue: U.S. Department of Labor, Employment and Training Administration (PDF linked from the WARN Act Compliance Assistance page)
+  url: https://www.dol.gov/sites/dolgov/files/ETA/Layoff/pdfs/_EmployerWARN2003.pdf
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.dol.gov/agencies/eta/layoffs/warn
+  - https://www.dol.gov/sites/dolgov/files/ETA/Layoff/pdfs/_EmployerWARN2003.pdf
+  verified_on: '2026-11-22'
+  claims:
+  - text: The guide states that the WARN Act requires employers to provide written notice at least 60
+      calendar days in advance of covered plant closings and mass layoffs.
+    basis: full text
+  - text: It describes covered employers as businesses with 100 or more full-time workers (not counting
+      workers with less than 6 months on the job or working fewer than 20 hours a week), or with 100 or
+      more workers working a combined 4,000 hours a week.
+    basis: full text
+  - text: It describes a mass layoff as 500 or more workers at a single site in a 30-day period, or 50
+      to 499 workers where they are at least 33 percent of the active workforce at that site, not counting
+      part-time workers; and a plant closing as a shutdown affecting at least 50 employees at a single site.
+    basis: full text
+  - text: It explains that employment losses are looked at over a 30-day period and that a series of smaller
+      layoffs within 90 days can be aggregated unless they result from separate and distinct causes.
+    basis: full text
+  - text: It states that WARN does not supersede laws or collective bargaining agreements that provide
+      additional notice or rights, that WARN applies to the sale of a business with the seller responsible
+      before the sale is effective and the buyer after, and that violation makes the employer liable for
+      back pay and benefits for up to 60 days.
+    basis: full text
+  - text: The guide says it is not an official statement of interpretation of WARN or the regulations
+      (20 CFR Part 639) and does not replace the advice of counsel; the DOL page says federal courts enforce
+      the Act.
+    basis: full text
+  caveats: A 2003 guide; the PDF is still linked from the DOL's WARN Act Compliance Assistance page (fetched
+    2026-11-22), but the statute, regulations, or case law may have changed since, and many US states
+    have their own notice laws with different thresholds, which this source does not cover. Used only
+    to show the kind of rule that exists, never as legal advice. Text extracted from the PDF locally.
+- id: eu1998collective
+  type: standard
+  title: Council Directive 98/59/EC of 20 July 1998 on the approximation of the laws of the Member States
+    relating to collective redundancies
+  authors:
+  - Council of the European Union
+  year: 1998
+  venue: Official Journal of the European Communities, L 225, 12 August 1998, pp. 16-21
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31998L0059
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:31998L0059
+  verified_on: '2026-11-22'
+  claims:
+  - text: Article 1 defines collective redundancies by thresholds chosen by each Member State, either over
+      30 days (at least 10 in establishments of more than 20 and fewer than 100 workers, at least 10 percent
+      in establishments of 100 to 299, at least 30 in establishments of 300 or more) or over 90 days (at
+      least 20, whatever the establishment's size).
+    basis: full text
+  - text: Article 2 requires an employer contemplating collective redundancies to begin consultations with
+      workers' representatives in good time with a view to reaching an agreement, covering ways of avoiding
+      or reducing the redundancies and mitigating their consequences, and to notify them in writing of
+      the reasons, numbers, period, and the proposed selection criteria, among other items.
+    basis: full text
+  - text: Articles 3 and 4 require written notification to the competent public authority, and projected
+      redundancies take effect not earlier than 30 days after that notification, a period Member States
+      may shorten or allow the authority to extend.
+    basis: full text
+  caveats: A directive binds Member States, not employers directly; obligations reach employers through
+    national transposing law, which differs between countries and may have been amended. Only Articles 1
+    to 4 and the recitals were read, from the original Official Journal text on EUR-Lex (not a consolidated
+    version). Not legal advice.
+- id: eeoc2009waivers
+  type: web-guide
+  title: Q&A-Understanding Waivers of Discrimination Claims in Employee Severance Agreements
+  authors:
+  - U.S. Equal Employment Opportunity Commission
+  year: 2009
+  venue: U.S. Equal Employment Opportunity Commission technical assistance document EEOC-NVTA-2009-2, issued
+    July 15, 2009
+  url: https://www.eeoc.gov/laws/guidance/qa-understanding-waivers-discrimination-claims-employee-severance-agreements
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.eeoc.gov/node/130190
+  verified_on: '2026-11-22'
+  claims:
+  - text: For a waiver of age claims requested from a group of employees being laid off, the employer must
+      give at least 45 days to consider it and must inform each person in writing of the decisional unit,
+      the eligibility factors, the time limits, and the job titles and ages of those selected and not
+      selected in that unit.
+    basis: full text
+  - text: The decisional unit is the class, unit, or group of employees from which the employer chose those
+      who were and were not selected; it may be a facility, a department, employees reporting to a particular
+      manager, or a job classification, depending on the circumstances.
+    basis: full text
+  - text: Individual waivers give at least 21 days to consider and seven days to revoke, and signing a waiver
+      does not remove the right to file a charge with the EEOC.
+    basis: full text
+  - text: The page notes that employers conducting reductions often select by seniority, by individual
+      criteria such as performance or experience, or by eliminating a position, division, or department,
+      and that selection may lead those laid off to believe they were discriminated against.
+    basis: full text
+  caveats: US federal guidance only, from 2009; the page states it does not have the force and effect of
+    law. Fetched via the EEOC's node URL, whose canonical link is the URL recorded. Not legal advice.
+- id: trevor2008downsizing
+  type: journal-article
+  title: 'Keeping Your Headcount When All About You Are Losing Theirs: Downsizing, Voluntary Turnover Rates,
+    and the Moderating Role of HR Practices'
+  authors:
+  - Charlie O. Trevor
+  - Anthony J. Nyberg
+  year: 2008
+  venue: Academy of Management Journal 51(2), pp. 259-276
+  doi: 10.5465/amj.2008.31767250
+  url: https://doi.org/10.5465/amj.2008.31767250
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.5465/amj.2008.31767250
+  - https://api.crossref.org/works/10.5465/amj.2008.31767250
+  verified_on: '2026-11-22'
+  claims:
+  - text: Using organization-level data from multiple industries, the study tests whether downsizing predicts
+      voluntary turnover rates, whether aggregated organizational commitment mediates the relationship,
+      and whether HR practices moderate it; the abstract reports that the results support the hypothesized
+      main, mediated, and moderated effects.
+    basis: abstract
+  - text: The hypothesized moderators were HR practices that embed employees or convey procedural fairness
+      (expected to weaken the downsizing-turnover relationship) and practices that enhance career development
+      (expected to strengthen it).
+    basis: abstract
+  caveats: Abstract only; effect sizes, samples, and industries not read. Organization-level, observational.
+    Not software-specific.
+- id: brockner1987survivors
+  type: journal-article
+  title: "Survivors' Reactions to Layoffs: We Get by with a Little Help for Our Friends"
+  authors:
+  - Joel Brockner
+  - Steven Lee Grover
+  - Thomas F. Reed
+  - Rocki-Lee DeWitt
+  - Michael N. O'Malley
+  year: 1987
+  venue: Administrative Science Quarterly 32(4), beginning p. 526
+  doi: 10.2307/2392882
+  url: https://doi.org/10.2307/2392882
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.2307/2392882
+  verified_on: '2026-11-22'
+  claims:
+  - text: A laboratory study and a field survey of employees who survived a major layoff, framed by justice
+      theory, found that survivors reacted most negatively when they identified with the people laid off
+      and perceived them as inadequately compensated.
+    basis: abstract
+  - text: The negative reaction took the form of reduced work performance in the laboratory study and lowered
+      organizational commitment, relative to before the layoff, in the field study.
+    basis: abstract
+  caveats: One laboratory study and one field organization; 1980s data; not software. OpenAlex records
+    only the first page, so no end page is given.
+- id: brockner1990explain
+  type: journal-article
+  title: "When it is especially important to explain why: Factors affecting the relationship between managers'
+    explanations of a layoff and survivors' reactions to the layoff"
+  authors:
+  - Joel Brockner
+  - Rocki-Lee DeWitt
+  - Steven Lee Grover
+  - Thomas F. Reed
+  year: 1990
+  venue: Journal of Experimental Social Psychology 26(5), pp. 389-407
+  doi: 10.1016/0022-1031(90)90065-T
+  url: https://doi.org/10.1016/0022-1031(90)90065-T
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1016/0022-1031(90)90065-t
+  verified_on: '2026-11-22'
+  claims:
+  - text: In a field study of survivors of co-workers' layoffs, survivors who said management had explained
+      the reasons for the layoff more clearly reported more favorable changes in organizational commitment,
+      work effort, and turnover intention.
+    basis: abstract
+  - text: The positive relationship between the clarity of explanations and survivors' reactions was especially
+      pronounced when survivors' uncertainty was high and the decision mattered more to them.
+    basis: abstract
+  caveats: One field study, self-reported changes; the abstract notes limitations it does not detail.
+- id: datta2010downsizing
+  type: journal-article
+  title: 'Causes and Effects of Employee Downsizing: A Review and Synthesis'
+  authors:
+  - Deepak K. Datta
+  - James P. Guthrie
+  - Dynah Basuil
+  - Alankrita Pandey
+  year: 2010
+  venue: Journal of Management 36(1), pp. 281-348
+  doi: 10.1177/0149206309346735
+  url: https://doi.org/10.1177/0149206309346735
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1177/0149206309346735
+  verified_on: '2026-11-22'
+  claims:
+  - text: The review develops an integrative framework of the environmental and organizational antecedents
+      of downsizing and its implications for individuals and organizations, reviews key empirical studies,
+      and identifies major patterns and contradictions in the literature.
+    basis: abstract
+  caveats: Abstract only; the review's specific conclusions about firm performance were not read and are
+    not reported. OpenAlex dates the online publication 2009; the journal issue is 2010.
+- id: sverke2002insecurity
+  type: journal-article
+  title: 'No security: A meta-analysis and review of job insecurity and its consequences'
+  authors:
+  - Magnus Sverke
+  - Johnny Hellgren
+  - Katharina Näswall
+  year: 2002
+  venue: Journal of Occupational Health Psychology 7(3), pp. 242-264
+  doi: 10.1037/1076-8998.7.3.242
+  url: https://doi.org/10.1037/1076-8998.7.3.242
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1037/1076-8998.7.3.242
+  verified_on: '2026-11-22'
+  claims:
+  - text: A meta-analysis found that job insecurity has detrimental consequences for employees' job attitudes,
+      organizational attitudes, health, and, to some extent, their behavioral relationship with the organization.
+    basis: abstract
+  - text: Moderator analyses suggested the behavioral consequences of insecurity were more detrimental among
+      manual than nonmanual workers.
+    basis: abstract
+  caveats: Abstract only; effect sizes not read. Studies are mostly cross-sectional; the authors call for
+    longitudinal designs. Not software-specific.
+- id: paruchuri2006integration
+  type: journal-article
+  title: 'Acquisition Integration and Productivity Losses in the Technical Core: Disruption of Inventors
+    in Acquired Companies'
+  authors:
+  - Srikanth Paruchuri
+  - Atul Nerkar
+  - Donald C. Hambrick
+  year: 2006
+  venue: Organization Science 17(5), pp. 545-562
+  doi: 10.1287/orsc.1060.0207
+  url: https://doi.org/10.1287/orsc.1060.0207
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1287/orsc.1060.0207
+  verified_on: '2026-11-22'
+  claims:
+  - text: Using patent application data on 3,933 inventors in pharmaceutical firms whose companies were
+      acquired, the authors tested the hypothesis that integration generally impairs the productivity
+      of acquired scientists, most severely for inventors who lose the most social status and centrality
+      in the combined entity; the abstract reports results strongly in line with these expectations.
+    basis: abstract
+  caveats: Pharmaceutical inventors measured by patents, not software engineers; the transfer to engineering
+    teams is this book's inference.
+- id: ranft2002acquiring
+  type: journal-article
+  title: 'Acquiring New Technologies and Capabilities: A Grounded Model of Acquisition Implementation'
+  authors:
+  - Annette L. Ranft
+  - Michael D. Lord
+  year: 2002
+  venue: Organization Science 13(4), pp. 420-441
+  doi: 10.1287/orsc.13.4.420.2952
+  url: https://doi.org/10.1287/orsc.13.4.420.2952
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1287/orsc.13.4.420.2952
+  verified_on: '2026-11-22'
+  claims:
+  - text: From seven in-depth cases of high-technology acquisitions, the authors develop a grounded model
+      of technology and capability transfer during acquisition implementation, in which the nature of
+      the acquired firm's knowledge-based resources and several dimensions of implementation have independent
+      and interactive effects on whether the acquirer appropriates the technologies and capabilities.
+    basis: abstract
+  caveats: Seven cases; the output is propositions for further research, not tested findings. The specific
+    propositions were not read.
+- id: puranam2006organizing
+  type: journal-article
+  title: 'Organizing for Innovation: Managing the Coordination-Autonomy Dilemma in Technology Acquisitions'
+  authors:
+  - Phanish Puranam
+  - Harbir Singh
+  - Maurizio Zollo
+  year: 2006
+  venue: Academy of Management Journal 49(2), pp. 263-280
+  doi: 10.5465/amj.2006.20786062
+  url: https://doi.org/10.5465/amj.2006.20786062
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.5465/amj.2006.20786062
+  verified_on: '2026-11-22'
+  claims:
+  - text: Large firms acquiring small technology firms face a dilemma between coordinating the acquired
+      firm's capabilities and preserving its autonomy to explore.
+    basis: abstract
+  - text: Structural integration decreased the likelihood of introducing new products for acquired firms
+      that had not launched products before acquisition, and for all firms immediately after acquisition,
+      but these effects disappeared as the acquired firms' innovation trajectories evolved.
+    basis: abstract
+  caveats: Abstract only; sample and measures not read. Outcome is new product introduction, not software
+    delivery measures.
+- id: graebner2004momentum
+  type: journal-article
+  title: 'Momentum and serendipity: how acquired leaders create value in the integration of technology firms'
+  authors:
+  - Melissa E. Graebner
+  year: 2004
+  venue: Strategic Management Journal 25(8-9), pp. 751-777
+  doi: 10.1002/smj.419
+  url: https://doi.org/10.1002/smj.419
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1002/smj.419
+  verified_on: '2026-11-22'
+  claims:
+  - text: A grounded-theory study of the integration of eight technology acquisitions found that acquired
+      managers play a key role in achieving both expected and serendipitous value, maintaining advantages
+      of both integration and autonomy.
+    basis: abstract
+  caveats: Eight cases, theory-building; not a test of effect sizes.
+- id: king2004metaanalyses
+  type: journal-article
+  title: 'Meta-analyses of post-acquisition performance: indications of unidentified moderators'
+  authors:
+  - David R. King
+  - Dan R. Dalton
+  - Catherine M. Daily
+  - Jeffrey G. Covin
+  year: 2004
+  venue: Strategic Management Journal 25(2), pp. 187-200
+  doi: 10.1002/smj.371
+  url: https://doi.org/10.1002/smj.371
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.openalex.org/works/doi:10.1002/smj.371
+  verified_on: '2026-11-22'
+  claims:
+  - text: Meta-analyses of the most commonly studied antecedents found that, on average, acquiring firms'
+      performance does not positively change as a function of acquisition activity and is modestly negatively
+      affected.
+    basis: abstract
+  - text: The authors conclude that unidentified variables may explain significant variance in post-acquisition
+      performance.
+    basis: abstract
+  caveats: Firm-level financial performance across many industries, not engineering outcomes. OpenAlex
+    dates online publication 2003; the journal issue is 2004.
+- id: haspeslagh1991managing
+  type: book
+  title: Managing Acquisitions
+  subtitle: Creating Value Through Corporate Renewal
+  authors:
+  - Philippe C. Haspeslagh
+  - David B. Jemison
+  year: 1991
+  publisher: Free Press
+  isbn13: '9780029141656'
+  url: https://openlibrary.org/works/OL4477684W
+  evidence_class: scholarly
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - subtitle
+  - authors
+  - year
+  - publisher
+  - isbn13
+  verified_via:
+  - https://openlibrary.org/search.json?q=haspeslagh+jemison
+  - https://openlibrary.org/works/OL4477684W/editions.json
+  verified_on: '2026-11-22'
+  claims: []
+  caveats: Metadata only. Credited only for the idea it is widely known for, that integration approaches
+    differ by how much the acquired firm needs autonomy and how much strategic interdependence the deal
+    requires (often summarized as preservation, absorption, and symbiosis). No finding, quotation, or
+    page number is used.
+# from ch59
+- id: adams2021subtractive
+  type: journal-article
+  title: People systematically overlook subtractive changes
+  authors:
+  - Gabrielle S. Adams
+  - Benjamin A. Converse
+  - Andrew H. Hales
+  - Leidy E. Klotz
+  year: 2021
+  venue: Nature, vol. 592, no. 7853, pp. 258-261
+  doi: 10.1038/s41586-021-03380-y
+  url: https://pubmed.ncbi.nlm.nih.gov/33828317/
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1038/s41586-021-03380-y
+  - https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=33828317&rettype=abstract&retmode=text
+  verified_on: '2026-11-22'
+  claims:
+  - text: Across eight experiments, people systematically defaulted to searching for additive changes
+      (adding components) and consequently overlooked advantageous subtractive changes.
+    basis: abstract
+  - text: Participants were less likely to find advantageous subtractive changes when the task did not
+      cue them to consider subtraction, when they had only one opportunity (rather than several) to
+      recognize the shortcomings of an additive search, or when they were under higher cognitive load.
+    basis: abstract
+  - text: The authors suggest that defaulting to additive search may be one reason people struggle to
+      mitigate overburdened schedules and institutional red tape.
+    basis: abstract
+  caveats: Laboratory and online experiments with puzzles, designs, and short tasks; the link to
+    organizational red tape is the authors' suggestion in the abstract, not a tested finding. Abstract
+    read on PubMed; the Nature page redirected to a login and the full text was not read.
+- id: adler1996bureaucracy
+  type: journal-article
+  title: 'Two Types of Bureaucracy: Enabling and Coercive'
+  authors:
+  - Paul S. Adler
+  - Bryan Borys
+  year: 1996
+  venue: Administrative Science Quarterly, vol. 41, no. 1, pp. 61-89
+  doi: 10.2307/2393986
+  url: https://doi.org/10.2307/2393986
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.2307/2393986
+  - https://api.openalex.org/works/doi:10.2307/2393986
+  verified_on: '2026-11-22'
+  claims:
+  - text: Proposes a conceptualization of workflow formalization that reconciles views of bureaucracy as
+      alienating employees or as enabling them to do their tasks better, by distinguishing two types of
+      formalization, enabling and coercive.
+    basis: abstract
+  - text: Argues that whether formalization affects employees' attitudes positively or negatively depends
+      on whether it helps employees master their tasks or serves as a means by which management tries to
+      coerce effort and compliance.
+    basis: abstract
+  - text: Identifies forces that tend to push organizations toward the coercive orientation and
+      countertendencies that encourage the enabling one, and suggests extending the typology to hierarchy
+      and staff functions.
+    basis: abstract
+  caveats: A conceptual article drawing on research on equipment design, not an empirical test. Abstract
+    read as reconstructed by OpenAlex; the last page (89) is from the journal's standard citation and
+    Crossref gives only the first page (61), so the page range is not fully verified.
+- id: lee2017selfmanaging
+  type: journal-article
+  title: 'Self-managing organizations: Exploring the limits of less-hierarchical organizing'
+  authors:
+  - Michael Y. Lee
+  - Amy C. Edmondson
+  year: 2017
+  venue: Research in Organizational Behavior, vol. 37, pp. 35-58
+  doi: 10.1016/j.riob.2017.10.002
+  url: https://www.insead.edu/faculty-research/publications/journal-articles/self-managing-organizations-exploring-limits-less
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1016/j.riob.2017.10.002
+  - https://api.openalex.org/works/doi:10.1016/j.riob.2017.10.002
+  - https://www.insead.edu/faculty-research/publications/journal-articles/self-managing-organizations-exploring-limits-less
+  verified_on: '2026-11-22'
+  claims:
+  - text: Reviews research on organizations that reduce or eliminate the conventional managerial hierarchy,
+      grouped into post-bureaucratic organizations, humanistic management, and organizational democracy.
+    basis: abstract
+  - text: Defines self-managing organizations as efforts that radically decentralize authority in a formal,
+      systematic way throughout the organization, says scholarly understanding of such organizing is
+      limited, and proposes a research agenda; the abstract reports no empirical findings.
+    basis: abstract
+  caveats: A review and agenda, not a test of whether removing managers works. Abstract read as
+    summarized on INSEAD's publication page (publisher abstract elided in Semantic Scholar and absent in
+    Crossref); the full text was not read.
+- id: sutton2024friction
+  type: book
+  title: The Friction Project
+  subtitle: How Smart Leaders Make the Right Things Easier and the Wrong Things Harder
+  authors:
+  - Robert I. Sutton
+  - Huggy Rao
+  year: 2024
+  publisher: St. Martin's Press
+  isbn13: '9781250284419'
+  url: https://www.bobsutton.net/books/the-friction-project
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - subtitle
+  - authors
+  - publisher
+  - isbn13
+  - year
+  verified_via:
+  - https://www.bobsutton.net/books/the-friction-project
+  - https://publishersweekly.com/9781250284419
+  verified_on: '2026-11-22'
+  claims:
+  - text: Credited at idea level only for its argument that leaders should remove destructive
+      organizational friction while keeping or adding friction that is useful, rather than pursuing
+      efficiency everywhere.
+    basis: metadata (idea credited only, from the author's book page)
+  caveats: The book was not read. The authors are Stanford researchers but the book is written for
+    practitioners. Year inferred from the Publishers Weekly review (dated 2023-10-10, publication
+    "Jan.") with retailer listings giving January 2024; the author's page states no date. The publisher's
+    page returned HTTP 403.

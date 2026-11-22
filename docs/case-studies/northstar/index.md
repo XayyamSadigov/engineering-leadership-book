@@ -76,8 +76,9 @@ flowchart TD
 ### Executive and board context (Part XII)
 
 These facts were fixed when Part XII was written, so that the CTO chapters describe the same
-company. Victor Lindqvist stays CTO throughout Part XII; any change in who holds the role belongs to
-the capstone (Chapter 60).
+company. Victor Lindqvist stays CTO throughout the book. Nobody succeeds him in the canon: where a
+chapter or the capstone (Chapter 60) puts the reader in the CTO's role, the reader takes Victor's seat
+in quarter 4, with the facts available then, and the quarter 4 decisions stay open.
 
 | Fact | Value |
 |---|---|

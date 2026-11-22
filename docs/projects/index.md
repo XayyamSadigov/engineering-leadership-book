@@ -15,7 +15,7 @@ documents a real leader would produce. Each takes about 12 to 20 hours.
 | Project | Title | Builds on | Status |
 |---|---|---|---|
 | P1 | [Build an Engineering Management Operating System](p1-management-operating-system.md) | Chapter 37, with Chapters 38 and 39 | Available |
-| P2 | Diagnose a Low-Performing Engineering Team | Chapter 56 | Planned |
+| P2 | [Diagnose a Low-Performing Engineering Team](p2-diagnose-a-low-performing-team.md) | Chapter 56, with Chapters 9, 16, 25, and 40 | Available |
 | P3 | [Create an Engineering Quality Transformation Plan](p3-quality-transformation-plan.md) | Part V, Chapters 19 to 27 | Available |
 | P4 | [Redesign an Organization of 80 Engineers](p4-redesign-an-80-engineer-organization.md) | Part VII, Chapters 33 to 36 | Available |
 | P5 | [Build a Delivery Performance and Reliability Scorecard](p5-delivery-and-reliability-scorecard.md) | Chapters 18, 24, 27, and 38 | Available |
@@ -46,6 +46,7 @@ documents a real leader would produce. Each takes about 12 to 20 hours.
 ## Solutions
 
 - [Project 1 solution](solutions/p1-solution.md)
+- [Project 2 solution](solutions/p2-solution.md)
 - [Project 3 solution](solutions/p3-solution.md)
 - [Project 4 solution](solutions/p4-solution.md)
 - [Project 5 solution](solutions/p5-solution.md)

@@ -105,10 +105,28 @@ the week 44 SBOM state. All high and medium findings were verified and fixed by 
 three resolved by canon edits. 155 of 155 diagrams render. The six chapters run 5,500–7,400 counted
 words, above the 5,000-word guide.
 
+## Wave 8 (chapters 56–60, templates t01 t02 t06 t19, project 2), 2026-11-22
+
+Five chapter authors (the chapter 56 author also wrote Project 2) and one templates author. Before
+launch the maintainer fixed two canon decisions: nobody succeeds Victor Lindqvist as CTO (the capstone
+puts the reader in his seat in quarter 4), and each author may add Halvard facts only inside one group.
+At merge the maintainer caught a collision the lanes did not prevent (two Halvard groups with the same
+field-service business and near-identical names) and had the fourth group renamed Payroll. Halvard's
+three unnamed product groups are now named (Field Operations, Insights, Payroll), and a "Part XIII"
+section records their stories, the Commerce outage, and the platform budget cut; Northstar gained one
+quarter 4 fact (the rules inventory). 31 sources merged (447 in total); gaps G59–G63. Two independent
+reviewers reported 38 findings (1 high): chapter 57 invented quarter 2 events around ADR-0001. Also
+verified and fixed: a wrong binomial probability (chapter 56), "self-funding" claimed at 7.2 against
+8 FTE (chapter 59), statutory thresholds not stated (chapter 58), capstone stages dated before their
+inputs; three canon defects fixed (the stress rule's week, the redesign's dating, missing Halvard rows).
+171 of 171 diagrams render; the wave 8 diagrams scale at 0.39–1.00 at 390 px. Chapters 56–60 run
+6,300–7,900 counted words.
+
 ## Human review status
 
 | Item | Status | Self-review | Human review |
 |---|---|---|---|
+| Chapters 56–60, templates t01 t02 t06 t19, project 2 | review | Author self-review; independent AI review (38 findings, all high and medium fixed) | **Not done** |
 | Chapters 50–55, templates t05 t11 t12, projects 7 and 8 | review | Author self-review; independent AI review (50 findings, all high and medium fixed) | **Not done** |
 | Chapters 37–43, templates t03 t04 t07 t13 t14, projects 3 and 4 | review | Author self-review; independent AI review (30 findings, all fixed) | **Not done** |
 | Chapters 28–36 and solutions | review | Author self-review; independent AI review (21 findings, all fixed) | **Not done** |
@@ -143,8 +161,9 @@ words, above the 5,000-word guide.
    recommendations (burn-rate alert parameters, severity definitions, action triage).
 4. `allspaw2012blameless` and `mckinsey2023productivity` were read from Wayback Machine copies; `meyer1977institutionalized` from a
    third-party university copy (claims limited to its abstract). Confirm both are acceptable.
-5. Decide whether chapter 21 (5,094), chapter 27 (5,609), and chapters 50–55 (5,500–7,400) may stay above the 5,000-word guide.
+5. Decide whether chapter 21 (5,094), chapter 27 (5,609), and chapters 50–60 (5,500–7,900) may stay above the 5,000-word guide.
 6. Part XII: check the accounting statements in chapter 52 (ASC 350-40, ASU 2025-06, IAS 38) and the SEC and AICPA statements in chapters 53 and 55 with someone qualified; check the AI-productivity figures in chapter 54 against the studies (D9).
+7. Part XIII: have someone qualified check the employment-law statements in chapter 58 (WARN Act, EU Directive 98/59/EC, EEOC waiver guidance); read the capstone (chapter 60) end to end against Projects 1–8.
 
 ## Known limitations
 

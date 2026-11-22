@@ -3,7 +3,7 @@
 
 # Curriculum
 
-The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 55 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
+The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 60 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
 
 | Part | Chapters | On the site |
 |---|---|---|
@@ -19,9 +19,9 @@ The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are publishe
 | X. Product and Business Leadership | 44–46 | 3 of 3 |
 | XI. VP of Engineering | 47–49 | 3 of 3 |
 | XII. CTO Leadership | 50–55 | 6 of 6 |
-| XIII. Advanced Leadership Problems | 56–59 | 0 of 4 |
+| XIII. Advanced Leadership Problems | 56–59 | 4 of 4 |
 | XIV. Practical Management Systems and Playbooks | templates | 0 of 0 |
-| XV. Capstone: Build and Transform an Engineering Organization | 60 | 0 of 1 |
+| XV. Capstone: Build and Transform an Engineering Organization | 60 | 1 of 1 |
 
 ## Part I — Foundations of Engineering Leadership
 
@@ -736,9 +736,9 @@ Primary sources: [larson2024primer](references/bibliography.md#larson2024primer)
 
 The situations where standard practice is not enough.
 
-### Chapter 56 — Recovering a Failing Engineering Organization
+### [Chapter 56 — Recovering a Failing Engineering Organization](parts/13-advanced-problems/56-recovering-a-failing-engineering-organization.md)
 
-*Status: Planned* · *Project: P2*
+*Status: On the site, awaiting human review* · *Project: P2*
 
 After this chapter you can:
 
@@ -748,9 +748,9 @@ After this chapter you can:
 
 Primary sources: [watkins2003first](references/bibliography.md#watkins2003first), [kim2013phoenix](references/bibliography.md#kim2013phoenix), [goldratt1984goal](references/bibliography.md#goldratt1984goal), [lencioni2002five](references/bibliography.md#lencioni2002five)
 
-### Chapter 57 — Crises, Executive Disagreement, and Resistance to Change
+### [Chapter 57 — Crises, Executive Disagreement, and Resistance to Change](parts/13-advanced-problems/57-crises-executive-disagreement-and-resistance.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -760,9 +760,9 @@ After this chapter you can:
 
 Primary sources: [beyer2016sre](references/bibliography.md#beyer2016sre), [allspaw2012blameless](references/bibliography.md#allspaw2012blameless), [grove1983high](references/bibliography.md#grove1983high), [edmondson1999psychological](references/bibliography.md#edmondson1999psychological)
 
-### Chapter 58 — Layoffs, Reductions, and Mergers and Acquisitions
+### [Chapter 58 — Layoffs, Reductions, and Mergers and Acquisitions](parts/13-advanced-problems/58-layoffs-reductions-and-mergers.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -772,9 +772,9 @@ After this chapter you can:
 
 Primary sources: [larson2024primer](references/bibliography.md#larson2024primer), [watkins2003first](references/bibliography.md#watkins2003first), [conway1968committees](references/bibliography.md#conway1968committees)
 
-### Chapter 59 — Transformation Under Budget Constraint and Scaling Without Bureaucracy
+### [Chapter 59 — Transformation Under Budget Constraint and Scaling Without Bureaucracy](parts/13-advanced-problems/59-transformation-under-constraint-and-scaling-without-bureaucracy.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -790,12 +790,12 @@ Reusable artifacts, each filled in with a Northstar example. This part has no ch
 
 | Template | Status |
 |---|---|
-| 1:1 template | Planned |
-| Career development plan | Planned |
+| [1:1 template](templates/one-on-one.md) | On the site, awaiting human review |
+| [Career development plan](templates/career-development-plan.md) | On the site, awaiting human review |
 | [Engineering Manager performance rubric](templates/engineering-manager-rubric.md) | On the site, awaiting human review |
 | [Director competency matrix](templates/director-competency-matrix.md) | On the site, awaiting human review |
 | [CTO competency matrix](templates/cto-competency-matrix.md) | On the site, awaiting human review |
-| Team health assessment | Planned |
+| [Team health assessment](templates/team-health-assessment.md) | On the site, awaiting human review |
 | [Organizational design assessment](templates/organizational-design-assessment.md) | On the site, awaiting human review |
 | [Engineering quality scorecard](templates/engineering-quality-scorecard.md) | On the site, awaiting human review |
 | [Technical debt register](templates/technical-debt-register.md) | On the site, awaiting human review |
@@ -808,16 +808,16 @@ Reusable artifacts, each filled in with a Northstar example. This part has no ch
 | [Technology investment business case](templates/technology-investment-business-case.md) | On the site, awaiting human review |
 | [Stakeholder map](templates/stakeholder-map.md) | On the site, awaiting human review |
 | [Executive update](templates/executive-update.md) | On the site, awaiting human review |
-| Leadership succession plan | Planned |
+| [Leadership succession plan](templates/leadership-succession-plan.md) | On the site, awaiting human review |
 | [90-day quality transformation plan](templates/ninety-day-quality-plan.md) | On the site, awaiting human review |
 
 ## Part XV — Capstone: Build and Transform an Engineering Organization
 
 Ten stages at Northstar Technologies, first as Engineering Director and then as CTO.
 
-### Chapter 60 — Capstone: Transforming Northstar Technologies
+### [Chapter 60 — Capstone: Transforming Northstar Technologies](parts/15-capstone/60-capstone-northstar.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -832,7 +832,7 @@ Primary sources: [forsgren2018accelerate](references/bibliography.md#forsgren201
 | Project | Status |
 |---|---|
 | P1: Build an Engineering Management Operating System | On the site, awaiting human review |
-| P2: Diagnose a Low-Performing Engineering Team | Planned |
+| P2: Diagnose a Low-Performing Engineering Team | On the site, awaiting human review |
 | P3: Create an Engineering Quality Transformation Plan | On the site, awaiting human review |
 | P4: Redesign an Organization of 80 Engineers | On the site, awaiting human review |
 | P5: Build a Delivery Performance and Reliability Scorecard | On the site, awaiting human review |

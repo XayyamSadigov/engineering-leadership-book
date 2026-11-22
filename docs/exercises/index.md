@@ -62,3 +62,8 @@ Exercises live at the end of each chapter, in three levels: **Foundational** (F)
 | 53. Risk, Governance, Regulation, and Security Strategy | [Exercises](../parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md#exercises) | [Solutions](../solutions/ch53-solutions.md) |
 | 54. Data and AI Strategy | [Exercises](../parts/12-cto-leadership/54-data-and-ai-strategy.md#exercises) | [Solutions](../solutions/ch54-solutions.md) |
 | 55. Boards, Due Diligence, and Executive Decision-Making | [Exercises](../parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#exercises) | [Solutions](../solutions/ch55-solutions.md) |
+| 56. Recovering a Failing Engineering Organization | [Exercises](../parts/13-advanced-problems/56-recovering-a-failing-engineering-organization.md#exercises) | [Solutions](../solutions/ch56-solutions.md) |
+| 57. Crises, Executive Disagreement, and Resistance to Change | [Exercises](../parts/13-advanced-problems/57-crises-executive-disagreement-and-resistance.md#exercises) | [Solutions](../solutions/ch57-solutions.md) |
+| 58. Layoffs, Reductions, and Mergers and Acquisitions | [Exercises](../parts/13-advanced-problems/58-layoffs-reductions-and-mergers.md#exercises) | [Solutions](../solutions/ch58-solutions.md) |
+| 59. Transformation Under Budget Constraint and Scaling Without Bureaucracy | [Exercises](../parts/13-advanced-problems/59-transformation-under-constraint-and-scaling-without-bureaucracy.md#exercises) | [Solutions](../solutions/ch59-solutions.md) |
+| 60. Capstone: Transforming Northstar Technologies | [Exercises](../parts/15-capstone/60-capstone-northstar.md#exercises) | [Solutions](../solutions/ch60-solutions.md) |

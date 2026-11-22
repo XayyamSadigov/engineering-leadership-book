@@ -5,7 +5,7 @@
 
 Every source the book cites, with what was verified and how much of the source was actually read when the entry was created. An entry marked *bibliographic metadata only* means the citation details were checked against a publisher or catalog page; it does not mean the work was read in full for this project. Chapters cite by linking to the anchors on this page.
 
-416 entries. Grouped by evidence class, then alphabetically by id.
+447 entries. Grouped by evidence class, then alphabetically by id.
 
 ## Scholarly research
 
@@ -21,6 +21,18 @@ David Aboody, and Baruch Lev (1998). “The Value Relevance of Intangibles: The 
 - Supports (abstract): In early SFAS 86 years capitalization raised reported earnings far more than amortization reduced them; by 1995 amortization roughly offset capitalization's positive effect on reported profitability.
 - Caveats: Concerns external-use software under SFAS 86 (now Subtopic 985-20), US public software companies of the 1980s and 1990s, and stock-market associations; it does not study internal-use or cloud software. Correlational.
 
+### adams2021subtractive {#adams2021subtractive}
+
+Gabrielle S. Adams, Benjamin A. Converse, Andrew H. Hales, and Leidy E. Klotz (2021). “People systematically overlook subtractive changes”. Nature, vol. 592, no. 7853, pp. 258-261.
+
+- DOI: [10.1038/s41586-021-03380-y](https://doi.org/10.1038/s41586-021-03380-y) · <https://pubmed.ncbi.nlm.nih.gov/33828317/>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): Across eight experiments, people systematically defaulted to searching for additive changes (adding components) and consequently overlooked advantageous subtractive changes.
+- Supports (abstract): Participants were less likely to find advantageous subtractive changes when the task did not cue them to consider subtraction, when they had only one opportunity (rather than several) to recognize the shortcomings of an additive search, or when they were under higher cognitive load.
+- Supports (abstract): The authors suggest that defaulting to additive search may be one reason people struggle to mitigate overburdened schedules and institutional red tape.
+- Caveats: Laboratory and online experiments with puzzles, designs, and short tasks; the link to organizational red tape is the authors' suggestion in the abstract, not a tested finding. Abstract read on PubMed; the Nature page redirected to a login and the full text was not read.
+
 ### adler1990cto {#adler1990cto}
 
 Paul Adler, and Kasra Ferdows (1990). “The Chief Technology Officer”. California Management Review, vol. 32, no. 3.
@@ -31,6 +43,18 @@ Paul Adler, and Kasra Ferdows (1990). “The Chief Technology Officer”. Califo
 - Supports (abstract): The article explores the role of the chief technical officer in orchestrating a large manufacturing corporation's product, process, and information technologies, based on a survey of 25 CTOs from Fortune 100 industrial companies and telephone interviews with 22 of them.
 - Supports (abstract): It discusses CTOs' tasks and backgrounds and examines the motivations for creating the CTO position.
 - Caveats: Abstract only (California Management Review landing page). Pages 55-62 and DOI 10.2307/41166617 appear in third-party records but were not confirmed on a publisher page in this session, so they are not recorded as verified. Sample is large US manufacturers in 1990, not software companies.
+
+### adler1996bureaucracy {#adler1996bureaucracy}
+
+Paul S. Adler, and Bryan Borys (1996). “Two Types of Bureaucracy: Enabling and Coercive”. Administrative Science Quarterly, vol. 41, no. 1, pp. 61-89.
+
+- DOI: [10.2307/2393986](https://doi.org/10.2307/2393986) · <https://doi.org/10.2307/2393986>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): Proposes a conceptualization of workflow formalization that reconciles views of bureaucracy as alienating employees or as enabling them to do their tasks better, by distinguishing two types of formalization, enabling and coercive.
+- Supports (abstract): Argues that whether formalization affects employees' attitudes positively or negatively depends on whether it helps employees master their tasks or serves as a means by which management tries to coerce effort and compliance.
+- Supports (abstract): Identifies forces that tend to push organizations toward the coercive orientation and countertendencies that encourage the enabling one, and suggests extending the typology to hierarchy and staff functions.
+- Caveats: A conceptual article drawing on research on equipment design, not an empirical test. Abstract read as reconstructed by OpenAlex; the last page (89) is from the journal's standard citation and Crossref gives only the first page (61), so the page range is not fully verified.
 
 ### aghion1997formal {#aghion1997formal}
 
@@ -288,6 +312,28 @@ Nicholas Bloom, Ruobing Han, and James Liang (2024). “Hybrid working from home
 - Supports (abstract): The 395 managers in the trial moved from expecting a negative productivity effect (about -2.6 percent) before the experiment to a positive one (about +1.0 percent) afterwards.
 - Caveats: One firm in one country; hybrid (two home days), not fully remote; the randomization method was not read. Performance measured by review grades, promotions, and lines of code, which are coarse. nature.com redirected to an identity-provider page; abstract read via the Europe PMC record (PMC11208135).
 
+### brockner1987survivors {#brockner1987survivors}
+
+Joel Brockner et al. (1987). “Survivors' Reactions to Layoffs: We Get by with a Little Help for Our Friends”. Administrative Science Quarterly 32(4), beginning p. 526.
+
+- DOI: [10.2307/2392882](https://doi.org/10.2307/2392882) · <https://doi.org/10.2307/2392882>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): A laboratory study and a field survey of employees who survived a major layoff, framed by justice theory, found that survivors reacted most negatively when they identified with the people laid off and perceived them as inadequately compensated.
+- Supports (abstract): The negative reaction took the form of reduced work performance in the laboratory study and lowered organizational commitment, relative to before the layoff, in the field study.
+- Caveats: One laboratory study and one field organization; 1980s data; not software. OpenAlex records only the first page, so no end page is given.
+
+### brockner1990explain {#brockner1990explain}
+
+Joel Brockner, Rocki-Lee DeWitt, Steven Lee Grover, and Thomas F. Reed (1990). “When it is especially important to explain why: Factors affecting the relationship between managers' explanations of a layoff and survivors' reactions to the layoff”. Journal of Experimental Social Psychology 26(5), pp. 389-407.
+
+- DOI: [10.1016/0022-1031(90)90065-T](https://doi.org/10.1016/0022-1031(90)90065-T) · <https://doi.org/10.1016/0022-1031(90)90065-T>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): In a field study of survivors of co-workers' layoffs, survivors who said management had explained the reasons for the layoff more clearly reported more favorable changes in organizational commitment, work effort, and turnover intention.
+- Supports (abstract): The positive relationship between the clarity of explanations and survivors' reactions was especially pronounced when survivors' uncertainty was high and the decision mattered more to them.
+- Caveats: One field study, self-reported changes; the abstract notes limitations it does not detail.
+
 ### bryson2004what {#bryson2004what}
 
 John M. Bryson (2004). “What to Do When Stakeholders Matter: Stakeholder Identification and Analysis Techniques”. Public Management Review, vol. 6, no. 1, pp. 21-53.
@@ -434,6 +480,21 @@ Lyra J. Colfer, and Carliss Y. Baldwin (2016). “The mirroring hypothesis: theo
 - Supports (abstract): Firms can strategically break the mirror with modular partitions inside their boundaries or relational contracts across them; studies of open collaborative projects, most of them software, were not supportive of the hypothesis.
 - Caveats: Abstract only (from the Crossref record). A narrative review; study-level details and counts per category not read.
 
+### coombs2007protecting {#coombs2007protecting}
+
+W. Timothy Coombs (2007). “Protecting Organization Reputations During a Crisis: The Development and Application of Situational Crisis Communication Theory”. Corporate Reputation Review, vol. 10, no. 3, pp. 163-176.
+
+- DOI: [10.1057/palgrave.crr.1550049](https://doi.org/10.1057/palgrave.crr.1550049) · <https://doi.org/10.1057/palgrave.crr.1550049>
+- Evidence class: Scholarly research. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (full-text): The paper presents Situational Crisis Communication Theory (SCCT) as an evidence-based framework, built on experimental research rather than case studies, for anticipating how stakeholders react to a crisis and to the response strategies used.
+- Supports (full-text): The first priority in a crisis is to protect stakeholders from harm, not the reputation; instructing information tells stakeholders how to protect themselves, and adjusting information helps them cope (what happened, corrective action, expressions of concern, which are not admissions of guilt).
+- Supports (full-text): Crisis types are grouped into victim, accidental, and preventable clusters by the crisis responsibility stakeholders attribute; technical-error accidents fall in the accidental cluster, human-error accidents in the preventable cluster.
+- Supports (full-text): Crisis history and an unfavorable prior relational reputation intensify attributions of crisis responsibility and have a direct effect on reputation.
+- Supports (full-text): Primary response strategies form deny, diminish, and rebuild groups (bolstering is secondary); the guidelines recommend rebuild strategies for accidental crises with a crisis history or unfavorable prior reputation and for preventable crises, and warn that mixing deny strategies with diminish or rebuild erodes the whole response.
+- Supports (full-text): Overly accommodative responses cost more and produce no greater reputational benefit than the prescribed strategy; for example a full apology in an accidental crisis gave no greater benefit than an excuse with adjusting information, and over-accommodation can make stakeholders think the crisis is worse.
+- Caveats: Reputation-focused communication theory, mostly tested in experiments with scenario readers. Not specific to software outages; mapping a software outage to a crisis cluster is this book's inference.
+
 ### cox2008risk {#cox2008risk}
 
 L. A. Cox (2008). “What's Wrong with Risk Matrices?”. Risk Analysis.
@@ -492,6 +553,16 @@ Jason Dana, Robyn Dawes, and Nathanial Peterson (2013). “Belief in the unstruc
 - Supports (full-text): Adding an unstructured interview to background information made predictions less accurate than the background information alone (dilution).
 - Supports (full-text): Most participants said they would rather have a random interview than no interview; the authors recommend that those making screening decisions not use unstructured interviews.
 - Caveats: Student participants, a grade-prediction task, and small samples (76, 64, and 169 participants); not an employment setting. The chapter uses it for the mechanism (sensemaking and dilution), not for an effect size.
+
+### datta2010downsizing {#datta2010downsizing}
+
+Deepak K. Datta, James P. Guthrie, Dynah Basuil, and Alankrita Pandey (2010). “Causes and Effects of Employee Downsizing: A Review and Synthesis”. Journal of Management 36(1), pp. 281-348.
+
+- DOI: [10.1177/0149206309346735](https://doi.org/10.1177/0149206309346735) · <https://doi.org/10.1177/0149206309346735>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The review develops an integrative framework of the environmental and organizational antecedents of downsizing and its implications for individuals and organizations, reviews key empirical studies, and identifies major patterns and contradictions in the literature.
+- Caveats: Abstract only; the review's specific conclusions about firm performance were not read and are not reported. OpenAlex dates the online publication 2009; the journal issue is 2010.
 
 ### day2014advances {#day2014advances}
 
@@ -563,6 +634,17 @@ Fabrizio Dell'Acqua et al. (2026). “Navigating the Jagged Technological Fronti
 - Supports (abstract): In a preregistered experiment with 758 consultants, subjects using GPT-4 on 18 tasks inside the frontier completed 12.2 percent more tasks, 25.1 percent more quickly, with higher quality; on a task chosen to be outside the frontier they were 19 percent less likely to produce correct solutions.
 - Caveats: Management-consulting tasks, not software engineering; one model generation. Earlier circulated as an HBS working paper (SSRN 4573321).
 
+### detert2007leadership {#detert2007leadership}
+
+James R. Detert, and Ethan R. Burris (2007). “Leadership Behavior and Employee Voice: Is the Door Really Open?”. Academy of Management Journal, vol. 50, no. 4, pp. 869-884.
+
+- DOI: [10.5465/amj.2007.26279183](https://doi.org/10.5465/amj.2007.26279183) · <https://doi.org/10.5465/amj.2007.26279183>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): In a two-phase study of 3,149 employees and 223 managers in a restaurant chain, managerial openness was more consistently related to subordinates' improvement-oriented voice than transformational leadership, controlling for many individual differences.
+- Supports (abstract): The relationship was mediated by subordinates' perceptions of psychological safety, and leadership behaviors had the strongest effect on the voice of the best-performing employees.
+- Caveats: One restaurant chain; correlational field data; abstract only.
+
 ### dewit2012paradox {#dewit2012paradox}
 
 Frank R. C. de Wit, Lindred L. Greer, and Karen A. Jehn (2012). “The paradox of intragroup conflict: A meta-analysis”. Journal of Applied Psychology, vol. 97, no. 2, pp. 360-390.
@@ -587,6 +669,17 @@ Torgeir Dingsøyr, Nils Brede Moe, Tor Erlend Fægri, and Eva Amdahl Seim (2018)
 - Supports (full-text): Agile methods were adapted and complemented with practices from traditional methods to handle the scale; key challenge areas were customer involvement, software architecture, and inter-team coordination.
 - Supports (full-text): Many coordination arenas were used (including Scrum of Scrums, a Metascrum, demos, forums and instant messaging), the arenas changed over time, and participants stressed informal coordination; the authors note that extra roles and arenas led to less team autonomy.
 - Caveats: Single case; the authors have no measure of the total effectiveness of the coordination arenas beyond the programme being recognized as a success. Open access under CC BY 4.0 (Crossref license field).
+
+### dirks2002trust {#dirks2002trust}
+
+Kurt T. Dirks, and Donald L. Ferrin (2002). “Trust in Leadership: Meta-Analytic Findings and Implications for Research and Practice”. Journal of Applied Psychology, vol. 87, no. 4, pp. 611-628.
+
+- DOI: [10.1037/0021-9010.87.4.611](https://doi.org/10.1037/0021-9010.87.4.611) · <https://doi.org/10.1037/0021-9010.87.4.611>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The meta-analysis (k = 106) estimates relationships between trust in leadership and key outcomes, antecedents, and correlates from four decades of research.
+- Supports (abstract): Specifying the referent (direct leaders versus organizational leadership) and the type of trust produces systematically different relationships; direct leaders such as supervisors appear to be a particularly important referent of trust.
+- Caveats: Abstract only; effect sizes were not read and none are reported. Correlational.
 
 ### dixit1994investment {#dixit1994investment}
 
@@ -785,6 +878,17 @@ Bent Flyvbjerg (2006). “From Nobel Prize to Project Management: Getting Risks 
 - Supports (full-text): The paper reports the first practical application, by the UK Department for Transport and HM Treasury from 2004, using empirically based 'optimism bias uplifts' for reference classes of transport projects; the required uplift rises as the accepted risk of overrun falls (for road projects, 15 percent at a 50 percent accepted risk and 45 percent at 10 percent).
 - Caveats: Evidence base is large public transport infrastructure, not software. The author's own data and method; later critiques of Flyvbjerg's overrun statistics exist and were not reviewed here. Read from the author-posted arXiv version, which states the journal reference.
 
+### ford2008resistance {#ford2008resistance}
+
+Jeffrey D. Ford, Laurie W. Ford, and Angelo D'Amelio (2008). “Resistance to Change: The Rest of the Story”. Academy of Management Review, vol. 33, no. 2, pp. 362-377.
+
+- DOI: [10.5465/amr.2008.31193235](https://doi.org/10.5465/amr.2008.31193235) · <https://doi.org/10.5465/amr.2008.31193235>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The article argues that prevailing views of resistance tell a one-sided story favoring change agents, treating resistance as an irrational, dysfunctional reaction located in change recipients.
+- Supports (abstract): It proposes that change agents contribute to resistance through their own actions and inactions, and that resistance can be a resource for change.
+- Caveats: Conceptual article (theory, not an empirical test); abstract only.
+
 ### forsgren2021space {#forsgren2021space}
 
 Nicole Forsgren et al. (2021). “The SPACE of Developer Productivity: There's more to it than you think”. ACM Queue, vol. 19, no. 1, pp. 20-48.
@@ -876,6 +980,16 @@ Michael Gibbs, Friederike Mengel, and Christoph Siemroth (2023). “Work from Ho
 - Supports (abstract (working-paper version)): Time in meetings and coordination rose, while uninterrupted working time, networking, coaching, and one-on-one meetings with supervisors fell; the authors attribute much of the decline to higher communication and coordination costs.
 - Caveats: Abstract read for the IZA working paper only; the published JPE Micro article (metadata via Crossref) was not read and its point estimates may differ, so the book does not print a percentage. Pandemic conditions (forced, sudden, with children at home), not a chosen remote policy. One firm.
 
+### graebner2004momentum {#graebner2004momentum}
+
+Melissa E. Graebner (2004). “Momentum and serendipity: how acquired leaders create value in the integration of technology firms”. Strategic Management Journal 25(8-9), pp. 751-777.
+
+- DOI: [10.1002/smj.419](https://doi.org/10.1002/smj.419) · <https://doi.org/10.1002/smj.419>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): A grounded-theory study of the integration of eight technology acquisitions found that acquired managers play a key role in achieving both expected and serendipitous value, maintaining advantages of both integration and autonomy.
+- Caveats: Eight cases, theory-building; not a test of effect sizes.
+
 ### gren2022agile {#gren2022agile}
 
 Lucas Gren, and Paul Ralph (2022). “What Makes Effective Leadership in Agile Software Development Teams?”. 44th International Conference on Software Engineering (ICSE 2022).
@@ -963,6 +1077,15 @@ Stephen C. Hansen, David T. Otley, and Wim A. Van der Stede (2003). “Practice 
 - Supports (abstract): The abstract describes two practitioner responses to the shortcomings of traditional budgeting, one improving the budgeting process and focused on planning problems, the other abandoning the budget and focused on performance-evaluation problems, and places both in a research context.
 - Caveats: Overview article; abstract only. No findings are attributed beyond the two-approach framing.
 
+### haspeslagh1991managing {#haspeslagh1991managing}
+
+Philippe C. Haspeslagh, and David B. Jemison (1991). *Managing Acquisitions: Creating Value Through Corporate Renewal*. Free Press.
+
+- ISBN-13: 9780029141656 · <https://openlibrary.org/works/OL4477684W>
+- Evidence class: Scholarly research. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-22): title, subtitle, authors, year, publisher, isbn13.
+- Caveats: Metadata only. Credited only for the idea it is widely known for, that integration approaches differ by how much the acquired firm needs autonomy and how much strategic interdependence the deal requires (often summarized as preservation, absorption, and symbiosis). No finding, quotation, or page number is used.
+
 ### henderson1993alignment {#henderson1993alignment}
 
 John C. Henderson, and N. Venkatraman (1993). “Strategic alignment: Leveraging information technology for transforming organizations”. IBM Systems Journal, vol. 32, no. 1 (Crossref record; the DOI is that of the 1999 reprint, vol. 38, nos. 2-3, pp. 472-484).
@@ -1017,6 +1140,15 @@ Michael Hilton et al. (2016). “Usage, costs, and benefits of continuous integr
 - Supports (abstract): The study analysed 34,544 open-source GitHub projects and 1,529,291 builds, and surveyed 442 developers, to examine how CI is used and why projects do or do not adopt it.
 - Supports (abstract): The abstract reports that the evidence suggests CI helps projects release more often, and that CI is widely adopted by the most popular projects with adoption still growing.
 - Caveats: Open-source GitHub projects in 2016; observational, so the release-frequency association is not proof of causation and may not transfer to closed-source enterprise teams. Abstract reconstructed from OpenAlex's inverted index; check the figures against the paper before printing.
+
+### hirschman1970exit {#hirschman1970exit}
+
+Albert O. Hirschman (1970). *Exit, Voice, and Loyalty*. Harvard University Press.
+
+- ISBN-13: 9780674276604 · <https://openlibrary.org/works/OL2745855W>
+- Evidence class: Scholarly research. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-22): title, authors, year, publisher, isbn13.
+- Supports (metadata (idea credited only)): Known for the idea that members dissatisfied with an organization respond by exit (leaving) or voice (speaking up to change it), and that loyalty makes voice more likely by raising the cost of exit (idea level only).
 
 ### hoffman2021people {#hoffman2021people}
 
@@ -1183,6 +1315,17 @@ Peter H. Kim, Donald L. Ferrin, Cecily D. Cooper, and Kurt T. Dirks (2004). “R
 - Supports (abstract): Trust was also repaired more successfully when the party had apologized and later evidence showed guilt, or had denied and later evidence showed innocence.
 - Caveats: Abstract only; samples, settings, and effect sizes were not read, so none are reported. These are experimental studies of an alleged violation, not field studies of managers after a failed initiative; the transfer to a director's failed change is this book's inference.
 
+### king2004metaanalyses {#king2004metaanalyses}
+
+David R. King, Dan R. Dalton, Catherine M. Daily, and Jeffrey G. Covin (2004). “Meta-analyses of post-acquisition performance: indications of unidentified moderators”. Strategic Management Journal 25(2), pp. 187-200.
+
+- DOI: [10.1002/smj.371](https://doi.org/10.1002/smj.371) · <https://doi.org/10.1002/smj.371>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): Meta-analyses of the most commonly studied antecedents found that, on average, acquiring firms' performance does not positively change as a function of acquisition activity and is modestly negatively affected.
+- Supports (abstract): The authors conclude that unidentified variables may explain significant variance in post-acquisition performance.
+- Caveats: Firm-level financial performance across many industries, not engineering outcomes. OpenAlex dates online publication 2003; the journal issue is 2004.
+
 ### kluger1996effects {#kluger1996effects}
 
 Avraham N. Kluger, and Angelo DeNisi (1996). “The effects of feedback interventions on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory”. Psychological Bulletin, vol. 119, no. 2, pp. 254-284.
@@ -1300,6 +1443,17 @@ Thomas W. Lee, and Terence R. Mitchell (1994). “An Alternative Approach: The U
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
 - Supports (abstract): Models voluntary turnover as four distinctive decision paths, each involving distinctive foci, psychological processes, and external events, drawing on decision making, statistics, and social psychology.
 - Caveats: Theory paper; no data. The abstract does not use the word 'shock'; the chapter does not attribute that term to the source. OpenAlex confirms authors, volume 19, issue 1, and first page 51; the last page (89) is from common citation and was not confirmed (OpenAlex lists 51-51; Crossref returned no JSON for this DOI during the session).
+
+### lee2017selfmanaging {#lee2017selfmanaging}
+
+Michael Y. Lee, and Amy C. Edmondson (2017). “Self-managing organizations: Exploring the limits of less-hierarchical organizing”. Research in Organizational Behavior, vol. 37, pp. 35-58.
+
+- DOI: [10.1016/j.riob.2017.10.002](https://doi.org/10.1016/j.riob.2017.10.002) · <https://www.insead.edu/faculty-research/publications/journal-articles/self-managing-organizations-exploring-limits-less>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): Reviews research on organizations that reduce or eliminate the conventional managerial hierarchy, grouped into post-bureaucratic organizations, humanistic management, and organizational democracy.
+- Supports (abstract): Defines self-managing organizations as efforts that radically decentralize authority in a formal, systematic way throughout the organization, says scholarly understanding of such organizing is limited, and proposes a research agenda; the abstract reports no empirical findings.
+- Caveats: A review and agenda, not a test of whether removing managers works. Abstract read as summarized on INSEAD's publication page (publisher abstract elided in Semantic Scholar and absent in Crossref); the full text was not read.
 
 ### lenarduzzi2020migrating {#lenarduzzi2020migrating}
 
@@ -1471,6 +1625,17 @@ John E. Mathieu, and Tammy L. Rapp (2009). “Laying the Foundation for Successf
 - Supports (abstract): Teams with high-quality performance strategies outperformed teams with poorer strategies.
 - Supports (abstract): Charter quality interacted with performance strategy quality; the highest sustained performance came from teams high on both.
 - Caveats: Student teams in a simulation, not software teams; 32 teams. Effect sizes and how charter quality was rated were not read.
+
+### mayer1995integrative {#mayer1995integrative}
+
+Roger C. Mayer, James H. Davis, and F. David Schoorman (1995). “An Integrative Model of Organizational Trust”. Academy of Management Review, vol. 20, no. 3, pp. 709-734.
+
+- DOI: [10.5465/amr.1995.9508080335](https://doi.org/10.5465/amr.1995.9508080335) · <https://doi.org/10.5465/amr.1995.9508080335>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The paper presents a definition of trust and a model of its antecedents and outcomes that integrates research from multiple disciplines and differentiates trust from similar constructs, with research propositions.
+- Supports (metadata (idea credited only)): The model is known for naming ability, benevolence, and integrity as the factors of perceived trustworthiness (idea level only; not stated in the abstract that was read).
+- Caveats: The DOI 10.2307/258792 (JSTOR) and 10.5465/amr.1995.9508080335 (AOM) identify the same article; OpenAlex resolves the JSTOR DOI to the AOM DOI. The AOM page returned 403. The three trustworthiness factors are credited at idea level only; no finding is reported from the paper. Last page 734 is the standard citation, not re-confirmed on a fetched page.
 
 ### mcintosh2014impact {#mcintosh2014impact}
 
@@ -1727,6 +1892,16 @@ O. Parry, Gregory M. Kapfhammer, Michael C. Hilton, and P. McMinn (2022). “A S
 - Supports (abstract): The authors argue that flaky tests threaten the validity of any method that assumes a test's outcome depends only on the code it covers.
 - Caveats: A literature survey, not a new measurement. The abstract cites a developer survey figure (59 percent dealing with flaky tests at least monthly) from another study; this book does not use that figure because the underlying study was not read. Semantic Scholar lists year 2022 (volume 31); an online-first version appeared in 2021.
 
+### paruchuri2006integration {#paruchuri2006integration}
+
+Srikanth Paruchuri, Atul Nerkar, and Donald C. Hambrick (2006). “Acquisition Integration and Productivity Losses in the Technical Core: Disruption of Inventors in Acquired Companies”. Organization Science 17(5), pp. 545-562.
+
+- DOI: [10.1287/orsc.1060.0207](https://doi.org/10.1287/orsc.1060.0207) · <https://doi.org/10.1287/orsc.1060.0207>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): Using patent application data on 3,933 inventors in pharmaceutical firms whose companies were acquired, the authors tested the hypothesis that integration generally impairs the productivity of acquired scientists, most severely for inventors who lose the most social status and centrality in the combined entity; the abstract reports results strongly in line with these expectations.
+- Caveats: Pharmaceutical inventors measured by patents, not software engineers; the transfer to engineering teams is this book's inference.
+
 ### peng2023copilot {#peng2023copilot}
 
 Sida Peng, Eirini Kalliamvakou, Peter Cihon, and Mert Demirer (2023). *The Impact of AI on Developer Productivity: Evidence from GitHub Copilot*. arXiv preprint 2302.06590.
@@ -1771,6 +1946,17 @@ Robert Phaal, Clare J. P. Farrukh, and David R. Probert (2004). “Technology ro
 - Supports (metadata (idea credited only)): Credited at idea level only for the widely known layered technology roadmap, which links market and business drivers, products and services, and technologies and resources on a shared time axis.
 - Caveats: Metadata only. No quotation, page number, or finding.
 
+### piderit2000rethinking {#piderit2000rethinking}
+
+Sandy Kristin Piderit (2000). “Rethinking Resistance and Recognizing Ambivalence: A Multidimensional View of Attitudes Toward an Organizational Change”. Academy of Management Review, vol. 25, no. 4, pp. 783-794.
+
+- DOI: [10.5465/amr.2000.3707722](https://doi.org/10.5465/amr.2000.3707722) · <https://doi.org/10.5465/amr.2000.3707722>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The article reviews studies of resistance to change and proposes reconceptualizing individual responses to change as multidimensional attitudes.
+- Supports (abstract): It raises the question of how to balance the organizational need to foster ambivalent attitudes toward change against the individual need to limit the debilitating effects of ambivalence.
+- Caveats: Conceptual review; abstract only.
+
 ### pulakos2011broken {#pulakos2011broken}
 
 Elaine D. Pulakos, and Ryan S. O'Leary (2011). “Why Is Performance Management Broken?”. Industrial and Organizational Psychology, vol. 4, no. 2, pp. 146-164.
@@ -1781,6 +1967,17 @@ Elaine D. Pulakos, and Ryan S. O'Leary (2011). “Why Is Performance Management 
 - Supports (abstract): The authors argue that performance management has been reduced to prescribed steps within formal administrative systems disconnected from the day-to-day activities that determine its effectiveness, such as communicating clear expectations, setting short-term objectives, and continual guidance.
 - Supports (abstract): They argue against an exclusive focus on redesigning formal system features and for more attention to manager-employee communication and the manager-employee relationship.
 - Caveats: A focal (position) article in a commentary journal, arguing from the literature; not an empirical study.
+
+### puranam2006organizing {#puranam2006organizing}
+
+Phanish Puranam, Harbir Singh, and Maurizio Zollo (2006). “Organizing for Innovation: Managing the Coordination-Autonomy Dilemma in Technology Acquisitions”. Academy of Management Journal 49(2), pp. 263-280.
+
+- DOI: [10.5465/amj.2006.20786062](https://doi.org/10.5465/amj.2006.20786062) · <https://doi.org/10.5465/amj.2006.20786062>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): Large firms acquiring small technology firms face a dilemma between coordinating the acquired firm's capabilities and preserving its autonomy to explore.
+- Supports (abstract): Structural integration decreased the likelihood of introducing new products for acquired firms that had not launched products before acquisition, and for all firms immediately after acquisition, but these effects disappeared as the acquired firms' innovation trajectories evolved.
+- Caveats: Abstract only; sample and measures not read. Outcome is new product introduction, not software delivery measures.
 
 ### rahman2016feature {#rahman2016feature}
 
@@ -1803,6 +2000,16 @@ Raghuram G. Rajan, and Julie Wulf (2006). “The Flattening Firm: Evidence from 
 - Supports (abstract): Using data on job descriptions, reporting relationships and pay in over 300 large US firms, the authors find that corporate hierarchies became flatter: more positions report directly to the CEO (a wider CEO span of control) and fewer levels separate division heads from the CEO.
 - Supports (abstract): Division managers who moved closer to the CEO received higher pay and larger long-term incentives, which the authors read as evidence that authority was delegated downward.
 - Caveats: Large US firms and senior management layers only, in an earlier period; says nothing directly about engineering team size or an optimal span of control. Abstract read on the NBER working-paper page (WP 9633, April 2003), which cites the published version; the journal text was not read.
+
+### ranft2002acquiring {#ranft2002acquiring}
+
+Annette L. Ranft, and Michael D. Lord (2002). “Acquiring New Technologies and Capabilities: A Grounded Model of Acquisition Implementation”. Organization Science 13(4), pp. 420-441.
+
+- DOI: [10.1287/orsc.13.4.420.2952](https://doi.org/10.1287/orsc.13.4.420.2952) · <https://doi.org/10.1287/orsc.13.4.420.2952>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): From seven in-depth cases of high-technology acquisitions, the authors develop a grounded model of technology and capability transfer during acquisition implementation, in which the nature of the acquired firm's knowledge-based resources and several dimensions of implementation have independent and interactive effects on whether the acquirer appropriates the technologies and capabilities.
+- Caveats: Seven cases; the output is propositions for further research, not tested findings. The specific propositions were not read.
 
 ### repenning2001nobody {#repenning2001nobody}
 
@@ -2088,6 +2295,17 @@ Barry M. Staw (1976). “Knee-deep in the big muddy: a study of escalating commi
 - Supports (metadata (idea credited only)): The article is known for introducing escalation of commitment, the tendency to commit further resources to a failing course of action one chose oneself (idea level only).
 - Caveats: Metadata only; the publisher page returned 403 and no abstract was available for the 1976 article, so no finding, sample, or effect is reported.
 
+### staw1981threat {#staw1981threat}
+
+Barry M. Staw, Lance E. Sandelands, and Jane E. Dutton (1981). “Threat Rigidity Effects in Organizational Behavior: A Multilevel Analysis”. Administrative Science Quarterly, vol. 26, no. 4, pp. 501-524.
+
+- DOI: [10.2307/2392337](https://doi.org/10.2307/2392337) · <https://doi.org/10.2307/2392337>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The paper explores the case for a general threat-rigidity effect in individual, group, and organizational behavior.
+- Supports (abstract): It summarizes evidence from multiple levels of analysis showing a restriction in information processing and a constriction of control under threat conditions, and discusses possible mechanisms and functional and dysfunctional consequences.
+- Caveats: Abstract only (via OpenAlex; Crossref gives page 501 as first page, last page 524 from the standard citation and not re-confirmed on a fetched page). A multilevel review, not a study of software organizations; the application to incident command and status reporting is this book's inference.
+
 ### strathern1997improving {#strathern1997improving}
 
 Marilyn Strathern (1997). “'Improving ratings': audit in the British University system”. European Review, vol. 5, no. 3, pp. 305-321.
@@ -2118,6 +2336,17 @@ Kevin J. Sullivan, William G. Griswold, Yuanfang Cai, and Ben Hallen (2001). “
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
 - Supports (abstract): The paper evaluates a theory that uses design structure matrices to model designs and real options techniques to value them, applies it to Parnas's KWIC designs, and reports options results consistent with Parnas's conclusions, suggesting potential to inform software design.
 - Caveats: One worked example (KWIC); shows the reasoning is applicable, not that it predicts outcomes.
+
+### sverke2002insecurity {#sverke2002insecurity}
+
+Magnus Sverke, Johnny Hellgren, and Katharina Näswall (2002). “No security: A meta-analysis and review of job insecurity and its consequences”. Journal of Occupational Health Psychology 7(3), pp. 242-264.
+
+- DOI: [10.1037/1076-8998.7.3.242](https://doi.org/10.1037/1076-8998.7.3.242) · <https://doi.org/10.1037/1076-8998.7.3.242>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): A meta-analysis found that job insecurity has detrimental consequences for employees' job attitudes, organizational attitudes, health, and, to some extent, their behavioral relationship with the organization.
+- Supports (abstract): Moderator analyses suggested the behavioral consequences of insecurity were more detrimental among manual than nonmanual workers.
+- Caveats: Abstract only; effect sizes not read. Studies are mostly cross-sectional; the authors call for longitudinal designs. Not software-specific.
 
 ### sweller1988cognitive {#sweller1988cognitive}
 
@@ -2184,6 +2413,29 @@ Adam Tornhill, and Markus Borg (2022). “Code Red: The Business Impact of Code 
 - Supports (abstract): The study analyzed 39 proprietary production codebases (30,737 files) using the CodeScene tool, combining code analysis, version-control mining, and Jira issue data.
 - Supports (abstract): It reports that low-quality code had about 15 times more defects than high-quality code, and that resolving issues in low-quality code took on average 124% more development time, with maximum cycle times up to 9 times longer.
 - Caveats: Observational and correlational; code quality is defined by one commercial tool's code-health measure, so results depend on that measure. The 42% developer-time figure in the abstract's motivation comes from other work and was not verified; do not cite it from here. Abstract read on arXiv (preprint); the proceedings version was not read.
+
+### trahms2013decline {#trahms2013decline}
+
+Cheryl A. Trahms, Hermann Achidi Ndofor, and David G. Sirmon (2013). “Organizational Decline and Turnaround: A Review and Agenda for Future Research”. Journal of Management, vol. 39, no. 5, pp. 1277-1307.
+
+- DOI: [10.1177/0149206312471390](https://doi.org/10.1177/0149206312471390) · <https://doi.org/10.1177/0149206312471390>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): authors, year, venue, doi.
+- Supports (abstract): The review states that in the 20 years since the previous review the scope of turnaround research expanded dramatically but remains empirically and theoretically fragmented.
+- Supports (abstract): It reports that recent research has incorporated managerial cognition, strategic leadership, and stakeholder management, and has identified simultaneous and complex resource-based actions beyond the two-stage model of Pearce and Robbins's earlier review.
+- Supports (abstract): It catalogues twenty years of empirical evidence, develops a descriptive model of decline and turnaround, and proposes a research agenda.
+- Caveats: Abstract only. Crossref returns the main title "Organizational Decline and Turnaround"; the subtitle is the standard citation and was not shown on a fetched page, so title is not listed in verified_fields. The research is about firms and financial performance, not engineering organizations. The SAGE landing page was not fetched (publisher redirect).
+
+### trevor2008downsizing {#trevor2008downsizing}
+
+Charlie O. Trevor, and Anthony J. Nyberg (2008). “Keeping Your Headcount When All About You Are Losing Theirs: Downsizing, Voluntary Turnover Rates, and the Moderating Role of HR Practices”. Academy of Management Journal 51(2), pp. 259-276.
+
+- DOI: [10.5465/amj.2008.31767250](https://doi.org/10.5465/amj.2008.31767250) · <https://doi.org/10.5465/amj.2008.31767250>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): Using organization-level data from multiple industries, the study tests whether downsizing predicts voluntary turnover rates, whether aggregated organizational commitment mediates the relationship, and whether HR practices moderate it; the abstract reports that the results support the hypothesized main, mediated, and moderated effects.
+- Supports (abstract): The hypothesized moderators were HR practices that embed employees or convey procedural fairness (expected to weaken the downsizing-turnover relationship) and practices that enhance career development (expected to strengthen it).
+- Caveats: Abstract only; effect sizes, samples, and industries not read. Organization-level, observational. Not software-specific.
 
 ### vanmarum2022barriers {#vanmarum2022barriers}
 
@@ -2262,6 +2514,17 @@ Karl E. Weick (1984). “Small wins: Redefining the scale of social problems”.
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
 - Supports (metadata (idea credited only)): The article is known for arguing that recasting large problems as a series of small, concrete, completed outcomes ("small wins") makes them more tractable and builds momentum (idea level only).
 - Caveats: Metadata only; no abstract was available through Crossref, OpenAlex, or Semantic Scholar, and the APA page did not render. It is an essay, not an empirical study.
+
+### weick1993collapse {#weick1993collapse}
+
+Karl E. Weick (1993). “The Collapse of Sensemaking in Organizations: The Mann Gulch Disaster”. Administrative Science Quarterly, vol. 38, no. 4, pp. 628-652.
+
+- DOI: [10.2307/2393339](https://doi.org/10.2307/2393339) · <https://doi.org/10.2307/2393339>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, doi.
+- Supports (abstract): The paper analyzes the deaths of 13 men in the Mann Gulch fire as the interactive disintegration of role structure and sensemaking in a minimal organization.
+- Supports (abstract): It proposes four sources of resilience that make groups less vulnerable to disruptions of sensemaking improvisation, virtual role systems, the attitude of wisdom, and norms of respectful interaction.
+- Caveats: A single historical case analyzed qualitatively; abstract only. Transfer to incident response is this book's inference.
 
 ### weill2004govern {#weill2004govern}
 
@@ -2887,6 +3150,19 @@ AICPA & CIMA (2026). *AICPA Proposes Update of SOC 2 Trust Services Criteria to 
 - Supports (official-summary): The proposed 2027 Trust Services Criteria would apply to engagements beginning on or after December 31, 2027, with early adoption permitted; comments on the exposure draft are accepted through January 15, 2027.
 - Caveats: Exposure draft, date-sensitive; re-check status before publication.
 
+### atlassian2022outage {#atlassian2022outage}
+
+Sri Viswanath (2022). “Post-Incident Review on the Atlassian April 2022 outage”. Atlassian Engineering blog.
+
+- <https://www.atlassian.com/engineering/post-incident-review-april-2022-outage>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full-text): 775 customers lost access to their Atlassian products, covering 883 sites; the outage spanned up to 14 days for a subset; the first customers were restored on April 8 and all sites by April 18, 2022.
+- Supports (full-text): A script meant to delete a standalone app was run with site IDs instead of app IDs and deleted 883 sites between 07:38 and 08:01 UTC on April 5, 2022; the review names a communication gap between the requesting and executing teams and an API that gave no warning about whether a site or an app was being deleted.
+- Supports (full-text): The review says Atlassian did not acknowledge the incident quickly and consistently through multiple channels; its first broad external message was a tweet on April 7 at 00:56 UTC.
+- Supports (full-text): Atlassian could not reach many customers because their contact information was deleted with their sites, which also blocked customers from filing support tickets; the review says broader communication should have started much earlier, that it should have been transparent about what it did and did not know about restoration timelines, and commits to backing up key contacts outside the product and updating its incident communications playbook.
+- Caveats: The company's own account of its incident. Documented practice from one organization.
+
 ### aws-well-architected {#aws-well-architected}
 
 Amazon Web Services (2026). “AWS Well-Architected Framework”. AWS documentation.
@@ -2921,6 +3197,46 @@ Cybersecurity and Infrastructure Security Agency (2026). “Known Exploited Vuln
 - Supports (full-text): CISA describes the KEV catalog as an authoritative list of vulnerabilities known to have been exploited and states that organizations should use it as an input to their vulnerability management prioritization framework.
 - Caveats: Continuously updated catalog; year is the access year. US-government source.
 
+### dol2003warnemployer {#dol2003warnemployer}
+
+U.S. Department of Labor, Employment and Training Administration (2003). *Employer's Guide to Advance Notice of Closings and Layoffs: Worker Adjustment and Retraining Notification (WARN) Act*. U.S. Department of Labor, Employment and Training Administration (PDF linked from the WARN Act Compliance Assistance page).
+
+- <https://www.dol.gov/sites/dolgov/files/ETA/Layoff/pdfs/_EmployerWARN2003.pdf>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full text): The guide states that the WARN Act requires employers to provide written notice at least 60 calendar days in advance of covered plant closings and mass layoffs.
+- Supports (full text): It describes covered employers as businesses with 100 or more full-time workers (not counting workers with less than 6 months on the job or working fewer than 20 hours a week), or with 100 or more workers working a combined 4,000 hours a week.
+- Supports (full text): It describes a mass layoff as 500 or more workers at a single site in a 30-day period, or 50 to 499 workers where they are at least 33 percent of the active workforce at that site, not counting part-time workers; and a plant closing as a shutdown affecting at least 50 employees at a single site.
+- Supports (full text): It explains that employment losses are looked at over a 30-day period and that a series of smaller layoffs within 90 days can be aggregated unless they result from separate and distinct causes.
+- Supports (full text): It states that WARN does not supersede laws or collective bargaining agreements that provide additional notice or rights, that WARN applies to the sale of a business with the seller responsible before the sale is effective and the buyer after, and that violation makes the employer liable for back pay and benefits for up to 60 days.
+- Supports (full text): The guide says it is not an official statement of interpretation of WARN or the regulations (20 CFR Part 639) and does not replace the advice of counsel; the DOL page says federal courts enforce the Act.
+- Caveats: A 2003 guide; the PDF is still linked from the DOL's WARN Act Compliance Assistance page (fetched 2026-11-22), but the statute, regulations, or case law may have changed since, and many US states have their own notice laws with different thresholds, which this source does not cover. Used only to show the kind of rule that exists, never as legal advice. Text extracted from the PDF locally.
+
+### eeoc2009waivers {#eeoc2009waivers}
+
+U.S. Equal Employment Opportunity Commission (2009). “Q&A-Understanding Waivers of Discrimination Claims in Employee Severance Agreements”. U.S. Equal Employment Opportunity Commission technical assistance document EEOC-NVTA-2009-2, issued July 15, 2009.
+
+- <https://www.eeoc.gov/laws/guidance/qa-understanding-waivers-discrimination-claims-employee-severance-agreements>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full text): For a waiver of age claims requested from a group of employees being laid off, the employer must give at least 45 days to consider it and must inform each person in writing of the decisional unit, the eligibility factors, the time limits, and the job titles and ages of those selected and not selected in that unit.
+- Supports (full text): The decisional unit is the class, unit, or group of employees from which the employer chose those who were and were not selected; it may be a facility, a department, employees reporting to a particular manager, or a job classification, depending on the circumstances.
+- Supports (full text): Individual waivers give at least 21 days to consider and seven days to revoke, and signing a waiver does not remove the right to file a charge with the EEOC.
+- Supports (full text): The page notes that employers conducting reductions often select by seniority, by individual criteria such as performance or experience, or by eliminating a position, division, or department, and that selection may lead those laid off to believe they were discriminated against.
+- Caveats: US federal guidance only, from 2009; the page states it does not have the force and effect of law. Fetched via the EEOC's node URL, whose canonical link is the URL recorded. Not legal advice.
+
+### eu1998collective {#eu1998collective}
+
+Council of the European Union (1998). *Council Directive 98/59/EC of 20 July 1998 on the approximation of the laws of the Member States relating to collective redundancies*. Official Journal of the European Communities, L 225, 12 August 1998, pp. 16-21.
+
+- <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31998L0059>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full text): Article 1 defines collective redundancies by thresholds chosen by each Member State, either over 30 days (at least 10 in establishments of more than 20 and fewer than 100 workers, at least 10 percent in establishments of 100 to 299, at least 30 in establishments of 300 or more) or over 90 days (at least 20, whatever the establishment's size).
+- Supports (full text): Article 2 requires an employer contemplating collective redundancies to begin consultations with workers' representatives in good time with a view to reaching an agreement, covering ways of avoiding or reducing the redundancies and mitigating their consequences, and to notify them in writing of the reasons, numbers, period, and the proposed selection criteria, among other items.
+- Supports (full text): Articles 3 and 4 require written notification to the competent public authority, and projected redundancies take effect not earlier than 30 days after that notification, a period Member States may shorten or allow the authority to extend.
+- Caveats: A directive binds Member States, not employers directly; obligations reach employers through national transposing law, which differs between countries and may have been amended. Only Articles 1 to 4 and the recitals were read, from the original Official Journal text on EUR-Lex (not a consolidated version). Not legal advice.
+
 ### eu2023paytransparency {#eu2023paytransparency}
 
 European Parliament and Council of the European Union (2023). *Directive (EU) 2023/970 of the European Parliament and of the Council of 10 May 2023 to strengthen the application of the principle of equal pay for equal work or work of equal value between men and women through pay transparency and enforcement mechanisms*. Official Journal of the European Union, L 132, 17 May 2023, p. 21.
@@ -2936,6 +3252,19 @@ European Parliament and Council of the European Union (2023). *Directive (EU) 20
 - Supports (full text): Article 4 requires pay structures that allow work of equal value to be compared on objective, gender-neutral criteria including skills, effort, responsibility, and working conditions.
 - Supports (full text): Article 34 sets the transposition deadline for Member States at 7 June 2026.
 - Caveats: A directive binds Member States, not employers directly; obligations reach employers through national transposing law, which varies and was incomplete in many Member States at the deadline (secondary reports, not verified here). Legal text, not evidence that transparency changes outcomes. EUR-Lex pages were blocked by a bot challenge; the Official Journal text was read through the EU Publications Office resource URL.
+
+### gitlab2017postmortem {#gitlab2017postmortem}
+
+GitLab (2017). “Postmortem of database outage of January 31”. GitLab blog.
+
+- <https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full-text): GitLab.com was down for about 18 hours after an engineer accidentally deleted data on the primary database while rebuilding a replica; the company estimated roughly 5,000 projects, 5,000 comments, and 700 new user accounts were affected.
+- Supports (full-text): Backups had silently failed (a version mismatch, and failure alerts rejected by email authentication), and recovery used a staging snapshot from about six hours before the outage.
+- Supports (full-text): During the incident the team kept a publicly visible document of progress notes, streamed the recovery on YouTube (peak of about 5,000 viewers), and posted updates to a status account on Twitter.
+- Supports (full-text): The public document initially named the engineer involved; the company said it would redact names in future cases because other engineers might not be comfortable having their names published.
+- Caveats: The company's own account. Documented practice from one organization.
 
 ### nist-ssdf-project {#nist-ssdf-project}
 
@@ -4516,6 +4845,16 @@ Douglas Stone, Bruce Patton, and Sheila Heen (1999). *Difficult Conversations: H
 - Verified against a fetched page (2026-11-19): title, subtitle, authors, publisher, year, isbn13.
 - Caveats: Metadata only. Credited only for its widely known idea that a difficult conversation has three layers (what happened, feelings, identity) and for favoring a learning stance over message delivery.
 
+### sutton2024friction {#sutton2024friction}
+
+Robert I. Sutton, and Huggy Rao (2024). *The Friction Project: How Smart Leaders Make the Right Things Easier and the Wrong Things Harder*. St. Martin's Press.
+
+- ISBN-13: 9781250284419 · <https://www.bobsutton.net/books/the-friction-project>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-22): title, subtitle, authors, publisher, isbn13, year.
+- Supports (metadata (idea credited only, from the author's book page)): Credited at idea level only for its argument that leaders should remove destructive organizational friction while keeping or adding friction that is useful, rather than pursuing efficiency everywhere.
+- Caveats: The book was not read. The authors are Stanford researchers but the book is written for practitioners. Year inferred from the Publishers Weekly review (dated 2023-10-10, publication "Jan.") with retailer listings giving January 2024; the author's page states no date. The publisher's page returned HTTP 403.
+
 ### teamtopologies-key-concepts {#teamtopologies-key-concepts}
 
 Matthew Skelton, and Manuel Pais (n.d.). “Key concepts and practices for applying a Team Topologies approach to team-of-teams org design”. teamtopologies.com.
@@ -4670,6 +5009,18 @@ Michael D. Watkins (2003). *The First 90 Days: Proven Strategies for Getting Up 
 - ISBN-13: 9781422188613 · <https://store.hbr.org/product/the-first-90-days-updated-and-expanded-proven-strategies-for-getting-up-to-speed-faster-and-smarter/11323>
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, isbn13.
+
+### watkins2014hit {#watkins2014hit}
+
+Michael D. Watkins, Anouk Lavoie, and Susan Stehli (2014). “Hit the ground running: Transitioning to new leadership roles”. IMD, insights@IMD No. 33 (May 2014).
+
+- <https://www.imd.org/research-knowledge/organizational-behavior/articles/hit-the-ground-running-transitioning-to-new-leadership-roles/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full-text): The article describes Watkins's STARS framework (start-up, accelerated growth, sustaining success, realignment, turnaround, shutdown), placing turnaround on the downward slope after realignment, as a common language for discussing a business's situation.
+- Supports (full-text): It states that for leaders brought in to manage a turnaround, the crisis mode invites an action-oriented and often more directive approach, while realignment calls for engaging people in fixing the problem rather than telling them what is wrong.
+- Supports (full-text): It notes that people often have different visions of what stage the business is in, and answers no to whether all leaders can handle each stage equally well.
+- Caveats: A short practitioner article from the author's institution (IMD), read through a page fetch that returned the article text in summarized form with quoted sentences; only the quoted sentence about turnaround is quoted in the chapter. Expert opinion, not research.
 
 ### winters2020software {#winters2020software}
 

@@ -1610,3 +1610,230 @@ id below is already verified in `research/bibliography.yaml`.
 - The Project 8 counterfactual for the quality continuation (how much unplanned work returns without
   prevention) has no Northstar evidence; the solution states it as an assumption and shows its break-even
   (3.9 points).
+
+## Chapter 56 — Recovering a Failing Engineering Organization (with Project 2)
+
+To be merged into `research/evidence-matrix.md` by the maintainer.
+
+### Chapter 56 — Recovering a Failing Engineering Organization
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | The right transition strategy depends on the situation the leader enters | Expert opinion | watkins2003first | idea-level |
+| 2 | Turnaround follows realignment on the downward slope; turnaround's crisis mode invites a more directive approach; realignment calls for engaging people in the diagnosis; people disagree about the stage; not every leader handles every stage equally well | Expert opinion | watkins2014hit | full text (IMD article); one sentence quoted |
+| 3 | Turnaround research is fragmented; recent work adds managerial cognition, leadership, and stakeholder management, and finds simultaneous actions beyond the two-stage model | Research finding (review) | trahms2013decline | abstract; one phrase quoted |
+| 4 | Cutting improvement time to meet throughput erodes capability (capability trap); managers tend to blame workers | Research finding (case studies and models) | repenning2001nobody | full text |
+| 5 | Under threat, information processing narrows and control constricts, at individual, group, and organizational levels | Research finding (multilevel review) | staw1981threat | abstract |
+| 6 | Negative status information fails to travel up on troubled software projects | Research finding (theory development) | smith2003reluctance | abstract |
+| 7 | Most employees have stayed silent about a concern, most often for fear of being labeled negatively | Research finding (40 interviews) | milliken2003silence | abstract |
+| 8 | Westrum's typology distinguishes cultures by treatment of messengers; high-trust, information-flow cultures predict performance | Industry research | dora-cap-generative-culture | full text |
+| 9 | Improvement anywhere but the constraint is wasted; an IT turnaround dramatized through constraints and WIP limits | Practitioner (fiction), idea level | goldratt1984goal; kim2013phoenix | idea-level |
+| 10 | Ability, benevolence, and integrity as factors of trustworthiness | Research model, credited at idea level | mayer1995integrative | idea-level (abstract read does not state the factors) |
+| 11 | Trust repaired better by apology for competence violations and denial for integrity violations | Research finding (experiments) | kim2004removing | abstract |
+| 12 | Direct leaders are a particularly important referent of trust (k = 106) | Research finding (meta-analysis) | dirks2002trust | abstract |
+| 13 | Small wins make large problems tractable | Expert opinion, idea level | weick1984small | idea-level |
+| 14 | Replacing a bottom-decile boss with a top-decile one raises team output more than adding a tenth worker to nine | Research finding (one firm) | lazear2015value | abstract |
+| 15 | Managers' people skills strongly reduce turnover, with causal designs | Research finding (one firm) | hoffman2021people | abstract |
+| 16 | Coaching effects g = 0.43 to 0.74; organizational outcomes delta = 0.36 (internal or external coaches, excluding manager coaching) | Research finding (meta-analyses) | theeboom2014coaching; jones2016coaching | abstract |
+| 17 | Proximity to organizational change and recent departures associated with more customer-reported defects | Research finding (one project) | mockus2010volatility | abstract |
+| 18 | One persistently negative member can reduce a group's trust and cooperation | Research finding (review and model) | felps2006bad | abstract |
+| 19 | Trust and willingness to engage in conflict at the base of a leadership team | Expert opinion, idea level | lencioni2002five | idea-level |
+| 20 | Definition of failing; four kinds of irreversible harm; the four triage outputs; two-track promises; no replacement in the first 30 days except integrity or harm; decision by day 90 | This book's recommendation | — | synthesis from rows 2–18 |
+| 21 | All Northstar and Halvard figures; the Halvard Payroll case; the Northstar keep/coach/replace reading | Illustrative | — | fictional; arithmetic in `research/northstar-additions/ch56.md` |
+
+### Project 2 — Diagnose a Low-Performing Engineering Team
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Billing's incident, delivery, capacity, people, and management facts | Illustrative (canon) | — | derived in `docs/projects/data/p2-billing-evidence.csv` |
+| 2 | Sprint item counts and interview notes | Illustrative (project-only) | — | invented for the project, marked in page and CSV |
+| 3 | Four causes of low performance; peer comparison as a control; arrival versus duration and recurrence | This book's recommendation | — | applies Chapters 9 and 56 |
+
+### Gaps
+
+| Gap | Where it shows | Note for `research/research-gaps.md` |
+|---|---|---|
+| G-56a | Turnaround evidence is firm-level and financial | No research found on recovering engineering organizations specifically; the chapter labels its triage and keep/coach/replace rules as this book's recommendation |
+| G-56b | Coaching evidence measures people who entered coaching, over months | Unknown whether effects hold under a recovery's time pressure, or for leaders coached by their own manager (Jones et al. exclude manager coaching) |
+| G-56c | Watkins's STARS framework | Read only through a short IMD article and the book's metadata; the book's own treatment of turnaround was not read |
+| G-56d | Mayer, Davis, and Schoorman's three factors | Credited at idea level; the abstract read does not state them. A full-text read would allow a stronger statement |
+
+## Chapter 57 — Crises, Executive Disagreement, and Resistance to Change
+
+Written 2026-11-22 (wave 8). New sources are in `research/pending-sources/ch57.yaml`.
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | US public companies generally report a material cybersecurity incident on Form 8-K within four business days of determining materiality | Standard (regulator's rule) | sec2023cyberrule | official summary |
+| 2 | Incident roles separate the commander, operations, communications, and planning; the communications role sends periodic updates | Documented practice | google2017managing | full text |
+| 3 | Mann Gulch analyzed as the collapse of role structure and sensemaking; four sources of resilience proposed | Research finding (single qualitative case) | weick1993collapse | abstract; transfer to incident bridges is the book's inference |
+| 4 | Failures in complex systems need several contributing faults; hindsight makes signals look obvious | Expert opinion | cook1998complex | full text |
+| 5 | Protect stakeholders before reputation; instructing and adjusting information; expressions of concern are not admissions of guilt | Research finding (theory built on experiments) | coombs2007protecting | full text |
+| 6 | Crisis clusters by attributed responsibility (victim, accidental, preventable); crisis history and prior reputation intensify | Research finding | coombs2007protecting | full text |
+| 7 | Deny, diminish, rebuild strategies; rebuild for preventable crises and accidental crises with history; do not mix deny with diminish or rebuild | Research finding | coombs2007protecting | full text |
+| 8 | Over-accommodation costs more without greater reputational benefit and can make the crisis seem worse | Research finding | coombs2007protecting | full text |
+| 9 | Mapping a software outage caused by one's own change to the preventable end when there is crisis history | This book's recommendation | coombs2007protecting | inference |
+| 10 | Apology repairs competence violations better, denial integrity violations; misleading statements turn an outage into an integrity question | Research finding plus inference | kim2004removing | abstract; transfer is the book's inference |
+| 11 | Atlassian 2022: 775 customers, 883 sites, up to 14 days; first broad external message April 7 00:56 UTC; contacts deleted with sites; lessons on earlier and more transparent communication | Documented practice | atlassian2022outage | full text; "about 41 hours" is the book's arithmetic |
+| 12 | GitLab 2017: about 18 hours down; public document, live stream, status account; engineer initially named, names to be redacted in future | Documented practice | gitlab2017postmortem | full text |
+| 13 | People who expect blame withhold the details needed to prevent recurrence | Expert opinion | allspaw2012blameless | full text |
+| 14 | Most of 40 interviewees had stayed silent about a concern, mostly for fear of being labeled negatively | Research finding (exploratory) | milliken2003silence | abstract |
+| 15 | Managerial openness relates to voice more consistently than transformational leadership, via psychological safety, most for best performers | Research finding (one company, correlational) | detert2007leadership | abstract |
+| 16 | Team psychological safety associated with learning behavior | Research finding | edmondson1999psychological | abstract |
+| 17 | Exit and voice as responses to dissatisfaction; loyalty raises the cost of exit | Idea credited | hirschman1970exit | metadata only; "silent compliance" is the book's addition and is labeled as such |
+| 18 | Free discussion, clear decision, full support | Idea credited | grove1983high | metadata only |
+| 19 | Disagree and commit, including the boss; escalate fundamental misalignment early | Documented practice | bezos2016letter | full text |
+| 20 | Task conflict more positively related to performance in top management teams and for decision quality | Research finding (correlational) | dewit2012paradox | abstract |
+| 21 | Resistance as partly produced by change agents and as a resource | Conceptual (theory) | ford2008resistance | abstract |
+| 22 | Responses to change as multidimensional attitudes; ambivalence | Conceptual (theory) | piderit2000rethinking | abstract |
+| 23 | Reactions to change depend on process as well as content | Research finding (review of 79 studies) | oreg2011recipients | abstract |
+| 24 | Two-track crisis model; commit-or-escalate test; external communication by phase; six readings of resistance; voice, exit, silence as forms | This book's recommendation | — | synthesis |
+| 25 | Halvard Checkout outage and all its figures; Northstar case study readings | Illustrative | — | fictional; arithmetic in `research/northstar-additions/ch57.md` |
+
+### Gaps
+
+- **G57-1.** No empirical study found on software-outage communication specifically (for example, the
+  effect of first-notice delay on customer churn). The chapter relies on general crisis-communication
+  experiments (Coombs) and two documented public cases, and says so.
+- **G57-2.** The evidence on disagreeing upward is about employees' voice to supervisors, not about
+  executives disagreeing with executives; the commit-or-escalate test is the book's recommendation, not a
+  tested procedure.
+- **G57-3.** Resistance-to-change sources used here are conceptual articles read at abstract level; no
+  empirical test of "resistance as information" diagnostics was found. The six readings are a synthesis.
+- **G57-4.** Piderit (2000) was verified through OpenAlex and Semantic Scholar only (publisher page 403,
+  Crossref lookup failed in session).
+
+## Chapter 58 — Layoffs, Reductions, and Mergers and Acquisitions
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | The downsizing literature can be organized into antecedents and individual and organizational effects, with patterns and contradictions | Research finding (review) | datta2010downsizing (pending in ch58.yaml) | abstract |
+| 2 | Downsizing predicts voluntary turnover rates, mediated by commitment; embedding and procedural-fairness practices weaken the link, career development practices strengthen it | Research finding | trevor2008downsizing (pending) | abstract |
+| 3 | Survivors react most negatively when they identify with those laid off and see them as inadequately compensated (lower performance in lab, lower commitment in field) | Research finding | brockner1987survivors (pending) | abstract |
+| 4 | Clear explanations of a layoff are associated with better survivor reactions, especially under high uncertainty and importance | Research finding | brockner1990explain (pending) | abstract |
+| 5 | Job insecurity harms attitudes, health, and to some extent behavior toward the organization | Research finding (meta-analysis) | sverke2002insecurity (pending) | abstract |
+| 6 | Restructuring mainly harms well-being; communication, information, and procedural justice intervene | Research finding (systematic review) | dejong2016restructuring | abstract |
+| 7 | About 65 percent of 133 open-source projects had an estimated truck factor of 2 or less | Research finding | avelino2016truck | abstract |
+| 8 | Turnover-induced knowledge loss can exceed expected loss several times; successors reduce expected loss | Research finding | rigby2016turnover | abstract |
+| 9 | Proximity to organizational change and recent departures associated with more customer-reported defects in one project | Research finding | mockus2010volatility | abstract |
+| 10 | Employers select for reductions by seniority, individual criteria, or eliminating positions or units | Standard (US federal guidance) | eeoc2009waivers (pending) | full text |
+| 11 | Group waivers of age claims in the US require 45 days and written disclosure of the decisional unit and the titles and ages of those selected and not selected | Standard (US federal guidance) | eeoc2009waivers (pending) | full text |
+| 12 | WARN: 60 calendar days' notice for covered closings and mass layoffs; covered employers broadly 100+ full-time workers; single-site thresholds; 30-day and 90-day aggregation; does not override longer notice laws; not legal advice | Standard (regulatory guidance) | dol2003warnemployer (pending) | full text (2003 guide) |
+| 13 | EU: consult workers' representatives in good time with a view to agreement, disclose reasons and selection criteria; redundancies take effect no earlier than 30 days after notifying the authority | Standard (directive) | eu1998collective (pending) | full text, Articles 1-4 |
+| 14 | On average acquirers' performance does not improve with acquisitions and is modestly negatively affected; unexplained variance | Research finding (meta-analysis) | king2004metaanalyses (pending) | abstract |
+| 15 | Structural integration reduces new product introduction early and for pre-launch firms; effect fades | Research finding | puranam2006organizing (pending) | abstract |
+| 16 | Integration impairs acquired inventors' productivity most for those losing status and centrality | Research finding (transfer to software is the book's inference) | paruchuri2006integration (pending) | abstract |
+| 17 | Acquired leaders play a key role in expected and serendipitous value | Research finding (case-based theory building) | graebner2004momentum (pending) | abstract |
+| 18 | Implementation choices and the nature of acquired knowledge shape technology and capability transfer | Research finding (grounded model, propositions) | ranft2002acquiring (pending) | abstract |
+| 19 | Integration approaches depend on autonomy needs and strategic interdependence | Expert opinion (idea level) | haspeslagh1991managing (pending) | metadata only |
+| 20 | Run the acquired stack about six months while consolidating where feasible; document the plan | Expert opinion | larson2023ma | full text |
+| 21 | System designs copy the communication structure of the organization | Expert opinion (argued essay) | conway1968committees | full text |
+| 22 | The engineering executive's job (general further reading) | Expert opinion (idea level) | larson2024primer | metadata only |
+| 23 | Structuring a leader's first months (further reading) | Expert opinion (idea level) | watkins2003first | metadata only |
+| 24 | Decide work before people; role-based then skill then pre-existing documented performance; ownership check; one notification day; per-dimension integration | This book's recommendation | none | synthesis of rows 2-21 |
+| 25 | All Halvard figures (Field Operations reduction, Corvane integration) and the Northstar scenario in X1 | Illustrative | none | canon arithmetic in research/northstar-additions/ch58.md |
+
+### Gaps and limits admitted in the chapter
+
+- No tested recipe exists for running a reduction in a software organization; the procedures are this book's
+  recommendation built on general downsizing research and software knowledge-loss research.
+- The downsizing and acquisition studies are mostly outside software; the acquisition productivity evidence
+  is from pharmaceutical inventors and patent counts.
+- Brockner et al. (1994) on procedural justice for victims, survivors, and "lame ducks" was found, but its
+  open abstract is truncated, so it is not cited.
+- Legal sources are a 2003 US federal guide, 2009 US federal guidance, and the 1998 EU directive's original
+  text. State laws, national transposition, and later amendments were not checked; the chapter says it is not
+  legal advice and points to counsel per jurisdiction.
+- Datta et al. (2010) is cited only for its framework; its conclusions on firm performance were not read.
+
+## Chapter 59 — Transformation Under Budget Constraint and Scaling Without Bureaucracy
+
+| Claim in the chapter | Source id | Access level | Evidence label |
+|---|---|---|---|
+| A system's output is set by its constraint; improving elsewhere does not raise output | goldratt1984goal | metadata-only (idea level) | Practitioner consensus |
+| Most attention goes to parameters, which rarely change behavior; rules and information flows are higher leverage | meadows1999leverage | full-text | Expert opinion (mapping to budget cuts is this book's interpretation) |
+| Queues in product development are invisible and so ignored | reinertsen2009principles | metadata-only (idea level) | Expert opinion |
+| People default to additive changes and overlook advantageous subtractive ones (eight experiments; worse without a cue and under load) | adams2021subtractive | abstract-only | Research finding |
+| Link from additive bias to institutional red tape | adams2021subtractive | abstract-only | Authors' suggestion, stated as such in the chapter |
+| Enabling versus coercive formalization; effect on attitudes depends on which | adler1996bureaucracy | abstract-only | Research (conceptual), stated as a conceptual argument |
+| Remove destructive friction, keep useful friction | sutton2024friction | metadata-only (idea level) | Expert opinion |
+| Heavyweight change approval associated with lower delivery performance; no evidence that formal external review lowers change failure rate; recommends peer review and a coordinating board | dora-cap-change-approval | full-text | Industry research |
+| Project Oxygen began from the hypothesis that managers do not matter; teams with effective managers had better results, happiness, lower turnover | rework-great-managers, garvin2013google | full-text; abstract-only | Documented practice |
+| Scholarly understanding of radically decentralized (self-managing) organizations is limited; review proposes an agenda | lee2017selfmanaging | abstract-only | Research finding (review) |
+| Manager talent matters more than span; for remote and hybrid managers more reports associated with lower engagement | harter2026span | full-text | Industry research |
+| Six to eight engineers per manager; four to six managers per manager of managers | larson2018sizing | full-text | Expert opinion |
+| Large US firms flattened: wider CEO spans, fewer levels | rajan2006flattening | abstract-only | Research finding |
+| Load test, funding-source order, suspend-before-delete, verdict table | none | n/a | This book's recommendation |
+| Northstar and Halvard figures | canon and research/northstar-additions/ch59.md | n/a | Illustrative |
+
+### Gaps admitted in the chapter or this matrix
+
+- No research was found that measures the effect of removing organizational process (forums, approvals,
+  reports) on outcomes in software organizations, beyond DORA's change-approval findings. The load test
+  and the suspend-before-delete method are this book's recommendation, not tested practice.
+- The evidence on removing managers is thin and mixed in kind (one company's documented practice, a
+  review that reports limited understanding, survey research across occupations). The chapter therefore
+  targets management time rather than manager headcount.
+- Research on running a technical transformation under a budget cut specifically was not found; the
+  funding-source order is synthesis.
+- Curriculum source meadows2008thinking is not cited; the chapter uses Meadows's leverage-points essay
+  (meadows1999leverage, full text read) instead, which supports the specific claim made.
+  larson2019elegant is not cited; its sizing material is cited through the essay larson2018sizing, which
+  was read in full.
+
+## Chapter 60 — Capstone: Transforming Northstar Technologies
+
+No new sources. Every source cited is an existing, verified entry in `research/bibliography.yaml`; claims
+stay within each entry's recorded `access_level` and `claims`.
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Strategy needs coherent actions that support each other, not a list of separately reasonable initiatives | Expert opinion | rumelt2011good | idea-level (metadata only) |
+| 2 | Delays between action and consequence make systems hard to steer; stocks change only through flows | Expert opinion | meadows2008thinking | idea-level (metadata only) |
+| 3 | Capability trap: cutting improvement time to meet throughput erodes capability; long, hard-to-see delays lead managers to blame effort | Research finding (field case studies and simulation models, mostly outside software) | repenning2001nobody | full text |
+| 4 | Escalation of commitment to a course of action one chose oneself | Credited at idea level (no finding reported) | staw1976knee | idea-level (metadata only) |
+| 5 | Throughput and stability delivery measures | Industry research, idea level | forsgren2018accelerate | idea-level (metadata only) |
+| 6 | DORA guide: speed and stability not trade-offs; setting metrics as goals increases gaming; metrics for services, improvement over time, not team competition | Industry research | dora-metrics-guide | full text |
+| 7 | Outcome bias: decisions rated better when outcomes are favorable, despite equal information and despite subjects saying they should not | Research finding (undergraduate subjects) | baron1988outcome | abstract |
+| 8 | Managers who read financial statements decide and argue better | Expert opinion | berman2006financial | idea-level (metadata only) |
+| 9 | Error budgets convert a reliability target into a rule for change risk | Documented practice, idea level | beyer2016sre | idea-level (metadata only); summarized, not adapted (CC BY-NC-ND) |
+| 10 | Team boundaries matched to the flow of change; limits on cognitive load | Expert opinion | skelton2019team | idea-level (metadata only) |
+| 11 | Commitment register, hinge review, bridge rule, honor/bridge/revise/retire flow, portfolio integration checks, step-down rule for prevention | This book's recommendation | none | reasoning shown in chapter |
+| 12 | All Northstar and Halvard figures and events | Illustrative | none | canon only; derived arithmetic in research/northstar-additions/ch60.md |
+
+### Gaps and limits
+
+- No source in the bibliography studies whether consistency of a leader's documents over a year (the
+  capstone's central claim) improves outcomes. The integration method is labeled this book's
+  recommendation throughout.
+- The count-noise argument in solution X2 (that a per-quarter threshold near 10 can be broken by noise)
+  is stated as an assumption, not sourced.
+
+## Templates t01, t02, t06, t19 — 1:1 template, career development plan, team health assessment, leadership succession plan
+
+Wave 8. No new sources; all ids below already exist in `research/bibliography.yaml`. No Northstar
+facts added: every example uses canon pages and facts already recorded in the chapter case studies
+(Chapters 5, 8, 14, 36, 41, 55). Each template links to the chapter that teaches the topic instead of
+re-teaching it.
+
+| Claim in the template | Source id | Access level | Evidence label |
+|---|---|---|---|
+| **t01.** Meetings rated highest when the report created the agenda; managers' self-ratings of one-on-one skill appear inflated | rogelberg2024unlocking | full-text (researcher's popular summary; underlying studies not read) | Expert opinion informed by survey data |
+| **t01.** The one-on-one as the subordinate's meeting | grove1983high | metadata-only (idea-level) | Practitioner consensus |
+| **t01.** Fields, five-line record, illustrative decay thresholds, deeper-question rotation | none | — | This book's recommendation (from Chapter 5) |
+| **t02.** Pairing care with directness in the "not yet" | scott2017radical | metadata-only (idea-level) | Expert opinion |
+| **t02.** Sponsorship distinct from mentoring; a person can be mentored and not sponsored | ibarra2010promotions | full-text | Industry research (MBA graduates, not engineers) |
+| **t02.** Plan fields; at most two gaps; dependency and fallback field | none | — | This book's recommendation (from Chapter 8) |
+| **t06.** Facilitated workshop rating about ten areas green, yellow, red with a trend; works only with high trust; do not compare teams; support tool, not judgment tool | kniberg2014squad | full-text | Documented practice (one company, no outcome data) |
+| **t06.** Survey scores distorted once tied to reviews and manager pressure | orosz2023measuring | full-text | Expert opinion |
+| **t06.** Team Diagnostic Survey as a validated instrument of structure, support, and leadership | wageman2005team | abstract-only | Research finding (instrument validation only) |
+| **t06.** Area wording, access rule, signal pairing, two-action limit | none | — | This book's recommendation (from Chapter 14) |
+| **t19.** Succession research has treated succession as an event; practice treats it as a process | berns2017succession | abstract-only | Research finding (CEOs; framing only) |
+| **t19.** Designated successors reduced expected loss from turnover by up to 15 percent (Chrome, Avaya) | rigby2016turnover | abstract-only | Research finding (code; extension to managers is the book's inference, stated) |
+| **t19.** Firms promote on current performance though other traits better predict managerial performance | benson2019promotions | abstract-only | Research finding (sales workers) |
+| **t19.** Readiness scale, coverage rule, critical-role definition | none | — | This book's recommendation (owned by Chapter 36) |
+| All four Northstar examples | none | — | Illustrative (fictional canon) |
+
+Gaps admitted in the templates: no validated study of one-on-one formats (Chapter 5's gap); no outcome
+data for facilitated health checks; no research on succession planning for engineering managers
+specifically. Nothing could not be verified, because no new source was introduced.

@@ -29,6 +29,9 @@ more useful than one with thirty fields they skip.
 | [CTO competency matrix](cto-competency-matrix.md) | CTO competencies weighted by the kind of CTO the company needs, rated on evidence |
 | [Risk register](risk-register.md) | Enterprise technology risks with owners, appetite, treatment decisions, and review dates |
 | [Architecture decision record](architecture-decision-record.md) | One significant decision: context, options, the decision, its decider, and its consequences |
+| [1:1 template](one-on-one.md) | A recurring one-on-one: the report's agenda first, follow-ups, and a running record |
+| [Career development plan](career-development-plan.md) | A goal tied to the level framework, with evidence, support, and checkpoints |
+| [Team health assessment](team-health-assessment.md) | A team's self-assessment across health areas, paired with signals already on record |
+| [Leadership succession plan](leadership-succession-plan.md) | Critical roles, successor readiness, interim cover, and development actions |
 
-The remaining templates in the [curriculum](../curriculum.md) are planned and will be added with
-the chapters that teach them.
+All twenty templates in the [curriculum](../curriculum.md) are available.

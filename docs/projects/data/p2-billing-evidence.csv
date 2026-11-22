@@ -1,0 +1,31 @@
+area,item,value,source,production_method,known_weakness
+team,Engineers,13 software engineers (Engineer 7; Senior 6); Minneapolis 10; remote 3,teams.csv; baseline data (levels; locations),HR records,
+team,Owned components,"core/invoicing (runbook yes; alerts partial; tier 1); core/ledger (runbook yes; alerts partial; tier 1); tax-svc (runbook no; alerts partial; tier 1); invoice-render (runbook no; alerts no; tier 2)",components.csv,Inventory,core/scheduler is changed by four teams and owned by none at baseline
+delivery,Deployments per month,8,teams.csv,Pipeline logs joined by hand,Most Billing changes ship on the Core release train
+delivery,Median lead time (days),21,teams.csv,Pipeline logs joined by hand,Describes the train more than the team
+delivery,Change failure rate,34%,teams.csv,72-hour linking rule applied by hand,Unlinked failures are missed; few releases
+delivery,Committed roadmap items delivered,0 of 3,baseline data (planning and delivery),Planning records,
+delivery,Sprint Goal met (last 6 sprints),1 of 6; scope changed mid-sprint in all 6,baseline data (planning and delivery),Team records,
+stability,Sev1 and Sev2 incidents,8 (2 Sev1; 6 Sev2),incidents-last-quarter.csv,Incident tracker,Severity assigned by on-call with no written definition
+stability,Incident triggers,Core release train 5; database migration 2; latent defect 1,incidents-last-quarter.csv,Derived,
+stability,First detected by,Customer 5; engineer 2; monitoring 1,incidents-last-quarter.csv,Derived,
+stability,Recurrences,6 of 8 (6 of the organization's 11),incidents-last-quarter.csv; baseline data (incidents),Derived,Recurrence judged by reviewers
+stability,Restoration minutes,"4,480 of the organization's 9,558; recurrences 3,810 of Billing's 4,480",incidents-last-quarter.csv,Derived,
+stability,Escaped defects,58 of 212,teams.csv,Support triage,Duplicates removed by hand
+capacity,Unplanned work,41% (failure recovery 24; requests from other teams 7; toolchain and environments 6; expedited 4 points),baseline data (planning and delivery),Two-week sample,A sample; teams classify differently
+capacity,tax-svc upkeep,"About 2,300 rate rows updated monthly by hand by one engineer; about 0.6 FTE a year",baseline data (architecture),Estimate,
+people,On-call pages in the quarter,"180; 126 handled first by the three ledger engineers; 64 after hours, 54 of them by the same three; 61 needed no action",baseline data (management and roles),Reconstructed from the paging tool,
+people,Ledger knowledge (respond alone / change safely),Posting and journal rules 3/3; credit notes and adjustments 4/2; period close 2/1; schema migrations 2/2; currency and rounding 1/1,baseline data (people),Knowledge map,
+people,Departures in 12 months,2 (both cited after-hours on-call or incident load in the recoded exit data),baseline data (people),HR records and exit interviews,HR recorded one dropdown reason per leaver
+people,The ledger engineer who left,Outside offer 18% above salary; paged three consecutive weekends; had asked six months earlier to leave the ledger escalation path; declined a 10% counter-offer,baseline data (people),HR records,
+people,Backfill,"Tamsin Achterberg, joined about 24 weeks before arrival; can respond alone only on credit notes; never changed a schema on a live system",baseline data (people),,
+people,Earlier responses to on-call load,Higher stipend; an alert added after each serious incident; "document as you go" with no time allocated,baseline data (management and roles),,
+management,Manager's time,People 15%; delivery 55%; technical 15%; other 15%,baseline data (management and roles),Reconstructed by the manager from two weeks of calendar and chat,Self-reported
+management,Technical direction lives with,Nobody; decided during incidents,baseline data (management and roles),,
+management,Manager reviews,Once a year on roadmap delivery only; one-line job description,baseline data (management and roles),,
+flow,Dependency links,Billing received 19; requested 21 (Orders 6; Payments 5; Customer Experience 1; Data 2; Platform Operations 7),baseline data (planning and delivery),Work items of a week or more,
+flow,Orders to Billing links,9 (6 order-to-invoice mapping changes in core/invoicing; 3 tax-svc),baseline data (dependency causes),Classified by the managers,
+flow,Billing to Platform Operations links,7 (4 test environments with ledger data; 3 migration or pipeline changes),baseline data (dependency causes),Classified by the managers,
+relations,Billing and Orders friction,"After INC-417 a two-day thread with no manager response; the INC-427 review opened with blame of an Orders change; reviews did not record which team's change triggered a Core release incident",baseline data (people),,
+system,Migration checks,None; migrations tested against an empty schema only; all eight Core modules share one schema,baseline data (tests and architecture),,
+system,Invoice and ledger reconciliation,No automated reconciliation exists,baseline data (reliability),,

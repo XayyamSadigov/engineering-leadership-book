@@ -612,7 +612,7 @@ parts:
       - n: 56
         slug: recovering-a-failing-engineering-organization
         title: Recovering a Failing Engineering Organization
-        status: planned
+        status: review
         objectives:
           - Triage a failing organization in the first 30 days.
           - Reverse declining quality and rebuild trust with stakeholders in parallel.
@@ -622,7 +622,7 @@ parts:
       - n: 57
         slug: crises-executive-disagreement-and-resistance
         title: Crises, Executive Disagreement, and Resistance to Change
-        status: planned
+        status: review
         objectives:
           - Lead through a major incident or public failure, including external communication.
           - Disagree with executives productively, and decide when to commit and when to escalate.
@@ -631,7 +631,7 @@ parts:
       - n: 58
         slug: layoffs-reductions-and-mergers
         title: Layoffs, Reductions, and Mergers and Acquisitions
-        status: planned
+        status: review
         objectives:
           - Plan a reduction responsibly, with selection criteria, communication, and continuity of ownership.
           - Lead the remaining organization afterwards.
@@ -640,7 +640,7 @@ parts:
       - n: 59
         slug: transformation-under-constraint-and-scaling-without-bureaucracy
         title: Transformation Under Budget Constraint and Scaling Without Bureaucracy
-        status: planned
+        status: review
         objectives:
           - Run a technical transformation with flat or shrinking budget.
           - Distinguish process that carries load from process that only carries history.
@@ -663,7 +663,7 @@ parts:
       - n: 60
         slug: capstone-northstar
         title: "Capstone: Transforming Northstar Technologies"
-        status: planned
+        status: review
         objectives:
           - Diagnose an 80-engineer organization from data and interviews.
           - Produce the ownership model, scorecard, debt priorities, accountability design, and 90-day plan.
@@ -672,12 +672,12 @@ parts:
 
 templates:
   # status as above. file is relative to docs/templates/
-  - {id: t01, file: one-on-one.md, title: 1:1 template, status: planned}
-  - {id: t02, file: career-development-plan.md, title: Career development plan, status: planned}
+  - {id: t01, file: one-on-one.md, title: 1:1 template, status: review}
+  - {id: t02, file: career-development-plan.md, title: Career development plan, status: review}
   - {id: t03, file: engineering-manager-rubric.md, title: Engineering Manager performance rubric, status: review}
   - {id: t04, file: director-competency-matrix.md, title: Director competency matrix, status: review}
   - {id: t05, file: cto-competency-matrix.md, title: CTO competency matrix, status: review}
-  - {id: t06, file: team-health-assessment.md, title: Team health assessment, status: planned}
+  - {id: t06, file: team-health-assessment.md, title: Team health assessment, status: review}
   - {id: t07, file: organizational-design-assessment.md, title: Organizational design assessment, status: review}
   - {id: t08, file: engineering-quality-scorecard.md, title: Engineering quality scorecard, status: review}
   - {id: t09, file: technical-debt-register.md, title: Technical debt register, status: review}
@@ -690,12 +690,12 @@ templates:
   - {id: t16, file: technology-investment-business-case.md, title: Technology investment business case, status: review}
   - {id: t17, file: stakeholder-map.md, title: Stakeholder map, status: review}
   - {id: t18, file: executive-update.md, title: Executive update, status: review}
-  - {id: t19, file: leadership-succession-plan.md, title: Leadership succession plan, status: planned}
+  - {id: t19, file: leadership-succession-plan.md, title: Leadership succession plan, status: review}
   - {id: t20, file: ninety-day-quality-plan.md, title: 90-day quality transformation plan, status: review}
 
 projects:
   - {id: p1, title: Build an Engineering Management Operating System, status: review}
-  - {id: p2, title: Diagnose a Low-Performing Engineering Team, status: planned}
+  - {id: p2, title: Diagnose a Low-Performing Engineering Team, status: review}
   - {id: p3, title: Create an Engineering Quality Transformation Plan, status: review}
   - {id: p4, title: Redesign an Organization of 80 Engineers, status: review}
   - {id: p5, title: Build a Delivery Performance and Reliability Scorecard, status: review}

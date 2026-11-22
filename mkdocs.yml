@@ -144,6 +144,11 @@ nav:
       - "Chapter 53 — Risk, Governance, Regulation, and Security Strategy": parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md
       - "Chapter 54 — Data and AI Strategy": parts/12-cto-leadership/54-data-and-ai-strategy.md
       - "Chapter 55 — Boards, Due Diligence, and Executive Decision-Making": parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md
+  - "XIII. Advanced Leadership Problems":
+      - "Chapter 56 — Recovering a Failing Engineering Organization": parts/13-advanced-problems/56-recovering-a-failing-engineering-organization.md
+      - "Chapter 57 — Crises, Executive Disagreement, and Resistance to Change": parts/13-advanced-problems/57-crises-executive-disagreement-and-resistance.md
+      - "Chapter 58 — Layoffs, Reductions, and Mergers and Acquisitions": parts/13-advanced-problems/58-layoffs-reductions-and-mergers.md
+      - "Chapter 59 — Transformation Under Budget Constraint and Scaling Without Bureaucracy": parts/13-advanced-problems/59-transformation-under-constraint-and-scaling-without-bureaucracy.md
   - "XIV. Templates and playbooks":
       - "Template library": templates/index.md
       - "Engineering quality scorecard": templates/engineering-quality-scorecard.md
@@ -162,10 +167,18 @@ nav:
       - "CTO competency matrix": templates/cto-competency-matrix.md
       - "Risk register": templates/risk-register.md
       - "Architecture decision record": templates/architecture-decision-record.md
+      - "1:1 template": templates/one-on-one.md
+      - "Career development plan": templates/career-development-plan.md
+      - "Team health assessment": templates/team-health-assessment.md
+      - "Leadership succession plan": templates/leadership-succession-plan.md
+  - "XV. Capstone":
+      - "Chapter 60 — Capstone: Transforming Northstar Technologies": parts/15-capstone/60-capstone-northstar.md
   - Projects:
       - "Overview": projects/index.md
       - "Project 1 — Management operating system": projects/p1-management-operating-system.md
       - "Project 1 solution": projects/solutions/p1-solution.md
+      - "Project 2 — Diagnose a low-performing team": projects/p2-diagnose-a-low-performing-team.md
+      - "Project 2 solution": projects/solutions/p2-solution.md
       - "Project 3 — Quality transformation plan": projects/p3-quality-transformation-plan.md
       - "Project 3 solution": projects/solutions/p3-solution.md
       - "Project 4 — Redesign an organization of 80 engineers": projects/p4-redesign-an-80-engineer-organization.md
@@ -235,6 +248,11 @@ nav:
       - "Chapter 53 solutions": solutions/ch53-solutions.md
       - "Chapter 54 solutions": solutions/ch54-solutions.md
       - "Chapter 55 solutions": solutions/ch55-solutions.md
+      - "Chapter 56 solutions": solutions/ch56-solutions.md
+      - "Chapter 57 solutions": solutions/ch57-solutions.md
+      - "Chapter 58 solutions": solutions/ch58-solutions.md
+      - "Chapter 59 solutions": solutions/ch59-solutions.md
+      - "Chapter 60 solutions": solutions/ch60-solutions.md
   - References:
       - "Bibliography": references/bibliography.md
       - "Evidence labels": references/evidence-labels.md

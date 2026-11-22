@@ -2,7 +2,7 @@
 
 Questions the book needs evidence for and does not yet have. A chapter that touches a gap must admit
 it in the text. Each gap records what was searched, what was found, and what to do next.
-Updated 2026-11-22 after wave 7 (Part XII).
+Updated 2026-11-22 after wave 8 (Part XIII, capstone).
 
 ## Open
 
@@ -63,6 +63,11 @@ Updated 2026-11-22 after wave 7 (Part XII).
 | G56 | Board technology reporting practices and technology due diligence effectiveness | Ch 55 | Directors' association guide (NACD, Principle Five only), `nolan2005itboard` summary, SEC rule; one public diligence case (Yahoo); Eisenhardt 1989 metadata only | Search governance research |
 | G57 | Comparative evidence on ADR field sets and templates | t12 | MADR, Nygard, `buchgeher2023adr` (practice study) | Search |
 | G58 | How much unplanned work returns when prevention funding stops | P8 | No Northstar or external evidence; P8 shows the break-even instead | Search reliability-investment literature |
+| G59 | Recovering failing engineering organizations specifically; coaching under recovery time pressure; Watkins's turnaround treatment and Mayer et al.'s trust factors beyond idea level | Ch 56, P2 | Firm-level turnaround research (`trahms2013decline`, `staw1981threat`); coaching meta-analyses (`theeboom2014coaching`, `jones2016coaching`); `watkins2014hit` | Read Watkins 2003 and Mayer et al. 1995 in full |
+| G60 | Software-outage communication (effect of first-notice delay on churn); executive-to-executive disagreement; empirical tests of resistance-as-information diagnostics | Ch 57 | Crisis-communication experiments (`coombs2007protecting`); voice research (`detert2007leadership`, `milliken2003silence`); conceptual resistance articles (`ford2008resistance`, `piderit2000rethinking`) at abstract level | Search |
+| G61 | Running reductions in software organizations; acquisition integration evidence from software; US state law and EU national transposition | Ch 58 | General downsizing research (`trevor2008downsizing`, `datta2010downsizing`), acquisition research largely outside software; legal sources limited to US federal and the 1998 EU directive | Search; legal review per jurisdiction |
+| G62 | Effect of removing organizational process and management layers in software organizations; transformation under a budget cut | Ch 59 | DORA change-approval findings (`dora-cap-change-approval`); `adams2021subtractive`; `lee2017selfmanaging` | Search |
+| G63 | Whether consistency of a leader's documents over a year improves outcomes | Ch 60 | None | Search |
 
 ## Closed
 

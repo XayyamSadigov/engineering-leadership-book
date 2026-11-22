@@ -1,4 +1,4 @@
-# Authoring brief for parallel waves (wave 7: Part XII)
+# Authoring brief for parallel waves (wave 8: Part XIII and the capstone)
 
 This brief is given to every parallel author in a wave. It adds wave-specific lanes to `CLAUDE.md`,
 which stays binding. Keep it in the repository so the next wave can reuse it; replace section 6 per
@@ -81,23 +81,32 @@ in prose.
 When you finish, report: files written, word count, number of sources (new and reused), Northstar facts
 added, validation result, and anything you could not verify.
 
-## 6. Wave 7 lanes (Part XII: CTO leadership)
+## 6. Wave 8 lanes (Part XIII, the capstone, the last templates and project)
 
-Ownership already settled elsewhere (link, do not re-teach): DORA, SPACE, DevEx and metric gaming
-(Ch 18); technical debt economics (Ch 21); security and supply chain in the delivery pipeline
-(Ch 26); quality transformation (Ch 27); architecture governance and ADR practice (Ch 28); technical
-strategy, technology selection, build versus buy (Ch 30); platform engineering (Ch 32); engineering
-economics and cost of delay (Ch 45); stakeholder management (Ch 46); the VP role and the VP question
-(Ch 47); workforce planning and enterprise governance (Ch 48); multi-year transformation and executive
-communication (Ch 49).
+Wave 7 changes to read first: the canon now has "Part XII facts (quarter 4)" in `first-quarter.md`
+and "Executive and board context (Part XII)" in `index.md`. Victor Lindqvist stays CTO throughout the
+book; nobody succeeds him. Every quarter 4 decision stays open book-wide. Where a chapter puts the
+reader in the CTO's role, the reader takes Victor's seat in quarter 4.
 
-| Author | Owns | Northstar lane (new facts allowed only here) |
+Halvard rules for this wave: each author may add Halvard facts only inside its assigned group (see
+`halvard.md`), set after the planning year described there; the group's starting size is the one in
+the tables. Grep `docs/` before naming any new person, so that no name is reused. Halvard's CTO stays
+unnamed.
+
+Ownership already settled elsewhere (link, do not re-teach): onboarding and the first 90 days
+(Ch 2 and the director's first quarter, Ch 40); feedback and difficult conversations (Ch 6);
+performance management and underperformance (Ch 8 and 9); trust and accountability (Ch 11);
+decision rights and decision records (Ch 13); incident response and blameless review (Ch 25); quality
+transformation (Ch 27); reorganizations, succession (Ch 36); cadences and operating system (Ch 37);
+managing managers (Ch 41); leading change and director failure patterns (Ch 43); stakeholder
+negotiation (Ch 46); workforce planning (Ch 48); multi-year transformation and executive politics
+(Ch 49); the CTO's role, strategy, finance, risk, AI, boards (Ch 50–55).
+
+| Author | Owns | Northstar or Halvard lane (new facts allowed only here) |
 |---|---|---|
-| ch50 | CTO archetypes; CTO, CIO, VP Engineering splits; the CTO's own team and operating rhythm; what only the CTO can do | Victor Lindqvist's job as it is: his calendar, his one direct report, IT under the CFO, what he delegates. Do not answer the VP question (Ch 47) |
-| ch51 | Technology strategy derived from business strategy; three-year roadmap with horizons, options, and decision points; coherence tests | A three-year technology strategy that Victor drafts in weeks 46–49 as a discussion item for the week 50 board, outcome open. Use the year-2 proposals as inputs, not results |
-| ch52 | Financial statements (income statement, balance sheet, cash flow) read by a technology leader; budgeting; capitalized versus expensed software; investment cases with scenarios | The only author who may add Northstar financial-statement figures (revenue, cost lines, operating income, cash, capitalization policy). Must stay consistent with ARR $140M, gross margin 72 percent, engineering personnel about $16.1M, cloud and tooling $4.2M, 620 employees. Show every derivation |
-| ch53 + t11 | Enterprise technology risk register; security strategy with recognized frameworks (NIST CSF 2.0, SSDF, SLSA); regulation through engineering controls; reporting risk to non-specialists. Also the risk register template (`docs/templates/risk-register.md`) | Northstar's compliance and audit status (for example, whether it holds an attestation report and what customers ask for), the audit committee's view of technology risk, security reporting through IT to the CFO. Use the Ch 26 baseline and day-90 security facts exactly |
-| ch54 | Data foundations before AI; buy, build, or wait on AI capabilities; governing AI use in engineering; evaluating AI productivity claims with Ch 18's evidence standards | Northstar's data estate and AI usage (Data and Analytics, Farah Haddad, Li Na Zhou), any AI coding-assistant policy, and AI requests from product or sales in quarter 4 |
-| ch55 | Communicating technology status and risk to a board; technology due diligence (run or survived); recording executive decisions under uncertainty and disagreement | The week 50 board meeting's preparation and the board members' known concerns (outcome open). Due diligence on Northstar only as a labeled hypothetical scenario |
-| templates | t05 CTO competency matrix (`docs/templates/cto-competency-matrix.md`), modeled on t04; t12 architecture decision record (`docs/templates/architecture-decision-record.md`), consistent with Ch 28's ADR practice and ADR-0001, which stays open | No new facts; examples use canon only |
-| projects | P7 Design a 12-Month Engineering Strategy (`docs/projects/p7-twelve-month-engineering-strategy.md`, attached to Ch 51); P8 Build a CTO Technology Investment Proposal (`docs/projects/p8-cto-technology-investment-proposal.md`, attached to Ch 52); each with a worked solution in `docs/projects/solutions/p7-solution.md` and `p8-solution.md`; optional data files in `docs/projects/data/` named `p7-*.csv` / `p8-*.csv` | Set in quarter 4; the learner produces the strategy and the proposal. Use canon only; do not depend on facts the ch51 or ch52 authors are adding in parallel |
+| ch56 + P2 | Triage of a failing organization in 30 days; reversing quality decline while rebuilding stakeholder trust; keep, coach, or replace decisions about leaders. Also Project 2, Diagnose a Low-Performing Engineering Team (`docs/projects/p2-diagnose-a-low-performing-team.md`, solution `docs/projects/solutions/p2-solution.md`, optional `docs/projects/data/p2-*.csv`) | Northstar at arrival read as a failing organization, using the baseline and quarter 1 canon only (no new quarter 1 events). Halvard's fourth product group (90 engineers) as a second, larger failing organization: you may name its VP and add its facts. P2: Northstar's Billing team at baseline (weeks 1–3), canon data only, plus project-only data marked as such |
+| ch57 | Leading through a major incident or public failure, including external communication; disagreeing with executives productively (commit or escalate); reading resistance to change as information | Halvard Commerce (Nadia Brennan's group): a public Checkout outage and its external communication. Northstar: the executive disagreements already in the quarter 4 canon (Greg Tanaka, Rajiv Menon, Amara Okafor) and resistance already recorded in earlier chapters; new quarter 4 facts only if they record no outcome |
+| ch58 | Planning a reduction responsibly (selection criteria, communication, continuity of ownership); leading the remaining organization; integrating an acquired engineering team and its technology | Halvard only: a reduction in the second product group (110 engineers) and an acquisition integrated into the third product group (100 engineers); name those groups and their leaders. Northstar appears only in clearly labeled hypothetical exercises; no Northstar reduction or acquisition enters the canon |
+| ch59 | Technical transformation with flat or shrinking budget; process that carries load versus process that carries history; removing management overhead safely | Northstar's year 1 under flat headcount, read from the canon; a quarter 4 audit of Northstar's forums and rules (which carry load) is allowed if it records no outcome. Halvard's platform organization (70 engineers) and its six enterprise policies under a budget cut |
+| ch60 | The capstone, Chapter 60 (`docs/parts/15-capstone/60-capstone-northstar.md`): ten stages at Northstar, first as Engineering Director (diagnosis, ownership model, scorecard, debt priorities, accountability design, 90-day plan), then in Victor Lindqvist's seat in quarter 4 (12-month strategy, investment case, three-year technology strategy, board communication). It still follows the chapter contract; the stages live mainly in the Practical Playbook and Exercises, each pointing to the chapters, templates, and projects it draws on | Canon only, no new facts. Each stage names its moment in the story and the facts available then. Do not duplicate Projects 3–8: the capstone integrates them and adds what only the whole sequence shows |
+| templates | t01 1:1 template (`docs/templates/one-on-one.md`), t02 career development plan (`career-development-plan.md`), t06 team health assessment (`team-health-assessment.md`), t19 leadership succession plan (`leadership-succession-plan.md`); model on existing templates | Examples use canon only (for t19, the week 44 succession table; for t02, the levels and pay canon; for t06, a canon team). No new facts |
