@@ -75,7 +75,7 @@ ELH_TREAT_AS_LIVE=NN .venv/bin/python tools/validate_book.py
 Ignore nav, stale-page, stale single-file, and missing-anchor errors caused by your chapter not being
 in the nav yet. Every other error and warning is yours to fix. Mermaid: `flowchart TD`, labels of about
 four words, at most four nodes side by side, quote labels with parentheses, colons, or semicolons.
-Include the "Awaiting human review" banner directly under the H1, as finished chapters do. No em dashes
+Do not add a per-page review banner (retired; the site announcement carries the status). No em dashes
 in prose.
 
 When you finish, report: files written, word count, number of sources (new and reused), Northstar facts

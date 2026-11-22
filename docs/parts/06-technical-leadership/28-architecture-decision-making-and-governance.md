@@ -1,10 +1,5 @@
 # Chapter 28 — Architecture Decision-Making and Governance
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Every engineering organization makes architecture decisions. The question is who makes them and
 whether anyone can later find out why. This chapter covers assigning architectural decision rights
 among managers, staff engineers, and teams; recording decisions so they outlive their authors;

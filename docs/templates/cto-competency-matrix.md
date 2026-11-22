@@ -1,10 +1,5 @@
 # CTO competency matrix
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** [Chapter 4](../parts/01-foundations/04-the-leadership-ladder.md) (the leadership ladder), [Chapter 50](../parts/12-cto-leadership/50-what-a-cto-actually-does.md) (what a CTO actually does),
 [Chapter 55](../parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md) (boards and executive decision-making).
 **Owner:** the CTO (self-assessment) and the CEO (assessment); the two are compared, not averaged.

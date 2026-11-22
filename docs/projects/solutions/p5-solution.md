@@ -1,10 +1,5 @@
 # Project 5 solution: Northstar's quarter 3 organization scorecard
 
-!!! warning "Awaiting human review"
-    This solution has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This is one worked answer to [Project 5](../p5-delivery-and-reliability-scorecard.md). It treats the
 eight-entry scorecard in [Chapter 38](../../parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md)
 as a submission to be tested. The conclusion is that its structure is right (paired rows, owners and

@@ -1,10 +1,5 @@
 # Chapter 6 — Feedback, Conflict, and Difficult Conversations
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about the conversations managers avoid: telling someone what they did and what it
 caused, stepping into a dispute between people or teams, and saying something the other person does
 not want to hear. It covers specific behavioral feedback and why timing matters more than phrasing,

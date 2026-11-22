@@ -1,10 +1,5 @@
 # Career development plan
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 8 (career development, promotion, and compensation), Chapter 5 (growth and
 sponsorship in one-on-ones), Chapter 10 (retention, where a missing career conversation shows up in
 exit data), Chapter 4 (choosing between the management and individual-contributor tracks), Chapter 41

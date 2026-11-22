@@ -1,10 +1,5 @@
 # Chapter 43 — Leading Organizational Change and Director Failure Patterns
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 A director changes the organization mostly through other people: six managers, three staff engineers,
 and peers who own the product roadmap and the budget. This chapter is about planning such a change so
 that it survives contact with those people, about the failure patterns directors fall into (and how to

@@ -1,10 +1,5 @@
 # Chapter 9 — Performance Management and Underperformance
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about the part of management most managers postpone: deciding that someone is not
 performing, finding out why, and acting in a way that is fair to that person and to everyone who works
 with them. It covers diagnosis before action (skill, will, role fit, and the system around the

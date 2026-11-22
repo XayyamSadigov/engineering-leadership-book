@@ -1,10 +1,5 @@
 # Chapter 32 — Platform Engineering, Developer Experience, and Legacy Modernization
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Past a few teams, every engineering organization has shared machinery: build systems, test
 environments, deployment paths, and an old system at the center that everyone changes and nobody
 fully understands. This chapter covers how to tell whether a platform team is working, how to choose

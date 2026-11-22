@@ -1,10 +1,5 @@
 # Chapter 49 — Multi-Year Transformation, Executive Communication, and Constructive Politics
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 A ninety-day transformation is funded on a mandate; a multi-year one has to be funded again and again,
 by executives whose priorities move while it runs. This chapter covers the skills that decide whether
 such a program survives its second year: cutting it into stages that each earn the next, asking

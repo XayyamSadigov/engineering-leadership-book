@@ -1,10 +1,5 @@
 # Chapter 44 — Working with Product: Discovery and Outcome-Based Roadmaps
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Most of what an engineering organization builds is decided before an engineer sees it. Engineering's
 knowledge of what is cheap, risky, or already broken then arrives too late to change the options, and
 its only lever is the estimate, which becomes the argument. This chapter covers what a director owns

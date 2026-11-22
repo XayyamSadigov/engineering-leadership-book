@@ -1,10 +1,5 @@
 # Chapter 17 — Predictability and Managing Uncertainty
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Every engineering leader is asked "when will it be done?" This chapter is about answering honestly:
 forecasting delivery as a range with a probability, built from what teams have actually delivered;
 keeping forecasts, targets, and commitments apart; and ordering uncertain work so the biggest

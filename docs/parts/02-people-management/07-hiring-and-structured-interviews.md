@@ -1,10 +1,5 @@
 # Chapter 7 — Hiring and Structured Interviews
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter treats hiring as a measurement problem. It covers the role scorecard and the structured
 loop built from it, what selection research supports (including the 2022 revision of the best-known
 validity estimates), where engineering interview practice has run ahead of the evidence, debriefs

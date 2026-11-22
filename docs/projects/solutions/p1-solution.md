@@ -1,10 +1,5 @@
 # Project 1 solution: Northstar's quarter 3 operating system
 
-!!! warning "Awaiting human review"
-    This solution has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This is one worked answer to [Project 1](../p1-management-operating-system.md). It treats the
 director's week-22 redesign in [Chapter 37](../../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md)
 as a submission to be tested, not as the answer. The conclusion is that the redesign is the right

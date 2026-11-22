@@ -1,10 +1,5 @@
 # Project 3: Create an Engineering Quality Transformation Plan
 
-!!! warning "Awaiting human review"
-    This project has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 You are the new Engineering Director at Northstar Technologies, the fictional company of the
 [case study](../case-studies/northstar/index.md). It is your first week. Nothing in the
 transformation has happened yet. Your job in this project is to produce the documents a director

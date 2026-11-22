@@ -1,10 +1,5 @@
 # Chapter 30 — Technical Strategy, Technology Selection, and Build versus Buy
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Every engineering organization has a technical strategy. Most never write it down, so it lives in
 what gets approved, what gets bought, and what is left to rot. This chapter makes that strategy
 explicit at director and staff-engineer level: a diagnosis, a few guiding policies, and actions that

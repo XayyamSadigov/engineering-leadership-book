@@ -1,10 +1,5 @@
 # Chapter 14 — Distributed Teams, Team Health, and Diagnosing Dysfunction
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter covers three jobs: designing how a team works when its members are not in one room,
 using what the remote and hybrid work research shows; finding out how healthy a team is without
 turning the answer into a score people learn to manage; and diagnosing a team that is not working,

@@ -1,10 +1,5 @@
 # Technical debt register
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 21 (debt economics), Chapter 27 (prioritizing internal quality), Project 3.
 **Owner:** each team keeps its entries; staff engineers review cross-cutting entries; the director
 reviews the top of the register quarterly.

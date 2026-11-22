@@ -1,10 +1,5 @@
 # Chapter 4 — The Leadership Ladder: Senior Engineer to CTO
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is a map of the roles between senior engineer and chief technology officer: what each
 one is responsible for, how far ahead it looks, what it produces, and how it typically fails. It then
 takes on two questions the map raises. How do you tell whether a manager at any level is effective,

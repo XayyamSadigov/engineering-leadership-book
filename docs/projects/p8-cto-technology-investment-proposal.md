@@ -1,10 +1,5 @@
 # Project 8: Build a CTO Technology Investment Proposal
 
-!!! warning "Awaiting human review"
-    This project has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 You are Victor Lindqvist, CTO of Northstar Technologies, the fictional company of the
 [case study](../case-studies/northstar/index.md), and it is week 47 of the Engineering Director's first
 year. The board meets in week 50, where Helena Marsh (CEO) presents the year-2 operating plan and budget

@@ -17,15 +17,15 @@ own reasoning and you should treat it with the same skepticism you would apply t
 
 ## How the bibliography records access
 
-Each [bibliography](bibliography.md) entry says how much of the source was actually read for this
-project:
+Each [bibliography](bibliography.md) entry says how much of the source was read in writing this book,
+because that limits what the book can claim about it:
 
 - **full text read**: the whole source, or the whole relevant chapter, was read.
-- **abstract or landing page only**: claims are limited to what the abstract or summary states.
+- **abstract or landing page only**: claims stay within what the abstract or summary states.
 - **official summary read**: an official summary page from the author or publisher was read.
-- **bibliographic metadata only**: the citation was checked against a publisher or catalog page; the
-  work itself was not read for this project. The book credits such sources only for the ideas they
-  are widely known for, in its own words, without quotations, page numbers, or reported findings.
+- **bibliographic metadata only**: the citation was checked against a publisher or catalog page, but
+  the work itself was not read. The book credits such sources only for the ideas they are widely known
+  for, in its own words, without quotations, page numbers, or reported findings.
 
-Most of the practitioner books cited are in the last category. That is a deliberate limit on what the
+Most of the practitioner books cited are in the last group. That is a deliberate limit on what the
 book claims about them, not a judgment of their quality. Read them; they are better than any summary.

@@ -1,10 +1,5 @@
 # Chapter 12 — Team Charters, Working Agreements, and Knowledge Sharing
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about three written or unwritten agreements every team runs on: what the team is for
 and where it stops (the charter), how its members work with each other (working agreements), and who
 knows what (the knowledge distribution), and how to make them explicit without producing documents

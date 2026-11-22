@@ -1,10 +1,5 @@
 # Chapter 39 — Reviews, Decision Logs, Escalation, and Executive Reporting
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter covers four mechanisms that move information and decisions through an engineering
 organization: reviews, the decision log, escalation paths, and the report to the executive above you.
 They work only as one system, and they fail the same way: when the people who hold the facts expect to

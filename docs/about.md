@@ -14,24 +14,29 @@ This book tries to do three things at once:
    the one before and the reader can see how the same topic (quality, hiring, structure) changes as
    scope grows.
 2. **Be honest about evidence.** Claims are labeled by the kind of support they have. Every cited source
-   is recorded with what was verified and how much of it was actually read. Contested questions are
+   is recorded with what was checked and how much of it was actually read. Contested questions are
    presented as contested.
-3. **Be usable.** Every chapter ends in a playbook and exercises, and the template library provides
-   working artifacts with filled-in examples.
+3. **Be usable.** Every chapter ends in a playbook and exercises, the template library provides working
+   documents with filled-in examples, and eight projects ask for the documents a real leader would
+   write.
 
 ## Who wrote it, and how
 
-The book is written and maintained as an open-source project. Drafting is assisted by AI tools under a
-written set of editorial and research rules (`CLAUDE.md` in the repository) that prohibit invented
-sources, quotations, statistics, and real-company stories. Every chapter must pass automated validation
-and a human review checklist before it is published. The review records, known limitations, and open
-research questions are kept in the repository's `research/` directory.
+The book is an open-source project. Drafting was assisted by AI tools working under written editorial
+and research rules that prohibit invented sources, quotations, statistics, and stories about real
+companies.
 
 AI-assisted drafting has specific risks: confident statements that no source supports, and summaries
-that drift from what a source actually says. The process is designed around those risks:
-bibliography entries record which fields were confirmed on which page, chapters may cite only verified
-entries, and the human review checks each cited claim against its source. If you find a claim that its
-citation does not support, please report it; that is the most valuable contribution a reader can make.
+that drift from what a source actually says. The process is designed around those risks. Each
+bibliography entry records which details were confirmed and on which page; chapters may cite only
+confirmed entries; and a human reviewer checks each cited claim against its source.
+
+Where that review stands: every chapter, template, and project has passed the book's automated checks
+and an editorial self-review. None has yet completed the human review, so every page carries an
+notice at the top of the site; the review status of each page is recorded in the repository as the
+review is done. If you find a claim
+that its citation does not support, please report it (the repository's CONTRIBUTING file says how).
+That is the most valuable contribution a reader can make.
 
 ## Relationship to other books
 
@@ -40,10 +45,12 @@ The book draws on a large body of practitioner and research literature, listed i
 does not reproduce other books' text, diagrams, or exercises, and it is not a substitute for reading
 them.
 
-## Northstar Technologies
+## Northstar Technologies and Halvard Systems
 
-The running case study is fictional. It was built to be internally consistent and plausible, not to
-represent any real company. Its numbers are illustrative and are not benchmarks.
+The running case study, [Northstar Technologies](case-studies/northstar/index.md), is fictional, and so
+is the larger comparison company, [Halvard Systems](case-studies/northstar/halvard.md). Both were built
+to be internally consistent and plausible, not to represent any real company. Their numbers are
+illustrative and are not benchmarks.
 
 ## Scope and limits
 

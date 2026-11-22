@@ -1,10 +1,5 @@
 # 1:1 template
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 5 (one-on-ones, coaching, and mentorship), Chapter 9 (performance management,
 where the record replaces recollection), Chapter 41 (managing managers, whose one-on-ones follow the
 same design).

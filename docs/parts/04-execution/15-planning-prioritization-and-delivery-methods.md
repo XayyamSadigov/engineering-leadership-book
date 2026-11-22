@@ -1,10 +1,5 @@
 # Chapter 15 — Planning, Prioritization, and Delivery Methods
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about three decisions every engineering leader makes, usually without naming them:
 how a team organizes its work (Scrum, Kanban, fixed cycles, or no named method), how competing
 requests are ordered, and how much planning a piece of work deserves. It argues that the method

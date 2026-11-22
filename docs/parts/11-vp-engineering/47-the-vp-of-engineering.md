@@ -1,10 +1,5 @@
 # Chapter 47 — The VP of Engineering: Managing Directors and the Portfolio
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 A director runs one area. A VP of Engineering runs several directors, and through them a portfolio of
 areas competing for the same money and people. The VP rarely sees a team's work, and decides instead
 what each director is accountable for, what each gets, and who the directors are. This chapter defines the

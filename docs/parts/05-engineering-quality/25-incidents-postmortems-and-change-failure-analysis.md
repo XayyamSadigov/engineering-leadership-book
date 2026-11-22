@@ -1,10 +1,5 @@
 # Chapter 25 — Incidents, Postmortems, and Change Failure Analysis
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 What separates organizations is not whether they have incidents but what an incident leaves behind:
 a fixed weakness and engineers who describe their mistakes honestly, or an unfinished action list and
 a team that has learned to keep quiet. This chapter covers the three systems that decide which:

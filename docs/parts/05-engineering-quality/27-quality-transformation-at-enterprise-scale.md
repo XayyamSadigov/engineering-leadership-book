@@ -1,10 +1,5 @@
 # Chapter 27 — Quality Transformation at Enterprise Scale
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about a situation most engineering directors inherit at least once: an organization
 of dozens of engineers whose software quality has declined until customers, finance, and the
 executive team have noticed. It shows how to diagnose the decline as a system, sequence a

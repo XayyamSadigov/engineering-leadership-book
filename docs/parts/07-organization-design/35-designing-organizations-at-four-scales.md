@@ -1,10 +1,5 @@
 # Chapter 35 — Designing Organizations of 20, 50, 100, and 500 Engineers
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about producing an organization design: for a given headcount, architecture, and
 product portfolio, which teams exist, who leads them, and which roles sit above and beside them. It
 describes what tends to break as an organization passes roughly 20, 50, 100, and 500 engineers, which

@@ -1,10 +1,5 @@
 # Engineering strategy template
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 30 (technical strategy and technology selection), Chapter 51 (the CTO's
 technology strategy).
 **Owner:** the engineering director or CTO, written with the staff engineers; each guiding policy has

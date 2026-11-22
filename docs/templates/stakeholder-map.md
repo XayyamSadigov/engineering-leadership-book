@@ -1,10 +1,5 @@
 # Stakeholder map
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 42 (cross-functional dependencies, portfolio, and influence), Chapter 46
 (stakeholder management and negotiation).
 **Owner:** the leader driving the decision; it is a private working document, not a circulated one.

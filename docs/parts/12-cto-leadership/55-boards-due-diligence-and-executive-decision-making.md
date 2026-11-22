@@ -1,10 +1,5 @@
 # Chapter 55 — Boards, Due Diligence, and Executive Decision-Making
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Three situations test a CTO's judgment in front of people who cannot check the work: the board meeting,
 where directors oversee technology they do not run; technology due diligence, where a buyer or investor
 tries to find in four weeks what took years to build; and the executive decision made with incomplete

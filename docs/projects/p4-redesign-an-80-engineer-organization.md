@@ -1,10 +1,5 @@
 # Project 4: Redesign an Organization of 80 Engineers
 
-!!! warning "Awaiting human review"
-    This project has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 It is week 44 of your first year as Engineering Director at Northstar Technologies, the fictional
 company of the [case study](../case-studies/northstar/index.md). The quality transformation has been
 running for three quarters. Victor Lindqvist, the CTO, has asked you for a year-2 organization

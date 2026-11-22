@@ -1,10 +1,5 @@
 # Project 3 solution: an engineering quality transformation plan for Northstar
 
-!!! warning "Awaiting human review"
-    This solution has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This is one worked answer to [Project 3](../p3-quality-transformation-plan.md). It follows the
 director's actual choices on the [first quarter](../../case-studies/northstar/first-quarter.md) page
 where the baseline data supports them, and departs from them in two places where the data available

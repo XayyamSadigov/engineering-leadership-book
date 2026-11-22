@@ -1,10 +1,5 @@
 # Project 7 solution: Northstar's year-2 engineering strategy
 
-!!! warning "Awaiting human review"
-    This solution has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This is one worked answer to [Project 7](../p7-twelve-month-engineering-strategy.md). It starts by grading
 the week-14 strategy draft in [Chapter 30](../../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md),
 because the most useful lesson for year 2 is in what happened to it: its diagnosis held, and none of the

@@ -1,10 +1,5 @@
 # Chapter 51 — Enterprise Technology Strategy and the Three-Year Roadmap
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 A director's technical strategy decides how the engineering organization builds; a CTO's technology
 strategy decides what technology the company must be excellent at for its business strategy to work,
 and what it will accept being merely adequate at. This chapter covers deriving that strategy from the

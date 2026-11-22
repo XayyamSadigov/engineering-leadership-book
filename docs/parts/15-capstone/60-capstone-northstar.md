@@ -1,10 +1,5 @@
 # Chapter 60 — Capstone: Transforming Northstar Technologies
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 The capstone asks you to do the whole job once, in order, at Northstar Technologies, the fictional
 company of the [case study](../../case-studies/northstar/index.md). In ten stages you diagnose the
 organization, design its ownership model, scorecard, debt priorities, and accountability, and write a

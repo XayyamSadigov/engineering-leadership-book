@@ -1,10 +1,5 @@
 # Project 7: Design a 12-Month Engineering Strategy
 
-!!! warning "Awaiting human review"
-    This project has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 It is weeks 46 to 48, late in quarter 4 of your first year as Engineering Director at Northstar
 Technologies, the fictional company of the [case study](../case-studies/northstar/index.md). The
 twelve-month mandate ends with this quarter. Quarter 3, the latest measured quarter, came in at 14 Sev1

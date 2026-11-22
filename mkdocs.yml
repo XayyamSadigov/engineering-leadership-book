@@ -11,7 +11,9 @@ copyright: Text CC BY 4.0 · Code MIT · Northstar Technologies is fictional
 
 theme:
   name: material
+  custom_dir: overrides
   features:
+    - announce.dismiss
     - navigation.sections
     - navigation.footer
     - navigation.top
@@ -70,7 +72,16 @@ nav:
   - Home: index.md
   - About this book: about.md
   - How to use this book: how-to-use.md
+  - Glossary: glossary.md
   - Learning roadmaps: learning-roadmaps.md
+  - "Case study: Northstar Technologies":
+      - "Company and organization": case-studies/northstar/index.md
+      - "Cast of characters": case-studies/northstar/cast.md
+      - "Timeline and results": case-studies/northstar/timeline.md
+      - "Baseline data": case-studies/northstar/baseline-data.md
+      - "The director's first year": case-studies/northstar/first-quarter.md
+      - "Quarter 4 briefing": case-studies/northstar/quarter-4-briefing.md
+      - "Halvard Systems (comparison company)": case-studies/northstar/halvard.md
   - Curriculum: curriculum.md
   - "I. Foundations of Engineering Leadership":
       - "Chapter 1 — What Engineering Management Actually Is": parts/01-foundations/01-what-engineering-management-is.md
@@ -104,11 +115,6 @@ nav:
       - "Chapter 25 — Incidents, Postmortems, and Change Failure Analysis": parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md
       - "Chapter 26 — Security and Software Supply-Chain Quality": parts/05-engineering-quality/26-security-and-software-supply-chain-quality.md
       - "Chapter 27 — Quality Transformation at Enterprise Scale": parts/05-engineering-quality/27-quality-transformation-at-enterprise-scale.md
-  - "Case study: Northstar Technologies":
-      - "Company and organization": case-studies/northstar/index.md
-      - "Baseline data": case-studies/northstar/baseline-data.md
-      - "The first quarter": case-studies/northstar/first-quarter.md
-      - "Halvard Systems (comparison company)": case-studies/northstar/halvard.md
   - "VI. Technical Leadership and Architecture":
       - "Chapter 28 — Architecture Decision-Making and Governance": parts/06-technical-leadership/28-architecture-decision-making-and-governance.md
       - "Chapter 29 — Staff and Principal Engineers": parts/06-technical-leadership/29-staff-and-principal-engineers.md

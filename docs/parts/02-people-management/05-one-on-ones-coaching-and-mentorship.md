@@ -1,10 +1,5 @@
 # Chapter 5 — One-on-Ones, Coaching, and Mentorship
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about the manager's most frequent private conversation and what it is for. It treats
 the one-on-one as an information channel that has to be designed and checked, not a ritual that is
 done because it is on the calendar. It then separates four ways of helping a person grow (directing,

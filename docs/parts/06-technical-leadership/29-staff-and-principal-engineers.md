@@ -1,10 +1,5 @@
 # Chapter 29 — Staff and Principal Engineers
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 A staff engineer is a bet: that one person's technical judgment, applied across teams they do not
 manage, will be worth more than the same salary spent on another pair of hands. The bet pays only when
 the role has a scope, a sponsor, and decisions it owns. Without them, strong engineers drift into one of

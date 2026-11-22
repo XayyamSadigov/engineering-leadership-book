@@ -1,10 +1,5 @@
 # Chapter 22 — Testing Strategy and Test Architecture
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Most engineering leaders inherit a test suite rather than design one. This chapter treats the suite as a portfolio: investments that each buy early warning about one
 kind of defect, at a price in feedback time and maintenance. It covers how to choose that portfolio
 from where defects actually escape, how to run flaky tests as a reliability problem, what coverage and

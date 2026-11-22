@@ -1,10 +1,5 @@
 # Chapter 1 — What Engineering Management Actually Is
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 "Engineering manager" is one title covering at least three different jobs. This chapter separates
 them, gives you a definition of managerial output that you can test against your own calendar, and
 places technical leaders who manage nobody on the same map as managers. It sets vocabulary the rest

@@ -1,10 +1,5 @@
 # Chapter 50 — What a CTO Actually Does
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 The title Chief Technology Officer names a seat, not a job. One CTO runs every engineer in the company;
 another has no reports and spends the year with customers. This chapter defines the role by the decisions
 it owns: the archetypes CTOs fall into, how the CTO, CIO, and VP of Engineering divide the territory, how a

@@ -1,10 +1,5 @@
 # Chapter 20 — Engineering Standards and Their Governance
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Every engineering organization above a few teams has standards, written or not. Some are real: what
 actually happens to every change because a tool or a habit makes it happen. Others are aspirational:
 rules on a wiki page that nobody checks. This chapter is about closing that gap: how to write a

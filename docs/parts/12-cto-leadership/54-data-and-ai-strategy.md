@@ -1,10 +1,5 @@
 # Chapter 54 — Data and AI Strategy
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Every executive team now asks its technology leader the same question: what is our AI strategy? The
 honest answer is usually that the company lacks the data, the controls, and the measurements to have
 one yet, and that the first year of an AI strategy is mostly data work, policy work, and evaluation

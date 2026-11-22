@@ -1,10 +1,5 @@
 # Technology investment business case
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 45 (engineering economics and cost of delay), Chapter 52 (financial statements
 and budgeting), Project 8.
 **Owner:** the leader asking for the money or capacity; finance checks the arithmetic, and the

@@ -1,10 +1,5 @@
 # Chapter 23 — Code Review, CI/CD, and Release Engineering
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about the path a change travels from a branch to a customer: review, integration,
 pipeline, deployment, and release. Few leaders design that path on purpose. It accretes: a review
 rule after one incident, a manual gate after another, a deploy script written by someone who has

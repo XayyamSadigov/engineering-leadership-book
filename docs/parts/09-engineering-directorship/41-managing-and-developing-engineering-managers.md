@@ -1,10 +1,5 @@
 # Chapter 41 — Managing and Developing Engineering Managers
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 A director's main product is the managers. This chapter covers assessing an engineering manager
 against a rubric with observable evidence, coaching managers through skip-levels, manager artifact reviews, and
 delegated decisions, and building a bench for every management seat. Chapter 4 owns measuring

@@ -1,10 +1,5 @@
 # Chapter 21 — Technical Debt: Identification, Economics, and Prioritization
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter treats technical debt as an
 economic object: something with a recurring cost in time and risk, a price for removal, and a claim
 on the same engineers as features. It covers where the metaphor helps and misleads, how to measure

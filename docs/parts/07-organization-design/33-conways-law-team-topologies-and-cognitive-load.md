@@ -1,10 +1,5 @@
 # Chapter 33 — Conway's Law, Team Topologies, and Cognitive Load
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Every boundary between teams is also a boundary in the system, whether anyone drew it there on
 purpose or not. This chapter covers three tools for drawing those boundaries deliberately: Conway's
 observation that systems copy the communication structure of the organizations that build them, the

@@ -1,10 +1,5 @@
 # Chapter 16 — Flow: Lead Time, Dependencies, and Unplanned Work
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about why work takes as long as it does. Most of the time between "we decided to
 build this" and "a customer can use it" is spent waiting: in a backlog, a review queue, another team's
 plan, a release. The chapter shows how to map where that time goes, how work in progress and batch

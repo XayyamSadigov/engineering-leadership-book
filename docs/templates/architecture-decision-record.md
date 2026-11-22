@@ -1,10 +1,5 @@
 # Architecture decision record
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** [Chapter 13](../parts/03-high-performing-teams/13-decision-making-in-teams.md) (decision-making in teams), [Chapter 28](../parts/06-technical-leadership/28-architecture-decision-making-and-governance.md) (architecture
 decision-making and governance), [Chapter 39](../parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md) (decision logs), [Chapter 55](../parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#deciding-under-uncertainty-and-disagreement)
 (recording executive decisions).

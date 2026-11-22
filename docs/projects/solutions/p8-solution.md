@@ -1,10 +1,5 @@
 # Project 8 solution: Northstar's year-2 technology investment proposal
 
-!!! warning "Awaiting human review"
-    This solution has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This is one worked answer to [Project 8](../p8-cto-technology-investment-proposal.md), written in Victor
 Lindqvist's seat in week 47. Its main finding is uncomfortable and, for that reason, the one to put in front
 of the executive team and, through Helena Marsh's operating plan, the board: on counted benefits alone, the

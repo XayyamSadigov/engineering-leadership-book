@@ -1,10 +1,5 @@
 # Leadership succession plan
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 36 (reorganizations, organizational evolution, and succession), Chapter 41
 (managing and developing engineering managers, where the bench is grown), Chapter 12 (knowledge maps,
 the input for concentrated-knowledge roles), Chapter 55 (what the board asks about key-person risk);

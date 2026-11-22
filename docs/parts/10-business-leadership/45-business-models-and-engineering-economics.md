@@ -1,10 +1,5 @@
 # Chapter 45 — Business Models, Engineering Economics, and Investment Decisions
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Every engineering week is spent on one thing instead of another. Engineering economics makes that
 comparison explicit: in money where money is honest, over time, under stated uncertainty. This
 chapter covers reading the business model, pricing time with cost of delay and opportunity cost, and

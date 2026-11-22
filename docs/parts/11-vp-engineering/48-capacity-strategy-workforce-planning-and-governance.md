@@ -1,10 +1,5 @@
 # Chapter 48 — Capacity Strategy, Workforce Planning, and Enterprise Governance
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 A director plans capacity a quarter at a time (Chapter 38). A VP of Engineering plans the stock those
 quarterly plans draw on: which levels, in which locations, employed or contracted, and how that stock
 changes as people leave, get promoted, and are replaced. The VP also decides which few rules must

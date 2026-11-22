@@ -50,7 +50,8 @@ def curriculum_page() -> str:
         f"{'is' if len(review) == 1 else 'are'} on the site awaiting human review.** "
         "A chapter is published only when it passes the automated validation and the human "
         "review checklist. A chapter awaiting review has passed the "
-        "automated validation and carries a banner saying so. Planned chapters are designed "
+        "automated validation; the site-wide announcement says the book awaits human review. "
+        "Planned chapters are designed "
         "(objectives and sources below) but not yet written, and do not appear in the site "
         "navigation.\n"
     )

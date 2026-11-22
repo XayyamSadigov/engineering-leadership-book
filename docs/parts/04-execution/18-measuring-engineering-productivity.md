@@ -1,10 +1,5 @@
 # Chapter 18 — Measuring Engineering Productivity: DORA, SPACE, and Their Limits
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Sooner or later someone senior asks how productive engineering is, and wants one number. This chapter
 explains what the best-known measurement frameworks measure, how their evidence was produced, how every
 metric gets gamed, and why the book refuses to score individual engineers with delivery metrics. It owns

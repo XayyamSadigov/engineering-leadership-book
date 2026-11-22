@@ -1,10 +1,5 @@
 # Organizational design assessment
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 33 (team types and cognitive load), Chapter 34 (spans, layers, and dependency
 mapping), Chapter 35 (designing organizations at four scales), Project 4.
 **Owner:** the engineering director, with each manager supplying the team rows.

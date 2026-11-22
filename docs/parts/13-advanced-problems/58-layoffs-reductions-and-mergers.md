@@ -1,10 +1,5 @@
 # Chapter 58 — Layoffs, Reductions, and Mergers and Acquisitions
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 A reduction in force and an acquisition look like opposites: one removes people, the other adds them.
 For an engineering leader they are the same problem from two sides. Both change who owns which running
 system faster than ownership normally changes, both are decided partly above the engineering

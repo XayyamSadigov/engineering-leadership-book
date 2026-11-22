@@ -45,14 +45,16 @@ A chapter (or template, or project) is in one of four states in `curriculum.yaml
 - `planned`: designed, not written. Not in the nav.
 - `draft`: file exists, not yet passing validation. Not in the nav.
 - `review`: passes `validate_book.py` and an editorial self-review against the human review
-  checklist. In the nav, and must carry the banner `!!! warning "Awaiting human review"` directly
-  under the H1 (enforced). This is the highest status an agent may set.
+  checklist. In the nav. Pages carry no per-page review banner (the validator rejects one); the
+  site-wide announcement in `overrides/main.html` says the book awaits human review. This is the
+  highest status an agent may set.
 - `published`: additionally passed the human review checklist
   (`research/human-review-checklist.md`) done by a person, recorded in `research/quality-report.md`.
-  The banner is removed (enforced). Only a human reviewer moves a chapter to `published`.
+  Only a human reviewer moves a chapter to `published`. When every item is published, remove the
+  site-wide announcement.
 
 Moving to `review` means: set the status, add the chapter and its solutions page to the nav in
-`mkdocs.yml`, add the banner, regenerate, validate. A skeleton must never reach the nav.
+`mkdocs.yml`, regenerate, validate. A skeleton must never reach the nav.
 
 ## 4. The chapter contract
 
@@ -143,6 +145,16 @@ adds nav entries, regenerates, and validates.
   cost. Every framework comes with how it fails.
 - Quantitative examples state their assumptions.
 - Em dashes only in chapter titles. In prose use commas, colons, parentheses, or new sentences.
+- Reader text carries no maintainer bookkeeping: no "canon", no internal codes (D3, G8), no notes on
+  how a source was accessed. Fold access limits into the evidence label instead.
+- In each chapter, define every acronym and specialist term at first use and link it once to
+  `docs/glossary.md`; give each person's role at first mention (the cast is in
+  `docs/case-studies/northstar/cast.md`); never leave an incident ID without a few words of what happened.
+- The first Northstar passage of a chapter opens with a two-to-four-line `!!! info "Northstar so far"`
+  box linking the timeline. Every exercise must be solvable from its chapter plus the Northstar
+  overview, cast, timeline, and quarter 4 briefing.
+- Point first, then evidence; average sentence under 20 words; arithmetic in tables or solutions, not
+  in prose. The full rules are in `research/readability-brief.md`.
 
 ## 8. Diagrams
 

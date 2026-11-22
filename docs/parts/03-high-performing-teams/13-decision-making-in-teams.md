@@ -1,10 +1,5 @@
 # Chapter 13 — Decision-Making in Teams
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about how a team decides: who makes a given decision, by what method, how the
 decision is written down, and how to notice when a team only appears to have decided. It treats
 decision-making as something a leader designs, like a build pipeline. The running example is the ownership

@@ -1,10 +1,5 @@
 # Project 5: Build a Delivery Performance and Reliability Scorecard
 
-!!! warning "Awaiting human review"
-    This project has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 It is weeks 25 and 26, the end of quarter 2 of your first year as Engineering Director at Northstar
 Technologies, the fictional company of the [case study](../case-studies/northstar/index.md). You are
 planning quarter 3 (weeks 27 to 39). The allocation is drafted: unplanned work as a measured tax,

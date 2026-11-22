@@ -1,10 +1,5 @@
 # Team health assessment
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 14 (distributed teams, team health, and diagnosing dysfunction), Chapter 11 (trust,
 psychological safety, and accountability), Chapter 41 (facilitating a health check as a trial
 assignment for a future manager).

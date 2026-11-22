@@ -1,10 +1,5 @@
 # Incident review
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 25 (incident response and blameless review), Chapter 27 (recurrence and action
 closure), Chapter 57 (crises).
 **Owner:** the team that owns the affected component; facilitated by someone not directly involved.

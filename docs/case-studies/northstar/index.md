@@ -8,8 +8,20 @@
 
 Northstar is the running case study of this book. Chapters return to it so that each topic is
 applied to the same organization with the same constraints, and the capstone asks you to transform
-it, first as Engineering Director and later as CTO. This page is the canonical description. If a
-chapter and this page disagree, this page is right and the chapter has a defect.
+it, first as Engineering Director and later as CTO. This page and the pages linked below are the
+reference for the case. If a chapter and these pages disagree, these pages are right and the
+chapter has a defect.
+
+!!! tip "How to use these pages"
+    Read this overview first (about 15 minutes). Then use the other pages as references:
+
+    - [Cast](cast.md): every named person, with role, team, and the chapters where they matter.
+    - [Timeline](timeline.md): the director's year week by week, and results by quarter.
+    - [Quarter 4 briefing](quarter-4-briefing.md): where things stand at week 40 and the open
+      decisions; start here if you begin at Parts X–XIII.
+    - [Baseline data](baseline-data.md): the measured starting state, by topic.
+    - [The director's first year](first-quarter.md): the full record, quarter by quarter.
+    - [Halvard Systems](halvard.md): the 500-engineer comparison company used from Chapter 34 on.
 
 ## The company
 
@@ -73,21 +85,23 @@ flowchart TD
     PLT --> QA["QA, manual regression: 7"]
 ```
 
-### Executive and board context (Part XII)
+### Executive and board context
 
-These facts were fixed when Part XII was written, so that the CTO chapters describe the same
-company. Victor Lindqvist stays CTO throughout the book. Nobody succeeds him in the canon: where a
-chapter or the capstone (Chapter 60) puts the reader in the CTO's role, the reader takes Victor's seat
-in quarter 4, with the facts available then, and the quarter 4 decisions stay open.
+The CTO chapters (Part XII) and the capstone use these facts. Victor Lindqvist is CTO throughout the
+book, and nobody succeeds him. Where a chapter or the capstone (Chapter 60) puts you in the CTO's
+role, you take Victor's seat in quarter 4, with the facts available then, and the quarter 4
+decisions stay open.
 
 | Fact | Value |
 |---|---|
 | Ownership | Privately held. Calder Ridge Partners, a growth-equity firm, has held a minority stake since the product's seventh year and has two board seats |
 | Board | Six members: Anders Holm (co-founder, non-executive chair), Helena Marsh (CEO), Natalie Brooks and Samuel Osei (Calder Ridge Partners), Margaret Lin (independent, former CFO, chairs the audit committee), David Ferrante (independent, former technology executive at a payments company) |
-| Board cadence | Quarterly. The quarter 4 meeting is in week 50 and is asked to approve the year-2 operating plan and budget envelope; decisions inside that envelope (the year-2 organization, the quality continuation, the workforce plan) stay with management. The audit committee oversees risk, including technology and security risk; there is no technology committee |
+| Board cadence | Quarterly. The quarter 4 meeting is in week 50 and is asked to approve the year-2 operating plan and budget envelope |
+| What stays with management | Decisions inside that envelope: the year-2 organization, the quality continuation, the workforce plan |
+| Board committees | The audit committee oversees risk, including technology and security risk; there is no technology committee |
 | The CTO at the board | Victor Lindqvist attends for one agenda item a quarter; the CEO's monthly board pack carries the engineering figures |
 | Victor Lindqvist's organization | One direct report, the Engineering Director (87 seats in all). Victor owns technical direction, the largest customers' technical relationships, and the board's technology questions |
-| IT | Corporate IT and internal business systems, 14 people led by Marta Kowalczyk (Head of IT), reporting to Rajiv Menon (CFO). Joon Park's two-person security function is one of the 14. Northstar has no CISO |
+| IT | Corporate IT and internal business systems, 14 people led by Marta Kowalczyk (Head of IT), reporting to Rajiv Menon (CFO). Joon Park's two-person security function is part of the 14. Northstar has no CISO |
 
 ## The system
 
@@ -153,7 +167,7 @@ commitment within twelve months, with no net growth in headcount, and without dr
 customer commitments that the renewals depend on.
 
 What you find, in summary (the numbers are on the [baseline data](baseline-data.md) page; what
-happens in your first 90 days is on [the first quarter](first-quarter.md) page):
+happens next is on [the director's first year](first-quarter.md) page):
 
 - 30 Sev1 and Sev2 incidents last quarter, almost two thirds of them caused by Northstar's own
   changes, and almost half of them reported by a customer before any alert fired.

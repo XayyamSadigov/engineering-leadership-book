@@ -1,10 +1,5 @@
 # Chapter 59 — Transformation Under Budget Constraint and Scaling Without Bureaucracy
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Most transformations in this book were funded by a mandate. This chapter is about the ones that are
 not: the budget is flat or falling, nobody will add people, and the work still has to change. Under
 that constraint, every improvement is paid for by stopping something, and the cheapest things to stop

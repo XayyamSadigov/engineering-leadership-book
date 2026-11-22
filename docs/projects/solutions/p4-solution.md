@@ -1,10 +1,5 @@
 # Project 4 solution: Northstar's year-2 organization
 
-!!! warning "Awaiting human review"
-    This solution has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This is one worked answer to [Project 4](../p4-redesign-an-80-engineer-organization.md). It treats the
 director's week-44 proposal in [Chapter 35](../../parts/07-organization-design/35-designing-organizations-at-four-scales.md)
 as a submission to be tested, not as the answer. The conclusion is that the proposal is the right

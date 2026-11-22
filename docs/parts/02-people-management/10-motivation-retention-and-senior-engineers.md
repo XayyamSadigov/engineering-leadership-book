@@ -1,10 +1,5 @@
 # Chapter 10 — Motivation, Retention, and Managing Senior Engineers
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about keeping the people whose departure would hurt most, and managing the ones who know
 more than you: what turnover research tells a manager, how to collect exit and stay data about your own
 organization, how to work with opinionated experts without deferring or overruling, and how to decide on

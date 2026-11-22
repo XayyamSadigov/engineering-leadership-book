@@ -1,10 +1,5 @@
 # Chapter 56 — Recovering a Failing Engineering Organization
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Some leaders inherit an organization that works and needs tuning. Others inherit one that is breaking
 its promises: outages written into contracts, a roadmap that ships less than half of what it commits,
 experts leaving, and executives who no longer believe the dates. This chapter is about the second

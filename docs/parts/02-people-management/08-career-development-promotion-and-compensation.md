@@ -1,10 +1,5 @@
 # Chapter 8 — Career Development, Promotion, and Compensation
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about the three decisions that tell engineers what the organization actually values:
 what each level means, who moves up, and who is paid what. It covers repairing a career ladder,
 running promotions with calibration, saying "not yet" in a way the person can use, and making pay

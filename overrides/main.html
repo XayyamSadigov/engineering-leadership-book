@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block announce %}
+This book is a reviewed draft: its citations have not yet been checked by a human reviewer.
+<a href="{{ config.site_url }}about/">Read more</a> or report a problem on
+<a href="{{ config.repo_url }}/issues">GitHub</a>.
+{% endblock %}

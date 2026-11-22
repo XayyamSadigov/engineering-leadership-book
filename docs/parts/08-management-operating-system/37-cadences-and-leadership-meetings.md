@@ -1,10 +1,5 @@
 # Chapter 37 — The Management Operating System: Cadences and Leadership Meetings
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter is about the recurring meetings and written rhythms through which a leader runs an
 organization. It covers designing weekly, monthly, and quarterly cadences in which each meeting has one
 job, running a leadership team meeting that actually decides things, and auditing the whole system

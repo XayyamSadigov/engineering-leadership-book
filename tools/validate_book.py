@@ -61,6 +61,17 @@ MERMAID_TYPES = (
 ROOT_DOCS = ["README.md", "CONTRIBUTING.md"]
 
 
+# Maintainer bookkeeping that must not appear in reader text (CLAUDE.md section 7).
+BOOKKEEPING_RE = re.compile(
+    r"\bcanon(ical)?\b|\b(disputed claim|research gap|gap) [DG]\d+\b|"
+    r"\b(idea level|idea-level|abstract only|metadata only|metadata-only|full text (was not|could not)|"
+    r"not read for this book)\b",
+    re.I,
+)
+BOOKKEEPING_DIRS = ("parts", "solutions", "templates", "projects")
+BOOKKEEPING_IS_ERROR = False  # switch to True once the readability cleanup is complete
+
+
 def lint_mermaid(body: str) -> list[str]:
     problems: list[str] = []
     lines = [ln for ln in body.splitlines() if ln.strip() and not ln.strip().startswith("%%")]
@@ -120,10 +131,8 @@ def check_chapters(rep: Report) -> None:
         objectives = section(text, "Learning Objectives") or ""
         if len(re.findall(r"^\s*[-*]\s+", objectives, re.M)) < 3:
             rep.error(f"{ch.id}: Learning Objectives needs at least three bullet items")
-        if ch.status == "review" and REVIEW_BANNER not in text:
-            rep.error(f"{ch.id}: status 'review' requires the banner {REVIEW_BANNER}")
-        if ch.status == "published" and REVIEW_BANNER in text:
-            rep.error(f"{ch.id}: published chapters must not carry the review banner")
+        if REVIEW_BANNER in text:
+            rep.error(f"{ch.id}: per-page review banners are retired; the site announcement says so")
         rep.note(f"{ch.id}: {words} words, {len(diagrams)} diagrams, {len(h2)} sections")
 
 
@@ -134,6 +143,11 @@ def check_text_hygiene(rep: Report) -> None:
         for i, line in enumerate(strip_code(raw).splitlines(), 1):
             if PLACEHOLDER_RE.search(line) and not PLACEHOLDER_ALLOW.search(line):
                 rep.error(f"{rel(md)}:{i}: placeholder text: {line.strip()[:80]}")
+            if rel(md).split("/")[1:2] and rel(md).split("/")[1] in BOOKKEEPING_DIRS:
+                m = BOOKKEEPING_RE.search(line)
+                if m:
+                    msg = f"{rel(md)}:{i}: maintainer bookkeeping in reader text: {m.group(0)!r}"
+                    rep.error(msg) if BOOKKEEPING_IS_ERROR else rep.warn(msg)
         for lang, body, start in code_blocks(raw):
             where = f"{rel(md)}:{start}"
             if lang == "__unterminated__":

@@ -1,10 +1,5 @@
 # Chapter 11 — High Performance: Trust, Psychological Safety, and Accountability
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter opens Part III, where the unit of analysis moves from the individual to the team. It
 defines a high-performing engineering team, explains psychological safety (what it is, what the
 research measured, and what it does not mean), and shows how to combine it with accountability so

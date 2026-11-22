@@ -1,10 +1,5 @@
 # Risk register
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 30 (the first technology risk register), Chapter 53 (enterprise technology risk,
 governance, and reporting), Chapter 55 (reporting to a board).
 **Owner:** the CTO for the enterprise technology register; a director or vice president for an

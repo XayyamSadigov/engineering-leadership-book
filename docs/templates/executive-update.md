@@ -1,10 +1,5 @@
 # Executive update
 
-!!! warning "Awaiting human review"
-    This template has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 **Used in:** Chapter 39 (reviews, decision logs, escalation, and executive reporting), Chapter 49
 (the CTO and the executive team).
 **Owner:** the engineering director (to the CTO) or the CTO (to the CEO and executive team); managers

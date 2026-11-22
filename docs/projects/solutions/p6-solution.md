@@ -1,10 +1,5 @@
 # Project 6 solution: assessing and developing Northstar's managers
 
-!!! warning "Awaiting human review"
-    This solution has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This is one worked answer to [Project 6](../p6-manager-development-and-succession.md). It treats the
 director's week-24 draft in [Chapter 41](../../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md)
 as a submission to be tested. The conclusion is that the draft's method is right and most of its

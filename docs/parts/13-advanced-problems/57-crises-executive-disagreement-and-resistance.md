@@ -1,10 +1,5 @@
 # Chapter 57 — Crises, Executive Disagreement, and Resistance to Change
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 Three situations test a senior engineering leader harder than any plan: a failure that customers and
 the public can see, a decision by an executive you believe is wrong, and a change that the organization
 is quietly refusing. They look like separate topics. They share one problem: the information the leader

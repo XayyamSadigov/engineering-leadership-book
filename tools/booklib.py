@@ -43,7 +43,8 @@ EXERCISE_LEVELS = [
     ("Executive Decision-Making", "X"),
 ]
 STATUSES = {"planned", "draft", "review", "published"}
-# "review": passes automated validation and is visible on the site with a banner, but has not yet
+# "review": passes automated validation and is visible on the site (the site-wide announcement says
+# the book awaits human review), but has not yet
 # had the human review in research/human-review-checklist.md. "published": both.
 LIVE = {"review", "published"}
 REVIEW_BANNER = '!!! warning "Awaiting human review"'

@@ -1,10 +1,5 @@
 # Chapter 53 — Risk, Governance, Regulation, and Security Strategy
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 A CTO is accountable for technology risks that nobody in engineering can see whole: an unsupported
 framework, a build host with secrets in a file, a missing audit report that a customer's procurement
 team needs, a security function that reports to finance. This chapter covers how to keep those risks

@@ -1,10 +1,5 @@
 # Project 2 solution: diagnosing Northstar's Billing team
 
-!!! warning "Awaiting human review"
-    This solution has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This is one worked answer to [Project 2](../p2-diagnose-a-low-performing-team.md). Its conclusion is
 that Billing is not a weak team with a weak manager. The Core release train and the shared schema
 explain why Billing's incidents **arrive**; what is specific to Billing explains why they **last**

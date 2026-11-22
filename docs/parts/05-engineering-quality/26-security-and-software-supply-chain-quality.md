@@ -1,10 +1,5 @@
 # Chapter 26 — Security and Software Supply-Chain Quality
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter treats security the way the rest of Part V treats reliability: as a quality attribute of
 the software and of the system that produces it, with owners, a capacity budget, and measures that
 resist gaming. It is written for the engineering leader who is accountable for whether the

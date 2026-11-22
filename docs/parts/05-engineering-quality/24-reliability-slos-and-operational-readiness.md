@@ -1,10 +1,5 @@
 # Chapter 24 — Reliability Engineering: SLOs, Error Budgets, Observability, and Operational Readiness
 
-!!! warning "Awaiting human review"
-    This chapter has passed the book's automated validation and an editorial self-review, but not yet
-    the human review in which each cited claim is checked against its source. Treat it as a reviewed
-    draft. Corrections are welcome; see the repository's CONTRIBUTING file.
-
 This chapter turns "be more reliable" into decisions an engineering organization can make every
 week: service level objectives (SLOs) that describe what users experience, error budgets that settle
 arguments between product and engineering, alerts on the budget instead of on every symptom, and a
