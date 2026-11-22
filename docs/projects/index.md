@@ -20,8 +20,8 @@ documents a real leader would produce. Each takes about 12 to 20 hours.
 | P4 | [Redesign an Organization of 80 Engineers](p4-redesign-an-80-engineer-organization.md) | Part VII, Chapters 33 to 36 | Available |
 | P5 | [Build a Delivery Performance and Reliability Scorecard](p5-delivery-and-reliability-scorecard.md) | Chapters 18, 24, 27, and 38 | Available |
 | P6 | [Create Engineering Manager Development and Succession Plans](p6-manager-development-and-succession.md) | Chapters 36 and 41 | Available |
-| P7 | Design a 12-Month Engineering Strategy | Chapter 51 | Planned |
-| P8 | Build a CTO Technology Investment Proposal | Chapter 52 | Planned |
+| P7 | [Design a 12-Month Engineering Strategy](p7-twelve-month-engineering-strategy.md) | Chapter 51, with Chapters 29, 30, 38, and 45 to 49 | Available |
+| P8 | [Build a CTO Technology Investment Proposal](p8-cto-technology-investment-proposal.md) | Chapter 52, with Chapter 45 | Available |
 
 ## How to use a project
 
@@ -50,6 +50,8 @@ documents a real leader would produce. Each takes about 12 to 20 hours.
 - [Project 4 solution](solutions/p4-solution.md)
 - [Project 5 solution](solutions/p5-solution.md)
 - [Project 6 solution](solutions/p6-solution.md)
+- [Project 7 solution](solutions/p7-solution.md)
+- [Project 8 solution](solutions/p8-solution.md)
 
 All Northstar people, figures, and events are fictional. See the note on the
 [Northstar overview](../case-studies/northstar/index.md).

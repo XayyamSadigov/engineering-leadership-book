@@ -1302,3 +1302,311 @@ book's recommendation.
 | 18 | Succession better treated as a process than an event; put it in exit criteria | Research review + this book's recommendation | berns2017succession | abstract |
 | 19 | Gate rule (mandatory criteria, re-scope, stop) and staged funding | This book's recommendation | — | reasoning |
 | 20 | All Northstar and Halvard figures | Illustrative | — | fictional |
+
+## Chapter 50 — What a CTO Actually Does
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Record where executive time goes before deciding where it should go | Expert opinion | drucker1967effective | idea-level |
+| 2 | CEO time use is measurable from diary data (1,114 CEOs, six countries); "leader" and "manager" types; performance gaps attributed mainly to CEO-firm mismatch | Research finding (on CEOs; applied to CTOs by analogy only, stated in text) | bandiera2020ceo | abstract |
+| 3 | Four CTO roles attributed to Tom Berray: infrastructure manager, visionary and operations manager, external-facing technologist, big thinker; first two manage engineering directly, last two sit near the executive team | Expert opinion | vogels2007ctoroles | full text (post); Berray's original not read |
+| 4 | Survey of 25 CTOs of Fortune 100 industrial companies on tasks, backgrounds, and why the position was created; role orchestrates product, process, and information technology | Research finding (old, manufacturing context; stated in text) | adler1990cto | abstract |
+| 5 | A CTO's influence rests on business knowledge, networks, and the CEO's style more than on expertise and formal position | Research (conceptual propositions, labeled an informed hypothesis) | medcof2008cto; hambrick2007upper | abstract |
+| 6 | The engineering executive is defined by responsibility for all of engineering, regardless of title; the executive job is a craft of its own | Expert opinion | larson2023executive-job; larson2024primer | full text; idea-level |
+| 7 | Companies define CTO and VP Engineering very differently; document how technical decisions are really made; many lightly held executive opinions create thrash; learn how the business makes and spends money; build peer relationships before conflict | Expert opinion | larson2020first90 | full text |
+| 8 | IT governance as decision rights over five decisions, assigned by archetypes; top performers align governance with performance goals (250+ enterprises, 23 countries) | Research finding (enterprise IT; method transferred, stated in text) | weill2004govern | abstract |
+| 9 | The engineering executive as company-first problem solver merging CEO, peer, and engineering views | Expert opinion | larson2023balancing | full text |
+| 10 | Formal versus real authority; real authority follows information; superior's overload raises subordinates' real authority | Research (formal model) | aghion1997formal | abstract |
+| 11 | An executive who is too disengaged does more damage than one somewhat too involved | Expert opinion | larson2023micromanage | full text |
+| 12 | Managerial work is brief, fragmented, and verbal | Expert opinion (idea credited) | mintzberg1990job | idea-level |
+| 13 | Peers as the leader's first team; peer incentives conflict | Expert opinion | larson2023gelling; lencioni2002five | full text; idea-level |
+| 14 | The management track up to senior executive roles, including CTO | Practitioner (references list only) | fournier2017manager | idea-level |
+| 15 | Archetype table with a fifth "organization builder" pattern; three diagnostic questions; CTO/VP/IT decision-rights split; "only the CTO" list; the two-question decision test; the rhythm table | This book's recommendation | — | synthesis |
+| 16 | Victor Lindqvist's calendar, the 11 informal requests, the keep, give, stop list, and the IT seam options | Illustrative | — | fictional; arithmetic in research/northstar-additions/ch50.md |
+
+**Gaps.** Empirical research on what CTOs in software companies of 50 to 500 engineers actually do with their
+time is thin; the chapter relies on a 1990 manufacturing survey, a conceptual article, a CEO time-use study
+applied by analogy, and practitioner writing. The chapter says so ("Research on the role is thin"). Proposed
+research-gaps entry: "CTO time allocation and role archetypes in mid-size software companies: no empirical
+study found; Chapter 50 uses CEO time-use research by analogy."
+
+## Chapter 51 — Enterprise Technology Strategy and the Three-Year Roadmap
+
+| Claim in the chapter | Source id | Access level | Evidence label |
+|---|---|---|---|
+| Strategy as a cascade of choices: aspiration, where to play, how to win, capabilities, management systems | lafley2013playing | metadata-only | expert opinion (idea level) |
+| Diagnosis, guiding policy, coherent action; signs of bad strategy | rumelt2011good | metadata-only | expert opinion (idea level) |
+| Operational effectiveness is necessary but not strategy; strategy is trade-offs; choosing what not to do | porter1996strategy | abstract-only (publisher page highlights) | expert opinion |
+| Each new technology spends a scarce budget of attention ("innovation tokens") | mckinley2015boring | full-text | expert opinion |
+| Strategic alignment model: four domains, strategic fit, functional integration | henderson1993alignment | abstract-only | conceptual model (expert opinion) |
+| Alignment research has disputes and challenges to its value | chan2007alignment | abstract-only | research finding (review) |
+| Meta-analysis: alignment dimensions positively correlated with performance; little "alignment paradox" | gerow2014alignment | abstract-only | research finding |
+| Alignment associated with agility; effect on performance fully mediated by agility; infrastructure flexibility as strong as alignment (241 firms) | tallon2011alignment | abstract-only | research finding |
+| Deliberate and emergent strategies as ends of a continuum | mintzberg1985deliberate | abstract-only | research finding (typology) |
+| Three horizons of growth | baghai1999alchemy | metadata-only | expert opinion (idea level) |
+| Horizons are not bound by time; model still useful for prioritizing | blank2019flaw | full-text | expert opinion |
+| Irreversibility and the option value of waiting | dixit1994investment | official-summary | expert opinion (theory) |
+| Plan ventures around assumptions tested at checkpoints | mcgrath1995discovery | metadata-only | expert opinion (idea level) |
+| Reversible versus irreversible decisions | bezos2016letter | full-text | documented practice |
+| Layered technology roadmap | phaal2004roadmapping | metadata-only | expert opinion (idea level) |
+| Premortem surfaces withheld reservations | klein2007premortem (entry in ch55.yaml) | official-summary | expert opinion |
+| Optimism bias and strategic misrepresentation in long-range estimates | flyvbjerg2006nobel | (existing entry) | research finding |
+| Policies applicable and enforced; coherent actions most important | larson2023engstrategy | full-text | expert opinion |
+| Allocate coarsely and change allocations rarely | larson2023planning | full-text | expert opinion |
+| Strategy and planning as part of the engineering executive's job | larson2024primer | metadata-only | expert opinion (idea level) |
+| Transformation depends more on people and organization than technology | kane2019technology | metadata-only | expert opinion (idea level) |
+| Even allocation across units (partition dependence) | bardolet2011capital | abstract-only | research finding |
+| Four bins, horizons as kinds of bet, option record fields, seven coherence tests, stress rule, decision rules | — | — | this book's recommendation |
+| All Northstar and Halvard figures | — | — | illustrative |
+
+### Gaps (proposed for research/research-gaps.md)
+
+- **No outcome evidence for written technology strategies.** The alignment literature is correlational
+  and survey-based; nothing found tests whether writing a technology strategy, or any particular format,
+  improves outcomes. The chapter says so.
+- **Roadmapping effectiveness.** The roadmapping source was available at metadata level only; no
+  evidence on whether layered roadmaps or decision calendars improve decisions was read.
+- **Horizon allocation ratios.** No credible evidence was found for any particular split of capacity
+  across horizons; the chapter's Northstar split is illustrative and the Halvard 20 to 25 percent figure
+  in the X2 solution is labeled a judgment.
+
+### Proposed disputed claim (for research/disputed-claims.md)
+
+- **Are the three horizons time periods or kinds of bet?** Many organizations tie horizons to delivery
+  windows; Blank (2019) argues the time element no longer holds while the categories stay useful; one of
+  the model's authors disputes the "flaw" framing (comments on Blank's post). The chapter's position:
+  horizons are kinds of bet distinguished by what is known about demand and design, and all three start
+  in year one.
+
+## Chapter 52 — Technology Investment, Budgeting, and Financial Literacy
+
+Written 2026-11-22 (wave 7). New source entries are in `research/pending-sources/ch52.yaml`.
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Four main financial statements; assets = liabilities + shareholders' equity | Standard | sec2014beginners | full text |
+| 2 | Income statement shows revenue and costs over a period; operating profit = gross profit minus operating expenses; depreciation or amortization spreads the cost of long-lived assets | Standard | sec2014beginners | full text |
+| 3 | Cash-flow statement has operating, investing, financing sections; cash flow is related to but not equal to net income; non-cash items such as depreciation are added back | Standard | sec2014beginners | full text |
+| 4 | Financial figures rest on estimates and judgment; reading them means knowing where judgment enters | Practitioner | berman2006financial | idea level (metadata-only) |
+| 5 | SaaS (cloud computing arrangement) development falls under ASC 350-40; software to be sold or licensed under 985-20 | Standard | fasb2025asu202506 | full text (BC13, Summary) |
+| 6 | ASU 2025-06 removes project stages because they fit iterative development poorly; capitalization starts at authorized, committed funding plus probable completion | Standard | fasb2025asu202506 | full text (Summary, 350-40-25-12) |
+| 7 | Significant development uncertainty (unresolved novel features; requirements not identified or still substantially revised) blocks the threshold | Standard | fasb2025asu202506 | full text (350-40-25-12A) |
+| 8 | Capitalizable: direct payroll and payroll-related costs for time on the project, external direct costs, upgrades adding functionality, data-conversion software. Expensed: G&A and overhead, training, maintenance, inseparable minor upgrades, other data conversion | Standard | fasb2025asu202506 | full text (350-40-25-4, 25-5, 25-17A to 17D, 30-1, 30-3) |
+| 9 | Capitalization ceases when substantially complete; impairment when completion is no longer probable, uncompleted software presumed worth zero; listed indicators | Standard | fasb2025asu202506 | full text (350-40-25-13, 25-14, 35-3) |
+| 10 | Effective for annual periods beginning after December 15, 2027, early adoption permitted; FASB expects little change for most software, possibly less capitalization for CCA software | Standard | fasb2025asu202506 | full text (Summary) |
+| 11 | Old stage model: preliminary, application development, post-implementation | Standard | fasb2025asu202506 | full text (superseded text shown in the Update) |
+| 12 | IAS 38: research expensed, development capitalized when criteria are met; finite-life intangibles amortized and impairment-tested | Standard | ifrs-ias38 | official summary |
+| 13 | Capitalized software figures associated with returns and prices; no support for harm to earnings quality; analysts' errors rise with capitalization intensity; by 1995 amortization roughly offset capitalization's effect on reported profitability | Research finding (correlational; SFAS 86, public packaged-software firms) | aboody1998software | abstract |
+| 14 | In steady state, capitalization barely moves operating income but raises EBITDA by the capitalized amount | This book's recommendation (arithmetic), consistent with row 13 | — | derivation shown with Northstar figures |
+| 15 | Ticket, project, and role-based tracking; role-based viewed skeptically by auditors; three tests for a method; finance usually prefers compliance to maximization | Expert opinion | larson2023capitalize | full text |
+| 16 | Budget definition and purposes; top-down and bottom-up drawbacks; budgetary slack; low targets; zero-based and rolling budgets' costs | Standard (textbook) | franklin2019managerial | full text (section 7.1) |
+| 17 | Annual plan as P&L, budget by function, and headcount plan; the engineering executive is a stakeholder in the financial plan; stable plans preferred | Expert opinion | larson2023planning | full text. Note for the maintainer: the existing entry's claims do not include the three-documents point, the stakeholder point, or the expense categories (headcount, production operating costs, development costs); all were verified on the page on 2026-11-22 and could be appended to its claims |
+| 18 | Two practitioner responses to budgeting: improve (planning problems) or abandon (performance-evaluation problems) | Research (overview article) | hansen2003budgeting | abstract |
+| 19 | Budgeting as most companies practice it should be abolished | Expert opinion | hope2003budgets | official summary |
+| 20 | Separate budget, forecast, and target; reward nobody for the forecast | This book's recommendation | synthesis of rows 16, 18, 19 | — |
+| 21 | FinOps as an operational framework and cultural practice for financial accountability through engineering, finance, and business collaboration | Industry framework (practitioner foundation) | finops-what-is | official summary |
+| 22 | Optimism bias and strategic misrepresentation; reference class forecasting | Research finding (infrastructure, transfer to software is the book's) | flyvbjerg2006nobel | full text |
+| 23 | Checklist for a decision maker to test a team's recommendation for bias | Practitioner | kahneman2011bigdecision | idea level |
+| 24 | NPV sensitivity to the discount rate; test it | Standard (textbook) | dahlquist2022finance | full text |
+| 25 | All Northstar statements, the capitalization policy and history, the FY2 budget draft, and the TR-01 scenarios | Illustrative | — | fictional; every figure derived in `research/northstar-additions/ch52.md` |
+
+Gaps admitted in the chapter or this matrix:
+
+- No research was found on how capitalization policy affects engineering behavior or investment mix
+  inside companies (for example, a bias toward capitalizable feature work). The chapter states that
+  risk as this book's reasoning, not as a finding. Candidate for `research/research-gaps.md`.
+- The capitalization research read (row 13) concerns external-use software under SFAS 86 in the 1980s
+  and 1990s; no study of capitalization under ASC 350-40 for cloud software was read.
+- The reference-class uplift for software estimates uses Northstar's own canon history; Flyvbjerg's
+  uplift data is from transport infrastructure and is not quoted.
+- ASU 2025-06 was read from the Update, which is not itself authoritative GAAP; the Codification text
+  as amended was not read separately.
+
+## Chapter 53 — Risk, Governance, Regulation, and Security Strategy (with template t11)
+
+| Claim in the chapter or template | Source id | Access level | Evidence label |
+|---|---|---|---|
+| Cybersecurity risk registers at system and organizational levels, with measures rolled up to the enterprise level and managed against mission and business objectives | nist2025ir8286r1 | abstract-only | Standard |
+| IR 8286 (2020) was superseded by Rev. 1 in December 2025 | nist2025ir8286r1 | abstract-only (CSRC page history) | Standard |
+| Risk assessments give senior leaders the information to choose responses to risks | nist2012sp800-30r1 | official-summary | Standard |
+| Risk matrices have poor resolution, can rate smaller risks higher, can be worse than random with negatively correlated frequency and severity, have ambiguous inputs; use with caution and explained judgments | cox2008risk | abstract-only | Research finding (mathematical analysis) |
+| Open FAIR expresses information risk in the same economic terms as other risks; O-RT and O-RA standards | opengroup-open-fair | official-summary | Standard |
+| Cybersecurity risk can be measured with calibrated estimates and simple quantitative models rather than ordinal scores (idea only) | hubbard2023cybersecurity | metadata-only | Expert opinion |
+| CSF 2.0: six functions, Govern at the center, profiles and gap analysis, Core not a checklist | nist2024csf | full-text | Standard |
+| SSDF as secure development vocabulary in four practice groups | nist2022ssdf, nist-ssdf-project | abstract-only; full-text | Standard |
+| SLSA Build and Source tracks | slsa-spec | full-text | Standard |
+| Security as one of six design pillars, reviewed in conversation, not audit | aws-well-architected | full-text | Standard (vendor guidance) |
+| SOC 2 is an examination by an independent licensed CPA of controls relevant to security, availability, processing integrity, confidentiality, or privacy; proposed 2027 criteria and dates | aicpa2026tsc-proposal | official-summary | Standard (official documentation) |
+| Trust Services Criteria: control criteria for attestation engagements, five categories | aicpa-tsc2022 | official-summary | Standard |
+| PCI DSS purpose, applicability (store, process, transmit, or could affect the CDE), validation set by brands and acquirers | pci-dss | official-summary | Standard |
+| SEC 2023 rules: material incident disclosure within four business days of materiality determination; annual description of risk management, board oversight, management's role; registrants | sec2023cyberrule (pending in ch55.yaml) | official-summary | Regulatory requirement (official announcement) |
+| Four risk responses (reduce, transfer, avoid, accept) | none | — | Practitioner consensus (stated without a citation) |
+| Acceptance rules (accepter level, expiry of at most two quarters, escalation on expiry); appetite in indicator units; design evidence once; reporting rules; attestation tests | none | — | This book's recommendation |
+| All Northstar facts, ratings, ranges, quotes, and options | canon plus research/northstar-additions/ch53.md | — | Illustrative |
+
+### Gaps admitted
+
+- **Privacy and data-protection law** is not surveyed (jurisdiction-specific, needs legal advice); the
+  chapter says so. Candidate for `research/research-gaps.md`.
+- **No outcome evidence** that enterprise risk registers, appetite statements, or SOC 2 attestation
+  reduce incidents or losses was found or cited; the chapter presents them as standards and
+  recommendations only. Consistent with Ch 26's admitted gap on SBOM and SLSA outcomes.
+- **Breach cost** is deliberately not quantified for Northstar; no breach-cost statistic is cited.
+- **SOC 2 Type 1 versus Type 2**: not confirmed on any AICPA page fetched; the book does not describe the
+  distinction.
+- **ISO/IEC 27001 and ISO 31000**: iso.org returned HTTP 403 to automated fetching on 2026-11-22; not
+  cited and not mentioned.
+- **Thomas, Bratvold, and Bickel (2014), "The Risk of Using Risk Matrices"**: the publisher page returned
+  403; not cited.
+- Cox (2008) author given names not shown on the page read (Europe PMC lists "Cox LA").
+
+## Chapter 54 — Data and AI Strategy
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | AI acts primarily as an amplifier of an organization's existing strengths and weaknesses; returns come from the organizational system more than the tools | Industry research | dora2025state | official summary |
+| 2 | Digital transformation is mainly a matter of people and organization | Practitioner (idea) | kane2019technology | idea-level |
+| 3 | Data cascades are pervasive among interviewed practitioners (92 percent), invisible, delayed, often avoidable | Research finding (qualitative) | sambasivan2021data | abstract |
+| 4 | ML systems carry specific technical debt: data dependencies, undeclared consumers, hidden feedback loops, external change | Expert opinion | sculley2015hidden | abstract |
+| 5 | DORA's seven AI capabilities, including clear AI stance and healthy data ecosystems; both reported to amplify AI's benefits | Industry research | dora2025aicapabilities | official summary |
+| 6 | Five-question data readiness test, plus labels for learning models | This book's recommendation | synthesis of 3–5 | n/a |
+| 7 | Jagged frontier: AI helps on tasks inside its capability (12.2% more tasks, 25.1% faster) and hurts outside (19% less likely correct), consultants | Research finding | dellacqua2026jagged | abstract |
+| 8 | AI-specific buy, build, or wait factors (differentiation in data, option value of waiting, cost of error) | This book's recommendation | builds on Ch 30 | n/a |
+| 9 | AI assistance associated with less secure code and higher confidence in its security | Research finding | perry2023insecure | abstract |
+| 10 | Package hallucination rates at least 5.2% (commercial) and 21.7% (open-source) in a large sample | Research finding | spracklen2025package | abstract |
+| 11 | AI RMF is voluntary with four functions Govern, Map, Measure, Manage | Standard | nist2023airmf | official summary |
+| 12 | SP 800-218A is a generative AI community profile augmenting the SSDF | Standard | nist-ssdf-project, nist2022ssdf | full text (project page) |
+| 13 | Six-part AI-assisted engineering policy | This book's recommendation | informed by 5, 9, 10 | n/a |
+| 14 | Copilot group 55.8% faster on one greenfield JavaScript task | Research finding (preprint) | peng2023copilot | abstract |
+| 15 | Three field RCTs, 4,867 developers: 26.08% more completed tasks (SE 10.3%); larger gains for less experienced | Research finding | cui2026effects | abstract |
+| 16 | Enterprise RCT, 96 engineers, one task: about 21% less time, wide interval | Research finding (preprint) | paradis2024google | abstract |
+| 17 | Experienced OSS developers 19% slower with AI while forecasting 24% and believing 20% faster | Research finding (preprint, small sample) | becker2025metr | abstract |
+| 18 | DORA 2024: adoption associated with better documentation, code quality, review speed; estimated 1.5% lower throughput and 7.2% lower stability; 39% little or no trust | Industry research | dora2024announcing | official summary |
+| 19 | Acceptance rate tracks perceived productivity better than persistence measures | Research finding | ziegler2022productivity | abstract |
+| 20 | Effort, output, outcome, impact chain | Expert opinion | orosz2023measuring | full text (per existing entry) |
+| 21 | Indicators relied on for decisions get gamed | Idea attribution | campbell1979assessing | idea-level |
+| 22 | Measure at team and system level across several dimensions; DORA delivery measures | Industry research / research | dora-metrics-guide, forsgren2021space, noda2023devex | full text / abstract |
+| 23 | Do not bank unmeasured AI gains in headcount; measured trial with decision date | This book's recommendation | D9 | n/a |
+| 24 | All Northstar data estate, survey, requests, and arithmetic | Illustrative | northstar-additions/ch54.md | n/a |
+
+**Gaps.** No organization-level causal study of AI-assisted delivery outcomes was found. The DORA 2024 and
+2025 reports were read only at official-summary level; the 25 percent adoption basis is stated in the
+summary for the quality figures only, so the chapter does not attach it to throughput and stability. The
+names of the SPACE dimensions remain unverified (existing caveat), so the chapter does not list them. EU AI
+Act (eur-lex returned an empty page) and ISO/IEC 42001 (iso.org returned 403) could not be verified and are
+not cited.
+
+## Chapter 55 — Boards, Due Diligence, and Executive Decision-Making
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Boards grew concerned about IT dependence while remaining poorly informed about IT spending and strategy | Expert opinion | nolan2005itboard | official summary |
+| 2 | US public companies must describe board oversight of cyber risk and management's role, and report material incidents generally within four business days of a materiality determination | Standard (binding rule for registrants) | sec2023cyberrule | official summary (press release) |
+| 3 | CSF 2.0 places GOVERN at the center because it informs the other functions | Standard | nist2024csf | full text |
+| 4 | Board cyber-risk reports should be standardized, quantitative, aligned with ERM, at least quarterly, with escalation thresholds and dialogue | Practitioner consensus (directors' association) | nacd2026cyber | official summary (one principle page) |
+| 5 | Powerful sponsors reduce candor; bad news is sometimes ignored | Research finding (researchers' summary) | keil2014pitfalls | full text |
+| 6 | A practitioner guide covers the engineering executive's job including board reporting | Expert opinion | larson2024primer | idea-level |
+| 7 | Reading the numbers a board reads | Expert opinion | berman2006financial | idea-level |
+| 8 | Engineering should evaluate acquisitions rigorously, from a written thesis and a base template; one vote, not a veto; named failure modes; integration approach | Expert opinion | larson2023ma | full text |
+| 9 | ISO/IEC 5230 defines requirements of an open source license compliance program | Standard | openchain-iso5230 | official summary |
+| 10 | SBOM minimum elements | Standard | ntia2021sbom | full text |
+| 11 | Yahoo's security team knew of the 2014 breach within days; not disclosed until 2016 during the Verizon sale; disclosure controls failed; $35M penalty | Documented practice (regulator's settled findings) | sec2018altaba | official summary |
+| 12 | Verizon purchase price cut by $350M to about $4.48B; incidents disregarded for material adverse effect; liabilities allocated | Documented practice (company filing) | yahoo2017amendment8k | full text (8-K) |
+| 13 | People rate decisions better when outcomes are favorable, even with the same information, and despite saying they should not | Research finding | baron1988outcome | abstract |
+| 14 | Reversible decisions deserve a light process; about 70 percent of information; disagree and commit | Documented practice | bezos2016letter | full text |
+| 15 | Groups fail to pool unique information; such groups reach correct answers less often | Research finding | stasser1985pooling, lu2012hiddenprofiles | abstract |
+| 16 | Task conflict more positively related to performance in top management teams and for decision quality | Research finding (correlational) | dewit2012paradox | abstract |
+| 17 | Good decisions come from dissenting views | Expert opinion | drucker1967effective | idea-level |
+| 18 | Abilene paradox | Expert opinion | harvey1974abilene | idea-level |
+| 19 | Premortem: assume failure and list reasons; makes doubts safe to voice | Expert opinion | klein2007premortem | official summary |
+| 20 | Explanations of events framed as certain are longer and more episodic | Research finding | mitchell1989prospective | abstract |
+| 21 | Checklist for reviewing a team's recommendation for bias | Expert opinion | kahneman2011bigdecision | official summary; idea-level |
+| 22 | Fast strategic decision makers consider more alternatives, use counselors, consensus with qualification | Research finding credited at idea level | eisenhardt1989fast | idea-level (metadata only) |
+| 23 | Clear decision roles | Expert opinion | rogers2006whohasd | official summary |
+| 24 | Board reporting rules (stable definitions, item labels, miss first), diligence triage into price/terms/integration/walk away, surviving-diligence rules, CTO decision record fields, decision placement table | This book's recommendation | none | reasoning shown in chapter |
+| 25 | All Northstar and hypothetical diligence figures | Illustrative | none | canon arithmetic in research/northstar-additions/ch55.md |
+
+### Gaps
+
+- No peer-reviewed evidence was found and read on what board technology reporting practices improve
+  outcomes; the board-reporting advice rests on a directors' association guide, an HBR summary, a
+  regulator's rule, and this book's reasoning. Candidate for `research/research-gaps.md`.
+- No empirical study of technology due diligence effectiveness (for example, how often findings change
+  price or terms) was read; the diligence section rests on one practitioner essay, two standards, and
+  one public case.
+- Eisenhardt (1989) could be credited only at idea level; the abstract was not accessible.
+- The NACD handbook was read only for Principle Five; the other principles were not read.
+- The ICO's Marriott/Starwood penalty (a second diligence-related public case) was considered, but the
+  ICO page returned HTTP 403 and secondary accounts disagree on what it found about diligence; not used.
+
+## Templates t05 and t12 — CTO competency matrix and architecture decision record
+
+Same columns as `research/evidence-matrix.md`. For the maintainer to merge.
+
+### Template t05 — CTO competency matrix
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | The engineering executive is whoever is responsible for all of engineering; CTO, VP Engineering, and Head of Engineering titles are used inconsistently | Expert opinion | larson2023executive-job | full text |
+| 2 | Four CTO models (infrastructure manager, technology visionary and operations manager, external-facing technologist, big thinker), credited to Berray and Sampath; the role differs with the company and the part technology plays | Expert opinion | vogels2007ctoroles (entry in pending-sources/ch50.yaml; extra claim requested in t05-t12.yaml) | full text of the post; Berray and Sampath not read |
+| 3 | The executive's job is the company's problem, not advocacy for engineering | Expert opinion | larson2023balancing | full text |
+| 4 | Engineering executives' work as a whole (idea-level credit for the competency list) | Practitioner | larson2024primer | idea-level (metadata-only) |
+| 5 | CSF 2.0 places GOVERN at the center of its functions (basis for treating risk accountability as a CTO competency) | Standard | nist2024csf | full text (pages read per bibliography) |
+| 6 | The nine competencies, the archetype weighting step, and the rule that the director's results count for the CTO only through the CTO's own action | This book's recommendation | none | reasoning |
+| 7 | No study validates any CTO competency model | Research gap | none | stated as a gap in the template |
+| 8 | Northstar example: all evidence from canon (index executive context, baseline, first year through quarter 3 results and quarter 4 open items); ratings and weights are illustrative | Illustrative | canon pages | no new facts |
+
+### Template t12 — Architecture decision record
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | ADR fields (title, context, decision, status, consequences), numbered, superseded not deleted; motivation is avoiding blind acceptance or reversal | Practitioner | nygard2011adr | full text |
+| 2 | The collection of a project's ADRs is its decision log; the site points to several templates | Practitioner | adr-github-io | full text |
+| 3 | MADR 4.0.0 sections, including optional Decision Drivers, Pros and Cons of the Options, and Confirmation | Practitioner | madr-template (new) | full text |
+| 4 | Keeping ADRs in source control rather than a wiki | Practitioner consensus | thoughtworks-radar-lightweight-adr | full text |
+| 5 | ADR adoption in open source is low and many logs hold few records | Research finding | buchgeher2023adr | abstract |
+| 6 | Combined field set (Nygard plus Chapter 13 successor fields plus Chapter 28 governance fields), the ten fill-in steps, "title as the question" | This book's recommendation | none (Chapters 13 and 28) | reasoning |
+| 7 | Northstar ADR-0001 example: canon facts plus Chapter 28's case-study estimates and Chapter 39's DL-08 entry; Decision left blank; ADR-0001 stays open | Illustrative | canon pages, Chapters 28 and 39 | no new facts |
+
+### Gaps
+
+- No evidence compares ADR templates or field sets by outcome; the template's additions are reasoned,
+  not tested.
+- No research validates CTO competency models or archetype classifications; Berray and Sampath's
+  original paper was not located.
+
+## Projects 7 and 8 — Twelve-month engineering strategy and CTO technology investment proposal
+
+Projects apply chapters rather than make new claims, so most of their content is Northstar arithmetic
+(**illustrative**). The rows below are the claims attributed to sources. No new sources were added; every
+id below is already verified in `research/bibliography.yaml`.
+
+### Project 7 — Design a 12-Month Engineering Strategy (project and solution)
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | Strategy as explicit choices about where to play and how to win, applied here to where engineering will be excellent and where adequate is enough | Expert opinion | lafley2013playing | idea-level (metadata-only) |
+| 2 | Coherent actions are the most important part of a strategy; they sort into enforcements, escalations, and transitions; policies should be applicable | Expert opinion | larson2023engstrategy | full text |
+| 3 | People predicting their own task completion are optimistic; plan from the cautious case | Research finding | buehler1994exploring | abstract |
+| 4 | Change allocations infrequently so teams can plan | Expert opinion | larson2023planning | full text |
+| 5 | Allocations tend toward equal shares across the units a firm is divided into (partition dependence) | Research finding | bardolet2011capital | abstract |
+
+### Project 8 — Build a CTO Technology Investment Proposal (project and solution)
+
+| # | Claim | Label | Sources | Basis |
+|---|---|---|---|---|
+| 1 | The aim of cost-of-delay estimates is accuracy rather than precision; value channels; urgency profiles | Practitioner consensus | arnold2013blackswan | full text |
+| 2 | Payback ignores the time value of money and flows after payback; report it only beside NPV | Standard textbook treatment | dahlquist2022finance | full text |
+| 3 | Irreversible investment under uncertainty has an option value of waiting for better information | Research (academic book) | dixit1994investment | official summary |
+| 4 | Effort estimates are optimistic; use the high end in the downside case | Research finding | buehler1994exploring | abstract |
+| 5 | Cost of delay as the central quantity for sequencing product work | Expert opinion | reinertsen2009principles | idea-level (metadata-only) |
+| 6 | Decision makers should review a team's recommendation for the team's biases | Expert opinion | kahneman2011bigdecision | official summary, idea level |
+
+### Gaps
+
+- No source in the bibliography covers software capitalization rules; Project 8 keeps accounting to
+  questions for the CFO and a single general statement (treatment changes when a cost is expensed, not the
+  cash spent), labeled as this book's recommendation. Chapter 52 owns the topic and may add a source.
+- The Project 8 counterfactual for the quality continuation (how much unplanned work returns without
+  prevention) has no Northstar evidence; the solution states it as an assumption and shows its break-even
+  (3.9 points).

@@ -12554,3 +12554,2043 @@
     basis: metadata (idea credited only)
   caveats: Metadata only. A subtitle is commonly listed for this book but was not shown in the Open Library
     search record, so it is omitted.
+
+# Merged on 2026-11-22 from research/pending-sources/ (wave 7: chapters 50-55, t05, t11, t12).
+# from ch50
+- id: vogels2007ctoroles
+  type: blog-post
+  title: The Different CTO Roles
+  authors:
+  - Werner Vogels
+  year: 2007
+  venue: All Things Distributed (allthingsdistributed.com), July 11, 2007
+  url: https://www.allthingsdistributed.com/2007/07/the_different_cto_roles.html
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.allthingsdistributed.com/2007/07/the_different_cto_roles.html
+  - https://www.allthingsdistributed.com/
+  verified_on: '2026-11-22'
+  claims:
+  - text: The post presents a four-way classification of CTO roles, which it attributes to Tom Berray, consisting
+      of the infrastructure manager, the technology visionary and operations manager, the external-facing
+      technologist, and the big thinker.
+    basis: full-text
+  - text: It describes the infrastructure-manager CTO as appearing in businesses where IT supports the company
+      and the CIO's role has become too complex, with the CIO keeping responsibility for how technology
+      is used in the organization.
+    basis: full-text
+  - text: It notes that in the first two roles the CTO typically manages an engineering organization directly,
+      while in the last two the CTO is often part of or close to the executive team and frequently reports
+      to the CEO.
+    basis: full-text
+  - text: 'The post says the CTO role is very different depending on the type of company and the role
+      technology plays in the company; its sources list names Tom Berray and Raj Sampath, "The Role of
+      the CTO: Four Models for Success" (not read).'
+    basis: full-text
+  caveats: The post page carries no byline; authorship is from the blog's own header ("Werner Vogels on
+    building scalable and robust distributed systems"). The classification is Berray's, which this book
+    did not read in its original form; cite the post as the source of the summary. A 2007 blog post, practitioner
+    opinion, not research.
+- id: adler1990cto
+  type: journal-article
+  title: The Chief Technology Officer
+  authors:
+  - Paul Adler
+  - Kasra Ferdows
+  year: 1990
+  venue: California Management Review, vol. 32, no. 3
+  url: https://cmr.berkeley.edu/1990/05/32-3-the-chief-technology-officer/
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://cmr.berkeley.edu/1990/05/32-3-the-chief-technology-officer/
+  verified_on: '2026-11-22'
+  claims:
+  - text: The article explores the role of the chief technical officer in orchestrating a large manufacturing
+      corporation's product, process, and information technologies, based on a survey of 25 CTOs from Fortune
+      100 industrial companies and telephone interviews with 22 of them.
+    basis: abstract
+  - text: It discusses CTOs' tasks and backgrounds and examines the motivations for creating the CTO position.
+    basis: abstract
+  caveats: Abstract only (California Management Review landing page). Pages 55-62 and DOI 10.2307/41166617
+    appear in third-party records but were not confirmed on a publisher page in this session, so they are
+    not recorded as verified. Sample is large US manufacturers in 1990, not software companies.
+- id: medcof2008cto
+  type: journal-article
+  title: The organizational influence of the Chief Technology Officer
+  authors:
+  - John W. Medcof
+  year: 2008
+  venue: R&D Management, vol. 38, no. 4, pp. 406-420
+  doi: 10.1111/j.1467-9310.2008.00526.x
+  url: https://doi.org/10.1111/j.1467-9310.2008.00526.x
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://experts.mcmaster.ca/display/publication320249
+  verified_on: '2026-11-22'
+  claims:
+  - text: The article questions the view that a CTO's influence rests mainly on technical expertise and formal
+      position and, drawing on upper echelons research, argues that a CTO seeking significant influence
+      should also build broad knowledge of the firm and its environment, internal and external networks,
+      and an intuitive grasp of the business.
+    basis: abstract
+  - text: It argues that the CEO's leadership style can strengthen or limit the CTO's influence.
+    basis: abstract
+  caveats: A conceptual article (propositions), not an empirical test. Abstract read on the author's university
+    research profile; full text not read.
+- id: bandiera2020ceo
+  type: journal-article
+  title: CEO Behavior and Firm Performance
+  authors:
+  - Oriana Bandiera
+  - Andrea Prat
+  - Stephen Hansen
+  - Raffaella Sadun
+  year: 2020
+  venue: Journal of Political Economy, vol. 128, no. 4, pp. 1325-1369
+  doi: 10.1086/705331
+  url: https://researchonline.lse.ac.uk/id/eprint/101423
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://researchonline.lse.ac.uk/id/eprint/101423
+  verified_on: '2026-11-22'
+  claims:
+  - text: The authors measure the behavior of 1,114 CEOs in six countries from high-frequency diary data on
+      how they spend their time, and use a machine learning algorithm to identify two behavioral types,
+      "leaders" (multifunction, high-level meetings) and "managers" (individual meetings focused on core
+      functions).
+    basis: abstract
+  - text: Firms that hire leader-type CEOs perform better, with the difference appearing about three years
+      after the CEO's appointment, and the authors' structural estimates attribute the gap to mismatches
+      between CEOs and firms rather than to one type being better for every firm.
+    basis: abstract
+  caveats: Abstract read on the LSE institutional repository record (publisher page returned 403). Studies
+    CEOs, not CTOs; observational with a structural model. The book uses it only for the idea that an executive's
+    time allocation is measurable and that its fit to the firm matters.
+- id: larson2020first90
+  type: blog-post
+  title: Your first 90 days as CTO or VP Engineering.
+  authors:
+  - Will Larson
+  year: 2020
+  venue: Irrational Exuberance (lethain.com), January 13, 2020
+  url: https://lethain.com/first-ninety-days-cto-vpe/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://lethain.com/first-ninety-days-cto-vpe/
+  verified_on: '2026-11-22'
+  claims:
+  - text: The post notes that companies define the CTO and VP Engineering roles very differently and uses a
+      broad definition of an executive-team member who owns technical execution and people management in
+      engineering.
+    basis: full-text
+  - text: It recommends learning how the business makes and spends money, building relationships with peers
+      before conflict arises, getting the manager's expectations in writing, and limiting the number of
+      concurrent changes.
+    basis: full-text
+  - text: It recommends documenting how high-impact technical decisions are actually made and writing down
+      the implicit technology strategy, and warns that too many lightly held opinions from the executive
+      create thrash.
+    basis: full-text
+  - text: Among operating mechanisms it suggests recurring one-on-ones and skip-levels, regular written updates,
+      a recurring recruiting meeting, and considering a weekly operational review.
+    basis: full-text
+  caveats: Practitioner advice from one author; dated January 13, 2020.
+- id: weill2004govern
+  type: journal-article
+  title: 'Don''t Just Lead, Govern: How Top-Performing Firms Govern IT'
+  authors:
+  - Peter Weill
+  year: 2004
+  venue: MIS Quarterly Executive, vol. 3, no. 1, article 3
+  url: https://aisel.aisnet.org/misqe/vol3/iss1/3
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://aisel.aisnet.org/misqe/vol3/iss1/3
+  - https://dspace.mit.edu/handle/1721.1/1846
+  verified_on: '2026-11-22'
+  claims:
+  - text: The article studies IT governance in more than 250 enterprises in 23 countries and defines IT governance
+      as specifying decision rights and accountabilities to encourage desirable behavior in the use of IT.
+    basis: abstract
+  - text: It describes five key IT decisions (principles, architecture, infrastructure, application needs,
+      and investment) and governance archetypes that assign them (business monarchy, IT monarchy, federal,
+      duopoly, feudal, anarchy).
+    basis: abstract
+  - text: It reports that top performers govern IT differently from average firms, align IT governance with
+      their performance goals, and that growth leaders decentralize more decision rights while profit leaders
+      centralize them with senior business leaders.
+    basis: abstract
+  caveats: Abstract only (AIS eLibrary landing page); the related MIT CISR working paper by Weill and Woodham
+    (2003) was read at abstract level as corroboration. The AIS page lists volume 3 (2004) but its recommended
+    citation shows 2008, so year is not recorded as a verified field; 2004 follows the volume. Enterprise
+    IT governance, not software-product engineering; used for the decision-rights vocabulary.
+# from ch51
+- id: mintzberg1985deliberate
+  type: journal-article
+  title: Of strategies, deliberate and emergent
+  authors:
+  - Henry Mintzberg
+  - James A. Waters
+  year: 1985
+  venue: Strategic Management Journal, vol. 6, no. 3, pp. 257-272
+  doi: 10.1002/smj.4250060306
+  url: https://doi.org/10.1002/smj.4250060306
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1002/smj.4250060306
+  - https://api.openalex.org/works/doi:10.1002/smj.4250060306
+  verified_on: '2026-11-22'
+  claims:
+  - basis: abstract
+    text: The abstract describes deliberate and emergent strategies as two ends of a
+      continuum along which real-world strategies lie, and elaborates types found in
+      research (planned, entrepreneurial, ideological, umbrella, process, unconnected,
+      consensus, imposed).
+  caveats: Abstract only. A conceptual typology from field research, not a test of which
+    kind of strategy performs better. The application to technology roadmaps is this
+    book's.
+
+- id: henderson1993alignment
+  type: journal-article
+  title: 'Strategic alignment: Leveraging information technology for transforming organizations'
+  authors:
+  - John C. Henderson
+  - N. Venkatraman
+  year: 1993
+  venue: IBM Systems Journal, vol. 32, no. 1 (Crossref record; the DOI is that of the
+    1999 reprint, vol. 38, nos. 2-3, pp. 472-484)
+  doi: 10.1147/sj.382.0472
+  url: https://doi.org/10.1147/sj.382.0472
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1147/sj.382.0472
+  - https://api.openalex.org/works/doi:10.1147/sj.382.0472
+  verified_on: '2026-11-22'
+  access_notes: Crossref lists volume 32, issue 1, with pages 472-484, which mixes the
+    1993 original and the 1999 reprint. The DOI 10.1147/sj.321.0004 sometimes given
+    for the 1993 original returned 404 in Crossref. Venue details beyond journal and
+    year are therefore not verified.
+  claims:
+  - basis: abstract
+    text: The abstract proposes a Strategic Alignment Model defined by four domains of
+      strategic choice (business strategy, IT strategy, organizational infrastructure
+      and processes, IT infrastructure and processes), built on strategic fit between
+      external and internal components and functional integration between business
+      and IT domains, and derives four perspectives of alignment.
+  caveats: Abstract only. A conceptual model, not an empirical result.
+
+- id: gerow2014alignment
+  type: journal-article
+  title: 'Looking Toward the Future of IT-Business Strategic Alignment Through the Past:
+    A Meta-Analysis'
+  authors:
+  - Jennifer E. Gerow
+  - Varun Grover
+  - Jason Thatcher
+  - Philip L. Roth
+  year: 2014
+  venue: MIS Quarterly, vol. 38, no. 4, pp. 1159-1186
+  doi: 10.25300/MISQ/2014/38.4.10
+  url: https://doi.org/10.25300/MISQ/2014/38.4.10
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.25300/MISQ/2014/38.4.10
+  - https://api.openalex.org/works/doi:10.25300/MISQ/2014/38.4.10
+  verified_on: '2026-11-22'
+  claims:
+  - basis: abstract
+    text: A meta-analysis of research on IT-business strategic alignment and firm performance
+      found all mean corrected correlations between alignment dimensions (intellectual,
+      operational, cross-domain) and the dependent variables positive, most credibility
+      intervals positive, and concluded there is not much of an "alignment paradox".
+  caveats: Abstract only; effect sizes were not read and are not stated. Correlational
+    evidence pooled from mostly survey studies; it does not show that writing a strategy
+    document causes performance.
+
+- id: tallon2011alignment
+  type: journal-article
+  title: 'Competing Perspectives on the Link between Strategic Information Technology
+    Alignment and Organizational Agility: Insights from a Mediation Model'
+  authors:
+  - Paul P. Tallon
+  - Alain Pinsonneault
+  year: 2011
+  venue: MIS Quarterly, vol. 35, no. 2, pp. 463-486
+  doi: 10.2307/23044052
+  url: https://doi.org/10.2307/23044052
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.2307/23044052
+  - https://api.openalex.org/works/doi:10.2307/23044052
+  verified_on: '2026-11-22'
+  claims:
+  - basis: abstract
+    text: In a matched survey of IT and business executives in 241 firms, the authors
+      report a positive and significant link between strategic IT alignment and agility
+      and between agility and firm performance, with the effect of alignment on performance
+      fully mediated by agility.
+  - basis: abstract
+    text: They report that agility had a greater impact on performance in more volatile
+      markets, and that IT infrastructure flexibility had a positive main effect on
+      agility as strong as the effect of alignment.
+  caveats: Abstract only. Cross-sectional survey; associations, not causal estimates.
+
+- id: chan2007alignment
+  type: journal-article
+  title: 'IT Alignment: What Have We Learned?'
+  authors:
+  - Yolande E. Chan
+  - Blaize Horner Reich
+  year: 2007
+  venue: Journal of Information Technology, vol. 22, no. 4, pp. 297-315
+  doi: 10.1057/palgrave.jit.2000109
+  url: https://doi.org/10.1057/palgrave.jit.2000109
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1057/palgrave.jit.2000109
+  - https://api.openalex.org/works/doi:10.1057/palgrave.jit.2000109
+  verified_on: '2026-11-22'
+  claims:
+  - basis: abstract
+    text: A review of the IT alignment literature addressing what has been learned and
+      what is disputed, presenting challenges to the value of alignment research, divergent
+      views, and new perspectives.
+  caveats: Abstract only; cited only for the existence of disputes about alignment, not
+    for any particular finding.
+
+- id: porter1996strategy
+  type: magazine-article
+  title: What Is Strategy?
+  authors:
+  - Michael E. Porter
+  year: 1996
+  venue: Harvard Business Review, November-December 1996
+  url: https://hbr.org/1996/11/what-is-strategy
+  evidence_class: practitioner
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://hbr.org/1996/11/what-is-strategy
+  verified_on: '2026-11-22'
+  access_notes: The public HBR page shows the subtitle and several highlighted passages;
+    the full article is behind a paywall and was not read.
+  claims:
+  - basis: abstract
+    text: The page's subtitle states that strategy is not the same as operational effectiveness,
+      and the page's highlighted passages say that improving operational effectiveness
+      is necessary but is not strategy, that strategy is making trade-offs in competing,
+      that the essence of strategy is choosing what not to do, and that strategy is
+      creating fit among a company's activities.
+  caveats: Only the publisher page's highlighted passages were read; the argument and
+    its examples were not. Expert opinion from a strategy scholar writing for practitioners.
+
+- id: baghai1999alchemy
+  type: book
+  title: The Alchemy of Growth
+  subtitle: Practical Insights for Building the Enduring Enterprise
+  authors:
+  - Mehrdad Baghai
+  - Stephen Coley
+  - David White
+  year: 1999
+  publisher: Perseus Books
+  isbn13: '9780738201009'
+  url: https://openlibrary.org/books/OL52999M/The_alchemy_of_growth
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - subtitle
+  - authors
+  - publisher
+  - year
+  - isbn13
+  verified_via:
+  - https://openlibrary.org/api/books?bibkeys=ISBN:9780738201009&format=json&jscmd=data
+  verified_on: '2026-11-22'
+  access_notes: Open Library by-statement "Mehrdad Baghai, Stephen Coley, David White";
+    Perseus Books, Reading, Mass., 1999; first published in Great Britain by Orion Business
+    in 1999. Some secondary sources date the book 2000 (a later edition).
+  claims:
+  - basis: metadata (idea credited only)
+    text: Credited at idea level only for the widely known three horizons of growth,
+      which balance improving the existing business, extending into new customers or
+      markets, and creating new options for the future.
+  caveats: Metadata only. No quotation, page number, or finding.
+
+- id: blank2019flaw
+  type: blog-post
+  title: The Fatal Flaw of the Three Horizons Model
+  authors:
+  - Steve Blank
+  year: 2019
+  venue: steveblank.com, January 8, 2019 (a version appeared in Harvard Business Review,
+    February 2019)
+  url: https://steveblank.com/2019/01/08/the-fatal-flaw-of-the-three-horizons-model/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://steveblank.com/2019/01/08/the-fatal-flaw-of-the-three-horizons-model/
+  - https://hbr.org/2019/02/mckinseys-three-horizons-model-defined-innovation-for-years-heres-why-it-no-longer-applies
+  verified_on: '2026-11-22'
+  claims:
+  - text: 'A comment on the post dated January 14, 2019, by Mehrdad Baghai, who identifies himself as a co-author
+      of the Three Horizons model, says the model was created as a growth strategy framework, not an innovation
+      framework, that the book said every company must decide the right timing for each horizon, and that there
+      is no "fatal flaw" to fix; Blank replied that he had changed the title, though the page still shows the original.'
+    basis: full-text
+  - basis: full-text
+    text: The post describes horizon 1 as improving the existing business, horizon 2
+      as extending current capabilities to new customers or markets, and horizon 3 as
+      creating new capabilities to exploit or counter disruption, and says some organizations
+      tied each horizon to a delivery window (3-12, 24-36, and 36-72 months).
+  - basis: full-text
+    text: It argues that the horizons are not bound by time, because disruptive horizon
+      3 ideas can now be delivered as fast as horizon 1 improvements, while saying the
+      model is still useful as shorthand for prioritizing initiatives and that some
+      horizon 3 efforts still take a long time.
+  - basis: full-text
+    text: It recommends focusing on speed of delivery and deployment across all three
+      horizons.
+  caveats: Expert opinion from an entrepreneur and educator, illustrated with examples
+    rather than data. In the comments one of the model's authors disputes that the model
+    is flawed and describes it as a growth-strategy framework rather than an innovation
+    framework. Read through a summarizing fetcher.
+
+- id: phaal2004roadmapping
+  type: journal-article
+  title: Technology roadmapping - A planning framework for evolution and revolution
+  authors:
+  - Robert Phaal
+  - Clare J. P. Farrukh
+  - David R. Probert
+  year: 2004
+  venue: Technological Forecasting and Social Change, vol. 71, nos. 1-2, pp. 5-26
+  doi: 10.1016/S0040-1625(03)00072-6
+  url: https://doi.org/10.1016/S0040-1625(03)00072-6
+  evidence_class: scholarly
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1016/S0040-1625(03)00072-6
+  - https://api.openalex.org/works/doi:10.1016/S0040-1625(03)00072-6
+  verified_on: '2026-11-22'
+  access_notes: No abstract in Crossref or OpenAlex; the ScienceDirect page returned 403.
+  claims:
+  - basis: metadata (idea credited only)
+    text: Credited at idea level only for the widely known layered technology roadmap,
+      which links market and business drivers, products and services, and technologies
+      and resources on a shared time axis.
+  caveats: Metadata only. No quotation, page number, or finding.
+
+- id: mcgrath1995discovery
+  type: magazine-article
+  title: Discovery-Driven Planning
+  authors:
+  - Rita Gunther McGrath
+  - Ian C. MacMillan
+  year: 1995
+  venue: Harvard Business Review, July-August 1995
+  url: https://hbr.org/1995/07/discovery-driven-planning
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://hbr.org/1995/07/discovery-driven-planning
+  verified_on: '2026-11-22'
+  access_notes: The HBR page shows the subtitle ("New ventures require a new way to plan")
+    and the opening paragraph only; the method itself was not read.
+  claims:
+  - basis: metadata (idea credited only)
+    text: Credited at idea level only for the widely known discovery-driven planning
+      idea, that a venture in unfamiliar territory is planned around explicit assumptions
+      that are tested at checkpoints before more money is committed.
+  caveats: Metadata level. No quotation, page number, or finding.
+# from ch52
+- id: fasb2025asu202506
+  type: standard
+  title: 'Intangibles—Goodwill and Other—Internal-Use Software (Subtopic 350-40): Targeted Improvements
+    to the Accounting for Internal-Use Software'
+  authors:
+  - Financial Accounting Standards Board
+  year: 2025
+  venue: FASB Accounting Standards Update No. 2025-06, September 2025
+  url: https://storage.fasb.org/ASU%202025-06.pdf
+  evidence_class: standard
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://storage.fasb.org/ASU%202025-06.pdf
+  verified_on: '2026-11-22'
+  access_notes: PDF (80 pages) fetched from the FASB's storage site and its text extracted locally. Read
+    in full for the Summary (pages 1-4), the amended recognition and measurement paragraphs on upgrades
+    and enhancements, maintenance, capitalizable costs, and general and administrative costs, and basis
+    for conclusions paragraphs BC4, BC5, and BC13. The rest was skimmed by search. The Update itself is
+    not authoritative GAAP; it communicates amendments to the Codification, as its cover page says.
+  claims:
+  - text: The Board issued the Update to modernize internal-use software accounting because stakeholders
+      said the guidance did not address incremental and iterative (for example, agile) development, making
+      it hard to decide when to begin capitalizing.
+    basis: full-text
+  - text: The amendments remove all references to sequential project stages; an entity starts capitalizing
+      when management has authorized and committed to funding the project and it is probable the project
+      will be completed and the software used to perform the function intended (the probable-to-complete
+      recognition threshold).
+    basis: full-text
+  - text: In applying that threshold an entity considers significant development uncertainty, using two
+      factors - unresolved uncertainty about novel, unique, or unproven functions or features not yet resolved
+      through coding and testing, and whether the entity has determined (or is still substantially revising)
+      the software's significant performance requirements.
+    basis: full-text
+  - text: Subtopic 350-40 applies to software an entity develops to provide services to external parties
+      through cloud computing arrangements, as well as to software for its own operations; software to be
+      sold, leased, or marketed externally falls under Subtopic 985-20, which the Update does not change.
+    basis: full-text
+  - text: The Board expects capitalization generally will not change significantly for most software, but
+      expects it could decrease for software provided via a cloud computing arrangement.
+    basis: full-text
+  - text: Upgrades and enhancements are modifications that add functionality; maintenance costs are expensed
+      as incurred, and internal costs that cannot be separated cost-effectively between maintenance and
+      relatively minor upgrades are expensed.
+    basis: full-text
+  - text: Capitalizable costs include external direct costs and payroll and payroll-related costs of employees
+      directly associated with the project, to the extent of time spent on it; general and administrative
+      and overhead costs are not capitalized; training and data conversion costs (with a stated exception
+      for conversion software) are expensed.
+    basis: full-text
+  - text: Subtopic 360-10 property, plant, and equipment disclosures are required for all capitalized internal-use
+      software costs.
+    basis: full-text
+  - text: Capitalization ceases no later than when the project is substantially complete and ready for intended
+      use, after all substantial testing; when completion is no longer probable, capitalization stops and
+      the asset is impaired, with a rebuttable presumption that uncompleted software has a fair value of
+      zero. Listed indications include a lack of budgeted or incurred spending, unresolved programming difficulties,
+      and significant cost overruns.
+    basis: full-text
+  - text: The superseded guidance (shown struck through in the Update) grouped activities into a preliminary
+      project stage, an application development stage (design of the chosen path, coding, installation, testing),
+      and a post-implementation-operation stage (training, application maintenance).
+    basis: full-text
+  - text: Effective for all entities for annual reporting periods beginning after December 15, 2027, with
+      early adoption permitted at the beginning of an annual period; prospective, modified, or retrospective
+      transition permitted.
+    basis: full-text
+  caveats: An accounting standard, not evidence about management outcomes. The chapter paraphrases and
+    does not quote at length (FAF copyright). How a specific company applies it is a judgment for its finance
+    team and auditors. The Update does not set an amortization method; amortization periods in the chapter
+    are the fictional company's policy.
+
+- id: ifrs-ias38
+  type: standard
+  title: IAS 38 Intangible Assets
+  authors:
+  - IFRS Foundation
+  year: 2026
+  venue: IFRS Foundation, issued standards (standard page and summary)
+  url: https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/
+  evidence_class: standard
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - url
+  verified_via:
+  - https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/
+  verified_on: '2026-11-22'
+  access_notes: The IFRS Foundation's summary page for IAS 38 was read; the full standard text (behind
+    registration) was not. The page states the IASB adopted IAS 38 in April 2001 (originally issued by the
+    IASC in September 1998), with revisions in 2004 and 2008 and an amendment in 2014. year records the
+    page's 2026 copyright, not the standard's issue date.
+  claims:
+  - text: IAS 38 sets criteria for recognizing and measuring intangible assets; spending on an intangible
+      item is expensed unless it meets the definition of an intangible asset, future economic benefits are
+      probable, and its cost can be measured reliably.
+    basis: official-summary
+  - text: Internally generated intangibles are split into research and development phases; research expenditure
+      is expensed, and development expenditure that meets specified criteria is recognized as an asset.
+    basis: official-summary
+  - text: An intangible asset with a finite useful life is amortized and subject to impairment testing.
+    basis: official-summary
+  caveats: Summary level only; the specific development-phase criteria are not listed in the chapter.
+
+- id: sec2014beginners
+  type: web-guide
+  title: Beginners' Guide to Financial Statements
+  authors:
+  - U.S. Securities and Exchange Commission
+  year: 2014
+  venue: sec.gov (dated January 12, 2014; last reviewed or updated February 6, 2017)
+  url: https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - url
+  verified_via:
+  - https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements
+  verified_on: '2026-11-22'
+  claims:
+  - text: The guide names four main financial statements (balance sheets, income statements, cash flow
+      statements, statements of shareholders' equity) and states that assets equal liabilities plus shareholders'
+      equity.
+    basis: full-text
+  - text: The income statement shows revenue earned over a period and the costs of earning it; operating
+      profit is what remains after operating expenses are deducted from gross profit; spreading the cost
+      of a long-lived asset over time is called depreciation or amortization.
+    basis: full-text
+  - text: The cash flow statement has operating, investing, and financing sections; it shows whether a
+      company generated cash, which is related to but not equivalent to net income, and the operating section
+      adjusts net income for non-cash items such as depreciation.
+    basis: full-text
+  caveats: An introductory investor guide written for public-company filings; definitions only.
+
+- id: franklin2019managerial
+  type: book
+  title: 'Principles of Accounting, Volume 2: Managerial Accounting'
+  authors:
+  - Mitchell Franklin
+  - Patty Graybeal
+  - Dixon Cooper
+  year: 2019
+  publisher: OpenStax, Rice University
+  url: https://openstax.org/books/principles-managerial-accounting/pages/7-1-describe-how-and-why-managers-use-budgets
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - publisher
+  - url
+  verified_via:
+  - https://openstax.org/books/principles-managerial-accounting/pages/7-1-describe-how-and-why-managers-use-budgets
+  verified_on: '2026-11-22'
+  access_notes: Open textbook; section 7.1 read in full. Publication date shown as February 14, 2019.
+  claims:
+  - text: A budget is a quantitative plan estimating when and how much cash or other resources will be
+      received; budgets serve communication, planning, control, and evaluation, and their benchmarks are
+      used to evaluate company and management performance.
+    basis: full-text
+  - text: The master budget has an operating budget (projected income statement) and a financial budget
+      (projected balance sheet).
+    basis: full-text
+  - text: Top-down budgets are prepared by people unfamiliar with specific operations; bottom-up (participative)
+      budgets risk managers misunderstanding the strategic plan; padded expenses create budgetary slack,
+      and managers may set artificially low targets so they are hit.
+    basis: full-text
+  - text: Zero-based budgeting takes a lot of time because every expense must be justified; rolling budgets
+      require continual updating.
+    basis: full-text
+  caveats: Introductory textbook. evidence_class recorded as practitioner, following dahlquist2022finance.
+
+- id: hope2003budgets
+  type: magazine-article
+  title: Who Needs Budgets?
+  authors:
+  - Jeremy Hope
+  - Robin Fraser
+  year: 2003
+  venue: Harvard Business Review, February 2003
+  url: https://hbr.org/2003/02/who-needs-budgets
+  evidence_class: practitioner
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://hbr.org/2003/02/who-needs-budgets
+  verified_on: '2026-11-22'
+  claims:
+  - text: The article's summary argues that budgeting as most corporations practice it should be abolished,
+      because the budget and the command-and-control culture it supports remain predominant despite investments
+      in other management tools; the authors directed the Beyond Budgeting Round Table.
+    basis: official-summary
+  caveats: Only the summary was accessible. The alternative practices the article proposes were not read
+    and are not described in the chapter beyond the movement's name.
+
+- id: hansen2003budgeting
+  type: journal-article
+  title: 'Practice Developments in Budgeting: An Overview and Research Perspective'
+  authors:
+  - Stephen C. Hansen
+  - David T. Otley
+  - Wim A. Van der Stede
+  year: 2003
+  venue: Journal of Management Accounting Research, vol. 15, no. 1, pp. 95-116
+  doi: 10.2308/jmar.2003.15.1.95
+  url: https://doi.org/10.2308/jmar.2003.15.1.95
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works?query.bibliographic=Practice+Developments+in+Budgeting+An+Overview+and+Research+Perspective+Hansen+Otley+Van+der+Stede&rows=2
+  - https://api.crossref.org/works/10.2308/jmar.2003.15.1.95
+  verified_on: '2026-11-22'
+  access_notes: Crossref records with abstract (the journal DOI and SSRN DOI 10.2139/ssrn.410544 carry the
+    same abstract). Authors' full names, issue 1, and pages 95-116 from the journal DOI's Crossref record.
+  claims:
+  - text: The abstract describes two practitioner responses to the shortcomings of traditional budgeting,
+      one improving the budgeting process and focused on planning problems, the other abandoning the budget
+      and focused on performance-evaluation problems, and places both in a research context.
+    basis: abstract
+  caveats: Overview article; abstract only. No findings are attributed beyond the two-approach framing.
+
+- id: aboody1998software
+  type: journal-article
+  title: 'The Value Relevance of Intangibles: The Case of Software Capitalization'
+  authors:
+  - David Aboody
+  - Baruch Lev
+  year: 1998
+  venue: Journal of Accounting Research, vol. 36, p. 161 onward
+  doi: 10.2307/2491312
+  url: https://doi.org/10.2307/2491312
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.2307/2491312
+  - https://api.crossref.org/works/10.2139/ssrn.143108
+  verified_on: '2026-11-22'
+  access_notes: The journal's Crossref record gives volume 36 and first page 161 but no abstract or issue;
+    the abstract was read from the Crossref record of the SSRN version (10.2139/ssrn.143108, dated 1999
+    there), titled 'The Value-Relevance of Intangibles'. The last page was not confirmed.
+  claims:
+  - text: Studying software companies applying SFAS 86 (software to be sold or licensed), the authors find
+      annually capitalized development costs positively associated with stock returns and the capitalized
+      software asset associated with stock prices; capitalization figures are associated with subsequent
+      reported earnings.
+    basis: abstract
+  - text: They find investors undervalue firms that expense all software development costs and find no
+      support for the argument that the judgment involved in capitalization harms earnings quality; analysts'
+      forecast errors are positively associated with capitalization intensity.
+    basis: abstract
+  - text: In early SFAS 86 years capitalization raised reported earnings far more than amortization reduced
+      them; by 1995 amortization roughly offset capitalization's positive effect on reported profitability.
+    basis: abstract
+  caveats: Concerns external-use software under SFAS 86 (now Subtopic 985-20), US public software companies
+    of the 1980s and 1990s, and stock-market associations; it does not study internal-use or cloud software.
+    Correlational.
+
+- id: larson2023capitalize
+  type: blog-post
+  title: How to capitalize engineering costs.
+  authors:
+  - Will Larson
+  year: 2023
+  venue: Irrational Exuberance (lethain.com)
+  url: https://lethain.com/capitalize-engineering-costs/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://lethain.com/capitalize-engineering-costs/
+  verified_on: '2026-11-22'
+  claims:
+  - text: The post describes ticket-based, project-based, and role-based ways of measuring capitalizable
+      engineering work; ticket- or project-based methods are the most common, often as a hybrid, and role-based
+      percentages are viewed with skepticism by many finance teams and auditors.
+    basis: full-text
+  - text: It proposes three criteria for a method - easy to explain and justify to an auditor, available
+      in time for financial reporting, and minimizing ongoing effort for finance and engineering - and says
+      most finance teams care more about compliance than about maximizing capitalization.
+    basis: full-text
+  caveats: Dated January 5, 2023. Practitioner opinion; the author's simplified rule of thumb (new capabilities
+    capitalized, everything else expensed) is not a statement of the standard.
+
+- id: finops-what-is
+  type: web-guide
+  title: What is FinOps?
+  authors:
+  - FinOps Foundation
+  year: 2026
+  venue: finops.org (page marked "Updated November 2026")
+  url: https://www.finops.org/introduction/what-is-finops/
+  evidence_class: industry-research
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - url
+  verified_via:
+  - https://www.finops.org/introduction/what-is-finops/
+  verified_on: '2026-11-22'
+  claims:
+  - text: The FinOps Foundation defines FinOps as an operational framework and cultural practice that maximizes
+      the business value of technology, enables timely data-driven decisions, and creates financial accountability
+      through collaboration between engineering, finance, and business teams.
+    basis: official-summary
+  caveats: Definition only; a practitioner foundation's framing, not evidence of outcomes. evidence_class
+    industry-research chosen as the closest fit for a practitioner body's published framework; the maintainer
+    may prefer official-documentation.
+# from ch53
+- id: nist2025ir8286r1
+  type: report
+  title: Integrating Cybersecurity and Enterprise Risk Management (ERM)
+  authors:
+  - Stephen Quinn
+  - Julie Chua
+  - Nahla Ivy
+  - Robert Gardner
+  - Karen Kent
+  - Matthew Smith
+  - Gregory Witte
+  year: 2025
+  venue: NIST Interagency or Internal Report 8286 Rev. 1
+  doi: 10.6028/NIST.IR.8286r1
+  url: https://csrc.nist.gov/pubs/ir/8286/r1/final
+  evidence_class: standard
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://csrc.nist.gov/pubs/ir/8286/r1/final
+  - https://csrc.nist.gov/pubs/ir/8286/final
+  verified_on: '2026-11-22'
+  claims:
+  - text: The report helps organizations improve the cybersecurity risk information they provide to enterprise
+      risk management processes, so that cybersecurity risk is identified, assessed, and managed against
+      mission and business objectives.
+    basis: abstract
+  - text: It provides guidance on using risk registers to set out cybersecurity risk and explains the value
+      of rolling up measures of risk from lower system and organizational levels to the enterprise level.
+    basis: abstract
+  caveats: Final December 18, 2025; supersedes NIST IR 8286 (October 2020), which the CSRC page lists
+    as withdrawn. Risk appetite and risk tolerance appear among the keywords but were not read in the
+    body; the chapter does not attribute its appetite rules to this report. Not a Special Publication.
+  access_notes: CSRC landing page and abstract read; the PDF was not read.
+- id: nist2012sp800-30r1
+  type: standard
+  title: Guide for Conducting Risk Assessments
+  authors:
+  - Joint Task Force Transformation Initiative
+  year: 2012
+  venue: NIST Special Publication 800-30 Revision 1
+  doi: 10.6028/NIST.SP.800-30r1
+  url: https://csrc.nist.gov/pubs/sp/800/30/r1/final
+  evidence_class: standard
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://csrc.nist.gov/pubs/sp/800/30/r1/final
+  verified_on: '2026-11-22'
+  claims:
+  - text: The guide provides guidance for conducting risk assessments of federal information systems and
+      organizations, at all three tiers of the risk management hierarchy.
+    basis: official-summary
+  - text: Risk assessments are described as part of the overall risk management process, providing senior
+      leaders with the information needed to determine appropriate responses to identified risks.
+    basis: official-summary
+  caveats: Final September 2012. Written for US federal systems; used in the book only for the purpose
+    of risk assessment (informing responses), not for its specific scales or tables.
+  access_notes: CSRC landing page and abstract read; the PDF was not read.
+- id: cox2008risk
+  type: journal-article
+  title: What's Wrong with Risk Matrices?
+  authors:
+  - L. A. Cox
+  year: 2008
+  venue: Risk Analysis
+  volume: 28
+  issue: 2
+  pages: 497-512
+  doi: 10.1111/j.1539-6924.2008.01030.x
+  url: https://doi.org/10.1111/j.1539-6924.2008.01030.x
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - volume
+  - issue
+  - pages
+  - doi
+  verified_via:
+  - https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:18419665&format=json&resultType=core
+  verified_on: '2026-11-22'
+  claims:
+  - text: Risk matrices have poor resolution; typical matrices can correctly and unambiguously compare
+      only a small fraction of randomly selected pairs of hazards and can assign identical ratings to quantitatively
+      very different risks.
+    basis: abstract
+  - text: They can assign higher qualitative ratings to quantitatively smaller risks, and for risks with
+      negatively correlated frequencies and severities they can be worse than useless, leading to worse-than-random
+      decisions.
+    basis: abstract
+  - text: Effective allocation of risk-reduction resources cannot be based on the categories they provide,
+      and categorizing the severity of uncertain consequences requires subjective interpretation, so different
+      users may obtain opposite ratings of the same risks.
+    basis: abstract
+  - text: The author concludes that risk matrices should be used with caution and only with careful explanations
+      of embedded judgments.
+    basis: abstract
+  caveats: Mathematical analysis, not an empirical study of organizations. Author listed as Cox LA in
+    Europe PMC (PMID 18419665); given names were not shown and should be checked against the Wiley
+    page before publication.
+  access_notes: Abstract read through the Europe PMC REST API; the full text is paywalled and was not read.
+- id: opengroup-open-fair
+  type: standard
+  title: The Open FAIR Body of Knowledge
+  authors:
+  - The Open Group
+  year: 2026
+  venue: The Open Group
+  url: https://www.opengroup.org/open-fair
+  evidence_class: standard
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://www.opengroup.org/open-fair
+  verified_on: '2026-11-22'
+  claims:
+  - text: Open FAIR (Factor Analysis of Information Risk) is described as a model and taxonomy for understanding,
+      analyzing, and measuring information risk, intended to let organizations express risk in the same
+      economic terms as other risks.
+    basis: official-summary
+  - text: The body of knowledge includes the Risk Taxonomy (O-RT) standard, version 3.0.1, and the Risk
+      Analysis (O-RA) standard, version 2.0.1.
+    basis: official-summary
+  caveats: Year is the access year; the standards' own publication dates were not recorded. The page did
+    not name the model's factors (such as loss event frequency and loss magnitude), so the chapter does
+    not describe them.
+- id: hubbard2023cybersecurity
+  type: book
+  title: How to Measure Anything in Cybersecurity Risk
+  edition: 2nd
+  authors:
+  - Douglas W. Hubbard
+  - Richard Seiersen
+  year: 2023
+  publisher: Wiley
+  isbn13: '9781119892304'
+  url: https://www.wiley.com/en-us/How+to+Measure+Anything+in+Cybersecurity+Risk%2C+2nd+Edition-p-9781119892304
+  evidence_class: practitioner
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - edition
+  - authors
+  - year
+  - isbn13
+  - url
+  verified_via:
+  - https://www.wiley.com/en-us/How+to+Measure+Anything+in+Cybersecurity+Risk%2C+2nd+Edition-p-9781119892304
+  verified_on: '2026-11-22'
+  claims:
+  - text: Credited for the idea it is widely known for, that cybersecurity risk can be measured with calibrated
+      probability estimates and simple quantitative models rather than ordinal risk scores. No quotation,
+      page number, or finding is attributed.
+    basis: metadata (idea credited only)
+  caveats: Published April 2023 per the product page. The page is on wiley.com but did not state the imprint
+    explicitly; publisher recorded as Wiley on that basis.
+- id: aicpa-tsc2022
+  type: standard
+  title: 2017 Trust Services Criteria (With Revised Points of Focus, 2022)
+  authors:
+  - AICPA Assurance Services Executive Committee
+  year: 2022
+  venue: AICPA & CIMA
+  url: https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022
+  evidence_class: standard
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022
+  verified_on: '2026-11-22'
+  claims:
+  - text: The Trust Services Criteria are control criteria established by the AICPA's Assurance Services
+      Executive Committee for use in attestation or consulting engagements to evaluate and report on controls
+      over information and systems.
+    basis: official-summary
+  - text: 'They are organized in five categories: security, availability, processing integrity, confidentiality,
+      and privacy.'
+    basis: official-summary
+  caveats: The download page shows a date of September 30, 2023; the year 2022 refers to the revised points
+    of focus in the title. The criteria text itself was not read. The distinction between SOC 2 Type 1
+    and Type 2 reports was not confirmed on any page read and is not described in the book.
+- id: aicpa2026tsc-proposal
+  type: report
+  title: AICPA Proposes Update of SOC 2 Trust Services Criteria to Enhance the Relevance, Usability and
+    Value of CPAs' Reports
+  authors:
+  - AICPA & CIMA
+  year: 2026
+  venue: AICPA & CIMA news, October 28, 2026
+  url: https://www.aicpa-cima.com/news/article/aicpa-proposes-update-of-soc-2-r-trust-services-criteria-to-enhance-the-relevance-usability-and-value-of-cpas-reports
+  evidence_class: official-documentation
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.aicpa-cima.com/news/article/aicpa-proposes-update-of-soc-2-r-trust-services-criteria-to-enhance-the-relevance-usability-and-value-of-cpas-reports
+  verified_on: '2026-11-22'
+  claims:
+  - text: SOC 2 reports are attestation engagements performed by an independent, licensed CPA under AICPA
+      standards that address controls relevant to the security, availability, processing integrity, confidentiality,
+      or privacy of an organization's systems.
+    basis: official-summary
+  - text: The proposed 2027 Trust Services Criteria would apply to engagements beginning on or after December
+      31, 2027, with early adoption permitted; comments on the exposure draft are accepted through January
+      15, 2027.
+    basis: official-summary
+  caveats: Exposure draft, date-sensitive; re-check status before publication.
+- id: pci-dss
+  type: standard
+  title: PCI Data Security Standard (PCI DSS)
+  authors:
+  - PCI Security Standards Council
+  year: 2026
+  venue: PCI Security Standards Council
+  url: https://www.pcisecuritystandards.org/standards/pci-dss/
+  evidence_class: standard
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://www.pcisecuritystandards.org/standards/pci-dss/
+  - https://www.pcisecuritystandards.org/document_library/?category=saqs
+  verified_on: '2026-11-22'
+  claims:
+  - text: PCI DSS provides a baseline of technical and operational requirements designed to protect payment
+      account data.
+    basis: official-summary
+  - text: It applies to entities that store, process, or transmit cardholder data or sensitive authentication
+      data, or that could affect the security of the cardholder data environment, including merchants,
+      processors, acquirers, issuers, and service providers.
+    basis: official-summary
+  - text: Whether an entity must comply or validate compliance is at the discretion of organizations that
+      manage compliance programs, such as payment brands and acquirers.
+    basis: official-summary
+  caveats: Year is the access year. The page links to v4.x resources and the document library shows v4.0.1;
+    the book does not name a version. Self-assessment questionnaire types were not confirmed and are not
+    described.
+# from ch54
+- id: dora2024announcing
+  type: blog-post
+  title: Announcing the 2024 DORA report
+  authors:
+  - Nathen Harvey
+  - Derek DeBellis
+  year: 2024
+  venue: Google Cloud Blog, October 23, 2024
+  url: https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report
+  evidence_class: industry-research
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report
+  - https://dora.dev/research/2024/dora-report/
+  verified_on: '2026-11-22'
+  claims:
+  - text: More than 75 percent of respondents said they rely on AI for at least one daily professional
+      responsibility, and more than one third reported moderate to extreme productivity increases due
+      to AI.
+    basis: official-summary
+  - text: A 25 percent increase in AI adoption is associated with a 7.5 percent increase in documentation
+      quality, a 3.4 percent increase in code quality, and a 3.1 percent increase in code review speed.
+    basis: official-summary
+  - text: As AI adoption increased, it was accompanied by an estimated 1.5 percent decrease in delivery
+      throughput and an estimated 7.2 percent reduction in delivery stability.
+    basis: official-summary
+  - text: 39 percent of respondents reported little to no trust in AI-generated code.
+    basis: official-summary
+  - text: The dora.dev landing page for the Accelerate State of DevOps Report 2024 states that AI adoption
+      increases individual productivity, flow, and job satisfaction but negatively impacts software delivery
+      stability and throughput, and that fundamentals such as small batches and robust testing remain crucial.
+    basis: official-summary
+  caveats: 'Vendor-run survey research (Google Cloud); associations, not causal estimates. The blog states
+    the 25 percent adoption basis explicitly for the quality and review figures; for throughput and stability
+    it says "as AI adoption increased". Secondary write-ups attach the same 25 percent basis to the throughput
+    and stability figures; the full report PDF was not read, so the book does not. The report itself is
+    titled Accelerate State of DevOps Report 2024.'
+  access_notes: Blog post and dora.dev report landing page read in full; report PDF not fetched.
+- id: dora2025aicapabilities
+  type: blog-post
+  title: Introducing DORA's inaugural AI Capabilities Model
+  authors:
+  - Kevin M. Storer
+  - Derek DeBellis
+  year: 2025
+  venue: Google Cloud Blog, September 24, 2025
+  url: https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model
+  evidence_class: industry-research
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model
+  - https://dora.dev/ai/capabilities-model/
+  verified_on: '2026-11-22'
+  claims:
+  - text: 'The model names seven capabilities: clear and communicated AI stance; healthy data ecosystems;
+      AI-accessible internal data; strong version control practices; working in small batches; user-centric
+      focus; quality internal platforms.'
+    basis: official-summary
+  - text: The capabilities were identified from 78 in-depth interviews, literature, and expert perspectives,
+      and evaluated with DORA's annual survey of almost 5,000 respondents; the post says they substantially
+      amplify or unlock the benefits of AI.
+    basis: official-summary
+  - text: Healthy data ecosystems are reported to amplify AI adoption's influence on organizational performance;
+      a clear AI stance amplifies AI's positive impact on individual effectiveness and organizational performance.
+    basis: official-summary
+  - text: Without a user-centric focus, the post says AI adoption can have a negative impact on team performance.
+    basis: official-summary
+  caveats: Survey-based and correlational; the post reports no effect sizes. The dora.dev page for the
+    companion report (last updated November 25, 2025) does not list the capability names; they come from
+    this post.
+  access_notes: Blog post read in full.
+- id: peng2023copilot
+  type: report
+  title: 'The Impact of AI on Developer Productivity: Evidence from GitHub Copilot'
+  authors:
+  - Sida Peng
+  - Eirini Kalliamvakou
+  - Peter Cihon
+  - Mert Demirer
+  year: 2023
+  venue: arXiv preprint 2302.06590
+  url: https://arxiv.org/abs/2302.06590
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - url
+  verified_via:
+  - https://arxiv.org/abs/2302.06590
+  verified_on: '2026-11-22'
+  claims:
+  - text: In a controlled experiment, recruited developers were asked to implement an HTTP server in JavaScript
+      as quickly as possible; the group with access to GitHub Copilot completed the task 55.8 percent faster
+      than the control group.
+    basis: abstract
+  - text: The authors report heterogeneous effects and suggest the tool may help people transition into
+      software development careers.
+    basis: abstract
+  caveats: One small, well-specified greenfield task; authors include employees of the tool's vendor. Sample
+    size not stated in the abstract. Preprint; no peer-reviewed version confirmed.
+  access_notes: arXiv abstract page read.
+- id: cui2026effects
+  type: journal-article
+  title: 'The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software
+    Developers'
+  authors:
+  - Zheyuan (Kevin) Cui
+  - Mert Demirer
+  - Sonia Jaffe
+  - Leon Musolff
+  - Sida Peng
+  - Tobias Salz
+  year: 2026
+  venue: Management Science, vol. 72, no. 11, pp. 9408-9420
+  doi: 10.1287/mnsc.2025.00535
+  url: https://doi.org/10.1287/mnsc.2025.00535
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1287/mnsc.2025.00535
+  - https://www.microsoft.com/en-us/research/?p=1148213
+  verified_on: '2026-11-22'
+  claims:
+  - text: Randomized controlled trials at Microsoft, Accenture, and an anonymous Fortune 100 company, run
+      in the ordinary course of business, gave a random subset of developers access to an AI coding assistant
+      that suggests code completions.
+    basis: abstract
+  - text: Pooled across the three experiments and 4,867 developers, the authors estimate a 26.08 percent
+      increase (standard error 10.3 percent) in completed tasks among developers using the tool.
+    basis: abstract
+  - text: Less experienced developers had higher adoption rates and greater productivity gains.
+    basis: abstract
+  caveats: Completed tasks (pull requests and similar units) are an output measure, not value or quality.
+    The standard error is large. Several authors are employed by the tool's vendor. The SSRN preprint (4945566)
+    predates the journal version.
+  access_notes: Abstract read on the Microsoft Research publication page; journal metadata from Crossref.
+- id: becker2025metr
+  type: report
+  title: Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity
+  authors:
+  - Joel Becker
+  - Nate Rush
+  - Elizabeth Barnes
+  - David Rein
+  year: 2025
+  venue: arXiv preprint 2507.09089 (METR)
+  url: https://arxiv.org/abs/2507.09089
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - url
+  verified_via:
+  - https://arxiv.org/abs/2507.09089
+  verified_on: '2026-11-22'
+  claims:
+  - text: A randomized controlled trial with 16 experienced open-source developers (moderate AI experience,
+      averaging five years on their projects) assigned 246 tasks at random to allow or disallow early-2025
+      AI tools.
+    basis: abstract
+  - text: Developers forecast that AI would reduce completion time by 24 percent and afterwards estimated
+      it had reduced it by 20 percent; allowing AI actually increased completion time by 19 percent.
+    basis: abstract
+  - text: The slowdown contradicted predictions of large speedups by economics and machine-learning experts.
+    basis: abstract
+  caveats: Small number of developers, on large mature repositories they knew well; tools of early 2025.
+    Preprint; no peer-reviewed version confirmed.
+  access_notes: arXiv abstract page (v2, revised July 25, 2025) read.
+- id: paradis2024google
+  type: report
+  title: How much does AI impact development speed? An enterprise-based randomized controlled trial
+  authors:
+  - Elise Paradis
+  - Kate Grey
+  - Quinn Madison
+  - Daye Nam
+  - Andrew Macvean
+  - Vahid Meimand
+  - Nan Zhang
+  - Ben Ferrari-Church
+  - Satish Chandra
+  year: 2024
+  venue: arXiv preprint 2410.12944
+  url: https://arxiv.org/abs/2410.12944
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - url
+  verified_via:
+  - https://arxiv.org/abs/2410.12944
+  verified_on: '2026-11-22'
+  claims:
+  - text: A randomized controlled trial with 96 full-time Google software engineers on one complex enterprise
+      task found that AI features shortened time on task, with a best estimate of about 21 percent and a
+      confidence interval the authors describe as large.
+    basis: abstract
+  - text: Developers who spent more hours a day on code-related activities were faster with AI.
+    basis: abstract
+  caveats: One task, internal tooling, summer 2024; the authors caution that the effect may not transfer
+    to other tools, tasks, or over time. Preprint.
+  access_notes: arXiv abstract page (v3) read.
+- id: ziegler2022productivity
+  type: conference-paper
+  title: Productivity assessment of neural code completion
+  authors:
+  - Albert Ziegler
+  - Eirini Kalliamvakou
+  - Shawn Simister
+  - Ganesh Sittampalam
+  - Alice Li
+  - Andrew Rice
+  - Devon Rifkin
+  - Edward Aftandilian
+  year: 2022
+  venue: Proceedings of the 6th ACM SIGPLAN International Symposium on Machine Programming (MAPS 2022), pp.
+    21-29
+  doi: 10.1145/3520312.3534864
+  url: https://arxiv.org/abs/2205.06537
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://arxiv.org/abs/2205.06537
+  - https://api.crossref.org/works?query.bibliographic=Productivity+assessment+of+neural+code+completion+Ziegler
+  verified_on: '2026-11-22'
+  claims:
+  - text: Comparing GitHub Copilot users' survey answers about perceived productivity with measured usage
+      data, the authors found that the acceptance rate of shown suggestions tracked perceived productivity
+      better than measures of how long completions persisted in the code.
+    basis: abstract
+  caveats: The outcome is perceived productivity, not measured output or value; authors are from the tool's
+    vendor.
+  access_notes: arXiv abstract read; published-version metadata from Crossref.
+- id: perry2023insecure
+  type: conference-paper
+  title: Do Users Write More Insecure Code with AI Assistants?
+  authors:
+  - Neil Perry
+  - Megha Srivastava
+  - Deepak Kumar
+  - Dan Boneh
+  year: 2023
+  venue: Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS '23),
+    pp. 2785-2799
+  doi: 10.1145/3576915.3623157
+  url: https://arxiv.org/abs/2211.03622
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://arxiv.org/abs/2211.03622
+  - https://api.crossref.org/works?query.bibliographic=Do+Users+Write+More+Insecure+Code+with+AI+Assistants+Perry
+  verified_on: '2026-11-22'
+  claims:
+  - text: In a user study, participants with access to an AI code assistant wrote significantly less secure
+      code than those without access, and were more likely to believe they had written secure code.
+    basis: abstract
+  - text: Participants who trusted the AI less and engaged more with the wording of their prompts produced
+      code with fewer security vulnerabilities.
+    basis: abstract
+  caveats: User study with an earlier model (codex-davinci-002); number of participants not stated on the
+    page read; later tools may differ.
+  access_notes: arXiv abstract page read (v3).
+- id: spracklen2025package
+  type: conference-paper
+  title: 'We Have a Package for You! A Comprehensive Analysis of Package Hallucinations by Code Generating
+    LLMs'
+  authors:
+  - Joseph Spracklen
+  - Raveen Wijewickrama
+  - A H M Nazmus Sakib
+  - Anindya Maiti
+  - Bimal Viswanath
+  - Murtuza Jadliwala
+  year: 2025
+  venue: 34th USENIX Security Symposium (2025)
+  url: https://arxiv.org/abs/2406.10279
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://arxiv.org/abs/2406.10279
+  verified_on: '2026-11-22'
+  claims:
+  - text: Across 576,000 code samples from 16 code-generating language models in two programming languages,
+      the average rate of hallucinated (non-existent) package references was at least 5.2 percent for commercial
+      models and 21.7 percent for open-source models, with 205,474 unique hallucinated package names.
+    basis: abstract
+  - text: The authors report mitigation strategies that significantly reduced hallucinations while maintaining
+      code quality.
+    basis: abstract
+  caveats: The venue is stated on the arXiv page as "to appear in" USENIX Security 2025; the proceedings
+    page was not fetched. Rates depend on the models and prompts studied.
+  access_notes: arXiv abstract page (v3, March 2, 2025) read.
+- id: sculley2015hidden
+  type: conference-paper
+  title: Hidden Technical Debt in Machine Learning Systems
+  authors:
+  - D. Sculley
+  - Gary Holt
+  - Daniel Golovin
+  - Eugene Davydov
+  - Todd Phillips
+  - Dietmar Ebner
+  - Vinay Chaudhary
+  - Michael Young
+  - Jean-François Crespo
+  - Dan Dennison
+  year: 2015
+  venue: Advances in Neural Information Processing Systems 28 (NIPS 2015), pp. 2503-2511
+  url: https://research.google/pubs/hidden-technical-debt-in-machine-learning-systems/
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://research.google/pubs/hidden-technical-debt-in-machine-learning-systems/
+  - https://api.openalex.org/works?search=Hidden%20Technical%20Debt%20in%20Machine%20Learning%20Systems
+  verified_on: '2026-11-22'
+  claims:
+  - text: The paper argues that quick wins from machine learning do not come for free and that real-world
+      ML systems commonly incur large ongoing maintenance costs, framed as technical debt.
+    basis: abstract
+  - text: 'It names ML-specific risk factors including boundary erosion, entanglement, hidden feedback loops,
+      undeclared consumers, data dependencies, configuration issues, changes in the external world, and
+      system-level anti-patterns.'
+    basis: abstract
+  caveats: Position paper from experience at one company, not an empirical study. The NeurIPS proceedings
+    page refused connections from this network; the abstract was read from the OpenAlex record and metadata
+    from the Google Research page.
+  access_notes: Google Research publication page (metadata) and OpenAlex abstract read.
+- id: sambasivan2021data
+  type: conference-paper
+  title: '"Everyone wants to do the model work, not the data work": Data Cascades in High-Stakes AI'
+  authors:
+  - Nithya Sambasivan
+  - Shivani Kapania
+  - Hannah Highfill
+  - Diana Akrong
+  - Praveen Paritosh
+  - Lora M. Aroyo
+  year: 2021
+  venue: Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems, pp. 1-15
+  doi: 10.1145/3411764.3445518
+  url: https://doi.org/10.1145/3411764.3445518
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1145/3411764.3445518
+  - https://api.semanticscholar.org/graph/v1/paper/DOI:10.1145/3411764.3445518?fields=title,year,abstract
+  verified_on: '2026-11-22'
+  claims:
+  - text: From interviews with 53 AI practitioners in India, East and West African countries, and the USA,
+      the authors define data cascades as compounding events causing negative downstream effects from data
+      issues, triggered by practices that undervalue data quality.
+    basis: abstract
+  - text: The abstract reports data cascades as pervasive (92 percent prevalence), invisible, delayed, and
+      often avoidable, and describes data as the most under-valued and de-glamorised aspect of AI.
+    basis: abstract
+  caveats: Qualitative interview study in high-stakes domains (health, conservation, lending); prevalence
+    is among interviewees, not a population estimate.
+  access_notes: dl.acm.org returned 403; abstract from Semantic Scholar, metadata from Crossref.
+- id: dellacqua2026jagged
+  type: journal-article
+  title: 'Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial
+    Intelligence on Knowledge Worker Productivity and Quality'
+  authors:
+  - Fabrizio Dell'Acqua
+  - Edward McFowland III
+  - Ethan Mollick
+  - Hila Lifshitz-Assaf
+  - Katherine C. Kellogg
+  - Saran Rajendran
+  - Lisa Krayer
+  - François Candelon
+  - Karim R. Lakhani
+  year: 2026
+  venue: Organization Science, vol. 37, no. 2, pp. 403-423
+  doi: 10.1287/orsc.2025.21838
+  url: https://doi.org/10.1287/orsc.2025.21838
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1287/orsc.2025.21838
+  - https://api.openalex.org/works/doi:10.2139/ssrn.4573321
+  verified_on: '2026-11-22'
+  claims:
+  - text: The paper introduces the "jagged technological frontier" to describe AI assistance improving performance
+      on some tasks and worsening it on others of seemingly similar difficulty within the same workflow.
+    basis: abstract
+  - text: In a preregistered experiment with 758 consultants, subjects using GPT-4 on 18 tasks inside the
+      frontier completed 12.2 percent more tasks, 25.1 percent more quickly, with higher quality; on a task
+      chosen to be outside the frontier they were 19 percent less likely to produce correct solutions.
+    basis: abstract
+  caveats: Management-consulting tasks, not software engineering; one model generation. Earlier circulated
+    as an HBS working paper (SSRN 4573321).
+  access_notes: Abstract from OpenAlex (SSRN record); journal metadata from Crossref. hbs.edu returned 403.
+- id: nist2023airmf
+  type: standard
+  title: Artificial Intelligence Risk Management Framework (AI RMF 1.0)
+  authors:
+  - National Institute of Standards and Technology
+  year: 2023
+  venue: NIST AI 100-1
+  doi: 10.6028/NIST.AI.100-1
+  url: https://www.nist.gov/itl/ai-risk-management-framework
+  evidence_class: standard
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  - url
+  verified_via:
+  - https://www.nist.gov/itl/ai-risk-management-framework
+  verified_on: '2026-11-22'
+  claims:
+  - text: The AI RMF was released on January 26, 2023, and is intended for voluntary use.
+    basis: official-summary
+  - text: 'Its core is organized into four functions: Govern, Map, Measure, and Manage.'
+    basis: official-summary
+  - text: NIST released a Generative AI Profile, NIST AI 600-1, on July 26, 2024.
+    basis: official-summary
+  caveats: The page states that AI RMF 1.0 is being revised; re-check before publication. The function
+    names were read from the page's figure caption, not from the framework text.
+  access_notes: NIST program page read; the framework PDF was not read.
+# from ch55
+- id: sec2023cyberrule
+  type: report
+  title: SEC Adopts Rules on Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure
+    by Public Companies (Press Release 2023-139)
+  authors:
+  - U.S. Securities and Exchange Commission
+  year: 2023
+  venue: U.S. Securities and Exchange Commission, press release, July 26, 2023
+  url: https://www.sec.gov/newsroom/press-releases/2023-139
+  evidence_class: official-documentation
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.sec.gov/newsroom/press-releases/2023-139
+  verified_on: '2026-11-22'
+  claims:
+  - text: Under new Regulation S-K Item 106, registrants must describe the board of directors' oversight
+      of risks from cybersecurity threats and management's role in assessing and managing material risks
+      from cybersecurity threats, in the annual report on Form 10-K.
+    basis: official-summary
+  - text: Material cybersecurity incidents are reported on new Item 1.05 of Form 8-K, generally due four
+      business days after a registrant determines that an incident is material, with a possible delay
+      where the U.S. Attorney General determines that disclosure poses a substantial risk to national
+      security or public safety.
+    basis: official-summary
+  caveats: Applies to SEC registrants (public companies). The press release was read, not the final
+    rule text. Used in the book only as evidence that board oversight of cyber risk has become a disclosure
+    matter for public companies; Northstar (fictional) is private.
+- id: sec2018altaba
+  type: report
+  title: Altaba, Formerly Known as Yahoo!, Charged With Failing to Disclose Massive Cybersecurity Breach;
+    Agrees To Pay $35 Million (Press Release 2018-71)
+  authors:
+  - U.S. Securities and Exchange Commission
+  year: 2018
+  venue: U.S. Securities and Exchange Commission, press release, April 24, 2018
+  url: https://www.sec.gov/newsroom/press-releases/2018-71
+  evidence_class: official-documentation
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.sec.gov/newsroom/press-releases/2018-71
+  verified_on: '2026-11-22'
+  claims:
+  - text: The SEC states that Yahoo's information security team learned within days of a December 2014
+      intrusion that hackers had stolen data of hundreds of millions of user accounts, and that the breach
+      was not publicly disclosed until more than two years later, in 2016, when Yahoo was in the process
+      of closing the sale of its operating business to Verizon.
+    basis: official-summary
+  - text: The SEC found that Yahoo's filings in the two years after the breach referred only to the risk
+      of breaches, that Yahoo did not share information about the breach with its auditors or outside
+      counsel to assess disclosure obligations, and that it failed to maintain disclosure controls designed
+      to ensure that reports from its information security team were properly and timely assessed for
+      disclosure.
+    basis: official-summary
+  - text: Yahoo (renamed Altaba) agreed to pay a $35 million penalty without admitting or denying the
+      findings; Verizon acquired the operating business in June 2017.
+    basis: official-summary
+  caveats: Settled findings in a regulatory order, described in a press release; the order itself was
+    not read. The press release does not discuss Verizon's due diligence, and the book makes no claim
+    about it.
+- id: yahoo2017amendment8k
+  type: report
+  title: Yahoo! Inc. Form 8-K (Amendment to Stock Purchase Agreement with Verizon Communications Inc.),
+    filed February 2017
+  authors:
+  - Yahoo! Inc.
+  year: 2017
+  venue: U.S. Securities and Exchange Commission EDGAR, accession number 0001193125-17-049548
+  url: https://www.sec.gov/Archives/edgar/data/0001011006/000119312517049548/d353690d8k.htm
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.sec.gov/Archives/edgar/data/0001011006/000119312517049548/d353690d8k.htm
+  verified_on: '2026-11-22'
+  claims:
+  - text: On February 20, 2017, Yahoo and Verizon entered into an amendment to the stock purchase agreement
+      under which the purchase price was reduced by $350,000,000 to $4,475,800,000 in cash, subject to
+      adjustments.
+    basis: full-text
+  - text: Under the amendment, certain data security incidents to which Yahoo had been subject are disregarded
+      in determining whether certain closing conditions are met and whether a Business Material Adverse
+      Effect has occurred, subject to exceptions the filing does not describe in the part read.
+    basis: full-text
+  - text: The amendment allocates certain post-closing cash liabilities from the data security incidents,
+      with Yahoo keeping responsibility for some liabilities and certain others shared equally between
+      Yahoo and Verizon.
+    basis: full-text
+  caveats: Read through a summarizing fetcher; the price figures and the Business Material Adverse Effect
+    wording were returned as quotations. The exact categories of shared and retained liabilities are
+    summarized conservatively and not detailed in the book.
+- id: nolan2005itboard
+  type: magazine-article
+  title: Information Technology and the Board of Directors
+  authors:
+  - Richard Nolan
+  - F. Warren McFarlan
+  year: 2005
+  venue: Harvard Business Review, October 2005
+  url: https://hbr.org/2005/10/information-technology-and-the-board-of-directors
+  evidence_class: practitioner
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://hbr.org/2005/10/information-technology-and-the-board-of-directors
+  verified_on: '2026-11-22'
+  claims:
+  - text: The article's opening argues that boards had become more concerned about their companies' dependence
+      on IT, yet most boards remained poorly informed about IT spending and strategy and about how dependent
+      operations were on computer systems.
+    basis: official-summary
+  caveats: Only the opening and summary were accessible. The article is known for a framework for board
+    IT oversight that was not read; the book does not describe it.
+- id: nacd2026cyber
+  type: report
+  title: 'Director''s Handbook on Cyber-Risk Oversight (2026 edition), Principle Five: Guide Cybersecurity
+    Risk Measurement and Reporting'
+  authors:
+  - National Association of Corporate Directors
+  year: 2026
+  venue: National Association of Corporate Directors (nacdonline.org), page dated April 16, 2026
+  url: https://www.nacdonline.org/all-governance/governance-resources/governance-research/director-handbooks/2026-cyber-risk-oversight/cyber-risk-handbook-principles-2026/principle-5-guide-cybersecurity-risk-measurement-reporting
+  evidence_class: practitioner
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.nacdonline.org/all-governance/governance-resources/governance-research/director-handbooks/2026-cyber-risk-oversight/cyber-risk-handbook-principles-2026/principle-5-guide-cybersecurity-risk-measurement-reporting
+  verified_on: '2026-11-22'
+  claims:
+  - text: Principle Five says leadership must move beyond technical updates toward standardized, quantitative
+      reports, aligned with the enterprise risk management process and using the same language, cadence,
+      and metrics as other material risks.
+    basis: official-summary
+  - text: The page recommends reporting at least quarterly and after material incidents or significant
+      changes in exposure, with escalation thresholds that trigger special board updates, and summaries
+      showing top risk scenarios, exposure against board-approved risk appetite, remediation progress,
+      and trends.
+    basis: official-summary
+  - text: It describes reporting as an ongoing dialogue in which directors can challenge assumptions and
+      request alternative scenarios.
+    basis: official-summary
+  caveats: A directors' association guide (practitioner guidance for boards), not research. Only the
+    Principle Five page was read; the 2026 edition has six principles, of which only the fourth, fifth,
+    and sixth were seen by title. Its advice to translate technical metrics into financial loss ranges
+    is reported, but no quantification model is endorsed in the book.
+- id: openchain-iso5230
+  type: standard
+  title: OpenChain ISO/IEC 5230 License Compliance
+  authors:
+  - OpenChain Project (Linux Foundation)
+  year: 2020
+  venue: OpenChain Project; published as ISO/IEC 5230:2020
+  url: https://openchainproject.org/license-compliance
+  evidence_class: standard
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://openchainproject.org/license-compliance
+  verified_on: '2026-11-22'
+  claims:
+  - text: ISO/IEC 5230 defines the key requirements of a quality open source license compliance program,
+      identifying where compliance processes should be in place, how to assign roles and responsibilities,
+      and how to keep the processes sustainable.
+    basis: official-summary
+  - text: It was first released as OpenChain 1.0 in October 2016 and became ISO/IEC 5230:2020 in December
+      2020.
+    basis: official-summary
+  caveats: The project's own page was read; the ISO catalogue page returned HTTP 403 and the standard's
+    text was not read.
+- id: klein2007premortem
+  type: magazine-article
+  title: Performing a Project Premortem
+  authors:
+  - Gary Klein
+  year: 2007
+  venue: Harvard Business Review, September 2007
+  url: https://hbr.org/2007/09/performing-a-project-premortem
+  evidence_class: practitioner
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://hbr.org/2007/09/performing-a-project-premortem
+  verified_on: '2026-11-22'
+  claims:
+  - text: In a premortem, team members assume that the project they are planning has just failed and
+      generate plausible reasons for the failure; the article presents it as a way to make it safe for
+      people with doubts to speak during planning.
+    basis: official-summary
+  caveats: Only the summary and opening were read. No effect size is attributed to this article in the
+    book.
+- id: mitchell1989prospective
+  type: journal-article
+  title: 'Back to the future: Temporal perspective in the explanation of events'
+  authors:
+  - Deborah J. Mitchell
+  - J. Edward Russo
+  - Nancy Pennington
+  year: 1989
+  venue: Journal of Behavioral Decision Making, vol. 2, no. 1, pp. 25-38
+  doi: 10.1002/bdm.3960020103
+  url: https://doi.org/10.1002/bdm.3960020103
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1002/bdm.3960020103
+  verified_on: '2026-11-22'
+  claims:
+  - text: The studies examined prospective hindsight, explaining a future event as if it had already
+      happened, and found that temporal perspective had little influence while outcome certainty strongly
+      affected explanations.
+    basis: abstract
+  - text: Explanations for events presented as certain tended to be longer and to contain a higher proportion
+      of episodic reasons; the second experiment suggested uncertainty affects the choice of explanation
+      type rather than the time spent explaining.
+    basis: abstract
+  caveats: Abstract only (Crossref record of the publisher abstract). Laboratory studies. The often-quoted
+    figure that prospective hindsight raises the number of reasons by 30 percent is not in the abstract
+    and is not used in the book.
+- id: baron1988outcome
+  type: journal-article
+  title: Outcome bias in decision evaluation
+  authors:
+  - Jonathan Baron
+  - John C. Hershey
+  year: 1988
+  venue: Journal of Personality and Social Psychology, vol. 54, no. 4, pp. 569-579
+  doi: 10.1037/0022-3514.54.4.569
+  url: https://doi.org/10.1037/0022-3514.54.4.569
+  evidence_class: scholarly
+  access_level: abstract-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.1037/0022-3514.54.4.569
+  - https://api.openalex.org/works/doi:10.1037/0022-3514.54.4.569
+  verified_on: '2026-11-22'
+  claims:
+  - text: In five studies, undergraduates who knew they had all the information available to the decision
+      maker rated the quality of thinking as better, rated the decision maker as more competent, and
+      were more willing to let the decision maker decide for them when the outcome was favorable than
+      when it was unfavorable.
+    basis: abstract
+  - text: Subjects who were asked said they should not consider outcomes in these evaluations, but they
+      did so.
+    basis: abstract
+  caveats: Abstract read via OpenAlex. Undergraduate subjects judging medical decisions and monetary
+    gambles, not executives judging business decisions.
+- id: eisenhardt1989fast
+  type: journal-article
+  title: Making Fast Strategic Decisions in High-Velocity Environments
+  authors:
+  - Kathleen M. Eisenhardt
+  year: 1989
+  venue: Academy of Management Journal, vol. 32, no. 3, pp. 543-576
+  doi: 10.2307/256434
+  url: https://doi.org/10.2307/256434
+  evidence_class: scholarly
+  access_level: metadata-only
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - doi
+  verified_via:
+  - https://api.crossref.org/works/10.2307/256434
+  - https://api.semanticscholar.org/graph/v1/paper/DOI:10.5465/256434
+  verified_on: '2026-11-22'
+  claims: []
+  caveats: Metadata only; the publisher abstract is elided in the open records and the AOM and JSTOR
+    pages could not be read. Credited only for the idea it is widely known for, that fast strategic
+    decision makers in a multiple-case study of microcomputer firms considered more information and
+    more alternatives at once, relied on experienced counselors, and used consensus with qualification
+    (the leader decides if the group cannot agree). No finding is reported.
+- id: larson2023ma
+  type: blog-post
+  title: Engineering's role in Mergers & Acquisitions.
+  authors:
+  - Will Larson
+  year: 2023
+  venue: Irrational Exuberance (lethain.com), February 27, 2023; draft chapter of The Engineering Executive's
+    Primer (listed under the blog's executive tag)
+  url: https://lethain.com/engineering-in-mergers-and-acquisition/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://lethain.com/engineering-in-mergers-and-acquisition/
+  - https://lethain.com/tags/executive/
+  verified_on: '2026-11-22'
+  claims:
+  - text: The post argues that engineering carries much of an acquisition's long-term cost and complexity,
+      so the engineering executive should evaluate deals rigorously and give an honest view, including
+      "no", while recognizing that engineering usually has one vote among many rather than a veto.
+    basis: full-text
+  - text: It recommends grounding the evaluation in a written business strategy and an acquisition thesis
+      (the assumptions that must hold), then testing those assumptions with a base template covering
+      product implementation, intellectual property, security, compliance, integration mismatches, costs
+      and scalability, and engineering culture, plus deal-specific questions.
+    basis: full-text
+  - text: It names failure modes including deal teams rewarded for closing, sunk-cost pressure, an unstated
+      thesis, and overlooked risks such as unverified data, unaudited compliance claims, or unknown breaches.
+    basis: full-text
+  - text: For integration it suggests running the acquired stack as is for about six months while consolidating
+      where feasible, and documenting the plan so the deal team and staff work from the same assumptions.
+    basis: full-text
+  caveats: An unedited draft chapter by one practitioner (expert opinion); the published book may differ.
+    Read through a summarizing fetcher.
+# from t05-t12
+- id: madr-template
+  type: web-guide
+  title: Markdown Architectural Decision Records
+  authors:
+  - MADR project
+  year: 2024
+  venue: adr.github.io/madr
+  url: https://adr.github.io/madr/
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - venue
+  - url
+  - version
+  verified_via:
+  - https://adr.github.io/madr/
+  verified_on: '2026-11-22'
+  claims:
+  - text: MADR stands for Markdown Architectural Decision Records (spelled out this way from 4.0.0-beta;
+      3.0.0-beta used "Markdown Any Decision Records"); version 4.0.0 was released on 2024-09-17.
+    basis: full-text
+  - text: The template's sections are Context and Problem Statement, Considered Options, and Decision Outcome,
+      with optional Decision Drivers, Consequences, Confirmation, Pros and Cons of the Options, and More
+      Information, and optional front-matter fields for status, date, decision-makers, consulted, and informed.
+    basis: full-text
+  - text: The page says the template focuses on architectural decisions but can record any decision.
+    basis: full-text
+  caveats: >-
+    Project page; individual maintainers are not named on it. Year is the 4.0.0 release year. Title
+    is the page's top-level heading; the browser title is "About MADR | MADR".

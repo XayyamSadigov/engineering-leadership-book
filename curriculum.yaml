@@ -549,7 +549,7 @@ parts:
       - n: 50
         slug: what-a-cto-actually-does
         title: What a CTO Actually Does
-        status: planned
+        status: review
         objectives:
           - Distinguish the CTO archetypes and the CTO, CIO, and VP Engineering splits.
           - Design the CTO's own leadership team and operating rhythm.
@@ -558,7 +558,7 @@ parts:
       - n: 51
         slug: enterprise-technology-strategy
         title: Enterprise Technology Strategy and the Three-Year Roadmap
-        status: planned
+        status: review
         objectives:
           - Derive technology strategy from business strategy with explicit choices about where to be excellent.
           - Build a three-year roadmap with horizons, options, and decision points.
@@ -568,7 +568,7 @@ parts:
       - n: 52
         slug: technology-investment-budgeting-and-financial-literacy
         title: Technology Investment, Budgeting, and Financial Literacy
-        status: planned
+        status: review
         objectives:
           - Read an income statement, balance sheet, and cash-flow statement as a technology leader.
           - Build and defend an engineering budget, including capitalized and expensed work.
@@ -578,7 +578,7 @@ parts:
       - n: 53
         slug: risk-governance-regulation-and-security-strategy
         title: Risk, Governance, Regulation, and Security Strategy
-        status: planned
+        status: review
         objectives:
           - Maintain an enterprise technology risk register with owners and treatment decisions.
           - Set a security strategy using recognized frameworks and report it to non-specialists.
@@ -587,7 +587,7 @@ parts:
       - n: 54
         slug: data-and-ai-strategy
         title: Data and AI Strategy
-        status: planned
+        status: review
         objectives:
           - Assess data foundations before committing to AI initiatives.
           - Choose where to buy, build, or wait on AI capabilities, and govern their use in engineering.
@@ -596,7 +596,7 @@ parts:
       - n: 55
         slug: boards-due-diligence-and-executive-decision-making
         title: Boards, Due Diligence, and Executive Decision-Making
-        status: planned
+        status: review
         objectives:
           - Communicate technology status and risk to a board.
           - Run or survive technology due diligence.
@@ -676,14 +676,14 @@ templates:
   - {id: t02, file: career-development-plan.md, title: Career development plan, status: planned}
   - {id: t03, file: engineering-manager-rubric.md, title: Engineering Manager performance rubric, status: review}
   - {id: t04, file: director-competency-matrix.md, title: Director competency matrix, status: review}
-  - {id: t05, file: cto-competency-matrix.md, title: CTO competency matrix, status: planned}
+  - {id: t05, file: cto-competency-matrix.md, title: CTO competency matrix, status: review}
   - {id: t06, file: team-health-assessment.md, title: Team health assessment, status: planned}
   - {id: t07, file: organizational-design-assessment.md, title: Organizational design assessment, status: review}
   - {id: t08, file: engineering-quality-scorecard.md, title: Engineering quality scorecard, status: review}
   - {id: t09, file: technical-debt-register.md, title: Technical debt register, status: review}
   - {id: t10, file: incident-review.md, title: Incident review template, status: review}
-  - {id: t11, file: risk-register.md, title: Risk register, status: planned}
-  - {id: t12, file: architecture-decision-record.md, title: Architecture decision record, status: planned}
+  - {id: t11, file: risk-register.md, title: Risk register, status: review}
+  - {id: t12, file: architecture-decision-record.md, title: Architecture decision record, status: review}
   - {id: t13, file: quarterly-engineering-review.md, title: Quarterly engineering review, status: review}
   - {id: t14, file: capacity-planning-model.md, title: Capacity planning model, status: review}
   - {id: t15, file: engineering-strategy.md, title: Engineering strategy template, status: review}
@@ -700,5 +700,5 @@ projects:
   - {id: p4, title: Redesign an Organization of 80 Engineers, status: review}
   - {id: p5, title: Build a Delivery Performance and Reliability Scorecard, status: review}
   - {id: p6, title: Create Engineering Manager Development and Succession Plans, status: review}
-  - {id: p7, title: Design a 12-Month Engineering Strategy, status: planned}
-  - {id: p8, title: Build a CTO Technology Investment Proposal, status: planned}
+  - {id: p7, title: Design a 12-Month Engineering Strategy, status: review}
+  - {id: p8, title: Build a CTO Technology Investment Proposal, status: review}

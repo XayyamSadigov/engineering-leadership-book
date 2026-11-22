@@ -3,7 +3,7 @@
 
 # Curriculum
 
-The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 49 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
+The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 55 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation and carries a banner saying so. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
 
 | Part | Chapters | On the site |
 |---|---|---|
@@ -18,7 +18,7 @@ The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are publishe
 | IX. Engineering Directorship | 40–43 | 4 of 4 |
 | X. Product and Business Leadership | 44–46 | 3 of 3 |
 | XI. VP of Engineering | 47–49 | 3 of 3 |
-| XII. CTO Leadership | 50–55 | 0 of 6 |
+| XII. CTO Leadership | 50–55 | 6 of 6 |
 | XIII. Advanced Leadership Problems | 56–59 | 0 of 4 |
 | XIV. Practical Management Systems and Playbooks | templates | 0 of 0 |
 | XV. Capstone: Build and Transform an Engineering Organization | 60 | 0 of 1 |
@@ -660,9 +660,9 @@ Primary sources: [kane2019technology](references/bibliography.md#kane2019technol
 
 Technology as a company-level concern; strategy, capital, risk, and the board.
 
-### Chapter 50 — What a CTO Actually Does
+### [Chapter 50 — What a CTO Actually Does](parts/12-cto-leadership/50-what-a-cto-actually-does.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -672,9 +672,9 @@ After this chapter you can:
 
 Primary sources: [larson2024primer](references/bibliography.md#larson2024primer), [fournier2017manager](references/bibliography.md#fournier2017manager), [drucker1967effective](references/bibliography.md#drucker1967effective)
 
-### Chapter 51 — Enterprise Technology Strategy and the Three-Year Roadmap
+### [Chapter 51 — Enterprise Technology Strategy and the Three-Year Roadmap](parts/12-cto-leadership/51-enterprise-technology-strategy.md)
 
-*Status: Planned* · *Project: P7*
+*Status: On the site, awaiting human review* · *Project: P7*
 
 After this chapter you can:
 
@@ -684,9 +684,9 @@ After this chapter you can:
 
 Primary sources: [rumelt2011good](references/bibliography.md#rumelt2011good), [lafley2013playing](references/bibliography.md#lafley2013playing), [larson2024primer](references/bibliography.md#larson2024primer), [kane2019technology](references/bibliography.md#kane2019technology)
 
-### Chapter 52 — Technology Investment, Budgeting, and Financial Literacy
+### [Chapter 52 — Technology Investment, Budgeting, and Financial Literacy](parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md)
 
-*Status: Planned* · *Project: P8*
+*Status: On the site, awaiting human review* · *Project: P8*
 
 After this chapter you can:
 
@@ -696,9 +696,9 @@ After this chapter you can:
 
 Primary sources: [berman2006financial](references/bibliography.md#berman2006financial), [larson2024primer](references/bibliography.md#larson2024primer), [reinertsen2009principles](references/bibliography.md#reinertsen2009principles)
 
-### Chapter 53 — Risk, Governance, Regulation, and Security Strategy
+### [Chapter 53 — Risk, Governance, Regulation, and Security Strategy](parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -708,9 +708,9 @@ After this chapter you can:
 
 Primary sources: [nist2024csf](references/bibliography.md#nist2024csf), [nist2022ssdf](references/bibliography.md#nist2022ssdf), [slsa-spec](references/bibliography.md#slsa-spec), [aws-well-architected](references/bibliography.md#aws-well-architected)
 
-### Chapter 54 — Data and AI Strategy
+### [Chapter 54 — Data and AI Strategy](parts/12-cto-leadership/54-data-and-ai-strategy.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -720,9 +720,9 @@ After this chapter you can:
 
 Primary sources: [kane2019technology](references/bibliography.md#kane2019technology), [forsgren2021space](references/bibliography.md#forsgren2021space), [noda2023devex](references/bibliography.md#noda2023devex)
 
-### Chapter 55 — Boards, Due Diligence, and Executive Decision-Making
+### [Chapter 55 — Boards, Due Diligence, and Executive Decision-Making](parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md)
 
-*Status: Planned*
+*Status: On the site, awaiting human review*
 
 After this chapter you can:
 
@@ -794,14 +794,14 @@ Reusable artifacts, each filled in with a Northstar example. This part has no ch
 | Career development plan | Planned |
 | [Engineering Manager performance rubric](templates/engineering-manager-rubric.md) | On the site, awaiting human review |
 | [Director competency matrix](templates/director-competency-matrix.md) | On the site, awaiting human review |
-| CTO competency matrix | Planned |
+| [CTO competency matrix](templates/cto-competency-matrix.md) | On the site, awaiting human review |
 | Team health assessment | Planned |
 | [Organizational design assessment](templates/organizational-design-assessment.md) | On the site, awaiting human review |
 | [Engineering quality scorecard](templates/engineering-quality-scorecard.md) | On the site, awaiting human review |
 | [Technical debt register](templates/technical-debt-register.md) | On the site, awaiting human review |
 | [Incident review template](templates/incident-review.md) | On the site, awaiting human review |
-| Risk register | Planned |
-| Architecture decision record | Planned |
+| [Risk register](templates/risk-register.md) | On the site, awaiting human review |
+| [Architecture decision record](templates/architecture-decision-record.md) | On the site, awaiting human review |
 | [Quarterly engineering review](templates/quarterly-engineering-review.md) | On the site, awaiting human review |
 | [Capacity planning model](templates/capacity-planning-model.md) | On the site, awaiting human review |
 | [Engineering strategy template](templates/engineering-strategy.md) | On the site, awaiting human review |
@@ -837,5 +837,5 @@ Primary sources: [forsgren2018accelerate](references/bibliography.md#forsgren201
 | P4: Redesign an Organization of 80 Engineers | On the site, awaiting human review |
 | P5: Build a Delivery Performance and Reliability Scorecard | On the site, awaiting human review |
 | P6: Create Engineering Manager Development and Succession Plans | On the site, awaiting human review |
-| P7: Design a 12-Month Engineering Strategy | Planned |
-| P8: Build a CTO Technology Investment Proposal | Planned |
+| P7: Design a 12-Month Engineering Strategy | On the site, awaiting human review |
+| P8: Build a CTO Technology Investment Proposal | On the site, awaiting human review |

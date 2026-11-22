@@ -2,7 +2,7 @@
 
 Questions the book needs evidence for and does not yet have. A chapter that touches a gap must admit
 it in the text. Each gap records what was searched, what was found, and what to do next.
-Updated 2026-11-20 after waves 1–5 (Parts I–IX).
+Updated 2026-11-22 after wave 7 (Part XII).
 
 ## Open
 
@@ -55,6 +55,14 @@ Updated 2026-11-20 after waves 1–5 (Parts I–IX).
 | G48 | Studies of the VP of Engineering role, engineering leadership team composition, and capacity allocation across directors | Ch 47 | None found; chapter relies on upper-echelons and capital-allocation research and practitioner writing; Larson's Primer read only as draft chapters | Search |
 | G49 | Optimal engineering level mix; outcomes of contractor versus employee staffing in software | Ch 48 | None found; both labeled this book's recommendation. Šmite 2010 systematic review behind Springer login | Search; read Šmite 2010 via a library |
 | G50 | Page range of Dutton and Ashford 1993; Pfeffer 1992 subtitle | Ch 49 | AOM page returned 403; publisher subtitle unconfirmed and omitted | Verify via Crossref or a library |
+| G51 | Empirical studies of CTO time use and CTO role models in software companies; Berray and Sampath's original CTO-roles paper | Ch 50, t05 | CEO diary research (`bandiera2020ceo`), a 1990 manufacturing CTO survey (`adler1990cto`), conceptual work (`medcof2008cto`); Berray and Sampath only through `vogels2007ctoroles` | Search management literature; locate the original paper |
+| G52 | Outcome evidence for written technology strategies, roadmapping, and capacity splits across horizons | Ch 51, P7 | Alignment research is correlational (`gerow2014alignment`, `tallon2011alignment`); roadmapping (`phaal2004roadmapping`) metadata only | Search; read Phaal et al. |
+| G53 | How a software capitalization policy shifts engineering's investment mix | Ch 52, P8 | `aboody1998software` (value relevance, abstract only); no study of behavioral effects on engineering | Search accounting research |
+| G54 | Outcome evidence that risk registers, appetite statements, or SOC 2 attestation reduce incidents or losses; privacy and data-protection law; ISO/IEC 27001 and ISO 31000 (iso.org 403); SOC 2 Type 1 versus Type 2 on an AICPA page | Ch 53, t11 | Standards and frameworks only (`nist2024csf`, NIST IR 8286, AICPA criteria); `cox2008risk` on risk-matrix flaws | Search; retry iso.org; legal review for privacy |
+| G55 | Organization-level causal evidence on AI-assisted delivery outcomes; full DORA 2024 and 2025 reports | Ch 54, D9 | Task-level RCTs and preprints (`cui2026effects`, `becker2025metr`, `paradis2024google`, `peng2023copilot`); DORA official summaries only | Read the full DORA reports; watch for organization-level trials |
+| G56 | Board technology reporting practices and technology due diligence effectiveness | Ch 55 | Directors' association guide (NACD, Principle Five only), `nolan2005itboard` summary, SEC rule; one public diligence case (Yahoo); Eisenhardt 1989 metadata only | Search governance research |
+| G57 | Comparative evidence on ADR field sets and templates | t12 | MADR, Nygard, `buchgeher2023adr` (practice study) | Search |
+| G58 | How much unplanned work returns when prevention funding stops | P8 | No Northstar or external evidence; P8 shows the break-even instead | Search reliability-investment literature |
 
 ## Closed
 

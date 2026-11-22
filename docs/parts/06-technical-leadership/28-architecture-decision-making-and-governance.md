@@ -402,7 +402,7 @@ sample.
    (capacity and dates only), and the escalation path. Record it as the first ADR.
 3. Give each domain decider a written mandate, time in their plan, and a decision service level.
 4. Put an ADR template in every repository, starting from Nygard's fields plus decider, options
-   rejected, assumptions, and review trigger.
+   rejected, assumptions, and review trigger. The [architecture decision record template](../../templates/architecture-decision-record.md) gives these fields with a worked Northstar example.
 5. Add a code review trigger: a change to a cross-team interface links an accepted or proposed ADR.
 6. Set comment windows: three working days inside a team, five across teams. Silence means proceed.
 7. Measure any review board for a month (wait, share already in build, conditions verified), then

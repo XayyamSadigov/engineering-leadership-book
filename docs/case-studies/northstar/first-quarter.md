@@ -201,3 +201,99 @@ None of the decisions below has a recorded outcome. Chapters set in quarter 4 le
 | 45 | The director drafts a two-year continuation of the quality program: stage 2 "Hold" (quarters 5–6, 6 FTE prevention, $150,000 of tooling, gate week 78) and stage 3 "Converge" (quarters 7–8, 5 FTE, $100,000 of tooling only if a CI target is chosen, gate week 104), after a stage 1 gate in week 56; no headcount request; "VP or second layer" listed as an open question. One-on-ones with executives weeks 46–47, executive team meeting week 49, decisions requested by week 51 | 49 |
 | 46–47 | Executive positions on the continuation: Victor supports staging; Helena Marsh focuses on renewals (six of the 40 largest customers renew in quarters 5 to 8); Rajiv wants operating expense flat and the $150,000 offset in the $4.2M cloud and tooling budget; Greg Tanaka wants the prevention engineers on deal features and in week 47 privately offers support in exchange for two engineers outside the portfolio forum, which the director declines and writes into the proposal as an option; Amara wants the allocation fixed per stage; Sofia wants customer incident notifications kept | 49 |
 | 49 | Workforce plan draft to Victor and Rajiv with four options (A like-for-like, B shaped backfills, C two requisitions held ahead, which would need an exception to the 87-seat rule, D a fixed-scope vendor contract) and the rule "no customer date without an engineering estimate and a named owner"; Greg Tanaka objects to the rule. The recommendation is left open | 48 |
+| 50 | Quarter 4 board meeting: the year-2 operating plan and budget envelope for approval, with the engineering page drafted in weeks 41–45. Its outcome is not recorded | 55 |
+
+## Part XII facts (quarter 4)
+
+Added when Part XII (Chapters 50–55) was written. Everything here is set in quarter 4, and none of it
+records the outcome of an open decision: drafts, positions, and measurements only.
+
+### The CTO's job (Chapter 50)
+
+| Fact | Detail |
+|---|---|
+| Victor Lindqvist's average week, weeks 44–46 | 48.0 hours. Work only the CTO can do, 20.0: executive team and CEO one-on-one 3.0; fortnightly one-on-ones with Amara Okafor, Rajiv Menon, Greg Tanaka, and Sofia Alvarez 1.0; the director 0.5; largest customers' technical relationships 5.0; board preparation 4.0; year-2 decision reviews 4.5; uninterrupted strategy work 2.0 (about 4 percent). Delegable, 11.0: customer security reviews 2.0, sales calls on open deals 3.5, Sev1 bridges and customer incident calls 2.0, unrecorded technical rulings 3.5. Other, 17.0: engineering forums 1.5, recruiting and external 1.0, email, administration, and travel 14.5 |
+| Informal technical requests, weeks 44–46 | 11: 3 genuinely the CTO's (a top-40 customer's request for a dedicated environment; technical terms of a vendor renewal affecting product and IT; a top-40 customer's request to review architecture direction before renewal), 6 belonging under the director's escalation path, 2 belonging to standard owners (Kwame Mensah, Li Na Zhou) |
+| Customer security questionnaires | Addressed to Victor; Joon Park drafts answers from IT's records; engineering supplies evidence ad hoc |
+| Victor's week 47 draft (not implemented) | Keep, give, stop list freeing 7.0 hours a week for strategy (2.0 to 9.0); a table of decisions shared with IT; three options for the IT seam (write the table and keep IT under the CFO, move IT under the CTO, wait for the risk and security design), none chosen |
+
+### Three-year technology strategy (Chapter 51)
+
+Year 2 is weeks 53–104, year 3 weeks 105–156, year 4 weeks 157–208.
+
+| Week | Fact |
+|---|---|
+| — | Northstar has no written statement of where it plays and how it wins; the year-2 operating plan draft states financial targets and the renewals focus |
+| 46 | Victor sends Helena Marsh his reading of the business choices. She confirms two (mid-market distributors with the largest 40 mattering most; trusted with money) and moves growth into larger cross-border distributors to year 3 as a board question |
+| 47 | Victor's draft sorts technology into four groups: excellent (financial correctness, availability of order and payment paths, accounting and bank integration, safe weekly change), adequate (ordering screens, internal reporting, Core module structure), buy (tax content, CI and observability tooling, corporate business systems), not doing for three years (Core rewrite, multi-region active-active, customer-specific code branches, a new tier 1 runtime or datastore without retiring one). Four policies: reliability before reach; money data moves by contract or events, never tables (a stated reversal of the week 14 remark, proposing ADR-0001 be decided by week 60); converge before adding; stage anything above 10 FTE-quarters |
+| 47 | Draft allocation on 79 engineers, years 2 / 3 / 4: unplanned work 17.4 / 14.2 / 12.6 (22, 18, 16 percent); prevention 5.5 / 3.0 / 3.0; platform 4.5 / 5.0 / 5.0; estate currency 2.0 / 1.5 / 1.5; product for today's customers 37.6 / 37.3 / 35.9; horizon 2 10.0 / 14.0 / 16.0; horizon 3 2.0 / 4.0 / 5.0. Stress rule: an unplanned-work overrun comes out of horizon 2, never prevention or horizon 3 |
+| 47 | Draft options and decision weeks: ledger posting events (60, depends on ADR-0001); higher availability tier for top accounts (4 engineer-week study, 70); multi-currency invoicing and ledger (6 engineer-week probe, 78); ordering API for distributors' largest buyers (78); Core order-capture extraction (104). The CI target to be chosen at the week 78 gate |
+| 48 | 90-minute premortem with the director and the three staff engineers; Victor adds the stress rule and a people line (by week 104, at least two people can safely change each "excellent" area) |
+| 49 | At the executive team meeting, Amara Okafor's objection moves ordering correctness to "excellent"; Greg Tanaka's objection to "no customer-specific code branches" (two open deals) is recorded and the line kept; Victor confirms to Rajiv Menon nothing beyond the continuation's $150,000 |
+| 50 | The draft is Victor's one board agenda item, for discussion, not approval. The board's response is not recorded |
+
+### Finances (Chapter 52)
+
+Fiscal year 1 (FY1) is weeks 1–52; FY0 is the year before the director arrived; FY2 starts in week 53.
+Northstar reports under US GAAP with an outside audit. Most contracts are billed annually in advance.
+Service credits reduce subscription revenue. Figures are Finance's week 46 latest estimate for FY1
+(quarters 1–3 actual, quarter 4 forecast), in $M.
+
+| Income statement, FY1 | $M | Balance sheet | End FY0 | End FY1 |
+|---|---|---|---|---|
+| Subscription revenue (net of credits) | 140.0 | Cash | 56.0 | 73.5 |
+| Professional services revenue | 5.0 | Accounts receivable | 17.0 | 17.5 |
+| Total revenue | 145.0 | Prepaid and other | 3.0 | 3.0 |
+| Cost of revenue (support 18.0, services 8.5, payment and data fees 6.0, production hosting 3.1, amortization 2.1, other 2.9) | 40.6 | Capitalized software, net | 4.4 | 4.7 |
+| Gross profit (72 percent) | 104.4 | Property and equipment, net | 2.4 | 2.4 |
+| Research and development (engineering personnel expensed 13.7, development tooling 1.1, product management 1.6) | 16.4 | Total assets | 82.8 | 101.1 |
+| Sales and marketing | 46.0 | Payables and accrued | 6.0 | 6.2 |
+| General and administrative (including IT) | 21.0 | Accrued compensation | 7.0 | 7.3 |
+| Operating income (14.5 percent) | 21.0 | Deferred revenue | 54.0 | 55.0 |
+| EBITDA (adds amortization 2.1, depreciation 0.8) | 23.9 | Total liabilities (no debt) | 67.0 | 68.5 |
+| Interest income | 1.4 | Shareholders' equity | 15.8 | 32.6 |
+| Income tax (25 percent) | 5.6 | | | |
+| Net income | 16.8 | | | |
+
+| Fact | Detail |
+|---|---|
+| Cash flow, FY1 | Operating 20.7 (net income 16.8, amortization and depreciation 2.9, working capital 1.0); capitalized software −2.4; equipment −0.8; financing 0; free cash flow 17.5 |
+| Cloud and tooling split | The $4.2M is $3.1M production hosting (cost of revenue) and $1.1M development tooling (R&D) |
+| Equity | Low for the company's age because of losses in its early growth years; no distributions |
+| Capitalization policy | ASC 350-40 (Northstar's software is provided as a service). Coding and testing on budget-authorized projects that add functionality is capitalized from weekly project codes; maintenance, incident work, prevention, refactoring, and training are expensed. Rate $157,250 per FTE-year (85 percent of $185,000; overhead excluded). Straight-line amortization over three years, company policy. Finance applies the current guidance and is assessing ASU 2025-06 |
+| Capitalized engineering cost | FY−2 $1.8M, FY−1 $2.1M, FY0 $2.4M, FY1 $2.4M (about 15.3 FTE-years) |
+| FY2 engineering budget draft, weeks 46–48 | Personnel $16.73M at 87 full seats (3 percent merit, $0.15M promotion and market reserve), $16.31M after expected vacancy; cloud and tooling $4.2M flat. Outcome open |
+| TR-01 cost scenarios | 120, 190, and 243 engineer-days ($96,000, $152,000, $194,400 at $800 a day); expensed, since it adds no functionality. Funding open |
+
+### Risk, security, and compliance (Chapter 53)
+
+| Week | Fact |
+|---|---|
+| — | Northstar holds no SOC 2 report or other independent attestation; the annual penetration test is its only external assurance. Card payments use the processor's hosted fields and tokens, so Northstar stores no card numbers; the card data scope has not been reviewed since the integration was built |
+| — | Finance keeps the corporate risk register: 12 risks on a five-by-five matrix, reviewed by the audit committee twice a year. Technology is one line, "Cyber attack or IT outage" (owner Marta Kowalczyk, score 12, amber), unchanged at its last four reviews |
+| — | Joon Park's quarterly report to Marta Kowalczyk covers penetration test findings, phishing click rate, and training completion |
+| 42 | Greg Tanaka reports a prospect worth about $310,000 a year whose terms require a SOC 2 report within 12 months of signing |
+| 43 | Margaret Lin asks for a technology risk session at the audit committee's week 50 meeting. Victor asks the director to draft an enterprise technology risk register with Marta Kowalczyk and Joon Park for his review in week 48 |
+| 44 | Security snapshot: 20 components scanned in the pipeline and 4 weekly; 2 open criticals, both under exceptions (auth-svc, known-exploited and restricted at the load balancer, under the exception the director recorded in quarter 1 "until the migration", to which Joon Park added a week 52 date in week 44 without a new signature; one Core item waiting on TR-01); 9 highs past the 90-day service level; tier 1 with an SBOM per build 14 of 15 (all but auth-svc); tier 1 with signed provenance 0 of 15; 2 script services with secrets in plain files |
+| 44 | Joon Park's tally over the trailing four quarters: 34 security questionnaires (11 asked for an independent assurance report, 6 for an SBOM or SSDF evidence), about 14 hours each of IT security and engineering time |
+| 47 | The director's draft register ER-01 to ER-09 (22 candidate items consolidated), three draft appetite lines, a draft security strategy with five year-2 outcomes, and SOC 2 options A (audit in year 2), B (readiness in quarters 5–6, decision at week 78), C (evidence library only), with illustrative audit quotes of $45,000–$70,000 a year, a compliance tool at about $30,000 a year, and year-1 internal effort of about 0.5 FTE in engineering and 0.5 FTE in IT; B recommended. Marta Kowalczyk objects to moving security out of IT; three reporting options are recorded without a recommendation |
+| 48 | Victor keeps the nine risks and three lines and says he will either sign the auth-svc exception before week 50 or have auth-svc restricted further. Outcomes open |
+
+### Data and AI (Chapter 54)
+
+| Week | Fact |
+|---|---|
+| 41 | Farah Haddad's warehouse inventory: 46 nightly pipelines, 29 reading Core tables directly through read replicas; 212 tables, 38 described, no dataset with a named owner of meaning; the nightly load failed or loaded partially on 11 of quarter 3's 91 nights (7 traced to Core schema changes); month-end revenue differs from Finance's close by 0.3 to 0.6 percent, reconciled by hand in about two days a month; customer personal data in 14 unclassified tables |
+| 41 | A top-40 customer's renewal questionnaire asks about generative AI in development and in the product and whether customer data reaches AI providers |
+| 42 | An anonymous AI-use survey, separate from the developer-experience survey: 63 of 80 respond; 41 use an AI coding assistant weekly, 29 of them on personal or free accounts; 17 have pasted Northstar code into a chat tool; 6 have pasted customer data; 34 of the 41 weekly users say AI makes them faster. No AI policy exists |
+| 43–45 | Requests: Greg Tanaka, an AI order assistant for two open deals; Amara Okafor, AI order checking; Sofia Alvarez, the support tool's summarization add-on; Rajiv Menon, whether assistants let the workforce plan hold two backfills open |
+| 47 | The director's one-page AI position for Victor: an interim AI-assisted engineering policy, a staggered coding-assistant trial in quarter 5 (three teams weeks 53–58, three weeks 59–64), order checking with non-AI fixes first, the order assistant deferred with a trigger, support summaries subject to terms review, no backfills held open on AI. All decisions open |
+
+### Board preparation (Chapter 55)
+
+| Week | Fact |
+|---|---|
+| 46–48 | Victor gathers directors' concerns in calls: Anders Holm, whether the gains depend on a few people; Natalie Brooks, what a buyer's technology diligence would find (a readiness question; no transaction is planned); Samuel Osei, whether flat headcount can carry the roadmap; Margaret Lin, whether measures mean the same thing every quarter; David Ferrante, the payment path, the availability miss, and Core's unsupported framework, with an offer to review the architecture himself |
+| 48 | The draft engineering page carries both reliability headlines side by side (Victor's "below 10 per quarter" and the director's week 42 counter); the choice is open |
+| 49 | The board pack goes to directors at the end of week 49 |
+| 50 | Helena Marsh presents the year-2 operating plan and budget envelope for approval; Victor's agenda item is the three-year technology strategy, for discussion. The audit committee's technology risk session is held the same week. Outcomes not recorded |

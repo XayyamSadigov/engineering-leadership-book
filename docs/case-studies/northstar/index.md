@@ -73,6 +73,21 @@ flowchart TD
     PLT --> QA["QA, manual regression: 7"]
 ```
 
+### Executive and board context (Part XII)
+
+These facts were fixed when Part XII was written, so that the CTO chapters describe the same
+company. Victor Lindqvist stays CTO throughout Part XII; any change in who holds the role belongs to
+the capstone (Chapter 60).
+
+| Fact | Value |
+|---|---|
+| Ownership | Privately held. Calder Ridge Partners, a growth-equity firm, has held a minority stake since the product's seventh year and has two board seats |
+| Board | Six members: Anders Holm (co-founder, non-executive chair), Helena Marsh (CEO), Natalie Brooks and Samuel Osei (Calder Ridge Partners), Margaret Lin (independent, former CFO, chairs the audit committee), David Ferrante (independent, former technology executive at a payments company) |
+| Board cadence | Quarterly. The quarter 4 meeting is in week 50 and is asked to approve the year-2 operating plan and budget envelope; decisions inside that envelope (the year-2 organization, the quality continuation, the workforce plan) stay with management. The audit committee oversees risk, including technology and security risk; there is no technology committee |
+| The CTO at the board | Victor Lindqvist attends for one agenda item a quarter; the CEO's monthly board pack carries the engineering figures |
+| Victor Lindqvist's organization | One direct report, the Engineering Director (87 seats in all). Victor owns technical direction, the largest customers' technical relationships, and the board's technology questions |
+| IT | Corporate IT and internal business systems, 14 people led by Marta Kowalczyk (Head of IT), reporting to Rajiv Menon (CFO). Joon Park's two-person security function is one of the 14. Northstar has no CISO |
+
 ## The system
 
 - **Core**, a Java monolith of about 1.4 million lines with eight major modules. Five modules have

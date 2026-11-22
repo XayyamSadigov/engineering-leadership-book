@@ -145,3 +145,57 @@ revise several of them downward, leaving structured interviews among the most va
 **Book's position (Chapter 7).** Use the revised estimates, state them with their uncertainty, and
 prefer structured interviews and job-related work samples; do not present any single number as settled.
 Gap G10 records what was not read.
+
+## D9. Do AI coding assistants make software engineering organizations more productive?
+
+**Positions.**
+
+- *Yes, substantially.* Vendor and early experimental evidence: a controlled experiment found developers
+  with GitHub Copilot completed one greenfield task (an HTTP server in JavaScript) 55.8 percent faster
+  (`peng2023copilot`, abstract, preprint); three field RCTs with 4,867 developers estimated 26.08 percent
+  more completed tasks (standard error 10.3 percent), with larger gains for less experienced developers
+  (`cui2026effects`, abstract, Management Science); an enterprise RCT with 96 engineers found about 21
+  percent less time on one task, with a wide interval (`paradis2024google`, abstract, preprint).
+- *Not for experienced developers on mature codebases, at least with early-2025 tools.* An RCT with 16
+  experienced open-source developers on 246 tasks in their own repositories found AI increased completion
+  time by 19 percent, while the developers forecast a 24 percent speedup and afterwards believed in a 20
+  percent one (`becker2025metr`, abstract, preprint).
+- *Individual gains do not reliably become delivery gains.* DORA's 2024 survey associates rising AI
+  adoption with better documentation, code quality, and review speed and with an estimated 1.5 percent
+  lower delivery throughput and 7.2 percent lower delivery stability (`dora2024announcing`, official
+  summary); DORA 2025 describes AI as an amplifier of existing strengths and weaknesses
+  (`dora2025state`) and names seven capabilities that amplify or unlock its benefits
+  (`dora2025aicapabilities`).
+
+**Evidence quality.** Randomized studies exist but measure task-level output (time, completed tasks) in
+specific settings; none fetched measures organization-level delivery outcomes causally. Several have
+vendor-employed authors; DORA is vendor-run survey research. Self-reported speed is shown to diverge
+from measured speed (`becker2025metr`), and suggestion acceptance rate tracks perceived productivity
+(`ziegler2022productivity`). Adjacent risks: less secure code with more confidence (`perry2023insecure`)
+and hallucinated package names (`spracklen2025package`). The evidence covers tools from 2022 to early
+2025 and ages quickly.
+
+**Book's position (Chapter 54).** AI coding assistants can speed well-defined tasks, more for less
+experienced developers; the evidence does not establish organization-level delivery gains, and one
+well-designed trial in the setting closest to a mature product company found a slowdown alongside a
+believed speedup. Treat vendor and survey figures as hypotheses; measure at team and system level with
+Chapter 18's paired metrics; do not count an AI productivity gain in a headcount or workforce plan until
+the organization has measured it itself. Govern use rather than ban it. Labeled as this book's
+recommendation. **Owner:** Chapter 54 (measurement standards from Chapter 18). **Gap:** propose a new
+research gap for organization-level causal evidence on AI-assisted delivery outcomes, and for reading
+the full DORA 2024 and 2025 reports (only official summaries were read).
+
+## D10. Are the three horizons time periods or kinds of bet?
+
+**Positions.** Many organizations read the three horizons (`baghai1999alchemy`) as delivery windows:
+horizon 1 this year, horizon 2 in two to three years, horizon 3 later. Blank (`blank2019flaw`) argues
+the time element no longer holds, because new entrants can reach horizon 3 outcomes quickly, while the
+categories stay useful; one of the model's authors disputes the "flaw" framing in comments on Blank's
+post.
+
+**Evidence quality.** Practitioner and consulting literature on both sides; no outcome study compares
+the two readings. `baghai1999alchemy` was read at metadata level only.
+
+**Book's position (Chapter 51).** Horizons are kinds of bet, distinguished by how much is known about
+demand and design, and all three start in year one with capacity assigned. Labeled as this book's
+recommendation. Gap G52 records the missing outcome evidence.

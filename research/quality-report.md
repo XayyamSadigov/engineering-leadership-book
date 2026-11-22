@@ -89,10 +89,27 @@ earlier chapters (38, 39, 41 and the manager rubric) were confirmed and fixed. T
 the reviewers' arithmetic before the fixes; all 48 findings were fixed by the original authors. Two
 diagrams squeezed at 390 px (chapters 45 and 48) were redrawn.
 
+## Wave 7 (chapters 50–55, templates t05 t11 t12, projects 7 and 8), 2026-11-22
+
+Six chapter authors (the chapter 53 author also wrote t11), one templates author, one projects author,
+working from a reusable brief now kept in `research/wave-brief.md`. The maintainer fixed the shared
+Part XII facts in the canon before the authors started (board, ownership, IT under the CFO, week 50
+meeting, Victor Lindqvist as CTO throughout Part XII, chapter 52 as sole owner of financial figures),
+then merged about 90 proposed facts into a new "Part XII facts (quarter 4)" section of
+`first-quarter.md`, correcting one (the week 42 AI-use survey is not the first developer survey). 58
+sources merged (416 in total, all verified); gaps G51–G58 and disputes D9 (AI coding assistants) and D10
+(three horizons) added. Two independent reviewers reported 50 findings (4 high): Project 8 treating
+the new financial statements as non-canon and asking the board for cash Victor had ruled out, chapter
+53 giving the corporate register three technology lines instead of one, and chapter 55 contradicting
+the week 44 SBOM state. All high and medium findings were verified and fixed by the original authors;
+three resolved by canon edits. 155 of 155 diagrams render. The six chapters run 5,500–7,400 counted
+words, above the 5,000-word guide.
+
 ## Human review status
 
 | Item | Status | Self-review | Human review |
 |---|---|---|---|
+| Chapters 50–55, templates t05 t11 t12, projects 7 and 8 | review | Author self-review; independent AI review (50 findings, all high and medium fixed) | **Not done** |
 | Chapters 37–43, templates t03 t04 t07 t13 t14, projects 3 and 4 | review | Author self-review; independent AI review (30 findings, all fixed) | **Not done** |
 | Chapters 28–36 and solutions | review | Author self-review; independent AI review (21 findings, all fixed) | **Not done** |
 | Chapters 5–14 and solutions | review | Author self-review; independent AI review (16 findings, all fixed) | **Not done** |
@@ -126,7 +143,8 @@ diagrams squeezed at 390 px (chapters 45 and 48) were redrawn.
    recommendations (burn-rate alert parameters, severity definitions, action triage).
 4. `allspaw2012blameless` and `mckinsey2023productivity` were read from Wayback Machine copies; `meyer1977institutionalized` from a
    third-party university copy (claims limited to its abstract). Confirm both are acceptable.
-5. Decide whether chapter 21 (5,094) and chapter 27 (5,609) may stay above the 5,000-word guide.
+5. Decide whether chapter 21 (5,094), chapter 27 (5,609), and chapters 50–55 (5,500–7,400) may stay above the 5,000-word guide.
+6. Part XII: check the accounting statements in chapter 52 (ASC 350-40, ASU 2025-06, IAS 38) and the SEC and AICPA statements in chapters 53 and 55 with someone qualified; check the AI-productivity figures in chapter 54 against the studies (D9).
 
 ## Known limitations
 

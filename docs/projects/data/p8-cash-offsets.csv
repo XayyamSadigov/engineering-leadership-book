@@ -1,0 +1,4 @@
+id,offset,annual_saving,confidence,condition,note
+O1,Duplicate logging and observability licenses found in an IT review,85000,medium,Contracts renew in quarter 5,Annual run rate; year-2 savings start at renewal in quarter 5 (about $75000 if renewal is in week 59). Invented for this project only
+O2,Non-production environments shut down outside working hours,60000,low,Self-service environments (running since quarter 2) must support scheduled shutdown,Annual run rate; year-2 savings start when shutdown is running (about $46000 if from week 65). Invented for this project only
+O3,Jenkins plugin support contract ended after CI consolidation,25000,high if C3 completes,Only after the last Jenkins unit is migrated,Invented for this project only

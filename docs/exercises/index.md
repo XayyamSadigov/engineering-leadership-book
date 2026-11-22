@@ -56,3 +56,9 @@ Exercises live at the end of each chapter, in three levels: **Foundational** (F)
 | 47. The VP of Engineering: Managing Directors and the Portfolio | [Exercises](../parts/11-vp-engineering/47-the-vp-of-engineering.md#exercises) | [Solutions](../solutions/ch47-solutions.md) |
 | 48. Capacity Strategy, Workforce Planning, and Enterprise Governance | [Exercises](../parts/11-vp-engineering/48-capacity-strategy-workforce-planning-and-governance.md#exercises) | [Solutions](../solutions/ch48-solutions.md) |
 | 49. Multi-Year Transformation, Executive Communication, and Constructive Politics | [Exercises](../parts/11-vp-engineering/49-multi-year-transformation-communication-and-politics.md#exercises) | [Solutions](../solutions/ch49-solutions.md) |
+| 50. What a CTO Actually Does | [Exercises](../parts/12-cto-leadership/50-what-a-cto-actually-does.md#exercises) | [Solutions](../solutions/ch50-solutions.md) |
+| 51. Enterprise Technology Strategy and the Three-Year Roadmap | [Exercises](../parts/12-cto-leadership/51-enterprise-technology-strategy.md#exercises) | [Solutions](../solutions/ch51-solutions.md) |
+| 52. Technology Investment, Budgeting, and Financial Literacy | [Exercises](../parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md#exercises) | [Solutions](../solutions/ch52-solutions.md) |
+| 53. Risk, Governance, Regulation, and Security Strategy | [Exercises](../parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md#exercises) | [Solutions](../solutions/ch53-solutions.md) |
+| 54. Data and AI Strategy | [Exercises](../parts/12-cto-leadership/54-data-and-ai-strategy.md#exercises) | [Solutions](../solutions/ch54-solutions.md) |
+| 55. Boards, Due Diligence, and Executive Decision-Making | [Exercises](../parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#exercises) | [Solutions](../solutions/ch55-solutions.md) |

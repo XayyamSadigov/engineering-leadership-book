@@ -26,6 +26,9 @@ more useful than one with thirty fields they skip.
 | [Technology investment business case](technology-investment-business-case.md) | Cost, value channels, cost of delay, payback, and sensitivity for one investment |
 | [Stakeholder map](stakeholder-map.md) | One map per decision: power, interest, position, and an engagement plan |
 | [Executive update](executive-update.md) | A one-page update to executives: results, risks, and the decisions asked for |
+| [CTO competency matrix](cto-competency-matrix.md) | CTO competencies weighted by the kind of CTO the company needs, rated on evidence |
+| [Risk register](risk-register.md) | Enterprise technology risks with owners, appetite, treatment decisions, and review dates |
+| [Architecture decision record](architecture-decision-record.md) | One significant decision: context, options, the decision, its decider, and its consequences |
 
 The remaining templates in the [curriculum](../curriculum.md) are planned and will be added with
 the chapters that teach them.

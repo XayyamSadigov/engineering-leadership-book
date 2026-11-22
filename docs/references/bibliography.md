@@ -5,9 +5,32 @@
 
 Every source the book cites, with what was verified and how much of the source was actually read when the entry was created. An entry marked *bibliographic metadata only* means the citation details were checked against a publisher or catalog page; it does not mean the work was read in full for this project. Chapters cite by linking to the anchors on this page.
 
-358 entries. Grouped by evidence class, then alphabetically by id.
+416 entries. Grouped by evidence class, then alphabetically by id.
 
 ## Scholarly research
+
+### aboody1998software {#aboody1998software}
+
+David Aboody, and Baruch Lev (1998). “The Value Relevance of Intangibles: The Case of Software Capitalization”. Journal of Accounting Research, vol. 36, p. 161 onward.
+
+- DOI: [10.2307/2491312](https://doi.org/10.2307/2491312) · <https://doi.org/10.2307/2491312>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): Studying software companies applying SFAS 86 (software to be sold or licensed), the authors find annually capitalized development costs positively associated with stock returns and the capitalized software asset associated with stock prices; capitalization figures are associated with subsequent reported earnings.
+- Supports (abstract): They find investors undervalue firms that expense all software development costs and find no support for the argument that the judgment involved in capitalization harms earnings quality; analysts' forecast errors are positively associated with capitalization intensity.
+- Supports (abstract): In early SFAS 86 years capitalization raised reported earnings far more than amortization reduced them; by 1995 amortization roughly offset capitalization's positive effect on reported profitability.
+- Caveats: Concerns external-use software under SFAS 86 (now Subtopic 985-20), US public software companies of the 1980s and 1990s, and stock-market associations; it does not study internal-use or cloud software. Correlational.
+
+### adler1990cto {#adler1990cto}
+
+Paul Adler, and Kasra Ferdows (1990). “The Chief Technology Officer”. California Management Review, vol. 32, no. 3.
+
+- <https://cmr.berkeley.edu/1990/05/32-3-the-chief-technology-officer/>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (abstract): The article explores the role of the chief technical officer in orchestrating a large manufacturing corporation's product, process, and information technologies, based on a survey of 25 CTOs from Fortune 100 industrial companies and telephone interviews with 22 of them.
+- Supports (abstract): It discusses CTOs' tasks and backgrounds and examines the motivations for creating the CTO position.
+- Caveats: Abstract only (California Management Review landing page). Pages 55-62 and DOI 10.2307/41166617 appear in third-party records but were not confirmed on a publisher page in this session, so they are not recorded as verified. Sample is large US manufacturers in 1990, not software companies.
 
 ### aghion1997formal {#aghion1997formal}
 
@@ -103,6 +126,17 @@ Alberto Bacchelli, and Christian Bird (2013). “Expectations, Outcomes, and Cha
 - Supports (abstract): Understanding the code and the change is the central challenge of review, and the tools of the time gave little support for it.
 - Caveats: Single-company study (Microsoft), 2013; based on observation, interviews, surveys and manual classification of review comments. Author order follows Crossref; the Microsoft Research page lists Bird first.
 
+### bandiera2020ceo {#bandiera2020ceo}
+
+Oriana Bandiera, Andrea Prat, Stephen Hansen, and Raffaella Sadun (2020). “CEO Behavior and Firm Performance”. Journal of Political Economy, vol. 128, no. 4, pp. 1325-1369.
+
+- DOI: [10.1086/705331](https://doi.org/10.1086/705331) · <https://researchonline.lse.ac.uk/id/eprint/101423>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi, url.
+- Supports (abstract): The authors measure the behavior of 1,114 CEOs in six countries from high-frequency diary data on how they spend their time, and use a machine learning algorithm to identify two behavioral types, "leaders" (multifunction, high-level meetings) and "managers" (individual meetings focused on core functions).
+- Supports (abstract): Firms that hire leader-type CEOs perform better, with the difference appearing about three years after the CEO's appointment, and the authors' structural estimates attribute the gap to mismatches between CEOs and firms rather than to one type being better for every firm.
+- Caveats: Abstract read on the LSE institutional repository record (publisher page returned 403). Studies CEOs, not CTOs; observational with a structural model. The book uses it only for the idea that an executive's time allocation is measurable and that its fit to the firm matters.
+
 ### bardolet2011capital {#bardolet2011capital}
 
 David Bardolet, Craig R. Fox, and Dan Lovallo (2011). “Corporate capital allocation: a behavioral perspective”. Strategic Management Journal, vol. 32, no. 13, pp. 1465-1483.
@@ -114,6 +148,29 @@ David Bardolet, Craig R. Fox, and Dan Lovallo (2011). “Corporate capital alloc
 - Supports (abstract): An archival study found firms' internal capital allocations biased toward equality over the number of business units into which the firm is partitioned.
 - Supports (abstract): Two experiments with experienced managers allocating capital in a hypothetical firm, which removes agency conflicts, found allocations still varied systematically with the divisional and subdivisional structure and with centralized or decentralized allocation.
 - Caveats: Abstract only. About capital budgets across business units, not engineering capacity across directors; applying it to headcount allocation is this book's extension. Effect sizes were not read and are not stated.
+
+### baron1988outcome {#baron1988outcome}
+
+Jonathan Baron, and John C. Hershey (1988). “Outcome bias in decision evaluation”. Journal of Personality and Social Psychology, vol. 54, no. 4, pp. 569-579.
+
+- DOI: [10.1037/0022-3514.54.4.569](https://doi.org/10.1037/0022-3514.54.4.569) · <https://doi.org/10.1037/0022-3514.54.4.569>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): In five studies, undergraduates who knew they had all the information available to the decision maker rated the quality of thinking as better, rated the decision maker as more competent, and were more willing to let the decision maker decide for them when the outcome was favorable than when it was unfavorable.
+- Supports (abstract): Subjects who were asked said they should not consider outcomes in these evaluations, but they did so.
+- Caveats: Abstract read via OpenAlex. Undergraduate subjects judging medical decisions and monetary gambles, not executives judging business decisions.
+
+### becker2025metr {#becker2025metr}
+
+Joel Becker, Nate Rush, Elizabeth Barnes, and David Rein (2025). *Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity*. arXiv preprint 2507.09089 (METR).
+
+- <https://arxiv.org/abs/2507.09089>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, url.
+- Supports (abstract): A randomized controlled trial with 16 experienced open-source developers (moderate AI experience, averaging five years on their projects) assigned 246 tasks at random to allow or disallow early-2025 AI tools.
+- Supports (abstract): Developers forecast that AI would reduce completion time by 24 percent and afterwards estimated it had reduced it by 20 percent; allowing AI actually increased completion time by 19 percent.
+- Supports (abstract): The slowdown contradicted predictions of large speedups by economics and machine-learning experts.
+- Caveats: Small number of developers, on large mature repositories they knew well; tools of early 2025. Preprint; no peer-reviewed version confirmed.
 
 ### beecham2008motivation {#beecham2008motivation}
 
@@ -333,6 +390,16 @@ Marcelo Cataldo, James D. Herbsleb, and Kathleen M. Carley (2008). “Socio-tech
 - Supports (abstract): Logical dependencies mattered more for coordination needs than call and data dependencies.
 - Caveats: Abstract read from the OpenAlex record (Crossref has the short title only). Setting, sample, and effect sizes not read; one organization is likely and was not confirmed.
 
+### chan2007alignment {#chan2007alignment}
+
+Yolande E. Chan, and Blaize Horner Reich (2007). “IT Alignment: What Have We Learned?”. Journal of Information Technology, vol. 22, no. 4, pp. 297-315.
+
+- DOI: [10.1057/palgrave.jit.2000109](https://doi.org/10.1057/palgrave.jit.2000109) · <https://doi.org/10.1057/palgrave.jit.2000109>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): A review of the IT alignment literature addressing what has been learned and what is disputed, presenting challenges to the value of alignment research, divergent views, and new perspectives.
+- Caveats: Abstract only; cited only for the existence of disputes about alignment, not for any particular finding.
+
 ### chang2009perceptions {#chang2009perceptions}
 
 Chu-Hsiang Daisy Chang, Christopher C. Rosen, and Paul E. Levy (2009). “The Relationship Between Perceptions of Organizational Politics and Employee Attitudes, Strain, and Behavior: A Meta-Analytic Examination”. Academy of Management Journal 52(4), pp. 779-801.
@@ -367,6 +434,19 @@ Lyra J. Colfer, and Carliss Y. Baldwin (2016). “The mirroring hypothesis: theo
 - Supports (abstract): Firms can strategically break the mirror with modular partitions inside their boundaries or relational contracts across them; studies of open collaborative projects, most of them software, were not supportive of the hypothesis.
 - Caveats: Abstract only (from the Crossref record). A narrative review; study-level details and counts per category not read.
 
+### cox2008risk {#cox2008risk}
+
+L. A. Cox (2008). “What's Wrong with Risk Matrices?”. Risk Analysis.
+
+- DOI: [10.1111/j.1539-6924.2008.01030.x](https://doi.org/10.1111/j.1539-6924.2008.01030.x) · <https://doi.org/10.1111/j.1539-6924.2008.01030.x>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, volume, issue, pages, doi.
+- Supports (abstract): Risk matrices have poor resolution; typical matrices can correctly and unambiguously compare only a small fraction of randomly selected pairs of hazards and can assign identical ratings to quantitatively very different risks.
+- Supports (abstract): They can assign higher qualitative ratings to quantitatively smaller risks, and for risks with negatively correlated frequencies and severities they can be worse than useless, leading to worse-than-random decisions.
+- Supports (abstract): Effective allocation of risk-reduction resources cannot be based on the categories they provide, and categorizing the severity of uncertain consequences requires subjective interpretation, so different users may obtain opposite ratings of the same risks.
+- Supports (abstract): The author concludes that risk matrices should be used with caution and only with careful explanations of embedded judgments.
+- Caveats: Mathematical analysis, not an empirical study of organizations. Author listed as Cox LA in Europe PMC (PMID 18419665); given names were not shown and should be checked against the Wiley page before publication.
+
 ### crawford2019link {#crawford2019link}
 
 Eean R. Crawford, Cody J. Reeves, Greg L. Stewart, and Stacy L. Astrove (2019). “To link or not to link? Multiple team membership and unit performance”. Journal of Applied Psychology 104(3), pp. 341-356.
@@ -377,6 +457,18 @@ Eean R. Crawford, Cody J. Reeves, Greg L. Stewart, and Stacy L. Astrove (2019). 
 - Supports (abstract): Using data from 849 primary care units of the Veterans Health Administration serving over 4.2 million patients, the authors found multiple team membership (people belonging to several teams at once) negatively associated with unit performance.
 - Supports (abstract): The negative relationship was stronger when task complexity was higher.
 - Caveats: Abstract only; health-care units, not software; observational. The chapter uses it as indirect support for limiting how many initiatives one person or team is spread across, labeled as an extension to a different setting.
+
+### cui2026effects {#cui2026effects}
+
+Zheyuan (Kevin) Cui et al. (2026). “The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers”. Management Science, vol. 72, no. 11, pp. 9408-9420.
+
+- DOI: [10.1287/mnsc.2025.00535](https://doi.org/10.1287/mnsc.2025.00535) · <https://doi.org/10.1287/mnsc.2025.00535>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): Randomized controlled trials at Microsoft, Accenture, and an anonymous Fortune 100 company, run in the ordinary course of business, gave a random subset of developers access to an AI coding assistant that suggests code completions.
+- Supports (abstract): Pooled across the three experiments and 4,867 developers, the authors estimate a 26.08 percent increase (standard error 10.3 percent) in completed tasks among developers using the tool.
+- Supports (abstract): Less experienced developers had higher adoption rates and greater productivity gains.
+- Caveats: Completed tasks (pull requests and similar units) are an output measure, not value or quality. The standard error is large. Several authors are employed by the tool's vendor. The SSRN preprint (4945566) predates the journal version.
 
 ### cullen2023equilibrium {#cullen2023equilibrium}
 
@@ -459,6 +551,17 @@ Tanja de Jong et al. (2016). “The impact of restructuring on employee well-bei
 - Supports (abstract): Some groups reacted less negatively, for example workers with high organizational status before a merger and workers who underwent a change in workgroup.
 - Supports (abstract): Variables that intervened in the relationship between restructuring and well-being included physical demands, job control, communication, provision of information, training, procedural justice, job insecurity, and change acceptance.
 - Caveats: Most included studies are outside software and many involve mergers or staff reductions, which are larger events than a team-boundary change. Well-being, not delivery, is the outcome. The authors call for more high-quality longitudinal research.
+
+### dellacqua2026jagged {#dellacqua2026jagged}
+
+Fabrizio Dell'Acqua et al. (2026). “Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality”. Organization Science, vol. 37, no. 2, pp. 403-423.
+
+- DOI: [10.1287/orsc.2025.21838](https://doi.org/10.1287/orsc.2025.21838) · <https://doi.org/10.1287/orsc.2025.21838>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The paper introduces the "jagged technological frontier" to describe AI assistance improving performance on some tasks and worsening it on others of seemingly similar difficulty within the same workflow.
+- Supports (abstract): In a preregistered experiment with 758 consultants, subjects using GPT-4 on 18 tasks inside the frontier completed 12.2 percent more tasks, 25.1 percent more quickly, with higher quality; on a task chosen to be outside the frontier they were 19 percent less likely to produce correct solutions.
+- Caveats: Management-consulting tasks, not software engineering; one model generation. Earlier circulated as an HBS working paper (SSRN 4573321).
 
 ### dewit2012paradox {#dewit2012paradox}
 
@@ -577,6 +680,15 @@ Amy C. Edmondson, and Zhike Lei (2014). “Psychological Safety: The History, Re
 - Supports (abstract): It traces the construct to organizational scholars in the 1960s, with a renaissance of research from the 1990s, and reports that organizational research has linked it to voice, teamwork, team learning, and organizational learning.
 - Supports (abstract): It reviews research at the individual, group, and organizational levels and proposes directions for future theoretical and methodological work.
 - Caveats: Narrative review; only the abstract (from the Crossref record) was read, so no specific findings from the body are used.
+
+### eisenhardt1989fast {#eisenhardt1989fast}
+
+Kathleen M. Eisenhardt (1989). “Making Fast Strategic Decisions in High-Velocity Environments”. Academy of Management Journal, vol. 32, no. 3, pp. 543-576.
+
+- DOI: [10.2307/256434](https://doi.org/10.2307/256434) · <https://doi.org/10.2307/256434>
+- Evidence class: Scholarly research. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Caveats: Metadata only; the publisher abstract is elided in the open records and the AOM and JSTOR pages could not be read. Credited only for the idea it is widely known for, that fast strategic decision makers in a multiple-case study of microcomputer firms considered more information and more alternatives at once, relied on experienced counselors, and used consensus with qualification (the leader decides if the group cannot agree). No finding is reported.
 
 ### emanuel2023proximity {#emanuel2023proximity}
 
@@ -742,6 +854,16 @@ David A. Garvin (1984). “What Does "Product Quality" Really Mean?”. MIT Sloa
 - Supports (landing-page text (article page at sloanreview.mit.edu)): The eight dimensions are performance, features, reliability, conformance, durability, serviceability, aesthetics, and perceived quality.
 - Caveats: A conceptual management article about manufactured products, not an empirical software study. Volume, issue, and page numbers were not confirmed on a fetched page and are not recorded. The page is behind a paywall for full reading; only what the fetched page displayed is claimed.
 
+### gerow2014alignment {#gerow2014alignment}
+
+Jennifer E. Gerow, Varun Grover, Jason Thatcher, and Philip L. Roth (2014). “Looking Toward the Future of IT-Business Strategic Alignment Through the Past: A Meta-Analysis”. MIS Quarterly, vol. 38, no. 4, pp. 1159-1186.
+
+- DOI: [10.25300/MISQ/2014/38.4.10](https://doi.org/10.25300/MISQ/2014/38.4.10) · <https://doi.org/10.25300/MISQ/2014/38.4.10>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): A meta-analysis of research on IT-business strategic alignment and firm performance found all mean corrected correlations between alignment dimensions (intellectual, operational, cross-domain) and the dependent variables positive, most credibility intervals positive, and concluded there is not much of an "alignment paradox".
+- Caveats: Abstract only; effect sizes were not read and are not stated. Correlational evidence pooled from mostly survey studies; it does not show that writing a strategy document causes performance.
+
 ### gibbs2023wfh {#gibbs2023wfh}
 
 Michael Gibbs, Friederike Mengel, and Christoph Siemroth (2023). “Work from Home and Productivity: Evidence from Personnel and Analytics Data on Information Technology Professionals”. Journal of Political Economy Microeconomics, vol. 1, no. 1, pp. 7-41.
@@ -830,6 +952,26 @@ Donald C. Hambrick (2007). “Upper Echelons Theory: An Update”. Academy of Ma
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, doi.
 - Supports (abstract): The abstract states the central premise of upper echelons theory as executives' experiences, values, and personalities greatly influencing their interpretations of the situations they face and, in turn, their choices; the article recaps the 1984 paper, discusses later refinements, and proposes avenues for future research.
 - Caveats: An invited essay, not an empirical study. Abstract only; the refinements it discusses were not read and are not used.
+
+### hansen2003budgeting {#hansen2003budgeting}
+
+Stephen C. Hansen, David T. Otley, and Wim A. Van der Stede (2003). “Practice Developments in Budgeting: An Overview and Research Perspective”. Journal of Management Accounting Research, vol. 15, no. 1, pp. 95-116.
+
+- DOI: [10.2308/jmar.2003.15.1.95](https://doi.org/10.2308/jmar.2003.15.1.95) · <https://doi.org/10.2308/jmar.2003.15.1.95>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The abstract describes two practitioner responses to the shortcomings of traditional budgeting, one improving the budgeting process and focused on planning problems, the other abandoning the budget and focused on performance-evaluation problems, and places both in a research context.
+- Caveats: Overview article; abstract only. No findings are attributed beyond the two-approach framing.
+
+### henderson1993alignment {#henderson1993alignment}
+
+John C. Henderson, and N. Venkatraman (1993). “Strategic alignment: Leveraging information technology for transforming organizations”. IBM Systems Journal, vol. 32, no. 1 (Crossref record; the DOI is that of the 1999 reprint, vol. 38, nos. 2-3, pp. 472-484).
+
+- DOI: [10.1147/sj.382.0472](https://doi.org/10.1147/sj.382.0472) · <https://doi.org/10.1147/sj.382.0472>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, doi.
+- Supports (abstract): The abstract proposes a Strategic Alignment Model defined by four domains of strategic choice (business strategy, IT strategy, organizational infrastructure and processes, IT infrastructure and processes), built on strategic fit between external and internal components and functional integration between business and IT domains, and derives four perspectives of alignment.
+- Caveats: Abstract only. A conceptual model, not an empirical result.
 
 ### herbsleb2003empirical {#herbsleb2003empirical}
 
@@ -1341,6 +1483,17 @@ Shane McIntosh, Yasutaka Kamei, Bram Adams, and Ahmed E. Hassan (2014). “The i
 - Supports (abstract): Low review coverage and low participation are estimated to produce components with up to two and five additional post-release defects respectively.
 - Caveats: Three open-source projects using modern review tools; observational association, not a controlled experiment. A journal extension appeared later (Empirical Software Engineering, 2016) and was not read. Abstract reconstructed from OpenAlex's inverted index.
 
+### medcof2008cto {#medcof2008cto}
+
+John W. Medcof (2008). “The organizational influence of the Chief Technology Officer”. R&D Management, vol. 38, no. 4, pp. 406-420.
+
+- DOI: [10.1111/j.1467-9310.2008.00526.x](https://doi.org/10.1111/j.1467-9310.2008.00526.x) · <https://doi.org/10.1111/j.1467-9310.2008.00526.x>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The article questions the view that a CTO's influence rests mainly on technical expertise and formal position and, drawing on upper echelons research, argues that a CTO seeking significant influence should also build broad knowledge of the firm and its environment, internal and external networks, and an intuitive grasp of the business.
+- Supports (abstract): It argues that the CEO's leadership style can strengthen or limit the CTO's influence.
+- Caveats: A conceptual article (propositions), not an empirical test. Abstract read on the author's university research profile; full text not read.
+
 ### meli2019git {#meli2019git}
 
 Michael Meli, Matthew R. McNiece, and Bradley Reaves (2019). “How Bad Can It Git? Characterizing Secret Leakage in Public GitHub Repositories”. Network and Distributed System Security Symposium (NDSS 2019).
@@ -1371,6 +1524,27 @@ Frances J. Milliken, Elizabeth W. Morrison, and Patricia F. Hewlin (2003). “An
 - Supports (abstract): In interviews with 40 employees, most had been in situations where they were concerned about an issue but did not raise it with a supervisor; the silence spanned a range of organizational issues.
 - Supports (abstract): The most frequently mentioned reason for staying silent was fear of being viewed or labeled negatively and so damaging valued relationships.
 - Caveats: Exploratory and qualitative, 40 interviewees; abstract only. Says nothing about how often silence occurs in software organizations or about remedies.
+
+### mintzberg1985deliberate {#mintzberg1985deliberate}
+
+Henry Mintzberg, and James A. Waters (1985). “Of strategies, deliberate and emergent”. Strategic Management Journal, vol. 6, no. 3, pp. 257-272.
+
+- DOI: [10.1002/smj.4250060306](https://doi.org/10.1002/smj.4250060306) · <https://doi.org/10.1002/smj.4250060306>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The abstract describes deliberate and emergent strategies as two ends of a continuum along which real-world strategies lie, and elaborates types found in research (planned, entrepreneurial, ideological, umbrella, process, unconnected, consensus, imposed).
+- Caveats: Abstract only. A conceptual typology from field research, not a test of which kind of strategy performs better. The application to technology roadmaps is this book's.
+
+### mitchell1989prospective {#mitchell1989prospective}
+
+Deborah J. Mitchell, J. Edward Russo, and Nancy Pennington (1989). “Back to the future: Temporal perspective in the explanation of events”. Journal of Behavioral Decision Making, vol. 2, no. 1, pp. 25-38.
+
+- DOI: [10.1002/bdm.3960020103](https://doi.org/10.1002/bdm.3960020103) · <https://doi.org/10.1002/bdm.3960020103>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): The studies examined prospective hindsight, explaining a future event as if it had already happened, and found that temporal perspective had little influence while outcome certainty strongly affected explanations.
+- Supports (abstract): Explanations for events presented as certain tended to be longer and to contain a higher proportion of episodic reasons; the second experiment suggested uncertainty affects the choice of explanation type rather than the time spent explaining.
+- Caveats: Abstract only (Crossref record of the publisher abstract). Laboratory studies. The often-quoted figure that prospective hindsight raises the number of reasons by 30 percent is not in the abstract and is not used in the book.
 
 ### mitchell2001why {#mitchell2001why}
 
@@ -1509,6 +1683,17 @@ Shaul Oreg, Maria Vakola, and Achilles Armenakis (2011). “Change Recipients' R
 - Supports (abstract): The review organizes reactions into a model in which antecedents include prechange factors (recipient characteristics and internal context) and change factors (the change process, perceived benefit or harm, and change content), and reactions lead to work-related and personal consequences.
 - Caveats: Only the abstract was read; specific effect sizes and the direction of individual antecedents are not used. The Crossref record carries no subtitle, so none is recorded.
 
+### paradis2024google {#paradis2024google}
+
+Elise Paradis et al. (2024). *How much does AI impact development speed? An enterprise-based randomized controlled trial*. arXiv preprint 2410.12944.
+
+- <https://arxiv.org/abs/2410.12944>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, url.
+- Supports (abstract): A randomized controlled trial with 96 full-time Google software engineers on one complex enterprise task found that AI features shortened time on task, with a best estimate of about 21 percent and a confidence interval the authors describe as large.
+- Supports (abstract): Developers who spent more hours a day on code-related activities were faster with AI.
+- Caveats: One task, internal tooling, summer 2024; the authors caution that the effect may not transfer to other tools, tasks, or over time. Preprint.
+
 ### park2008mum {#park2008mum}
 
 ChongWoo Park, Ghiyoung P. Im, and Mark Keil (2008). “Overcoming the Mum Effect in IT Project Reporting: Impacts of Fault Responsibility and Time Urgency”. Journal of the Association for Information Systems, vol. 9, no. 7, pp. 409-431.
@@ -1542,6 +1727,17 @@ O. Parry, Gregory M. Kapfhammer, Michael C. Hilton, and P. McMinn (2022). “A S
 - Supports (abstract): The authors argue that flaky tests threaten the validity of any method that assumes a test's outcome depends only on the code it covers.
 - Caveats: A literature survey, not a new measurement. The abstract cites a developer survey figure (59 percent dealing with flaky tests at least monthly) from another study; this book does not use that figure because the underlying study was not read. Semantic Scholar lists year 2022 (volume 31); an online-first version appeared in 2021.
 
+### peng2023copilot {#peng2023copilot}
+
+Sida Peng, Eirini Kalliamvakou, Peter Cihon, and Mert Demirer (2023). *The Impact of AI on Developer Productivity: Evidence from GitHub Copilot*. arXiv preprint 2302.06590.
+
+- <https://arxiv.org/abs/2302.06590>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, url.
+- Supports (abstract): In a controlled experiment, recruited developers were asked to implement an HTTP server in JavaScript as quickly as possible; the group with access to GitHub Copilot completed the task 55.8 percent faster than the control group.
+- Supports (abstract): The authors report heterogeneous effects and suggest the tool may help people transition into software development careers.
+- Caveats: One small, well-specified greenfield task; authors include employees of the tool's vendor. Sample size not stated in the abstract. Preprint; no peer-reviewed version confirmed.
+
 ### perlow1999time {#perlow1999time}
 
 Leslie A. Perlow (1999). “The Time Famine: Toward a Sociology of Work Time”. Administrative Science Quarterly 44(1), pp. 57-81.
@@ -1553,6 +1749,27 @@ Leslie A. Perlow (1999). “The Time Famine: Toward a Sociology of Work Time”.
 - Supports (abstract): Engineers had difficulty doing their individual work because they were constantly interrupted by others; a crisis mentality and a reward system based on individual heroics perpetuated this way of interacting.
 - Supports (abstract): Altering the way the software engineers used their time at work enhanced their collective productivity.
 - Caveats: One team, qualitative, 1990s; the abstract does not describe how productivity was measured. The publisher page (journals.sagepub.com) returned HTTP 403; the abstract was read from the Crossref and OpenAlex records. A full-text copy on a course page was not used.
+
+### perry2023insecure {#perry2023insecure}
+
+Neil Perry, Megha Srivastava, Deepak Kumar, and Dan Boneh (2023). “Do Users Write More Insecure Code with AI Assistants?”. Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS '23), pp. 2785-2799.
+
+- DOI: [10.1145/3576915.3623157](https://doi.org/10.1145/3576915.3623157) · <https://arxiv.org/abs/2211.03622>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi, url.
+- Supports (abstract): In a user study, participants with access to an AI code assistant wrote significantly less secure code than those without access, and were more likely to believe they had written secure code.
+- Supports (abstract): Participants who trusted the AI less and engaged more with the wording of their prompts produced code with fewer security vulnerabilities.
+- Caveats: User study with an earlier model (codex-davinci-002); number of participants not stated on the page read; later tools may differ.
+
+### phaal2004roadmapping {#phaal2004roadmapping}
+
+Robert Phaal, Clare J. P. Farrukh, and David R. Probert (2004). “Technology roadmapping - A planning framework for evolution and revolution”. Technological Forecasting and Social Change, vol. 71, nos. 1-2, pp. 5-26.
+
+- DOI: [10.1016/S0040-1625(03)00072-6](https://doi.org/10.1016/S0040-1625(03)00072-6) · <https://doi.org/10.1016/S0040-1625(03)00072-6>
+- Evidence class: Scholarly research. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (metadata (idea credited only)): Credited at idea level only for the widely known layered technology roadmap, which links market and business drivers, products and services, and technologies and resources on a shared time axis.
+- Caveats: Metadata only. No quotation, page number, or finding.
 
 ### pulakos2011broken {#pulakos2011broken}
 
@@ -1714,6 +1931,17 @@ Caitlin Sadowski et al. (2018). “Modern Code Review: A Case Study at Google”
 - Supports (abstract): Its data are 12 interviews, a survey with 44 respondents, and review logs covering 9 million reviewed changes.
 - Caveats: Single-company case study (Google); small interview and survey samples. Crossref records the title as 'Modern code review' with the subtitle separate. Findings beyond the abstract were not read.
 
+### sambasivan2021data {#sambasivan2021data}
+
+Nithya Sambasivan et al. (2021). “"Everyone wants to do the model work, not the data work": Data Cascades in High-Stakes AI”. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems, pp. 1-15.
+
+- DOI: [10.1145/3411764.3445518](https://doi.org/10.1145/3411764.3445518) · <https://doi.org/10.1145/3411764.3445518>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): From interviews with 53 AI practitioners in India, East and West African countries, and the USA, the authors define data cascades as compounding events causing negative downstream effects from data issues, triggered by practices that undervalue data quality.
+- Supports (abstract): The abstract reports data cascades as pervasive (92 percent prevalence), invisible, delayed, and often avoidable, and describes data as the most under-valued and de-glamorised aspect of AI.
+- Caveats: Qualitative interview study in high-stakes domains (health, conservation, lending); prevalence is among interviewees, not a population estimate.
+
 ### schmidt1998validity {#schmidt1998validity}
 
 Frank L. Schmidt, and John E. Hunter (1998). “The validity and utility of selection methods in personnel psychology: Practical and theoretical implications of 85 years of research findings”. Psychological Bulletin, vol. 124, no. 2, pp. 262-274.
@@ -1752,6 +1980,17 @@ Steven E. Scullen, Paul K. Bergey, and Lynda Aiman-Smith (2005). “Forced Distr
 - Supports (abstract): Results suggest such a system could noticeably improve average workforce performance potential, with most of the improvement in the first several years.
 - Supports (abstract): Improvement depends largely on the percentage fired and on voluntary turnover; more firing and lower voluntary turnover give greater improvement.
 - Caveats: A simulation, not a field study; the outcome modeled is workforce performance potential. The abstract does not report effects on cooperation, morale, or legal exposure, so the book does not attribute any such findings to it.
+
+### sculley2015hidden {#sculley2015hidden}
+
+D. Sculley et al. (2015). “Hidden Technical Debt in Machine Learning Systems”. Advances in Neural Information Processing Systems 28 (NIPS 2015), pp. 2503-2511.
+
+- <https://research.google/pubs/hidden-technical-debt-in-machine-learning-systems/>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (abstract): The paper argues that quick wins from machine learning do not come for free and that real-world ML systems commonly incur large ongoing maintenance costs, framed as technical debt.
+- Supports (abstract): It names ML-specific risk factors including boundary erosion, entanglement, hidden feedback loops, undeclared consumers, data dependencies, configuration issues, changes in the external world, and system-level anti-patterns.
+- Caveats: Position paper from experience at one company, not an empirical study. The NeurIPS proceedings page refused connections from this network; the abstract was read from the OpenAlex record and metadata from the Google Research page.
 
 ### sillito2020failures {#sillito2020failures}
 
@@ -1816,6 +2055,17 @@ Manuel E. Sosa, Steven D. Eppinger, and Craig M. Rowles (2004). “The Misalignm
 - Supports (abstract): The study maps known design interfaces between system components onto observed team interactions and examines two mismatches, design interfaces not addressed by team interactions and team interactions not predicted by design interfaces.
 - Supports (abstract): It reports that organizational and system boundary effects moderate the effect of design interface strength and indirect team interactions on alignment, contingent on system modularity.
 - Caveats: Aircraft engine development, not software; one development process. Abstract read via OpenAlex's reconstructed abstract and the Crossref record; the full text (author-hosted PDF) could not be extracted.
+
+### spracklen2025package {#spracklen2025package}
+
+Joseph Spracklen et al. (2025). “We Have a Package for You! A Comprehensive Analysis of Package Hallucinations by Code Generating LLMs”. 34th USENIX Security Symposium (2025).
+
+- <https://arxiv.org/abs/2406.10279>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (abstract): Across 576,000 code samples from 16 code-generating language models in two programming languages, the average rate of hallucinated (non-existent) package references was at least 5.2 percent for commercial models and 21.7 percent for open-source models, with 205,474 unique hallucinated package names.
+- Supports (abstract): The authors report mitigation strategies that significantly reduced hallucinations while maintaining code quality.
+- Caveats: The venue is stated on the arXiv page as "to appear in" USENIX Security 2025; the proceedings page was not fetched. Rates depend on the models and prompts studied.
 
 ### stasser1985pooling {#stasser1985pooling}
 
@@ -1890,6 +2140,17 @@ Davide Taibi, Valentina Lenarduzzi, and Claus Pahl (2017). “Processes, Motivat
 - Supports (abstract): Based on a survey of practitioners who had migrated, the paper compares three migration processes and ranks motivations and issues; maintainability and scalability were consistently ranked the most important motivations.
 - Supports (abstract): Return on investment was expected to take longer, but respondents considered the reduced maintenance effort in the long run to compensate highly for this.
 - Caveats: Sample size and selection are not stated in the abstract; respondents are practitioners who migrated, so benefits are self-reported by those who chose the approach.
+
+### tallon2011alignment {#tallon2011alignment}
+
+Paul P. Tallon, and Alain Pinsonneault (2011). “Competing Perspectives on the Link between Strategic Information Technology Alignment and Organizational Agility: Insights from a Mediation Model”. MIS Quarterly, vol. 35, no. 2, pp. 463-486.
+
+- DOI: [10.2307/23044052](https://doi.org/10.2307/23044052) · <https://doi.org/10.2307/23044052>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi.
+- Supports (abstract): In a matched survey of IT and business executives in 241 firms, the authors report a positive and significant link between strategic IT alignment and agility and between agility and firm performance, with the effect of alignment on performance fully mediated by agility.
+- Supports (abstract): They report that agility had a greater impact on performance in more volatile markets, and that IT infrastructure flexibility had a positive main effect on agility as strong as the effect of alignment.
+- Caveats: Abstract only. Cross-sectional survey; associations, not causal estimates.
 
 ### teece2010business {#teece2010business}
 
@@ -2002,6 +2263,18 @@ Karl E. Weick (1984). “Small wins: Redefining the scale of social problems”.
 - Supports (metadata (idea credited only)): The article is known for arguing that recasting large problems as a series of small, concrete, completed outcomes ("small wins") makes them more tractable and builds momentum (idea level only).
 - Caveats: Metadata only; no abstract was available through Crossref, OpenAlex, or Semantic Scholar, and the APA page did not render. It is an essay, not an empirical study.
 
+### weill2004govern {#weill2004govern}
+
+Peter Weill (2004). “Don't Just Lead, Govern: How Top-Performing Firms Govern IT”. MIS Quarterly Executive, vol. 3, no. 1, article 3.
+
+- <https://aisel.aisnet.org/misqe/vol3/iss1/3>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, venue, url.
+- Supports (abstract): The article studies IT governance in more than 250 enterprises in 23 countries and defines IT governance as specifying decision rights and accountabilities to encourage desirable behavior in the use of IT.
+- Supports (abstract): It describes five key IT decisions (principles, architecture, infrastructure, application needs, and investment) and governance archetypes that assign them (business monarchy, IT monarchy, federal, duopoly, feudal, anarchy).
+- Supports (abstract): It reports that top performers govern IT differently from average firms, align IT governance with their performance goals, and that growth leaders decentralize more decision rights while profit leaders centralize them with senior business leaders.
+- Caveats: Abstract only (AIS eLibrary landing page); the related MIT CISR working paper by Weill and Woodham (2003) was read at abstract level as corroboration. The AIS page lists volume 3 (2004) but its recommended citation shows 2008, so year is not recorded as a verified field; 2004 follows the volume. Enterprise IT governance, not software-product engineering; used for the decision-rights vocabulary.
+
 ### whitelewis2024counteroffers {#whitelewis2024counteroffers}
 
 Damani K. White-Lewis, KerryAnn O'Meara, Kiernan Mathews, and Nicholas Havey (2024). “Counteroffers for faculty at research universities: who gets them, who doesn't, and what factors produce them?”. Higher Education, vol. 89, no. 2, pp. 535-552.
@@ -2070,6 +2343,16 @@ Gary Yukl, and Ping Ping Fu (1999). “Determinants of delegation and consultati
 - Supports (abstract): In surveys of managers and subordinates (two samples) plus interviews, delegation was higher when the subordinate was competent, shared the manager's task objectives, had worked longer with the manager, held a supervisory role, and had a favorable exchange relationship with the manager.
 - Supports (abstract): Managers saw developing and empowering subordinates as important reasons to delegate, but many were reluctant to give up control over important decisions or to give important tasks to inexperienced subordinates.
 - Caveats: Survey and interview data, correlational; sample sizes not stated on the page read; not a software setting.
+
+### ziegler2022productivity {#ziegler2022productivity}
+
+Albert Ziegler et al. (2022). “Productivity assessment of neural code completion”. Proceedings of the 6th ACM SIGPLAN International Symposium on Machine Programming (MAPS 2022), pp. 21-29.
+
+- DOI: [10.1145/3520312.3534864](https://doi.org/10.1145/3520312.3534864) · <https://arxiv.org/abs/2205.06537>
+- Evidence class: Scholarly research. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi, url.
+- Supports (abstract): Comparing GitHub Copilot users' survey answers about perceived productivity with measured usage data, the authors found that the acceptance rate of shown suggestions tracked perceived productivity better than measures of how long completions persisted in the code.
+- Caveats: The outcome is perceived productivity, not measured output or value; authors are from the tool's vendor.
 
 ### zimmermann2005mining {#zimmermann2005mining}
 
@@ -2231,6 +2514,33 @@ DORA (Google Cloud) (2024). *Accelerate State of DevOps Report 2024*. DORA / Goo
 - Supports (full-text (platform engineering chapter)): Respondents required to use the platform exclusively for the entire application lifecycle reported a 6% decrease in throughput (p. 53).
 - Caveats: Only the platform engineering chapter (pp. 47-55) and the summary page were read for these claims. Vendor-sponsored, survey-based, self-reported, cross-sectional; percentages are model estimates, not controlled effects. PDF downloaded and text-extracted in this session; page numbers are the report's printed numbers.
 
+### dora2024announcing {#dora2024announcing}
+
+Nathen Harvey, and Derek DeBellis (2024). “Announcing the 2024 DORA report”. Google Cloud Blog, October 23, 2024.
+
+- <https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report>
+- Evidence class: Industry research. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (official-summary): More than 75 percent of respondents said they rely on AI for at least one daily professional responsibility, and more than one third reported moderate to extreme productivity increases due to AI.
+- Supports (official-summary): A 25 percent increase in AI adoption is associated with a 7.5 percent increase in documentation quality, a 3.4 percent increase in code quality, and a 3.1 percent increase in code review speed.
+- Supports (official-summary): As AI adoption increased, it was accompanied by an estimated 1.5 percent decrease in delivery throughput and an estimated 7.2 percent reduction in delivery stability.
+- Supports (official-summary): 39 percent of respondents reported little to no trust in AI-generated code.
+- Supports (official-summary): The dora.dev landing page for the Accelerate State of DevOps Report 2024 states that AI adoption increases individual productivity, flow, and job satisfaction but negatively impacts software delivery stability and throughput, and that fundamentals such as small batches and robust testing remain crucial.
+- Caveats: Vendor-run survey research (Google Cloud); associations, not causal estimates. The blog states the 25 percent adoption basis explicitly for the quality and review figures; for throughput and stability it says "as AI adoption increased". Secondary write-ups attach the same 25 percent basis to the throughput and stability figures; the full report PDF was not read, so the book does not. The report itself is titled Accelerate State of DevOps Report 2024.
+
+### dora2025aicapabilities {#dora2025aicapabilities}
+
+Kevin M. Storer, and Derek DeBellis (2025). “Introducing DORA's inaugural AI Capabilities Model”. Google Cloud Blog, September 24, 2025.
+
+- <https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model>
+- Evidence class: Industry research. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (official-summary): The model names seven capabilities: clear and communicated AI stance; healthy data ecosystems; AI-accessible internal data; strong version control practices; working in small batches; user-centric focus; quality internal platforms.
+- Supports (official-summary): The capabilities were identified from 78 in-depth interviews, literature, and expert perspectives, and evaluated with DORA's annual survey of almost 5,000 respondents; the post says they substantially amplify or unlock the benefits of AI.
+- Supports (official-summary): Healthy data ecosystems are reported to amplify AI adoption's influence on organizational performance; a clear AI stance amplifies AI's positive impact on individual effectiveness and organizational performance.
+- Supports (official-summary): Without a user-centric focus, the post says AI adoption can have a negative impact on team performance.
+- Caveats: Survey-based and correlational; the post reports no effect sizes. The dora.dev page for the companion report (last updated November 25, 2025) does not list the capability names; they come from this post.
+
 ### dora2025state {#dora2025state}
 
 DORA (Google Cloud) (2025). *State of AI-assisted Software Development 2025*. DORA / Google Cloud.
@@ -2241,6 +2551,16 @@ DORA (Google Cloud) (2025). *State of AI-assisted Software Development 2025*. DO
 - Supports (official-summary): The report's landing page summarises its central finding as AI acting primarily as an amplifier of an organisation's existing strengths and weaknesses.
 - Supports (official-summary): The landing page states that the greatest returns on AI investment come from focusing on the underlying organisational (sociotechnical) system rather than on the tools.
 - Caveats: Only the landing-page summary was read, not the report PDF. Survey-based industry research sponsored by a vendor. The dora.dev research archive listed 2025 as the most recent yearly report on 2026-11-18 (years listed: 2014-2025); no 2026 report was listed.
+
+### finops-what-is {#finops-what-is}
+
+FinOps Foundation (2026). “What is FinOps?”. finops.org (page marked "Updated November 2026").
+
+- <https://www.finops.org/introduction/what-is-finops/>
+- Evidence class: Industry research. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, url.
+- Supports (official-summary): The FinOps Foundation defines FinOps as an operational framework and cultural practice that maximizes the business value of technology, enables timely data-driven decisions, and creates financial accountability through collaboration between engineering, finance, and business teams.
+- Caveats: Definition only; a practitioner foundation's framing, not evidence of outcomes. evidence_class industry-research chosen as the closest fit for a practitioner body's published framework; the maintainer may prefer official-documentation.
 
 ### forsgren2018accelerate {#forsgren2018accelerate}
 
@@ -2342,6 +2662,17 @@ Google re:Work (2015). “Understand team effectiveness”. Google re:Work.
 
 ## Standard or framework
 
+### aicpa-tsc2022 {#aicpa-tsc2022}
+
+AICPA Assurance Services Executive Committee (2022). *2017 Trust Services Criteria (With Revised Points of Focus, 2022)*. AICPA & CIMA.
+
+- <https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022>
+- Evidence class: Standard or framework. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, venue, url.
+- Supports (official-summary): The Trust Services Criteria are control criteria established by the AICPA's Assurance Services Executive Committee for use in attestation or consulting engagements to evaluate and report on controls over information and systems.
+- Supports (official-summary): They are organized in five categories: security, availability, processing integrity, confidentiality, and privacy.
+- Caveats: The download page shows a date of September 30, 2023; the year 2022 refers to the revised points of focus in the title. The criteria text itself was not read. The distinction between SOC 2 Type 1 and Type 2 reports was not confirmed on any page read and is not described in the book.
+
 ### bradner1997rfc2119 {#bradner1997rfc2119}
 
 Scott Bradner (1997). *Key words for use in RFCs to Indicate Requirement Levels (RFC 2119, BCP 14)*. Internet Engineering Task Force.
@@ -2363,6 +2694,38 @@ Cybersecurity and Infrastructure Security Agency (2025). *2025 Minimum Elements 
 - Supports (official-summary): CISA published the 2025 minimum elements on August 22, 2025 as a draft for public comment (comments through October 3, 2025), building on the 2021 NTIA minimum elements.
 - Caveats: Draft status as shown on the page read on 2026-11-19; no final version was seen. The specific added elements (reported by secondary sources as component hash, license, tool name, generation context) were not confirmed on a primary page and are not claimed.
 
+### fasb2025asu202506 {#fasb2025asu202506}
+
+Financial Accounting Standards Board (2025). *Intangibles—Goodwill and Other—Internal-Use Software (Subtopic 350-40): Targeted Improvements to the Accounting for Internal-Use Software*. FASB Accounting Standards Update No. 2025-06, September 2025.
+
+- <https://storage.fasb.org/ASU%202025-06.pdf>
+- Evidence class: Standard or framework. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full-text): The Board issued the Update to modernize internal-use software accounting because stakeholders said the guidance did not address incremental and iterative (for example, agile) development, making it hard to decide when to begin capitalizing.
+- Supports (full-text): The amendments remove all references to sequential project stages; an entity starts capitalizing when management has authorized and committed to funding the project and it is probable the project will be completed and the software used to perform the function intended (the probable-to-complete recognition threshold).
+- Supports (full-text): In applying that threshold an entity considers significant development uncertainty, using two factors - unresolved uncertainty about novel, unique, or unproven functions or features not yet resolved through coding and testing, and whether the entity has determined (or is still substantially revising) the software's significant performance requirements.
+- Supports (full-text): Subtopic 350-40 applies to software an entity develops to provide services to external parties through cloud computing arrangements, as well as to software for its own operations; software to be sold, leased, or marketed externally falls under Subtopic 985-20, which the Update does not change.
+- Supports (full-text): The Board expects capitalization generally will not change significantly for most software, but expects it could decrease for software provided via a cloud computing arrangement.
+- Supports (full-text): Upgrades and enhancements are modifications that add functionality; maintenance costs are expensed as incurred, and internal costs that cannot be separated cost-effectively between maintenance and relatively minor upgrades are expensed.
+- Supports (full-text): Capitalizable costs include external direct costs and payroll and payroll-related costs of employees directly associated with the project, to the extent of time spent on it; general and administrative and overhead costs are not capitalized; training and data conversion costs (with a stated exception for conversion software) are expensed.
+- Supports (full-text): Subtopic 360-10 property, plant, and equipment disclosures are required for all capitalized internal-use software costs.
+- Supports (full-text): Capitalization ceases no later than when the project is substantially complete and ready for intended use, after all substantial testing; when completion is no longer probable, capitalization stops and the asset is impaired, with a rebuttable presumption that uncompleted software has a fair value of zero. Listed indications include a lack of budgeted or incurred spending, unresolved programming difficulties, and significant cost overruns.
+- Supports (full-text): The superseded guidance (shown struck through in the Update) grouped activities into a preliminary project stage, an application development stage (design of the chosen path, coding, installation, testing), and a post-implementation-operation stage (training, application maintenance).
+- Supports (full-text): Effective for all entities for annual reporting periods beginning after December 15, 2027, with early adoption permitted at the beginning of an annual period; prospective, modified, or retrospective transition permitted.
+- Caveats: An accounting standard, not evidence about management outcomes. The chapter paraphrases and does not quote at length (FAF copyright). How a specific company applies it is a judgment for its finance team and auditors. The Update does not set an amortization method; amortization periods in the chapter are the fictional company's policy.
+
+### ifrs-ias38 {#ifrs-ias38}
+
+IFRS Foundation (2026). *IAS 38 Intangible Assets*. IFRS Foundation, issued standards (standard page and summary).
+
+- <https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/>
+- Evidence class: Standard or framework. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, url.
+- Supports (official-summary): IAS 38 sets criteria for recognizing and measuring intangible assets; spending on an intangible item is expensed unless it meets the definition of an intangible asset, future economic benefits are probable, and its cost can be measured reliably.
+- Supports (official-summary): Internally generated intangibles are split into research and development phases; research expenditure is expensed, and development expenditure that meets specified criteria is recognized as an asset.
+- Supports (official-summary): An intangible asset with a finite useful life is amortized and subject to impairment testing.
+- Caveats: Summary level only; the specific development-phase criteria are not listed in the chapter.
+
 ### iso25010-2023 {#iso25010-2023}
 
 ISO/IEC JTC 1/SC 7 (2023). *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*. ISO/IEC 25010:2023 (edition 2).
@@ -2373,6 +2736,17 @@ ISO/IEC JTC 1/SC 7 (2023). *Systems and software engineering — Systems and sof
 - Supports (abstract): The standard defines a product quality model applicable to ICT products and software products, composed of nine characteristics further subdivided into subcharacteristics.
 - Supports (abstract): The model is presented as a reference model for specifying, measuring, and evaluating product quality, usable for eliciting requirements, validating their completeness, setting test objectives, and defining acceptance criteria.
 - Caveats: The names of the nine characteristics were NOT on the pages read and are deliberately not recorded or printed; take them from the standard itself. Published 2023-11-15; replaces ISO/IEC 25010:2011, whose characteristic list differs. The authoring committee (JTC 1/SC 7) is the usual SQuaRE committee but was not read on a fetched page; verified_fields excludes authors.
+
+### nist2012sp800-30r1 {#nist2012sp800-30r1}
+
+Joint Task Force Transformation Initiative (2012). *Guide for Conducting Risk Assessments*. NIST Special Publication 800-30 Revision 1.
+
+- DOI: [10.6028/NIST.SP.800-30r1](https://doi.org/10.6028/NIST.SP.800-30r1) · <https://csrc.nist.gov/pubs/sp/800/30/r1/final>
+- Evidence class: Standard or framework. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi, url.
+- Supports (official-summary): The guide provides guidance for conducting risk assessments of federal information systems and organizations, at all three tiers of the risk management hierarchy.
+- Supports (official-summary): Risk assessments are described as part of the overall risk management process, providing senior leaders with the information needed to determine appropriate responses to identified risks.
+- Caveats: Final September 2012. Written for US federal systems; used in the book only for the purpose of risk assessment (informing responses), not for its specific scales or tables.
 
 ### nist2022ssdf {#nist2022ssdf}
 
@@ -2385,6 +2759,18 @@ Murugiah Souppaya, Karen Scarfone, and Donna Dodson (2022). *Secure Software Dev
 - Supports (abstract): Its stated aims are to reduce the number of vulnerabilities in released software, limit the impact of undetected or unaddressed ones, and address root causes; it also offers a common vocabulary for purchasers and suppliers.
 - Caveats: The four practice-group names were not on the landing page read and are not recorded here; take them from the document itself. Final dated February 3, 2022; supersedes NIST CSWP 13 (2020-04-23). The landing page lists SP 800-218A as a related publication part; no newer revision was noted on that page on 2026-11-18, but re-check for a revision before publication.
 
+### nist2023airmf {#nist2023airmf}
+
+National Institute of Standards and Technology (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. NIST AI 100-1.
+
+- DOI: [10.6028/NIST.AI.100-1](https://doi.org/10.6028/NIST.AI.100-1) · <https://www.nist.gov/itl/ai-risk-management-framework>
+- Evidence class: Standard or framework. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi, url.
+- Supports (official-summary): The AI RMF was released on January 26, 2023, and is intended for voluntary use.
+- Supports (official-summary): Its core is organized into four functions: Govern, Map, Measure, and Manage.
+- Supports (official-summary): NIST released a Generative AI Profile, NIST AI 600-1, on July 26, 2024.
+- Caveats: The page states that AI RMF 1.0 is being revised; re-check before publication. The function names were read from the page's figure caption, not from the framework text.
+
 ### nist2024csf {#nist2024csf}
 
 National Institute of Standards and Technology (2024). *The NIST Cybersecurity Framework (CSF) 2.0*. NIST Cybersecurity White Paper, NIST CSWP 29.
@@ -2396,6 +2782,17 @@ National Institute of Standards and Technology (2024). *The NIST Cybersecurity F
 - Supports (full-text): GOVERN is placed at the centre of the functions wheel because it informs how an organisation implements the other five; the document says CSF 2.0 adds emphasis on governance and supply chains.
 - Supports (full-text): The framework describes desired outcomes and does not prescribe how to achieve them; the Core is explicitly not a checklist of actions, and the order of functions does not imply sequence or importance.
 - Caveats: Published February 26, 2024. Before version 2.0 the document was titled 'Framework for Improving Critical Infrastructure Cybersecurity'; that title is not used for 2.0. Voluntary framework.
+
+### nist2025ir8286r1 {#nist2025ir8286r1}
+
+Stephen Quinn et al. (2025). *Integrating Cybersecurity and Enterprise Risk Management (ERM)*. NIST Interagency or Internal Report 8286 Rev. 1.
+
+- DOI: [10.6028/NIST.IR.8286r1](https://doi.org/10.6028/NIST.IR.8286r1) · <https://csrc.nist.gov/pubs/ir/8286/r1/final>
+- Evidence class: Standard or framework. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, doi, url.
+- Supports (abstract): The report helps organizations improve the cybersecurity risk information they provide to enterprise risk management processes, so that cybersecurity risk is identified, assessed, and managed against mission and business objectives.
+- Supports (abstract): It provides guidance on using risk registers to set out cybersecurity risk and explains the value of rolling up measures of risk from lower system and organizational levels to the enterprise level.
+- Caveats: Final December 18, 2025; supersedes NIST IR 8286 (October 2020), which the CSRC page lists as withdrawn. Risk appetite and risk tolerance appear among the keywords but were not read in the body; the chapter does not attribute its appetite rules to this report. Not a Special Publication.
 
 ### nist2025ssdf-draft {#nist2025ssdf-draft}
 
@@ -2419,6 +2816,40 @@ National Telecommunications and Information Administration, U.S. Department of C
 - Supports (full-text): Baseline data fields: Supplier Name, Component Name, Version of the Component, Other Unique Identifiers, Dependency Relationship, Author of SBOM Data, and Timestamp.
 - Supports (full-text): Automation support names SPDX, CycloneDX, and SWID tags as formats; practices and processes cover frequency, depth, known unknowns, distribution and delivery, access control, and accommodation of mistakes.
 - Caveats: Dated July 12, 2021, issued under Executive Order 14028. US-government baseline; CISA's 2025 draft (cisa2025sbom-draft) proposes an update. PDF text extracted and the relevant sections read.
+
+### openchain-iso5230 {#openchain-iso5230}
+
+OpenChain Project (Linux Foundation) (2020). *OpenChain ISO/IEC 5230 License Compliance*. OpenChain Project; published as ISO/IEC 5230:2020.
+
+- <https://openchainproject.org/license-compliance>
+- Evidence class: Standard or framework. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (official-summary): ISO/IEC 5230 defines the key requirements of a quality open source license compliance program, identifying where compliance processes should be in place, how to assign roles and responsibilities, and how to keep the processes sustainable.
+- Supports (official-summary): It was first released as OpenChain 1.0 in October 2016 and became ISO/IEC 5230:2020 in December 2020.
+- Caveats: The project's own page was read; the ISO catalogue page returned HTTP 403 and the standard's text was not read.
+
+### opengroup-open-fair {#opengroup-open-fair}
+
+The Open Group (2026). *The Open FAIR Body of Knowledge*. The Open Group.
+
+- <https://www.opengroup.org/open-fair>
+- Evidence class: Standard or framework. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, venue, url.
+- Supports (official-summary): Open FAIR (Factor Analysis of Information Risk) is described as a model and taxonomy for understanding, analyzing, and measuring information risk, intended to let organizations express risk in the same economic terms as other risks.
+- Supports (official-summary): The body of knowledge includes the Risk Taxonomy (O-RT) standard, version 3.0.1, and the Risk Analysis (O-RA) standard, version 2.0.1.
+- Caveats: Year is the access year; the standards' own publication dates were not recorded. The page did not name the model's factors (such as loss event frequency and loss magnitude), so the chapter does not describe them.
+
+### pci-dss {#pci-dss}
+
+PCI Security Standards Council (2026). *PCI Data Security Standard (PCI DSS)*. PCI Security Standards Council.
+
+- <https://www.pcisecuritystandards.org/standards/pci-dss/>
+- Evidence class: Standard or framework. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, venue, url.
+- Supports (official-summary): PCI DSS provides a baseline of technical and operational requirements designed to protect payment account data.
+- Supports (official-summary): It applies to entities that store, process, or transmit cardholder data or sensitive authentication data, or that could affect the security of the cardholder data environment, including merchants, processors, acquirers, issuers, and service providers.
+- Supports (official-summary): Whether an entity must comply or validate compliance is at the discretion of organizations that manage compliance programs, such as payment brands and acquirers.
+- Caveats: Year is the access year. The page links to v4.x resources and the document library shows v4.0.1; the book does not name a version. Self-assessment questionnaire types were not confirmed and are not described.
 
 ### slsa-spec {#slsa-spec}
 
@@ -2444,6 +2875,17 @@ Eclipse Adoptium (2026). “Temurin support (release roadmap)”. adoptium.net.
 - Supports (full-text): The page lists, per Java long-term-support release, an end-of-availability date stated as "at least" a given month (for example Java 11 and Java 17 at least October 2027, Java 21 at least December 2029).
 - Supports (full-text): It says binaries for long-term-support releases continue to be built as long as the corresponding upstream source is actively maintained, so the dates are minimums.
 - Caveats: One distribution's policy; other Java vendors publish different dates and paid support terms. Date-sensitive; the page shows no last-updated date. Year is the access year.
+
+### aicpa2026tsc-proposal {#aicpa2026tsc-proposal}
+
+AICPA & CIMA (2026). *AICPA Proposes Update of SOC 2 Trust Services Criteria to Enhance the Relevance, Usability and Value of CPAs' Reports*. AICPA & CIMA news, October 28, 2026.
+
+- <https://www.aicpa-cima.com/news/article/aicpa-proposes-update-of-soc-2-r-trust-services-criteria-to-enhance-the-relevance-usability-and-value-of-cpas-reports>
+- Evidence class: Official documentation. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (official-summary): SOC 2 reports are attestation engagements performed by an independent, licensed CPA under AICPA standards that address controls relevant to the security, availability, processing integrity, confidentiality, or privacy of an organization's systems.
+- Supports (official-summary): The proposed 2027 Trust Services Criteria would apply to engagements beginning on or after December 31, 2027, with early adoption permitted; comments on the exposure draft are accepted through January 15, 2027.
+- Caveats: Exposure draft, date-sensitive; re-check status before publication.
 
 ### aws-well-architected {#aws-well-architected}
 
@@ -2569,6 +3011,41 @@ U.S. Securities and Exchange Commission (2013). *In the Matter of Knight Capital
 - Supports (full-text): During the response, uninstalling the new code from the seven correctly deployed servers made the problem worse, because incoming orders then activated the old code on those servers too (paragraph 27).
 - Caveats: A regulatory order with findings made in a settlement; Knight neither admitted nor denied the findings according to secondary coverage (not confirmed in the order text read here). The order's subject is market-access controls; this book uses only its factual account of the deployment.
 
+### sec2014beginners {#sec2014beginners}
+
+U.S. Securities and Exchange Commission (2014). “Beginners' Guide to Financial Statements”. sec.gov (dated January 12, 2014; last reviewed or updated February 6, 2017).
+
+- <https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, url.
+- Supports (full-text): The guide names four main financial statements (balance sheets, income statements, cash flow statements, statements of shareholders' equity) and states that assets equal liabilities plus shareholders' equity.
+- Supports (full-text): The income statement shows revenue earned over a period and the costs of earning it; operating profit is what remains after operating expenses are deducted from gross profit; spreading the cost of a long-lived asset over time is called depreciation or amortization.
+- Supports (full-text): The cash flow statement has operating, investing, and financing sections; it shows whether a company generated cash, which is related to but not equivalent to net income, and the operating section adjusts net income for non-cash items such as depreciation.
+- Caveats: An introductory investor guide written for public-company filings; definitions only.
+
+### sec2018altaba {#sec2018altaba}
+
+U.S. Securities and Exchange Commission (2018). *Altaba, Formerly Known as Yahoo!, Charged With Failing to Disclose Massive Cybersecurity Breach; Agrees To Pay $35 Million (Press Release 2018-71)*. U.S. Securities and Exchange Commission, press release, April 24, 2018.
+
+- <https://www.sec.gov/newsroom/press-releases/2018-71>
+- Evidence class: Official documentation. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (official-summary): The SEC states that Yahoo's information security team learned within days of a December 2014 intrusion that hackers had stolen data of hundreds of millions of user accounts, and that the breach was not publicly disclosed until more than two years later, in 2016, when Yahoo was in the process of closing the sale of its operating business to Verizon.
+- Supports (official-summary): The SEC found that Yahoo's filings in the two years after the breach referred only to the risk of breaches, that Yahoo did not share information about the breach with its auditors or outside counsel to assess disclosure obligations, and that it failed to maintain disclosure controls designed to ensure that reports from its information security team were properly and timely assessed for disclosure.
+- Supports (official-summary): Yahoo (renamed Altaba) agreed to pay a $35 million penalty without admitting or denying the findings; Verizon acquired the operating business in June 2017.
+- Caveats: Settled findings in a regulatory order, described in a press release; the order itself was not read. The press release does not discuss Verizon's due diligence, and the book makes no claim about it.
+
+### sec2023cyberrule {#sec2023cyberrule}
+
+U.S. Securities and Exchange Commission (2023). *SEC Adopts Rules on Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure by Public Companies (Press Release 2023-139)*. U.S. Securities and Exchange Commission, press release, July 26, 2023.
+
+- <https://www.sec.gov/newsroom/press-releases/2023-139>
+- Evidence class: Official documentation. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (official-summary): Under new Regulation S-K Item 106, registrants must describe the board of directors' oversight of risks from cybersecurity threats and management's role in assessing and managing material risks from cybersecurity threats, in the annual report on Form 10-K.
+- Supports (official-summary): Material cybersecurity incidents are reported on new Item 1.05 of Form 8-K, generally due four business days after a registrant determines that an incident is material, with a possible delay where the U.S. Attorney General determines that disclosure poses a substantial risk to national security or public safety.
+- Caveats: Applies to SEC registrants (public companies). The press release was read, not the final rule text. Used in the book only as evidence that board oversight of cyber risk has become a disclosure matter for public companies; Northstar (fictional) is private.
+
 ### vacanti2025kanban {#vacanti2025kanban}
 
 John Coleman et al. (2025). “The Kanban Guide”. kanbanguides.org (version v2025.5).
@@ -2581,6 +3058,18 @@ John Coleman et al. (2025). “The Kanban Guide”. kanbanguides.org (version v2
 - Supports (full-text): It names four flow measures (WIP, throughput, work item age, cycle time).
 - Supports (full-text): It prescribes no roles and no required iterations or meeting cadence.
 - Caveats: One of two main Kanban lineages; the Kanban Method associated with David J. Anderson and Kanban University is not covered by this entry and was not verified. The id uses Vacanti's name for findability, but the guide lists nine authors, Coleman first. The page's license statements differ (CC BY 4.0 in the License section; ShareAlike in the footer).
+
+### yahoo2017amendment8k {#yahoo2017amendment8k}
+
+Yahoo! Inc. (2017). *Yahoo! Inc. Form 8-K (Amendment to Stock Purchase Agreement with Verizon Communications Inc.), filed February 2017*. U.S. Securities and Exchange Commission EDGAR, accession number 0001193125-17-049548.
+
+- <https://www.sec.gov/Archives/edgar/data/0001011006/000119312517049548/d353690d8k.htm>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full-text): On February 20, 2017, Yahoo and Verizon entered into an amendment to the stock purchase agreement under which the purchase price was reduced by $350,000,000 to $4,475,800,000 in cash, subject to adjustments.
+- Supports (full-text): Under the amendment, certain data security incidents to which Yahoo had been subject are disregarded in determining whether certain closing conditions are met and whether a Business Material Adverse Effect has occurred, subject to exceptions the filing does not describe in the part read.
+- Supports (full-text): The amendment allocates certain post-closing cash liabilities from the data security incidents, with Yahoo keeping responsibility for some liabilities and certain others shared equally between Yahoo and Verizon.
+- Caveats: Read through a summarizing fetcher; the price figures and the Business Material Adverse Effect wording were returned as quotations. The exact categories of shared and retained liabilities are summarized conservatively and not detailed in the book.
 
 ## Practitioner literature
 
@@ -2643,6 +3132,16 @@ Atlassian (2026). “DACI: A Decision-Making Framework”. Atlassian Team Playbo
 - Verified against a fetched page (2026-11-19): title, authors, venue, url.
 - Supports (full-text): DACI assigns four roles to a decision, a Driver who coordinates and keeps the decision to its date, a single Approver who makes the call, Contributors who have a voice but no vote, and Informed people who are told the outcome; the play recommends one Driver and one Approver and recording the outcome in a shared document.
 - Caveats: A vendor's practitioner playbook; year is the access year (the page carries no publication date). Not evidence that the framework improves outcomes.
+
+### baghai1999alchemy {#baghai1999alchemy}
+
+Mehrdad Baghai, Stephen Coley, and David White (1999). *The Alchemy of Growth: Practical Insights for Building the Enduring Enterprise*. Perseus Books.
+
+- ISBN-13: 9780738201009 · <https://openlibrary.org/books/OL52999M/The_alchemy_of_growth>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-22): title, subtitle, authors, publisher, year, isbn13.
+- Supports (metadata (idea credited only)): Credited at idea level only for the widely known three horizons of growth, which balance improving the existing business, extending into new customers or markets, and creating new options for the future.
+- Caveats: Metadata only. No quotation, page number, or finding.
 
 ### bain-rapid {#bain-rapid}
 
@@ -2723,6 +3222,19 @@ Jeff Bezos (2018). “2017 Letter to Shareholders”. About Amazon.
 - Supports (full-text): The letter states that Amazon does not use slide presentations in meetings but narratively structured six-page memos, read silently by attendees at the start of each meeting.
 - Supports (full-text): It argues that weak memos often come from underestimating the scope of the work, that a great memo can take a week or more with rewriting and feedback from colleagues, and that high standards in a domain must be recognized and coached explicitly.
 - Caveats: One company's chief executive describing his own company's practice (documented practice, not research). Page byline Amazon Staff, published April 18, 2018; the letter is signed by Jeff Bezos. The six-page memo practice is in the 2017 letter, not the 2016 letter (bezos2016letter).
+
+### blank2019flaw {#blank2019flaw}
+
+Steve Blank (2019). “The Fatal Flaw of the Three Horizons Model”. steveblank.com, January 8, 2019 (a version appeared in Harvard Business Review, February 2019).
+
+- <https://steveblank.com/2019/01/08/the-fatal-flaw-of-the-three-horizons-model/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full-text): A comment on the post dated January 14, 2019, by Mehrdad Baghai, who identifies himself as a co-author of the Three Horizons model, says the model was created as a growth strategy framework, not an innovation framework, that the book said every company must decide the right timing for each horizon, and that there is no "fatal flaw" to fix; Blank replied that he had changed the title, though the page still shows the original.
+- Supports (full-text): The post describes horizon 1 as improving the existing business, horizon 2 as extending current capabilities to new customers or markets, and horizon 3 as creating new capabilities to exploit or counter disruption, and says some organizations tied each horizon to a delivery window (3-12, 24-36, and 36-72 months).
+- Supports (full-text): It argues that the horizons are not bound by time, because disruptive horizon 3 ideas can now be delivered as fast as horizon 1 improvements, while saying the model is still useful as shorthand for prioritizing initiatives and that some horizon 3 efforts still take a long time.
+- Supports (full-text): It recommends focusing on speed of delivery and deployment across all three horizons.
+- Caveats: Expert opinion from an entrepreneur and educator, illustrated with examples rather than data. In the comments one of the model's authors disputes that the model is flawed and describes it as a growth-strategy framework rather than an innovation framework. Read through a summarizing fetcher.
 
 ### bottcher2018platforms {#bottcher2018platforms}
 
@@ -3008,6 +3520,19 @@ Martin Fowler (2024). “Strangler Fig”. martinfowler.com (bliki).
 - Supports (full-text): He cautions that legacy systems rarely have clean seams and that without organizational change new systems can become as tangled as the old.
 - Caveats: Practitioner essay. The page is dated 22 August 2024; it revises a post from the early 2000s originally titled 'Strangler Application' (the footnote says it was later retitled). The on-page title is 'Strangler Fig'; the URL slug keeps 'StranglerFigApplication'. Read through a summarizing fetcher; paraphrase only.
 
+### franklin2019managerial {#franklin2019managerial}
+
+Mitchell Franklin, Patty Graybeal, and Dixon Cooper (2019). *Principles of Accounting, Volume 2: Managerial Accounting*. OpenStax, Rice University.
+
+- <https://openstax.org/books/principles-managerial-accounting/pages/7-1-describe-how-and-why-managers-use-budgets>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, publisher, url.
+- Supports (full-text): A budget is a quantitative plan estimating when and how much cash or other resources will be received; budgets serve communication, planning, control, and evaluation, and their benchmarks are used to evaluate company and management performance.
+- Supports (full-text): The master budget has an operating budget (projected income statement) and a financial budget (projected balance sheet).
+- Supports (full-text): Top-down budgets are prepared by people unfamiliar with specific operations; bottom-up (participative) budgets risk managers misunderstanding the strategic plan; padded expenses create budgetary slack, and managers may set artificially low targets so they are hit.
+- Supports (full-text): Zero-based budgeting takes a lot of time because every expense must be justified; rolling budgets require continual updating.
+- Caveats: Introductory textbook. evidence_class recorded as practitioner, following dahlquist2022finance.
+
 ### garvin2013google {#garvin2013google}
 
 David A. Garvin (2013). “How Google Sold Its Engineers on Management”. Harvard Business Review, December 2013 (reprint R1312D).
@@ -3203,6 +3728,26 @@ Pete Hodgson (2017). “Feature Toggles (aka Feature Flags)”. martinfowler.com
 - Supports (full-text): Testing every toggle combination is impractical; it suggests testing the configuration expected in production, the fallback with new toggles off, and sometimes all toggles on.
 - Caveats: Practitioner article. The complete article was first published 8 February 2016; the page shows a last significant update of 9 October 2017, which is the year recorded here.
 
+### hope2003budgets {#hope2003budgets}
+
+Jeremy Hope, and Robin Fraser (2003). “Who Needs Budgets?”. Harvard Business Review, February 2003.
+
+- <https://hbr.org/2003/02/who-needs-budgets>
+- Evidence class: Practitioner literature. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (official-summary): The article's summary argues that budgeting as most corporations practice it should be abolished, because the budget and the command-and-control culture it supports remain predominant despite investments in other management tools; the authors directed the Beyond Budgeting Round Table.
+- Caveats: Only the summary was accessible. The alternative practices the article proposes were not read and are not described in the chapter beyond the movement's name.
+
+### hubbard2023cybersecurity {#hubbard2023cybersecurity}
+
+Douglas W. Hubbard, and Richard Seiersen (2023). *How to Measure Anything in Cybersecurity Risk*. Wiley.
+
+- ISBN-13: 9781119892304 · <https://www.wiley.com/en-us/How+to+Measure+Anything+in+Cybersecurity+Risk%2C+2nd+Edition-p-9781119892304>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-22): title, edition, authors, year, isbn13, url.
+- Supports (metadata (idea credited only)): Credited for the idea it is widely known for, that cybersecurity risk can be measured with calibrated probability estimates and simple quantitative models rather than ordinal risk scores. No quotation, page number, or finding is attributed.
+- Caveats: Published April 2023 per the product page. The page is on wiley.com but did not state the imprint explicitly; publisher recorded as Wiley on that basis.
+
 ### humble2010continuous {#humble2010continuous}
 
 Jez Humble, and David Farley (2010). *Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation*. Addison-Wesley Professional.
@@ -3245,6 +3790,16 @@ Gene Kim et al. (2016). *The DevOps Handbook: How to Create World-Class Agility,
 - ISBN-13: 9781950508402 · <https://itrevolution.com/product/the-devops-handbook-second-edition/>
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, latest_edition, isbn13.
+
+### klein2007premortem {#klein2007premortem}
+
+Gary Klein (2007). “Performing a Project Premortem”. Harvard Business Review, September 2007.
+
+- <https://hbr.org/2007/09/performing-a-project-premortem>
+- Evidence class: Practitioner literature. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (official-summary): In a premortem, team members assume that the project they are planning has just failed and generate plausible reasons for the failure; the article presents it as a way to make it safe for people with doubts to speak during planning.
+- Caveats: Only the summary and opening were read. No effect size is attributed to this article in the book.
 
 ### kniberg2014squad {#kniberg2014squad}
 
@@ -3366,6 +3921,19 @@ Will Larson (2019). *An Elegant Puzzle: Systems of Engineering Management*. Stri
 - Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
 - Verified against a fetched page (2026-11-18): title, subtitle, authors, publisher, year, isbn13.
 
+### larson2020first90 {#larson2020first90}
+
+Will Larson (2020). “Your first 90 days as CTO or VP Engineering.”. Irrational Exuberance (lethain.com), January 13, 2020.
+
+- <https://lethain.com/first-ninety-days-cto-vpe/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full-text): The post notes that companies define the CTO and VP Engineering roles very differently and uses a broad definition of an executive-team member who owns technical execution and people management in engineering.
+- Supports (full-text): It recommends learning how the business makes and spends money, building relationships with peers before conflict arises, getting the manager's expectations in writing, and limiting the number of concurrent changes.
+- Supports (full-text): It recommends documenting how high-impact technical decisions are actually made and writing down the implicit technology strategy, and warns that too many lightly held opinions from the executive create thrash.
+- Supports (full-text): Among operating mechanisms it suggests recurring one-on-ones and skip-levels, regular written updates, a recurring recruiting meeting, and considering a weekly operational review.
+- Caveats: Practitioner advice from one author; dated January 13, 2020.
+
 ### larson2021staff {#larson2021staff}
 
 Will Larson (2021). *Staff Engineer: Leadership beyond the management track*. Will Larson (self-published).
@@ -3383,6 +3951,17 @@ Will Larson (2023). “Balancing your CEO, peers, and Engineering”. Irrational
 - Verified against a fetched page (2026-11-19): title, authors, year, venue, url.
 - Supports (full-text): The post argues that the CEO, executive peers, and the engineering organization each hold a valid but incomplete view of the problem, and that the engineering executive's job is to merge them and solve the problem the company actually has, as a company-first problem solver rather than an advocate for one function.
 - Caveats: Dated April 20, 2023. An unedited draft chapter; the published book may differ.
+
+### larson2023capitalize {#larson2023capitalize}
+
+Will Larson (2023). “How to capitalize engineering costs.”. Irrational Exuberance (lethain.com).
+
+- <https://lethain.com/capitalize-engineering-costs/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full-text): The post describes ticket-based, project-based, and role-based ways of measuring capitalizable engineering work; ticket- or project-based methods are the most common, often as a hybrid, and role-based percentages are viewed with skepticism by many finance teams and auditors.
+- Supports (full-text): It proposes three criteria for a method - easy to explain and justify to an auditor, available in time for financial reporting, and minimizing ongoing effort for finance and engineering - and says most finance teams care more about compliance than about maximizing capitalization.
+- Caveats: Dated January 5, 2023. Practitioner opinion; the author's simplified rule of thumb (new capabilities capitalized, everything else expensed) is not a statement of the standard.
 
 ### larson2023engstrategy {#larson2023engstrategy}
 
@@ -3419,6 +3998,19 @@ Will Larson (2023). “Gelling your Engineering leadership team.”. Irrational 
 - Supports (full-text): It advises an executive taking over a leadership team to form a view of it early, test first impressions before acting, make necessary personnel changes quickly, and set explicit expectations with the direct reports, including how they will be judged and how to resolve tension between peers' goals.
 - Supports (full-text): It attributes competition among leadership-team peers partly to habits learned in bureaucratic or shrinking companies, where capturing existing capacity pays better than creating new capacity, and to the executive not enforcing norms.
 - Caveats: Dated July 11, 2023. Practitioner opinion; an unedited draft chapter.
+
+### larson2023ma {#larson2023ma}
+
+Will Larson (2023). “Engineering's role in Mergers & Acquisitions.”. Irrational Exuberance (lethain.com), February 27, 2023; draft chapter of The Engineering Executive's Primer (listed under the blog's executive tag).
+
+- <https://lethain.com/engineering-in-mergers-and-acquisition/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full-text): The post argues that engineering carries much of an acquisition's long-term cost and complexity, so the engineering executive should evaluate deals rigorously and give an honest view, including "no", while recognizing that engineering usually has one vote among many rather than a veto.
+- Supports (full-text): It recommends grounding the evaluation in a written business strategy and an acquisition thesis (the assumptions that must hold), then testing those assumptions with a base template covering product implementation, intellectual property, security, compliance, integration mismatches, costs and scalability, and engineering culture, plus deal-specific questions.
+- Supports (full-text): It names failure modes including deal teams rewarded for closing, sunk-cost pressure, an unstated thesis, and overlooked risks such as unverified data, unaudited compliance claims, or unknown breaches.
+- Supports (full-text): For integration it suggests running the acquired stack as is for about six months while consolidating where feasible, and documenting the plan so the deal team and staff work from the same assumptions.
+- Caveats: An unedited draft chapter by one practitioner (expert opinion); the published book may differ. Read through a summarizing fetcher.
 
 ### larson2023micromanage {#larson2023micromanage}
 
@@ -3477,6 +4069,18 @@ James Lewis, and Martin Fowler (2014). “Microservices: a definition of this ne
 - Supports (full-text): The article describes the microservice style as building a single application as a suite of small, independently deployable services, each running in its own process, communicating by lightweight mechanisms and built around business capabilities.
 - Supports (full-text): It names nine characteristics: componentization via services, organized around business capabilities, products not projects, smart endpoints and dumb pipes, decentralized governance, decentralized data management, infrastructure automation, design for failure, evolutionary design.
 - Caveats: A descriptive essay by practitioners, dated 25 March 2014; it offers characteristics, not a formal definition or empirical evidence.
+
+### madr-template {#madr-template}
+
+MADR project (2024). “Markdown Architectural Decision Records”. adr.github.io/madr.
+
+- <https://adr.github.io/madr/>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, venue, url, version.
+- Supports (full-text): MADR stands for Markdown Architectural Decision Records (spelled out this way from 4.0.0-beta; 3.0.0-beta used "Markdown Any Decision Records"); version 4.0.0 was released on 2024-09-17.
+- Supports (full-text): The template's sections are Context and Problem Statement, Considered Options, and Decision Outcome, with optional Decision Drivers, Consequences, Confirmation, Pros and Cons of the Options, and More Information, and optional front-matter fields for status, date, decision-makers, consulted, and informed.
+- Supports (full-text): The page says the template focuses on architectural decisions but can record any decision.
+- Caveats: Project page; individual maintainers are not named on it. Year is the 4.0.0 release year. Title is the page's top-level heading; the browser title is "About MADR | MADR".
 
 ### mager1997analyzing {#mager1997analyzing}
 
@@ -3547,6 +4151,16 @@ Steve McConnell (2006). *Software Estimation: Demystifying the Black Art*. Micro
 - Supports (official-summary): The book's first chapter, published by the publisher as an excerpt, distinguishes estimates (predictions of duration or cost), targets (desirable business objectives, which may not be achievable), and commitments (promises to deliver defined functionality at a stated quality by a date, which may be more or less aggressive than the estimate).
 - Supports (official-summary): The excerpt observes that when executives ask for an estimate they are often asking for a commitment or for a plan to meet a target.
 - Caveats: Only the publisher's excerpt of chapter 1 was read; the book's later material (including the cone of uncertainty) was not read and is not used.
+
+### mcgrath1995discovery {#mcgrath1995discovery}
+
+Rita Gunther McGrath, and Ian C. MacMillan (1995). “Discovery-Driven Planning”. Harvard Business Review, July-August 1995.
+
+- <https://hbr.org/1995/07/discovery-driven-planning>
+- Evidence class: Practitioner literature. Access for this bibliography: bibliographic metadata only; the work itself was not read for this entry.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (metadata (idea credited only)): Credited at idea level only for the widely known discovery-driven planning idea, that a venture in unfamiliar territory is planned around explicit assumptions that are tested at checkpoints before more money is committed.
+- Caveats: Metadata level. No quotation, page number, or finding.
 
 ### mckinley2015boring {#mckinley2015boring}
 
@@ -3640,6 +4254,28 @@ Henry Mintzberg (1990). “The Manager's Job: Folklore and Fact”. Harvard Busi
 - Supports (metadata (idea credited only)): Credited at idea level only for its widely known argument that managers' actual work is brief, fragmented, interrupted, and mostly verbal, unlike the folklore of a manager who plans, organizes, coordinates, and controls.
 - Caveats: Paywalled; only the title, author, issue, and opening sentence were visible. The 1975 original publication was not verified on a fetched page in this session (the 1990 page is a reprint); evidence_class reflects the observational research the article summarizes, which was not read. No findings or figures are used.
 
+### nacd2026cyber {#nacd2026cyber}
+
+National Association of Corporate Directors (2026). *Director's Handbook on Cyber-Risk Oversight (2026 edition), Principle Five: Guide Cybersecurity Risk Measurement and Reporting*. National Association of Corporate Directors (nacdonline.org), page dated April 16, 2026.
+
+- <https://www.nacdonline.org/all-governance/governance-resources/governance-research/director-handbooks/2026-cyber-risk-oversight/cyber-risk-handbook-principles-2026/principle-5-guide-cybersecurity-risk-measurement-reporting>
+- Evidence class: Practitioner literature. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (official-summary): Principle Five says leadership must move beyond technical updates toward standardized, quantitative reports, aligned with the enterprise risk management process and using the same language, cadence, and metrics as other material risks.
+- Supports (official-summary): The page recommends reporting at least quarterly and after material incidents or significant changes in exposure, with escalation thresholds that trigger special board updates, and summaries showing top risk scenarios, exposure against board-approved risk appetite, remediation progress, and trends.
+- Supports (official-summary): It describes reporting as an ongoing dialogue in which directors can challenge assumptions and request alternative scenarios.
+- Caveats: A directors' association guide (practitioner guidance for boards), not research. Only the Principle Five page was read; the 2026 edition has six principles, of which only the fourth, fifth, and sixth were seen by title. Its advice to translate technical metrics into financial loss ranges is reported, but no quantification model is endorsed in the book.
+
+### nolan2005itboard {#nolan2005itboard}
+
+Richard Nolan, and F. Warren McFarlan (2005). “Information Technology and the Board of Directors”. Harvard Business Review, October 2005.
+
+- <https://hbr.org/2005/10/information-technology-and-the-board-of-directors>
+- Evidence class: Practitioner literature. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (official-summary): The article's opening argues that boards had become more concerned about their companies' dependence on IT, yet most boards remained poorly informed about IT spending and strategy and about how dependent operations were on computer systems.
+- Caveats: Only the opening and summary were accessible. The article is known for a framework for board IT oversight that was not read; the book does not describe it.
+
 ### nygard2011adr {#nygard2011adr}
 
 Michael Nygard (2011). “Documenting Architecture Decisions”. Cognitect blog.
@@ -3691,6 +4327,16 @@ Jeffrey Pfeffer (1992). *Managing with Power*. Harvard Business School Press.
 - Verified against a fetched page (2026-11-19): title, authors, year, publisher, isbn13.
 - Supports (metadata (idea credited only)): Credited at idea level only for its widely known argument that power and influence are how things get done in organizations, and that managers should diagnose who depends on whom and whose support a decision needs rather than treat politics as something to avoid.
 - Caveats: Metadata only. A subtitle is commonly listed for this book but was not shown in the Open Library search record, so it is omitted.
+
+### porter1996strategy {#porter1996strategy}
+
+Michael E. Porter (1996). “What Is Strategy?”. Harvard Business Review, November-December 1996.
+
+- <https://hbr.org/1996/11/what-is-strategy>
+- Evidence class: Practitioner literature. Access for this bibliography: abstract or landing page only.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (abstract): The page's subtitle states that strategy is not the same as operational effectiveness, and the page's highlighted passages say that improving operational effectiveness is necessary but is not strategy, that strategy is making trade-offs in competing, that the essence of strategy is choosing what not to do, and that strategy is creating fit among a company's activities.
+- Caveats: Only the publisher page's highlighted passages were read; the argument and its examples were not. Expert opinion from a strategy scholar writing for practitioners.
 
 ### reilly-being-glue {#reilly-being-glue}
 
@@ -3990,6 +4636,19 @@ Daniel S. Vacanti (2018). *When Will It Be Done?: Lean-Agile Forecasting to Answ
 - Supports (official-summary): The book's table of contents covers forecasting single items from cycle-time percentiles and multiple items from throughput, with chapters on probabilistic release planning by Monte Carlo simulation and a case comparing linear projection with Monte Carlo.
 - Supports (official-summary): The table of contents warns against forecasting from averages and notes that the most likely outcome is not very likely.
 - Caveats: Practitioner book; only the publisher page and table of contents were read. Year is the 'last updated' date on Leanpub (2018-07-29), not a confirmed first-publication date.
+
+### vogels2007ctoroles {#vogels2007ctoroles}
+
+Werner Vogels (2007). “The Different CTO Roles”. All Things Distributed (allthingsdistributed.com), July 11, 2007.
+
+- <https://www.allthingsdistributed.com/2007/07/the_different_cto_roles.html>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-22): title, authors, year, venue, url.
+- Supports (full-text): The post presents a four-way classification of CTO roles, which it attributes to Tom Berray, consisting of the infrastructure manager, the technology visionary and operations manager, the external-facing technologist, and the big thinker.
+- Supports (full-text): It describes the infrastructure-manager CTO as appearing in businesses where IT supports the company and the CIO's role has become too complex, with the CIO keeping responsibility for how technology is used in the organization.
+- Supports (full-text): It notes that in the first two roles the CTO typically manages an engineering organization directly, while in the last two the CTO is often part of or close to the executive team and frequently reports to the CEO.
+- Supports (full-text): The post says the CTO role is very different depending on the type of company and the role technology plays in the company; its sources list names Tom Berray and Raj Sampath, "The Role of the CTO: Four Models for Success" (not read).
+- Caveats: The post page carries no byline; authorship is from the blog's own header ("Werner Vogels on building scalable and robust distributed systems"). The classification is Berray's, which this book did not read in its original form; cite the post as the source of the summary. A 2007 blog post, practitioner opinion, not research.
 
 ### warner2018canarying {#warner2018canarying}
 
