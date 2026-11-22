@@ -2,9 +2,9 @@ site_name: The Engineering Leadership Handbook
 site_description: >-
   An open-source, evidence-informed textbook on building, leading, scaling, and transforming
   software engineering organizations, from senior engineer to CTO.
-site_url: https://xayyamsadigov.github.io/engineering-leadership-handbook/
-repo_url: https://github.com/XayyamSadigov/engineering-leadership-handbook
-repo_name: XayyamSadigov/engineering-leadership-handbook
+site_url: https://xayyamsadigov.github.io/engineering-leadership-book/
+repo_url: https://github.com/XayyamSadigov/engineering-leadership-book
+repo_name: XayyamSadigov/engineering-leadership-book
 edit_uri: edit/main/docs/
 docs_dir: docs
 copyright: Text CC BY 4.0 · Code MIT · Northstar Technologies is fictional

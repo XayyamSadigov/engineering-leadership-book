@@ -28,7 +28,7 @@ engineering organizations.
 
 ## Read it
 
-- Website: <https://xayyamsadigov.github.io/engineering-leadership-handbook/> (published by the
+- Website: <https://xayyamsadigov.github.io/engineering-leadership-book/> (published by the
   `docs.yml` workflow once the repository is on GitHub)
 - Single file: [`dist/ENGINEERING_LEADERSHIP_HANDBOOK.md`](dist/ENGINEERING_LEADERSHIP_HANDBOOK.md)
 - Start with the flagship chapter:
@@ -62,7 +62,7 @@ pip install "mkdocs>=1.6,<2" "mkdocs-material>=9.5,<10" "pyyaml>=6"
 python tools/build_curriculum.py      # regenerate curriculum, bibliography, and exercise index pages
 python tools/build_single_file.py     # regenerate dist/ENGINEERING_LEADERSHIP_HANDBOOK.md
 python tools/validate_book.py --build # all checks plus mkdocs build --strict
-mkdocs serve                          # preview at http://127.0.0.1:8000/engineering-leadership-handbook/
+mkdocs serve                          # preview at http://127.0.0.1:8000/engineering-leadership-book/
 ```
 
 Optional diagram rendering check (needs Node.js):

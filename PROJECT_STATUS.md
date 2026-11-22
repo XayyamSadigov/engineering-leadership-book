@@ -6,8 +6,8 @@ Last updated: 2026-11-20 (session 3: waves 2–6).
 status. Each passed automated validation and an independent cross-chapter review; none has had human
 review. **11 chapters (50–60, including the capstone), 7 templates, and 3 projects are not written.**
 
-Published at https://github.com/XayyamSadigov/engineering-leadership-handbook (public) with the site at
-https://xayyamsadigov.github.io/engineering-leadership-handbook/. Both workflows passed on the first
+Published at https://github.com/XayyamSadigov/engineering-leadership-book (public) with the site at
+https://xayyamsadigov.github.io/engineering-leadership-book/. Both workflows passed on the first
 push. Commits use the GitHub noreply address (repository-local git config), never the work email. A
 GitHub token is stored in the macOS keychain for `git push` and API calls; the user was advised to
 replace it with a repository-scoped fine-grained token.

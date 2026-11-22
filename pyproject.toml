@@ -1,5 +1,5 @@
 [project]
-name = "engineering-leadership-handbook"
+name = "engineering-leadership-book"
 version = "0.1.0"
 description = "Build and validation tooling for The Engineering Leadership Handbook"
 readme = "README.md"
