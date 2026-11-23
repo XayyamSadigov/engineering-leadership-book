@@ -1,8 +1,8 @@
 # Project status
 
-Last updated: 2026-11-22 (session 4: waves 7 and 8).
+Last updated: 2026-11-23 (session 5: readability program phases 1–5, Russian edition started).
 
-**Summary.** The book is fully drafted: all 60 chapters (including the capstone), all 20 templates, and
+**Summary.** The book is fully drafted: all 60 chapters (including the capstone), all 24 templates, and
 all 8 projects are written and on the site in `review` status. Each passed automated validation and an
 independent cross-chapter review; none has had human review, so nothing is `published`.
 
@@ -72,18 +72,19 @@ replace it with a repository-scoped fine-grained token.
 
 Read `CLAUDE.md`, then this file, then run `.venv/bin/python tools/validate_book.py --build`.
 
-## PAUSED 2026-11-22 (usage limit): readability program, phases 2–3 interrupted
+## Readability program (2026-11-22 to 2026-11-23)
 
-- Committed: phase 1 (glossary, cast, timeline, quarter 4 briefing, restructured case pages, front matter,
-  site-wide review notice instead of per-page banners), commit aa91ba1.
-- Interrupted after a few minutes: phases 2–3 (nine agents rewriting chapters 1–60, templates, projects per
-  `research/readability-brief.md` and the assessor reports in `research/readability/`) and the EPUB/PDF
-  pipeline. Their partial edits are uncommitted in the working tree. On resume: `git diff --stat` to see
-  what was touched, then either keep and finish each part or `git checkout -- <files>` and redo it.
-- Then: phase 4 (missing content, see `research/readability-assessment.md`), phase 5 (re-assessment with
-  `research/readability/rubric.md`, target average ≥ 4.5 on every scale, no chapter below 4), switch
-  `BOOKKEEPING_IS_ERROR = True` in `tools/validate_book.py` once warnings reach zero, EPUB/PDF pipeline,
-  then the Russian translation (requested by the user, to start after the readability work).
+- Phases 1–4 done: glossary (96 terms), cast, timeline, quarter 4 briefing, restructured case pages, front
+  matter (aa91ba1); reader rules and assessor fixes in all chapters, templates, projects (1698647); missing
+  content, four new templates t21–t24, eight new sources (1ec4681). Maintainer bookkeeping in reader text
+  399 → 0, now a validator error (`BOOKKEEPING_IS_ERROR = True`).
+- Phase 5 re-assessment, same rubric, reports in `research/readability/round2/`: book averages readability
+  3.57, clarity 4.28, completeness 4.02, Northstar load 3.33 (round 1: 3.5 / 4.2 / 3.9 / 3.0); book level
+  3.6 / 4.0 / 4.0 / 3.4. 45 of 60 chapters still have a score below 4. Target (4.5, none below 4) not met.
+- Open decision for the user: option A (targeted fixes), B (A plus trimming each case study to the 5–8 facts
+  it needs, a prose "year in brief" page, one engineer-cost rate book-wide, glossary terms for the CTO
+  chapters), or C (stop). Summary of findings in `research/readability-assessment.md`, "Round 2".
+- In flight: EPUB/PDF pipeline (`tools/build_ebooks.py`, `tools/ebook/`), not yet committed.
 
 ## Russian edition, started 2026-11-23
 

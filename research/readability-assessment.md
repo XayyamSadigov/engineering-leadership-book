@@ -116,3 +116,37 @@ chapters 13, 23, 25, 32, 34, 36, 40, 41, 48, 50, 51, 57, 60. Strongest: 1, 11, 1
 
 A validator check could prevent regressions: flag "canon", "D[0-9]"/"G[0-9]" codes, and access notes
 in `docs/parts/`, and sentences over 45 words.
+
+## Round 2 (2026-11-23), after phases 1–4
+
+Same rubric, nine fresh assessors; reports in `research/readability/round2/`.
+
+| Part | Readability | Clarity | Completeness | Northstar load |
+|---|---|---|---|---|
+| Ch 1–10 | 3.40 | 4.30 | 3.80 | 3.60 |
+| Ch 11–18 | 3.62 | 4.38 | 4.25 | 3.38 |
+| Ch 19–27 | 3.56 | 4.11 | 4.22 | 3.56 |
+| Ch 28–36 | 3.78 | 4.44 | 4.00 | 3.11 |
+| Ch 37–43 | 3.71 | 4.43 | 4.29 | 3.14 |
+| Ch 44–49 | 3.50 | 4.00 | 3.67 | 3.00 |
+| Ch 50–55 | 3.33 | 4.33 | 4.00 | 3.50 |
+| Ch 56–60 | 3.60 | 4.20 | 3.80 | 3.20 |
+| **Book** | **3.57** | **4.28** | **4.02** | **3.33** |
+| Book level | 3.6 | 4.0 | 4.0 | 3.4 |
+
+The target (every scale at 4.5, no chapter below 4) is not met: 45 of 60 chapters have at least one score
+below 4. Remaining problems, by impact:
+
+1. Case studies still carry more Northstar facts than the lesson needs; no prose story of the year exists
+   (only tables). A "year in brief" page of about 1,000 words would serve every chapter.
+2. Five engineer-cost rates in use ($3,558 per week, $4,000 per week in the business-case template,
+   $800 per day, $46,250 per FTE-quarter, $157,250 per capitalized FTE-year); one rate book-wide is needed.
+3. Undefined HR, finance, and legal terms in later chapters (warranty, indemnity, escrow, vesting,
+   run-rate, requisition, budget envelope, operating plan, due diligence, CISO, attrition); velocity and
+   story points undefined.
+4. No chapter links the cast page; templates are not linked from chapters 12–15.
+5. Contradictions: Ch 20 "five" tier 1 minimums (four); Ch 21 debt-register IDs; Ch 23 false-red hours;
+   Ch 15 planning case undercuts its point; Ch 17 uses cycle-time percentiles Ch 16 never defines.
+6. Dense case tables in Ch 30, 38, 41, 48, 52, 53; Ch 59's scaling half is thin; Ch 60 seat-count cell.
+7. Small: home page says 20 templates (24); `curriculum.md` generator residue for Part XIV; learning
+   paths A–E lack Chapter 26.
