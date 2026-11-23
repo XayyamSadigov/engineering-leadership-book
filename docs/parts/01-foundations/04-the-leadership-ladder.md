@@ -254,8 +254,8 @@ what he changed, not only what moved.
 ## Decision Framework
 
 For an engineer choosing between tracks, the table lists the criteria in order of weight (**this
-book's recommendation**). The first three describe the person and the work; the last three describe
-the organization.
+book's recommendation**). The first three describe the person and the work, the next two describe the
+organization, and the last checks your motive.
 
 | Criterion | Points toward management | Points toward staff-plus |
 |---|---|---|

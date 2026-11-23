@@ -6201,7 +6201,7 @@ This case is **fictional**. It is set in the twelve months before the director a
 At the start of that year, Billing had four engineers trusted with ledger incidents. The rotation
 nominally covered all thirteen, but ledger and invoicing pages were escalated to the four almost by
 reflex, because they restored fastest. Nine months before the director arrived, one of the four
-resigned. The backfill started 15 weeks later and, because the remaining three were rarely free to pair,
+resigned. The replacement started 15 weeks later and, because the remaining three were rarely free to pair,
 was not on the rotation by the end of the baseline quarter.
 
 The previous management responded three times. It raised the on-call stipend. After each serious Billing
@@ -6586,8 +6586,8 @@ what he changed, not only what moved.
 ### Decision Framework
 
 For an engineer choosing between tracks, the table lists the criteria in order of weight (**this
-book's recommendation**). The first three describe the person and the work; the last three describe
-the organization.
+book's recommendation**). The first three describe the person and the work, the next two describe the
+organization, and the last checks your motive.
 
 | Criterion | Points toward management | Points toward staff-plus |
 |---|---|---|
