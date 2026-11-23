@@ -1,0 +1,312 @@
+/* Print stylesheet for the PDF edition (6 x 9 in), printed by Chromium.
+   Type: IBM Plex Serif for reading, IBM Plex Sans Condensed for structure and dense tables,
+   IBM Plex Mono for code. All SIL Open Font License; downloaded by tools/build_ebooks.py. */
+
+@font-face { font-family: "Plex Serif"; font-weight: 400; src: url("@FONTS@/IBMPlexSerif-Regular.ttf"); }
+@font-face { font-family: "Plex Serif"; font-weight: 400; font-style: italic; src: url("@FONTS@/IBMPlexSerif-Italic.ttf"); }
+@font-face { font-family: "Plex Serif"; font-weight: 600; src: url("@FONTS@/IBMPlexSerif-SemiBold.ttf"); }
+@font-face { font-family: "Plex Serif"; font-weight: 600; font-style: italic; src: url("@FONTS@/IBMPlexSerif-SemiBoldItalic.ttf"); }
+@font-face { font-family: "Plex Cond"; font-weight: 400; src: url("@FONTS@/IBMPlexSansCondensed-Regular.ttf"); }
+@font-face { font-family: "Plex Cond"; font-weight: 400; font-style: italic; src: url("@FONTS@/IBMPlexSansCondensed-Italic.ttf"); }
+@font-face { font-family: "Plex Cond"; font-weight: 600; src: url("@FONTS@/IBMPlexSansCondensed-SemiBold.ttf"); }
+@font-face { font-family: "Plex Mono"; font-weight: 400; src: url("@FONTS@/IBMPlexMono-Regular.ttf"); }
+
+:root {
+  --ink: #1f262e;      /* body text */
+  --slate: #34506a;    /* headings, links, rules */
+  --amber: #a8640c;    /* part numerals, chapter numbers, warning bars */
+  --rule: #c3ccd5;     /* table rules */
+  --tint: #edf1f4;     /* callout and table-head fill */
+  --muted: #5d6a77;
+}
+
+@page {
+  size: 6in 9in;
+  margin: 0.62in 0.6in 0.7in 0.6in;
+  @bottom-center {
+    content: counter(page);
+    font-family: "Plex Cond", sans-serif;
+    font-size: 8pt;
+    color: #5d6a77;
+  }
+}
+@page opener { @bottom-center { content: none; } }
+
+html { font-size: 9.6pt; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: "Plex Serif", Georgia, serif;
+  line-height: 1.48;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  orphans: 3;
+  widows: 3;
+  hyphens: manual;
+  overflow-wrap: break-word;
+}
+
+p { margin: 0 0 0.62em; }
+a { color: var(--slate); text-decoration: none; }
+a.uri, td a, li a { overflow-wrap: anywhere; }
+strong { font-weight: 600; }
+em { font-style: italic; }
+ul, ol { margin: 0.2em 0 0.7em; padding-left: 1.35em; }
+li { margin: 0.12em 0; }
+li > p { margin: 0 0 0.3em; }
+hr { border: 0; border-top: 0.5pt solid var(--rule); margin: 1.2em 0; }
+
+/* ---------- Title page and contents ---------- */
+
+#title-block-header {
+  page: opener;
+  break-after: page;
+  min-height: 6.4in;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.1in;
+}
+#title-block-header, #title-block-header * { text-align: left; }
+#title-block-header h1.title {
+  break-before: auto;
+  font-family: "Plex Serif", serif;
+  font-weight: 600;
+  font-size: 27pt;
+  line-height: 1.08;
+  margin: 0 0 0.45in;
+  color: var(--ink);
+}
+#title-block-header::before {
+  /* The ladder rule: the book climbs from senior engineer to CTO. */
+  content: "";
+  display: block;
+  width: 62%;
+  height: 4pt;
+  background: var(--amber);
+  margin-bottom: 0.3in;
+}
+#title-block-header .subtitle {
+  font-family: "Plex Cond", sans-serif;
+  font-size: 12.5pt;
+  line-height: 1.32;
+  color: var(--slate);
+  margin: 0 0 auto;
+}
+#title-block-header .author { font-family: "Plex Cond", sans-serif; font-size: 10.5pt; margin: 0.4in 0 0.05in; }
+#title-block-header .date { font-family: "Plex Cond", sans-serif; font-size: 8.5pt; color: var(--muted); margin: 0; }
+
+nav#TOC { break-after: page; }
+nav#TOC::before {
+  content: "Contents";
+  display: block;
+  font-family: "Plex Serif", serif;
+  font-weight: 600;
+  font-size: 17pt;
+  margin: 0 0 0.25in;
+}
+nav#TOC ul { list-style: none; padding: 0; margin: 0; }
+nav#TOC > ul > li { margin: 0.55em 0 0.1em; }
+nav#TOC li > a { break-inside: avoid-page; }
+nav#TOC > ul > li > a { break-after: avoid-page; }
+nav#TOC > ul > li > a {
+  font-family: "Plex Cond", sans-serif;
+  font-weight: 600;
+  font-size: 9.2pt;
+  color: var(--ink);
+}
+nav#TOC ul ul { margin: 0.1em 0 0.25em 0.9em; }
+nav#TOC ul ul li { margin: 0.08em 0; font-size: 8.6pt; line-height: 1.3; }
+nav#TOC ul ul a { color: var(--ink); }
+nav#TOC a { display: flex; flex-wrap: nowrap; align-items: last baseline; gap: 0.4em; }
+nav#TOC a::after { content: ""; order: 1; flex: 1 1 1em; border-bottom: 0.5pt dotted #9aa6b1; transform: translateY(-0.25em); min-width: 1em; }
+nav#TOC .toc-page { order: 2; flex: none; white-space: nowrap; font-family: "Plex Cond", sans-serif; font-weight: 400; font-variant-numeric: tabular-nums; color: var(--muted); }
+nav#TOC .sep { display: none; }
+nav#TOC .part-num { flex: none; white-space: nowrap; color: var(--amber); }
+nav#TOC .ch-num { flex: none; align-self: first baseline; width: 4.3em; white-space: nowrap; color: var(--muted); font-family: "Plex Cond", sans-serif; }
+
+/* ---------- Headings ---------- */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ink);
+  break-after: avoid-page;
+  break-inside: avoid-page;
+  line-height: 1.2;
+}
+
+/* Front-matter pages, divisions, and parts start on a new page. */
+h1 {
+  break-before: page;
+  font-family: "Plex Serif", serif;
+  font-weight: 600;
+  font-size: 19pt;
+  margin: 0.2in 0 0.22in;
+}
+
+/* Part and division openers: a page of their own with the oversized numeral. */
+h1.part, h1.division {
+  page: opener;
+  padding-top: 1.6in;
+  font-size: 21pt;
+  line-height: 1.12;
+  margin-bottom: 0.2in;
+}
+h1.part .part-num {
+  display: block;
+  font-family: "Plex Cond", sans-serif;
+  font-weight: 600;
+  font-size: 54pt;
+  line-height: 1;
+  color: var(--amber);
+  margin-bottom: 0.18in;
+  letter-spacing: -0.01em;
+}
+h1.part .part-num::before { content: ""; }
+h1 .sep { display: none; }
+.part-summary {
+  page: opener;
+  font-family: "Plex Cond", sans-serif;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: var(--slate);
+  max-width: 3.9in;
+}
+
+/* Page titles inside a part: chapters, templates, project pages, solutions. */
+h2.page-title {
+  break-before: page;
+  font-family: "Plex Serif", serif;
+  font-weight: 600;
+  font-size: 17pt;
+  line-height: 1.15;
+  margin: 0.1in 0 0.25in;
+  padding-bottom: 0.14in;
+  border-bottom: 1.5pt solid var(--amber);
+}
+h2.chapter { padding-top: 0.35in; font-size: 18pt; }
+h2.chapter .ch-num {
+  display: block;
+  font-family: "Plex Cond", sans-serif;
+  font-weight: 600;
+  font-size: 11pt;
+  color: var(--amber);
+  margin-bottom: 0.08in;
+}
+h2 .sep { display: none; }
+h2:not(.page-title) {
+  font-family: "Plex Cond", sans-serif;
+  font-weight: 600;
+  font-size: 13pt;
+  color: var(--slate);
+  margin: 1.3em 0 0.45em;
+}
+h3 {
+  font-family: "Plex Cond", sans-serif;
+  font-weight: 600;
+  font-size: 12pt;
+  color: var(--slate);
+  margin: 1.35em 0 0.45em;
+}
+h4 {
+  font-family: "Plex Cond", sans-serif;
+  font-weight: 600;
+  font-size: 10.4pt;
+  margin: 1.15em 0 0.35em;
+}
+h5, h6 {
+  font-family: "Plex Serif", serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 9.8pt;
+  margin: 1em 0 0.3em;
+}
+
+/* ---------- Blocks ---------- */
+
+blockquote {
+  margin: 0.8em 0;
+  padding: 0.1em 0 0.1em 0.9em;
+  border-left: 2pt solid var(--slate);
+  color: var(--ink);
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+.admonition {
+  margin: 0.9em 0;
+  padding: 0.55em 0.75em 0.45em;
+  background: var(--tint);
+  border-left: 2.5pt solid var(--slate);
+  break-inside: avoid-page;
+  font-size: 0.94em;
+}
+.admonition.warning { border-left-color: var(--amber); }
+.admonition-title p {
+  font-family: "Plex Cond", sans-serif;
+  font-weight: 600;
+  font-size: 9.8pt;
+  margin: 0 0 0.3em;
+  color: var(--ink);
+}
+.admonition > *:last-child, .admonition > *:last-child > *:last-child { margin-bottom: 0; }
+
+pre, code { font-family: "Plex Mono", Menlo, monospace; }
+code { font-size: 0.86em; }
+pre {
+  font-size: 7.2pt;
+  line-height: 1.38;
+  background: #f5f7f9;
+  border: 0.5pt solid var(--rule);
+  padding: 0.6em 0.75em;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0.8em 0;
+}
+pre code { font-size: 1em; }
+
+img.diagram {
+  display: block;
+  max-width: 100%;
+  max-height: 6.3in;
+  margin: 1em auto;
+  break-inside: avoid-page;
+}
+p:has(> img.diagram:only-child) { break-inside: avoid-page; margin: 0; }
+
+/* ---------- Tables ---------- */
+
+.table-wrap { margin: 0.9em 0 1em; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Plex Cond", sans-serif;
+  font-size: 8pt;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+.table-narrow table { width: auto; min-width: 60%; max-width: 100%; }
+.table-wide table { font-size: 7.5pt; }
+.table-xwide table { font-size: 6.6pt; }
+.table-xwide th, .table-xwide td { padding: 0.3em 0.3em; }
+img, svg { max-width: 100%; }
+thead { display: table-header-group; }
+tr { break-inside: avoid-page; }
+th {
+  text-align: left;
+  font-weight: 600;
+  background: var(--tint);
+  border-bottom: 0.9pt solid var(--slate);
+  padding: 0.35em 0.45em;
+  vertical-align: bottom;
+}
+td {
+  padding: 0.32em 0.45em;
+  border-bottom: 0.4pt solid var(--rule);
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+th:empty { padding: 0; }
+td code, th code { font-size: 0.92em; overflow-wrap: anywhere; }
+
+/* ---------- Footnotes ---------- */
+
+section.footnotes { font-size: 8pt; border-top: 0.5pt solid var(--rule); margin-top: 1.5em; }

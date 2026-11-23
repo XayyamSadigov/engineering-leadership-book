@@ -20,6 +20,8 @@ venv/
 site/
 dist/*.pdf
 dist/*.epub
+# EPUB/PDF build tree: node packages, rendered-diagram cache, fonts, intermediate Markdown/HTML
+build/
 
 # Secrets
 .env

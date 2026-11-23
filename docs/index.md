@@ -5,8 +5,10 @@
 An open-source, evidence-informed textbook on building, leading, scaling, and transforming software
 engineering organizations.
 
+Prefer to read offline? [Download the book as EPUB or PDF](download.md).
+
 !!! info "Status: complete, awaiting human review"
-    All 60 chapters, 20 templates, 8 projects, and the capstone are written and on this site. Each page
+    All 60 chapters, 24 templates, 8 projects, and the capstone are written and on this site. Each page
     is a reviewed draft until a person has checked every cited claim against its source; the notice at
     the top of the site says so. Treat the pages as reviewed drafts, and report any claim its citation does not support.
 

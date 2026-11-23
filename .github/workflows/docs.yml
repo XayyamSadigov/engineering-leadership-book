@@ -29,6 +29,48 @@ jobs:
       - run: mkdocs build --strict --site-dir site
       - name: Attach the single-file edition to the site
         run: cp dist/ENGINEERING_LEADERSHIP_HANDBOOK.md site/
+
+      # EPUB and PDF editions (tools/build_ebooks.py). They are published under site/downloads/
+      # and linked from docs/download.md; they are never committed.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install pandoc and PyMuPDF
+        # pypandoc_binary bundles a current pandoc 3.x; the apt package is too old.
+        run: pip install "pypandoc_binary>=1.15" "pymupdf>=1.24"
+      - name: Restore the e-book build cache (node packages, Chromium, rendered diagrams)
+        uses: actions/cache@v4
+        with:
+          path: |
+            build/ebook/node
+            build/ebook/diagrams
+            build/ebook/fonts
+            ~/.cache/puppeteer
+          key: ebooks-${{ hashFiles('tools/build_ebooks.py') }}-${{ github.run_id }}
+          restore-keys: |
+            ebooks-${{ hashFiles('tools/build_ebooks.py') }}-
+      - name: Install the book fonts (IBM Plex, OFL) so diagrams and the PDF use them
+        run: |
+          python tools/build_ebooks.py --fonts-only
+          mkdir -p ~/.local/share/fonts
+          cp build/ebook/fonts/*.ttf ~/.local/share/fonts/
+          fc-cache -f
+      - name: Build the EPUB and PDF editions
+        run: python tools/build_ebooks.py
+      - name: Attach the EPUB and PDF to the site
+        run: |
+          mkdir -p site/downloads
+          cp dist/engineering-leadership-handbook.epub dist/engineering-leadership-handbook.pdf site/downloads/
+          ls -l site/downloads
+      - name: Keep the e-books as a workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ebooks
+          path: |
+            dist/engineering-leadership-handbook.epub
+            dist/engineering-leadership-handbook.pdf
+          retention-days: 30
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

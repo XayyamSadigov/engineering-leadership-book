@@ -5,10 +5,12 @@
 An open-source, evidence-informed textbook on building, leading, scaling, and transforming software
 engineering organizations.
 
-> **Status: early.** The curriculum is fully designed (60 chapters in 15 parts, 20 templates, 8
-> projects, a capstone). One flagship chapter and four templates are written and on the site,
-> awaiting human review. Everything else is planned. See [`PROJECT_STATUS.md`](PROJECT_STATUS.md) and
-> the generated [curriculum](docs/curriculum.md).
+> **Status: complete draft, awaiting human review.** All 60 chapters (in 15 parts), 24 templates, 8
+> projects, and the capstone are written and on the [site](https://xayyamsadigov.github.io/engineering-leadership-book/),
+> with worked solutions for every exercise. Download the book as
+> [EPUB or PDF](https://xayyamsadigov.github.io/engineering-leadership-book/download/). A Russian edition
+> is in progress. See [`PROJECT_STATUS.md`](PROJECT_STATUS.md) and the generated
+> [curriculum](docs/curriculum.md).
 
 ## What makes it different
 
