@@ -133,9 +133,9 @@ questions of each block of time.
 | VP or CTO | Portfolio allocation, organization design, technical strategy | One year or more | Directors, executive peers |
 | Staff engineer | Technical direction across teams within a mandate | One to four quarters | Several teams' tech leads |
 
-1. **Sample two weeks** of calendar and decisions, as in Chapter 1.
-2. **Tag each block** with the lowest level that could have done it. A director reviewing one team's
-   pull requests is working at tech-lead level for that hour.
+1. **Sample two weeks** of calendar and decisions, as in Chapter 1's audit.
+2. **Add one column to that audit**: the lowest level that could have done each block. A director
+   reviewing one team's merge requests is working at tech-lead level for that hour.
 3. **Check the open commitments.** List what the person has promised and by when. If almost nothing
    runs past this quarter, they are working below a director's horizon, whatever the title says.
 
@@ -190,7 +190,7 @@ small set of evidence across four areas, over at least two quarters, and read it
 | Area | Evidence | Typical gaming, and the counter |
 |---|---|---|
 | Unit outcomes | The team's agreed outcome measures (reliability, delivery against commitments), with the trend and the context | Renegotiated commitments; pair with what was originally promised |
-| Team health | Regretted attrition; upward feedback on manager behaviors; concentration of on-call and critical knowledge | Pressure on survey answers; keep feedback anonymous and read comments, not scores |
+| Team health | [Regretted attrition](../../glossary.md#attrition-and-regretted-attrition) (losing people you wanted to keep); upward feedback on manager behaviors; concentration of on-call and critical knowledge | Pressure on survey answers; keep feedback anonymous and read comments, not scores |
 | People growth | Who can now do what they could not two quarters ago; promotions earned elsewhere; a successor | Inflated promotions; calibrate across managers (Chapter 8) |
 | Leverage | Problems solved across team boundaries; decisions that held; ownership clarified | Self-reported heroics; ask the neighboring teams |
 
@@ -215,7 +215,9 @@ decision framework below turns it into criteria.
     Week 1 of the Engineering Director's first year. The CTO, Victor Lindqvist, has asked the director
     to halve Sev1 and Sev2 incidents (the two most serious levels) within twelve months with flat
     headcount. Six managers and three staff engineers report to the director. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 Northstar's role structure as the director finds it. All figures are **illustrative**, from the
 [baseline data](../../case-studies/northstar/baseline-data.md).
@@ -245,10 +247,9 @@ view Daniel Cho is the strongest manager and Marcus Oyelaran the weakest. Now ap
 | Priya Raman, Orders | 11 deployments, 7 incidents | Promoted eight months ago; growth and leverage evidence matter more than one quarter's results |
 
 The two views rank differently, and the second separates what each manager controls (on-call
-concentration, people growth, ownership) from what the system controls (the release train). One quantity is worth computing. If Billing's
-[unplanned work](../../glossary.md#unplanned-work) fell from 41 to 30 percent of its 13 engineers,
-about 1.4 [FTE](../../glossary.md#fte) (full-time engineers) of capacity would return. That gain would be partly the manager's work and partly the
-release train's, so the review asks what he changed, not only what moved.
+concentration, people growth, ownership) from what the system controls (the release train). Even a
+real gain in Billing would be partly Marcus's work and partly the release train's, so the review asks
+what he changed, not only what moved.
 
 ## Decision Framework
 
@@ -318,7 +319,7 @@ Signs: the new manager keeps the hardest technical work and cancels one-on-ones 
 three months in, what the manager has stopped doing.
 
 **Previous-level gravity.** People drift back to the level below because its feedback is fast: a
-director reviewing pull requests, a VP running one team's planning. Detect it from the calendar: the
+director reviewing merge requests, a VP running one team's planning. Detect it from the calendar: the
 share of time on decisions only that level can make.
 
 **The activity scorecard.** Managers are ranked by deployments, tickets, or roadmap items. Teams
@@ -403,13 +404,12 @@ teams' roadmap delivery, which last quarter was 7 of 17 committed items. There i
 one-sentence mandate and a hiring brief. There is no VP Engineering: Victor Lindqvist, the CTO, has
 the director as his engineering leader.
 
-**What the first quarter did and did not settle.** In the first quarter the director ran a quality
-program to cut incidents (Chapter 27). It gave the three staff engineers mandates: Kwame Mensah release
-and detection, Ines Carvalho Core module boundaries and contract tests, Li Na Zhou migration and
-configuration safety. Each also owned matching engineering standards, with a rule that questions on
-them are decided within ten working days. None says what they own once the quality program ends, how
-they are evaluated, or how their authority relates to the managers whose teams change the code they
-govern. Chapter 29 develops those questions.
+**What the first quarter did and did not settle.** The first quarter's quality program (Chapter 27)
+gave each of the three staff engineers a mandate tied to that program, with matching engineering
+standards: Kwame Mensah release and detection, Ines Carvalho Core module boundaries, Li Na Zhou
+migration and configuration safety ([year 1 record](../../case-studies/northstar/first-quarter.md)). None of the mandates says
+what they own once the program ends, how they are evaluated, or how their authority relates to the
+managers whose teams change the code they govern. Chapter 29 develops those questions.
 
 **A track question in quarter 2.** Rafael Duarte, a senior engineer
 in Orders, lost the Orders manager role to Priya Raman (Chapter 2); since week 2 he has shared
@@ -423,19 +423,22 @@ asking. Two are about Northstar, and Northstar fails both: no opening or defined
 stated return path from management. Having lost the role once, is he drawn to the work or to the
 title? Before Rafael can choose well, the organization has to decide
 whether it has a tech lead role, what its staff engineers are for, and whether a manager trial is
-possible without an open team. Exercise A1 asks you to have the conversation.
+possible without an open team. The lesson: a track choice is only as real as the roles behind it.
+Exercise A1 asks you to have the conversation.
 
 ## Exercises
 
-Solutions are in [chapter 4 solutions](../../solutions/ch04-solutions.md).
+Solutions are in [chapter 4 solutions](../../solutions/ch04-solutions.md). Northstar data is on the
+[baseline page](../../case-studies/northstar/baseline-data.md); who's who is on the
+[cast](../../case-studies/northstar/cast.md) page.
 
 ### Foundational
 
-**F1.** Greg Tanaka, VP Sales, tells the CEO that Daniel Cho is clearly Northstar's best manager and
+**F1.** Greg Tanaka (VP Sales) tells Helena Marsh (CEO) that Daniel Cho is clearly Northstar's best manager and
 Marcus Oyelaran its weakest, because Customer Experience deploys 26 times a month and Billing 8. Write a short reply to the CEO explaining what the
 numbers do and do not show about the two managers, and what evidence you would look at instead.
 
-**F2.** A newly promoted director's calendar for one week contains: six hours reviewing pull requests
+**F2.** A newly promoted director's calendar for one week contains: six hours reviewing merge requests
 in one team, a two-hour planning session with a single team, four one-on-ones with managers, one hour
 with the CFO's analyst on next year's budget, and three hours debugging a production incident as an
 individual responder. Identify which items belong to the director's level, which to lower levels,
@@ -465,12 +468,12 @@ should resolve a disagreement with a staff engineer about a change in that manag
 
 ### Executive Decision-Making
 
-**X1.** Victor Lindqvist is considering creating a VP Engineering role above the director, arguing
+**X1.** Victor Lindqvist (CTO) is considering creating a VP Engineering role above the director, arguing
 that the board expects one and that he wants more time for technical strategy. Northstar has 80
 engineers, six managers, and one director. You are advising Victor. Recommend whether to create the
 role now, what it would be accountable for if created, and what you would do instead if not.
 
-**X2.** Suppose that at the end of the director's first year, Helena Marsh asks Victor how he will judge whether
+**X2.** Suppose that at the end of the director's first year, Helena Marsh (CEO) asks Victor how he will judge whether
 the director has been effective. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents have fallen, but one strong manager has left
 and two staff engineers say they are still unsure of their mandate. As Victor, write the evaluation
 approach: which evidence you weigh, over what horizon, and how you separate the director's

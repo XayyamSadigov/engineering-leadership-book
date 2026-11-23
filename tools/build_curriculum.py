@@ -44,10 +44,19 @@ def curriculum_page() -> str:
     published = [c for c in chapters if c.status == "published"]
     review = [c for c in chapters if c.status == "review"]
     out = [HEADER.format(src="curriculum.yaml"), "# Curriculum\n"]
+    live = published + review
+    if len(live) == len(chapters) and not published:
+        status_line = (f"All {len(chapters)} chapters are on the site; none has yet completed "
+                       "human review.")
+    elif len(published) == len(chapters):
+        status_line = f"All {len(chapters)} chapters are on the site and have completed human review."
+    else:
+        status_line = (f"{len(live)} of {len(chapters)} chapters are on the site; "
+                       f"{len(published)} of them {'has' if len(published) == 1 else 'have'} "
+                       "completed human review.")
     out.append(
         f"The book is designed as {len(chapters)} chapters in {len(cur['parts'])} parts. "
-        f"**{len(published)} of {len(chapters)} chapters are published, and {len(review)} more "
-        f"{'is' if len(review) == 1 else 'are'} on the site awaiting human review.** "
+        f"**{status_line}** "
         "A chapter is published only when it passes the automated validation and the human "
         "review checklist. A chapter awaiting review has passed the "
         "automated validation; the site-wide announcement says the book awaits human review. "
@@ -58,9 +67,17 @@ def curriculum_page() -> str:
     out.append("| Part | Chapters | On the site |\n|---|---|---|")
     for part in cur["parts"]:
         chs = part.get("chapters") or []
-        pub = sum(1 for c in chs if c["status"] in LIVE)
-        span = f"{chs[0]['n']}–{chs[-1]['n']}" if len(chs) > 1 else (str(chs[0]["n"]) if chs else "templates")
-        out.append(f"| {part['roman']}. {part['title']} | {span} | {pub} of {len(chs)} |")
+        if chs:
+            pub = sum(1 for c in chs if c["status"] in LIVE)
+            span = f"{chs[0]['n']}–{chs[-1]['n']}" if len(chs) > 1 else str(chs[0]["n"])
+            count = f"{pub} of {len(chs)}"
+        elif part["slug"] == "14-playbooks":
+            pub = sum(1 for t in cur["templates"] if t["status"] in LIVE)
+            span = "templates"
+            count = f"{pub} of {len(cur['templates'])} templates"
+        else:
+            span, count = "—", "—"
+        out.append(f"| {part['roman']}. {part['title']} | {span} | {count} |")
     out.append("")
     for part in cur["parts"]:
         out.append(f"## Part {part['roman']} — {part['title']}\n")
@@ -88,7 +105,11 @@ def curriculum_page() -> str:
     out.append("## Practical projects\n")
     out.append("| Project | Status |\n|---|---|")
     for p in cur["projects"]:
-        out.append(f"| {p['id'].upper()}: {p['title']} | {STATUS_LABEL[p['status']]} |")
+        name = f"{p['id'].upper()}: {p['title']}"
+        files = sorted((DOCS / "projects").glob(f"{p['id']}-*.md"))
+        if p["status"] in LIVE and files:
+            name = f"[{name}](projects/{files[0].name})"
+        out.append(f"| {name} | {STATUS_LABEL[p['status']]} |")
     out.append("")
     return "\n".join(out)
 

@@ -3,12 +3,13 @@
 You are Victor Lindqvist, CTO of Northstar Technologies, the fictional company of the
 [case study](../case-studies/northstar/index.md), and it is week 47 of the Engineering Director's first
 year. The executive team meets in week 49. The board meets in week 50, where Helena Marsh (CEO) presents
-the year-2 operating plan and budget envelope for approval. Decisions inside the envelope stay with
+the year-2 [operating plan](../glossary.md#operating-plan) and
+[budget envelope](../glossary.md#budget-envelope) for approval. Decisions inside the envelope stay with
 management; your own agenda item is your three-year technology strategy, for discussion.
 
 On your desk are four things. The director's two-year [continuation](../glossary.md#the-continuation)
 of the quality program asks for 6 [FTE](../glossary.md#fte) of prevention in quarters 5 and 6, 5 FTE in
-quarters 7 and 8, $150,000 of tooling, and $100,000 more if a CI target is chosen. A technology
+quarters 7 and 8, $150,000 of tooling, and $100,000 more if a CI (continuous integration) target is chosen. A technology
 [risk register](../glossary.md#risk-register) has had its two highest items open since week 14. Rajiv
 Menon (CFO) will accept new cash only if it is offset inside the $4.2M cloud and tooling budget. And
 Helena Marsh asks whether reliability will hold through six renewals of top-40 customers, while Greg
@@ -69,20 +70,13 @@ with the ask, its gates, and replies to Greg Tanaka's alternative and Rajiv Meno
 technical direction and the board's technology questions. The director wrote the continuation proposal;
 the staff engineers and managers own the estimates. Rajiv Menon checks the arithmetic.
 
-**The time rule.** Use facts dated week 47 or earlier. They are in
-[quarter 3 results](../case-studies/northstar/first-quarter.md#quarter-3-results), the weeks 40 to 47
-entries of the [quarter 4 calendar](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4),
-[finances](../case-studies/northstar/first-quarter.md#finances-chapter-52),
-[three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51),
-and [risk, security, and compliance](../case-studies/northstar/first-quarter.md#risk-security-and-compliance-chapter-53);
-the [timeline](../case-studies/northstar/timeline.md), [cast](../case-studies/northstar/cast.md), and
-[quarter 4 briefing](../case-studies/northstar/quarter-4-briefing.md) help you find them (the briefing
-also mentions later weeks, which stay off limits). They include the executives' positions from weeks 46
-and 47, Finance's week 46 latest estimate for fiscal year 1 and the capitalization policy, Helena Marsh's
-week 46 confirmation of the business choices, and your own week 47 three-year strategy draft
-([Chapter 51](../parts/12-cto-leadership/51-enterprise-technology-strategy.md)). Quarter 4 results do not
-exist. No outcome is recorded for the week 46 organization decision or any later decision; the proposal must hold at 80 engineers, at 79 (the main organization proposal),
-and at 78 (if a VP takes a seat).
+**The time rule.** Use only facts dated week 47 or earlier ([weeks](../glossary.md#weeks-quarters-and-years)
+count from the director's first week). The fact sheet under Starting Dataset lists every case fact the
+project needs, each with its week, so you do not have to search the case pages for them. If you use
+anything else from the case, check that it is dated week 47 or earlier. Quarter 4 results do not exist,
+and no outcome is recorded for the week 46 organization decision or any later decision. The proposal
+must therefore hold at 80 engineers, at 79 (the main organization proposal), and at 78 (if a vice
+president takes a [seat](../glossary.md#seat)).
 
 **Constraints.** These are binding.
 
@@ -110,7 +104,7 @@ Use these sources:
 
 - [Northstar overview](../case-studies/northstar/index.md), including
   [executive and board context](../case-studies/northstar/index.md#executive-and-board-context); [baseline data](../case-studies/northstar/baseline-data.md), especially "Money", reliability,
-  security, and the architecture and estate tables; [the first quarter](../case-studies/northstar/first-quarter.md),
+  security, and the architecture and estate tables; [the year 1 record](../case-studies/northstar/first-quarter.md),
   especially "Quarter 3 results", "Quarter 4", and
   [executive and company facts in quarter 4](../case-studies/northstar/first-quarter.md#executive-and-company-facts-in-quarter-4)
   (Finance's fiscal year 1 statements, the capitalization policy, the TR-01 cost scenarios, and your week 47 strategy draft); and
@@ -133,16 +127,39 @@ so that every learner prices the same thing; they are not part of Northstar's re
 [`p8-cash-offsets.csv`](data/p8-cash-offsets.csv) lists three possible offsets, all invented for this
 project, with a confidence for each.
 
-**Facts your submission must use.**
+**Project fact sheet.** Every case fact the submission must use, one per row. All are dated week 47 or
+earlier.
 
-| Area | Facts |
-|---|---|
-| Economics | $185,000 per engineer-year; $46,250 per FTE-quarter; about $3,558 per engineer-week ($185,000 ÷ 52); $800 per engineer-day in Chapter 30's tax-svc case; gross margin 72 percent; discount rate 10 percent; ARR $140M; top-40 customers about $1.17M ARR each; engineering people plus cloud and tooling $20.3M (14.5 percent of ARR) |
-| Results | Sev1 and Sev2 30, 21, 17, 14; availability 99.62, not recorded, 99.86, 99.89 percent; credits $410,000, not recorded, $95,000, $60,000; unplanned work 34, 31, 28, 25 percent |
-| Continuation | Stage 2: 6 FTE, $150,000 tooling, gate week 78; stage 3: 5 FTE, $100,000 only if a CI target is chosen, gate week 104; Greg Tanaka's alternative of 4 FTE plus two engineers on deal features in quarters 5 and 6 (about $185,000 of capacity) |
-| Finances | Fiscal year 1 latest estimate: revenue $145.0M, operating income $21.0M (14.5 percent), cash $73.5M at year end, no debt; engineering personnel expensed $13.7M; capitalized engineering $2.4M (about 15.3 FTE-years). Policy: coding and testing on budget-authorized projects that add functionality is capitalized at $157,250 per FTE-year and amortized over three years; maintenance, incident work, prevention, and refactoring are expensed. The $4.2M is $3.1M production hosting and $1.1M development tooling |
-| Risks | TR-01 Core framework past free support (score 9; Chapter 30's range 120 to 180 engineer-days; Finance's scenarios 120, 190, and 243 engineer-days, expensed; extended support assumed at $60,000 a year); TR-08 one partner bank route (INC-413: Sev1, 150 minutes, a recurrence); four build systems (about 1.5 FTE a year to run; one system about 0.5); invoice correctness SLO needs reconciliation; 8 of 14 baseline customer-detected incidents were correctness failures |
-| Stakeholders | Helena Marsh: six of the 40 largest customers renew in quarters 5 to 8. Rajiv Menon: operating expense flat; offsets inside the $4.2M. Greg Tanaka: prevention engineers to deal features. Amara Okafor: allocation fixed per stage. Sofia Alvarez: customer incident notifications kept |
+| Fact | Value | Week | Source |
+|---|---|---|---|
+| Fully loaded cost of an engineer | $185,000 a year | Baseline | [Overview](../case-studies/northstar/index.md) |
+| Planning rate for engineer time | $3,558 an engineer-week ($185,000 ÷ 52), which is $46,250 an [FTE-quarter](../glossary.md#fte-quarter) | Quarter 4 | [Year 1 record, quarter 4 assumptions](../case-studies/northstar/first-quarter.md#assumptions-and-people-used-in-quarter-4) |
+| Finance's day rate | $800 an engineer-day ($185,000 ÷ about 230 working days); higher per day than the planning rate because Finance counts only working days. Used in Finance's TR-01 scenarios and Chapter 30's tax-svc case | By week 47 | [Year 1 record, finances](../case-studies/northstar/first-quarter.md#finances-chapter-52) |
+| Gross margin; discount rate | 72 percent; 10 percent a year | Quarter 4 | [Quarter 4 assumptions](../case-studies/northstar/first-quarter.md#assumptions-and-people-used-in-quarter-4) |
+| Annual recurring revenue (ARR) | $140M; the 40 largest customers about $1.17M each | Baseline; quarter 4 | [Overview](../case-studies/northstar/index.md); quarter 4 assumptions |
+| Engineering people plus cloud and tooling | $20.3M a year ($16.1M personnel plus $4.2M), 14.5 percent of ARR | Baseline | [Overview](../case-studies/northstar/index.md) |
+| Seats | 87 in all (80 engineers, 6 managers, the director); no requisitions | Baseline | [Overview](../case-studies/northstar/index.md) |
+| Sev1 and Sev2 incidents | 30 in the baseline quarter; 21, 17, 14 in quarters 1 to 3 | Weeks 13, 26, 39 | [Timeline](../case-studies/northstar/timeline.md) |
+| Availability, order and payment paths | 99.62 percent; not recorded; 99.86; 99.89 (contract: 99.9) | Weeks 13, 26, 39 | [Timeline](../case-studies/northstar/timeline.md) |
+| Service credits a quarter | $410,000; not recorded; $95,000; $60,000 | Weeks 13, 26, 39 | [Timeline](../case-studies/northstar/timeline.md) |
+| Unplanned work | 34, 31, 28, 25 percent | Weeks 13, 26, 39 | [Timeline](../case-studies/northstar/timeline.md) |
+| Continuation, stage 2 "Hold" | Quarters 5 and 6: 6 FTE of prevention, $150,000 of tooling, gate in week 78 | Week 45 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Continuation, stage 3 "Converge" | Quarters 7 and 8: 5 FTE; $100,000 of tooling only if a CI target is chosen; gate in week 104 | Week 45 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Greg Tanaka's alternative | 4 FTE of prevention plus two engineers on deal features in quarters 5 and 6 (about $185,000 of capacity) | Weeks 46–47 | [Chapter 49](../parts/11-vp-engineering/49-multi-year-transformation-communication-and-politics.md#case-study) |
+| Fiscal year 1 (FY1) revenue and operating income | $145.0M; $21.0M (14.5 percent) | Week 46 | [Finances](../case-studies/northstar/first-quarter.md#finances-chapter-52) |
+| Cash and debt | $73.5M at year end; no debt | Week 46 | [Finances](../case-studies/northstar/first-quarter.md#finances-chapter-52) |
+| Engineering personnel expensed; capitalized engineering | $13.7M; $2.4M (about 15.3 FTE-years) | Week 46 | [Finances](../case-studies/northstar/first-quarter.md#finances-chapter-52) |
+| Capitalization policy | Coding and testing on budget-authorized projects that add functionality is capitalized at $157,250 per FTE-year (the capitalized 85 percent of $185,000) and amortized over three years; maintenance, incident work, prevention, and refactoring are expensed | By week 47 | [Finances](../case-studies/northstar/first-quarter.md#finances-chapter-52) |
+| Cloud and tooling budget | $4.2M: $3.1M production hosting, $1.1M development tooling | Week 46 | [Finances](../case-studies/northstar/first-quarter.md#finances-chapter-52) |
+| TR-01 on the technology risk register ([register IDs](../glossary.md#register-ids)): Core's framework past free support | Risk score 9; Chapter 30's estimate 120 to 180 engineer-days | Week 14 | [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md) |
+| TR-01 cost | Finance's scenarios 120, 190, and 243 engineer-days, expensed; extended support assumed at $60,000 a year | By week 47 | [Finances](../case-studies/northstar/first-quarter.md#finances-chapter-52); Chapters 30 and 52 |
+| TR-08, one partner bank route | No fallback route; caused INC-413, a partner bank outage (Sev1, 150 minutes, a recurrence) | Week 14; baseline quarter | [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md); incident file |
+| Build systems | Four CI systems take about 1.5 FTE a year to run; one would take about 0.5 | Baseline | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Invoice correctness | The proposed invoice-correctness SLO (99.99 percent) needs reconciliation first; 8 of 14 baseline customer-detected incidents were correctness failures | Year 1; baseline | [Year 1 record](../case-studies/northstar/first-quarter.md); [baseline data](../case-studies/northstar/baseline-data.md) |
+| Helena Marsh (CEO) | Six of the 40 largest customers renew in quarters 5 to 8 | Weeks 46–47 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Rajiv Menon (CFO) | Operating expense flat; the $150,000 offset inside the $4.2M | Weeks 46–47 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Greg Tanaka (VP Sales) | Prevention engineers to deal features | Weeks 46–47 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Amara Okafor (CPO); Sofia Alvarez (VP Customer Success) | Allocation fixed per stage; customer incident notifications kept | Weeks 46–47 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
 
 **Facts you do not have.** Quarter 4 results; any decision after week 47; whether CI consolidation phase 1
 or a general reconciliation job is running; the revenue value of the deal features Greg Tanaka wants;
@@ -178,9 +195,8 @@ spreadsheet.
 
 1. **Write the decision first.** Separate what the board approves (an envelope) from what the executive team
    decides (the continuation) and what you decide (the order of technical work).
-2. **Fix the conventions.** Choose one rate for effort and say it ($3,558 an engineer-week, or $800 an
-   engineer-day, which is not the same thing at five days a week), the timing of flows, and the horizon.
-   Mixing them is the most common arithmetic error in this project.
+2. **Fix the conventions.** State one effort rate (the planning rate, $3,558 an engineer-week, converting
+   Finance's day-based figures once), the timing of flows, and the horizon.
 3. **Price each candidate** with its options. For TR-01, compare migrating with buying extended support and
    with doing nothing; for the bank route, compare building with accepting the risk. Use the high end of each
    effort range in the downside case: people predicting their own completion times were consistently optimistic in experiments

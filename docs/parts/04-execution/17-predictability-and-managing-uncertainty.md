@@ -5,11 +5,8 @@ forecasting delivery as a range with a probability, built from what teams have a
 keeping forecasts, targets, and commitments apart; and ordering uncertain work so the biggest
 unknowns are resolved first. The running example is Northstar Technologies, the fictional company in
 the [case study](../../case-studies/northstar/index.md), whose committed roadmap delivered 7 of 17
-items in the promised quarter.
-
-Planning methods and prioritization are in Chapter 15, flow (lead time, work in progress,
-dependencies, unplanned work) in Chapter 16, and negotiating with stakeholders in Chapter 46. This
-chapter asks what you can promise from a prioritized backlog and a measured delivery system.
+items in the promised quarter. It asks what you can promise from a prioritized backlog (Chapter 15)
+and a measured delivery system (Chapter 16).
 
 ## Why This Matters
 
@@ -26,7 +23,9 @@ the dates she gave"; two renewals worth $9M depend on two dated features. A CTO 
 likely a date is cannot price the risk of promising it.
 
 Predictability is not speed, nor hitting every date: a team that commits to very little hits every
-date and is nearly useless. Leaders need **calibration**: when the team says it is 85 percent sure, it is right about 85 percent of the time.
+date and is nearly useless. Leaders need **calibration**: when the team says it is 85 percent sure, it
+is right about 85 percent of the time. (This is forecast calibration, not the performance-review
+calibration of Chapter 8.)
 
 ## Learning Objectives
 
@@ -98,6 +97,23 @@ studies, so "people always underestimate" is too strong. And many studies do not
 
 This book's conclusion: do not fix estimates by asking people to try harder. Use history, and treat
 any expert range as narrower than it should be.
+
+### Story points, planning poker, and t-shirt sizes
+
+Most teams estimate with one of three practices. Know what each is good for (**this book's
+recommendation**; no study found compares them on delivery outcomes):
+
+| Practice | What it is | Good for | Weak for |
+|---|---|---|---|
+| [Story points](../../glossary.md#velocity-and-story-points) | Relative size per item; velocity is points finished per sprint | Exposing disagreement about scope | Dates, and any comparison across teams |
+| Planning poker | Each person reveals a point estimate at once, then outliers explain | Surfacing what one person knows (Chapter 13's hidden profiles) | Speed, on a large backlog |
+| T-shirt sizes | Rough classes such as S, M, L | Sorting a long list quickly | Summing into a plan |
+
+The value of all three is the conversation. When two engineers say 2 and 13, one of them knows
+something, and the scope gets clearer. The weakness is the next step: summing points or sizes into a
+date. That reproduces the single-point loop above with extra arithmetic. Some practitioners drop
+estimates and count items instead. That works when items are sliced to a similar size, and it is what
+throughput forecasting below assumes. Estimate to understand the work; forecast dates from history.
 
 ### Inside view and outside view
 
@@ -222,9 +238,9 @@ as wide at the halfway point as at the start, the hard questions were deferred.
 
 When a dated item falls behind, the usual proposed remedy is more people. **Brooks's law**, as it is
 commonly stated, holds that adding people to a late software project makes it later
-([Brooks, 1995](../../references/bibliography.md#brooks1995mythical)). A secondary account reports
-that Brooks called it an oversimplification and explained it by ramp-up time, communication overhead
-growing with team size, and tasks that cannot be divided.
+([Brooks, 1995](../../references/bibliography.md#brooks1995mythical)). Brooks reportedly called it an
+oversimplification. The mechanisms are ramp-up time, communication overhead that grows with team size,
+and tasks that cannot be divided.
 
 Treat it as **expert opinion** that names mechanisms. Adding people helps when the work divides
 cleanly, the newcomers know the code, and enough time remains for ramp-up to pay back. It hurts late,
@@ -237,14 +253,16 @@ is usually faster than moving people in.
     Week 1, the director's first day. In the baseline quarter Northstar delivered 7 of its 17 committed
     roadmap items on time. Two renewal features, on which $9M of annual recurring revenue depends, are due in quarter 2:
     the accounting integration in week 19 and bulk ordering in week 26. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This example is **illustrative**: the throughput and scope numbers are invented for it. It is the
 calculation a director could run on arrival, with data that existed on day one. (Northstar's record
 shows only that both renewal features were on track at day 90.)
 
-Bulk ordering, owned by Orders, is committed to a renewal customer for the end of quarter 2 (week 26
-from the director's first day) and broken into 44 backlog items. Orders' recent history:
+Bulk ordering, owned by Orders, is committed to a renewal customer for week 26 (the end of quarter 2)
+and broken into 44 backlog items. Orders' recent history:
 
 ```text
 Orders: planned items finished per week, history weeks H1-H26
@@ -258,7 +276,7 @@ Assumptions, stated:
 - Bulk ordering is staffed by five Orders engineers and two Customer Experience web engineers, half
   of Orders' headcount, so it gets about half of Orders' historical planned throughput.
 - Orders' 10 percent [prevention allocation](../../glossary.md#prevention-allocation) (capacity
-  reserved for removing the causes of incidents), assumed to continue into quarter 2, scales
+  reserved for removing the sources of incidents and unplanned work), assumed to continue into quarter 2, scales
   throughput by 0.9. The combined factor is 0.45, about 2.3 items a week.
 - Unplanned work is excluded from the counts; its effect is already in how few planned items got done.
 - Orders' last four features grew 15 to 35 percent in item count after starting; 25 percent growth
@@ -281,8 +299,8 @@ Three readings matter. First, the single-point plan sits within a week of the si
 it should; the simulation adds what the median means, a 50 percent chance. Second, the 44 items are
 very likely done by week 26, but the 55-item version that history says to expect is done in only
 about five trials in six: the risk to the renewal is scope growth, not throughput. Third, the
-simulation is narrower than reality. It assumes independent weeks and an unchanged team, yet two
-quality engineers join Orders during the quarter, and bulk upload has a known recurring failure
+simulation is narrower than reality. It assumes independent weeks and an unchanged team. Yet Orders
+takes over the core/customer module in week 4, two quality engineers join it in week 10, and bulk upload has a known recurring failure
 (INC-421, a bulk-upload failure that dropped lines beyond row 500). Read the range as a minimum.
 
 What the director can do: agree the 44 items in writing as the contractual scope with Amara Okafor
@@ -312,7 +330,7 @@ The second decision is which forecasting method fits the data you have:
 | Three or more months of throughput, familiar work | Monte Carlo on throughput | System changes that make history stale |
 | New team or new kind of work | Reference class from comparable work, wide range | A flattering reference class |
 | Multi-team initiative | Reference class for the whole, team forecasts for the parts | Assuming the whole is on time because each part's median is |
-| Single small item | Cycle-time percentiles (Chapter 16) | Treating the 50th percentile as a promise |
+| Single small item | [Cycle-time](../../glossary.md#cycle-time) percentiles ([Chapter 16](16-flow-lead-time-dependencies-and-unplanned-work.md#flow-measures-throughput-cycle-time-and-work-item-age)) | Treating the 50th percentile as a promise |
 | Pure research | Time box and decision date, no delivery forecast | Pretending a time box is a forecast |
 
 The third decision is what confidence a commitment needs. This book's recommendation: commit at the
@@ -451,7 +469,7 @@ efforts treated as a delivery forecast. Second, the outside view was in Northsta
 committed item had about a 40 percent chance of landing in its quarter, and the planning method had
 not changed. A plan assuming otherwise needed a reason, and none was given.
 
-The [first quarter](../../case-studies/northstar/first-quarter.md) record shows what followed: in
+The [year 1 record](../../case-studies/northstar/first-quarter.md) shows what followed: in
 week 4, Amara Okafor accepted a dip in feature capacity on condition that the two renewal commitments
 kept their dates, and both were on track at day 90. Rebuilding quarterly planning is left to the
 exercises.

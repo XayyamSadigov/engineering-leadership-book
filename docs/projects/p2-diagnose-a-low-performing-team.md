@@ -114,17 +114,33 @@ are consistent with the case, but no chapter relies on them. Engineers are ident
 | Priya Raman, Orders manager | "Billing blames our changes. We can't tell which of our changes touch invoicing until the train fails." |
 | Sofia Alvarez, VP Customer Success | "Invoice errors are the worst calls. Customers' accountants find them, sometimes weeks later." |
 
-**Facts your submission must use.**
+**Project fact sheet.** Every case fact the submission must use, one per row. All describe the baseline
+quarter (the quarter before the director arrived) and are allowed under the time rule. You do not need to
+search the case pages for these.
 
-| Area | Facts |
-|---|---|
-| Stability | 8 Sev1 and Sev2 incidents (2 Sev1); 5 via the Core release train, 2 via database migrations, 1 latent defect; 5 first detected by customers; 6 recurrences of the organization's 11; 4,480 of the organization's 9,558 restoration minutes |
-| Delivery | 8 deployments a month, 21-day median lead time, 34 percent change failure rate, all mainly through the fortnightly Core train; 0 of 3 committed items delivered; Sprint Goal met in 1 of 6, scope changed in all 6 |
-| Capacity | Unplanned work 41 percent: failure recovery 24, requests from other teams 7, toolchain and environments 6, expedited 4 points; tax-svc upkeep about 0.6 [FTE](../glossary.md#fte) by one engineer |
-| People and knowledge | 180 pages, 126 first handled by three ledger engineers, 54 of 64 after-hours pages by them, 61 needing no action; ledger knowledge by area; 2 departures in 12 months; the ledger engineer who left; Tamsin Achterberg's coverage |
-| Management | Marcus's time: people 15, delivery 55, technical 15, other 15 percent; technical direction "decided during incidents"; annual reviews on roadmap delivery only |
-| System | One shared schema for [Core](../glossary.md#core), the monolith; migrations tested against an empty schema; no reconciliation; core/scheduler unowned and co-changed with invoicing; no record of which team's change triggered a Core release incident |
-| Comparison | Orders, also on the Core train: 29 percent change failure rate, 7 incidents, 36 percent unplanned, 1 of 4 committed items delivered. Payments and Integrations, off the train: 21 percent, 6 incidents, 33 percent unplanned |
+| Fact | Value | Week | Source |
+|---|---|---|---|
+| Billing's Sev1 and Sev2 incidents | 8, of which 2 Sev1 | Baseline quarter | [Incident file](../case-studies/northstar/data/incidents-last-quarter.csv) |
+| How they were triggered | 5 via the Core release train, 2 via database migrations, 1 latent defect | Baseline quarter | [Incident file](../case-studies/northstar/data/incidents-last-quarter.csv) |
+| First detected by customers | 5 of the 8 | Baseline quarter | [Incident file](../case-studies/northstar/data/incidents-last-quarter.csv) |
+| Recurrences | 6 of the organization's 11 | Baseline quarter | [Incident file](../case-studies/northstar/data/incidents-last-quarter.csv) |
+| Restoration minutes | 4,480 of the organization's 9,558 | Baseline quarter | [Incident file](../case-studies/northstar/data/incidents-last-quarter.csv) |
+| Deployments and lead time | 8 deployments a month; 21-day median lead time, mainly through the fortnightly Core train | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Change failure rate | 34 percent | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Roadmap delivery | 0 of 3 committed items delivered | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Sprints | Sprint Goal met in 1 of 6; scope changed in all 6 | Baseline quarter | [Sprint record](data/p2-billing-sprints.csv) |
+| Unplanned work | 41 percent: failure recovery 24, requests from other teams 7, toolchain and environments 6, expedited work 4 points | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| tax-svc upkeep | About 0.6 [FTE](../glossary.md#fte), all by one engineer | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Pages | 180 in all; 126 first handled by three ledger engineers; 54 of 64 after-hours pages by them; 61 needed no action | Baseline quarter (rebuilt later from the paging tool) | [Ledger knowledge map](../case-studies/northstar/baseline-data.md#billing-on-call-and-ledger-knowledge) |
+| Ledger knowledge | Who can respond alone and who can change each ledger area safely; Tamsin Achterberg's coverage | Baseline | [Ledger knowledge map](../case-studies/northstar/baseline-data.md#billing-on-call-and-ledger-knowledge) |
+| Departures | 2 in 12 months, one of them a ledger engineer | Year before week 1 | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Marcus Oyelaran's time | People 15, delivery 55, technical 15, other 15 percent; technical direction "decided during incidents" | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Annual reviews | Based on roadmap delivery only | Baseline | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Schema and migrations | One shared schema for [Core](../glossary.md#core), the monolith; migrations tested against an empty schema; no reconciliation | Baseline | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| core/scheduler | Unowned, and changed together with invoicing | Baseline | [`components.csv`](../case-studies/northstar/data/components.csv) |
+| Incident attribution | No record of which team's change triggered a Core release incident | Baseline | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Orders, for comparison (also on the train) | 29 percent change failure rate; 7 incidents; 36 percent unplanned; 1 of 4 committed items delivered | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Payments and Integrations, for comparison (off the train) | 21 percent change failure rate; 6 incidents; 33 percent unplanned | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
 
 **Facts you do not have.** Billing's escaped defects by earliest point of detection (the case gives
 that table only for the organization); the content of Billing's last incident reviews beyond the

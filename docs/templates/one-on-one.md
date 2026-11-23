@@ -110,9 +110,12 @@ monthly_summary: []               # {month, did, working_toward, owed_by_manager
     Week 19 of the Engineering Director's first year at Northstar Technologies, a fictional company.
     Daniel Cho manages Customer Experience: 15 web and mobile engineers, 17 reports with the two quality
     engineers who joined in week 10. Mateo Arango Ríos is the team's informal mobile lead in Bogotá. See
-    the [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    the [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
-**The channel check, weeks 14 to 19 (Part 3).** The director recoded Daniel's records for six weeks.
+**The channel check, weeks 14 to 19 (Part 3).** Weeks count from the director's first week. The
+director recoded Daniel's records for six weeks.
 The two quality engineers were left out of the sample as too recent.
 
 | Signal | Count | Reading |

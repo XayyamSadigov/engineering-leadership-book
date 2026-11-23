@@ -222,9 +222,12 @@ flowchart TD
 
 !!! info "Northstar so far"
     This example uses the quarter before the director arrived. The case is set in quarter 3 (weeks
-    27 to 39): by then Sev1 and Sev2 incidents had fallen from 30 to 21 in quarter 1 and 17 in
-    quarter 2, and both renewal commitments were delivered by week 26. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    27 to 39): by then [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two
+    most serious levels) had fallen from 30 to 21 in quarter 1 and 17 in quarter 2, and both
+    [renewal commitments](../../glossary.md#renewal-commitments) were delivered by week 26. See the
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This example is **illustrative**. It applies the portfolio arithmetic to Northstar's baseline
 quarter, using the [baseline data](../../case-studies/northstar/baseline-data.md).
@@ -233,9 +236,10 @@ The quarter committed 17 items: 9 cross-team and 8 single-team. Seven shipped: 6
 cross-team. Single-team items shipped at 75 percent (6 of 8), cross-team items at 11 percent (1 of
 9).
 
-Committing all 9 at the start of the quarter put them in progress together. With cross-team
-throughput of about one a quarter, Little's law read naively gives about nine quarters in progress.
-That is not a forecast (the system was not stable), but it shows the direction. The work-item data say
+Committing all 9 at the start of the quarter put them in progress together. Little's law turns that
+into a time: 9 items in progress ÷ about 1 finished a quarter = about 9 quarters each, on average. It
+is not a forecast (the system was not stable). It shows that the commitment was impossible on its
+face. The work-item data say
 the same at a smaller grain: median [lead time](../../glossary.md#lead-time) was 11 days for items with no dependency, 24 with one, and 41 with two or more.
 
 Now apply a limit of three. The nine items drew on the same shared constraints: Platform Operations
@@ -331,6 +335,13 @@ response target, and a policy for what it may bypass.
 **An interest map for each recurring stakeholder**, kept by the director and revised after each
 contested decision.
 
+**Relationship capital, built before it is needed.** Influence in a conflict draws on trust built in
+calm weeks (**this book's recommendation**). Hold a short one-on-one each month with each peer
+function head, with no request on the agenda: ask what is worrying them and what engineering could
+make easier. Bring them early warning before they need it. Close every small promise on the date you
+gave. A director who meets a peer for the first time over a contested swap is spending capital that
+was never deposited.
+
 At 150 engineers, a portfolio may need two levels: a few organization-wide initiatives with a limit
 set by the CTO's staff, and area portfolios run by directors under their own limits.
 
@@ -381,7 +392,7 @@ committed product effort.
 | Amara Okafor, CPO | "Commit the targets too" (Chapter 38) | Dates she can give customers without being burned again | Forecast ranges against the four-quarter record | Early warning and forecasts she can repeat |
 | Greg Tanaka, VP Sales | His two deal features first | Credible dates that close open deals | What he can say to a prospect | A fast, honest answer on any deal request |
 | Sofia Alvarez, VP Customer Success | Fewer escalations, honest incident status | Customer trust after a year of outage calls | Customer-detected share, escalation counts | Status communication built and rehearsed |
-| Rajiv Menon, CFO | Flat operating expense; credits to stop | Predictable spend he can explain to the board | Dollars, run rate, credits paid | Capacity reported by category in his terms |
+| Rajiv Menon, CFO | Flat [operating expense](../../glossary.md#operating-expense); credits to stop | Predictable spend he can explain to the board | Dollars, [run rate](../../glossary.md#run-rate) (current spend projected forward), credits paid | Capacity reported by category in his terms |
 
 Sofia had co-written the severity definitions in week 3 of the first quarter. Rajiv's request for an
 output-per-engineer figure (Chapter 18) was still open.
@@ -413,7 +424,8 @@ The director's arithmetic, prepared before the conversation:
 - **Orders' load.** Orders already led multi-currency and contributed to the export; a third
   cross-team initiative is the pattern behind the baseline's 1 of 9.
 - **Slots.** Slot 3 frees at about week 33, promised to service-credit statements; slot 2 at week 34.
-- **Forecast.** From week 34, at about 7 engineer-weeks a week across two teams, 70 engineer-weeks
+- **Forecast.** From week 34, assuming the two teams can give it about 7 engineer-weeks a week after
+  their other commitments, 70 engineer-weeks
   takes 10 weeks: week 44, or weeks 45 to 47 with the 15 to 35 percent growth seen in Orders' recent
   features. Starting now as a fourth initiative would not finish earlier, and would put the
   multi-currency date, already given in an open deal, at risk.
@@ -448,8 +460,8 @@ and whether a three-initiative limit is the right number for quarter 4.
 ## Exercises
 
 Solutions are in [chapter 42 solutions](../../solutions/ch42-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md) and
-[the first quarter](../../case-studies/northstar/first-quarter.md) page.
+[baseline page](../../case-studies/northstar/baseline-data.md) and in
+[the year 1 record](../../case-studies/northstar/first-quarter.md).
 
 ### Foundational
 

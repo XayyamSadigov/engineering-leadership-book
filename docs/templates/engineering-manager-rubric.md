@@ -13,6 +13,11 @@ rubric assesses that, on six dimensions, using evidence a third person could che
 the common default of reviewing managers on their team's roadmap delivery alone, which rewards
 renegotiated commitments and personal heroics and ignores whether the team is getting stronger.
 
+!!! tip "Minimum version"
+    For a first assessment, rate the six dimensions with one dated piece of evidence each, mark "No
+    evidence" where you have none, and agree one development goal with a check date. Add contrary
+    evidence and calibration before the first formal cycle.
+
 ## How to fill it in
 
 1. Fix the window: the last two quarters, with start and end weeks.
@@ -69,22 +74,25 @@ assessment:
 ## Example: Northstar, Elena Sokolova, Payments and Integrations
 
 !!! info "Northstar so far"
-    Weeks 1 to 26 of the Engineering Director's first year at Northstar Technologies, a fictional company.
-    Elena Sokolova manages Payments and Integrations and has the organization's best operational
-    discipline. The director drafts this assessment in week 24 and finalizes it in week 27. See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    Weeks 1 to 26 of the Engineering Director's first year at Northstar Technologies, a fictional
+    company. Elena Sokolova manages Payments and Integrations and has the organization's best
+    operational discipline. The director drafts this assessment in week 24 and finalizes it in week 27.
+    See the [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
-Window: weeks 1 to 26 (quarters 1 and 2). Baseline-quarter facts from the
+Window: weeks 1 to 26 (quarters 1 and 2), counted from the director's first week. Baseline-quarter
+facts (the quarter before the director arrived) from the
 [baseline data](../case-studies/northstar/baseline-data.md) are context, not window evidence.
 
 | Dimension | Rating | Dated evidence | Contrary evidence |
 |---|---|---|---|
-| 1. Outcomes in context | Strong | Week 19: accounting integration live for the renewal customer with daily reconciliation (director's report); week 6: payments-gateway flag changes move to reviewed, validated merge requests (pipeline record) | The ledger read path is unnamed and ADR-0001, the decision on how integrations read ledger data, is open |
+| 1. Outcomes in context | Strong | Week 19: accounting integration live for the renewal customer with daily reconciliation (director's report); week 6: payments-gateway flag changes move to reviewed, validated merge requests (pipeline record) | The ledger read path is unnamed and [ADR-0001](../glossary.md#adr-0001), the decision on how integrations read ledger data, is open |
 | 2. Operational ownership | Strong | Weekly 30-minute operations review, two years old at baseline and still running at the start of quarter 2 (meeting notes); week 8: a contract test catches a payments-gateway rounding change (pipeline record) | Blind spot: payments-gateway configuration edits never reached the near-miss log (17 entries at baseline), though that file produced two incidents; webhooks arrived in week 4 with signing keys never rotated |
 | 3. People growth | Solid | Rotating facilitator in the operations review gives each engineer practice leading it (meeting notes); a senior engineer acts as tech lead (self-assessment) | The acting tech lead holds no title; no promotion case yet |
 | 4. Team health | Strong | In the operations review the engineer coming off on-call presents and Elena speaks last, so bad news surfaces from the team (meeting notes); one departure in the 12 months before the window (HR record, context) | No upward feedback collected for her team in the window |
 | 5. Cross-team leverage | Strong | Week 16: facilitates Customer Experience's team health check (peer manager); start of quarter 2: Priya Raman (Orders manager) asks to adopt the operations review and near-miss log in Orders (peer manager) | |
-| 6. Running the role | Solid | Time split 35 people, 35 delivery, 15 technical (calendar reconstruction, baseline); technical direction delegated to a senior engineer; quarter 2: lowers WIP limits for the integration (team board) | Week 14 onward: Victor Lindqvist (CTO) told her in passing to "read the tables now" on ADR-0001; whether she escalated the conflict is not recorded. Ask |
+| 6. Running the role | Solid | Time split 35 people, 35 delivery, 15 technical (calendar reconstruction, baseline); technical direction delegated to a senior engineer; quarter 2: lowers [WIP limits](../glossary.md#work-in-progress-wip-and-wip-limit) (work-in-progress limits) for the integration (team board) | Week 14 onward: Victor Lindqvist (CTO) told her in passing to "read the tables now" on ADR-0001; whether she escalated the conflict is not recorded. Ask |
 
 There is no composite score: the six
 ratings are read separately and are not used to rank Elena against the other managers.

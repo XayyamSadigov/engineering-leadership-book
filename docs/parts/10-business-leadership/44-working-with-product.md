@@ -231,7 +231,10 @@ shape.
     Week 40 of the director's first year. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3)
     incidents (the two most severe levels) fell from 30 a quarter to 14 in quarter 3, and both renewal features have shipped. In week 39 Orders sized price-list effective dates
     at 14 engineer-weeks, and Greg Tanaka (VP Sales) then gave a customer week 46. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 This example is **illustrative**: Northstar's ordering area in quarter 4 (weeks 40 to 52). The area
 handles about 600,000 order submissions every 28 days.
@@ -261,8 +264,8 @@ amended, or credited for an ordering error within 72 hours of submission. Last 2
 
 **Step 4, causes.** An Orders senior engineer and an Orders quality engineer reviewed a random sample
 of 400 corrections with Keiko Ashworth, the area's product manager (about 2 engineer-weeks). Sixty were
-customers changing their minds and 340 were errors. Scaling 1.3 percent by 340 of 400 gives an
-ordering-error rate of about 1.1 percent, about 6,630 orders per 28 days. The 340 errors:
+customers changing their minds and 340 were errors. The ordering-error rate is therefore about 1.1
+percent, about 6,630 orders per 28 days. The 340 errors:
 
 | Cause | Count | Share | Engineering finding |
 |---|---|---|---|
@@ -301,9 +304,11 @@ about 0.6 percent:
 | **All three** | | | **157 of 340** |
 
 Predictions like this are often wrong, so the target is 0.8 percent by week 52, reviewed in week 46.
-Guardrails: order latency within its objective, order volume per distributor, and carts abandoned at
-the repricing prompt, since a prompt that makes buyers give up lowers corrections by losing orders.
 The margin is 1 engineer-week; outcome B's 30 are the release valve if anything grows.
+
+**Step 3, guardrails (set with the target).** Order latency within its objective, order volume per
+distributor, and carts abandoned at the repricing prompt. A prompt that makes buyers give up would
+lower corrections by losing orders.
 
 ## Decision Framework
 
@@ -420,11 +425,13 @@ rather than engineering's preference, which lets it survive a large deal.
 This case is **fictional**, set in quarter 4 (weeks 40 to 52); none of its decisions has an outcome
 yet, and they are yours. It concerns only work outside the three cross-team initiatives.
 
+The people are on the [cast](../../case-studies/northstar/cast.md) page.
+
 **The background.** The quarter-3 list of Amara Okafor, the chief product officer (CPO), held about 62
 [FTE-quarters](../../glossary.md#fte-quarter) of estimated effort, 22.6 of them unfunded
 ([Chapter 38](../08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md#engineering-organization-example)).
 Her quarter-4 list again exceeded capacity. Her three product managers cover ordering (Keiko Ashworth),
-billing and payments, and data and customer reporting. The monthly board pack of Helena Marsh, the CEO,
+billing and payments, and data and customer reporting. The monthly [board pack](../../glossary.md#board-pack) (the report sent to the board) of Helena Marsh, the CEO,
 still carries one engineering delivery number: committed roadmap items delivered.
 
 **Weeks 40 and 41.** Sofia Alvarez (VP Customer Success) forwards a complaint from one of the 40 largest distributors: its

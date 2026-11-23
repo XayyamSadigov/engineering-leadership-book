@@ -163,6 +163,14 @@ agenda, promotion evidence, onboarding checklist. That is Kotter's anchoring. Th
 away for a quarter, would the change still happen? Chapter 37 describes the cadences that carry
 such routines.
 
+Engineers need the change explained to them as well as to their managers (**this book's
+recommendation**). Managers carry it, but engineers hear the director's framing once and their
+manager's many times, so both must say the same thing. Tell engineers three things in writing: the
+problem with its number, what changes for them this month, and how to object. Then listen in more
+than one way. A pulse counts reactions; skip-level groups and a named channel for questions explain
+them. Report back what you heard and what changed because of it. Engineers who see an objection alter
+the design stop routing around the next change.
+
 ### Director failure patterns
 
 The patterns below are **this book's recommendation**, a synthesis from the sources above and from the
@@ -367,9 +375,13 @@ the stopping rule, not blame. Executive-level resistance is in Chapter 57.
 ## Case Study
 
 !!! info "Northstar so far"
-    Week 27, the start of quarter 3. Sev1 and Sev2 incidents fell from 30 at baseline to 21 in quarter
-    1 and 17 in quarter 2, and both renewal commitments were delivered by week 26. The quarter 3 plan
-    lowers prevention from 12 to 8 FTE. See the [timeline](../../case-studies/northstar/timeline.md).
+    Week 27, the start of quarter 3. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3)
+    incidents (the two most serious levels) fell from 30 at baseline to 21 in quarter 1 and 17 in
+    quarter 2, and both [renewal commitments](../../glossary.md#renewal-commitments) were delivered by
+    week 26. The quarter 3 plan lowers prevention from 12 to 8 FTE. See the
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 The Northstar quarter 3 events below are **illustrative** and fictional. Quarter 3 starts in week 27.
 
@@ -419,27 +431,26 @@ period-close collision. There was no measure, so engineers chose the easiest wor
 partly failed: 71 small improvements and 9 flaky-test fixes, and a lesson that a director's mandate
 could be exempted away.
 
-**The recovery.** In week 37 the director took a one-page note to the managers' weekly meeting first,
+**The recovery.** In week 37 the director took a one-page note to the weekly leadership team meeting first,
 then posted it to engineering. It stated what was intended, the numbers above, and four errors in the
 director's own name: a capacity diagnosis for what was mostly an ownership problem, a launch without
 the managers, a date chosen without checking period close, and no success measure at all. It ended the
 organization-wide day, allowed teams to schedule their own fix-it time inside their prevention
 allocation (the option 29 of 52 respondents chose), and made two commitments: the next
-organization-wide practice change would be agreed in that weekly meeting and piloted with one
+organization-wide practice change would be agreed in the leadership team meeting and piloted with one
 team first, and one manager each quarter would review the director's commitments list. Whether
 register entries get dedicated owners in quarter 4 planning is left open.
 
 **The director's self-assessment.** The note prompted the director to look at quarters 1 and 2 against
-the failure patterns, using only Northstar's record in
-[the director's first year](../../case-studies/northstar/first-quarter.md).
+the failure patterns, using [the year 1 record](../../case-studies/northstar/first-quarter.md).
 
 | Pattern | Evidence from quarters 1 and 2 | Reading |
 |---|---|---|
-| Initiative overload | The record lists 19 standing decisions from quarter 1 and 20 open situations at the start of quarter 2; the QA transition (week 10) raised Priya Raman to 16 reports and Daniel Cho to 17 | Present. Many were necessary, but nobody summed the load per manager |
-| Promise inflation | The migration check promised after INC-427 (credit notes applied twice after a release) was due in week 7, slipped, and landed in week 11; the week 9 Sev1 happened in the gap | Present once, with a visible cost |
-| Decision vacuum | ADR-0001, the open [architecture decision record](../../glossary.md#architecture-decision-record-adr) on how integrations read ledger data, opened in week 14 with nobody's decision rights mapped; core/permissions has no owner at day 90, under a recorded exemption | At risk; both are open decisions |
+| Initiative overload | About 40 decisions and open issues landed on six managers in two quarters; two managers gained two reports each in week 10 | Present; nobody summed the load per manager |
+| Promise inflation | A release check promised after credit notes were applied twice slipped four weeks, and a Sev1 hit the gap | Present once, with a visible cost |
+| Decision vacuum | Two cross-team decisions (an [architecture decision record](../../glossary.md#architecture-decision-record-adr) and a shared module's owner) are open with no decider | At risk |
 | Change by announcement | Quarter 3: Excellence Day | Present |
-| Level slip | The role definition excludes incident response and production code; in week 7 the director re-rated an incident and added a severity audit to the weekly review | Guarded. The re-rating was a signal source the director owns, not a team's job taken over |
+| Level slip | The director re-rated one incident's severity and added a weekly sample audit | Guarded: checking ratings is the director's own signal source |
 | Signal isolation | The severity audit and the day-90 measures are the director's own signals | Not seen |
 | Escalating commitment | The director ended Excellence Day after one pulse rather than redefining its measure | Not seen this time |
 
@@ -449,15 +460,16 @@ manager's review of the commitments list is the check.
 ## Exercises
 
 Worked solutions are in [the chapter 43 solutions](../../solutions/ch43-solutions.md). Northstar data
-is on the [baseline page](../../case-studies/northstar/baseline-data.md) and
-[the first quarter](../../case-studies/northstar/first-quarter.md) page.
+is on the [baseline page](../../case-studies/northstar/baseline-data.md) and in
+[the year 1 record](../../case-studies/northstar/first-quarter.md).
 
 ### Foundational
 
 **F1.** A director proposes a single two-week sprint cadence for all six Northstar teams, "so that
 planning and reporting are consistent". Payments and Integrations runs Kanban with WIP limits, Data and
 Analytics has no named method, Platform Operations runs an interrupt rotation, and Orders and Billing
-already run two-week Scrum aligned to the release train. At baseline, 8 of the 10 missed roadmap
+already run two-week Scrum aligned to the [release train](../../glossary.md#release-train) (Core's
+fixed release schedule). At baseline, 8 of the 10 missed roadmap
 items were cross-team; median lead time was 11 days for work items with no dependency and 41 with two
 or more; and one engineer spent about two days a month assembling delivery numbers by hand (baseline
 page, "Planning and delivery"). Write the half-page

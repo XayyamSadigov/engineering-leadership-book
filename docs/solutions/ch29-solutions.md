@@ -138,7 +138,7 @@ architect left in 2021, the monthly architecture review they chaired stopped and
 11-year-old monolith; authority conflict with Ines, whose retention is already a concern; and the
 signal to the three staff engineers that the top of their track is filled from outside.
 
-**Instead.** Publish the three standing scopes and the fortnightly staff review, so the board sees
+**Instead.** Publish the three standing scopes and the staff review every two weeks, so the board sees
 named owners for each technical risk. Name the gap honestly: no staff scope covers the frontends. If
 a multi-year domain emerges (build consolidation, a Core boundary program), define a principal role
 against it and consider internal candidates first.

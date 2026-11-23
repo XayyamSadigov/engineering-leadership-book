@@ -3,8 +3,9 @@
 What separates organizations is not whether they have incidents but what an incident leaves behind:
 a fixed weakness and engineers who describe their mistakes honestly, or an unfinished action list and
 a team that has learned to keep quiet. This chapter covers the three systems that decide which:
-incident response (roles, severity, communication), blameless review (what the organization learns),
-and change failure analysis (where a failure could most cheaply have been stopped). The running
+incident response (roles, severity, communication), the blameless
+[incident review](../../glossary.md#blameless-review) (also called a postmortem: what the organization
+learns), and change failure analysis (where a failure could most cheaply have been stopped). The running
 example is the fictional [Northstar Technologies](../../case-studies/northstar/index.md). Chapter 24
 owns SLOs and operational readiness, Chapter 23 owns CI/CD, and Chapter 57 owns crisis leadership.
 Chapter 27 uses incident data to diagnose a quality decline; this chapter builds the system that
@@ -86,12 +87,28 @@ revert later. It also recommends explicit handoff of command, a shared live inci
 declaring early, with criteria such as needing a second team, customer-visible impact, or an issue
 unsolved after about an hour ([Stribblehill, Managing Incidents](../../references/bibliography.md#google2017managing)).
 This is **documented practice** from one organization, not outcome evidence; the logic is that one
-person cannot debug and coordinate at once.
+person cannot debug and coordinate at once. This book calls the planning role the **scribe**, since
+keeping the record is the part most often skipped.
 
 So on a Sev1 the [incident commander](../../glossary.md#incident-commander) does not debug.
 Commanders come from a trained rotation, not from seniority alone. And declaring early is cheap. At Northstar, median time to detect was 6 minutes
 when monitoring caught an incident and 108 minutes when a customer reported it, so criteria that wait
 for certainty widen the gap.
+
+### The first minutes
+
+What the commander does first decides most of the incident's length. A sequence for the first twenty
+minutes (**this book's recommendation**):
+
+1. **Declare and set severity.** In doubt, take the higher level; lowering it later is cheap.
+2. **Take command out loud.** "I am commander." Assign operations and communications by name. If you
+   were debugging, hand the keyboard to someone else.
+3. **Mitigate before diagnosing.** Ask what changed recently, then roll back, turn the flag off, or
+   fail over. Restore service first; the cause can wait for the review.
+4. **Set the cadence.** The communications lead posts the first update with the time of the next one,
+   and keeps to it.
+5. **Protect the responders.** Executives and customer success get updates from the communications
+   lead, not by questioning engineers. Questions about who made the change go to the review.
 
 ### Severity definitions that resist reclassification
 
@@ -122,10 +139,9 @@ Definitions that resist reclassification have four properties (this book's recom
 **Responders** need state, hypothesis, and assignments; the live document serves them.
 **Customer-facing staff and executives** need impact, what is being done, what is unknown, and the next
 update time, but not the hypothesis of the moment: a retracted explanation costs credibility.
-Northstar's VP of Customer Success, Sofia Alvarez, wants honest status during incidents. In practice
-that means a fixed cadence on a Sev1 (for example every 30 minutes, even with no news). It also means
-a list of affected accounts among the largest 40 customers, so her team calls them before they call
-in. **Customers** need to know the provider knows,
+Northstar's VP of Customer Success, Sofia Alvarez, wants honest status during incidents: a fixed
+cadence on a Sev1 (say every 30 minutes, even with no news), and a list of affected accounts among the
+largest 40 customers, so her team calls them before they call in. **Customers** need to know the provider knows,
 what they can and cannot do, and when they will hear next.
 
 Two rules carry most of the weight (this book's recommendation). The first customer notice for a Sev1
@@ -137,7 +153,8 @@ of the truth; crisis communication belongs to Chapter 57.
 
 ### Blameless review and its critics
 
-Google's postmortem chapter describes a blameless postmortem as one that looks for contributing causes
+Google's chapter on postmortems (its name for an incident review) describes a blameless one as looking
+for contributing causes
 without indicting any individual or team, and recommends defining review triggers (user-visible
 downtime, data loss, a monitoring failure) before incidents happen
 ([Lunney and Lueder, Postmortem Culture](../../references/bibliography.md#google2017postmortem)).
@@ -170,8 +187,8 @@ software incident reports, argues that root cause analysis can make people less 
 mistakes. It adds that mean time to repair (MTTR) can be an unreliable metric
 ([Nash, 2022](../../references/bibliography.md#nash2022void)). That is **industry research**.
 
-The single-cause habit survives because it yields one clear action, but analysis stops at the first
-satisfying answer, usually a person or a step. Instead:
+The single-cause habit yields one clear action, but analysis stops at the first satisfying answer,
+usually a person or a step. Instead:
 
 - Record the **trigger** as a fact. INC-430's trigger is a mistyped rate-limit value; that needs no
   softening.
@@ -184,28 +201,26 @@ satisfying answer, usually a person or a step. Instead:
 
 ### The evidence on blameless review
 
-The evidence here is thin and contested: no peer-reviewed study measures the effect of blameless review
-on incident outcomes in software. The software research is qualitative and descriptive. Sillito and Kutomi analysed 30
-incidents from interviews and published postmortems
+The evidence supports the **mechanism** (fear suppresses reporting) but not yet the **outcome** (fewer
+or shorter incidents). No peer-reviewed study measures the effect of blameless review on incident
+outcomes in software, and the evidence is contested. The software research is qualitative. Sillito and
+Kutomi analysed 30 incidents from interviews and published postmortems
 ([Sillito and Kutomi, 2020](../../references/bibliography.md#sillito2020failures)). An interview study
-at a national space research center found failure learning informal and ad hoc, with recurring failures
+at a national space research center found failure learning informal, with recurring failures
 persisting where no structured process existed
 ([Anandayuvaraj et al., 2026](../../references/bibliography.md#anandayuvaraj2026learning)). Neither
 compares blameless with blaming reviews.
 
-The transferable evidence comes from healthcare, where **just culture** began, and it is thin. Just
-culture separates honest error, which is not punished, from reckless conduct, which is. A 2023
-integrative review called the evidence on implementing just culture scant, noted that most of the
-literature is theoretical, and called for research on patient safety outcomes
+The transferable evidence comes from healthcare's **just culture**, which separates honest error (not
+punished) from reckless conduct (punished). A 2023 integrative review called the evidence on
+implementing it scant and mostly theoretical
 ([Murray et al., 2023](../../references/bibliography.md#murray2023just)). A 2022 systematic review found
-that a focus on safety rather than individual blame enhanced trust in error reporting, and that less
-experienced staff reported more fear of blame
+that a focus on safety rather than individual blame enhanced trust in error reporting
 ([van Marum et al., 2022](../../references/bibliography.md#vanmarum2022barriers)). Edmondson's study of
 51 teams in one manufacturing company associated [psychological safety](../../glossary.md#psychological-safety)
 (a shared belief that the team is safe for interpersonal risk-taking; Chapter 11 covers it) with
-learning behavior, which in turn was associated with performance
-([Edmondson, 1999](../../references/bibliography.md#edmondson1999psychological)). These support the
-**mechanism** (fear suppresses reporting) rather than the **outcome** (fewer or shorter incidents).
+learning behavior, and learning behavior with performance
+([Edmondson, 1999](../../references/bibliography.md#edmondson1999psychological)).
 
 **This book's recommendation:** blameless toward individuals, strict about truthfulness and
 follow-through, honest that the outcome benefit is unproven, and measured locally through recurrence,
@@ -231,17 +246,20 @@ tied to a contributing factor. And nothing checked recurrence. When INC-427 was 
 check found that the review of INC-406 (a ledger index migration that locked a table) had recommended
 migration checks, and the action was never scheduled.
 
-Both measures are gamed predictably: closure rises when actions are trivial or quietly closed as
+The two measures are action closure and [recurrence](../../glossary.md#recurrence) (an incident
+repeating a failure mode already reviewed). Both are gamed predictably: closure rises when actions are trivial or quietly closed as
 "won't do"; recurrence falls when failure modes are described too narrowly to match. Pair
 them: closure of the actions marked most important, recurrence by broad category, and a monthly sample
 of "won't do" closures. Dropping an action is legitimate. Dropping it silently is not.
 
 ### Classifying change failures to find the prevention point
 
-DORA defines change fail rate as the ratio of deployments that need immediate intervention
+DORA defines [change failure rate](../../glossary.md#change-failure-rate) (DORA's own name is "change
+fail rate") as the ratio of deployments that need immediate intervention
 ([DORA, metrics guide](../../references/bibliography.md#dora-metrics-guide)). The rate says how often
-changes fail, not where to intervene. For that, classify each failure by **prevention point**: the
-earliest step at which a reasonable, affordable control would have stopped or contained it. Orthogonal
+changes fail, not where to intervene. For that, classify each failure by
+**[prevention point](../../glossary.md#prevention-point)**: the earliest step at which a reasonable,
+affordable control would have stopped or contained it. Orthogonal
 Defect Classification, developed at IBM, is the research precedent: classify defects by their meaning
 so the distribution of classes gives feedback on the process while it runs
 ([Chillarege et al., 1992](../../references/bibliography.md#chillarege1992orthogonal)).
@@ -262,7 +280,7 @@ and more tests will not fix the process that let the earlier action lapse. Three
 classification honest (this book's recommendation): classify from the review, not the ticket title;
 have two people classify a quarterly sample independently and discuss disagreements; and weigh each
 category by cost (restoration time, customers affected) as well as count. Chapter 19 classifies
-Northstar's escaped defects by detection point; the example below does the same for incidents.
+escaped defects by detection point; prevention point is the same idea applied to incidents.
 
 ## Engineering Organization Example
 
@@ -270,43 +288,42 @@ Northstar's escaped defects by detection point; the example below does the same 
     Week 3 of the director's first year. The director has classified the baseline quarter's incidents
     with Kwame Mensah (staff engineer, infrastructure and reliability) and is publishing severity
     definitions. In week 4 the director reserves 12 FTE (full-time equivalent engineers) for
-    prevention work. See the [timeline](../../case-studies/northstar/timeline.md).
+    prevention work. See the [timeline](../../case-studies/northstar/timeline.md). New to Northstar?
+    Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This classification is **illustrative**. It assigns each of Northstar's 19 change-induced incidents to
-a control point from the one-line summaries in `incidents-last-quarter.csv`, using the diagram's later
-questions. The first question needs review history, which the file records only as a recurrence flag,
-so recurrences get their own column. Several rows could reasonably go another way.
+a prevention point from the one-line summaries in `incidents-last-quarter.csv`, using the diagram's
+later questions. The first question needs review history, which the file records only as a recurrence
+flag, so recurrences get their own column. Several rows could reasonably go another way.
 
-| Control point | Incidents | Count | Restore minutes | Customer-detected | Recurrences |
-|---|---|---|---|---|---|
-| Logic and regression tests | 401, 403, 409, 411, 417, 421, 422 | 7 | 3,085 | 6 | 5 |
-| Migration safety | 406, 419, 424, 427 | 4 | 1,970 | 1 | 3 |
-| Contract checks | 405, 412, 418 | 3 | 775 | 3 | 1 |
-| Configuration guards | 404, 410, 430 | 3 | 113 | 0 | 0 |
-| Load test or canary | 415 | 1 | 160 | 0 | 0 |
-| Testing pipeline changes | 416 | 1 | 120 | 0 | 0 |
-| **Total** | | **19** | **6,223** | **10** | **9** |
+| Prevention point | Count | Restore minutes | Customer-detected | Recurrences |
+|---|---|---|---|---|
+| Logic and regression tests | 7 | 3,085 | 6 | 5 |
+| Migration safety | 4 | 1,970 | 1 | 3 |
+| Contract checks | 3 | 775 | 3 | 1 |
+| Configuration guards | 3 | 113 | 0 | 0 |
+| Load test or canary | 1 | 160 | 0 | 0 |
+| Testing pipeline changes | 1 | 120 | 0 | 0 |
+| **Total** | **19** | **6,223** | **10** | **9** |
 
-??? note "The 19 incidents in the table"
-    - INC-401: invoice totals rounded wrongly for multi-currency orders after a release.
-    - INC-403: order submission failed for customers with legacy price lists.
-    - INC-404: token lifetime changed in production config; mobile sessions dropped.
-    - INC-405: mobile-bff deployed against an older pricing-svc contract; cart totals blank.
-    - INC-406: a ledger index migration locked a table during business hours.
-    - INC-409: duplicate invoices from a retried batch job after a release.
-    - INC-410: a feature flag enabled for all tenants instead of one.
-    - INC-411: catalog import rejected valid unit-of-measure values.
-    - INC-412: an email template variable renamed; order confirmations sent blank.
-    - INC-415: a memory regression in order validation; pods restarted under load.
-    - INC-416: a shared deploy-script change broke rollback for four services.
-    - INC-417: payments posted to the wrong accounting period after a release.
-    - INC-418: webhook signature format changed without versioning.
-    - INC-419: a pricing-rule migration ran before the code that expected it.
-    - INC-421: bulk order upload dropped lines beyond row 500.
-    - INC-422: PDF invoices missing the tax breakdown for one region.
-    - INC-424: a long migration exceeded replication lag; replicas served stale balances.
-    - INC-427: credit notes applied twice after a release; manual data repair.
-    - INC-430: a rate limit lowered tenfold by a mistyped value.
+??? note "The 19 incidents, by prevention point"
+    - **Logic and regression tests.** INC-401: invoice totals rounded wrongly for multi-currency
+      orders. INC-403: order submission failed for legacy price lists. INC-409: duplicate invoices from
+      a retried batch job. INC-411: catalog import rejected valid unit-of-measure values. INC-417:
+      payments posted to the wrong accounting period. INC-421: bulk upload dropped lines beyond row
+      500. INC-422: PDF invoices missing the tax breakdown for one region.
+    - **Migration safety.** INC-406: a ledger index migration locked a table during business hours.
+      INC-419: a pricing-rule migration ran before the code that expected it. INC-424: a long
+      migration exceeded replication lag; replicas served stale balances. INC-427: credit notes
+      applied twice after a release.
+    - **Contract checks.** INC-405: mobile-bff deployed against an older pricing-svc contract.
+      INC-412: an email template variable renamed; confirmations sent blank. INC-418: webhook
+      signature format changed without versioning.
+    - **Configuration guards.** INC-404: token lifetime changed in production config. INC-410: a flag
+      enabled for all tenants instead of one. INC-430: a rate limit lowered tenfold by a typo.
+    - **Load test or canary.** INC-415: a memory regression; pods restarted under load.
+    - **Testing pipeline changes.** INC-416: a deploy-script change broke rollback for four services.
 
 Four observations change what a count alone suggests. **Configuration guards** would prevent three
 cheap incidents (113 minutes, all caught by monitoring): worth doing, not first. **Migration safety** is
@@ -350,8 +367,6 @@ credits. On tier 1 paths, err toward declaring.
 
 **Strict definitions against judgment.** Written criteria make ratings comparable and misclassify
 unusual events. Let the commander rate above the definition, never below, with a reason.
-
-**Review depth against volume.** Depth should follow severity, novelty, and recurrence.
 
 **Transparency against candor.** Reviews published verbatim get written for their audience. Keep the
 review internal; write a separate external summary.
@@ -456,13 +471,13 @@ Sev1 covered the order or payment path unavailable for any customer, and any wro
 visible to customers. Applied to the baseline quarter, they moved INC-401 and INC-427 to Sev1 and left
 three incidents as judgment calls: INC-414 (a missing tax rate), INC-422 (invoices missing a tax
 breakdown), and INC-424 (stale balances on replicas). These were cases the wording then had to settle. The
-director published the re-rating, which made the numbers worse: seven Sev1 incidents became nine.
-(Elsewhere the book quotes the original ratings; the total of 30 is the same.) To objecting managers, the director said a flattering
-baseline would make every later improvement unbelievable.
+director published the re-rating, which made the numbers worse: seven Sev1 incidents became nine, with
+the total still 30. To objecting managers, the director said a flattering baseline would make every
+later improvement unbelievable.
 
 In weeks 4 and 5, twelve people (the six managers, three staff engineers, and three senior engineers)
-trained as incident commanders. Marcus Oyelaran (Billing manager) asked to be left out because Billing was overloaded;
-the director kept him in and took him off two roadmap reviews instead.
+trained as incident commanders. Marcus Oyelaran (Billing manager) asked to be left out; the director
+kept him in and took him off two roadmap reviews instead.
 
 Of the 96 recorded actions, 65 were open. The director and staff engineers kept 14, after merging 9
 duplicates into them, and dropped 42 explicitly, each author getting a one-line reason. Every kept
@@ -507,7 +522,7 @@ values." Rewrite the cause and action sections in the form this chapter recommen
 hindsight bias appears in the draft and which questions the facilitator should have asked.
 
 **F3.** Classify Northstar's nine release-train incidents (`trigger` is `monolith-release`) by prevention
-point without looking at the chapter's table, then compare. For each disagreement, say what information
+point without looking at the chapter's classification, then compare. For each disagreement, say what information
 from the review would decide it, and whether the disagreement changes which intervention has the most
 leverage.
 
@@ -590,4 +605,4 @@ alternative that keeps executive accountability for follow-through.
 - [Chillarege et al., 1992](../../references/bibliography.md#chillarege1992orthogonal). Classifying
   defects to get process feedback.
 - [DORA metrics guide](../../references/bibliography.md#dora-metrics-guide). The current definition of
-  change fail rate.
+  change failure rate.

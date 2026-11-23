@@ -1,9 +1,10 @@
 # Chapter 7 — Hiring and Structured Interviews
 
 This chapter treats hiring as a measurement problem. It covers the role scorecard and the structured
-loop built from it, what selection research supports (including the 2022 revision of the best-known
-validity estimates), where engineering interview practice has run ahead of the evidence, debriefs
-that resist anchoring, and tracking hiring quality after the offer, then the funnel around the loop and the first 90 days.
+loop built from it, and what selection research supports, including the 2022 revision of the
+best-known estimates. It shows where engineering interview practice has run ahead of the evidence, how
+to run debriefs that resist anchoring, and how to track hiring quality after the offer. It ends with
+the funnel around the loop and the first 90 days.
 Chapter 8 covers career ladders, pay, and choosing a level at offer; Chapter 10 covers keeping the
 people you hire. The running example is a Billing backfill at
 Northstar Technologies, the fictional company in the [case study](../../case-studies/northstar/index.md).
@@ -12,11 +13,9 @@ Northstar Technologies, the fictional company in the [case study](../../case-stu
 
 At team scale, a hire is a multi-year decision made in about five hours of conversation. A
 mismatch takes months to show, consumes mentoring time, and often ends in a second search. At
-Northstar, the median time from a resignation to the replacement's first day was 15 weeks (fictional; see the
-[baseline data](../../case-studies/northstar/baseline-data.md)), and
-[Chapter 3](../01-foundations/03-managerial-leverage-and-systems-thinking.md#delays) shows that eight such
-gaps add up to about 2.3 engineer-years of empty seats a year before anyone ramps up. A loop that
-picks the wrong person restarts that clock.
+Northstar, the book's fictional company, the median time from a resignation to the replacement's first
+day was 15 weeks ([baseline data](../../case-studies/northstar/baseline-data.md)). A loop that picks
+the wrong person restarts that clock.
 
 At organization scale, the interview loop quietly defines what the organization values. If the loop
 rewards speed on algorithm puzzles, the organization fills with people who are fast at puzzles,
@@ -74,9 +73,8 @@ it. The usual statistic is a [validity coefficient](../../glossary.md#validity-c
 correlation between scores on the method and a later measure of job performance, most often
 supervisor ratings of overall performance. Zero means no prediction; 1 means perfect prediction.
 [Meta-analyses](../../glossary.md#meta-analysis) pool many studies and correct for known
-distortions, chiefly range restriction: a study observes only the people who were hired, who differ
-less from each other than applicants do, so the raw correlation understates how well the method
-separates the applicant pool.
+distortions. The main one is range restriction: a study sees only the people who were hired, so the
+raw correlation understates how well the method separates all applicants.
 
 Two cautions apply throughout. The criterion is a rating of overall performance across many
 occupations, not engineering output. And a validity coefficient is an average across studies, not
@@ -85,10 +83,9 @@ the validity of your loop, which depends on how well you build and run it.
 ### The estimates, and their 2022 revision
 
 For two decades the reference point was Schmidt and Hunter's 1998 summary of 85 years of research.
-Its abstract reports meta-analytic validities for 19 selection procedures, and names three
-combinations with the highest validity: general mental ability (a cognitive ability test) combined
-with a work sample test, with an integrity test, or with a structured interview, each with a mean
-validity in the low-to-mid .60s ([Schmidt and Hunter, 1998](../../references/bibliography.md#schmidt1998validity)).
+Its abstract reports validities for 19 selection procedures. The three best combinations paired
+general mental ability (a cognitive ability test) with a work sample test, an integrity test, or a
+structured interview, each with a mean validity in the low-to-mid .60s ([Schmidt and Hunter, 1998](../../references/bibliography.md#schmidt1998validity)).
 Those figures are still widely quoted in hiring guides.
 
 In 2022, Sackett, Zhang, Berry, and Lievens argued that the range-restriction corrections in the
@@ -97,17 +94,21 @@ In their revision most procedures that ranked high before still rank high, but m
 by roughly .10 to .20, and structured interviews come out on top
 ([Sackett et al., 2022](../../references/bibliography.md#sackett2022revisiting)). The same authors'
 open-access follow-up in 2023 states the revised figures (**research finding**,
-[Sackett et al., 2023](../../references/bibliography.md#sackett2023revisiting)). In the table, the
-standard deviation measures how much validity varies between settings, and the 80 percent credibility
-interval is the range within which the true validity falls in 80 percent of settings:
+[Sackett et al., 2023](../../references/bibliography.md#sackett2023revisiting)):
 
 | Predictor | What the 2023 article states |
 |---|---|
-| Structured interview | Highest mean validity, .42; standard deviation .19; 80 percent credibility interval .18 to .66 |
-| Empirically keyed biodata (scored background questionnaires) | Mean .38 |
-| Cognitive ability | Revised estimate .31, about .20 lower than before; "no longer the stand-out predictor" |
-| Work sample test | About .21 lower than before; tied with assessment centers (.33) for fourth place |
+| Structured interview | Highest mean validity, .42; in 80 percent of settings between .18 and .66 |
+| Cognitive ability | .31, about .20 lower than before; "no longer the stand-out predictor" |
+| Work sample test | About .21 lower than before, but still near the top |
 | Unstructured interview | About .19 lower than before |
+
+**What .42 buys.** Suppose you hire the half of candidates who score above the median, and scores and
+later performance are both normally distributed. Then about 64 percent of hires turn out above-median
+performers, against 50 percent for hiring at random. At the edges of the range the figure is about 56
+percent (validity .18) and about 73 percent (validity .66). A well-run structured loop moves the odds
+from a coin toss to about two in three; a badly run one may barely move them. Neither makes mistakes
+rare. (The derivation is in the solutions to exercise F3.)
 
 Three points matter for an engineering manager. First, the predictors at the top are job-specific:
 structured interviews, job knowledge tests, work samples, and biodata built for the job, while
@@ -136,7 +137,14 @@ interviewing is hard to build and maintain (**documented practice**,
 
 This book adds two requirements to that list (**this book's recommendation**): every session is
 assigned named attributes from the scorecard, and the decision rule is agreed before the first
-candidate.
+candidate. One rubric row, for a ledger role, looks like this (**illustrative**):
+
+| Attribute | Poor | Borderline | Solid | Outstanding |
+|---|---|---|---|---|
+| Safe schema change on a live database | Runs the migration as written | Notices locking only when prompted | Spots the lock, proposes a staged migration with a rollback | Also asks about data volume and rehearses at production scale |
+
+The [hiring scorecard and interview kit](../../templates/hiring-scorecard.md) template has a full
+scorecard, session map, and rubric format for the Billing backfill used in this chapter.
 
 ### Why unstructured interviews persist
 
@@ -154,7 +162,7 @@ Confidence after an interview is not evidence that the interview measured anythi
 ### Work samples and technical interviews
 
 A work sample asks the candidate to do a piece of the actual job under observation: review a real
-pull request, debug a failing service, extend a small codebase. The 2023 revision lowered its
+merge request, debug a failing service, extend a small codebase. The 2023 revision lowered its
 estimated validity but kept it in the top group of job-specific predictors
 ([Sackett et al., 2023](../../references/bibliography.md#sackett2023revisiting)).
 
@@ -246,6 +254,8 @@ recommendation** throughout):
   who can describe the work. Recruiter-only outreach for a specialist role rarely works.
 - **Candidate experience.** Give every candidate a decision within a few working days of the last
   interview, and a short, honest rejection. Slow silence loses the candidates you wanted.
+- **References.** Ask a reference about specific behaviors on the scorecard ("How did she handle a
+  production migration?"), not for a general opinion. Treat them as a check for red flags, not a ranking.
 - **Closing.** The hiring manager makes the offer, answers concerns directly (on-call, growth, the hard
   parts), and sets a decision date. Strong candidates usually hold other offers.
 - **Interviewer load.** Cap interviews per person per week (two is a common limit) and spread them;
@@ -285,17 +295,6 @@ performance fairly.
 
 The figures in this example are **illustrative**. Northstar is fictional, and the cost assumptions
 are stated so you can replace them with your own.
-
-**What a validity of .42 buys.** Assume interview scores and later performance are both normally
-distributed and correlated at .42, and that you hire the half of candidates who score above the
-median. Under those assumptions, the share of hires who turn out above-median performers is about
-64 percent, against 50 percent for hiring at random. At the edges of the credibility interval the
-figure is about 56 percent (validity .18) and about 73 percent (validity .66). A well-run structured
-loop moves the odds from a coin toss to about two in three; a badly run one may barely move them.
-Neither makes mistakes rare.
-
-*Method: for two normal variables with correlation r, the chance that both exceed their medians is
-1/4 + arcsin(r)/2π; dividing by 1/2 gives the share among hires.*
 
 **What the loop costs.** Suppose Northstar redesigns the loop for its next Billing ledger backfill,
 with this scorecard: correctness of money movement (idempotency, rounding, double-entry); safe schema
@@ -455,7 +454,9 @@ This case is **fictional** ([baseline data](../../case-studies/northstar/baselin
     The twelve months before week 1, when the new Engineering Director arrives at Northstar, the book's
     fictional order-to-cash company with 80 engineers. Eight engineers left in that year, and Billing,
     the team with the most serious incidents, lost one of its four ledger experts. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 **The process.** Before the director arrived, Northstar had no common hiring process. Each manager
 ran a variant of the same loop: a 30-minute recruiter call; a 60-minute live algorithm exercise from
@@ -466,9 +467,8 @@ followed in turn; written notes were optional. Nobody recorded what had happened
 
 **The ledger backfill.** A year before the director arrived, four Billing engineers were trusted
 with ledger incidents. Nine months before arrival, one of them resigned. The replacement started 15
-weeks later, matching Northstar's median. The time went like this: three weeks waiting for the
-backfill to be approved, six weeks of sourcing and screening (about 40 applicants, nine recruiter
-calls, four full loops), one week to agree an offer, and five weeks of the new hire's notice period.
+weeks later, matching Northstar's median; more than half of that was approval, sourcing, and
+screening before any offer.
 
 The person hired, Tamsin Achterberg, came from a backend team at an online retailer and was the
 strongest of the four finalists on the algorithm exercise. In the team chat one of the ledger

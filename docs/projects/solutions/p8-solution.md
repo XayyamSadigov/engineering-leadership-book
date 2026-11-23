@@ -29,7 +29,7 @@ their parts.
 
 | Convention | Value | Why |
 |---|---|---|
-| Effort rate | $3,558 an engineer-week ($185,000 ÷ 52) for every candidate; engineer-days converted at five a week | One rate for all candidates. At Chapter 30's $800 an engineer-day, a five-day week would cost $4,000, so mixing the two inflates day-based estimates by about 12 percent |
+| Effort rate | $3,558 an engineer-week ($185,000 ÷ 52) for every candidate; engineer-days converted at five a week | One rate for all candidates. Finance's day rate, $800 an engineer-day ($185,000 ÷ about 230 working days), is higher per day because Finance counts only working days; at five days a week it prices a week at $4,000, about 12 percent more |
 | FTE-quarter | $46,250 | $185,000 ÷ 4 |
 | Timing | Year 1 is quarters 5 to 8; all flows at the end of each year | Simple and stated; quarterly timing would move each NPV by a few thousand dollars |
 | Discount | 10 percent; factors 0.9091, 0.8264, 0.7513 (sum 2.4869) | Finance's rate (Chapter 45) |
@@ -44,7 +44,7 @@ payback date ([Dahlquist and Knight, 2022](../../references/bibliography.md#dahl
 | Candidate | Options | One-time | Run cost | Displaces |
 |---|---|---|---|---|
 | C1 Quality continuation | Do nothing (prevention to 0 from week 53); 4 FTE plus 2 on deal features; stage 2 now and stage 3 at the gate | 22 FTE-quarters, $1,017,500 capacity; $150,000 cash (stage 2). Stage 3's $100,000 belongs to C3 | None stated | Product work; Greg Tanaka's deal features |
-| C2 Core framework (TR-01) | Do nothing (patch under exceptions; one open Core critical already waits on TR-01); extended support ($60,000 a year, the assumption Chapters 30 and 52 use); support for a year then migrate; migrate | Migrate: Finance's scenarios of 120, 190, and 243 engineer-days, 24, 38, and 48.6 engineer-weeks: $85,385, $135,192 (base), $172,904 at $3,558 a week (Finance's $800 a day gives $96,000, $152,000, $194,400) | Support: $60,000 a year cash | The estate-currency line in my week 47 draft, or prevention, in quarters 5 to 7 |
+| C2 Core framework (TR-01) | Do nothing (patch under exceptions; one open Core critical already waits on TR-01); extended support ($60,000 a year, the assumption Chapters 30 and 52 use); support for a year then migrate; migrate | Migrate: Finance's scenarios of 120, 190, and 243 engineer-days, 24, 38, and 48.6 engineer-weeks: $85,385, $135,192 (base), $172,904 at $3,558 a week (Finance's day rate of $800 gives $96,000, $152,000, $194,400) | Support: $60,000 a year cash | The estate-currency line in my week 47 draft, or prevention, in quarters 5 to 7 |
 | C3 CI consolidation after phase 1 | Do nothing (four systems); decide the target only; full consolidation | About 80 engineer-weeks, $284,615, plus $100,000 tooling | Falls from about 1.5 to about 0.5 FTE a year | The platform roadmap, or C1 capacity |
 | C4 Second bank route (TR-08) | Do nothing; a manual fallback (queue and notify, about 4 engineer-weeks, this solution's estimate); build the route | 26 engineer-weeks, $92,500 (range 20 to 36), in quarters 7 and 8 | $36,000 a year fee from go-live in week 104, so from year 3 (invented) | Payments and Integrations product work |
 | C5 Invoice reconciliation | Do nothing; monthly sampled reconciliation by Data and Analytics (about 2 engineer-weeks, this solution's estimate); nightly job for all customers | 12 engineer-weeks, $42,692 (range 8 to 20) | 0.1 FTE a year, $18,500 capacity | Billing product work |

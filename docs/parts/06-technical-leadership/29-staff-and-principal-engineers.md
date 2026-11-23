@@ -183,7 +183,8 @@ flowchart TD
     M --> A
 ```
 
-One written appeal keeps the losing argument on record without making every decision a negotiation.
+The appeal goes, in writing, to the sponsor (usually the director). One written appeal keeps the
+losing argument on record without making every decision a negotiation.
 Routine appeals mean the scope is wrong.
 
 ### The roaming critic
@@ -259,12 +260,14 @@ evidence is Chapter 8's topic.
     Week 13, day 90 of the director's first year. [Sev1 and
     Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
     to 21 in quarter 1 after ownership, severity, and weekly release changes, and both renewal
-    commitments are on track. See the [timeline](../../case-studies/northstar/timeline.md).
+    commitments are on track. See the [timeline](../../case-studies/northstar/timeline.md). New to
+    Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This example is a diagnosis of Northstar, the book's fictional company, using the chapter's tools. Its
 figures are **illustrative** and consistent with the
 [baseline](../../case-studies/northstar/baseline-data.md) and the
-[first quarter](../../case-studies/northstar/first-quarter.md). In weeks 12 and 13 the director sampled
+[year 1 record](../../case-studies/northstar/first-quarter.md). In weeks 12 and 13 the director sampled
 the calendars and chat logs of the three staff engineers: Ines Carvalho (Core domain), Kwame Mensah
 (infrastructure and reliability), and Li Na Zhou (data and integration). Average hours per week:
 
@@ -281,17 +284,18 @@ Unscheduled work is 24 of 120 hours, 20 percent: the same share as the staff eng
 at baseline. The first quarter's mandates added program work but removed nothing. Ines's eight hours
 of unscheduled questions about Core, Northstar's monolith, are unchanged from the baseline figure.
 
-**What the hours are worth.** The unscheduled hours cost about $111,000 a year: 24 hours a week is 0.6
-of an engineer at the average [fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000
-(salary plus benefits, taxes, and equipment; a floor for staff engineers). Worse, each answer helps one
-person once. Two written boundary rules for core/customer, each removing a quarter of Ines's questions,
-would give her back about four hours a week.
+**What the hours are worth.** The unscheduled hours cost about $111,000 a year, and each answer helps
+one person once. Two written boundary rules for core/customer, each removing a quarter of Ines's
+questions, would give her back about four hours a week.
 
-**Design reviews.** In weeks 7 to 12, 14 Core design proposals reached Ines: Billing 5, Customer
-Experience 4, Payments and Integrations 3, Orders 2. She rejected 8, 5 of them with no stated reason.
-Neither of the two Orders engineers who had stopped proposing designs at baseline submitted one. Orders
-makes about 45 percent of core/permissions changes (17 of 38 in the baseline quarter). It also owns
-core/customer, the module Ines's funded extraction works in. Yet it sent the fewest proposals.
+*Cost basis: 24 hours a week is 0.6 of an engineer at the average [fully loaded
+cost](../../glossary.md#fully-loaded-cost) of $185,000 (salary plus benefits, taxes, and equipment), a
+floor for staff engineers.*
+
+**Design reviews.** The team most affected by Ines's domain has stopped proposing designs: the critic
+pattern. In weeks 7 to 12, 14 Core design proposals reached Ines, and she rejected 8, 5 of them with no
+stated reason. Orders owns core/customer, the module her extraction works in, yet sent only 2 of the
+14.
 
 The sample shows both failure cases: Ines a critic in reviews and a hero for questions, Li Na the hero
 for integrations, Kwame still pulled into incidents. None has a scope that outlasts the quality program.
@@ -409,22 +413,18 @@ activity counts.
 5. Publish the scopes and the disagreement rule.
 6. Replace unscheduled questions with office hours or a rotation.
 7. Agree a pair of measures per outcome, with how each is gamed.
-8. Hold a fortnightly staff review; meet each staff engineer one-on-one on the domain, not status.
+8. Hold a staff review every two weeks; meet each staff engineer one-on-one on the domain, not status.
 9. Review each scope at two quarters: renew, rescope, or end. For a critic or hero pattern, change the
    structure first, then give specific feedback on effects.
 
 ## Case Study
 
-This case is **fictional** and is set at the start of quarter 2 (week 14). It continues the
-[first quarter](../../case-studies/northstar/first-quarter.md), Chapter 4's case, and Chapter 10's
-stay interview with Ines Carvalho (a conversation about what would keep her). Its outcomes are open:
+This case is **fictional** and is set at the start of quarter 2 (week 14). Its outcomes are open:
 they are decisions the reader faces.
 
-**Where things stand.** In the first quarter the staff engineers received transformation mandates
-(Kwame Mensah release and detection, Ines Carvalho Core module boundaries and contract tests, Li Na
-Zhou migration and configuration safety) and standards domains with a ten-working-day decision rule. In
-quarter 2 Ines leads the funded permissions extraction; the owner of core/permissions is undecided.
-The time sample shows the mandates added work without removing any.
+**Where things stand.** In quarter 1 each staff engineer received a program mandate and a standards
+domain with a ten-working-day decision rule. In quarter 2 Ines leads the funded permissions
+extraction. The time sample above shows the mandates added work without removing any.
 
 **Decision 1: standing scopes.** The director drafts scopes that outlast the quality program:
 
@@ -436,12 +436,12 @@ The time sample shows the mandates added work without removing any.
 | Stop list | Incident pulls outside his shifts as [incident commander](../../glossary.md#incident-commander) (the person who leads the response) | Unscheduled Core questions | First-come integration questions |
 | Sponsor | Director | Director | Director |
 
-Open choices for the reader: whether Ines's boundary rules apply to core/permissions before its owner
-is chosen (Chapter 13 frames that ownership decision, still open); whether Li Na decides ADR-0001, the open record on how integrations read ledger data (Chapter 28); whether a fourth scope is needed for the frontends, which no
-staff engineer covers; and whether all three keep reporting to the director (nine direct reports).
+Open choices for the reader: whether Li Na decides ADR-0001, the open record on how integrations read
+ledger data (Chapter 28); whether a fourth scope is needed for the frontends, which no staff engineer
+covers; and whether all three keep reporting to the director (nine direct reports).
 
-**Decision 2: coaching Ines out of the critic pattern.** Chapter 10 asks the reader to plan the
-conversation that raises Ines's review behavior. This chapter takes up what follows: suppose Ines has
+**Decision 2: coaching Ines out of the critic pattern.** Chapter 10 plans the conversation that raises
+Ines's review behavior with her. This chapter takes up what follows: suppose Ines has
 agreed to try a change. The director's draft coaching plan:
 
 - **Structure first.** Ines owns the core/customer boundary rules outright. For other Core designs, the
@@ -449,7 +449,7 @@ agreed to try a change. The director's draft coaching plan:
   which she would agree.
 - **Office hours.** Two fixed one-hour slots a week replace unscheduled questions, against the
   baseline's eight hours.
-- **Practice.** Ines co-reviews one Orders design a fortnight with Rafael Duarte, a senior engineer in
+- **Practice.** Ines co-reviews one Orders design every two weeks with Rafael Duarte, a senior engineer in
   Orders who shares
   core/order-capture review ownership, and writes the boundary rationale in the decision record.
 - **Measures, with gaming named.** Core design proposals by team, with the share accepted; rejections

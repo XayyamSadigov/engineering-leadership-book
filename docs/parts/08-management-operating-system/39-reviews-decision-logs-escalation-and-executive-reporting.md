@@ -82,13 +82,12 @@ cheaper for them than saying it late.
 
 ### Inspection of the system, not of the people
 
-A review should inspect the machinery, not the person presenting. Andrew Grove's view of managerial
-output is that a manager's output is the output of the organization they lead
-([Grove, 1983](../../references/bibliography.md#grove1983high)). A review applies it: it inspects that
-output and the machinery producing it, and the manager presenting is the best-informed witness to the
-machinery, not its defendant. System questions ask what changed, what
-the data predicts, and what would reverse the trend. People questions ask whose fault it was and how
-this manager compares with that one; they feel rigorous and produce defensive preparation.
+A review should inspect the machinery, not the person presenting. Andrew Grove holds that a
+manager's output is the output of the organization they lead
+([Grove, 1983](../../references/bibliography.md#grove1983high)). A review inspects that output and
+the machinery producing it; the presenter is the best-informed witness, not the defendant. System
+questions ask what changed, what the data predicts, and what would reverse the trend. People
+questions ask whose fault it was; they feel rigorous and produce defensive preparation.
 
 | Review | System question | Inputs | Output | Content owner |
 |---|---|---|---|---|
@@ -98,9 +97,24 @@ this manager compares with that one; they feel rigorous and produce defensive pr
 
 The last column names the chapter that treats each review's content.
 
-The talent review is the hardest to keep systemic. It asks which teams held no career conversations,
-where only one person can change a component, and which roles have no successor; its outputs are
-pairing, rotation, or a ladder fix, not verdicts on individuals.
+**A talent review** inspects whether the organization grows and keeps people, not who is good. It is
+the hardest review to keep systemic. Inputs, sent two working days ahead: career conversations held per
+team, components only one person can change, roles with no successor, promotion and "not yet"
+outcomes, and [regretted attrition](../../glossary.md#attrition-and-regretted-attrition) (leavers the
+organization wanted to keep). It asks three questions. Where did growth conversations not happen, and
+why? Where would one departure stop a [tier 1](../../glossary.md#tier-1) component (one whose failure
+stops orders or payments)? Which roles have no ready successor within a year? Its outputs are actions by
+team, each with an owner and date: pairing on a single-owner component, a rotation, a stretch
+assignment, a ladder fix. It must never produce a ranking of individuals, a "flight risk" list shared
+beyond the managers concerned, or ratings that bypass calibration (Chapter 8).
+
+**An architecture review** inspects whether cross-team technical decisions get made, by the right
+people, and stay made. It may decide three things: who decides an open record, whether a record is
+ready for its decider (options, consequences, a way to check the outcome), and whether a decision
+reopens because its review trigger fired. Designs that belong to one team go back with questions, not
+verdicts. Measure it by the age of open cross-team records, decisions reopened outside the review, and
+proposals returned without a stated reason
+([Chapter 28](../06-technical-leadership/28-architecture-decision-making-and-governance.md)).
 
 Three rules keep any review an inspection (**this book's recommendation**). Send the data before the
 meeting. Let the presenter name the problems first, and treat a self-reported problem as the review
@@ -108,22 +122,19 @@ working. End every item with a decision, an owner, and a date, or an explicit "n
 
 ### Why bad news travels slowly
 
-Evidence of project failure often exists in the lower ranks but does not travel up the hierarchy, or
-is distorted on the way, so the people with authority to change direction do not know the true
-status. The field calls this reluctance to pass on bad news the **mum effect**. A theoretical model
-and laboratory experiments find it is stronger when the news is worse and when the reporter might be
+Evidence of project failure often exists in the lower ranks but does not travel up, or is distorted
+on the way. The field calls this reluctance to pass on bad news the **mum effect**. Models and
+laboratory experiments find it is stronger when the news is worse and when the reporter might be
 blamed ([Smith and Keil, 2003](../../references/bibliography.md#smith2003reluctance);
 [Smith, Keil, and Depledge, 2001](../../references/bibliography.md#smith2001keeping);
 [Park, Im, and Keil, 2008](../../references/bibliography.md#park2008mum)). These are **research
 findings**, as the abstracts report them, from models and experiments rather than field outcomes.
 
-Status reports are often biased. Keil and colleagues summarized about fourteen of their studies for
-practitioners ([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)). In the records of 56
-experienced software project managers, they report biased status reports 60 percent of the time. They
-also report that aggressive auditing can backfire into distrust and more misreporting, that a powerful
-executive sponsor can make a team less candid, and that reported bad news is sometimes ignored,
-especially when the messenger has no official channel. Their advice: corroborate with several people
-close to the work. DORA's guide to generative culture adds survey-based **industry research** in which
+Status reports are often biased. Summarizing about fourteen of their studies, Keil and colleagues
+report that experienced software project managers recalled biased status reports 60 percent of the
+time ([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)). Aggressive auditing can
+backfire into more misreporting, and a powerful executive sponsor can make a team less candid. Their
+advice: corroborate with several people close to the work. DORA's guide to generative culture adds survey-based **industry research** in which
 the treatment of messengers distinguishes cultures that pass information well
 ([DORA, generative culture](../../references/bibliography.md#dora-cap-generative-culture)); Chapter 11
 covers [silence](../03-high-performing-teams/11-high-performance-trust-safety-and-accountability.md#comfort-liking-and-silence)
@@ -189,10 +200,9 @@ side with more stamina wins ([Bezos, 2017](../../references/bibliography.md#bezo
 **documented practice** from one company).
 
 Escalation also moves authority without moving information. Aghion and Tirole's model separates formal
-authority, the right to decide, from real authority, which depends on who holds the relevant
-information ([Aghion and Tirole, 1997](../../references/bibliography.md#aghion1997formal)). An executive
-deciding from a hallway summary holds formal authority over a decision whose content is still below.
-The joint case carries the information up with the question. Its two common corruptions are the
+authority, the right to decide, from real authority, which goes with the relevant information
+([Aghion and Tirole, 1997](../../references/bibliography.md#aghion1997formal)). The joint case carries
+the information up with the question. Its two common corruptions are the
 **backchannel decision** (an executive answers in passing, one party treats it as settled) and
 **escalation as threat** ("I'll take this to Victor"). One rule fixes both: a decision exists only when
 it is in the log.
@@ -219,12 +229,11 @@ back down to be settled, not up. The last row commits both sides before the deci
 ### The executive report
 
 An executive report lets a busy person see the state of commitments, the risks to them, and what you
-need from them, in a few minutes. Barbara Minto's pyramid principle puts the main point first with
-support grouped beneath it ([Minto, 2002](../../references/bibliography.md#minto2002pyramid)).
-Narrative memos in place of slides expose reasoning that bullets hide, at a real cost in writing time
-([Bezos, 2018](../../references/bibliography.md#bezos2017letter)). And an engineering executive solves
-the company's problem rather than advocating for engineering
-([Larson, 2023](../../references/bibliography.md#larson2023balancing)), so a report that reads as
+need from them, in a few minutes. Put the main point first
+([Minto, 2002](../../references/bibliography.md#minto2002pyramid)), write prose that exposes reasoning
+([Bezos, 2018](../../references/bibliography.md#bezos2017letter)), and solve the company's problem
+rather than advocate for engineering
+([Larson, 2023](../../references/bibliography.md#larson2023balancing)); a report that reads as
 advocacy is discounted.
 
 The structure this book recommends:
@@ -236,7 +245,10 @@ The structure this book recommends:
 5. **decisions needed**, with options, recommendation, date, and the cost of deciding late;
 6. what was **decided since last report**.
 
-Status colors need definitions, or they report the author's mood:
+Status colors need definitions, or they report the author's mood. The definitions below use
+[percentile forecasts](../../glossary.md#percentile-forecast-and-monte-carlo-simulation): the 85
+percent forecast is the date by which, on past throughput, the work finishes with 85 percent
+probability.
 
 | Color | Definition for a dated commitment |
 |---|---|
@@ -276,23 +288,24 @@ report is found, every later report is discounted.
 
 !!! info "Northstar so far"
     Quarter 2 of the director's first year (weeks 14 to 26). A first quarter of ownership, severity,
-    and release changes cut Sev1 and Sev2 incidents from 30 to 21. One renewal commitment (the
-    accounting integration) is due in week 19, the other (bulk ordering) in week 26. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    and release changes cut [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the
+    two most serious levels) from 30 to 21. One
+    [renewal commitment](../../glossary.md#renewal-commitments) (the accounting integration) is due in
+    week 19, the other (bulk ordering) in week 26. See the
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
-This example is **illustrative**. It shows first what Northstar's review system costs, then what
-corroboration looks like, then what an undated decision costs.
-
-**Meeting time is cheap.** Northstar's whole review system, counted as run, takes under 1 percent of
-engineering time. The expensive failure is a system that runs on schedule and carries distorted
-information.
+This example is **illustrative**. Northstar's whole review system takes under 1 percent of
+engineering time, so meeting time is not the cost to watch. Distorted information and undated
+decisions are.
 
 **Corroboration through structure.** In week 7 the record showed four consecutive incidents rated
-Sev3, below the level the weekly review discussed. One of them was a two-hour payment delay for nine
+Sev3, below the level the weekly operational review discussed. One of them was a two-hour payment delay for nine
 customers. The director read the incident itself rather than the count, re-rated it, and added a
 weekly audit of a sample of severity ratings to the operational review. The reports had been green
-on their own terms; only a second look at the underlying event showed otherwise. The audit makes that
-second look routine, so it carries no suspicion of any one team.
+on their own terms. The audit makes the second look routine, so it carries no suspicion of any one
+team.
 
 **The cost of a decision with no date.** In week 14 Li Na Zhou (staff engineer, data and integration)
 opened ADR-0001: how integrations should read posted ledger data. The accounting integration, due in
@@ -308,8 +321,8 @@ engineer-weeks.
 | After week 16 | 0 | Only on borrowed capacity, competing with week 19 |
 
 The decision's "needed by" was the middle of week 14, almost the day ADR-0001 was opened. Writing
-"needed by: week 14" in the log would have chosen no option. It would have shown the cost of not
-choosing on day one, including to anyone tempted to decide in a corridor.
+that date in the log would have chosen no option, but it would have shown the cost of not choosing
+from day one.
 
 ## Decision Framework
 
@@ -339,13 +352,13 @@ decisions:
 | Crisis (contract at risk) | Daily operational | Open list daily | One level for the duration | Weekly, plus a same-day trigger |
 | Low-trust history | Data first; presenter names problems | Everything cross-team | Joint cases mandatory | Corroborated by system data |
 
-Northstar in quarter 2 is a transformation with a low-trust history between two teams: the second row,
-with the joint-case rule from the fourth.
+Northstar in quarter 2 is the second row, with the fourth row's joint-case rule for Billing and
+Orders.
 
 ## Trade-offs
 
-**Written against spoken.** Writing forces clear reasoning and leaves a record, but costs hours. A
-two-page report with a fixed structure is the usual compromise.
+**Written against spoken.** Writing forces clear reasoning and leaves a record, but costs hours; a
+fixed two-page structure is the usual compromise.
 
 **Candor against comparability.** Standard formats let the director compare teams; comparison invites
 ranking, and ranking invites optimizing the report. Compare a team against its own trend, and teams
@@ -370,7 +383,7 @@ for every red.
 executive, privately, to send such questions back through the path.
 
 **The archive.** The log grows and nobody reads it. Signal: entries without "needed by" dates; expired
-exemptions nobody noticed. Countermeasure: the open list in the weekly review.
+exemptions nobody noticed. Countermeasure: the open list in the weekly leadership team meeting.
 
 **Escalation by stamina.** Disputes last until one side gives up. Signal: long threads, the same pair
 of managers in every dispute. Countermeasure: the clock and joint cases.
@@ -406,9 +419,8 @@ first, as disputes that used to die silently surface.
 At CTO level the four mechanisms reappear one level up.
 
 **Reader and writer.** The CTO reads directors' reports and writes to the CEO and board. Passing
-directors' reports upward unedited abdicates; asking for far more than the board ever sees builds a
-filter. The board needs a few exposures (availability against contract, credits, revenue at risk,
-delivery against commitments, one people measure), chosen as Chapter 38 describes. Larson's
+directors' reports upward unedited abdicates. The board needs a few exposures (availability against
+contract, credits, revenue at risk, delivery against commitments, one people measure). Larson's
 executive primer is a practitioner guide to this layer
 ([Larson, 2024](../../references/bibliography.md#larson2024primer)).
 
@@ -438,36 +450,35 @@ who is exempt makes it optional.
 
 ## Case Study
 
-This case is **fictional**. Earlier history comes from the
-[baseline data](../../case-studies/northstar/baseline-data.md) and
-[the director's first year](../../case-studies/northstar/first-quarter.md). It is set in quarter 2
-(weeks 14 to 26). Decisions that are open in the case stay open.
+This case is **fictional**, set in quarter 2 (weeks 14 to 26); the full story is in
+[the year 1 record](../../case-studies/northstar/first-quarter.md).
 
-**How disputes moved before.** Northstar's record shows two routes. Most Billing–Orders disputes went
-nowhere. The thread after INC-417 got no manager response; the review of INC-427 (credit notes applied
-twice after a release) opened with blame of an Orders change; and Victor "let the two of them sort it
-out". Other disputes reached Victor and were decided in conversation, unrecorded. In week 14 he told
+**How disputes moved before.** Most Billing–Orders disputes went nowhere: the thread after INC-417
+got no manager response, and the review of INC-427 (credit notes applied twice after a release) opened
+with blame of an Orders change. Other disputes reached Victor and were decided in conversation,
+unrecorded. In week 14 he told
 Elena Sokolova (Payments and Integrations manager) in passing to "read the tables now and clean it up
 later" while ADR-0001 was open.
 
 **The decision log.** In week 14 the director opened an organization decision log and backfilled it
-from quarter 1:
+from quarter 1. The lesson is in the last column: four of ten entries are open, three without a named
+decider. Before week 14 they were open and invisible.
 
 | Id | Week | Decision | Decider | Status at week 26 |
 |---|---|---|---|---|
-| DL-01 | 3 | Severity definitions | Director, with Kwame Mensah (staff engineer) and Sofia Alvarez (VP Customer Success) | In force; audit added week 7 |
-| DL-02 | 4 | Capacity model, 12 [FTE](../../glossary.md#fte) prevention | Agreed by Victor Lindqvist and Amara Okafor (CPO) | In force to week 26; quarter 3 plan awaiting sign-off |
-| DL-03 | 4 | Owners for core/customer, core/scheduler, auth-svc, webhooks | Director | In force |
-| DL-04 | 5 | [Tier 1 minimums](../../glossary.md#tier-1-operational-minimums) (owner, alerts, runbook, on-call for each critical component); core/permissions exempt until owned | Director | Open: core/permissions owner |
-| DL-05 | 9 | No ledger migration with dependent code in one release | Director | Superseded week 11 by pipeline check |
-| DL-06 | 10 | QA engineers into product teams | Director | In force |
-| DL-07 | 10 | Migration rehearsal for tier 1 data | Director | In force |
-| DL-08 | 14 | ADR-0001: reading posted ledger data | Not yet named | Open |
-| DL-09 | Q2 | tax-svc build, buy, or hybrid | Not yet named | Open |
-| DL-10 | Q2 | CI consolidation target | Not yet named | Open |
+| DL-01 | 3 | Severity definitions | Director | In force |
+| DL-02 | 4 | Capacity model: 12 [FTE](../../glossary.md#fte) of prevention | CTO and CPO | In force to week 26 |
+| DL-03 | 4 | Owners for four unowned components | Director | In force |
+| DL-04 | 5 | [Tier 1 minimums](../../glossary.md#tier-1-operational-minimums); one shared module exempt until owned | Director | Open: that module's owner |
+| DL-05 | 9 | Rule: no ledger schema change and dependent code in one release | Director | Replaced week 11 by an automatic pipeline check |
+| DL-06 | 10 | QA engineers move into product teams | Director | In force |
+| DL-07 | 10 | Rehearse migrations of tier 1 data | Director | In force |
+| DL-08 | 14 | ADR-0001: how integrations read ledger data | Not named | Open |
+| DL-09 | Q2 | Build, buy, or hybrid for the tax service | Not named | Open |
+| DL-10 | Q2 | Which CI system to standardize on | Not named | Open |
 
-Four of ten entries are open, three without a named decider. Before week 14 they were open and
-invisible.
+The shared module in DL-04 is core/permissions. The tax service (tax-svc) calculates sales tax from a
+rate table one Billing engineer updates by hand.
 
 **The escalation path**, published in week 15: five working days for the parties, then a
 joint written case to the director, decided within five working days and logged. The director takes a
@@ -476,7 +487,8 @@ director also asked Victor to send questions that reach him directly back throug
 does is left open for the exercises.
 
 **The week 26 report.** In week 26 the director sent the first written report since the day-90
-report, proposed as a monthly two-page report from quarter 3:
+report, proposed as a monthly two-page report from quarter 3. Kwame Mensah (staff engineer,
+reliability) owns the first risk.
 
 > **Engineering report to Victor Lindqvist, end of quarter 2 (week 26)**
 >
@@ -487,8 +499,8 @@ report, proposed as a monthly two-page report from quarter 3:
 >
 > | Commitment | Due | Status |
 > |---|---|---|
-> | Accounting integration (Payments and Integrations) | Week 19 | Delivered; live for the renewal customer since week 19, daily reconciliation running |
-> | Bulk ordering (Orders) | Week 26 | Green: 44 contractual items complete; release candidate in final acceptance with the customer, forecast to ship by the end of week 26 |
+> | Accounting integration (Payments and Integrations) | Week 19 | Delivered; daily reconciliation running |
+> | Bulk ordering (Orders) | Week 26 | Green: 44 contractual items complete; in final customer acceptance |
 >
 > | Measure | Q1 | Q2 | Reading |
 > |---|---|---|---|
@@ -517,16 +529,14 @@ report, proposed as a monthly two-page report from quarter 3:
 The headline answers the first question; flat measures are shown, not left out; each request carries
 options, a recommendation, and the cost of lateness. The report decides nothing that is still open.
 
-**The reader's decisions.** Does the path's clock suit Billing and Orders, given their history? What
-does the director do the next time a team cites "Victor said"? How do DL-08 to DL-10 get named
-deciders without the director deciding all three? Does availability below contract belong in the
-headline's first sentence?
+**The open choice.** How do DL-08 to DL-10 get named deciders without the director deciding all three,
+and what does the director do the next time a team cites "Victor said"?
 
 ## Exercises
 
 Solutions are in [chapter 39 solutions](../../solutions/ch39-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md) and the
-[first quarter](../../case-studies/northstar/first-quarter.md) page.
+[baseline page](../../case-studies/northstar/baseline-data.md) and in
+[the year 1 record](../../case-studies/northstar/first-quarter.md).
 
 ### Foundational
 
@@ -568,7 +578,8 @@ you do with Elena, with Victor, and with the log.
 
 ### Executive Decision-Making
 
-**X1.** You are Victor Lindqvist. Helena Marsh (CEO) wants the CEO's monthly board pack to show engineering
+**X1.** You are Victor Lindqvist. Helena Marsh (CEO) wants the CEO's monthly
+[board pack](../../glossary.md#board-pack) to show engineering
 figures beyond committed items delivered and the Sev1 and Sev2 count. Using the director's week 26
 report, choose at most five figures for the board, say what you leave out and why, and say how you will
 stop the board pack from reshaping the directors' reports.

@@ -13,6 +13,11 @@ not the director's personal heroics. Each cell describes evidence someone else c
 document, a decision record, a measure, a changed behavior in a manager. A competency without
 evidence is rated "No evidence", never filled with impression.
 
+!!! tip "Minimum version"
+    For a first self-assessment, rate only the three competencies most at stake this period, each with
+    two pieces of evidence and one piece of contrary evidence, and pick one development goal with a
+    check. Rate all eight at the formal annual assessment.
+
 ## How to fill it in
 
 1. Collect evidence first, for the whole period, from records: reviews, decision logs, scorecards,
@@ -65,10 +70,13 @@ assessment:
     Week 26 of the Engineering Director's first year at Northstar Technologies, a fictional company with
     80 engineers under six managers. Quarter 1 changed ownership, severity definitions, and the release
     train; quarter 2 delivered the renewal features. The director reports to Victor Lindqvist (CTO). See
-    the [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    the [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
-Evidence comes from [Northstar's first-year record](../case-studies/northstar/first-quarter.md) up to
-the [quarter 2 results](../case-studies/northstar/first-quarter.md#quarter-2-results). People named:
+Evidence comes from [the year 1 record](../case-studies/northstar/first-quarter.md) up to the
+[quarter 2 results](../case-studies/northstar/first-quarter.md#quarter-2-results); weeks count from the
+director's first week. People named:
 Daniel Cho, Priya Raman, Elena Sokolova, and Tom Becker are engineering managers; Bram Verhoeven and
 Tomasz Wierzbicki are engineers; Amara Okafor is the CPO.
 
@@ -80,7 +88,7 @@ Tomasz Wierzbicki are engineers; Amara Okafor is the CPO.
 | 4. Talent system | No evidence (first calibrated cycle due in quarter 3) | Ladder rewrite drafted; first calibrated cycle set for the start of quarter 3; six underpaid US Senior Engineers identified; structured hiring pilot proposed | Tomasz Wierzbicki reported an outside offer 20 percent above base in week 20, before any pay correction landed |
 | 5. Design and ownership | Solid | Week 4 ownership decisions (core/customer, core/scheduler, auth-svc, webhooks); span and dependency analysis; Billing-owned order-to-invoice contract instead of moving people | core/permissions still under an exemption; document-store orphaned; Orders left with about 2.6 engineers of free capacity |
 | 6. Capacity and portfolio | Strong | Capacity model agreed in week 4 with Victor Lindqvist and Amara Okafor, with a cautious case; both renewal commitments on track at day 90; accounting integration live week 19; bulk ordering in final acceptance at week 26 | Prevention spend by team was allocated, not tracked |
-| 7. Decision governance | Not yet | Standard owners with a 10-working-day decision rule | Migration check slipped from week 7 to week 11 and a Sev1 came first; ADR-0001 (how integrations read ledger data) opened with nobody's decision rights mapped, while the CTO gave a contrary instruction in passing |
+| 7. Decision governance | Not yet | Standard owners with a 10-working-day decision rule | Migration check slipped from week 7 to week 11 and a Sev1 came first; [ADR-0001](../glossary.md#adr-0001) (how integrations read ledger data) opened with nobody's decision rights mapped, while the CTO gave a contrary instruction in passing |
 | 8. Executive partnership | Solid | Quarter 1 dip agreed with the CPO in advance; answered the CEO's week 9 "who made the change" with the mechanism | QA transition announced in week 10, after anxiety had spread; the CFO's output-per-engineer request still open |
 
 **Development goals for quarters 3 and 4:**

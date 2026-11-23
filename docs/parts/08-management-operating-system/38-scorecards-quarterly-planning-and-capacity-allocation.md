@@ -58,7 +58,9 @@ After this chapter you will be able to:
     - **[Planned case](../../glossary.md#planned-case-and-cautious-case)**: the capacity left if unplanned
       work comes in as projected. **Cautious case**: the capacity left if it stays at last quarter's
       higher level.
-    - **Growth allowance**: a divisor for the way work grows between estimate and delivery.
+    - **Growth allowance**: how much work historically grows between estimate and delivery, used as a
+      divisor. If features grow 25 percent, 10 FTE of capacity absorbs only 10 ÷ 1.25 = 8 FTE of
+      estimates. "Estimated effort" always means estimates before growth.
     - **Target band**: work above the commitment line that starts only if the planned case holds.
 
 Three ideas follow. First, **unplanned work is not allocated; it is a tax you measure**, paid before
@@ -231,31 +233,41 @@ level that remainder also pays for platform work, so this chapter splits it into
 ## Engineering Organization Example
 
 !!! info "Northstar so far"
-    Week 25 of the director's first year, near the end of quarter 2. Sev1 and Sev2 incidents fell
-    from 30 to 21 in quarter 1, and unplanned work from 34 to 31 percent of capacity. One renewal
-    commitment (the accounting integration) has been live since week 19; bulk ordering is due at the
-    end of week 26. See the [timeline](../../case-studies/northstar/timeline.md).
+    Week 25 of the director's first year, near the end of quarter 2.
+    [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious
+    levels) fell from 30 to 21 in quarter 1, and unplanned work from 34 to 31 percent of capacity. One
+    [renewal commitment](../../glossary.md#renewal-commitments) (the accounting integration) has been
+    live since week 19; bulk ordering is due at the end of week 26. See the
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This example is **illustrative**: Northstar's recorded numbers where they exist, every other
 assumption stated. It is set in weeks 25 and 26, planning quarter 3 (weeks 27 to 39). All capacity is
 in FTE over the quarter, which is the same number as FTE-quarters of work; engineer-weeks appear only
 in parentheses (1 FTE-quarter = 13 engineer-weeks).
 
-**Starting figures.** 80 engineers. Chapter 27's projection for quarter 3: unplanned work 22 percent
-(17.6 FTE), prevention 8 FTE, leaving 54.4 FTE. Platform Operations is Tom Becker (its manager) and
-five infrastructure engineers; two rotate on interrupts and three do planned work, as in Chapter 32's
-quarter 2 roadmap
-([Chapter 32 case study](../06-technical-leadership/32-platform-engineering-developer-experience-and-modernization.md#case-study)).
+!!! note "Inputs you are given"
+    - **People.** 80 engineers: 77 on the six teams plus three staff engineers.
+    - **Unplanned work.** Projected at 22 percent of capacity for quarter 3 (Chapter 27's model);
+      measured at 28 percent in quarter 2.
+    - **Prevention.** 8 FTE, down from 12 in quarters 1 and 2, because the work moves from building
+      capabilities (release checks, detection) to maintaining them.
+    - **Platform.** Platform Operations (Tom Becker, its manager, and five infrastructure engineers)
+      is moving the teams' builds onto one CI pipeline template. Which CI system becomes the standard
+      (the consolidation target) is still undecided. Two of the five rotate on interrupts; three do
+      planned work.
 
 **Assumptions for this example:**
 
 - **Cautious case.** Unplanned work stays at quarter 2's measured 28 percent (22.4 FTE).
 - **Platform.** 3 FTE of Platform Operations planned work, plus 1.5 FTE in product teams for migrating
-  their own services to the pipeline template, held until the consolidation target is decided.
+  their own services to the pipeline template. The 1.5 is held until the consolidation target is
+  decided.
 - **Bulk ordering reserve.** Two engineers stay on support for its first four weeks after launch:
   about 0.6 FTE-quarters (8 engineer-weeks).
-- **Growth allowance.** Orders' features grew 15 to 35 percent between start and delivery, so product
-  capacity is divided by 1.25, the middle of that range, before estimates are committed against it.
+- **Growth allowance.** Orders' features grew 15 to 35 percent between start and delivery, so the
+  plan uses 1.25, the middle of that range.
 - **Demand.** Amara Okafor (CPO) has a candidate list of 24 items, about 62 FTE-quarters (806
   engineer-weeks) of estimated effort.
 
@@ -268,7 +280,8 @@ quarter 2 roadmap
 | Product after bulk ordering reserve | 49.3 | 44.5 |
 | Estimated effort it can absorb (÷ 1.25) | 39.4 | 35.6 |
 
-The first four lines of each column sum to the 80 engineers.
+The first four lines of each column sum to the 80 engineers. The last line is in estimates before
+growth, which is what requesters' sizes are.
 
 **What the plan commits.** About 35.6 FTE-quarters of estimated effort (about 463 engineer-weeks),
 from the top of the ranked list, each cross-team item with a lead team. The next 3.8 FTE-quarters are
@@ -282,7 +295,7 @@ honest.
 
 **Prevention by team.** The director proposes sizing the 8 FTE by where failures come from:
 
-| Team | Engineers (from week 10) | Prevention FTE | Share |
+| Team | Engineers | Prevention FTE | Prevention as % of team |
 |---|---|---|---|
 | Billing | 15 | 2.5 | 17% |
 | Orders | 16 | 2.0 | 13% |
@@ -291,10 +304,12 @@ honest.
 | Data and Analytics | 11 | 1.0 | 9% |
 | **Total** | | **8.0** | |
 
-Billing keeps the largest share: 6 of the 11 baseline recurrences and the highest unplanned share among product teams.
-Orders' share rises from quarter 1's 10 percent because bulk ordering no longer holds its capacity.
-Platform Operations takes none; its planned work is the platform line. Whether quarter 1's 2 FTE
-security earmark stays inside the 8 is a trade-off the plan must name.
+Team sizes are those after the QA engineers joined the product teams in week 10. Billing keeps the
+largest share: it had 6 of the 11 baseline [recurrences](../../glossary.md#recurrence) (incidents of
+a kind seen before) and the highest unplanned share among product teams. Orders' share rises from
+quarter 1's 10 percent because bulk ordering no longer holds its capacity. Platform Operations takes
+none; its planned work is the platform line. In quarter 1, 2 FTE of prevention were set aside for
+security work; whether that stays inside the 8 is a trade-off the plan must name.
 
 ## Decision Framework
 
@@ -368,7 +383,8 @@ Countermeasure: publish the list with reasons and the earliest quarter each coul
 **Scorecard sprawl.** Thirty rows nobody reads. Signal: rows without owners or decisions.
 Countermeasure: a fixed limit, and a removal before any addition.
 
-**Key results on mechanism measures.** "Change fail rate below 15 percent" invites reclassification and
+**Key results on mechanism measures.** "[Change failure rate](../../glossary.md#change-failure-rate)
+below 15 percent" (the share of deployments that cause a failure) invites reclassification and
 fewer deployments. Signal: the target improves while its pair worsens. Countermeasure: key results on
 outcomes, each paired, classifications audited.
 
@@ -404,9 +420,9 @@ should come from systems the director can query directly, not only from the peop
 At CTO level, the allocation is a portfolio decision presented to a board and a CFO.
 
 **Categories become investment classes:** run (unplanned work and maintenance), grow (product), and
-improve (prevention and platform), with the trend. At Northstar's
-[fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000 per engineer-year, the quarter 3 planned
-case spends about $814,000 in the quarter on unplanned work alone. Budgeting
+improve (prevention and platform), with the trend. At the book's planning rate of $46,250 per
+FTE-quarter (a [fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000 per engineer-year),
+the quarter 3 planned case spends about $814,000 in the quarter on unplanned work alone. Budgeting
 belongs to Chapter 52.
 
 **The scorecard becomes a few exposures.** A board needs four or five numbers: availability against
@@ -441,30 +457,33 @@ This case is **fictional**. It is set in weeks 25 and 26 and continues the examp
 decisions are the reader's.
 
 **The situation.** Bulk ordering is due at the end of week 26 and has not shipped. The consolidation
-target for the pipeline template is still undecided. Greg Tanaka (VP Sales) promised two features in open deals, and both
-are among the committed items. The draft allocation is the one in the Engineering Organization Example.
+target is still undecided. Greg Tanaka (VP Sales) promised two features in open deals, and both are
+among the committed items. The draft allocation is the one in the Engineering Organization Example.
 
 **The proposed organization scorecard,** eight entries:
 
-| # | Measure | Paired with | Row owner | Data steward |
-|---|---|---|---|---|
-| 1 | Contractual availability (target 99.9%, set by contract) | Customer-detected share | Director | Kwame Mensah (staff engineer, reliability) |
-| 2 | Quality block: Chapter 27's rows, by reference | As defined there | As defined there | As defined there |
-| 3 | Deployment frequency and change fail rate, by component | Each other | Elena Sokolova (Payments and Integrations manager) | Kwame Mensah |
-| 4 | Committed items delivered | Forecast calibration (Chapter 17) | Director | Planning tool owner |
-| 5 | Capacity by category against plan | Unplanned share by team | Director | Tom Becker |
-| 6 | Corrective-action closure | Recurrence | Marcus Oyelaran (Billing manager) | Kwame Mensah |
-| 7 | Median environment wait | Other teams' requests on Platform Operations | Tom Becker | Platform Operations |
-| 8 | Survey: feedback loops, cognitive load (teams of five or more respondents) | After-hours pages | Daniel Cho (Customer Experience manager) | Survey administrator |
+| # | Measure | Paired with | Row owner |
+|---|---|---|---|
+| 1 | Contractual availability (99.9%, set by contract) | Customer-detected share | Director |
+| 2 | Quality block (Chapter 27), by reference | As defined there | As defined there |
+| 3 | Deployment frequency and change failure rate | Each other | Payments and Integrations manager |
+| 4 | Committed items delivered | Forecast calibration | Director |
+| 5 | Capacity by category against plan | Unplanned share by team | Director |
+| 6 | Corrective-action closure | Recurrence | Billing manager |
+| 7 | Median environment wait | Other teams' requests on Platform | Platform manager |
+| 8 | Survey: feedback loops, cognitive load | After-hours pages | Customer Experience manager |
 
-Delivery rows come from the deployment-event store once it runs; until then from the hand-joined
-numbers, with that caveat beside them.
+Kwame Mensah (staff engineer, reliability) is data steward for rows 1, 3, and 6; Platform Operations
+for row 7; Tom Becker for row 5; the planning tool's owner for row 4; the survey administrator for
+row 8. Survey results are shown only for teams with five or more
+respondents. Delivery rows come from the deployment-event store once it runs; until then from
+hand-joined numbers, with that caveat beside them.
 
 **The complications.**
 
 - **Amara Okafor** asks that the 3.8 FTE-quarters of targets be committed, "since the planned case is
   your own projection".
-- **Marcus Oyelaran** wants Billing's prevention share kept at quarter 1's 25 percent, not 17, because
+- **Marcus Oyelaran** (Billing manager) wants Billing's prevention share kept at quarter 1's 25 percent, not 17, because
   ledger knowledge is still concentrated in three people.
 - **Tom Becker** says the 1.5 FTE held for migrations will be lost to product if the target decision
   slips past week 30, and asks for a date.
@@ -481,8 +500,8 @@ if bulk ordering slips. And which three OKRs to send Victor, each with its score
 ## Exercises
 
 Solutions are in [chapter 38 solutions](../../solutions/ch38-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md) and the
-[first quarter](../../case-studies/northstar/first-quarter.md) page.
+[baseline page](../../case-studies/northstar/baseline-data.md) and in
+[the year 1 record](../../case-studies/northstar/first-quarter.md).
 
 ### Foundational
 

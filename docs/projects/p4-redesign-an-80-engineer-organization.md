@@ -48,21 +48,19 @@ evaluate at least two of the chapter's alternatives honestly, including the stro
 
 **Your position.** Engineering Director, with nine direct reports (six managers, three staff
 engineers; the [cast](../case-studies/northstar/cast.md) lists them). You design the organization and
-the transition plan. Victor Lindqvist decides the design and any engineering seat converted into a management seat. Amara Okafor
+the transition plan. Victor Lindqvist decides the design and any engineering [seat](../glossary.md#seat) converted into a
+management seat. Amara Okafor
 (CPO) cares about which teams serve which product outcomes. Rajiv Menon (CFO) holds the headcount line.
 
 **Timing.** You submit in week 44. Victor decides in week 46. Reporting lines change in week 53. Your
 proposal must work with a quarter of preparation and a quarter of settling.
 
-**The time rule.** Use facts dated week 44 or earlier: the
-[Northstar overview](../case-studies/northstar/index.md), the
-[baseline data](../case-studies/northstar/baseline-data.md), the first-year record through
-[quarter 3 results](../case-studies/northstar/first-quarter.md#quarter-3-results) and the weeks 40 to
-44 entries of the [quarter 4 calendar](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4),
-and the [timeline](../case-studies/northstar/timeline.md) to week 44. You may read the director's
+**The time rule.** Use only facts dated week 44 or earlier ([weeks](../glossary.md#weeks-quarters-and-years)
+count from the director's first week). The fact sheet under Starting Dataset lists the case facts the
+project needs, each with its week; anything else you use from the case must also be dated week 44 or
+earlier. You may read the director's
 [week 44 proposal](../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44)
-as an answer to test. Victor's decision and anything after week 44 are not recorded and are off
-limits.
+as an answer to test. Victor's decision and anything after week 44 are not recorded and are off limits.
 
 **Constraints.** These are binding.
 
@@ -84,7 +82,7 @@ limits.
 Use these sources:
 
 - [Northstar overview](../case-studies/northstar/index.md), [baseline data](../case-studies/northstar/baseline-data.md),
-  and [the first quarter](../case-studies/northstar/first-quarter.md), including the decisions that
+  and [the year 1 record](../case-studies/northstar/first-quarter.md), including the decisions that
   hold, the day-90 results, and the starting points for quarter 2.
 - [`components.csv`](../case-studies/northstar/data/components.csv) for tier and baseline readiness;
   [`teams.csv`](../case-studies/northstar/data/teams.csv) and
@@ -100,19 +98,32 @@ ownership moves and the seven QA engineers' placement in week 10. The teams tota
 Minneapolis, 16 in Bogotá, and 12 remote. Its last row lists the two components
 with no owner: core/permissions (exemption lapsed at week 39) and document-store (orphaned since baseline).
 
-**Facts your submission must use.**
+**Project fact sheet.** Every case fact the submission must use, one per row, each dated week 44 or
+earlier. You do not need to search the case pages for these.
 
-| Area | Facts |
-|---|---|
-| People and spans | [Spans](../glossary.md#span-of-control) 16, 15, 13, 17, 11, 5; director with 9 direct reports; 87 people; Priya Raman (Orders) in her first year as manager; Mateo Arango Ríos (informal mobile lead) doing lead work unrecognized for over a year; Hannah Lindgren the informal web lead |
-| Customer Experience | 9 web, 6 mobile (all in Bogotá), 2 quality engineers; one board and sprint; health check in week 16 with mobile red on 4 of 10 indicators; two of four baseline Sev2 incidents at the mobile-bff and mobile boundary |
-| Dependencies | 86 links by pair in the baseline quarter; the five heaviest classified by cause (Chapter 34); lead time by number of dependencies; Orders, Billing, and Payments exchanging 27 links among themselves and 48 with the other three teams |
-| Architecture | Co-change pairs (order-capture and pricing-rules 53 percent of pricing-rules' 110 merge requests); core/permissions changed by 38 merge requests, 17 from Orders; Orders knowledge map in week 14; document-store's two callers |
-| Orders load | Seven components across six domains; about 2.6 engineers left for everything else in quarter 2 while bulk ordering ran |
-| Platform | Five engineers; two-person interrupt rotation; other teams' requests down from 20 to 14 points of capacity by week 18; four CI systems costing about 1.5 [FTE](../glossary.md#fte) a year against about 0.5 for one |
-| Data and Analytics | 12 points of capacity on other teams' requests at baseline; Farah Haddad (its manager) also the team's data architect; search-svc's authors on the team |
-| Succession | 10 critical roles; none ready now; 6 with interim cover; 4 with none |
-| Money | $185,000 per engineer-year; 13-week quarters; 80 × 13 = 1,040 engineer-weeks a quarter |
+| Fact | Value | Week | Source |
+|---|---|---|---|
+| [Spans](../glossary.md#span-of-control) | Orders 16, Billing 15, Payments and Integrations 13, Customer Experience 17, Data and Analytics 11, Platform Operations 5; the director has 9 direct reports | Week 44 | [Week-44 roster](data/p4-week44-roster.csv) |
+| Headcount | 87 people: 80 engineers, 6 managers, the director | Baseline | [Overview](../case-studies/northstar/index.md) |
+| Priya Raman | Orders manager, in her first year as a manager | Week 44 | [Cast](../case-studies/northstar/cast.md) |
+| Mateo Arango Ríos | Informal mobile lead, doing lead work unrecognized for over a year | Week 17 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
+| Hannah Lindgren | Informal web lead in Customer Experience | Week 44 | [Chapter 36](../parts/07-organization-design/36-reorganizations-evolution-and-succession.md) |
+| Customer Experience | 9 web engineers, 6 mobile (all in Bogotá), 2 quality engineers; one board and one sprint | Week 44 | [Week-44 roster](data/p4-week44-roster.csv) |
+| Customer Experience health check | Mobile red on 4 of 10 indicators | Week 16 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2) |
+| Mobile incidents | Two of four baseline Sev2 incidents at the mobile-bff and mobile boundary | Baseline quarter | [Incident file](../case-studies/northstar/data/incidents-last-quarter.csv) |
+| Dependency links | 86 links by team pair; the five heaviest classified by cause; lead time by number of dependencies | Baseline quarter | [Chapter 34](../parts/07-organization-design/34-spans-layers-and-dependency-mapping.md) |
+| Order-to-cash links | Orders, Billing, and Payments exchange 27 links among themselves and 48 with the other three teams | Baseline quarter | [Chapter 34](../parts/07-organization-design/34-spans-layers-and-dependency-mapping.md) |
+| Co-change | Order-capture and pricing-rules change together in 53 percent of pricing-rules' 110 merge requests | Baseline | [Chapter 35](../parts/07-organization-design/35-designing-organizations-at-four-scales.md) |
+| core/permissions | Changed by 38 merge requests, 17 from Orders; exemption lapsed | Baseline quarter; week 39 | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Orders knowledge map | Who can change each Orders component safely | Week 14 | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| document-store | Orphaned since baseline; two callers | Baseline | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Orders load | Seven components across six domains; about 2.6 engineers left for everything else while bulk ordering ran | Quarter 2 | [Chapter 33](../parts/07-organization-design/33-conways-law-team-topologies-and-cognitive-load.md) |
+| Platform Operations | Five engineers; two-person interrupt rotation | After week 10 | [Week-44 roster](data/p4-week44-roster.csv) |
+| Platform requests | Other teams' requests down from 20 to 14 points of capacity | Week 18 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2) |
+| CI systems | Four CI (continuous integration) systems cost about 1.5 [FTE](../glossary.md#fte) a year to run; one would cost about 0.5 | Baseline | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Data and Analytics | 12 points of capacity on other teams' requests; Farah Haddad (manager) is also the team's data architect; search-svc's authors are on the team | Baseline | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Succession | 10 critical roles; none ready now; 6 with interim cover; 4 with none | Week 44 | [Chapter 36](../parts/07-organization-design/36-reorganizations-evolution-and-succession.md) |
+| Money | $185,000 per engineer-year; 13-week quarters, so 80 × 13 = 1,040 engineer-weeks a quarter | Baseline | [Overview](../case-studies/northstar/index.md) |
 
 **Facts you do not have.** The case leaves these open, and your proposal must treat each as an input
 with branches, not assume an answer: whether Victor Lindqvist will release an engineering seat for a

@@ -19,8 +19,8 @@ programs, executive communication).
 At team scale, technology choices are local: a library, a queue, a test framework. A bad choice costs a
 team a quarter.
 
-At organization scale, technology choices accumulate into an estate every team depends on: four build
-systems, a monolith whose framework is out of support, integrations that read another team's tables. A
+At organization scale, technology choices accumulate into an estate (every system, tool, and codebase
+the company runs) that every team depends on: four build systems, a monolith whose framework is out of support, integrations that read another team's tables. A
 director can set policies for that estate but cannot decide what the company is trying to win at, and so
 cannot say which parts deserve excellence and which only maintenance.
 
@@ -111,14 +111,13 @@ engineering scale: spend scarce attention on new technology only where it differ
 ### What the research on alignment supports
 
 Fit between technology and business strategy seems to pay, mainly by making the firm quicker to
-respond. After years of conflicting results
-([Chan and Reich, 2007](../../references/bibliography.md#chan2007alignment)), a meta-analysis and a
-survey of firms associate alignment with performance, with the effect running through agility
-([Gerow et al., 2014](../../references/bibliography.md#gerow2014alignment);
+respond. After years of conflicting results, the better studies link alignment to performance through
+agility ([Gerow et al., 2014](../../references/bibliography.md#gerow2014alignment); see also
+[Chan and Reich, 2007](../../references/bibliography.md#chan2007alignment) and
 [Tallon and Pinsonneault, 2011](../../references/bibliography.md#tallon2011alignment)). These are
-correlational **research findings**; they do not show that writing a strategy causes anything. The
+correlational **research findings**: they do not show that writing a strategy causes anything. The
 practical reading (**this book's recommendation**): buy the ability to change course as deliberately as
-fit to today's plan.
+you buy fit to today's plan.
 
 ### Deliberate and emergent strategy
 
@@ -212,17 +211,18 @@ The arithmetic and stress tests catch the optimism that three-year estimates att
 ## Engineering Organization Example
 
 !!! info "Northstar so far"
-    Week 46 of the director's first year. Sev1 and Sev2 incidents fell from 30 a quarter to 14 in
-    quarter 3, and unplanned work from 34 to 25 percent; availability reached 99.89 percent against a
-    99.9 percent contract. The year-2 proposals are drafted and none is decided. See the
-    [timeline](../../case-studies/northstar/timeline.md) and the
+    Week 46 of the director's first year. [Unplanned work](../../glossary.md#unplanned-work) fell from
+    34 to 25 percent of capacity; the year-2 proposals are drafted and none is decided. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
     [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 Northstar's three-year allocation shows how a strategy funds growth without headcount. The figures are
 **illustrative**. Assumptions:
 
-- The planning basis is 79 engineers, the headcount under the director's main year-2 organization
-  proposal. It would be 80 under alternative B, and 78 if a VP of Engineering takes a seat. Both are open.
+- The planning basis is 79 engineers. It is open and could move by one either way, depending on
+  undecided year-2 choices.
 - One engineer-year costs $185,000, Northstar's [fully loaded cost](../../glossary.md#fully-loaded-cost).
 - Year 2 runs from week 53 to week 104, year 3 to week 156, year 4 to week 208.
 - Prevention in year 2 averages 5.5 [FTE](../../glossary.md#fte) (full-time equivalent engineers),
@@ -234,7 +234,7 @@ Victor's draft allocation, in FTE averaged over each year:
 
 | Line | Horizon | Year 2 | Year 3 | Year 4 |
 |---|---|---|---|---|
-| [Unplanned work](../../glossary.md#unplanned-work) | 1 | 17.4 (22%) | 14.2 (18%) | 12.6 (16%) |
+| Unplanned work | 1 | 17.4 (22%) | 14.2 (18%) | 12.6 (16%) |
 | Prevention | 1 | 5.5 | 3.0 | 3.0 |
 | Platform | 1 | 4.5 | 5.0 | 5.0 |
 | Estate currency (framework, libraries) | 1 | 2.0 | 1.5 | 1.5 |
@@ -247,7 +247,7 @@ Victor's draft allocation, in FTE averaged over each year:
 Three things follow from the table.
 
 **Growth is funded by the reliability dividend, not by headcount.** From year 2 to year 4, unplanned
-work and prevention together fall by 7.3 FTE, which goes mostly to horizons 2 and 3. The strategy
+work and prevention together fall by 7.3 FTE (22.9 to 15.6), which goes mostly to horizons 2 and 3. The strategy
 therefore depends on unplanned work falling, an assumption that needs a decision point of its own.
 
 **The bad year is written in advance.** If unplanned work stays at quarter 3's 25 percent through year
@@ -351,9 +351,31 @@ and authority over the engineering allocation
 incomplete; Kane and colleagues argue that transformation depends more on people and organization than on
 technology ([Kane et al., 2019](../../references/bibliography.md#kane2019technology); **expert opinion**).
 
+### The board version
+
 At a board, the strategy is a set of choices to discuss, not a plan to approve. The board approves the
-operating plan and budget envelope; the strategy explains what that envelope buys and forgoes. Data and AI
-choices ([Chapter 54](54-data-and-ai-strategy.md)) enter as options like any other.
+[operating plan](../../glossary.md#operating-plan) (the year's targets, headcount, and budget) and the
+[budget envelope](../../glossary.md#budget-envelope) (the total spending limit). The strategy explains what
+that envelope buys and what it forgoes. Keep the board document to one page plus an appendix, in this
+order (**this book's recommendation**):
+
+1. **The business choices it serves**, as the CEO confirmed them, in three lines.
+2. **The four bins**, one line each, with the "not doing" list in full.
+3. **The policies**, two to four, each with its cost.
+4. **The horizon split** for each year, with reallocated capacity and new money on separate lines.
+5. **The decision calendar**: the next four to six dated decisions and the evidence each will use.
+6. **The ask**: what the board is invited to discuss or challenge, and anything it must approve.
+
+The roadmap itself is a layered table, the decision calendar as its last row. An **illustrative** sketch of Victor's draft:
+
+| Layer | Year 2 | Year 3 | Year 4 |
+|---|---|---|---|
+| Business drivers | Keep the largest 40 customers | Larger cross-border distributors, if the board chooses | Growth from year 3's choice |
+| Capabilities | Correct money, available paths | Multi-currency, if exercised | Ordering API, if exercised |
+| Options and probes | Currency probe, availability tier probe | First stages of exercised options | Exercised options at scale |
+| Decisions | Weeks 56, 60, 70, 78, 104 | Annual rewrite | Annual rewrite |
+
+Data and AI choices ([Chapter 54](54-data-and-ai-strategy.md)) enter as options like any other.
 
 At [Halvard Systems](../../glossary.md#halvard-systems), the fictional 500-engineer company with four
 product groups and a 70-engineer platform organization, the CTO's strategy cannot list every group's
@@ -388,8 +410,7 @@ These Northstar events are **illustrative** and fictional; quarter 4 decisions a
 
 **The situation.** You are Victor Lindqvist, Northstar's CTO, in week 46. The board meets in week 50 to
 approve the year-2 operating plan and budget envelope. Your one agenda item is a three-year technology
-strategy, for discussion. The director's year-2 proposals are on your desk, none decided; the
-[quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md) lists them. Six of the 40
+strategy, for discussion. The director's year-2 proposals are on your desk, none decided. Six of the 40
 largest customers, about $7.0M of [ARR](../../glossary.md#arr) (annual recurring revenue), renew in
 quarters 5 to 8.
 
@@ -419,7 +440,8 @@ Guiding policies:
 1. *Reliability before reach*: horizon 2 grows only when unplanned work meets its target at the gate.
 2. *Money data moves by contract*: every integration reads ledger data through a versioned contract or
    posting events, never tables.
-3. *Converge before adding*, extending the director's quarter 2 policy to the whole company.
+3. *Converge before adding*: no new runtime, datastore, or build system for a tier 1 component without
+   retiring one. It extends the director's policy to the whole company.
 4. *Stage anything above 10 FTE-quarters*.
 
 Policy 2 contradicts your own words: in week 14 you told Elena Sokolova (manager, Payments and
@@ -435,10 +457,10 @@ the draft and propose deciding ADR-0001 by week 60, because two options depend o
 | Ordering API for distributors' largest buyers | 3 | Buyers want to order from their own procurement systems | Up to 2 FTE from week 53 to week 78 (about 50 engineer-weeks), within horizon 3 | Week 78 |
 | Core boundary: extract order-capture | 1 | Co-change data still favors extraction | None; existing data | Week 104 |
 
-Probe costs use $3,558 per [engineer-week](../../glossary.md#engineer-week-engineer-day-engineer-year).
-The decision calendar also carries the continuation's gates (weeks 56, 78, and 104) and the
-organization review (week 64). The draft asks for the CI (continuous integration) target to be chosen
-at the week 78 gate.
+Probe costs use the book's planning rate of $3,558 per
+[engineer-week](../../glossary.md#engineer-week-engineer-day-engineer-year). The decision calendar also
+carries the continuation's gates (weeks 56, 78, and 104), where the CI (continuous integration) target
+is chosen at week 78.
 
 **Week 48: the premortem.** You ask the director and the three staff engineers: "It is week 156 and the
 strategy failed. Why?" Three stories dominate:
@@ -448,7 +470,7 @@ strategy failed. Why?" Three stories dominate:
 - Li Na Zhou (staff engineer, data and integration): ADR-0001 was never decided, every new connector
   read tables, and the year-3 multi-currency work had to unpick them.
 - Ines Carvalho (staff engineer, Core domain): the ledger's currency and rounding still depended on one
-  person (TR-07 on the technology risk register), who left in year 3.
+  person, a dependency already on the risk register, and that person left in year 3.
 
 You add the stress rule: shortfalls come from horizon 2, never horizon 3 or prevention. You make
 unplanned work a named assumption, checked at the week 56 and week 78 gates. You add a people line: by
@@ -456,8 +478,8 @@ week 104, every excellent-bin area has at least two people who can change it saf
 
 **Week 49: the executive team.** You table the draft alongside the continuation proposal.
 
-- Amara Okafor (CPO) objects to "adequate" for ordering screens. She cites the week 40–41 finding that
-  about 1.1 percent of orders contain an ordering error; 70 of the 340 sampled errors were duplicate
+- Amara Okafor (CPO) objects to "adequate" for ordering screens. A sample of corrections earlier in the
+  quarter found ordering errors in about 1.1 percent of orders; 70 of the 340 errors sampled were duplicate
   submissions. You split the line. Ordering correctness (idempotent submission, price and unit
   validation) moves to excellent; visual design stays adequate.
 - Greg Tanaka (VP Sales) objects to "no customer-specific code branches", arguing that two open deals

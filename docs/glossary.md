@@ -1,11 +1,57 @@
 # Glossary
 
 This page defines the terms the book uses most, in plain words, for a reader with an engineering
-background and no training in management, finance, or psychology. Terms are grouped by subject; use
-your browser's search to find one. Each entry gives the meaning the book uses, the unit where there is
+background and no training in management, finance, or psychology. Terms are grouped by subject; the
+A–Z index below links every entry. Each entry gives the meaning the book uses, the unit where there is
 one, and a link to the chapter section that teaches it in full. Where two chapters use a word in
 different senses, the entry gives both and says which chapter uses which. Northstar and Halvard
 entries describe the book's fictional companies, not real ones.
+
+## A–Z index
+
+**A:** [ADR-0001](#adr-0001), [Architecture decision record (ADR)](#architecture-decision-record-adr), [ARR](#arr), [Attrition and regretted attrition](#attrition-and-regretted-attrition), [Audit committee](#audit-committee)
+
+**B:** [Blameless review](#blameless-review), [Board pack](#board-pack), [Budget envelope](#budget-envelope)
+
+**C:** [Calibration](#calibration), [Capability trap](#capability-trap), [Capitalized versus expensed software](#capitalized-versus-expensed-software), [Career ladder](#career-ladder), [CD3 and WSJF](#cd3-and-wsjf), [Change failure rate](#change-failure-rate), [CISO](#ciso), [Cognitive load](#cognitive-load), [Constraint](#constraint), [Contract test](#contract-test), [Conway's law and the reverse Conway maneuver](#conways-law-and-the-reverse-conway-maneuver), [Core](#core), [Cost of delay](#cost-of-delay), [Customer-detected share](#customer-detected-share), [Cycle time](#cycle-time)
+
+**D:** [Decision log](#decision-log), [Decision rights](#decision-rights), [Dependency link](#dependency-link), [Deployable unit](#deployable-unit), [Developer experience (DevEx)](#developer-experience-devex), [Discount rate and hurdle rate](#discount-rate-and-hurdle-rate), [DORA metrics](#dora-metrics), [Due diligence](#due-diligence)
+
+**E:** [EBITDA](#ebitda), [Effect size (d, g)](#effect-size-d-g), [Engineer-week, engineer-day, engineer-year](#engineer-week-engineer-day-engineer-year), [Error budget and burn rate](#error-budget-and-burn-rate), [Escalation path](#escalation-path), [Escaped defect](#escaped-defect), [Estate](#estate), [Evidence labels](#evidence-labels)
+
+**F:** [Feature flag](#feature-flag), [Forecast, target, and commitment](#forecast-target-and-commitment), [FTE](#fte), [FTE-quarter](#fte-quarter), [Fully loaded cost](#fully-loaded-cost)
+
+**G:** [Gross margin](#gross-margin)
+
+**H:** [Halvard Systems](#halvard-systems), [Horizons](#horizons)
+
+**I:** [INC numbers](#inc-numbers), [Incident commander](#incident-commander), [Incident review](#incident-review)
+
+**K:** [Known-exploited vulnerability (KEV)](#known-exploited-vulnerability-kev)
+
+**L:** [Layer](#layer), [Lead time](#lead-time), [Leverage point](#leverage-point), [Little's law](#littles-law)
+
+**M:** [Meta-analysis](#meta-analysis), [Metric gaming (Campbell's law, Goodhart's law)](#metric-gaming-campbells-law-goodharts-law)
+
+**N:** [Net present value (NPV)](#net-present-value-npv), [NIST CSF](#nist-csf), [Northstar Technologies](#northstar-technologies), [Not yet](#not-yet)
+
+**O:** [OKR](#okr), [Operating expense](#operating-expense), [Operating plan](#operating-plan), [Operational review and operating review](#operational-review-and-operating-review), [Opportunity cost and sunk cost](#opportunity-cost-and-sunk-cost)
+
+**P:** [Paved road](#paved-road), [Percentile forecast and Monte Carlo simulation](#percentile-forecast-and-monte-carlo-simulation), [Performance improvement plan (PIP)](#performance-improvement-plan-pip), [Planned case and cautious case](#planned-case-and-cautious-case), [Prevention allocation](#prevention-allocation), [Prevention point](#prevention-point), [Psychological safety](#psychological-safety)
+
+**Q:** [Quality engineer](#quality-engineer)
+
+**R:** [Re-rating](#re-rating), [Recurrence](#recurrence), [Register IDs](#register-ids), [Reinforcing and balancing loops](#reinforcing-and-balancing-loops), [Release train](#release-train), [Renewal commitments](#renewal-commitments), [Requisition](#requisition), [Risk appetite](#risk-appetite), [Risk register](#risk-register), [Run-rate](#run-rate)
+
+**S:** [SBOM](#sbom), [Scorecard](#scorecard), [Seat](#seat), [Service credits](#service-credits), [Severity (Sev1, Sev2, Sev3)](#severity-sev1-sev2-sev3), [Severity audit](#severity-audit), [Single point of knowledge failure](#single-point-of-knowledge-failure), [Skip-level](#skip-level), [SLI, SLO, and SLA](#sli-slo-and-sla), [SLSA](#slsa), [SOC 2](#soc-2), [SPACE](#space), [Span of control](#span-of-control), [SSDF](#ssdf), [Staff-plus engineer](#staff-plus-engineer), [Stay interview](#stay-interview), [Stock and flow](#stock-and-flow), [Structured interview](#structured-interview), [Succession coverage](#succession-coverage)
+
+**T:** [Team charter and working agreement](#team-charter-and-working-agreement), [Team types and interaction modes](#team-types-and-interaction-modes), [Technical debt (principal and interest)](#technical-debt-principal-and-interest), [The continuation](#the-continuation), [The five constraints](#the-five-constraints), [The mandate](#the-mandate), [Tier 1](#tier-1), [Tier 1 operational minimums](#tier-1-operational-minimums), [Top-40 customers](#top-40-customers), [Transition cost](#transition-cost)
+
+**U:** [Unfunded list](#unfunded-list), [Unplanned work](#unplanned-work)
+
+**V:** [Validity coefficient](#validity-coefficient), [Value channel and urgency profile](#value-channel-and-urgency-profile), [Velocity and story points](#velocity-and-story-points), [Vesting](#vesting)
+
+**W:** [Warranty, indemnity, and escrow](#warranty-indemnity-and-escrow), [Weeks, quarters, and years](#weeks-quarters-and-years), [Work in progress (WIP) and WIP limit](#work-in-progress-wip-and-wip-limit)
 
 ## Money and business
 
@@ -38,6 +84,29 @@ The running costs of the business that appear in the income statement in the per
 research and development (most engineering salaries), sales and marketing, and general and
 administrative costs. When a CFO asks for "flat operating expense", this is the line meant. Unit:
 dollars per year. Taught in
+[Chapter 52](parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md#the-three-statements-read-by-a-technology-leader).
+
+### Operating plan
+
+The company's plan for the coming year: its financial targets, headcount, and budget, usually approved
+by the board before the year starts. Engineering's part is a page of the plan and a share of its budget.
+At Northstar the board is asked to approve the year-2 operating plan in week 50. Taught in
+[Chapter 52](parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md#the-engineering-budget).
+
+### Budget envelope
+
+The total spending limit the board approves with the operating plan. Decisions inside the envelope
+stay with management; anything outside it goes back to the board or the CFO. At Northstar the year-2
+organization, the quality continuation, and the workforce plan are all decided inside the envelope.
+Unit: dollars per year. Taught in
+[Chapter 52](parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md#the-engineering-budget).
+
+### Run-rate
+
+A current amount projected forward as if it continued for a full year. A cost's run-rate is what a full
+year at today's level would cost, which differs from this year's actual spend whenever something
+changes mid-year: a seat left empty from month six saves half its cost this year and all of it in the
+run-rate. ARR is the revenue run-rate of contracts in force. Unit: dollars per year. Taught in
 [Chapter 52](parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md#the-three-statements-read-by-a-technology-leader).
 
 ### Capitalized versus expensed software
@@ -79,6 +148,15 @@ time; WSJF (Weighted Shortest Job First, from the SAFe framework) uses relative 
 ratio. Fixed-date items are not ranked this way; they are scheduled backward from their date. Taught in
 [Chapter 15](parts/04-execution/15-planning-prioritization-and-delivery-methods.md#prioritization-as-economics).
 
+### Value channel and urgency profile
+
+Two labels the book's business case attaches to each benefit. The **value channel** says how the
+benefit reaches the company: increase revenue, protect revenue, reduce costs, or avoid costs. The
+**urgency profile** says how its value changes with delay, from long-lived benefits whose peak is not
+affected by a slip to work whose value drops sharply after a fixed date. Together they make cost of
+delay comparable across items. Defined in the
+[technology investment business case](templates/technology-investment-business-case.md) template.
+
 ### Opportunity cost and sunk cost
 
 Opportunity cost is the value of the best alternative a choice gives up. With fixed headcount, the
@@ -118,12 +196,23 @@ engineer-weeks in Chapter 38). It measures the size of a body of work, where FTE
 capacity. Unit: FTE-quarters. Taught in
 [Chapter 38](parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md#engineering-organization-example).
 
+### Seat
+
+One funded position in the headcount, whether filled or vacant. Headcount limits are counted in seats:
+Northstar's engineering organization has 87 (80 engineers, 6 managers, and the director), and the
+"87-seat rule" means a new role, such as a VP or a new manager, costs an existing seat, usually an
+engineer's. A seat left empty saves money but not work. Described on the
+[Northstar overview](case-studies/northstar/index.md#executive-and-board-context) and taught in
+[Chapter 48](parts/11-vp-engineering/48-capacity-strategy-workforce-planning-and-governance.md#what-a-workforce-plan-contains).
+
 ### Engineer-week, engineer-day, engineer-year
 
-One engineer's working week, day, or year, used to size work. The book prices an engineer-year at
-$185,000 and an engineer-week at about $3,558 ($185,000 over 52 weeks). Some chapters (21, 30, 52)
-price an engineer-day at about $800 ($185,000 over 230 working days), so five engineer-days cost more
-than one engineer-week in those chapters; compare like with like. Taught in
+One engineer's working week, day, or year, used to size work. The book's planning rate is $185,000 per
+engineer-year, which is about $3,558 per engineer-week ($185,000 ÷ 52) and $46,250 per FTE-quarter.
+Where a case uses $800 per engineer-day, that is Finance's day rate ($185,000 ÷ about 230 working days);
+it is higher per day than the planning rate because Finance counts only working days. The capitalization
+rate of $157,250 per FTE-year is the capitalized share (85 percent) of $185,000. Do not mix the day rate
+and the week rate in one calculation. Taught in
 [Chapter 45](parts/10-business-leadership/45-business-models-and-engineering-economics.md#opportunity-cost-and-sunk-cost).
 
 ### Planned case and cautious case
@@ -183,6 +272,21 @@ dates. A percentile forecast reads that range: "85th percentile, week 30" means 
 runs finished by week 30. Taught in
 [Chapter 17](parts/04-execution/17-predictability-and-managing-uncertainty.md#forecasting-from-throughput).
 
+### Velocity and story points
+
+Story points are a team's relative size for a backlog item ("this is about twice that one"), not a unit
+of time. Velocity is the number of points a team finishes per sprint. Both help a team expose
+disagreement about scope; neither converts to dates reliably, and comparing them across teams invites
+gaming, because each team's points mean something different. Taught in
+[Chapter 17](parts/04-execution/17-predictability-and-managing-uncertainty.md#story-points-planning-poker-and-t-shirt-sizes).
+
+### Cycle time
+
+The elapsed time from when someone starts work on an item to when it is done, for finished items. It is
+the team's slice of lead time and excludes the wait before work starts. Read it as a percentile ("85
+percent of items finish within 9 days"), not an average. Unit: days. Taught in
+[Chapter 16](parts/04-execution/16-flow-lead-time-dependencies-and-unplanned-work.md#flow-measures-throughput-cycle-time-and-work-item-age).
+
 ## Delivery and quality
 
 ### Lead time
@@ -199,15 +303,16 @@ and [Chapter 16](parts/04-execution/16-flow-lead-time-dependencies-and-unplanned
 
 Delivery metrics published by DORA (DevOps Research and Assessment, now part of Google Cloud). Many
 dashboards show "four keys"; the current guide lists five: change lead time, deployment frequency
-(deployments per period), failed deployment recovery time, change fail rate, and deployment rework rate.
+(deployments per period), failed deployment recovery time, change failure rate, and deployment rework
+rate.
 They describe one delivery system at a time and say nothing about whether the right things were built.
 Taught in
 [Chapter 18](parts/04-execution/18-measuring-engineering-productivity.md#what-the-dora-metrics-measure).
 
 ### Change failure rate
 
-The share of deployments or releases that fail. DORA counts deployments needing immediate intervention,
-such as a rollback or hotfix. Northstar counts a release as failed if a hotfix, rollback, or linked
+The share of deployments or releases that fail. DORA calls it "change fail rate" and counts deployments
+needing immediate intervention, such as a rollback or hotfix. Northstar counts a release as failed if a hotfix, rollback, or linked
 incident follows within 72 hours, which is a different, local definition. Unit: percent. Taught in
 [Chapter 23](parts/05-engineering-quality/23-code-review-ci-cd-and-release-engineering.md#change-approval-and-pipeline-outcomes)
 and [Chapter 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#classifying-change-failures-to-find-the-prevention-point).
@@ -233,6 +338,15 @@ customer-reported bug tickets confirmed as defects (212 in the baseline quarter,
 regressions of behavior that used to work) and classifies each by its detection point: the earliest step
 at which a reasonable check would have caught it. Unit: count per quarter. Taught in
 [Chapter 19](parts/05-engineering-quality/19-defining-measuring-and-owning-quality.md#detection-points-tell-you-who-should-own-a-check).
+
+### Quality engineer
+
+A quality specialist who sits in a product team and owns test strategy for the team's risk areas, does
+exploratory testing, coaches developers, and builds automation, rather than running every check
+personally. At Northstar the seven QA engineers became quality engineers in product teams from week
+10. Taught in
+[Chapter 19](parts/05-engineering-quality/19-defining-measuring-and-owning-quality.md#the-four-ownership-models) and
+[Chapter 27](parts/05-engineering-quality/27-quality-transformation-at-enterprise-scale.md#changing-roles-without-losing-the-people).
 
 ### Technical debt (principal and interest)
 
@@ -283,6 +397,22 @@ customers"; Sev2 and Sev3 are progressively narrower, and the headline count is 
 for links: `#severity-sev1-sev2-sev3`. Taught in
 [Chapter 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#severity-definitions-that-resist-reclassification).
 
+### Re-rating
+
+Changing an incident's severity after the fact. Lowering a rating drops the incident out of the Sev1
+and Sev2 count, which is why the book lets anyone raise severity but only the incident commander lower
+it, with a recorded reason. A headline that re-rating could deliver is misleading. At Northstar the
+director re-rated a two-hour payment delay that had been rated Sev3 (week 7). Taught in
+[Chapter 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#severity-definitions-that-resist-reclassification) and
+[Chapter 55](parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#ethics-at-board-level-the-misleading-headline-and-disclosure).
+
+### Severity audit
+
+The weekly check that incidents were rated correctly against the written severity definitions.
+Northstar added it to the weekly review in week 7, and the director's proposed board headline is
+reported with it so that the incident count is protected from re-rating. Taught in
+[Chapter 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#severity-definitions-that-resist-reclassification).
+
 ### Tier 1
 
 The highest of three tiers that assign each component obligations by business impact. At Northstar a
@@ -325,13 +455,20 @@ The person who coordinates an incident: holds the overall state, assigns work, a
 debug. Other roles cover operations (changing the system), communications, and planning. Taught in
 [Chapter 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#roles-separate-coordinating-from-fixing).
 
+### Incident review
+
+The structured review held after an incident to understand how it happened and what to change. Other
+names for it are postmortem and blameless review; this book says incident review. A good review is
+blameless: it looks for contributing factors without blaming an individual or team, so that people keep
+reporting what actually happened. The book prefers several contributing factors to a single "root
+cause", which stops the search at the last step before failure. Taught in
+[Chapter 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#blameless-review-and-its-critics);
+the format is the [incident review template](templates/incident-review.md).
+
 ### Blameless review
 
-A review after an incident (also called a postmortem) that looks for contributing factors without
-blaming an individual or team, so that people keep reporting what actually happened. The book prefers
-several contributing factors to a single "root cause", which stops the search at the last step before
-failure. Taught in
-[Chapter 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#blameless-review-and-its-critics).
+An [incident review](#incident-review) conducted without blaming individuals. In this book "blameless"
+is an adjective, and the review itself is called an incident review.
 
 ### Recurrence
 
@@ -408,6 +545,14 @@ A risk can be reduced, transferred, avoided, or accepted; acceptance must be exp
 the authority, and for a stated period. Taught in
 [Chapter 53](parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md#treatment-decisions-and-who-may-make-them).
 
+### CISO
+
+Chief information security officer: the executive who owns security strategy, risk, and response for the
+whole company. Whether a company of Northstar's size needs one, and where security reports, is a CTO
+and board question. Northstar has no CISO; its two-person security function sits inside corporate IT,
+which reports to the CFO. Taught in
+[Chapter 53](parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md#security-strategy-with-recognized-frameworks).
+
 ### SOC 2
 
 An examination by an independent, licensed accountant of a company's controls relevant to security,
@@ -470,6 +615,29 @@ A structured conversation with someone you want to keep: what keeps you here, wh
 and what one thing you would change. Taught in
 [Chapter 10](parts/02-people-management/10-motivation-retention-and-senior-engineers.md#exit-data-stay-data-and-system-data).
 
+### Attrition and regretted attrition
+
+Attrition is the share of people who leave over a period, usually a year. Regretted attrition counts
+only the departures the organization would have prevented if it could; whether a departure is regretted
+should be decided in a talent review before anyone resigns, not afterwards. An organization-wide rate
+can hide a team or a capability losing far more. Unit: percent per year. Taught in
+[Chapter 10](parts/02-people-management/10-motivation-retention-and-senior-engineers.md#what-the-turnover-research-supports) and
+[Chapter 48](parts/11-vp-engineering/48-capacity-strategy-workforce-planning-and-governance.md#attrition-vacancy-and-knowledge).
+
+### Requisition
+
+An approved request to hire into a specific seat. A requisition says what the seat is for and what to
+look for; holding requisitions open ahead of departures is one of the workforce plan options at
+Northstar, and it needs an exception to the 87-seat rule. Taught in
+[Chapter 48](parts/11-vp-engineering/48-capacity-strategy-workforce-planning-and-governance.md#what-a-workforce-plan-contains).
+
+### Vesting
+
+Equity such as stock options or restricted stock units becomes the employee's own over time, usually in
+stages over several years; until it vests, leaving forfeits it. Vesting dates shape when people leave
+and are a fairness question in reductions. Taught in
+[Chapter 8](parts/02-people-management/08-career-development-promotion-and-compensation.md#total-compensation-and-choosing-a-level-at-offer).
+
 ### Psychological safety
 
 People's perception of the consequences of taking interpersonal risks at work, such as admitting a
@@ -511,6 +679,14 @@ on how much each report needs from the manager. Taught in
 A level of management between an engineer and the person who can decide for the whole organization.
 Each added layer costs decision latency and information lost on the way up. Taught in
 [Chapter 34](parts/07-organization-design/34-spans-layers-and-dependency-mapping.md#what-a-layer-costs).
+
+### Dependency link
+
+One work item of a week or more in which one team needed another, counted per quarter. A matrix of
+dependency links between teams shows where boundaries cost coordination: read across a row for what a
+team asked of others, down a column for what others asked of it. Northstar's baseline quarter had 86,
+29 of them received by Platform Operations. Unit: links per quarter. Taught in
+[Chapter 34](parts/07-organization-design/34-spans-layers-and-dependency-mapping.md#from-dependency-map-to-boundary-design).
 
 ### Conway's law and the reverse Conway maneuver
 
@@ -618,6 +794,61 @@ A loop in which pressure leads people to cut improvement time, capability erodes
 pressure rises further. Taught in
 [Chapter 3](parts/01-foundations/03-managerial-leverage-and-systems-thinking.md#the-capability-trap).
 
+### Stock and flow
+
+A stock is anything you could count at a moment, such as engineers who can safely change the ledger. A
+flow is a rate that fills or drains it, such as engineers trained per quarter or resignations per year.
+A stock changes only through its flows, so it moves slowly, and a large stock can hide an inflow that has
+stopped. Taught in
+[Chapter 3](parts/01-foundations/03-managerial-leverage-and-systems-thinking.md#stocks-flows-and-slow-change).
+
+### Reinforcing and balancing loops
+
+A reinforcing loop feeds its output back as input, so change in either direction amplifies itself (fewer
+people able to respond means more pages per expert and less time to teach). A balancing loop acts on the
+gap between a goal and the current state, so it pulls a system toward a level, often one nobody chose.
+Taught in
+[Chapter 3](parts/01-foundations/03-managerial-leverage-and-systems-thinking.md#feedback-loops).
+
+### Leverage point
+
+A place in a system where an intervention changes its behavior. Changing parameters (numbers such as a
+stipend or an allocation) is the weakest kind; changing information flows, rules, goals, and beliefs is
+usually stronger. Taught in
+[Chapter 3](parts/01-foundations/03-managerial-leverage-and-systems-thinking.md#leverage-points).
+
+### Estate
+
+The full set of systems a technology organization runs: its applications, services, data stores,
+infrastructure, and tools. Strategy and risk work is about the estate as a whole, not one system at a
+time. Taught in
+[Chapter 30](parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md#the-technology-risk-register) and
+[Chapter 51](parts/12-cto-leadership/51-enterprise-technology-strategy.md#deliberate-and-emergent-strategy).
+
+### Board pack
+
+The papers a board receives before each meeting: the CEO's report, financials, and items for decision.
+Engineering figures usually reach the board through it, so what the pack says and how consistently it
+says it each quarter matters more than the meeting. At Northstar the CEO's monthly pack carries the
+engineering figures. Taught in
+[Chapter 55](parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#what-a-board-does-with-technology).
+
+### Due diligence
+
+The investigation a buyer or investor makes before a deal to check what it is buying. Technology due
+diligence looks at the estate, its risks, the people who hold critical knowledge, licenses, and
+security, and each finding changes the price, the terms, the integration plan, or the decision to walk
+away. Taught in
+[Chapter 55](parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#technology-due-diligence).
+
+### Warranty, indemnity, and escrow
+
+Deal terms that turn due diligence findings into money. A warranty is the seller's written promise that
+a fact is true; if it proves false, the buyer can claim damages. An indemnity is the seller's agreement
+to pay if a named problem later costs the buyer money. Escrow is part of the price held back by a third
+party for a period to pay such claims. This is not legal advice. Taught in
+[Chapter 55](parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#technology-due-diligence).
+
 ## Evidence and research
 
 ### Evidence labels
@@ -699,13 +930,26 @@ permissions, scheduler) were changed by four teams and owned by none at baseline
 release train; the other fourteen services deploy independently. Described on the
 [Northstar overview](case-studies/northstar/index.md#the-system).
 
+### Deployable unit
+
+Something that is built and deployed as one piece. Northstar has 24 components but 17 deployable units,
+because Core's modules ship together and count as one. "17 units" in the book means 17 deployable units
+(Core counts as one; 24 components in all). Described in the
+[baseline data](case-studies/northstar/baseline-data.md#technical-debt-tests-and-the-pipeline).
+
+### Top-40 customers
+
+Northstar's 40 largest customers, which together produce about a third of revenue, about $1.17M of ARR
+each. Several renewals and complaints in the case come from this group. Described on the
+[Northstar overview](case-studies/northstar/index.md#the-company).
+
 ### Weeks, quarters, and years
 
 Week 1 is the director's first week. Quarter 1 (the "transformation quarter") is weeks 1 to 13, quarter
 2 weeks 14 to 26, quarter 3 weeks 27 to 39, quarter 4 weeks 40 to 52. The "baseline quarter" is the
 quarter before the director arrived. Year 2 is weeks 53 to 104 (quarters 5 to 8); fiscal year 1 (FY1)
 matches weeks 1 to 52. Quarter 3 is the latest measured quarter; quarter 4 decisions are open. Described
-on the [first quarter page](case-studies/northstar/first-quarter.md).
+in the [year 1 record](case-studies/northstar/first-quarter.md).
 
 ### INC numbers
 
@@ -714,12 +958,21 @@ quarter, listed in the
 [incident file](case-studies/northstar/data/incidents-last-quarter.csv); chapters name each one with a
 few words on what happened.
 
+### Register IDs
+
+Short identifiers for items in Northstar's registers and logs. INC- is an incident (see
+[INC numbers](#inc-numbers)); DL- is an entry in the organization's decision log; ADR- is an architecture decision record;
+TD- is an item on the technical debt register (Chapter 21); TR- is an item on the technology risk
+register drafted in quarter 2 (TR-01 is the Core framework migration); ER- is an item on the enterprise
+technology risk register drafted in week 47 (ER-01 to ER-09). The number is a label, not a ranking.
+Described on the [year 1 record](case-studies/northstar/first-quarter.md).
+
 ### ADR-0001
 
 Northstar's first architecture decision record, opened by Li Na Zhou (staff engineer, data and
 integration) in week 14: how integrations should read posted ledger data, by reading the tables, through a
 versioned export contract, or from ledger posting events. It was still open at week 26. Described on
-the [first quarter page](case-studies/northstar/first-quarter.md); the ADR format is taught in
+the [year 1 record](case-studies/northstar/first-quarter.md); the ADR format is taught in
 [Chapter 28](parts/06-technical-leadership/28-architecture-decision-making-and-governance.md#architecture-decision-records).
 
 ### The continuation

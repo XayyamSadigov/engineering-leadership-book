@@ -19,7 +19,7 @@ output, the Jenkins knowledge concentrated in Bram Verhoeven) and to improve the
 gives, which DORA's capability page links to positive user experience. Service scaffolding (2 a month)
 is too rare to justify building a generator now; a written template is enough.
 
-**What to know first:** how long each request type takes to fulfil, how many are repeats from the
+**What to know first:** how long each request type takes to fulfill, how many are repeats from the
 same team, and which ones block work.
 
 **Weak answer:** automating by volume alone, which would put Jenkins debugging first and build a

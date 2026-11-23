@@ -135,7 +135,7 @@ rest on Daniel Cho's status updates alone. And the hours come mainly from escala
 administration, not from the two protected strategy half-days, which stay at 11 hours.
 
 **If Victor insists**, cut in this order: the monthly customer call (Sofia Alvarez's escalation review
-covers much of it), the individual skip-level slot, then the postmortem half-hour. Keep the raw-data
+covers much of it), the individual skip-level slot, then the incident-review half-hour. Keep the raw-data
 hour and the incident review, the cheapest early warning on quality, which is the mandate.
 
 **Evidence at the end of quarter 3:** a list of issues first learned through firsthand sources, with

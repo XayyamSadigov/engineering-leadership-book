@@ -53,7 +53,9 @@ It does not mean the interview is right 42 percent of the time.
 **A translation.** Under textbook assumptions (both normally distributed, the top half of candidates
 hired), a correlation of .42 means about 64 percent of hires turn out above-median performers,
 against 50 percent for hiring at random. That is a real improvement, and it still leaves about one
-hire in three below the median.
+hire in three below the median. (Method: for two normal variables with correlation r, the chance that
+both exceed their medians is 1/4 + arcsin(r)/2π; dividing by 1/2 gives the share among hires. For
+r = .42 that is about .32, or 64 percent of hires.)
 
 **The credibility interval, for a non-specialist.** The .42 is an average across many studies in
 many organizations. In some settings the structured interview predicted much better, in others much

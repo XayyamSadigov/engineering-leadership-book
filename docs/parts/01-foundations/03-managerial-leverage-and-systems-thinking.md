@@ -46,6 +46,14 @@ After this chapter you will be able to:
 > change in structure moves the result per hour of your effort, and the most visible interventions
 > are rarely the ones with the most leverage.
 
+!!! info "Northstar so far"
+    Before week 1. Northstar, the book's fictional order-to-cash software company, has 80 engineers in
+    six teams and a new Engineering Director about to arrive. Last quarter brought 30 serious (Sev1 and
+    Sev2) incidents; Billing had the most. See the
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
+
 The first idea comes from system dynamics: a system is stocks (things that accumulate, such as
 experienced engineers or trust) changed by flows (hiring, attrition, learning), with feedback loops
 connecting the stocks back to the flows
@@ -53,13 +61,7 @@ connecting the stocks back to the flows
 amplifies whatever it is doing; a **balancing loop** pushes toward a goal. When a result keeps coming
 back after you fix it, a loop is regenerating it.
 
-!!! info "Northstar so far"
-    Before week 1. Northstar, the book's fictional order-to-cash software company, has 80 engineers in
-    six teams and a new Engineering Director about to arrive. Last quarter brought 30 serious (Sev1 and
-    Sev2) incidents; Billing had the most. See the
-    [timeline](../../case-studies/northstar/timeline.md).
-
-Northstar's Billing team has one. Three of its thirteen engineers carry most of the on-call pages
+Northstar's Billing team has one loop of this kind. Three of its thirteen engineers carry most of the on-call pages
 ([Northstar overview](../../case-studies/northstar/index.md)). That is usually called a staffing
 problem. It is better described as a loop:
 
@@ -83,7 +85,8 @@ Together they concentrate knowledge further each quarter. The outer path (fatigu
 worsens the concentration just when it is most dangerous.
 
 The second idea is **leverage**. Donella Meadows ranked the places to intervene in a system, from
-changing numbers at the bottom to changing goals and paradigms at the top, and relayed Jay Forrester's
+changing numbers at the bottom to changing goals and paradigms (the shared beliefs the goals come
+from) at the top, and relayed Jay Forrester's
 observation that people often find the right point and push it the wrong way
 ([Meadows, 1999](../../references/bibliography.md#meadows1999leverage)). The manager's version: list the
 interventions for each recurring problem, place each at its level, and price each in your own hours.
@@ -112,8 +115,9 @@ lower than yours, or it acts through a resource that is running out.
 
 A **reinforcing loop** feeds its output back as input, in either direction. Run backward, the on-call
 loop spreads knowledge: protected teaching time, more people able to respond, fewer pages per expert,
-more time to teach. Meadows argued that reducing the gain of a reinforcing loop is usually more powerful
-than strengthening the balancing loops that fight it
+more time to teach. A loop's **gain** is how strongly each turn amplifies the next. Meadows argued that
+reducing the gain of a reinforcing loop is usually more powerful than strengthening the balancing loops
+that fight it
 ([Meadows, 1999](../../references/bibliography.md#meadows1999leverage)). In management terms: slow the
 concentration before adding ways of coping with it, such as escalation paths or a larger stipend.
 
@@ -143,17 +147,17 @@ flowchart TD
 In the twelve months before the director arrived, eight Northstar engineers left (10 percent of 80),
 and the median time from resignation to the replacement's first day was 15 weeks (fictional; see the
 [baseline data](../../case-studies/northstar/baseline-data.md)). That is about 2.3 engineer-years of
-empty seats (8 × 15 = 120 seat-weeks), before the months each replacement needs to ramp. A manager who
+empty seats (120 seat-weeks), before the months each replacement needs to ramp. A manager who
 requests hires against today's workload receives them after the pressure has peaked, and the next
 planning cycle cuts them: hiring and freezing out of phase with need. The defense is to act first on the
 flows you control fastest (attrition, teaching time, ramp) and to plan hiring against a forecast.
 
 ### The capability trap
 
-Nelson Repenning and John Sterman, drawing on over a dozen field studies of improvement programs in
-industries including telecommunications, semiconductors, and automobiles, together with system
-dynamics models, describe two ways to close a performance gap: work harder, or make the process more
-capable by spending time on improvement
+Under pressure, teams stop improving and fall further behind. Nelson Repenning and John Sterman
+describe two ways to close a performance gap: work harder, or make the process more capable by
+spending time on improvement. Their evidence is over a dozen field studies of improvement programs
+(in telecommunications, semiconductors, and automobiles, among others) plus system dynamics models
 ([Repenning and Sterman, 2001](../../references/bibliography.md#repenning2001nobody)). Working harder
 pays off at once. Improvement pays off after a delay and costs output meanwhile, so performance gets
 worse before it gets better. Under pressure, people cut improvement time, capability erodes, the gap
@@ -165,12 +169,15 @@ different industries.
 
 Chapter 27 shows the trap in a quality decline. It also governs managerial time. Billing's experts fix
 pages themselves instead of pairing and writing runbooks; a director answers every escalation instead
-of writing the rules that would make most escalations unnecessary. Rewarding heroics strengthens the loop that makes heroics necessary. Leslie Perlow's nine-month field
-study of one software engineering team reports, in its abstract, that the group's collective use of
-time kept its members short of time. Engineers were constantly interrupted, a crisis mentality and
-rewards for individual heroics sustained the pattern, and changing how they used their time improved
-collective productivity ([Perlow, 1999](../../references/bibliography.md#perlow1999time)). It is one
-qualitative study, but its direction matches the trap.
+of writing the rules that would make most escalations unnecessary. Rewarding heroics strengthens the
+loop that makes heroics necessary.
+
+Leslie Perlow saw the same pattern in a nine-month field study of one software engineering team. Its
+abstract reports that the group's collective use of time kept its members short of time. Engineers
+were constantly interrupted, and a crisis mentality and rewards for individual heroics sustained the
+pattern. Changing how they used their time improved collective productivity
+([Perlow, 1999](../../references/bibliography.md#perlow1999time)). It is one qualitative study, but
+its direction matches the trap.
 
 ### Leverage points
 
@@ -199,8 +206,8 @@ that a stipend increase never does.
 Eliyahu Goldratt's argument, popularized in *The Goal*, is that a system's output is limited by its
 tightest constraint, and that improving anything else does not raise output
 ([Goldratt and Cox, 1984](../../references/bibliography.md#goldratt1984goal)). The procedure associated
-with his work: identify the constraint, get the most out of it, subordinate everything else to it,
-relieve it, then look for the next one. Chapter 16 applies it to delivery flow.
+with his work: identify the constraint, get the most out of it, subordinate everything else to it
+(schedule all other work around the constraint's needs), relieve it, then look for the next one. Chapter 16 applies it to delivery flow.
 
 The managerial lesson is that constraints are often people: a staff engineer whose judgment every
 design waits on, a director whose approval every exception needs, three engineers who are the only safe
@@ -266,9 +273,10 @@ The fourth row assumes the three handled no-action pages in the same 70 percent 
 ([on-call design and load](../05-engineering-quality/24-reliability-slos-and-operational-readiness.md#on-call-design-and-load)).
 
 The rule change reverses the loop and is the most resisted. Restoration will be slower for a quarter
-while others learn, on a team whose median restore is already over eight hours. Google's *Site Reliability
-Workbook* (SRE is site reliability engineering) has an on-call chapter that treats two incidents per twelve-hour shift as the load limit and gives eight engineers
-as the minimum for a single-site round-the-clock rotation
+while others learn, on a team whose median restore is already over eight hours. Headcount is not the
+problem. The on-call chapter of Google's *Site Reliability Workbook* (SRE is site reliability
+engineering) treats two incidents per twelve-hour shift as the load limit. It gives eight engineers as
+the minimum for a single-site round-the-clock rotation
 ([Cook et al., On-Call](../../references/bibliography.md#cook2018oncall)); thirteen engineers clear that,
 so Billing's constraint is knowledge, not headcount.
 
@@ -367,9 +375,8 @@ them in two quarters. That question would have surfaced Billing's concentration 
 people.
 
 **Staff engineers as leverage.** Northstar's three staff engineers own no components and have no
-mandate. In the baseline, Ines Carvalho (staff engineer, core domain) spent about eight hours a week answering unscheduled questions
-about Core (**illustrative**, consistent with the staff engineers' 20 percent unplanned share). Answering
-questions one at a time is the lowest level of work; writing the boundary rules for a Core module and
+mandate. Ines Carvalho (staff engineer, core domain) is the example in the Case Study below: hours a
+week of unscheduled Core questions. Answering questions one at a time is the lowest level of work; writing the boundary rules for a Core module and
 reviewing others' decisions against them reaches every team. Chapter 29 covers the staff role.
 
 **Organization-level stocks** that change slowly and matter most: people who can safely change
@@ -405,9 +412,9 @@ goals, rules, the people who run the organization, and the information it steers
 5. **List interventions at several levels**: at least one parameter, one information flow, one rule.
    If you can only think of parameters, return to step 2.
 6. **Score them** with the decision table.
-7. **Audit your calendar.** Sort a fortnight of your hours by leverage and move hours from the lowest
-   band to the highest, protected on the calendar. (Chapter 1's audit sorts hours by job; this one
-   ranks them by leverage.)
+7. **Audit your calendar.** Run Chapter 1's calendar audit with one extra column, the leverage band
+   (low, medium, high) of each block. Move hours from the lowest band to the highest, protected on the
+   calendar.
 8. **Change one rule and one information flow**, visibly, saying what you expect to see and when.
 9. **Review at the stated delay.** If the loop has not weakened, revisit the map, not only the
    intervention.
@@ -436,9 +443,13 @@ A manager reading only those numbers might conclude the team needed more discipl
 error Repenning and Sterman describe. The loop said otherwise: the experts were doing exactly what the
 system rewarded, and each quarter made the system more dependent on them.
 
-The same structure appeared elsewhere. Ines Carvalho, with eleven years on Core, spent about eight hours
-a week answering questions that a written module boundary would have answered once, and nobody owned
-the information flow that would have shown the cost.
+The same structure appeared elsewhere. Ines Carvalho (staff engineer), with eleven years on Core, spent
+about eight hours a week answering questions that a written module boundary would have answered once
+(**illustrative**, consistent with the staff engineers' 20 percent unplanned share). Nobody owned the
+information flow that would have shown the cost.
+
+The lesson: none of the three responses was wrong alone, and none touched the loop. The open choice for
+a new director is which rule or information flow to change first.
 
 ## Exercises
 

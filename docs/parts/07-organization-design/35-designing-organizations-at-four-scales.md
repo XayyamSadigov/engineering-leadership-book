@@ -17,7 +17,8 @@ other teams' code waits for those teams' priorities, and no individual effort re
 
 At organization scale, structure is the largest lever a director holds on coordination cost, and the
 most expensive to move. Northstar's baseline shows the cost of a structure that grew without design:
-items with no cross-team dependency had a median lead time of 11 days, items with one took 24, and
+items with no cross-team dependency had a median [lead time](../../glossary.md#lead-time) (request to
+release) of 11 days, items with one took 24, and
 items with two or more took 41 (see the [baseline data](../../case-studies/northstar/baseline-data.md)).
 Three Core modules changed by four teams had no owner. Three staff engineers had titles and no mandate.
 
@@ -75,7 +76,7 @@ coordination cost somewhere less visible rather than removing it.
 ### Why coordination grows faster than headcount
 
 The usual argument is arithmetic, made famous by Brooks: n people have n(n−1)/2 possible communication
-paths, so 10 people have 45 and 50 have 1,225
+paths, which Chapter 33 works through
 ([Brooks, 1995](../../references/bibliography.md#brooks1995mythical)). The formula is an upper bound,
 not a measurement, but it points the right way: structure exists to make most paths unnecessary.
 
@@ -131,17 +132,28 @@ status, tier. Where several teams change one component, either the boundary or t
 
 **Product portfolio.** List the outcomes the business funds and their expected life. A product line
 with years of investment ahead deserves a stable team; a one-quarter commitment deserves a project
-inside an existing team.
+inside an existing team. Write the portfolio as a short table: product, expected life, direction (grow,
+hold, or harvest), and release mechanics. Two portfolio facts move boundaries. Products with different
+customers, release mechanics, or regulation pull toward separate teams even on shared code, because
+each needs its own priorities. And a product being harvested belongs inside a team with another,
+growing mission; a team of its own is either starved or overstaffed.
+
+**Sites and time zones.** Location constrains boundaries; it is not an afterthought (**this book's
+recommendation**). Put work that changes together on one site or in overlapping hours, because a team
+split across sites pays a coordination cost on every change (Chapter 14 covers distributed teams).
+Three rules help. Most of a team should share at least half a working day. A site with a whole team
+needs a manager there, or one who visits regularly. And avoid a boundary where one site always
+requests and the other always provides: it turns a site into a supplier. Northstar's case below
+splits a team along this line.
 
 **Headcount and constraints.** Count the people you have, not the people you want, plus locations,
 scarce skills, and budget rules. Teams, managers, and leaders must add up to the headcount, every time.
 
 Larson's *An Elegant Puzzle* is known for treating organization design as an engineering problem
-([Larson, 2019](../../references/bibliography.md#larson2019elegant)). GitLab's public handbook documents
-a written structure rule: a target range for direct reports, the same at every level to avoid an extra
-layer, sized for where the organization will be six months ahead
-([GitLab, Organizational Structure](../../references/bibliography.md#gitlab2026structure)). That is
-one company's practice, not evidence for its range; Chapter 34 owns how to set spans.
+([Larson, 2019](../../references/bibliography.md#larson2019elegant)). GitLab's public handbook sizes
+its span rule for where the organization will be six months ahead
+([GitLab, Organizational Structure](../../references/bibliography.md#gitlab2026structure)): one
+company's practice, not evidence. Chapter 34 owns how to set spans.
 
 ### Sequencing managers of managers, platform teams, and staff-plus roles
 
@@ -207,8 +219,6 @@ time by two engineers on different teams; one senior engineer consulted on every
 | First staff engineers | The consulted senior engineer, with a written mandate for cross-team design review; a second for reliability |
 | Management | Director with 6 managers; no second layer |
 
-Check: 43 + 5 + 2 = 50.
-
 **Ashgrove Logistics (100 engineers, hypothetical).** A freight software company with two product
 lines: tools for shippers and tools for carriers, with billing behind both. It has 12 teams, all 12
 managers report to one director, and the director spends most of the week routing cross-team
@@ -227,9 +237,8 @@ is what makes groups worth a layer (Chapter 34's layer test).
 | Organization-wide staff engineers | none | 2 | Report to the director (architecture, reliability) |
 | Engineers | | 100 | |
 
-The director has 5 direct reports: two group leads, the platform manager, and two staff engineers. The
-organization has 12 first-line managers and 2 group leads. If the group leads are promoted from inside
-under flat headcount, each costs an engineering seat.
+The director has 5 direct reports: two group leads, the platform manager, and two staff engineers.
+Group leads promoted from inside under flat headcount each cost an engineering seat.
 
 What the layer buys: disputes inside a product line stop one level below the director, and each
 manager gets a leader with time to coach. What it costs: a hop on the quarter of links that cross the
@@ -253,12 +262,21 @@ services, not a target. Three management layers (manager, director, VP) sit betw
 the CTO.
 
 At this scale the dominant problem is coordination across groups, and every answer costs autonomy.
-Dingsøyr and colleagues studied one Norwegian programme in depth: 12 co-located teams and 175 people.
-They found many coordination arenas in use. Among them were a Scrum of Scrums (a regular meeting of
-one representative per team), a "Metascrum" above it, demos, forums, and instant messaging. The arenas
-changed over the programme's life, and extra roles and arenas reduced team autonomy
+A study of one program of 12 teams and 175 people found many coordination meetings and forums in use,
+changing over time, and found that extra roles and forums reduced team autonomy
 ([Dingsøyr et al., 2018](../../references/bibliography.md#dingsoyr2018exploring); **research
-finding**, one case). At 500, that trade is the design's main tension.
+finding**, one case).
+
+Three functions appear at 500 that smaller organizations do without (**this book's recommendation**
+for what each should do):
+
+- **Technical direction.** A few principal engineers own the organization-wide decisions (Chapter
+  28's top row), keep the decision log, and sample group decisions. They do not review every design.
+- **Portfolio planning.** A quarterly forum of VPs and product leaders allocates capacity across
+  groups against the product table and decides what stops. Its output is an allocation, not a
+  feature list.
+- **A platform organization.** Several internal product teams, each with users, an adoption measure,
+  and a roadmap, behind one intake.
 
 ## Decision Framework
 
@@ -386,15 +404,18 @@ To produce an organization design:
 
 !!! info "Northstar so far"
     Week 44, in quarter 4 (weeks 40 to 52) of the director's first year. Quarter 3, the latest measured,
-    had 14 [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents against 30 at baseline, and both renewal commitments are delivered.
-    Customer Experience still runs web and mobile under one manager, and core/permissions has had no
-    owner since its exemption lapsed in week 39. See the [timeline](../../case-studies/northstar/timeline.md).
+    had 14 [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents against 30 at baseline,
+    and both renewal commitments are delivered. Customer Experience still runs web and mobile under one
+    manager. core/permissions, a tier 1 Core module changed by four teams, has had no owner since
+    baseline; its exemption (a recorded, time-limited waiver) lapsed in week 39. See the
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the [cast](../../case-studies/northstar/cast.md).
 
 This case is **fictional**. It is a proposal the reader evaluates, and its outcome is deliberately not
-fixed. The starting state comes from [the director's first year](../../case-studies/northstar/first-quarter.md).
+fixed. The starting state comes from [the year 1 record](../../case-studies/northstar/first-quarter.md).
 
-**The starting point.** Since the QA engineers moved into product teams in week 10, Northstar's 80
-engineers sit in six teams plus 3 staff engineers (the table below shows the numbers). The whole
+**The starting point.** Northstar's 80 engineers sit in six teams plus 3 staff engineers (the table
+below shows the numbers). The whole
 organization is 87 people and stays flat under the first of the
 [five constraints](../../glossary.md#the-five-constraints). Promoting an engineer into a new manager
 role is allowed only if that engineer's seat is not backfilled. The director has 9 direct reports: 6
@@ -403,15 +424,15 @@ managers and 3 staff engineers.
 **The breakages the director names.**
 
 - Customer Experience, under Daniel Cho, runs two products with different release mechanics from one
-  board across two sites. Chapter 14's health check found mobile red on 4 of 10 indicators.
-- core/permissions, a [tier 1](../../glossary.md#tier-1) module of Core (on the order or payment path),
-  has no owner.
-- search-svc's ownership is disputed between Orders and Data and Analytics (Chapter 12).
-- Platform Operations, under Tom Becker, has five engineers and a two-person interrupt rotation
-  (Chapter 16), and still answers requests as a ticket queue.
-
-Chapter 34's quarter 2 analysis adds three open items: every manager's span is out of range, the web
-and mobile links were never measured, and Orders and Billing remain the heaviest pair.
+  board across two sites. A team health check in week 16 rated mobile red on 4 of 10 indicators.
+- core/permissions, a [tier 1](../../glossary.md#tier-1) module (on the order or payment path), has
+  no owner.
+- search-svc's ownership is disputed between Orders and Data and Analytics.
+- Platform Operations, under Tom Becker, has five engineers and a two-person interrupt rotation, and
+  still answers requests as a ticket queue.
+- Every manager's span is out of range, and Orders and Billing remain the heaviest pair of teams by
+  dependency links (work items of a week or more where one team
+  needed another).
 
 **The proposal.** In week 44 the director drafts a year-2 organization for Victor Lindqvist (CTO). It
 would take effect in week 53, the first week of year 2. The CTO decides.
@@ -438,29 +459,38 @@ engineers' capacity for a manager on its own site.
 
 | Alternative | Arithmetic | Main cost |
 |---|---|---|
-| B. Keep Customer Experience whole, two subteams (Chapter 14's option B) | 80 engineers, 6 managers, director 9 reports | Daniel leads across sites; mobile's red indicators may persist |
-| C. Also split Orders (Order Capture 9, Catalog and Pricing 6, a manager from Orders) and grow the platform to 8 with one transfer each from Billing, Payments and Integrations, and Data | 78 engineers, 8 managers | About ten more people move; Chapter 34's move M2, with its cost: 4 new links a quarter and about 58 merge requests crossing a new boundary, unless pricing-rules stays with Order Capture |
-| D. Two managers of managers above the teams | 77 engineers, 9 managers, director 5 reports | A layer between the director and the reliability work; two seats; two leads new to the job |
+| B. Keep Customer Experience whole, two subteams | 80 engineers, 6 managers | Daniel leads across sites; mobile's red indicators may persist |
+| C. Also split Orders; grow the platform to 8 | 78 engineers, 8 managers | About ten more people move; new links across the Orders split |
+| D. Two managers of managers above the teams | 77 engineers, 9 managers | A layer; two seats; two leads new to the job |
 
-**Testing the proposal with Chapter 34's tools.**
+Option C splits Orders into Order Capture (9) and Catalog and Pricing (6) under a manager from Orders,
+and moves one engineer each from Billing, Payments and Integrations, and Data to the platform. Its
+split creates about 4 new links a quarter and puts about 58 merge requests across a new boundary,
+unless pricing rules stay with Order Capture. Under D the director has 5 direct reports.
 
-| Chapter 34's test | What the proposal does |
+**Testing the proposal** with the span, link, and layer tests of Chapter 34:
+
+| Test | Verdict |
 |---|---|
-| Spans in range | Fixes the worst one (Customer Experience, 17). Leaves Orders 16, Billing 15, Payments and Integrations 13 above range. Data and Analytics stays at 11 while gaining search-svc. Developer Platform stays at 5, the floor |
-| Heaviest links | Leaves Orders and Billing (15) to the quarter 2 contract. Moving search-svc turns some Customer Experience to Orders links into links to Data and Analytics |
-| Links it may create | Web and Mobile links, unmeasured because the matrix counted Customer Experience as one team. core/permissions reviews, since 21 of its 38 baseline merge requests came from Customer Experience, Billing, and Payments and Integrations |
+| Spans in range | Worst span fixed (17); Orders 16, Billing 15, Payments 13 still above |
+| Heaviest links | Orders and Billing (15) left to the order-to-invoice contract |
+| Links it may create | Web to Mobile, unmeasured; core/permissions reviews from three other teams |
 | Seats | One engineering seat |
 | Layer | None; director at 10 |
 
-**The director's reasoning.** The proposal answers the breakages with the fewest moves. It makes one
-split where the evidence is strongest (two products, two sites, red health signals) and two ownership
-assignments that end recorded disputes. It leaves Orders at 16 with an added module, which is its main
-risk. Alternative C answers that, at the price of a second split before the first has settled. On D,
-the director judges that the managers are getting monthly development time and that cross-team
-decisions are not queuing on the director. A layer would answer a breakage not yet observed. The draft
-names triggers for revisiting C and D: Orders' lead time or on-call load rising after core/permissions
-arrives, approved headcount growth, or manager development falling behind. Developer Platform keeps
-three builders after the interrupt rotation, so its first product must be small.
+Two details sit behind the verdicts. Data and Analytics stays at 11 engineers while gaining
+search-svc, and Developer Platform stays at 5. And 21 of core/permissions' 38 baseline merge requests
+came from Customer Experience, Billing, and Payments and Integrations, so Orders would review other
+teams' changes.
+
+**The director's reasoning.** The proposal answers the breakages with the fewest moves: one split
+where the evidence is strongest (two products, two sites, red health signals) and two ownership
+assignments that end recorded disputes. Its main risk is Orders at 16 with an added module.
+Alternative C answers that, at the price of a second split before the first has settled. A layer (D)
+would answer a breakage not yet observed: managers get monthly development time, and cross-team
+decisions are not queuing on the director. The draft names triggers for revisiting C and D: Orders'
+lead time or on-call load rising after core/permissions arrives, approved headcount growth, or manager
+development falling behind.
 
 How to carry out the change is Chapter 36's subject. Whether this is the right proposal is the subject
 of the exercises and Project 4.
@@ -498,8 +528,8 @@ you would argue for alternative C's three transfers.
 
 **A2.** Priya Raman (Orders manager) objects to alternative C: she built Orders' domain knowledge into one team, and the
 split separates pricing rules from order capture, which change together often: 53 percent of
-pricing-rules merge requests in the baseline quarter also touched order-capture (Chapter 31), though
-only 4 of Orders' work items of a week or more touched both (Chapter 34). Decide whether these facts change the boundary, and what you would ask to see
+pricing-rules merge requests in the baseline quarter also touched order-capture, though only 4 of
+Orders' work items of a week or more touched both. Decide whether these facts change the boundary, and what you would ask to see
 before deciding.
 
 **A3.** Write the one-paragraph mandates for the three staff engineers under the proposal: Ines

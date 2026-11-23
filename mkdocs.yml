@@ -81,12 +81,14 @@ plugins:
             "Learning roadmaps": "Маршруты обучения"
             "Download": "Скачать"
             "Download the book": "Скачать книгу"
+            "Download (EPUB, PDF)": "Скачать (EPUB, PDF)"
             "Case study: Northstar Technologies": "Кейс: Northstar Technologies"
             "Company and organization": "Компания и организация"
+            "The year in brief": "Год вкратце"
             "Cast of characters": "Действующие лица"
             "Timeline and results": "Хронология и результаты"
             "Baseline data": "Исходные данные"
-            "The director's first year": "Первый год директора"
+            "Year 1 record (reference)": "Хроника года 1 (справочник)"
             "Quarter 4 briefing": "Брифинг по итогам четвёртого квартала"
             "Halvard Systems (comparison company)": "Halvard Systems (компания для сравнения)"
             "Curriculum": "Учебная программа"
@@ -164,6 +166,10 @@ plugins:
             "Chapter 59 — Transformation Under Budget Constraint and Scaling Without Bureaucracy": "Глава 59 — Трансформация при урезанном бюджете и масштабирование без бюрократии"
             "XIV. Templates and playbooks": "XIV. Шаблоны и плейбуки"
             "Template library": "Библиотека шаблонов"
+            "Your team": "Ваша команда"
+            "Engineering system": "Инженерная система"
+            "Organization and operating system": "Организация и операционная система"
+            "Executive": "Высшее руководство"
             "Engineering quality scorecard": "Карта показателей инженерного качества"
             "Technical debt register": "Реестр технического долга"
             "Incident review": "Разбор инцидента"
@@ -313,10 +319,11 @@ nav:
   - "Download (EPUB, PDF)": download.md
   - "Case study: Northstar Technologies":
       - "Company and organization": case-studies/northstar/index.md
+      - "The year in brief": case-studies/northstar/year-in-brief.md
       - "Cast of characters": case-studies/northstar/cast.md
       - "Timeline and results": case-studies/northstar/timeline.md
       - "Baseline data": case-studies/northstar/baseline-data.md
-      - "The director's first year": case-studies/northstar/first-quarter.md
+      - "Year 1 record (reference)": case-studies/northstar/first-quarter.md
       - "Quarter 4 briefing": case-studies/northstar/quarter-4-briefing.md
       - "Halvard Systems (comparison company)": case-studies/northstar/halvard.md
   - Curriculum: curriculum.md
@@ -394,30 +401,34 @@ nav:
       - "Chapter 59 — Transformation Under Budget Constraint and Scaling Without Bureaucracy": parts/13-advanced-problems/59-transformation-under-constraint-and-scaling-without-bureaucracy.md
   - "XIV. Templates and playbooks":
       - "Template library": templates/index.md
-      - "Engineering quality scorecard": templates/engineering-quality-scorecard.md
-      - "Technical debt register": templates/technical-debt-register.md
-      - "Incident review": templates/incident-review.md
-      - "90-day quality transformation plan": templates/ninety-day-quality-plan.md
-      - "Engineering Manager performance rubric": templates/engineering-manager-rubric.md
-      - "Director competency matrix": templates/director-competency-matrix.md
-      - "Organizational design assessment": templates/organizational-design-assessment.md
-      - "Quarterly engineering review": templates/quarterly-engineering-review.md
-      - "Capacity planning model": templates/capacity-planning-model.md
-      - "Engineering strategy": templates/engineering-strategy.md
-      - "Technology investment business case": templates/technology-investment-business-case.md
-      - "Stakeholder map": templates/stakeholder-map.md
-      - "Executive update": templates/executive-update.md
-      - "CTO competency matrix": templates/cto-competency-matrix.md
-      - "Risk register": templates/risk-register.md
-      - "Architecture decision record": templates/architecture-decision-record.md
-      - "1:1 template": templates/one-on-one.md
-      - "Career development plan": templates/career-development-plan.md
-      - "Team health assessment": templates/team-health-assessment.md
-      - "Leadership succession plan": templates/leadership-succession-plan.md
-      - "Hiring scorecard and interview kit": templates/hiring-scorecard.md
-      - "Performance improvement plan": templates/performance-improvement-plan.md
-      - "Team charter and working agreement": templates/team-charter.md
-      - "New manager's 90-day plan": templates/new-manager-90-day-plan.md
+      - "Your team":
+          - "1:1 template": templates/one-on-one.md
+          - "Career development plan": templates/career-development-plan.md
+          - "Team health assessment": templates/team-health-assessment.md
+          - "Team charter and working agreement": templates/team-charter.md
+          - "Performance improvement plan": templates/performance-improvement-plan.md
+          - "Hiring scorecard and interview kit": templates/hiring-scorecard.md
+          - "New manager's 90-day plan": templates/new-manager-90-day-plan.md
+      - "Engineering system":
+          - "Engineering quality scorecard": templates/engineering-quality-scorecard.md
+          - "Technical debt register": templates/technical-debt-register.md
+          - "Incident review": templates/incident-review.md
+          - "Architecture decision record": templates/architecture-decision-record.md
+          - "90-day quality transformation plan": templates/ninety-day-quality-plan.md
+      - "Organization and operating system":
+          - "Organizational design assessment": templates/organizational-design-assessment.md
+          - "Quarterly engineering review": templates/quarterly-engineering-review.md
+          - "Capacity planning model": templates/capacity-planning-model.md
+          - "Engineering Manager performance rubric": templates/engineering-manager-rubric.md
+          - "Director competency matrix": templates/director-competency-matrix.md
+          - "Leadership succession plan": templates/leadership-succession-plan.md
+          - "Stakeholder map": templates/stakeholder-map.md
+          - "Executive update": templates/executive-update.md
+      - "Executive":
+          - "Engineering strategy": templates/engineering-strategy.md
+          - "Technology investment business case": templates/technology-investment-business-case.md
+          - "Risk register": templates/risk-register.md
+          - "CTO competency matrix": templates/cto-competency-matrix.md
   - "XV. Capstone":
       - "Chapter 60 — Capstone: Transforming Northstar Technologies": parts/15-capstone/60-capstone-northstar.md
   - Projects:

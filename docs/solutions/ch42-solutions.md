@@ -110,7 +110,7 @@ still being paid; indifferent if they are not.
 board, and an answer to his open request for a measure of engineering output.
 
 **Evidence he trusts.** Dollars: credits paid this year against last, cost of the initiative
-(50 engineer-weeks at about $3,560 per engineer-week is about $178,000, assuming $185,000 a year ÷ 52),
+(50 engineer-weeks at the planning rate of $3,558 per engineer-week, $185,000 a year ÷ 52, is about $178,000),
 the revenue at stake in the prospect, and the risk to the multi-currency deal date.
 
 **What to offer.** Early, unvarnished information before the forum; a clear statement of what the swap

@@ -90,6 +90,12 @@ challenges, and notes that many people do not complete it
 outside software, but its point matches practitioner experience: the
 hard part is letting go of the old source of competence and status.
 
+This is why the best engineer is not automatically the best manager. Even a promoted engineer who
+would make a good manager arrives with the best engineer's habits: solving the hard problem
+personally, reviewing everything important, being the person others ask. In the new role the same
+habits concentrate work and decisions on one person. The engineer who once unblocked the team by
+fixing the hard bug now blocks it by being the only one who can.
+
 Herminia Ibarra's study of professionals moving into more senior roles offers a mechanism. People do
 not adopt a new professional identity in one step; they observe role models, try out provisional
 versions of the new self, and keep or discard them depending on their own standards and the feedback
@@ -115,12 +121,6 @@ Filtering means the signals that matter most, such as a senior engineer consider
 least likely to reach the manager unprompted. The remedy is to build leading indicators the manager can observe directly: how many decisions waited for the manager this week, whether one-on-ones surface news or
 only status, which work only one person can do. Chapter 5 covers one-on-ones as an information
 channel; Chapter 4 covers measuring managerial effectiveness.
-
-### Why the best engineer is not automatically the best manager
-
-Even a promoted engineer who would make a good manager arrives with the best engineer's habits:
-solving the hard problem personally, reviewing everything important, being the person others ask. In
-the new role these habits concentrate work and decisions on one person.
 
 ### Managing former peers
 
@@ -254,7 +254,9 @@ They are reasons to change the load, not to try harder.
     Weeks 1 and 2 of the director's first year at Northstar, the book's fictional company. The CTO's
     mandate is to halve serious incidents within twelve months with flat headcount, while two renewal
     features ship on time. Bulk ordering, one of them, belongs to Priya Raman's Orders team. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 The following figures are **illustrative**. They describe the calendar of Priya Raman (Orders
 manager) in the two weeks before the new director arrived, eight months after her promotion, and the
@@ -449,8 +451,7 @@ For a newly promoted engineering manager, with the help of their own manager:
 ## Case Study
 
 This case is **fictional**. It is set before and at the start of the director's first quarter at
-Northstar; the full record is on [the first quarter](../../case-studies/northstar/first-quarter.md)
-page.
+Northstar; the full story is in [the year 1 record](../../case-studies/northstar/first-quarter.md).
 
 Priya Raman joined Northstar as an engineer seven years before the director arrived and became the
 person who knew order capture best. She wrote much of the bulk order upload path. When the previous
@@ -464,9 +465,7 @@ was never done. Two quarters later the same failure mode returned as INC-421: a 
 every line beyond row 500. It was a [Sev1](../../glossary.md#severity-sev1-sev2-sev3), Northstar's
 most serious severity, and a customer reported it first. It was one of three
 [recurrences](../../glossary.md#recurrence) (repeats of an earlier failure) among Orders' seven Sev1
-and Sev2 incidents in the baseline quarter, the quarter before the director arrived. The other two
-were INC-411, a catalog import that rejected valid units of measure, and INC-429, orders rejected
-for next-year delivery dates.
+and Sev2 incidents in the quarter before the director arrived.
 
 By the time the director arrived, the team trusted Priya's judgment and liked that she understood
 their work. Two senior engineers on Orders,
@@ -493,19 +492,19 @@ They agreed four changes, each with a level of control:
 
 Priya objected to the first change. Handing over the renewal feature, due at the end of quarter 2,
 felt to her like taking a risk with the company's largest customers. The director's answer was that the long runway made this the cheapest moment to hand it over. Keeping
-it was also a risk: the feature depended on a person who spent 15 percent of her week on incidents.
-The director's plan for the quarter would fill her calendar further, with incident commander training
-(learning to coordinate incident response), decisions on who owns which code, and a capacity model.
-Priya kept the design authority, and the weekly checkpoint was her safeguard.
+it was also a risk: the feature depended on a person who spent 15 percent of her week on incidents,
+and the quarter's changes would fill her calendar further. Priya kept the design authority, and the
+weekly checkpoint was her safeguard.
 
-The case leaves Priya at the end of week 2. In week 4 Orders also took ownership of core/customer, one
-of three Core modules that no team owned, and the quarter's results came later (see the
-[timeline](../../case-studies/northstar/timeline.md)). Whether the plan worked is a question for the exercises.
+The case leaves Priya at the end of week 2. The lesson: the handover is cheapest when the runway is
+longest, and only an explicit level of control makes it safe. Whether the plan worked is a question
+for the exercises.
 
 ## Exercises
 
 Solutions are in [chapter 2 solutions](../../solutions/ch02-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md).
+[baseline page](../../case-studies/northstar/baseline-data.md); who's who is on the
+[cast](../../case-studies/northstar/cast.md) page.
 
 ### Foundational
 

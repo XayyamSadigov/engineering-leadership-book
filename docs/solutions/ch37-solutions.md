@@ -102,12 +102,13 @@ commitments. Weak answer: an agenda with "updates from each team" as item one.
 
 ## A3 — Routing platform demand
 
-Platform Operations received 29 of 86 dependency links at baseline, and requests from other teams
-took about 20 points of its capacity (14 by the week 18 re-sample). The demand is continuous; a monthly
+Requests from other teams took about 20 percent of Platform Operations' capacity at baseline and
+about 14 percent by the week 18 re-sample (the team also received 29 of the 86 cross-team dependency
+links on the [baseline page](../case-studies/northstar/baseline-data.md)). The demand is continuous; a monthly
 forum is the wrong place for individual requests but the right place for the pattern.
 
 **Routing without a new meeting:** individual requests go through the single intake and the
-two-person interrupt rotation already in place (Chapter 16), with a service level per request type.
+two-person interrupt rotation already in place (Chapter 16 explains both), with a service level per request type.
 Requests that miss their service level or need a trade-off between teams appear on the open-decisions
 list for the weekly leadership meeting. The monthly business review looks at the aggregate: volume by
 requesting team, waiting time, and which requests self-service could remove.

@@ -485,6 +485,31 @@ bibliographic metadata only → только библиографические 
 | Path A … H | Маршрут A … H |
 | Part I … XV | Часть I … XV |
 
+### 3.x Added in readability round 2 (2026-11-23)
+
+| English | Русский | Rule | Note |
+|---|---|---|---|
+| the year in brief | «Год вкратце» | T | page title |
+| the year 1 record | хроника года 1 | T | the page `first-quarter.md` |
+| budget envelope | рамки бюджета | T | |
+| operating plan | операционный план | T | |
+| board pack | пакет для совета директоров | T | |
+| run-rate | годовой темп (run-rate) | B | |
+| seat | место | T | 87 seats = 80 engineers, 6 managers, the director |
+| requisition | заявка на найм | T | |
+| vesting | вестинг | T | |
+| value channel; urgency profile | канал ценности; профиль срочности | T | |
+| quality engineer | инженер по качеству | T | |
+| re-rating; severity audit | переоценка серьёзности; аудит серьёзности | T | |
+| dependency link | связь зависимости | T | |
+| stock and flow | запас и поток | T | |
+| reinforcing / balancing loop | усиливающая / балансирующая петля | T | |
+| leverage point | точка рычага | T | |
+| estate | технологический ландшафт | T | |
+| incident review | разбор инцидента | T | main term; postmortem is the alternative |
+| deployable unit | развёртываемая единица | T | |
+| Your team; Engineering system; Organization and operating system; Executive | Ваша команда; Инженерная система; Организация и операционная система; Высшее руководство | T | template nav groups |
+
 ## 5. Sync debt
 
 Record here any Russian page that lags its English source, with the English commit it was translated

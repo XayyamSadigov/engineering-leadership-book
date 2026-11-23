@@ -114,7 +114,7 @@ The design below is **this book's recommendation**, built on those points.
 The report adds topics before the meeting; the manager adds theirs below. If the report's section is
 empty, ask what is on their mind, and wait.
 
-**Status goes elsewhere.** Status comes from the board, the pull requests, and a short written
+**Status goes elsewhere.** Status comes from the board, the merge requests, and a short written
 update. A useful rule: nothing in the first ten minutes that a dashboard could have told you.
 
 **A rotation of deeper questions.** People rarely volunteer career worries or frustration with a
@@ -126,6 +126,23 @@ date, and the next meeting starts by closing it. The report is watching what hap
 thing they raised.
 
 **Shorten rather than cancel.** A one-on-one moved three times tells the report where they rank.
+
+### Three situations the design must handle
+
+**The first one-on-one with a new report.** Spend it on how they like to work, not on the work: how
+they want feedback, what a good week looks like, what they need from you, and what went wrong with
+past managers. Agree the cadence and the shared document before you leave.
+
+**The report who brings nothing.** An empty agenda week after week usually means the channel has not
+earned trust yet, or the report believes nothing will change. Do not fill the silence with status.
+Use one deeper question, wait, and close something visibly from last time. If the agenda is still empty
+after a month, ask about the meeting itself: "What would make this half hour worth your time?"
+
+**Remote and cross-time-zone reports.** A video one-on-one loses the hallway contact that fills gaps
+for co-located reports, so it carries more of the channel and should be the last meeting you move. Hold
+it inside both people's working hours, rotating the inconvenient slot if the overlap is small. Keep
+cameras optional but the shared document mandatory, because the written record does more of the work
+at a distance.
 
 ### Detecting decay
 
@@ -241,9 +258,18 @@ promotion cases and Chapter 9 for written reviews and performance problems.
 
 ## Engineering Organization Example
 
-The figures below are **illustrative**, invented for Northstar (fictional). They work through the
-cost of one-on-ones for Daniel Cho, who manages 15 engineers in Customer Experience, spends 45 percent
-of his time on people management, and holds weekly 30-minute one-on-ones with each report
+!!! info "Northstar so far"
+    Week 19 of the director's first year at Northstar, early in quarter 2 (weeks 14 to 26). Serious
+    (Sev1 and Sev2) incidents fell from 30 to 21 in the first quarter. In week 10 the seven QA engineers
+    (manual testers) moved into product teams as quality engineers, two of them to Daniel Cho's Customer
+    Experience team. See the [timeline](../../case-studies/northstar/timeline.md). New to Northstar?
+    Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
+
+The Case Study below follows Daniel Cho's one-on-ones through six weeks of quarter 2; this section
+works the arithmetic. The figures are **illustrative**, invented for Northstar (fictional). Daniel
+manages 15 engineers in Customer Experience, spends 45 percent of his time on people management, and
+holds weekly 30-minute one-on-ones with each report
 ([baseline data](../../case-studies/northstar/baseline-data.md)).
 
 Assumptions: a 40-hour week; 10 minutes of preparation and notes per meeting; 4.33 weeks a month.
@@ -259,8 +285,8 @@ Under A, one-on-ones take 10 of Daniel's 18 weekly hours of people time. Under D
 three quarters of their face time, and Daniel recovers about 2.7 hours a week.
 
 Frequency is a weak lever compared with content: cutting cadence alone saves hours and loses news,
-while changing content is free. The case study's six-week sample shows it. Daniel held 84 meetings and
-learned something no other channel showed in 11. Cadence D with a report-owned agenda would cost fewer
+while changing content is free. The Case Study's six-week sample, summarized here, shows it: Daniel
+held 84 meetings and learned something no other channel showed in 11. Cadence D with a report-owned agenda would cost fewer
 hours and, if it raised the news rate to one meeting in three (an assumption, not a forecast), carry
 more news:
 
@@ -353,7 +379,7 @@ What would make them more useful?") gives a signal self-ratings cannot. Managers
 coach the answers, so read trends and comments and never rank managers on the score (Chapter 18
 treats metric gaming).
 
-**Skip-levels as a check.** A director's conversations with engineers two levels down detect what
+**[Skip-levels](../../glossary.md#skip-level) as a check.** A director's conversations with engineers two levels down detect what
 one-on-ones miss, and harm if they bypass the manager. The rule: themes go back to the manager, with
 the engineer's agreement. Chapter 41 (Managing and Developing Engineering Managers) covers the rest.
 
@@ -402,13 +428,8 @@ For a manager rebuilding their one-on-ones over a quarter:
 
 ## Case Study
 
-This case is **fictional** ([the first quarter](../../case-studies/northstar/first-quarter.md)).
-
-!!! info "Northstar so far"
-    Week 19 of the director's first year at Northstar, early in quarter 2 (weeks 14 to 26). Serious
-    (Sev1 and Sev2) incidents fell from 30 to 21 in the first quarter. In week 10 the seven QA engineers (manual testers)
-    moved into product teams as quality engineers, two of them to Daniel Cho's Customer Experience team.
-    See the [timeline](../../case-studies/northstar/timeline.md).
+This case is **fictional** ([the year 1 record](../../case-studies/northstar/first-quarter.md)). It is
+set in week 19, as in the box in the Engineering Organization Example.
 
 At baseline, before the director arrived, Daniel Cho managed 15 engineers, nine web and six mobile, and spent 45 percent of his time
 on people management, more than any other Northstar manager. Technical direction sat with two informal
@@ -455,7 +476,8 @@ had said. The case leaves Daniel with the draft; the exercises take it from ther
 ## Exercises
 
 Solutions are in [chapter 5 solutions](../../solutions/ch05-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md).
+[baseline page](../../case-studies/northstar/baseline-data.md); who's who is on the
+[cast](../../case-studies/northstar/cast.md) page.
 
 ### Foundational
 

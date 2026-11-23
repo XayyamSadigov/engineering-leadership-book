@@ -25,6 +25,11 @@ This is not the developer-experience survey of
 [Chapter 18](../parts/04-execution/18-measuring-engineering-productivity.md), which measures friction
 across the organization anonymously. It is a conversation inside one team.
 
+!!! tip "Minimum version"
+    For the first session, rate the areas green, yellow, or red, discuss the reds, and leave with one
+    request for help and the rule for what leaves the room. Add trends from the second session, and pair
+    each red with a system signal before acting on it.
+
 ## How to fill it in
 
 1. **Write the access rule before the first session** and read it out at the start: the team owns the
@@ -109,9 +114,10 @@ previous_followup:
 
 !!! info "Northstar so far"
     Week 16 of the Engineering Director's first year at Northstar Technologies, a fictional company.
-    Incidents are falling after quarter 1's release and ownership changes; the renewal features are in
-    progress. Customer Experience is the one team that spans two sites and two products. See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    Customer Experience is the one team that spans two sites and two products. See the
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 The layout and the pairing of each area with a signal are illustrative. The director's response is
 not recorded.

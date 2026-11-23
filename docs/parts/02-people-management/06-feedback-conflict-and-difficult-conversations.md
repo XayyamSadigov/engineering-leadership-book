@@ -2,10 +2,10 @@
 
 This chapter is about the conversations managers avoid: telling someone what they did and what it
 caused, stepping into a dispute between people or teams, and saying something the other person does
-not want to hear. It covers specific behavioral feedback and why timing matters more than phrasing,
-what feedback research actually shows (including that feedback often makes performance worse), how
-delivery changes across cultures, how to tell what kind of conflict you are looking at before you
-intervene, and how to prepare a difficult conversation, including the plan for when it goes badly.
+not want to hear. It covers specific behavioral feedback, what feedback research actually shows
+(including that feedback often makes performance worse), and how delivery changes across cultures. It
+then shows how to tell what kind of conflict you face before you intervene, and how to prepare a
+difficult conversation, including the plan for when it goes badly.
 One-on-ones are Chapter 5's subject, formal underperformance processes are Chapter 9's, and
 psychological safety is Chapter 11's; this chapter cross-references them. The running example is the
 friction between Billing and Orders at Northstar Technologies, the fictional company in the
@@ -74,11 +74,10 @@ different level. The manager controls only the description and the timing.
 Feedback improves performance on average, but more than a third of the time it makes performance
 worse. That is the result of the best-known synthesis, Kluger and DeNisi's
 [meta-analysis](../../glossary.md#meta-analysis) (a study pooling many studies) of feedback
-interventions: deliberate actions that tell people something about their performance. Across 607
-results and 23,663 observations, the average improvement was a moderate
+interventions. Across 607 results, the average improvement was a moderate
 [effect size](../../glossary.md#effect-size-d-g), yet more than a third of the interventions decreased
 performance ([Kluger and DeNisi, 1996](../../references/bibliography.md#kluger1996effects)). The
-authors report that this could not be explained by sampling error or by whether the feedback was positive or
+authors report that this was not explained by chance or by whether the feedback was positive or
 negative. Their proposed explanation, feedback intervention theory, is that feedback shifts attention
 among three levels (the details of the task, motivation toward the task, and the self) and that
 effectiveness falls as attention moves toward the self and away from the task. They also note that
@@ -146,31 +145,32 @@ Conflict researchers distinguish types that behave differently.
   sequence, the release process.
 - **Relationship conflict**: personal friction, dislike, irritation.
 - **Status conflict**: disputes about people's relative respect or position in the group. Bendersky and
-  Hays defined it as a separate type, found it had a negative effect on group performance, found that
-  it moderated the effect of task conflict, and found that it hurt performance by undermining
-  information sharing more than the other types did
+  Hays found that it hurt group performance and made task conflict more harmful. It did its damage
+  mainly by undermining information sharing, more than the other types did
   ([Bendersky and Hays, 2012](../../references/bibliography.md#bendersky2012status)).
 - **Values conflict**: disagreement about what matters, such as whether shipping a known defect to meet
   a customer date is acceptable. This is this book's working category for practice; the research
   cited here does not measure it separately, so treat it as a practitioner distinction.
 
-Whether task conflict helps is **contested**, but the two largest syntheses agree on the operational
-point: task conflict is tolerable, sometimes useful, only while it stays separate from relationship
-conflict. A long-standing idea held that disagreement about the work improves decisions while personal
-conflict damages them.
+A long-standing idea holds that disagreement about the work improves decisions while personal conflict
+damages them. Whether task conflict really helps is **contested**:
 
-- De Dreu and Weingart's meta-analysis challenged it. Both relationship and task conflict correlated
-  strongly and negatively with team performance and member satisfaction, more so in complex tasks.
-  Task conflict was less damaging when only weakly linked to relationship conflict
+- De Dreu and Weingart's meta-analysis found both relationship and task conflict strongly linked to
+  worse team performance and satisfaction, more so in complex tasks. Task conflict was less damaging
+  when only weakly linked to relationship conflict
   ([De Dreu and Weingart, 2003](../../references/bibliography.md#dedreu2003task)).
-- A later meta-analysis of 116 studies and 8,880 groups found stable negative links between
-  relationship and process conflict and group outcomes, but no strong negative link for task conflict.
-  Task conflict related more positively to performance where it was weakly linked to relationship
-  conflict, in top management teams, and where performance meant decision quality or financial results
-  ([de Wit, Greer, and Jehn, 2012](../../references/bibliography.md#dewit2012paradox)).
- Process conflict, which engineering organizations generate
-constantly, was consistently negative. These are **research findings** about correlations across many
+- A later, larger meta-analysis (116 studies) found no strong negative link for task conflict, and a
+  more positive one where it stayed apart from relationship conflict, in top management teams, and for
+  decision quality ([de Wit, Greer, and Jehn, 2012](../../references/bibliography.md#dewit2012paradox)).
+
+Both agree on the operational point: task conflict is tolerable, sometimes useful, only while it stays
+separate from relationship conflict. These are **research findings** about correlations across many
 kinds of teams, none specifically in software, and they do not show causation.
+
+Process conflict is the clearest case. The 2012 synthesis found it consistently harmful, alongside
+relationship conflict. Engineering organizations generate it constantly, at every shared release,
+database, and rotation, so it is the conflict a manager is most likely to face and least likely to fix
+by talking about attitudes.
 
 ```mermaid
 flowchart TD
@@ -208,8 +208,8 @@ backfires. This is **expert opinion**.
 
 In practice, preparation has five parts (**this book's recommendation**):
 
-1. **Purpose.** One sentence on what must be true after the conversation. "Teodora understands that
-   blaming another team in public review is not acceptable, and we agree what she does next time."
+1. **Purpose.** One sentence on what must be true after the conversation. "Lee understands that
+   blaming another team in public review is not acceptable, and we agree what he does next time."
 2. **Facts and story.** Separate what you observed from your interpretation. Write down what you do
    not know.
 3. **Their view.** What would they say happened, and what is at stake for them? An overloaded on-call
@@ -281,6 +281,21 @@ on-call conversation, because the grievance was real.
 
 Write the agreement down: both people leave with the same understanding, and if the pattern continues,
 Chapter 9's process starts from a record rather than from memory.
+
+### Receiving feedback, and giving it upward
+
+A manager who asks for criticism and punishes it once will not hear it again. Ask for it specifically:
+"What is one thing I did this month that made your work harder?" beats "Any feedback for me?" Then
+receive it with three moves (**this book's recommendation**): thank the person, ask one question that
+clarifies the example, and do not explain or defend in the same conversation. Come back within a week
+with what you will change, or why you will not. The follow-through teaches more than the thanks.
+
+Engineers giving feedback to their manager can use the same structure as any feedback: one situation,
+the behavior, its effect on the work, and a question. "In Monday's planning you committed us to the
+March date before we had sized the migration. Two of us now expect to miss it. Can we revisit it this
+week?" Give it privately and early, and frame it around the work, not the manager's competence. If a
+manager responds badly to feedback given this way, that is information for the skip-level, not a
+reason to stop.
 
 ### Where psychological safety fits
 
@@ -380,7 +395,8 @@ decisions keep being revisited.
 side collecting incidents as evidence. Detect it when incident reviews start with attribution rather
 than timeline.
 
-**Over-correction.** A manager trained in directness who becomes harsh. Detect it in skip-levels and in
+**Over-correction.** A manager trained in directness who becomes harsh. Detect it in
+[skip-levels](../../glossary.md#skip-level) (a director's meetings with engineers two levels down) and in
 who stops speaking in that manager's meetings.
 
 ## Enterprise Application
@@ -444,16 +460,15 @@ This case is **fictional**. It ends with a decision the reader faces on arrival 
     Before week 1: the baseline quarter, before the new Engineering Director arrives at Northstar, the
     book's fictional order-to-cash company. It had 30 serious incidents and $410,000 in service credits
     (refunds for missed availability). Billing had the most incidents. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 Billing had eight [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (Northstar's two
-most serious levels) in the baseline quarter, the most of any team. Seven came through Core releases or
-database migrations, and six were repeats of earlier failures. Three ledger engineers had handled 126
-of Billing's 180 pages first, and 54 of the 64 after-hours pages. Orders depended on Billing more than
-on any other team (9 work items that needed Billing), and Billing on Orders 6 times. Both teams shipped
-through [Core](../../glossary.md#core), the shared Java monolith, on the same two-week
-[release train](../../glossary.md#release-train). A three-day manual regression pass before each
-release had caught none of the nine incidents the train's releases triggered.
+most serious levels) in the baseline quarter, the most of any team; seven came through Core releases or
+database migrations. Three ledger engineers had handled 54 of Billing's 64 after-hours pages. Billing
+and Orders shipped through [Core](../../glossary.md#core), the shared Java monolith, on the same
+two-week [release train](../../glossary.md#release-train).
 
 After INC-417 (payments posted to the wrong accounting period after release 24.23), Teodora
 Vasquez-Lund, a senior Billing engineer and one of the three ledger engineers, wrote in the shared
@@ -479,17 +494,17 @@ a change. Each incident was evidence for whichever story each side
 already held, because the system produced no evidence that could settle it. The oldest layer
 is the release process; the newest is the dislike.
 
-Looking ahead, the first-quarter record shows what happened to the process: weekly Core releases
-from week 5, a release working group, and train-triggered incidents falling from nine to four
-([first quarter](../../case-studies/northstar/first-quarter.md)). It does not record what happened
-between the teams, or what Marcus said to Teodora. That is your decision at arrival. A process fix
+Looking ahead, [the year 1 record](../../case-studies/northstar/first-quarter.md) shows the release
+process was fixed in the first quarter. It does not record what happened between the teams, or what
+Marcus said to Teodora. That is your decision at arrival. A process fix
 alone may leave the behavior unaddressed. A behavioral intervention alone asks Teodora to stop being
 angry about a system that keeps paging her at night.
 
 ## Exercises
 
 Solutions are in [chapter 6 solutions](../../solutions/ch06-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md).
+[baseline page](../../case-studies/northstar/baseline-data.md); who's who is on the
+[cast](../../case-studies/northstar/cast.md) page.
 
 ### Foundational
 

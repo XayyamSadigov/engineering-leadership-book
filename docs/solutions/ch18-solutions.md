@@ -8,7 +8,7 @@ the criteria a good answer meets, and the weak answer to watch for. All Northsta
 
 **What changed.** DORA's current guide (last updated January 5, 2026) lists five metrics, not four, in
 two groups. Throughput: change lead time, deployment frequency, and failed deployment recovery time.
-Instability: change fail rate and deployment rework rate. "Time to restore service" has become failed
+Instability: change failure rate and deployment rework rate. "Time to restore service" has become failed
 deployment recovery time, which is narrower: it covers recovery from a deployment that needed immediate
 intervention, not every outage. Deployment rework rate is new: the share of deployments that are
 unplanned and caused by a production incident.
@@ -53,7 +53,7 @@ flaky-test quarantine arrived in the same quarter.
 ## F3 — Reporting change failure rate by team
 
 **What one quarter supports.** Very little between individual teams. With 24 to 78 deployments per team
-in a quarter, the 95 percent intervals in the chapter's table are wide (Billing 18 to 53 percent, Data and
+in a quarter, the plausible ranges (95 percent intervals) in the chapter's table are wide (Billing 18 to 53 percent, Data and
 Analytics 5 to 27 percent), and every team's interval overlaps every other's. The data are consistent
 with the teams that ship through the Core train failing more often, which the incident data and the
 mechanism support independently, but the rates alone do not rank teams.

@@ -46,8 +46,8 @@ After this chapter you will be able to:
 - Disagree with an executive productively: state the disagreement once, in writing, in the right room,
   then decide whether to commit or escalate using an explicit test.
 - Commit to a decision you opposed without sandbagging it, and with a trigger for revisiting it.
-- Diagnose resistance to change as information about the change's content, process, cost, history, or
-  capacity before treating it as a problem with people.
+- Diagnose resistance to change as information about the change's content, process, interest, history,
+  or capacity before treating it as a problem with people.
 
 ## The Mental Model
 
@@ -70,7 +70,7 @@ flowchart TD
 ```
 
 The loop runs in all three situations. A vice president who demands a repair estimate on the incident
-bridge teaches responders to guess. A CTO who punishes a dissenting director teaches the next one to
+bridge (the live call where responders coordinate) teaches responders to guess. A CTO who punishes a dissenting director teaches the next one to
 agree in the room and resist in the hallway. A director who labels objections "resistance" teaches
 managers to grant exemptions instead. Each response is locally reasonable, and each degrades the
 information the next decision depends on.
@@ -83,7 +83,8 @@ An incident becomes a crisis when it threatens the trust of people outside engin
 business stopped, partners blamed for it, a board, a regulator. The technical response barely changes.
 What changes is a second set of decisions the incident commander should not make: what to tell
 customers, whether to compensate beyond the contract, whether a disclosure obligation applies. A US public company, for example, must generally report a
-material cybersecurity incident within four business days of judging it material
+material cybersecurity incident (one a reasonable investor would consider important) within four
+business days of judging it material
 ([SEC, 2023](../../references/bibliography.md#sec2023cyberrule); **standard**). The executive team should
 know its obligations before the day.
 
@@ -130,8 +131,8 @@ whether to resubmit. A status post that says only "we are investigating" contain
 
 **Responsibility is attributed, and history intensifies it.** SCCT sorts crises by how much
 responsibility stakeholders attribute: victim (a rumor, a natural disaster), accidental (a technical
-error), and preventable (human error, misconduct). A history of similar crises intensifies the
-attribution. An outage caused by the provider's own change sits between technical and human error. This
+error), and preventable (human error, misconduct). SCCT calls these groups clusters. Crisis history, a
+record of similar crises, is an intensifying factor: it makes stakeholders attribute more responsibility. An outage caused by the provider's own change sits between technical and human error. This
 book's reading is that customers place it nearer "preventable" whenever the company has had similar
 failures recently.
 
@@ -141,9 +142,9 @@ rebuild for preventable crises and for accidental ones with a crisis history, an
 with rebuild erodes the whole response. Blaming a supplier in one message and apologizing in the next is
 the textbook mix.
 
-**More is not always better.** An overly accommodative response costs more and protects reputation no
-better, and it can make stakeholders think the crisis is worse than they thought. Compensation should
-follow the attribution, not the executive's anxiety.
+**More is not always better.** An overly accommodative response costs more, protects reputation no
+better, and can make the crisis look worse. Compensation should follow the attribution, not the
+executive's anxiety.
 
 Trust-repair research adds a sharp distinction. In two experiments, apology repaired trust better when
 the violation concerned competence, and denial when it concerned integrity
@@ -162,27 +163,24 @@ practice**: each organization's account of itself).
 **Atlassian, April 2022.** A maintenance script run with the wrong kind of identifier deleted 883
 customer sites belonging to 775 customers; some were without their products for up to 14 days. The
 company's review says its first broad external message was a tweet about 41 hours after the deletions
-began ([Viswanath, 2022](../../references/bibliography.md#atlassian2022outage)). Many customers could
-not be reached at all, because their contact details had been deleted with their sites. The review
-commits to keeping key contacts outside the product, and says it should have been open about what it
-did not know about restoration times. The lessons: the channel you use to reach customers must not
-depend on the system that failed, and "we do not yet know when" is something customers can plan around,
-where silence is not.
+began, and many customers could not be reached because their contact details were deleted with their
+sites ([Viswanath, 2022](../../references/bibliography.md#atlassian2022outage)). The lessons: the
+channel you use to reach customers must not depend on the system that failed, and "we do not yet know
+when" is something customers can plan around, where silence is not.
 
 **GitLab, January 2017.** An engineer rebuilding a database replica deleted data on the primary, and
 GitLab.com was down for about 18 hours after backups turned out to have been failing silently
 ([GitLab, 2017](../../references/bibliography.md#gitlab2017postmortem)). The team kept a public progress
 document, which initially named the engineer; the company said it would redact names in future. The
-lesson: be open about the system and the timeline, and never name an individual externally.
-People who expect blame stop giving the details needed to prevent the next failure
-([Allspaw, 2012](../../references/bibliography.md#allspaw2012blameless)), and an external name is the
-most public blame there is.
+lesson: be open about the system and the timeline, and never name an individual externally. People who
+expect blame stop giving the details needed to prevent the next failure
+([Allspaw, 2012](../../references/bibliography.md#allspaw2012blameless)).
 
 ### Disagreeing with executives
 
 Disagreement upward is a form of what researchers call *voice*: speaking up with ideas or concerns meant
-to improve things. People withhold it mainly out of fear. In interviews, most employees had stayed silent
-about a concern, most often for fear of being labeled negatively
+to improve things. People withhold it mainly out of fear: in interviews, most employees had stayed
+silent about a concern, most often for fear of being labeled negatively
 ([Milliken et al., 2003](../../references/bibliography.md#milliken2003silence); **research finding**,
 exploratory). In a large study at one restaurant chain, managers' openness predicted employees' voice
 better than inspirational leadership did, through
@@ -245,15 +243,14 @@ to leave. Silent compliance is not among them.
 
 ### Resistance as information
 
-Resistance is often partly the change agent's doing, and it can be a resource. Ford, Ford, and D'Amelio
-argue that the usual view, resistance as an irrational reaction of the recipients, is one-sided
-([Ford et al., 2008](../../references/bibliography.md#ford2008resistance); **expert opinion**). Piderit
-argues that ambivalence is common and sometimes useful
-([Piderit, 2000](../../references/bibliography.md#piderit2000rethinking); **expert opinion**). A review
-of 79 studies separates reactions to a change's content from reactions to its process
+Resistance is often partly the change agent's doing, and it can be a resource. Scholars argue that
+treating it as the recipients' irrational reaction is one-sided and that ambivalence is common and
+sometimes useful ([Ford et al., 2008](../../references/bibliography.md#ford2008resistance);
+[Piderit, 2000](../../references/bibliography.md#piderit2000rethinking); **expert opinion**), and a
+review of 79 studies separates reactions to a change's content from reactions to its process
 ([Oreg et al., 2011](../../references/bibliography.md#oreg2011recipients); **research finding**). None of
-this proves that resisters are right. It establishes that the question "what is this
-resistance telling me?" deserves an answer before "how do I overcome it?".
+this proves resisters right. It means "what is this resistance telling me?" deserves an answer before
+"how do I overcome it?".
 
 The readings below are **this book's recommendation**, a diagnostic ordered from the most to the least
 likely to be the change agent's own doing.
@@ -327,9 +324,8 @@ them; card checkouts failed.
 | Availability for the month | 99.54 percent (200 unavailable minutes), against 99.95 percent |
 | Contractual credit | 10 percent tier: $380,000 on $3.8 million of affected merchants' fees |
 
-Assumptions are those listed above; the sessions figure is from Halvard's analytics. The lost sessions
-are the merchants' losses (up to about $4.6 million of sales at a $71 average order), not Halvard's
-revenue.
+The lost sessions are the merchants' losses (up to about $4.6 million of sales at a $71 average order),
+not Halvard's revenue.
 
 **Communication, measured.** Merchants knew first: the first public complaint (14:18) preceded the
 internal alert (14:23). Halvard's standard calls for a first notice within 15 minutes of declaring a
@@ -399,10 +395,7 @@ must be slow (cause, compensation).
 
 **Transparency against exposure.** Publishing contributing factors helps customers judge the fixes and
 can be read as an admission in a contract dispute. Legal review of wording is legitimate; removing facts
-customers already know costs more trust than it saves.
-
-**Compensation against signal.** Generous credits soothe and also signal a worse failure. Tie
-compensation to measured harm and attribution.
+customers already know is not.
 
 **Executive presence against role clarity.** Customers and staff want to see a leader during a crisis;
 the bridge needs fewer people, not more. Be visible on customer calls and in internal messages, absent
@@ -412,8 +405,8 @@ from the bridge.
 work; committing to everything makes your disagreement worthless. The floor is the line between them,
 which is why it must be written before the dispute.
 
-**Listening to resistance against momentum.** Every objection investigated slows the change. Time-box
-the diagnosis: one round of listening, written findings, a decision on what changes, then move.
+**Listening to resistance against momentum.** Time-box the diagnosis: one round of listening, written
+findings, a decision on what changes, then move.
 
 ## Failure Modes
 
@@ -435,9 +428,6 @@ a timeline written as "X ran the script" rather than "the script was run".
 
 **The silent commit.** A leader agrees in the meeting and slow-walks the work. Early sign: the agreed
 item stays "in planning" while its owner's other work moves.
-
-**The perpetual dissenter.** Every decision is reopened. Early sign: the same argument in three meeting
-notes with no new evidence.
 
 **Escalation as threat.** "I will take this to the CEO" used to win an argument. Early sign:
 escalations that arrive from one party only.
@@ -467,9 +457,8 @@ personally, with a customer success leader. A practical kit, prepared before it 
   list the objections received, the reading assigned to each, and what changed because of them.
 
 If you are a director without authority to set this policy, propose it upward before the first crisis:
-a one-page role card and first-notice template for your own products, sent to your CTO or VP with a
-request to approve it or name who will. A director who has to invent the leadership track on the night
-is the most common cause of the failures below.
+a one-page role card and first-notice template for your own products, sent to your CTO or VP for
+approval.
 
 ## CTO Perspective
 
@@ -484,17 +473,15 @@ decision is not made by whoever is angriest on the night.
 On disagreement, the CTO sits in the middle of the escalation chain. Upward, the CTO's dissent duty is to
 the CEO in the executive meeting and, on integrity matters only, to the board through its
 [audit committee](../../glossary.md#audit-committee). Downward, the CTO's reaction to a director's
-disagreement sets the voice climate of the whole organization. Openness, more than inspirational
-leadership, predicts whether people speak up.
+disagreement sets the voice climate of the whole organization.
 
 On resistance, the CTO's distinctive problem is peer resistance: a CFO, a sales leader, or a head of IT
 who objects to an engineering change. Peer objections almost always carry an interest reading and often
 a content reading too. Treating them as turf loses the information.
 
 At Halvard's scale the CTO cannot run the leadership track for every group. The useful role is to set
-policy once: first notices without executive approval, one owner for customer statements per incident,
-compensation rules tied to the contract, and a public review within a fixed number of days. The Checkout
-outage showed what happens when a group improvises those under pressure.
+policy once: first notices without executive approval, one owner for customer statements, compensation
+rules tied to the contract, and a public review within a fixed number of days.
 
 ## Practical Playbook
 
@@ -526,53 +513,51 @@ outage showed what happens when a group improvises those under pressure.
     Weeks 41 to 49 of the director's first year. Quarter 3 brought Sev1 and Sev2 incidents to 14, the
     first quarter within the CTO's mandate of 15 or fewer, but the year-2 decisions (organization,
     quality continuation, board headline, workforce plan) are all open. See the
-    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md) and the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
-This case is **fictional**, from the quarter 4 record in
-[the director's first year](../../case-studies/northstar/first-quarter.md#quarter-4). No outcome of an
-open quarter 4 decision is recorded.
+This case is **fictional**, from the quarter 4 sections of
+[the year 1 record](../../case-studies/northstar/first-quarter.md#quarter-4). No outcome of an open
+quarter 4 decision is recorded.
 
-**The disagreement with the CTO.** In week 41 Victor Lindqvist (CTO, the director's manager) proposed
-"Sev1 and Sev2 incidents below 10 per quarter" as the year-2 board headline. In week 42 the director
-drafted a counter: at or below 40 over year 2 as a rolling four-quarter total, reported with the
-severity audit. It adds 99.9 percent availability every quarter and a trigger that reopens prevention
-after two quarters above 12. The reason is noise: a true average of 9 a quarter would still miss "below
-10" in about two quarters of five
-([Chapter 46](../10-business-leadership/46-stakeholder-management-and-negotiation.md) works this). By
-week 48 the draft board page carries both headlines; the choice is Victor's and is open.
+**The disagreement with the CTO.** Victor Lindqvist (CTO, the director's manager) proposed "Sev1 and
+Sev2 incidents below 10 per quarter" as the year-2 board headline. The director drafted a counter: at
+or below 40 over year 2 as a rolling four-quarter total, reported with the severity audit, plus 99.9
+percent availability every quarter and a trigger that reopens prevention after two quarters above 12.
+The reason is noise: a true average of 9 a quarter would still miss "below 10" in about two quarters of
+five ([Chapter 46](../10-business-leadership/46-stakeholder-management-and-negotiation.md) works this).
+The draft board page carries both headlines; the choice is Victor's and is open.
 
 Read with the commit-or-escalate test, this is a judgment within the CTO's authority: the board page is
-his. The director has voiced the disagreement once, in writing, with the arithmetic, which is all the
-first row of the table asks. If Victor chooses his headline, the move is to commit, with a revisit
+his. The director has voiced the disagreement once, in writing, which is all the first row asks. If Victor chooses his headline, the move is to commit, with a revisit
 trigger and a written floor: severity definitions change only through their owners, the weekly severity
 audit continues, and no manager is assessed on their team's count. It would become an escalation only
 if that floor broke, for example if a quarter near the target brought pressure to re-rate incidents.
 Then it is an integrity question, and the route runs to the CEO, not to another round with Victor.
 
-The second row of the table, an answer given in passing, has its Northstar example in a week-14 remark
-of Victor's on how integrations should read ledger data. The capstone tells it in full
-([Chapter 60](../15-capstone/60-capstone-northstar.md#case-study)).
-
-**Five pieces of pushback, read as information.**
+**Five pieces of pushback, read as information.** The context, in brief: the director sent product a
+written working contract on how the two functions plan together; a distributor's complaint led to a
+measure of corrected orders; and the director's own Engineering Excellence Day, an improvement day
+held every four weeks in quarter 3, lost participants until it was stopped.
 
 | Pushback | Form | Reading | What it carries |
 |---|---|---|---|
-| Amara Okafor (CPO) sets three conditions on the director's working contract with product (week 42) | Voice | Interest | Product's exposure while the board pack still counts roadmap items delivered |
-| Amara's objection moves ordering correctness to "excellent" in Victor's strategy draft (week 49) | Voice | Content | The week 40 evidence: 7,800 corrected orders in 28 days, 1.3 percent of submissions |
-| Greg Tanaka (VP Sales) objects to "no customer date without an engineering estimate and a named owner" (week 49) | Voice | Interest, partly process | Deals close on dates; 5 of 17 dates in the baseline quarter were given before sizing |
-| Marta Kowalczyk (Head of IT) objects to moving security out of IT (week 47) | Voice | Content | Security audits engineering; the move could remove the only independent check |
-| Engineering Excellence Day participation falls from 64 to 41 to 23 engineers (quarter 3) | Exit, then silence | Process and capacity | No pilot, no managers in the design, a date that collided with period close |
+| Amara Okafor (CPO) sets three conditions on the working contract | Voice | Interest | The board still counts product by roadmap items delivered, so she carries the exposure |
+| Amara argues that ordering correctness belongs among the "excellent" capabilities in Victor's strategy draft | Voice | Content | Evidence: 7,800 corrected orders in 28 days, 1.3 percent of submissions |
+| Greg Tanaka (VP Sales) objects to "no customer date without an engineering estimate and a named owner" | Voice | Interest, partly process | Deals close on dates; 5 of 17 dates in the baseline quarter were given before sizing |
+| Marta Kowalczyk (Head of IT) objects to moving security out of IT | Voice | Content | Security audits engineering; the move could remove the only independent check |
+| Engineering Excellence Day participation falls from 64 to 41 to 23 engineers | Exit, then silence | Process and capacity | No pilot, no managers in the design, and a date that collided with Billing's period-close work (Finance's month-end books deadline) |
 
-Two patterns stand out. The most useful pushback came from executives who voiced it with evidence; in
-one case (Amara's, week 49) it improved the plan the same day. The most expensive came from the
-organization's own initiative, where managers' objections took the form of exemptions
-([Chapter 43](../09-engineering-directorship/43-leading-change-and-director-failure-patterns.md) tells
-how the director read and ended it).
+Two patterns stand out. The most useful pushback came from executives who voiced it with evidence;
+Amara's objection improved the strategy draft the same day. The most expensive came from the
+director's own initiative, where managers' objections took the form of exemptions
+([Chapter 43](../09-engineering-directorship/43-leading-change-and-director-failure-patterns.md)).
 
-Greg Tanaka is the harder case, because his objections repeat. In week 47 he wanted the prevention
-engineers on deal features and privately offered support in exchange for two engineers, which the
-director declined. He then objected to the estimate rule. Repetition from one executive is the last row
+Greg Tanaka is the harder case, because his objections repeat. He wanted the prevention engineers on
+deal features and privately offered support in exchange for two engineers, which the director
+declined. He then objected to the estimate rule. Repetition from one executive is the last row
 of the commit-or-escalate table: a pattern, to be raised with instances in the forum that owns the
 process. It is also information. Every one of Greg's objections says that sales has no fast, reliable
 way to get an engineering answer before a customer asks for a date. The rule already promises estimates

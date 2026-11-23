@@ -86,7 +86,7 @@ truck factor tells you where to look.
 | Area | Gap | Mechanism | Learners |
 |---|---|---|---|
 | Posting and journal rules | None for depth; all three are experts | Route reviews to learners | 2 |
-| Credit notes and adjustments | Change: 2 | Learners drive the next changes; expert reviews | 2, including the backfill |
+| Credit notes and adjustments | Change: 2 | Learners drive the next changes; expert reviews | 2, including Tamsin Achterberg |
 | Period close | Respond 2, change 1 | Monthly rehearsal of close in test; learner drives | 2 |
 | Schema migrations | Change 2 | Learners write the next migrations with the migration check (Chapter 23) | 1 |
 | Currency and rounding | 1 and 1 | Paired walk-through, then one planned change driven by a learner | 2 |
@@ -101,8 +101,8 @@ expert first on Sev1 ledger incidents for the quarter. Say this to the director 
 starts, so a rise is read as planned cost, not failure.
 
 **Evidence of success.** Count who restored ledger incidents in the quarter, by area, and whether they
-escalated; check that each area has two people who have actually done a change or a rehearsal; check the
-backfill is on the rotation. Not evidence: the number of runbook pages written.
+escalated; check that each area has two people who have actually done a change or a rehearsal; check that
+Tamsin is on the rotation. Not evidence: the number of runbook pages written.
 
 **Weak answer:** "write documentation for each area", or a plan with no hours.
 

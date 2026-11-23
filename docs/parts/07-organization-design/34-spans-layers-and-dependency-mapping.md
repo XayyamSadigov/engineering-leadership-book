@@ -81,12 +81,10 @@ division heads from the CEO ([Rajan and Wulf, 2006](../../references/bibliograph
 That **research finding** is about the top of large companies. It says nothing about how many
 engineers a manager should have.
 
-Gallup's survey data concludes that manager talent matters more than span. It comes closest to a span
-study of ordinary managers. Its US panel's average span rose from 10.9 to 12.1 between 2024 and 2025,
-with a median of about six. Less talented managers lost engagement as team size and their own hands-on
-work grew. Two findings matter for engineering. More reports went with lower engagement for remote and
-hybrid managers but barely mattered on-site. And managers spending more than the median 40 percent of
-their time on individual work showed lower engagement, worse in larger teams
+Gallup's survey data, the closest thing to a span study of ordinary managers, concludes that manager
+talent matters more than span. Two findings matter for engineering. More reports went with lower
+engagement for remote and hybrid managers but barely mattered on-site. And managers spending more than
+the median 40 percent of their time on individual work showed lower engagement, worse in larger teams
 ([Harter, 2026](../../references/bibliography.md#harter2026span)). This is **industry research**:
 self-reported, correlational, all occupations, not software.
 
@@ -183,80 +181,86 @@ the work it cuts changes together.
     Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
     to 21 in quarter 1, and the seven QA engineers joined product teams in week 10. Both renewal
     commitments are on track (weeks 19 and 26). See the [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This example diagnoses Northstar, the book's fictional company, with the chapter's tools. All figures
 are **illustrative**, from Northstar's [baseline data](../../case-studies/northstar/baseline-data.md)
-and [first quarter](../../case-studies/northstar/first-quarter.md).
+and [year 1 record](../../case-studies/northstar/first-quarter.md).
 
 **Spans today.** Since week 10, when the seven QA engineers moved into product teams, the six managers'
 spans are:
 
-| Manager (team) | Engineers |
-|---|---|
-| Priya Raman (Orders) | 16 |
-| Marcus Oyelaran (Billing) | 15 |
-| Elena Sokolova (Payments and Integrations) | 13 |
-| Daniel Cho (Customer Experience) | 17 |
-| Farah Haddad (Data and Analytics) | 11 |
-| Tom Becker (Platform Operations, infrastructure only) | 5 |
-| Engineers under the six managers | 77 |
+| Manager (team) | Engineers | The factor that matters most |
+|---|---|---|
+| Priya Raman (Orders) | 16 | First year as a manager; 8 hours a week hands-on |
+| Marcus Oyelaran (Billing) | 15 | Most incidents; 41 percent unplanned work; three ledger experts |
+| Elena Sokolova (Payments and Integrations) | 13 | Experienced, strong practices; informal tech lead; two sites |
+| Daniel Cho (Customer Experience) | 17 | Two platforms, two sites; all six mobile engineers in Bogotá |
+| Farah Haddad (Data and Analytics) | 11 | Also the team's data architect (45 percent of her time); two sites |
+| Tom Becker (Platform Operations) | 5 | Infrastructure only since week 10 |
 
-The headcount reconciles as follows. The 77 engineers under managers plus 3 staff engineers make
-Northstar's 80 engineers. Add 6 managers and the director, and the organization has 87 seats. The
-director has nine direct reports: six managers and three staff engineers.
+The 77 engineers under managers plus 3 staff engineers make Northstar's 80 engineers. The director has
+nine direct reports: six managers and three staff engineers.
 
-Apply the five factors. Priya caps her hands-on work at 8 hours a week and is in her first year as a
-manager. Her span should sit at the low end, and it is the second highest. Daniel's team spans two
-sites, with all six mobile engineers in Bogotá. His span should also be low, and it is the highest.
-Tom, at the floor of five, barely has enough people work to fill a manager's job. Farah, at 11, still
-acts as her team's data architect and leads engineers in two sites. Elena, at 13, is above twelve. By
-these factors every one of the six spans is outside the range this chapter would set: five too large,
-one too small.
+By the five factors, every one of the six spans is outside the range this chapter would set: five too
+large, one too small. Priya and Daniel should sit at the low end and hold the two highest spans. Elena,
+at 13, is above twelve. Tom, at five, barely has enough people work to fill a manager's job.
 
 **What fixing spans would cost.** Bringing every manager to ten or fewer means about eight managers for
 77 engineers. Under the flat-headcount rule, a new manager is allowed only if the promoted engineer's
-seat is not backfilled. Each extra manager therefore costs one engineering seat. Two new managers move
-about $370,000 a year of capacity from building to managing, at Northstar's
-[fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000 per engineer. And every new
-manager reports to the director, so the layer question follows directly from the span fix.
+seat is not backfilled. Two new managers therefore move about $370,000 a year of capacity from building
+to managing, at Northstar's [fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000 per
+engineer. And every new manager reports to the director, so the layer question follows directly.
 
-**Where the links are.** Chapter 16's matrix counts 86 dependency links in the baseline quarter. The
-four heaviest single directions are Orders to Billing (9), Orders to Platform Operations (8), Customer
-Experience to Orders (8), and Billing to Platform Operations (7). As a pair, Orders and Billing
-exchanged 15 links (9 plus 6), the most of any pair. At the start of quarter 2 the managers classified
-those links:
+**Where the links are.** A dependency link is one work item of a week or more in which one team needed
+another, counted per quarter. Northstar's baseline matrix (Chapter 16 builds it) holds 86. Read across
+a row for what a team asked of others; read down a column for what others asked of it.
+
+| Requesting team | Orders | Billing | Payments | Customer Exp. | Data | Platform |
+|---|---|---|---|---|---|---|
+| Orders | – | 9 | 2 | 3 | 1 | 8 |
+| Billing | 6 | – | 5 | 1 | 2 | 7 |
+| Payments and Integrations | 1 | 4 | – | 1 | 0 | 5 |
+| Customer Experience | 8 | 3 | 2 | – | 1 | 6 |
+| Data and Analytics | 2 | 2 | 1 | 0 | – | 3 |
+| Platform Operations | 1 | 1 | 0 | 1 | 0 | – |
+
+Platform Operations' column is the heaviest (29). The busiest pair is Orders and Billing, 15 links
+(9 plus 6). At the start of quarter 2 the managers classified the five heaviest directions:
 
 | Link | Count | What the work was |
 |---|---|---|
-| Orders → Billing | 9 | 6 order-to-invoice mapping changes in core/invoicing; 3 tax-svc |
-| Billing → Orders | 6 | 4 order data or status events from order-capture; 2 pricing-rules |
-| Customer Experience → Orders | 8 | 6 order API changes for order-entry screens (4 web, 2 mobile); 2 search-svc or pricing-svc |
-| Orders → Platform Operations | 8 | 5 test environments; 3 release train or pipeline |
-| Billing → Platform Operations | 7 | 4 test environments with ledger data; 3 migration or pipeline |
+| Orders → Billing | 9 | 6 order-to-invoice mapping changes; 3 tax-svc |
+| Billing → Orders | 6 | 4 order data or status events; 2 pricing rules |
+| Customer Experience → Orders | 8 | 6 order API changes for order-entry screens (4 web, 2 mobile); 2 other |
+| Orders → Platform Operations | 8 | 5 test environments; 3 release or pipeline |
+| Billing → Platform Operations | 7 | 4 test environments; 3 migration or pipeline |
 
-The 15 links to Platform Operations are requests for environments and pipeline changes. That is a
-self-service problem, already addressed by Chapter 16's interrupt rotation and self-service
-environments. The other 23 are about where order logic ends and invoicing or screens begin: a boundary
-problem. Three candidate moves, recounted on the baseline quarter:
+The 15 links to Platform Operations are requests for environments and pipeline changes: a self-service
+problem, already being addressed. The other 23 are about where order logic ends and invoicing or
+screens begin: a boundary problem. Three candidate moves, recounted on the baseline quarter:
 
-| Candidate move | Links removed | Links created | Net | Span effect |
-|---|---|---|---|---|
-| M1: web order-entry screens and 2 web engineers move from Customer Experience to Orders | 4 (web order API links) | 0 counted; shared web shell work now crosses | −4 | Orders 18, Customer Experience 15 |
-| M2: split Orders into order capture, and catalog and pricing | 0 | 4 (baseline items that touched both) | +4 | Two teams, about 9 and 6 |
-| M3: order-to-invoice mapping moves from Billing to Orders | 6 | 2 (mapping changes Billing made for its own reasons) | −4 | None |
+| Candidate move | Links removed | Links created | Span effect |
+|---|---|---|---|
+| M1: web order-entry screens and 2 web engineers to Orders | 4 | 0 counted | Orders 18, Customer Experience 15 |
+| M2: split Orders into order capture, and catalog and pricing | 0 | 4 | Two teams, about 9 and 6 |
+| M3: order-to-invoice mapping from Billing to Orders | 6 | 2 | None |
 
-M2's count understates its cost. Below the matrix's one-week threshold, about 58 merge requests a
-quarter changed both order capture and pricing rules (Chapter 31). Each would cross owners after the
-split.
+One verdict per move:
 
-M1 removes links but makes Orders bigger. M2 fixes the span but creates links. Together they net zero
-links, fix one span, and reduce another. M3 removes the most links, but it puts invoice correctness
-into the team that did not build it. Invoice correctness was the source of the week 9 Sev1, when credit
-notes were applied twice and the rollback failed. The obvious alternative to M3 is to loosen the link:
-an order-to-invoice contract owned by Billing, with [contract tests](../../glossary.md#contract-test)
-on both sides (automated checks that the provider still returns what each consumer relies on). Li Na
-Zhou (staff engineer, data and integration) proposed the same pattern for the ledger export in Chapter
-16. It removes no links from the count, but removes the waiting from each.
+- **M1** removes 4 links but worsens Orders' span, and shared web shell work would start crossing
+  teams, uncounted.
+- **M2** fixes Orders' span but adds 4 links, and understates its cost: below the one-week threshold,
+  about 58 merge requests a quarter changed both order capture and pricing rules (Chapter 31). Each
+  would cross owners.
+- **M3** removes the most links but moves invoice correctness away from the team that built it. Invoice
+  correctness was behind the week 9 Sev1, when credit notes were applied twice and the rollback failed.
+
+The alternative to M3 is to loosen the link: an order-to-invoice contract owned by Billing, with
+[contract tests](../../glossary.md#contract-test) on both sides (automated checks that the provider
+still returns what each consumer relies on). It removes no links from the count, but removes the
+waiting from each.
 
 ## Decision Framework
 
@@ -349,10 +353,9 @@ weekly has an argument for a layer over those teams, not over everyone.
 
 ## CTO Perspective
 
-At executive scale, spans and layers become a budget line and a speed limit. A rough count: with spans
-of eight at the first level and six above, 500 engineers need about 63 first-line managers and about
-11 directors under a few VPs. Each level adds a hop to every decision that crosses its boundary.
-Chapter 35 works through the scales.
+At executive scale, spans and layers become a budget line and a speed limit. Each level adds a hop to
+every decision that crosses its boundary, and at 500 engineers there are three or four levels.
+Chapter 35 works through the manager counts at each scale.
 
 The CTO's job is to keep layers no higher than the boundaries require, by asking three questions.
 Which decisions reach me that belong two levels down, and which boundary sent them? Which spans are
@@ -381,19 +384,14 @@ decide alone; otherwise it moves their arguments up to a busier person.
 
 ## Case Study
 
-This case is **fictional**. It is set at Northstar in quarter 2 (weeks 14 to 26), after
-[the director's first quarter](../../case-studies/northstar/first-quarter.md). It ends with an option
-set, not a decision.
+This case is **fictional**. It is set at Northstar in quarter 2 (weeks 14 to 26) and ends with an
+option set, not a decision.
 
-**The situation.** Priya Raman (Orders manager) has 16 reports in her first year as a manager. Daniel
-Cho (Customer Experience manager) has 17, and his one-on-ones are under review (Chapter 5). In week 17
-Mateo Arango Ríos, the team's informal mobile lead in Bogotá, tells the director he has done a lead's
-job for over a year. Orders and Billing exchanged 15 links in the baseline quarter. Their friction has
-only ever been handled above both managers. Two incidents show it: [INC-417](../../glossary.md#inc-numbers),
-payments posted to the wrong accounting period after a release of
-[Core](../../glossary.md#core), Northstar's monolith, started a thread about release
-channels; the review of INC-427, credit notes applied twice after a release, opened with blame. The
-accounting-system integration is due in week 19 and bulk ordering in week 26. No team can be
+**The situation.** Priya Raman has 16 reports in her first year as a manager; Daniel Cho has 17, with
+mostly-status one-on-ones. Orders and Billing exchanged 15 links in the baseline quarter, and their
+friction has only ever been handled above both managers: the review of
+[INC-427](../../glossary.md#inc-numbers), credit notes applied twice after a release, opened with
+blame. The accounting-system integration is due in week 19 and bulk ordering in week 26. No team can be
 reorganized before then without risking a renewal.
 
 **What the director does in quarter 2.** Two things. First, the analysis in this chapter: the span
@@ -411,7 +409,7 @@ becomes an option set for later.
 | M1: web order-entry screens to Orders | −4 links; Orders grows to 18 | Not pursued: worsens the second-worst span |
 | M2: split Orders | +4 links and about 58 cross-owner merge requests a quarter; fixes Orders' span for one seat | Kept as an option; a seam with pricing rules staying in order capture would keep that pair together |
 | M3: mapping to Orders | −4 links; moves invoice correctness away from Billing | Rejected in favor of the contract |
-| Customer Experience span (17) | The matrix counts the team as one, so web and mobile links are unmeasured | Open; Chapter 14 sets out the options |
+| Customer Experience span (17) | The matrix counts the team as one, so web and mobile links are unmeasured | Open |
 
 ```mermaid
 flowchart TD
@@ -437,21 +435,21 @@ and puts a peer over peers.
 | Second director, hired | Two directors of about 40 engineers | Breaks flat headcount; little for two directors to do |
 
 The director's question is not which chart looks best. It is which open item a later design must name
-a trigger for: Orders' span, especially if core/permissions (an unowned Core module) arrives; the
+a trigger for: Orders' span, especially if core/permissions (a tier 1 Core module changed by four
+teams, unowned since baseline) arrives; the
 unmeasured web and mobile links; and the Orders and Billing pair if the contract does not shorten its
 waits. Chapter 35 takes this option set into the year-2 design the director drafts in week 44.
 
 ## Exercises
 
-Solutions are in [chapter 34 solutions](../../solutions/ch34-solutions.md). Data are on the
-[Northstar baseline page](../../case-studies/northstar/baseline-data.md) and in Chapter 16's case
-study.
+Solutions are in [chapter 34 solutions](../../solutions/ch34-solutions.md). The span table and the
+dependency matrix are in this chapter's Engineering Organization Example; more data is on the
+[Northstar baseline page](../../case-studies/northstar/baseline-data.md).
 
 ### Foundational
 
-**F1.** Score Northstar's six managers on the five span factors as of week 14, using what the case pages
-and this chapter say about each (first year as manager, sites, informal leads, hands-on work, recent
-changes). For each, give a target range and say whether the current span is inside it. Identify the one
+**F1.** Score Northstar's six managers on the five span factors as of week 14, using the span table
+in this chapter (first year as manager, sites, informal leads, hands-on work, recent changes). For each, give a target range and say whether the current span is inside it. Identify the one
 manager whose span is too small rather than too large, and say what you would do about it.
 
 **F2.** A director proposes to cut decision latency by removing the senior-manager layer from a

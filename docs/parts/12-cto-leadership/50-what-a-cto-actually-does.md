@@ -57,10 +57,11 @@ types.
 
 Second, **delegation is the CTO's main design tool, and the calendar is its audit.** The week is fixed.
 Peter Drucker is known for the advice to record where time actually goes before deciding where it should
-go ([Drucker, 1967](../../references/bibliography.md#drucker1967effective)); **expert opinion**. Diary
-studies of CEOs suggest that how a leader's time fits the firm matters
-([Bandiera et al., 2020](../../references/bibliography.md#bandiera2020ceo)); applying that to CTOs is an
-analogy.
+go ([Drucker, 1967](../../references/bibliography.md#drucker1967effective)); **expert opinion**. A diary
+study of more than a thousand CEOs found no single best way to spend the week. Its abstract links firm
+performance to the fit between how the chief executive spends time and what the firm needs
+([Bandiera et al., 2020](../../references/bibliography.md#bandiera2020ceo)); **research finding** about
+CEOs, applied to CTOs by analogy.
 
 The loop: every decision that reaches the CTO is kept, returned to its owner, or given a newly named owner
 in writing. A quarterly calendar audit checks whether returned decisions have drifted back. A decision
@@ -123,15 +124,16 @@ For a software company with all three roles, a typical split (**this book's reco
 | Decision | CTO | VP of Engineering | CIO or Head of IT |
 |---|---|---|---|
 | Product technology direction and major bets | Decides | Advises | Informed |
-| Allocation of engineering capacity across areas | Sets envelope | Decides | n/a |
+| Allocation of engineering capacity across areas | Sets the budget envelope | Decides | n/a |
 | Engineering leaders below the top | Approves VP picks | Decides directors | n/a |
 | Internal business systems (finance, HR, CRM) | Informed | n/a | Decides |
 | Employee devices, identity, office networks | Informed | n/a | Decides |
 | Security of the product and its pipeline | Accountable (unless a CISO) | Implements | Shares controls |
 | Customer and board technical trust | Decides | Supports | Supports on internal controls |
 
-A CISO (chief information security officer) is a dedicated security executive; where one exists, the
-security row moves to that person. Where there is no VP, the CTO holds the VP column too, or gives it
+The [budget envelope](../../glossary.md#budget-envelope) is the total spending limit approved for the
+year; the VP divides it. A [CISO](../../glossary.md#ciso) (chief information security officer) is a
+dedicated security executive; where one exists, the security row moves to that person. Where there is no VP, the CTO holds the VP column too, or gives it
 explicitly to a director (Chapter 47's first company shape). Where IT reports to the CFO, the CTO and the
 CFO share seams: identity, security, vendors that serve both, and evidence for customer security reviews.
 The table's job is to make each seam somebody's decision. A blank cell is acceptable only if it is
@@ -161,6 +163,17 @@ Everything else can be done by someone else, often better. Aghion and Tirole sep
 (the right to decide) from real authority, which follows information
 ([Aghion and Tirole, 1997](../../references/bibliography.md#aghion1997formal)). A CTO who keeps formal
 authority where others hold the information either decides badly or rubber-stamps.
+
+### Agreeing the role with the CEO
+
+The CEO decides what the CTO is for, so write it down together (**this book's recommendation**). One page
+is enough: the archetype the company needs this year, the "only the CTO" list, the three or four results
+the CEO will judge you on, and what you will stop doing. Review it once a year, and again whenever the
+answer to the three diagnostic questions changes: a VP is hired, the company sells to larger customers, or
+a board asks for a different kind of CTO. Renegotiate before you change how you spend the week, not after.
+A CTO who drifts outward without saying so looks absent; one who stays inward after the CEO asked for
+more outside work looks resistant. Both problems are cheaper to solve on paper than in a performance
+conversation (exercise X2).
 
 ### Delegation that holds
 
@@ -208,17 +221,21 @@ flowchart TD
 | Quarterly | Strategy check; calendar audit | Board item; engineering's quarterly reset |
 | Annual | Technology strategy and investment plan ([Chapter 51](51-enterprise-technology-strategy.md), [Chapter 52](52-technology-investment-budgeting-and-financial-literacy.md)) | Operating plan with the CFO |
 
+The [operating plan](../../glossary.md#operating-plan) is the company's approved plan for the year:
+targets, headcount, and budget, owned by the CEO and CFO.
+
 Attend engineering forums by sampling, not chairing. A CTO who chairs engineering's weekly operational
 review has taken the director's meeting; one who never attends loses unfiltered signal.
 
 ## Engineering Organization Example
 
 !!! info "Northstar so far"
-    Week 47 of the director's first year. Sev1 and Sev2 incidents fell from 30 a quarter to 14 in quarter 3,
-    and availability reached 99.89 percent. Several year-2 decisions are open, among them the
-    organization proposal and whether to hire a VP of Engineering. See the
-    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md) and the
-    [timeline](../../case-studies/northstar/timeline.md).
+    Week 47 of the director's first year; [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3)
+    incidents fell from 30 a quarter to 14. Open for year 2: the organization proposal and whether to hire
+    a VP of Engineering. See the [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 This example is **illustrative** and fictional.
 
@@ -229,6 +246,9 @@ lead). In week 45 you asked the director whether Northstar needs a VP of Enginee
 recommendation is due in week 48, and you have decided nothing. Whatever the answer, you want to know
 which part of your week no structure would change. You export your calendar for weeks 44 to 46 and sort an
 average week.
+
+The [board pack](../../glossary.md#board-pack) is the set of papers sent to directors before a board
+meeting.
 
 **The finding first.** 20 of your 48 hours are work only the CTO can do under any structure. Another 7 are
 recoverable without a VP. Only 2 hours, about 4 percent, go to strategy, which is the complaint behind your
@@ -257,27 +277,26 @@ The first seven rows total 20.0 hours; the four delegable rows total 11.0.
 **The rulings.** In the three weeks, 11 technical questions reached you outside any process. Three were
 genuinely yours:
 
-- a top-40 customer's request for a dedicated environment, which would change how Northstar runs its
-  platform;
+- a request from a top-40 customer (one of the 40 largest, a third of revenue) for a dedicated
+  environment, which would change how Northstar runs its platform;
 - the technical terms of a vendor renewal affecting both product and IT;
 - a top-40 customer's request to review Northstar's architecture direction before renewing.
 
 Six had an owner under the director's [escalation path](../../glossary.md#escalation-path), published in
 week 15. It gives the parties five working days, then the director, and reaches you only for customer
-commitments or the director's budget authority. Two belonged to the standard owners: Kwame Mensah (staff
-engineer, infrastructure) for pipelines and Li Na Zhou (staff engineer, data and integration) for data.
+commitments or the director's budget authority. Two belonged to the staff engineers who own the pipeline
+and data standards: Kwame Mensah (infrastructure) and Li Na Zhou (data and integration).
 
-Answering those eight repeats an old mistake. In week 14 you told a team in passing to "read the tables
-now", that is, to read ledger tables directly. That remark pre-empted [ADR-0001](../../glossary.md#adr-0001), the architecture
-decision on how integrations read ledger data, which Li Na had just opened
-([Chapter 39](../08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md)).
+Answering those eight repeats an old mistake: a passing remark of yours in week 14 pre-empted an open
+architecture decision, [ADR-0001](../../glossary.md#adr-0001)
+([Chapter 51](51-enterprise-technology-strategy.md) tells the story).
 
 **Your draft keep, give, stop list.**
 
 | Item | Now | Draft | Receiver |
 |---|---|---|---|
 | Sales calls | 3.5 | 1.5: top-40 accounts and roadmap-changing deals only | The director names a staff engineer per deal |
-| Technical rulings | 3.5 | 1.0: the "only the CTO" list only | Escalation path and standard owners; you redirect every time |
+| Technical rulings | 3.5 | 1.0: the "only the CTO" list only | Escalation path and the two staff engineers; you redirect every time |
 | Incident bridges | 2.0 | 1.0: customer executive calls only | Incident commander runs the bridge |
 | Security reviews | 2.0 | 0.5: final call with top-40 customers | Joon Park's evidence library, Kwame Mensah proposed as engineering evidence owner (draft, Chapter 53) |
 | **Reclaimed** | | **7.0** | |
@@ -502,7 +521,7 @@ domain), Kwame Mensah, and Li Na Zhou already have standing scopes and quarter 4
 to accept the work as proposed, and write what you say to Victor, including what you need from him.
 
 **A2.** Of the 11 informal requests Victor counted, three were his, six belonged under the director's
-escalation path, and two with the standard owners. Design Victor's redirect for each group: the words, what
+escalation path, and two with the staff engineers who own the pipeline and data standards. Design Victor's redirect for each group: the words, what
 he logs, and how he handles someone who asks a second time. Explain how you would know after one quarter
 whether the redirect worked.
 

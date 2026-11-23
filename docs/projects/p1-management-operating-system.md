@@ -60,14 +60,10 @@ in how product and engineering trade roadmap decisions. Each manager owns their 
 **Timing.** You draft in week 22, the managers review in week 24, the system starts in week 27, and you
 review it after six weeks (week 33) and at the quarterly reset.
 
-**The time rule.** Use only facts dated week 22 or earlier: the
-[Northstar overview](../case-studies/northstar/index.md), the [baseline data](../case-studies/northstar/baseline-data.md),
-[quarter 1](../case-studies/northstar/first-quarter.md#timeline-of-quarter-1) and
-[day 90](../case-studies/northstar/first-quarter.md#day-90), and the quarter 2 entries up to week 22 in
-[starting points for quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2)
-and [the renewals and the operating system in quarter 2](../case-studies/northstar/first-quarter.md#the-renewals-and-the-operating-system-in-quarter-2).
-The [timeline](../case-studies/northstar/timeline.md) shows what falls before week 22. Off limits: the
-quarter 2 results reported in week 26, the outcome of bulk ordering (due at the end of week 26), and
+**The time rule.** Use only facts dated week 22 or earlier ([weeks](../glossary.md#weeks-quarters-and-years)
+count from the director's first week). The fact sheet under Starting Dataset lists the case facts the
+project needs, each with its week; anything else you use from the case must also be dated week 22 or
+earlier. Off limits: the quarter 2 results reported in week 26, the outcome of bulk ordering, and
 everything in quarter 3.
 
 **Constraints.** These are binding.
@@ -78,7 +74,7 @@ everything in quarter 3.
    joins.
 3. **One-on-ones stay.** Weekly one-on-ones with the six managers continue (their length may change).
    [Skip-levels](../glossary.md#skip-level) continue at no less than their quarter 2 rate.
-4. **Open decisions stay open.** ADR-0001, the core/permissions owner, the tax-svc decision, the CI
+4. **Open decisions stay open.** ADR-0001, the core/permissions owner, the tax-svc decision (build, buy, or hybrid for tax rates), the CI
    consolidation target, and the error budget policy are not decided by your design. It gives each a
    forum, a decider's slot, and a "needed by" date.
 5. **Every forum works for remote and Bogotá participants by default.** Sixteen engineers work in
@@ -92,7 +88,7 @@ Use these sources:
 
 - [Northstar overview](../case-studies/northstar/index.md), [baseline data](../case-studies/northstar/baseline-data.md)
   (in particular "Management system before the director" and "Locations and working arrangements"),
-  and [the first quarter](../case-studies/northstar/first-quarter.md), including the quarter 2 facts
+  and [the year 1 record](../case-studies/northstar/first-quarter.md), including the quarter 2 facts
   dated week 22 or earlier.
 - Chapter 37's reconstruction of the quarter 2 calendar and its topic-by-forum matrix, Chapter 39's
   decision log (DL-01 to DL-10) and escalation path, and Chapter 40's measured firsthand time.
@@ -103,20 +99,32 @@ per week, and the job it claims. It **comes from the case**, not new: Chapter 37
 attendee counts for the quality reviews from Chapter 39. The director's column sums to 16.31 hours,
 which Chapter 37 rounds to 16.3.
 
-**Facts your submission must use.**
+**Project fact sheet.** Every case fact the submission must use, one per row, each dated week 22 or
+earlier. You do not need to search the case pages for these.
 
-| Area | Facts |
-|---|---|
-| Cost | 16.3 recurring hours a week from week 16; about 25 of a 47-hour week in meetings, including 9.5 hours of unscheduled meetings and incident reviews; operational review at 1.25 × 16 = 20 person-hours a week |
-| Managers' load | A typical manager attends about 4.1 recurring hours of leadership forums a week; Priya Raman (Orders) about 5.4, Marcus Oyelaran (Billing) about 4.6 |
-| Decisions | 38 items and 5 decisions in six managers' meetings, two reopened; organization [decision log](../glossary.md#decision-log) opened week 14 with DL-01 to DL-10, four open and three of those without a named decider; escalation path published week 15 (five working days for the parties, then a joint written case decided by the director within five working days) |
-| Topic matrix | Renewal status in six forums, resolved in the renewal check-in; incident follow-ups in four, resolved in the operational review; platform requests in three, resolved nowhere; cross-team decisions in three, resolved nowhere; technology risk register in none; promotion calibration in one-on-ones only |
-| Signal | Firsthand time 4.7 percent of the director's hours in weeks 14 and 15; individual skip-levels four a week from week 16; no group skip-levels yet; Mateo Arango Ríos's (informal mobile lead, Bogotá) week-17 conversation was the director's first with a mobile engineer |
-| Commitments | Accounting integration live since week 19; bulk ordering due at the end of week 26; quarterly planning for quarter 3 in weeks 25 and 26 (Chapter 38) |
-| People | All executives, managers, and staff engineers in Minneapolis; anchor days Tuesday to Thursday; Bogotá is zero or one hour from Minneapolis |
-| Platform | Two-person interrupt rotation; other teams' requests down from 20 to 14 points of Platform Operations' capacity and environment waits from about 6 days to 2 by week 18 |
-| Reporting | No written report to Victor Lindqvist since the day-90 report (week 13); error budgets in reporting mode, with Victor as arbiter |
-| Coming in quarter 3 | The first calibrated promotion cycle at the start of quarter 3; the core/permissions exemption, recorded in quarter 1, reaches its two-quarter maximum at the end of quarter 3 (week 39) |
+| Fact | Value | Week | Source |
+|---|---|---|---|
+| Director's recurring forums | 16.3 hours a week | From week 16 | [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md) |
+| Director's meeting load | About 25 of a 47-hour week, including 9.5 hours of unscheduled meetings and incident reviews | From week 16 | [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md) |
+| Operational review cost | 1.25 hours × 16 people = 20 person-hours a week | By week 22 | [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md) |
+| Managers' forum load | About 4.1 recurring hours a week for a typical manager; Priya Raman (Orders) about 5.4, Marcus Oyelaran (Billing) about 4.6 | By week 22 | [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md) |
+| Six managers' meeting | 38 items and 5 decisions, two of them reopened | By week 22 | [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md) |
+| Organization [decision log](../glossary.md#decision-log) | Opened with DL-01 to DL-10 ([register IDs](../glossary.md#register-ids)); four open, three of those without a named decider | Week 14 | [Chapter 39](../parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md) |
+| Escalation path | Five working days for the parties, then a joint written case decided by the director within five working days | Week 15 | [Chapter 39](../parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md) |
+| Topic matrix: renewals and incidents | Renewal status in six forums, resolved in the renewal check-in; incident follow-ups in four, resolved in the operational review | By week 22 | [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md) |
+| Topic matrix: unresolved topics | Platform requests in three forums and cross-team decisions in three, resolved nowhere; the technology risk register in none; promotion calibration in one-on-ones only | By week 22 | [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md) |
+| Firsthand time | 4.7 percent of the director's hours | Weeks 14 and 15 | [Chapter 40](../parts/09-engineering-directorship/40-the-directors-job.md) |
+| Skip-levels | Individual skip-levels four a week; no group skip-levels yet | From week 16 | [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md) |
+| Mobile signal | Mateo Arango Ríos (informal mobile lead, Bogotá) was the director's first conversation with a mobile engineer | Week 17 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2) |
+| Accounting integration | Live (a renewal commitment) | Week 19 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#the-renewals-and-the-operating-system-in-quarter-2) |
+| Bulk ordering | Due at the end of week 26 (a renewal commitment); outcome off limits | Due week 26 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#the-renewals-and-the-operating-system-in-quarter-2) |
+| Quarter 3 planning | Quarterly planning in weeks 25 and 26 | Weeks 25–26 | [Chapter 38](../parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md) |
+| Locations | All executives, managers, and staff engineers in Minneapolis; 16 engineers in Bogotá and 12 fully remote; anchor days Tuesday to Thursday; Bogotá is zero or one hour from Minneapolis | Baseline | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Platform requests | Two-person interrupt rotation; other teams' requests down from 20 to 14 points of Platform Operations' capacity; environment waits from about 6 days to 2 | Week 18 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2) |
+| Reporting to Victor | No written report since the day-90 report | Since week 13 | [Day 90](../case-studies/northstar/first-quarter.md#day-90) |
+| Error budgets | In reporting mode, with Victor Lindqvist (CTO) as arbiter | By week 22 | Chapters [24](../parts/05-engineering-quality/24-reliability-slos-and-operational-readiness.md) and [39](../parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md) |
+| Promotion cycle | The first calibrated promotion cycle runs at the start of quarter 3 | Week 27 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2) |
+| core/permissions exemption | Recorded in quarter 1; reaches its two-quarter maximum at the end of quarter 3 | Ends week 39 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
 
 **Facts you do not have.** Whether bulk ordering ships on time; whether the managers will accept a
 written pre-read; how much Bogotá engineers hear of decisions today (nobody has asked); the managers'

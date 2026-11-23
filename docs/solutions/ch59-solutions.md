@@ -159,6 +159,35 @@ reinforcing loop.
 protects the self-funding loop; names the work that stops with each seat. **The weak answer** spreads
 5 percent over the six teams.
 
+## A4 — Admitting a new rule at a growing company
+
+The company and its numbers are hypothetical, from the chapter's worked example.
+
+**The rule as it should be proposed.**
+
+| Element | One defensible answer |
+|---|---|
+| Load | Stops schema changes that break other services' reads or defeat rollback, the failure behind the Sev1 |
+| Watch signal | Incidents caused by schema changes, and changes sent back for a real problem (not a missing form field) |
+| Price a year | Assume 40 schema changes a week and 30 minutes of review and waiting each: about 20 hours a week, roughly 0.5 FTE, plus the delay to every change |
+| Decider | The CTO or the principal engineer who owns data, because the rule binds every team; recorded in the decision log |
+| Sunset and renewal test | Review in 12 months; renew only if the record shows changes stopped for real problems or a fall in schema-caused incidents |
+
+**The cheaper mechanism to ask about first.** An automated check in the pipeline that flags
+backward-incompatible schema changes and requires a tested rollback, with human review only for
+flagged changes on the most critical data. It carries most of the load at a fraction of the price, and it does not queue every change
+behind one team. This is the same move the example's company made with secrets: a scan, not a sign-off.
+
+**If it breaks the ceiling.** The proposer either names an existing claim to retire (for example, a
+report the automated check makes redundant) or asks the CTO for an explicit increase, with the price on
+the page. Waving it through as an exception is the failure the ceiling exists to prevent.
+
+**Criteria for a good answer:** states a load tied to the actual failure, a signal that could show the
+rule is useless, a priced cost with assumptions, a decider, and a dated review; looks for a cheaper
+mechanism before approving. **The weak answer** adopts the approval permanently because "the incident
+proves it is needed", which is the addition bias the chapter describes, or rejects all new process
+because the company is trying to stay lean.
+
 ## X1 — Victor Lindqvist in week 52
 
 **What to tell the executive team.** Year 2 is funded mainly by unplanned work that prevention
@@ -178,7 +207,7 @@ authority and Victor's own arbitration role, so rule on them or name a decider w
 checklist, the rehearsal instrumentation, and the standards mechanism to the director and the standard
 owners; they are inside the director's authority.
 
-**To Samuel Osei (board director).** "Flat headcount carries the roadmap if unplanned work keeps falling. It fell from 34
+**To Samuel Osei (board member).** "Flat headcount carries the roadmap if unplanned work keeps falling. It fell from 34
 to 25 percent this year; each point is 0.8 engineers. We also identified what we will stop, so that the
 board sees subtraction as part of the plan, not only additions." This avoids promising the
 quarter 4 result, which is not yet measured.

@@ -115,11 +115,15 @@ adr:
     Quarter 4 of the director's first year, after week 47. Li Na Zhou (staff engineer, data and
     integration) opened ADR-0001 in week 14; it is still Proposed. Marcus Oyelaran manages Billing,
     Elena Sokolova manages Payments and Integrations, and Victor Lindqvist is the CTO. See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 [ADR-0001](../glossary.md#adr-0001) asks how integrations read posted ledger data. The record is open
 in the case, and this example keeps it open: the Decision field is blank. DL-08 is its line in the
-organization decision log.
+organization decision log, and weeks count from the director's first week.
+The new connector serves a [renewal commitment](../glossary.md#renewal-commitments), a feature promised
+to a customer who renews.
 
 ```markdown
 # ADR-0001: How integrations read posted ledger data

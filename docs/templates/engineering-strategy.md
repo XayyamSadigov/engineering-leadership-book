@@ -15,6 +15,11 @@ two sections: what the organization will not do, and the conditions that reopen 
 A document with a vision, a list of goals, and a target architecture diagram is not a strategy under
 this definition. If nothing in it would have changed a decision made last quarter, it is decoration.
 
+!!! tip "Minimum version"
+    On day one, write three parts on one page: up to three diagnosis findings with a number each, two
+    guiding policies with the cost of each, and one enforcement per policy. Add "what we will not do",
+    the review triggers, and the full action list before circulating the draft.
+
 ## How to fill it in
 
 1. **Collect evidence before writing.** Incidents by trigger, components by owner and runtime
@@ -88,12 +93,14 @@ next_review: ""
     Week 14 of the Engineering Director's first year at Northstar Technologies, a fictional company.
     Quarter 1 cut Sev1 and Sev2 incidents from 30 to 21 by fixing ownership, severity, and the release
     train of Core, the company's monolith. The director now drafts a technical strategy with the three
-    staff engineers. See the [timeline](../case-studies/northstar/timeline.md) and the
+    staff engineers. See the [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
     [cast](../case-studies/northstar/cast.md).
 
 The scope line, the "will not do" list, the review triggers, and the policy owners are illustrative.
 In the draft, TR numbers are entries on the technology [risk register](../glossary.md#risk-register),
-DL numbers are entries in the organization's [decision log](../glossary.md#decision-log), and
+DL numbers are entries in the organization's [decision log](../glossary.md#decision-log)
+([register IDs](../glossary.md#register-ids)), weeks count from the director's first week, and
 "Constraint 3" is the case's rule that no rewrite of Core will be funded
 ([the five constraints](../glossary.md#the-five-constraints)). Tom Becker and Marcus Oyelaran are the
 Platform Operations and Billing managers; Victor Lindqvist is the CTO.
@@ -168,9 +175,8 @@ next_review: week 26
 What to notice: each policy has a decision already waiting for it in the decision log, so the first
 quarter of the strategy's life is a live test of whether it decides anything. Policy 2 points toward
 buying tax-rate content but does not choose between the vendor engine and the hybrid; that remains a
-selection decision with its own costs. The first "will not do" line restates a constraint the CTO set; the second disappoints Ines Carvalho
-(staff engineer, Core domain),
-which is why it is written
+selection decision with its own costs. The first "will not do" line restates a constraint the CTO
+set; the second disappoints Ines Carvalho (staff engineer, Core domain), which is why it is written
 down.
 
 ## Common mistakes

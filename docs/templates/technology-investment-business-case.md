@@ -22,6 +22,11 @@ costs. And each item has one of four **urgency profiles**: long life, peak unaff
 affected; short life, peak affected; external deadline. An external-deadline item is scheduled backward
 from its date with a margin, not ranked by CD3.
 
+!!! tip "Minimum version"
+    On day one, write four things: the problem in the decider's terms, three options (do nothing, a
+    partial option, the full proposal) with their one-time and run costs, the cost of delay per week, and
+    the ask with one stop condition. Add NPV, the decisive input, and uncounted benefits before the decision.
+
 ## How to fill it in
 
 1. **State the problem in the decider's terms.** Money, risk to revenue, risk to customers, or time
@@ -105,22 +110,22 @@ ask:
 
 !!! info "Northstar so far"
     Quarter 2 of the Engineering Director's first year at Northstar Technologies, a fictional company.
-    Northstar builds and deploys its 17 units on four different CI systems, and a shared deploy script
-    broke rollback for four services in INC-416. Tom Becker (Platform Operations manager) and Kwame
-    Mensah (staff engineer, infrastructure) draft the case for Victor Lindqvist (CTO). See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    Northstar builds and deploys its 17 [deployable units](../glossary.md#deployable-unit) (Core counts as one; 24 components in all) on
+    four different CI (continuous integration) systems, and a shared deploy script broke rollback for
+    four services in INC-416. Tom Becker (Platform Operations manager) and Kwame Mensah (staff engineer,
+    infrastructure) draft the case for Victor Lindqvist (CTO). Weeks count from the director's first week. See the
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 The run costs, effort, and rates come from the [baseline data](../case-studies/northstar/baseline-data.md)
 and Northstar's economic assumptions (10 percent hurdle rate, 72 percent gross margin). The option
 structure, timing, checkpoints, and risks are illustrative. Which CI system to consolidate onto is an
 open decision, and so is whether Victor funds the work; the case picks neither.
 
-**Rates.** Effort is priced per engineer-week of work; the saving accrues every calendar week.
-
-| Rate | Derivation | Value |
-|---|---|---|
-| Effort, per engineer-week | $185,000 a year ÷ 46 working weeks | about $4,000 |
-| Saving, per calendar week | $185,000 a year ÷ 52 weeks | about $3,558 |
+**Rate.** One rate prices both the effort and the saving: $3,558 an
+[engineer-week](../glossary.md#engineer-week-engineer-day-engineer-year) ($185,000 a year ÷ 52), the
+book's planning rate. Larger efforts are priced in engineer-years at $185,000.
 
 **Costs and saving.**
 
@@ -129,14 +134,14 @@ open decision, and so is whether Victor funds the work; the case picks neither.
 | Run cost, four systems | 1.5 FTE × $185,000 | $277,500 a year |
 | Run cost, one system | 0.5 FTE × $185,000 | $92,500 a year |
 | Saving | difference, all of it capacity | $185,000 a year |
-| Full consolidation | about 2 engineer-years (92 engineer-weeks) | about $370,000 |
-| Phase 1 | about 12 engineer-weeks × $4,000 | about $48,000 |
+| Full consolidation | about 2 engineer-years × $185,000 | about $370,000 |
+| Phase 1 | about 12 engineer-weeks × $3,558 | about $42,700 |
 | Payback | $370,000 ÷ $185,000 | 2.0 years of saving after completion |
 
 | Option | One-time | Run cost after | Counted saving a year | What it leaves |
 |---|---|---|---|---|
 | O1. Do nothing | $0 | $277,500 | $0 | Four systems; the shell-script path that broke rollback in INC-416 |
-| O2. Phase 1 only (template with rollback, four shell-script services) | about $48,000 | not counted; assume unchanged | $0 counted | Three systems; auth-svc gains an auditable pipeline |
+| O2. Phase 1 only (template with rollback, four shell-script services) | about $42,700 | not counted; assume unchanged | $0 counted | Three systems; auth-svc gains an auditable pipeline |
 | O3. Full consolidation onto one system, staged | about $370,000 | $92,500 | $185,000 capacity | One system, after more than two further quarters |
 
 ```yaml
@@ -166,7 +171,7 @@ benefit:
   probability: 1.0               # saving arrives only on completion; stall risk handled by checkpoints
   label: capacity, not cash
   uncounted:
-    - auditable pipeline with automated rollback for tier 1 (fifth minimum)
+    - auditable pipeline with automated rollback, which every tier 1 service needs
     - comparable delivery data across teams
     - lower cognitive load; less dependence on one Jenkins responder
 opportunity_cost:
@@ -185,7 +190,7 @@ returns:
   timing: effort at end of years 1 and 2; full saving in year 3 only
 risks:
   - {risk: "Stalls after phase 1; four systems become five", likelihood: medium, mitigation: "Retire each old system by date, not by adoption", owner: Tom Becker}
-  - {risk: "Migration breaks a renewal path", likelihood: low, mitigation: "erp-sync untouched before week 19; Core Jenkins not before quarter 3", owner: Kwame Mensah}
+  - {risk: "Migration breaks a renewal path", likelihood: low, mitigation: "erp-sync (accounting integration, due week 19) untouched before then; Core Jenkins not before quarter 3", owner: Kwame Mensah}
 decisive_input:
   input: value of the uncounted benefits (lead-time drag, incident risk), same timing as the saving
   base: 0 counted

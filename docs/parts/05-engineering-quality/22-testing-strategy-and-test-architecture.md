@@ -235,9 +235,30 @@ the eleven-year-old customer record with a null where the code assumes a value.
 Three practices help, all **this book's recommendation**. **Migration rehearsal**: run each migration
 against a recent, anonymized, production-scale copy and check row counts, invariants (every invoice
 has a ledger entry), and duration. **Ordering checks**: when code and a migration ship together, test
-new code on the old schema and old code on the new one; expand-and-contract migrations make this
-possible. **Configuration as code**: version configuration, validate it against a schema in the
-pipeline, and test risky changes like code.
+new code on the old schema and old code on the new one. **Expand-and-contract** migrations make this
+possible: add the new schema beside the old, ship code that handles both, then remove the old
+([Chapter 23](23-code-review-ci-cd-and-release-engineering.md#progressive-delivery-and-rollback) covers
+the release side). **Configuration as code**: version configuration, validate it against a schema in
+the pipeline, and test risky changes like code.
+
+### Performance and load testing
+
+Functional tests ask whether the answer is right; load tests ask whether it stays right, and fast, under
+real traffic. Defects of this kind (a memory leak, a slow query, a lock held too long) pass every
+functional test and appear only at volume. At Northstar, INC-415 was one: a memory regression in order
+validation that restarted the service's pods under load.
+
+Three levels cover most needs, **practitioner consensus** rather than research:
+
+- **Per-change budgets**: a small, fixed benchmark of the hottest paths runs in the pipeline and fails
+  when latency or memory grows beyond an agreed margin. Cheap, and catches regressions like INC-415.
+- **Scheduled load tests**: a production-shaped traffic mix against a production-sized environment,
+  weekly or before a known peak (month-end invoicing, a large customer's go-live).
+- **Canary releases**: real traffic on a small share of servers, with automatic rollback
+  (Chapter 23). The last line of defense, not a substitute for the other two.
+
+Budget load testing by exposure: tier 1 paths with traffic peaks get all three; internal tools may need
+none. A load environment nobody keeps realistic gives false confidence, so give it an owner.
 
 ## Engineering Organization Example
 
@@ -246,7 +267,8 @@ pipeline, and test risky changes like code.
     highest [severity](../../glossary.md#severity-sev1-sev2-sev3) ratings. Core ships on a two-week
     train after a three-day manual pass run by seven QA engineers. In week 4 the director reserves 12
     FTE (full-time equivalent engineers) for prevention. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the [cast](../../case-studies/northstar/cast.md).
 
 This example is **illustrative**. It uses Northstar's
 [baseline](../../case-studies/northstar/baseline-data.md), including the extended baseline's split of
@@ -423,7 +445,7 @@ documented exploratory process, not a manual gate the clause does not require.
 
 This case is **fictional**: the testing workstream of the director's first quarter, weeks 3 to 13, from
 the [baseline](../../case-studies/northstar/baseline-data.md) and the
-[record of the director's first year](../../case-studies/northstar/first-quarter.md).
+[year 1 record](../../case-studies/northstar/first-quarter.md).
 
 In week 3, Kwame Mensah pulled a month of Core pipeline history. About 140 tests accounted for most
 non-change failures, almost all using the shared test database. Kwame proposed retries; the director
@@ -500,11 +522,13 @@ while the pass shrinks, and how you will know whether the exploration charters f
 
 **A3.** Write a one-page flakiness policy for the Core suite: measure, budget, owner, consequence of a
 breach, and quarantine rules. Then anticipate the strongest objection from a team lead who owns many
-flaky tests and is behind on a renewal commitment, and show how the policy handles it.
+flaky tests and is behind on a [renewal commitment](../../glossary.md#renewal-commitments) (one of two
+features promised to the two largest customers), and show how the policy handles it.
 
 ### Executive Decision-Making
 
-**X1.** One of the two customers in the $9M renewal asks for a clause requiring "full manual regression
+**X1.** One of the two largest customers, whose renewals are together worth $9M a year, asks for a
+clause requiring "full manual regression
 testing before every production release." Sofia Alvarez (VP Customer Success) wants to accept it to
 close the renewal. As CTO, decide how to respond, what you offer instead, and how you explain it to the
 CEO.

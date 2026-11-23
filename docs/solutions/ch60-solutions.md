@@ -30,7 +30,7 @@ to the mobile path will lower the number: run old and new probes in parallel for
 both.
 
 A good answer writes definitions, not targets, and ties each to a later stage. The weak answer lists
-goals ("halve incidents") or copies the week-3 definitions from the first-quarter page, which the time
+goals ("halve incidents") or copies the week-3 definitions from the year 1 record, which the time
 rule keeps closed until the hinge.
 
 ## F2 — Sorting facts by stage
@@ -50,7 +50,7 @@ Three entries need care. The Orders knowledge table sits on the baseline page bu
 the Billing ledger knowledge map, also on the baseline page, was built at the start of quarter 2; a week-4
 ownership decision that cites "only two Orders engineers can change core/customer safely" looks
 prescient and teaches nothing. The questionnaire is a week-3 event in the story, so a director could in
-principle know it before the week-4 plan, but it lives on the first-quarter page, which the capstone keeps
+principle know it before the week-4 plan, but it lives in the year 1 record, which the capstone keeps
 closed so that your stage 1 to 6 choices are yours. A defensible answer treats it as an assumption ("a
 renewal customer may ask for supply-chain evidence") rather than a fact.
 
@@ -202,7 +202,7 @@ never prevention or horizon 3. This is one defensible position.
 Checks: 80 − 69.2 = 10.8; 79 − 69.0 = 10.0; 78 − 68.8 = 9.2. At quarter 3's actual 25 percent, unplanned
 work is 20.0, 19.75, and 19.5, overruns of 2.4, 2.35, and 2.3, leaving horizon 2 at 8.4, 7.65, and 6.9. If 77 becomes possible (alternative D, or C with a VP), unplanned
 work is about 16.9, horizon 2 is 77 − 68.5 = 8.5, and an overrun of about 2.35 leaves about 6.2; the
-answer should say whether horizon 2 can absorb a fourth seat or product for today's customers must.
+answer should name the line that gives up capacity at 77: horizon 2, or product for today's customers.
 
 **Documents that must change.** The continuation states that its quarterly 6, 6, 5, 5 averages 5.5 and names
 which line lends 0.5 FTE in quarters 5 and 6. The board page's capacity line shows horizon 2 as the shock
@@ -216,13 +216,13 @@ seat count and leaves the others to "later".
 
 ## X2 — The board page
 
-| Director | Concern | Year-1 artifact that answers it |
+| Board member | Concern | Year-1 artifact that answers it |
 |---|---|---|
 | Anders Holm (board chair) | Dependence on a few people | Stage 5: incident commanders, standard owners, staff engineer mandates; the week-44 succession table (10 critical roles, none ready now, 6 interim, 4 none) |
-| Natalie Brooks (investor director) | A buyer's diligence | Stages 4 and 9: the debt and risk registers; unsupported Core framework, no SOC 2 report, auth-svc's exception, signed provenance on 0 of 15 tier 1 components |
-| Samuel Osei (investor director) | Flat headcount and the roadmap | Stages 6 and 7: unplanned work 34 to 25 percent, 7.2 FTE returned, one envelope with horizon 2 as buffer |
+| Natalie Brooks (investor board member) | A buyer's diligence | Stages 4 and 9: the debt and risk registers; unsupported Core framework, no SOC 2 report, auth-svc's exception, signed provenance on 0 of 15 tier 1 components |
+| Samuel Osei (investor board member) | Flat headcount and the roadmap | Stages 6 and 7: unplanned work 34 to 25 percent, 7.2 FTE returned, one envelope with horizon 2 as buffer |
 | Margaret Lin | Measures mean the same thing | Stages 1 and 3: counting rules and bridges (exercise A2) |
-| David Ferrante (independent director) | Payment path, availability miss, framework | Stage 3's SLOs and availability definition; stage 4's TR-01 entry; stage 9's policy on money data |
+| David Ferrante (independent board member) | Payment path, availability miss, framework | Stage 3's SLOs and availability definition; stage 4's TR-01 entry; stage 9's policy on money data |
 
 **Headline.** One defensible choice is the director's counter: at most 40 Sev1 and Sev2 over year 2 as a
 rolling four-quarter total, reported with the severity audit, 99.9 percent every quarter, and a reopening
@@ -233,7 +233,7 @@ about. Choosing Victor's headline is also defensible if the page states that a s
 be explained, not hidden.
 
 **David Ferrante's offer.** Accept it as input, through the chair, as a scoped session with the staff
-engineers on a written pre-read, so a director does not become a shadow decision maker. The weak answer
+engineers on a written pre-read, so a board member does not become a shadow decision maker. The weak answer
 picks a headline without mapping the concerns, or records what the board decided.
 
 ## X3 — The one week-4 commitment to change
@@ -278,8 +278,41 @@ however strong the CTO stages are, because every later stage inherits the gap.
 | 6 90-day plan | Every stage 2 to 5 commitment funded; a step-down rule tied to evidence; risks with pre-agreed responses; the QA engineers' next roles named | Allocation by team and the QA engineers' roles; decision requests stated | A list of initiatives with no capacity, or no step-down rule |
 | Hinge | Each entry judged on what was knowable, with status and lesson; names one reasonable decision that went badly and one lucky one; compares its own allocation fairly | Every entry has a status and a lesson | Grades decisions by outcome; uses facts from after week 40 |
 | 9 Three-year | Policies and "excellent" capabilities trace to stage 1 or 4; options carry decision weeks and triggers; the premortem changes something | Groups, policies, and a year-2 column that matches stage 7 | Policies that decide nothing; a year-2 column that disagrees with stage 7 |
-| 7 12-month | One envelope at 80, 79, and 78 with the line that absorbs a fourth seat; a fate for every register entry; the documents to change and how their authors are told | The envelope at three seat counts and a fate for each entry | One seat count only; register entries ignored |
+| 7 12-month | One envelope at 80, 79, and 78, naming the line that gives up capacity at 77; a fate for every register entry; the documents to change and how their authors are told | The envelope at three seat counts and a fate for each entry | One seat count only; register entries ignored |
 | 8 Investment | Fits stage 7's envelope exactly; each candidate traces to a stage 4 entry; assumptions carry break-evens; capacity and cash on separate lines | Fits the envelope; capacity priced separately from cash | Reallocated capacity shown as new spending; numbers with no source |
-| 10 Board | Each director's concern maps to an artifact; the measurement note states every bridge; a headline chosen with reasons and its weakness stated | Concerns mapped and a measurement note written | Clean trend lines with no bridges; anything about the meeting's outcome |
+| 10 Board | Each board member's concern maps to an artifact; the measurement note states every measurement bridge; a headline chosen with reasons and its weakness stated | Concerns mapped and a measurement note written | Clean trend lines with no bridges; anything about the meeting's outcome |
 | Memo | Shows how the five threads moved through the year and picks one week-4 change on week-4 knowledge, with its effect on later stages | Names the threads and one change | Restates the stages, or picks the commitment that turned out worst |
+
+## Sample stage 1: trust table and counting rules
+
+This is one page of an adequate stage 1 answer, using baseline facts only. It shows the level of detail
+"good enough" asks for; it is not the only defensible version.
+
+**Trust table.**
+
+| Measure | How it is produced | Known weakness | Compare across quarters? |
+|---|---|---|---|
+| Sev1 and Sev2 count (7 and 23) | Incident tracker; on-call engineer assigns severity | No written severity definition | Only the total, until definitions exist; then re-rate the baseline and keep both splits |
+| Core change failure rate (31 percent, 4 of 13 releases) | Releases with a hotfix, rollback, or linked incident within 72 hours | Linking is manual, so the true rate is higher; only 13 releases | Yes, with a cadence rule (below) and the count beside the percentage |
+| Unplanned work (34 percent) | Two-week ticket sample per team, checked with managers | A sample; teams classify differently | Yes, if the same sample method and categories are kept |
+| Availability (99.62 percent) | Synthetic checks on the order and payment paths | One region; mobile path not covered | Yes for the covered paths; mobile reported as unmeasured |
+| Deployments and lead time | Four CI systems' logs, joined by hand | Four shell-script services log nothing | No; directional only until one pipeline logs all |
+
+**Counting rules.**
+
+1. *Severity.* Severity follows written definitions based on customer impact. If definitions change,
+   the baseline is re-rated under the new ones, the original split is kept beside it, and comparisons use
+   the total until both series exist.
+2. *Tier 1 population.* The components on the order or payment path, listed by name. The year-1 list is
+   frozen for year-1 comparisons; any change starts a new series at the year boundary.
+3. *Period.* Each period's availability allowance is computed from its own length in minutes; the
+   baseline is a 90-day quarter.
+4. *Change failure rate.* Failures per release within 72 hours, always shown with the release count. If
+   release cadence changes, releases of different cadence are never pooled in one rate, and the first
+   period after the change reports the old and new bases side by side.
+
+**What makes it adequate rather than excellent.** It names each weakness and says what will and will not
+be compared. An excellent answer would also state, for each rule, which later stage relies on it (as in
+exercise F1) and which baseline number is most likely to move when measurement improves (availability,
+once the mobile path is probed).
 

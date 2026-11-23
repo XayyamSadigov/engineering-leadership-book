@@ -99,13 +99,18 @@ assessment:
     Week 48 of the Engineering Director's first year at Northstar Technologies, a fictional company.
     Victor Lindqvist (CTO) has one direct report, the director, and reports to Helena Marsh (CEO). Sev1
     and Sev2 incidents fell from 30 a quarter to 14 in quarter 3; most quarter 4 decisions are drafts.
-    See the [timeline](../case-studies/northstar/timeline.md), the [cast](../case-studies/northstar/cast.md),
-    and the [quarter 4 briefing](../case-studies/northstar/quarter-4-briefing.md).
+    See the [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md), the
+    [cast](../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../case-studies/northstar/quarter-4-briefing.md).
 
 You are Victor, filling in the matrix for the year. Work whose outcome is not recorded (the three-year
-strategy draft, the enterprise risk register, the year-2 organization, ADR-0001, the week 50 board)
-appears as **Pending (not rated)**: a draft is not evidence until it has been decided and acted on.
-The ratings and weights are illustrative.
+strategy draft, the enterprise risk register, the year-2 organization, [ADR-0001](../glossary.md#adr-0001),
+the week 50 board) appears as **Pending (not rated)**: a draft is not evidence until it has been decided
+and acted on. Weeks count from the director's first week. The
+[mandate](../glossary.md#the-mandate) is Victor's week 1 set of targets for the director, and
+[the continuation](../glossary.md#the-continuation) is the director's two-year quality proposal. The
+ratings and weights are illustrative.
 
 **Archetype statement.** Northstar needs a CTO who sets technical direction for an 11-year-old
 order-to-cash platform whose reliability is written into contracts, and who carries the technical
@@ -118,7 +123,7 @@ is an open question this assessment flags and does not answer.
 | 1. Company outcomes | High | Solid | Week 1 mandate stated as outcomes; Sev1 and Sev2 30 → 21 → 17 → 14; service credits $410,000 → $60,000 a quarter | 99.9 percent not met in any quarter (99.89 in quarter 3); the results came from the director's organization, and Victor's part is the mandate and the funding |
 | 2. Strategy and direction | High | Not yet | A director-level technical strategy from quarter 2. Pending: Victor's three-year strategy draft, weeks 46–48 | No company-level technology strategy adopted in year 1; about 2 of 48 hours a week on strategy; the CI target still open |
 | 3. Capital allocation | Medium | Solid | Capacity model agreed in week 4; mandate delivered without headcount growth | Baseline roadmap chosen by points with no value estimates; Rajiv Menon's request to offset the continuation's $150,000 is open |
-| 4. Risk, security, compliance | High | Not yet | Commissioned an enterprise risk register after the audit committee chair's week 43 request. Pending: its nine risks and three appetite lines | Estate risks found by the director, not by a register Victor owns; 34 security questionnaires answered ad hoc; no SOC 2 report; no named owner of security across IT and engineering |
+| 4. Risk, security, compliance | High | Not yet | Commissioned an enterprise risk register after the audit committee chair's week 43 request. Pending: its nine risks and three appetite lines | Estate risks found by the director, not by a register Victor owns; 34 security questionnaires answered ad hoc; no [SOC 2](../glossary.md#soc-2) report; no named owner of security across IT and engineering |
 | 5. Decision governance | High | Not yet | Week 15 escalation path; the year-2 organization reaches him as a written proposal with a decision date. Pending: reversing his week 14 "read the tables" remark | The week 14 remark landed as an instruction while ADR-0001, the open decision on how integrations read ledger data, had no decider; 3.5 hours a week of unrecorded technical rulings |
 | 6. Leadership bench | Medium | Not yet | The director's role has a written definition | Week 44 succession table: 10 critical roles, none with a ready-now successor; no successor for the director |
 | 7. Executive team and board | High | No evidence | The week 50 board is the first test in the period | Proposed a "below 10 per quarter" incident headline in week 41 with flat headcount; the draft board page carries his headline and the director's counter side by side |

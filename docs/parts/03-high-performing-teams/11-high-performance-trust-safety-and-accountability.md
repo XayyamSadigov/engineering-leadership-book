@@ -59,8 +59,7 @@ flowchart TD
 ```
 
 Candor rewarded with results makes a team more candid; a problem raised and ignored or punished
-teaches silence. Edmondson's work is widely known for arguing that
-safety and performance standards are separate dimensions and that high performance needs both
+teaches silence. Edmondson argues that safety and performance standards are separate dimensions and that high performance needs both
 ([Edmondson, 2018](../../references/bibliography.md#edmondson2018fearless)); the loop is **this
 book's synthesis** of that idea with the learning mechanism below.
 
@@ -73,7 +72,7 @@ future. This book uses three tests, and a team must pass all three (**this book'
 
 | Dimension | Question | Evidence to look at |
 |---|---|---|
-| Outcomes | Does the team deliver what it commits to, at a quality users notice? | Commitments delivered; [change failure rate](../../glossary.md#change-failure-rate) (share of releases that fail); customer-detected incidents |
+| Outcomes | Does the team deliver what it commits to, at a quality users notice? | Commitments delivered; [change failure rate](../../glossary.md#change-failure-rate) (share of changes that fail in production); customer-detected incidents |
 | Sustainability | Could the team keep this pace for two years without losing people? | After-hours pages per person; unplanned work; attrition; single-person components |
 | Learning | Does the team get better, or does the same failure happen twice? | [Recurrences](../../glossary.md#recurrence) (repeats of a known failure); corrective action closure; time for a new engineer to become independent |
 
@@ -119,8 +118,7 @@ replacement for accountability.
 Software research points the same way, and it stresses standards. Lenberg and Feldt surveyed 217
 practitioners in 38 agile teams at five Swedish organizations. Both psychological safety and **norm
 clarity** (how clear and accepted the team's standards of conduct are) went with self-assessed
-performance and job satisfaction. Norm clarity was the stronger predictor: by about 30 percent for
-performance and 71 percent for satisfaction, as the authors report it
+performance and job satisfaction, and norm clarity was the stronger predictor of both
 ([Lenberg and Feldt, 2018](../../references/bibliography.md#lenberg2018psychological)). Performance was
 self-assessed and the sample small, so this is a modest **research finding**. Its message is pointed:
 clear standards mattered at least as much as safety.
@@ -221,8 +219,22 @@ What a manager does differently:
    manager reads as agreement.
 
 Check it the way the rest of the chapter does, from behavior: participation and visible assignments by
-subgroup over a quarter, and survey results by subgroup only where a group has at least five people, so
-nobody can be identified.
+subgroup over a quarter.
+
+### Asking about safety directly
+
+A short anonymous survey can add to the behavioral signals. Items in the spirit of the construct (this
+book's paraphrase, not a validated scale) ask how far each person agrees that:
+
+- a mistake on this team is not held against the person who made it;
+- people here can raise problems and tough issues;
+- it is safe to try something on this team that might fail;
+- nobody here would deliberately undermine my work.
+
+Read the spread as well as the average: one subgroup answering lower is the inclusion signal above.
+Report only for groups of at least five, so nobody can be identified, and compare a team with its own
+past. Never put the score in anyone's objectives; the failure mode "safety measured, not built" below
+shows why.
 
 ## Engineering Organization Example
 
@@ -230,7 +242,9 @@ nobody can be identified.
     This example is set in the baseline quarter, the 90 days before the director arrived. Northstar had
     30 Sev1 and Sev2 incidents (its two highest severity levels), 34 percent of capacity went to
     unplanned work, and 41 percent of committed roadmap items shipped on time. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This example reads two Northstar teams in that quarter. Incident figures come from
 [`incidents-last-quarter.csv`](../../case-studies/northstar/data/incidents-last-quarter.csv); the
@@ -262,11 +276,12 @@ It also has an instructive gap. Its 64 payments-gateway flags and settings were 
 on the configuration server without review, and two of its six incidents (INC-410 and INC-430) were
 configuration changes. None of the 17 near misses concerned that file. A team can be candid about
 every risk it recognizes and blind to a practice it considers normal. Safety makes problems
-speakable, not visible; a standard (reviewed flag changes, from week 6 of the director's first
-quarter) did that.
+speakable, not visible. A standard made this one visible: from week 6 of the director's first
+quarter, flag changes needed review.
 
 **Orders** is a friendly team with a well-liked manager and weak results. It delivered one of four
-commitments and met its Sprint Goals in 2 of the last 6 sprints. Customers found four of its seven
+commitments and met its Sprint Goals (the one objective a Scrum team commits to per sprint;
+Chapter 15) in 2 of the last 6 sprints. Customers found four of its seven
 incidents, and three were recurrences. One was INC-421, a bulk-upload failure that Priya Raman (Orders'
 engineering manager) had fixed herself months earlier; its follow-up test, assigned to her, was never
 written. The most telling safety signal is indirect.
@@ -358,7 +373,7 @@ flowchart TD
 
 This is the loop behind INC-421. Signal: open follow-up actions owned by the manager.
 Countermeasure: hand follow-through to a named engineer with a date, as Priya did in quarter 1 when
-two senior engineers took over review of core/order-capture.
+two senior engineers took over review of core/order-capture (the Core module that takes orders).
 
 **Safety measured, not built.** Survey scores rise on request while near misses stay flat. Track
 behavior alongside any survey.
@@ -427,27 +442,21 @@ For a manager moving a team from one dial to both:
 
 ## Case Study
 
-This case is **fictional**. It is set at the start of quarter 2 (week 14). By then the director's
-first quarter had assigned owners to most unowned components, published severity definitions, and cut
-Sev1 and Sev2 incidents from 30 to 21. The question at the end is a decision the reader faces.
+This case is **fictional**. It is set at the start of quarter 2 (week 14), and ends with a decision
+the reader faces.
 
-**How Payments and Integrations works.** For about two years before the director arrived, Elena
-Sokolova's team had held a 30-minute weekly operations review with a rotating facilitator. The
-engineer coming off on-call presents the week's pages, the logged near misses, and one thing that
-surprised them. Elena speaks last. The near-miss log is a shared page anyone can write in; in the
-baseline quarter it had 17 entries, most written by the person who had nearly caused the problem.
-Items at risk on the Kanban board are raised in the same review by their owners, usually before they
-slip.
-
-At the start of quarter 2, the director asked why direct edits on the configuration server had never
-appeared in the log. The team's informal tech lead said everyone had always worked that way, so nobody
-had seen it as a risk. High safety and high accountability had still left a practice nobody
-could see. The fix had come from a standard, not from more candor.
+**How Payments and Integrations works.** For about two years, Elena Sokolova's team had held a
+30-minute weekly operations review with a rotating facilitator. The engineer coming off on-call
+presents the week's pages, the logged near misses, and one thing that surprised them. Elena speaks
+last. The near-miss log is a shared page anyone can write in, mostly by the person who nearly caused
+the problem. Owners raise items at risk on the team's Kanban board (a visible board of work by stage)
+in the same review, usually before they slip. Asked why the unreviewed configuration edits had never
+appeared in the log, the informal tech lead said everyone had always worked that way.
 
 **Orders after the transition.** In quarter 1 Priya Raman capped her hands-on time, Aisha Bello led
 the bulk-ordering implementation, and Rafael Duarte and Aisha Bello took over review of
-core/order-capture. Accountability moved toward the team. What the director did not yet
-know was whether the team would now tell Priya what it had told a newcomer in its first conversations.
+core/order-capture. Accountability moved toward the team. The director did not yet know whether the
+team would now tell Priya what it had told a newcomer.
 
 At the start of quarter 2, Priya asked whether Orders should copy Elena's operations review, near-miss
 log and all. She had sat in on one and liked it.
@@ -518,7 +527,8 @@ propose instead to give the CEO the accountability she wants.
 run Elena Sokolova's weekly operations review from next quarter, with the same agenda. As director,
 decide what to standardize across the six teams, what to leave to each team, and how you would know
 within two quarters whether it worked. Estimate the cost in engineer-hours for Northstar's 80
-engineers, and in dollars at a fully loaded cost of $185,000 per engineer per year.
+engineers, and in dollars at a fully loaded cost of $185,000 per engineer per year (the book's
+planning rate of $3,558 per engineer-week).
 
 ## Reflection Questions
 

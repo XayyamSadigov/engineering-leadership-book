@@ -13,6 +13,11 @@ for rating individuals or ranking teams. Every measure has a paired measure that
 gaming, a definition precise enough that two people would compute the same number, and a data source.
 Build one when you start a quality program, before setting any targets.
 
+!!! tip "Minimum version"
+    On day one, write four to six rows: availability, Sev1 and Sev2 incidents, change failure rate with
+    deployment frequency as its pair, and unplanned work, each with a definition, a source, and a
+    baseline. Add gaming audits, row owners, and the remaining rows in the first month.
+
 ## How to fill it in
 
 1. **Start from outcomes.** Begin with what the organization is accountable for (availability
@@ -56,9 +61,11 @@ notes: ""
 ## Example: Northstar, organization level
 
 !!! info "Northstar so far"
-    Quarter 1 of the director's first year. The baseline column is measured data from the quarter
-    before the director arrived; the "Current" column is an illustrative mid-quarter reading. See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    Quarter 1 of the director's first year. The baseline column is measured data from the quarter before
+    the director arrived; the "Current" column is an illustrative mid-quarter reading. See the
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 Terms used below: [Sev1 and Sev2](../glossary.md#severity-sev1-sev2-sev3) are the two highest
 incident severities; [tier 1](../glossary.md#tier-1) components are those on the order and payment

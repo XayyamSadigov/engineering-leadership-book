@@ -17,6 +17,11 @@ read as the first step of an exit cannot do that. Many teams use a lighter first
 agreement with HR informed but not running it, and move to a formal plan only if that stage fails; this
 template serves both.
 
+!!! tip "Minimum version"
+    Before anything else, write three things: the gap with dated examples, the cause you found and the
+    system changes made first, and three expectations a third party could check, with an end date. Add
+    the full support commitments and weekly notes when HR reviews the plan.
+
 ## How to fill it in
 
 1. **Check that this is not the first time.** The person has heard the concern, with examples, and was
@@ -80,10 +85,11 @@ decision: {date: "", result: "", reasons: ""}
 ## Example: Northstar, Tom Becker's draft for Bram Verhoeven
 
 !!! info "Northstar so far"
-    Week 14 of the Engineering Director's first year at Northstar Technologies, a fictional company.
-    Tom Becker manages Platform Operations, now five infrastructure engineers since the seven QA
-    engineers moved to product teams in week 10. Bram Verhoeven, a Senior Engineer there for six years,
-    built Core's Jenkins pipeline. See the [timeline](../case-studies/northstar/timeline.md) and the
+    Week 14 of the Engineering Director's first year at Northstar Technologies, a fictional company. Tom
+    Becker manages Platform Operations, now five infrastructure engineers since the seven QA engineers
+    moved to product teams in week 10. Bram Verhoeven, a Senior Engineer there for six years, built
+    Core's Jenkins pipeline. See the [timeline](../case-studies/northstar/timeline.md). New to
+    Northstar? Read [the year in brief](../case-studies/northstar/year-in-brief.md) and the
     [cast](../case-studies/northstar/cast.md).
 
 For three quarters Bram's tickets aged and a Jenkins upgrade he owned slipped three times. Tom quietly

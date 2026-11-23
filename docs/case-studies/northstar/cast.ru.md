@@ -11,6 +11,19 @@
 Вы, читатель, — директор по разработке в Northstar. Вы подчиняетесь Victor Lindqvist (CTO). Недели
 отсчитываются от вашего первого рабочего дня.
 
+!!! tip "Люди, которые движут историю"
+    - **Victor Lindqvist**, CTO и ваш руководитель; он решает вопросы второго года.
+    - **Amara Okafor** (CPO), **Rajiv Menon** (CFO) и **Greg Tanaka** (VP Sales) — руководители
+      компании, чьи требования конкурируют за время разработки.
+    - **Шесть руководителей разработки**, которые подчиняются вам: Priya Raman (Orders), Marcus Oyelaran
+      (Billing), Elena Sokolova (Payments and Integrations), Daniel Cho (Customer Experience), Farah
+      Haddad (Data and Analytics) и Tom Becker (Platform Operations).
+    - **Три staff-инженера**, которые тоже подчиняются вам: Ines Carvalho (домен Core), Kwame Mensah
+      (инфраструктура и надёжность) и Li Na Zhou (данные и интеграции).
+
+    Все остальные на этой странице важны лишь в нескольких главах. Находите их здесь, когда встретите;
+    запоминать их заранее не нужно.
+
 ## Northstar Technologies { #northstar-technologies }
 
 Все руководители высшего звена, директор, шесть руководителей разработки и три staff-инженера работают в

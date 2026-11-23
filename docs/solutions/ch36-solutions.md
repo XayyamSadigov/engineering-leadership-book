@@ -63,7 +63,7 @@ holds no other critical role and is not primary cover for one):
   integration staff role.
 - **Cover holds another critical role:** Platform Operations (Kwame Mensah), director (Elena Sokolova).
 - **No development candidate:** Platform Operations, infrastructure staff role (Bram covers only the
-  Jenkins pipeline, and his expectations plan is open).
+  Jenkins pipeline).
 - **Fragile even where the rule is met:** Orders and Payments and Integrations each rest on one person
   in both columns; the Payments informal tech lead also appears under Li Na Zhou's role.
 
@@ -80,7 +80,7 @@ the cost of a vacancy, or counts "interim" covers as solved.
 A strong schedule for the Tuesday of week 51 (Bogotá is in the same or an adjacent hour as Minneapolis):
 
 1. **Before the day:** Mateo has accepted, and the director and Daniel have told the mobile engineer
-   who wanted to lead, one to one, why Mateo was chosen and what development they will get (for
+   who wanted to lead, one-on-one, why Mateo was chosen and what development they will get (for
    example, running Mobile's planning, which also starts covering Mateo's role).
 2. **Morning, Bogotá:** the director and Daniel, in person, meet each of Mateo's five engineers one to
    one with Mateo present: new manager, effective date (week 53), what happens to their on-call and
@@ -125,7 +125,7 @@ The rumor is accurate, and Mateo has accepted, so denial would damage trust in a
 plan's logic says to shorten the uncertain period, and here that is possible: the decisions are made,
 and only the communication remains. A good answer moves the announcement earlier, to the next
 available day on which the director and Daniel can be in Bogotá or, failing that, can hold the
-mobile engineers' one-to-ones by video the same morning. Effective dates stay at week 53; only the
+mobile engineers' one-on-ones by video the same morning. Effective dates stay at week 53; only the
 telling moves.
 
 Until then, Hannah should not confirm details she was not given; she can say truthfully that a

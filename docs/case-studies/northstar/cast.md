@@ -11,6 +11,19 @@ chapters than are listed. For what happened when, see the [timeline](timeline.md
 You, the reader, are Northstar's Engineering Director. You report to Victor Lindqvist (CTO). Weeks
 are counted from your first day.
 
+!!! tip "The people who drive the story"
+    - **Victor Lindqvist**, CTO and your manager; he decides the year-2 questions.
+    - **Amara Okafor** (CPO), **Rajiv Menon** (CFO), and **Greg Tanaka** (VP Sales), the executives
+      whose demands compete for engineering time.
+    - **The six engineering managers**, who report to you: Priya Raman (Orders), Marcus Oyelaran
+      (Billing), Elena Sokolova (Payments and Integrations), Daniel Cho (Customer Experience), Farah
+      Haddad (Data and Analytics), and Tom Becker (Platform Operations).
+    - **The three staff engineers**, who also report to you: Ines Carvalho (Core domain), Kwame Mensah
+      (infrastructure and reliability), and Li Na Zhou (data and integration).
+
+    Everyone else on this page matters in only a few chapters. Look them up when you meet them; you
+    do not need to remember them in advance.
+
 ## Northstar Technologies
 
 All executives, the director, the six engineering managers, and the three staff engineers work at

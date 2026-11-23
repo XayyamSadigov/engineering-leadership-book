@@ -104,12 +104,16 @@ risks:
     Victor Lindqvist (CTO) asked for an enterprise technology risk register after Margaret Lin, who
     chairs the board's audit committee, asked for a risk session in week 50. This is the director's
     draft; whether the committee adopts its appetite lines is not recorded. See the
-    [timeline](../case-studies/northstar/timeline.md), the [cast](../case-studies/northstar/cast.md),
-    and the [quarter 4 briefing](../case-studies/northstar/quarter-4-briefing.md).
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md), the
+    [cast](../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../case-studies/northstar/quarter-4-briefing.md).
 
 The figures come from [risk, security, and compliance](../case-studies/northstar/first-quarter.md#risk-security-and-compliance-chapter-53)
-and [finances](../case-studies/northstar/first-quarter.md#finances-chapter-52) in Northstar's quarter 4
-record. The ratings, reasoning, and exposure ranges are illustrative. Other people named: Marcus
+and [finances](../case-studies/northstar/first-quarter.md#finances-chapter-52) in the year 1 record.
+Weeks count from the director's first week ([weeks](../glossary.md#weeks-quarters-and-years)); ER-01 to
+ER-09 are this register's IDs and TR-01 is an item on the lower-level technology register
+([register IDs](../glossary.md#register-ids)). The ratings, reasoning, and exposure ranges are illustrative. Other people named: Marcus
 Oyelaran (Billing manager), Tom Becker (Platform Operations manager), Kwame Mensah and Ines Carvalho
 (staff engineers), Joon Park (IT security lead), Marta Kowalczyk (Head of IT), Rajiv Menon (CFO), and
 Helena Marsh (CEO).
@@ -121,8 +125,10 @@ top-40 renewals fall in quarters 5 to 8 and availability was below 99.9 percent 
 which it was measured (99.86 and 99.89 percent); a loss is judged likely, not certain.
 
 **The numbers behind the exposure column.** Six of the 40 largest customers renew in quarters 5 to 8,
-at about $1.17M a year each, with a 72 percent gross margin. TR-01 is the Core framework migration on
-the technology risk register.
+at about $1.17M a year each, with a 72 percent gross margin. TR-01 is the migration of Core (the
+company's monolith) off its unsupported framework. Finance prices it at its **day rate**, $800 an
+engineer-day ($185,000 ÷ about 230 working days). That is more per day than the book's planning rate of
+$3,558 an engineer-week because Finance counts only working days.
 
 | Item | Derivation | Result |
 |---|---|---|
@@ -130,16 +136,16 @@ the technology risk register.
 | Margin per customer lost | $1.17M × 72% | about $842,000 a year |
 | Service credits, annualized | $60,000 (quarter 3) or $95,000 (quarter 2) a quarter × 4 | $240,000 to $380,000 a year |
 | Questionnaire load | 34 × 14 hours = 476 hours; ÷ 1,840 hours a year; × $185,000 | 0.26 FTE, about $48,100 a year |
-| TR-01 migration | 120, 190, or 243 engineer-days × $800 (Finance's scenarios) | $96,000, $152,000, or $194,400 |
+| TR-01 migration | 120, 190, or 243 engineer-days × $800, Finance's day rate (Finance's scenarios) | $96,000, $152,000, or $194,400 |
 
 | ID | Risk (consequence) | Owner | Accepter | Score | Exposure | Treatment | Appetite |
 |---|---|---|---|---|---|---|---|
-| ER-01 | A large customer leaves at renewal over reliability | Engineering Director | Victor Lindqvist | 20 | About $842,000 a year of margin per customer lost; credits $240,000 to $380,000 a year | Reduce (quality continuation) | Line 1: inside (the year-2 plan targets 99.9 percent); quarter 3's 99.89 percent is reported with its cause |
-| ER-02 | A financial error reaches customers | Marcus Oyelaran | Victor Lindqvist | 12 | Not quantified | Reduce (pairing, tax-svc decision) | No line |
-| ER-03 | A known-exploited vulnerability on internet-facing tier 1 is exploited | Tom Becker | Victor Lindqvist | 15 | Not quantified | Reduce; exception to week 52 | Line 2: outside |
-| ER-04 | The build and deploy path is compromised or lost | Kwame Mensah | Victor Lindqvist | 15 | Not quantified | Reduce (phase 1, secrets manager) | Line 3: outside while auth-svc deploys by script |
+| ER-01 | A large customer leaves at renewal over reliability | Engineering Director | Victor Lindqvist | 20 | About $842,000 a year of margin per customer lost; credits $240,000 to $380,000 a year | Reduce ([the continuation](../glossary.md#the-continuation), the two-year quality proposal) | Line 1: inside (the year-2 plan targets 99.9 percent); quarter 3's 99.89 percent is reported with its cause |
+| ER-02 | A financial error reaches customers | Marcus Oyelaran | Victor Lindqvist | 12 | Not quantified | Reduce (pairing; a decision on the tax service, tax-svc) | No line |
+| ER-03 | A [known-exploited vulnerability](../glossary.md#known-exploited-vulnerability-kev) on internet-facing tier 1 is exploited | Tom Becker | Victor Lindqvist | 15 | Not quantified | Reduce; exception to week 52 | Line 2: outside |
+| ER-04 | The build and deploy path is compromised or lost | Kwame Mensah | Victor Lindqvist | 15 | Not quantified | Reduce (CI consolidation phase 1, secrets manager) | Line 3: outside while auth-svc deploys by script |
 | ER-05 | The Core platform cannot be patched | Ines Carvalho | Victor Lindqvist | 12 | Migration $96,000 to $194,400 (Finance's scenarios) | Accept with patches until the migration decision | No line |
-| ER-06 | Missing assurance costs deals and renewals | Victor Lindqvist | Helena Marsh (commercial risk owned by the CTO) | 12 | At least $310,000 ARR; $48,100 a year of capacity | Decision open (options A, B, C) | No line |
+| ER-06 | Missing assurance costs deals and renewals | Victor Lindqvist | Helena Marsh (commercial risk owned by the CTO) | 12 | At least $310,000 of annual recurring revenue (ARR); $48,100 a year of capacity | Decision open: [SOC 2](../glossary.md#soc-2) audit in year 2, readiness first, or an evidence library only | No line |
 | ER-07 | Card data scope is wider than believed | Joon Park | Rajiv Menon (IT-owned; payments correctness is also Victor Lindqvist's concern) | 8 | Review about 5 days | Reduce (scope review) | No line |
 | ER-08 | A corporate identity compromise reaches production | Marta Kowalczyk | Rajiv Menon (IT-owned) | 12 | Not quantified | Reduce | No line |
 | ER-09 | Corporate business systems are lost | Marta Kowalczyk | Rajiv Menon | 6 | Not quantified | Reduce (restore tests) | No line |

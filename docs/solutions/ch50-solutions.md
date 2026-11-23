@@ -98,7 +98,7 @@ so: "This one is mine because it binds the company; here is the decision and whe
 escalation path. I am not going to decide it, and if I give a view now it will be read as a decision. Take it
 to the director." Log the request as redirected.
 
-**With the standard owners (two).** "Kwame Mensah owns pipeline standards; he decides within ten working days.
+**With the staff engineers who own the standards (two).** "Kwame Mensah owns pipeline standards; he decides within ten working days.
 Ask him." The same for Li Na Zhou on data.
 
 **Second ask.** Repeat the redirect word for word and tell the director, so the pattern is visible. If the person

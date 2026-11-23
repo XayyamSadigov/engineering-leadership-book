@@ -3,11 +3,11 @@
 This chapter covers three jobs. The first is designing how a team works when its members are not in
 one room, using what the remote and hybrid work research shows. The second is finding out how healthy
 a team is without turning the answer into a score people learn to manage. The third is diagnosing a
-team that is not working, then choosing between coaching, restructuring, and changing its leader. Psychological safety
-(Chapter 11), developer-experience surveys (Chapter 18), and team design (Chapter 33) are taught
-elsewhere; this chapter uses them without re-teaching them. The running example is Customer Experience at Northstar Technologies,
-the fictional company in the [case study](../../case-studies/northstar/index.md): nine web engineers
-in Minneapolis and remote, six mobile engineers in Bogotá, one manager.
+team that is not working, then choosing between coaching, restructuring, and changing its leader. The
+running example is Customer Experience at Northstar Technologies, the fictional company in the
+[case study](../../case-studies/northstar/index.md): nine web engineers in Minneapolis and remote, six
+mobile engineers in Bogotá, one manager. Psychological safety (Chapter 11), developer-experience
+surveys (Chapter 18), and team design (Chapter 33) are used here, not re-taught.
 
 ## Why This Matters
 
@@ -106,8 +106,8 @@ in this table are **this book's recommendation**, drawn from the mechanisms abov
 Two more rules matter. First, **watch where the manager sits.** On a split team, the manager's
 location becomes the center of gravity: hallway decisions, the faster one-on-ones, the stretch
 assignments. Second, **make cultural norms explicit.** Erin Meyer's
-[*The Culture Map*](../../references/bibliography.md#meyer2014culture) is known for the argument that
-national cultures differ in how directly people give negative feedback, disagree, and signal
+[*The Culture Map*](../../references/bibliography.md#meyer2014culture) argues that national cultures
+differ in how directly people give negative feedback, disagree, and signal
 decisions, and that misreading these differences damages trust (**expert opinion**). On a team spanning two countries, agree how disagreement and bad news are raised.
 
 ### Asynchronous work and real time-zone spread
@@ -228,11 +228,15 @@ Coaching a structural problem wastes quarters; changing a leader for one punishe
 !!! info "Northstar so far"
     The director is at the start of quarter 2 (week 14). Quarter 1 cut Sev1 and Sev2 incidents (the two
     highest severity levels) from 30 to 21, and in week 10 the seven QA engineers moved into product
-    teams as quality engineers. See the [timeline](../../case-studies/northstar/timeline.md).
+    teams as quality engineers. See the [timeline](../../case-studies/northstar/timeline.md). New to
+    Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
-Northstar's working arrangements are **illustrative** (the company is fictional). Headquarters is in Minneapolis, where all executives and engineering managers work, with office anchor
-days Tuesday to Thursday. The second engineering office is in Bogotá, at most one hour from
-Minneapolis. Twelve engineers are fully remote in the United States.
+Northstar's working arrangements are **illustrative** (the company is fictional). Headquarters is in
+Minneapolis, where all executives and engineering managers work, with office anchor days Tuesday to
+Thursday. The second engineering office is in Bogotá, at most one hour from Minneapolis. Twelve
+engineers are fully remote in the United States. The table shows baseline headcount, before the seven
+QA engineers left Platform Operations in week 10.
 
 | Team | Minneapolis | Bogotá | Remote US | Total |
 |---|---|---|---|---|
@@ -247,10 +251,9 @@ Minneapolis. Twelve engineers are fully remote in the United States.
 
 **Where distance bites.** Not time zones: every engineer shares at least six working hours with
 Minneapolis. Location does. Three teams span both sites, and every Bogotá engineer reports to a
-Minneapolis manager. In Customer Experience the web and mobile boundary is also the site boundary.
-The team also had 20 dependency links in the baseline quarter, 17 to Orders, Billing, and Platform
-Operations, which sit almost entirely in Minneapolis; 8 to Orders, which owns the pricing-svc contract
-that mobile-bff consumes. INC-405 (mobile-bff deployed against an older pricing-svc contract, detected
+Minneapolis manager. In Customer Experience the web and mobile boundary is also the site boundary. Most of the team's
+baseline dependencies (17 of 20 links) ran to teams that sit almost entirely in Minneapolis, 8 of them
+to Orders, which owns the pricing-svc contract that mobile-bff consumes. INC-405 (mobile-bff deployed against an older pricing-svc contract, detected
 by a customer after 140 minutes) is the kind of failure a missing cross-site bridge makes more likely.
 That is a hypothesis, not a finding from the incident record.
 
@@ -264,8 +267,8 @@ Assume $3,000 per person-trip (flight, hotel, meals), an **illustrative** figure
 | Managers to Bogotá | 3 × 2 × $3,000 | $18,000 |
 | **Total per year** | | **$114,000** |
 
-Against that, one departure costs the vacancy plus ramp-up, at Northstar's fully loaded $185,000 per
-engineer per year:
+Against that, one departure costs the vacancy plus ramp-up, at the book's planning rate of $3,558 per
+engineer-week (Northstar's fully loaded $185,000 a year ÷ 52):
 
 | Cost of one departure | Assumption | Cost |
 |---|---|---|
@@ -404,7 +407,8 @@ patterns: a CTO who asks for team health scores has created the league table.
 4. **Fund time together** for split teams, with a stated purpose for each visit (planning, hard design,
    onboarding), and a cost you can defend.
 5. **Run a team-owned health check** once a quarter: facilitated by someone outside the reporting line,
-   separately for subgroups if one is quieter, ending in at most two actions.
+   separately for subgroups if one is quieter, ending in at most two actions. The
+   [team health assessment template](../../templates/team-health-assessment.md) has the areas, a session record, and a worked example.
 6. **Report patterns upward, not scores.** Write the access rule before the first session.
 7. **Watch the dysfunction signals** in retrospectives, incidents, one-on-ones, and transfer requests.
 8. **Diagnose by layer**, structure first, with evidence for each layer.
@@ -413,21 +417,17 @@ patterns: a CTO who asks for team health scores has created the league table.
 
 ## Case Study
 
-This case is **fictional**. It is set at the start of quarter 2 at Northstar, after the director's
-[first quarter](../../case-studies/northstar/first-quarter.md). The outcome is a decision the reader
-faces.
+This case is **fictional**. It is set at the start of quarter 2, and the outcome is a decision the
+reader faces. Earlier quarters are in the [year 1 record](../../case-studies/northstar/first-quarter.md).
 
-**The team.** Customer Experience has 15 engineers under Daniel Cho, its engineering manager: nine web (seven in Minneapolis,
-two remote) and six mobile, all in Bogotá. It owns web-app, mobile-app, and mobile-bff; notification-svc
-moved to Orders at the start of quarter 2. Two former QA engineers joined as quality engineers in
-week 10, when the QA group moved into product teams; both are in Minneapolis. Nobody holds a tech lead title; Hannah Lindgren leads web
-informally and Mateo Arango Ríos leads mobile. Daniel spends 45 percent of his time on people, the
-highest share of any Northstar manager.
+**The team.** Customer Experience has 15 engineers under Daniel Cho, its engineering manager: nine web
+(seven in Minneapolis, two remote) and six mobile, all in Bogotá. It owns web-app, mobile-app, and
+mobile-bff. Two quality engineers (former QA engineers) joined in week 10, both in Minneapolis. Nobody
+holds a tech lead title; Hannah Lindgren leads web informally and Mateo Arango Ríos leads mobile.
+Daniel spends 45 percent of his time on people, the highest share of any Northstar manager.
 
-**The signals.** On delivery measures the team looks healthy. It deploys 26 times a month, the most of
-any team. Its median [change lead time](../../glossary.md#lead-time) (commit to running in production)
-is six days. Its [change failure rate](../../glossary.md#change-failure-rate) (share of deployments that
-fail) is 17 percent, and [unplanned work](../../glossary.md#unplanned-work) takes 28 percent of its
+**The signals.** On delivery measures the team looks healthy: it deploys more often than any other
+team (26 times a month), and [unplanned work](../../glossary.md#unplanned-work) takes 28 percent of its
 capacity against an organization average of 34. Other signals disagree:
 
 - One board and one two-week sprint for web and mobile, although mobile releases pass app-store
@@ -446,8 +446,8 @@ Integrations, a team that also spans both sites) to facilitate. She ran it twice
 Normally only patterns and requests leave the room. Because a structural decision depended on them,
 both groups agreed to show Daniel and the director their ratings this once. Web rated 5 areas green, 4 yellow,
 and 1 red (speed, which they tied to waiting on Orders). Mobile rated 2 green (learning, fun), 4
-yellow, and 4 red: easy to release, suitable process, support, and "pawns or
-players". The mobile group's request, in Mateo's words, was "our own board, and decisions that
+yellow, and 4 red: easy to release, suitable process, support, and "pawns or players" (whether the
+team feels in control of its own work). The mobile group's request, in Mateo's words, was "our own board, and decisions that
 happen where we can hear them".
 
 **The diagnosis.** By layer:

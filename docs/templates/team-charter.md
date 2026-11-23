@@ -18,6 +18,11 @@ and enforce on each other, including on the manager. Use them to make boundaries
 visible, so that a request that bypasses the interface, or a lapse in an agreement, is visibly an
 exception.
 
+!!! tip "Minimum version"
+    In the first session, write the mission, the "owns" and "does not own" lists, and how other teams send
+    requests. Add decision rights and three working agreements in the second session, and the quarterly
+    check once a quarter of requests has arrived.
+
 ## How to fill it in
 
 1. **Sample last quarter's work**: what the team did, where requests came from, what it refused. Draft
@@ -76,10 +81,11 @@ reviewed: ""
 ## Example: Northstar, Data and Analytics (start of quarter 2)
 
 !!! info "Northstar so far"
-    Week 14 of the Engineering Director's first year at Northstar Technologies, a fictional company.
-    The first quarter cut Sev1 and Sev2 incidents from 30 to 21. Data and Analytics, eleven engineers
-    under Farah Haddad, has the lowest change failure rate in the organization and little contact with
-    other teams. See the [timeline](../case-studies/northstar/timeline.md) and the
+    Week 14 of the Engineering Director's first year at Northstar Technologies, a fictional company. Data
+    and Analytics, eleven engineers under
+    Farah Haddad, has the lowest change failure rate in the organization and little contact with other
+    teams. See the [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
     [cast](../case-studies/northstar/cast.md).
 
 Two facts showed the team needed a charter. Requests from other teams took half its unplanned work. And
@@ -95,7 +101,7 @@ warehouse maintenance or who must be told. Farah drafted the charter with the te
 | Does not own | Source data correctness in Core (Orders and Billing own it); the export deploy script (Platform Operations, until retired) |
 | Disputed | search-svc: nominal owner Orders, written mostly by engineers now in this team; proposal to the director |
 | Interfaces | Requests through one queue, triaged Tuesday and Thursday; first response within two working days. Warehouse maintenance windows announced to Payments and Integrations and Customer Experience five working days ahead |
-| Decision rights | Warehouse schema: team decides, Li Na Zhou (staff engineer, data and migration) consulted. Accepting work over a week from another team: Farah. Breaking a reporting-api contract: director informed, consumers consulted |
+| Decision rights | Warehouse schema: team decides, Li Na Zhou (staff engineer, data and integration) consulted. Accepting work over a week from another team: Farah. Breaking a reporting-api contract: director informed, consumers consulted |
 
 The team agreed six working agreements. Two show its shape, with members in Minneapolis (four), Bogotá
 (five), and remote (two):

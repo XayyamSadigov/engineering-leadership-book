@@ -7,7 +7,7 @@ fictional.
 
 ## How the register's figures are derived
 
-The chapter's register states its exposures without arithmetic; the derivations are here.
+The chapter gives each exposure with a one-line basis; the full derivations are here.
 
 | Figure | Derivation |
 |---|---|
@@ -15,7 +15,7 @@ The chapter's register states its exposures without arithmetic; the derivations 
 | Loss of one customer | About $1.17M of revenue; at the 72 percent gross margin, about $842,000 a year |
 | Credits range | $95,000 in quarter 2 and $60,000 in quarter 3, or $380,000 and $240,000 a year at those rates |
 | Questionnaire load | 34 × 14 hours = 476 hours a year; at 1,840 working hours (230 days of 8 hours), about 0.26 FTE |
-| TR-01 migration | Finance's scenarios of 120, 190, and 243 engineer-days at $800 a day: $96,000, $152,000, $194,400, used instead of Chapter 30's earlier 120 to 180 days so the register and the budget show one range |
+| TR-01 migration | Finance's scenarios of 120, 190, and 243 engineer-days at Finance's day rate of $800 ($185,000 ÷ about 230 working days; higher per day than the planning rate of $3,558 per engineer-week because Finance counts only working days): $96,000, $152,000, $194,400, used instead of Chapter 30's earlier 120 to 180 days so the register and the budget show one range |
 | ER-01 likelihood 4 | Six large renewals in quarters 5 to 8, and availability below 99.9 percent in every measured quarter (99.86 and 99.89 percent): a loss is judged likely, not certain |
 
 ## F1 — Splitting the one corporate technology line

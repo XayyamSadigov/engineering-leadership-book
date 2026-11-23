@@ -48,8 +48,9 @@ listed, numbered as on the project page.
    [timeline](../case-studies/northstar/timeline.md) for the project's week; the
    [cast](../case-studies/northstar/cast.md) lists everyone a project names.
 2. **Decide with what you would have known.** Each project fixes a moment in the Northstar story (P3 is
-   your first week; P4 is week 44) and says which facts you may use. Facts from later in the story are
-   off limits, because the point is to decide with the information available at the time.
+   your first week; P4 is week 44). Its fact sheet lists every case fact you need, one per row, with its
+   week and source. Facts from later in the story are off limits, because the point is to decide with
+   the information available at the time.
 3. **Choose full or core.** Decide before you start, using the table above. The core version is a
    complete piece of work, not a draft of the full one.
 4. **Work from the data.** Open the CSV files in a spreadsheet and recompute the numbers you rely on.

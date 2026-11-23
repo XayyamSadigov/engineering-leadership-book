@@ -14,6 +14,11 @@ effort to remove it) and interest (what it costs every period you keep it). An e
 what it costs, in whose time or in which risk, is a complaint and belongs in a different list. Use the
 register to decide which debt to pay down, with whose capacity, and in what order.
 
+!!! tip "Minimum version"
+    On day one, enter the five most expensive items with four fields each: component and owner, interest
+    (time or risk, with its source), principal, and a decision. Add triggers and monthly spending reports
+    once the register drives a planning cycle.
+
 ## How to fill it in
 
 1. **Enter only items with a cost.** Each entry needs a stated interest estimate and its source (an
@@ -72,10 +77,13 @@ register to decide which debt to pay down, with whose capacity, and in what orde
 !!! info "Northstar so far"
     Quarter 1, week 4 of the Engineering Director's first year at Northstar Technologies, a fictional
     company. The baseline quarter had 30 Sev1 and Sev2 incidents; Core, the shared application, ships
-    every two weeks after a manual regression pass. See the [timeline](../case-studies/northstar/timeline.md)
-    and the [cast](../case-studies/northstar/cast.md).
+    every two weeks after a manual regression pass. See the
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
-Incident IDs refer to `incidents-last-quarter.csv` in the
+TD numbers are this register's entries ([register IDs](../glossary.md#register-ids)); weeks count from the
+director's first week. Incident IDs refer to `incidents-last-quarter.csv` in the
 [Northstar data](../case-studies/northstar/baseline-data.md). The ones named here: INC-406 (a ledger
 index migration locked a table), INC-416 (a shared deploy script change broke rollback for four
 services), INC-417 (payments posted to the wrong accounting period after a release), INC-418 (a webhook
@@ -87,8 +95,12 @@ INC-427 (credit notes applied twice after a release).
 | TD-001 | Core release process | Platform Operations (proposed) | Two-week release train with three-day manual regression; all Core changes ship together | Developers wait a median 19 days for production feedback; about 2.4 engineer-years a year of QA time on the manual pass | 9 of 30 incidents last quarter; slowest to restore | 2 quarters for a 4-person working group | Renewal reviews in 2 quarters | Remove incrementally: weekly releases in quarter 1, automated regression for top paths, deploy separated from release |
 | TD-002 | Deploy scripts for auth-svc, webhooks, document-store, export-svc | Platform Operations | Hand-maintained shell scripts on one build host, understood by one engineer | About 3 engineer-days per month of manual deploy work; rollback broke in INC-416 | [Single point of knowledge failure](../glossary.md#single-point-of-knowledge-failure) on a [tier 1](../glossary.md#tier-1) service (auth) | 6 to 10 engineer-weeks to move onto the standard pipeline | Departure of the one engineer | Remove in quarter 1, starting with auth-svc |
 | TD-003 | core/customer, core/permissions, core/scheduler | none (shared by four teams) | Shared modules with no owner; changes coordinated by chat | Coordination and review delays on every change touching them | No alerts or on-call; recurring contributor to Core release failures | Ownership decision: 1 day; boundaries and contract tests: 1 quarter | — | Assign owners in month 1: core/customer to Orders and core/scheduler to Billing (week 4); core/permissions disputed between Orders and Platform Operations, decision pending under an exemption; contract tests in quarter 2 |
-| TD-004 | Core migration practice | Billing | Schema migrations and code changes ship in the same release with no ordering or duration checks | Manual data repairs after INC-406, INC-417 (partly), INC-424, INC-427 | 3 incidents last quarter triggered by migrations, 2 of them recurrences | 4 to 6 engineer-weeks for migration checks in the pipeline | Year-end ledger volumes | Reduce in quarter 1: migration review checklist now, automated checks in quarter 2 |
+| TD-004 | Core migration practice | Billing | Schema migrations and code changes ship in the same release with no ordering or duration checks | Manual data repairs after INC-406, INC-417 (partly), INC-424, INC-427 | 3 incidents last quarter triggered by migrations, 2 of them recurrences | 4 to 6 engineer-weeks for migration checks in the pipeline | Year-end ledger volumes | Reduce in quarter 1: migration review checklist now; automated ordering and table-lock checks in the pipeline (Li Na Zhou, staff engineer), due week 7 |
 | TD-005 | Webhook payload format | Payments and Integrations | No versioning of outbound webhook formats | Customer integration breakages handled as support escalations | INC-418; contractual exposure with integration partners | 3 engineer-weeks | Next format change | Contain: freeze format changes until versioning ships in quarter 2 |
+
+Later in quarter 1, TD-004's automated checks landed in week 11, after slipping past a repeat of
+INC-427 in week 9. [Chapter 21](../parts/05-engineering-quality/21-technical-debt.md) adds two
+non-code entries, TD-006 (four CI systems) and TD-007 (flaky Core tests), and prices the register.
 
 What to notice: TD-001 and TD-003 are not code at all; they are a process and an ownership gap, and
 both cost more than any single module. TD-005 is contained rather than removed, because freezing the

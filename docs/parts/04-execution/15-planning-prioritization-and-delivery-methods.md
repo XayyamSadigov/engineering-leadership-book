@@ -7,11 +7,9 @@ should follow the shape of the work, that priority should follow explicit econom
 loudness of the person asking, and that planning effort should be proportional to what is actually
 known. The running example is Northstar Technologies, the fictional company in the
 [case study](../../case-studies/northstar/index.md), where 7 of 17 committed roadmap items shipped in
-the quarter they were promised.
-
-Neighboring topics have their own chapters: flow and dependencies (Chapter 16), forecasting and
-commitments (17), organization-level quarterly planning (38), outcome roadmaps (44), and the economics
-of cost of delay (45). This chapter works at the level of a team and a director's portfolio of teams.
+the quarter they were promised. The chapter works at the level of a team and a director's portfolio;
+flow (Chapter 16), forecasting (17), organization-level planning (38), and the economics of delay (45)
+have their own chapters.
 
 ## Why This Matters
 
@@ -94,14 +92,19 @@ Goal, the Sprint Goal, and the Definition of Done
 ([Schwaber and Sutherland, 2020](../../references/bibliography.md#schwaber2020scrum)). The guide
 calls the framework immutable and says a partial implementation is not Scrum. For leaders, two
 points matter: Scrum commits to a Sprint Goal, not a list of tickets, and it assumes most of a
-Sprint can be protected from interruption. Story points and velocity are common practice around
-Scrum; they are not in the guide.
+Sprint can be protected from interruption. [Story points and
+velocity](../../glossary.md#velocity-and-story-points) are common practice around Scrum but not in the
+guide. Story points are relative size estimates; velocity is points completed per sprint. Both are
+local to one team and cannot be compared across teams.
 
 **Kanban**, in the Kanban Guide, is a strategy for optimizing the flow of value. Its three practices
 are to define and visualize the workflow, actively manage items in it, and improve it. It requires
 explicit control of [work in progress (WIP)](../../glossary.md#work-in-progress-wip-and-wip-limit)
-without prescribing a number. It names four flow measures (WIP, throughput, work item age, cycle time)
-and prescribes no roles or iterations
+without prescribing a number. It names four flow measures: WIP, throughput (items finished per week),
+work item age (how long an open item has been in progress), and
+[cycle time](../../glossary.md#cycle-time) (start of work to done); Chapter 16
+[defines them](16-flow-lead-time-dependencies-and-unplanned-work.md#flow-measures-throughput-cycle-time-and-work-item-age).
+It prescribes no roles or iterations
 ([Coleman, Vacanti, et al., 2025](../../references/bibliography.md#vacanti2025kanban)). Kanban assumes
 the reverse of Scrum: work arrives continuously and is pulled when there is capacity.
 
@@ -223,7 +226,9 @@ commitment is the bets in "now" and the review date.
 !!! info "Northstar so far"
     Week 14, the start of quarter 2. Two renewal features must ship this quarter: an accounting
     integration (week 19) and bulk ordering (week 26). Quarter 1 cut Sev1 and Sev2 incidents from 30 to
-    21, and Core now releases weekly. See the [timeline](../../case-studies/northstar/timeline.md).
+    21, and Core now releases weekly. See the [timeline](../../case-studies/northstar/timeline.md). New
+    to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 The team is Northstar's Orders team; the candidate items, their values, and their durations are
 **illustrative**.
@@ -236,7 +241,7 @@ an estimated cost of delay per week and a duration in weeks of the capacity avai
 | P1 Price-list import | VP Sales, open deal | $3,800 | $400,000 a year deal, half of it judged to depend on the feature: $200,000 ÷ 52 | 3 | 1.27 |
 | P2 Saved order templates | Customer Success | $2,000 | Support tickets avoided plus a rough retention value | 2 | 1.00 |
 | P3 Order search redesign | CEO, after a customer dinner | $1,000 | No quantified case; a generous guess | 8 | 0.13 |
-| P4 Pricing-rules cleanup | Staff engineer, from the debt register | $4,300 | About 1.2 [FTE](../../glossary.md#fte) (full-time equivalent engineers) of unplanned work a year at $185,000: $222,000 ÷ 52 | 6 | 0.72 |
+| P4 Pricing-rules cleanup | Staff engineer, from the debt register (Chapter 21) | $4,300 | About 1.2 [FTE](../../glossary.md#fte) (full-time equivalent engineers) of unplanned work a year at $185,000: $222,000 ÷ 52 | 6 | 0.72 |
 
 CD3 is cost of delay in thousands of dollars per week divided by weeks. P4 is debt priced as
 interest, as in Chapter 21's
@@ -292,7 +297,7 @@ The second decision is how to rank:
 - many small requests by service class (a category with its own expected response time, such as
   expedite or standard) and WIP limit;
 - debt by interest (Chapter 21), inside the [prevention allocation](../../glossary.md#prevention-allocation) (capacity reserved for
-removing the causes of incidents and debt; Chapter 27).
+removing the sources of incidents and unplanned work; Chapter 27).
 
 ## Trade-offs
 
@@ -376,7 +381,9 @@ investment economics.
 2. **Write down the practices each team actually uses**, not the label.
 3. **Choose or adapt** with the decision framework, one change at a time; a method change costs
    several weeks of lower output.
-4. **Make capacity honest**: subtract measured unplanned work and prevention before committing.
+4. **Make capacity honest**: subtract measured unplanned work and prevention before committing. The
+   [capacity planning model](../../templates/capacity-planning-model.md) template lays out the
+   arithmetic.
 5. **Admit fixed-date commitments first**, each with an owner, a margin, and reserved capacity.
 6. **Rank the rest by cost of delay over duration**, with requesters writing value estimates and
    engineering writing durations as ranges and debt interest in money.
@@ -387,7 +394,7 @@ investment economics.
 
 This case is **fictional**. It describes how Northstar planned in the baseline quarter, before the
 director arrived, and the planning decision the director faces for quarter 2. The director's first
-quarter is summarized on [the first quarter](../../case-studies/northstar/first-quarter.md) page.
+quarter is summarized in the [year 1 record](../../case-studies/northstar/first-quarter.md).
 
 ### How the teams planned
 
@@ -414,47 +421,44 @@ which advanced only when the queue was quiet.
 
 ### How the 17 items were chosen
 
-Before the baseline quarter, the product managers collected 31 candidate items. Amara Okafor, Greg
-Tanaka (VP Sales), Sofia Alvarez (VP Customer Success), and Victor Lindqvist (CTO) ranked them in a two-hour meeting by distributing 100
-points each. Engineering sized the ranked list in t-shirt sizes (rough classes such as S, M, and L), about 560
-engineer-weeks. A line was drawn at the assumed capacity of 780 engineer-weeks: 80 engineers for 13
-weeks, less a 25 percent allowance for support and bugs. Seventeen items fell above the line; five had dates
-already given to customers, including Greg Tanaka's two deal features.
+Before the baseline quarter, the product managers collected 31 candidate items. Four executives ranked
+them in a two-hour meeting by distributing 100 points each: Amara Okafor, Greg Tanaka (VP Sales), Sofia
+Alvarez (VP Customer Success), and Victor Lindqvist (CTO). Engineering sized items in t-shirt sizes
+(rough classes such as S, M, and L). The 17 committed items summed to about 560 engineer-weeks, against
+an assumed capacity of 780 (80 engineers for 13 weeks, less a 25 percent allowance for support and
+bugs). Five already had dates given to customers, including Greg Tanaka's two deal features.
 
-Three things were wrong, each visible in the data:
+On paper the plan had over 200 engineer-weeks of slack, yet only 7 items shipped. The data show three
+causes, the heaviest first:
 
-- **Capacity fiction.** Unplanned work took 34 percent, leaving about 686 engineer-weeks, and that
-  also had to cover small requests and deal support that were not on the roadmap.
+- **Cross-team items.** Nine of the 17 needed more than one team. Of the 10 that missed, 8 were
+  cross-team; of the 7 that shipped, 6 were single-team. Summed effort counts none of the weeks an item
+  spends waiting in another team's queue.
+- **Capacity fiction.** Unplanned work took 34 percent, not 25, leaving about 686 engineer-weeks. That
+  still exceeds 560. But it also had to absorb small requests and deal support that were never on the
+  roadmap, so the real slack was far thinner than it looked.
 - **Volume ranking.** Points rewarded whoever cared most; no item had a value estimate.
-- **Cross-team items.** Nine of the 17 needed more than one team. Of the 7 that shipped, 6 were
-  single-team; of the 10 that missed, 8 were cross-team.
 
-By primary team, the commitments and deliveries were:
-
-| Primary team | Committed | Delivered |
-|---|---|---|
-| Orders | 4 | 1 |
-| Billing | 3 | 0 |
-| Payments and Integrations | 3 | 2 |
-| Customer Experience | 4 | 2 |
-| Data and Analytics | 2 | 2 |
-| Platform Operations | 1 | 0 |
+The lesson: a plan can fit capacity in effort and still fail in calendar time. Chapter 17 calls this
+"effort is not completion". Results by team are on the
+[baseline page](../../case-studies/northstar/baseline-data.md).
 
 ### The two renewal commitments
 
-Late in the baseline quarter, in renewal talks with the two at-risk customers ($9M in annual
-recurring revenue together), Northstar agreed two features as renewal conditions:
+Late in the baseline quarter, Northstar agreed two features as renewal conditions with its two at-risk
+customers ($9M in annual recurring revenue together):
 
 - **Bulk ordering** (Orders): asynchronous processing of order files of up to 20,000 lines across
   delivery sites, replacing the upload that failed beyond row 500 in INC-421. Due at the end of
   quarter 2; five Orders engineers and two Customer Experience web engineers.
 - **Accounting-system integration** (Payments and Integrations): a new erp-sync connector to the
-  customer's accounting system, with daily reconciliation of posted invoices. Due at the end of week
-  6 of quarter 2; four engineers.
+  customer's accounting system, with daily reconciliation of posted invoices. Due in week 19; four
+  engineers.
 
-Both have step-shaped cost of delay and were admitted first rather than ranked. They are why Orders
-and Payments and Integrations gave only 10 percent of their capacity to prevention in quarter 1,
-against 25 percent for Billing and 15 percent for the other teams. At day 90 both were on track.
+Both have step-shaped cost of delay (little until the date, then the renewal) and were admitted first
+rather than ranked. For the same reason, Orders and Payments and Integrations put only 10 percent of
+their capacity into prevention in quarter 1, against 15 to 25 percent for the other teams. At day 90
+both were on track.
 
 ### The decision for quarter 2
 
@@ -462,8 +466,9 @@ The director's proposal for quarter 2 planning has four parts. It is a proposal 
 evaluate; its results are not recorded.
 
 1. Plan against measured capacity. The director's capacity model (Chapter 27 builds it) projects about
-   46 FTE of feature capacity for quarter 2, not 80 engineers: 80, less projected unplanned work (28 percent, or
-   22.4 FTE) and the 12 FTE prevention allocation. The renewal staffing comes out of that figure before
+   46 FTE of feature capacity for quarter 2, not 80 engineers. It subtracts two things. Unplanned work
+   fell from 34 to 31 percent in quarter 1, and the model projects 28 percent (22.4 FTE) for quarter 2.
+   The prevention allocation stays at 12 FTE. The renewal staffing comes out of the remaining 46 before
    anything else is ranked.
 2. Admit the two renewal items and their margins first, then rank everything else by cost of delay
    over duration, with value estimates written by the requesters.

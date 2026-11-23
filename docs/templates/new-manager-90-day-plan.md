@@ -16,6 +16,11 @@ first-line manager, especially one promoted from inside the team, because the en
 loop is still available and still rewarding, and without a plan the new manager drifts back into the
 old job.
 
+!!! tip "Minimum version"
+    In week 1, write three things: the handover list with a new owner for each item, three day-90
+    criteria agreed with your manager, and a weekly time budget with a cap on hands-on work. Add the
+    delegation levels and leading indicators by day 30.
+
 ## How to fill it in
 
 1. **List everything assigned to you as an engineer** (reviews, on-call, follow-up actions, features) and
@@ -79,13 +84,14 @@ checks: {day_30: "", day_60: "", day_90: ""}
 
 !!! info "Northstar so far"
     Week 2 of the Engineering Director's first year at Northstar Technologies, a fictional company.
-    Priya Raman has managed Orders, 14 engineers, for eight months, promoted from inside the team without
-    management training. Orders owns bulk ordering, a feature promised to a renewal customer for the end
-    of quarter 2. See the [timeline](../case-studies/northstar/timeline.md) and the
+    Priya Raman has managed Orders, 14 engineers, for eight months, promoted from inside the team
+    without management training. Orders owns bulk ordering, a feature promised to a renewal customer for
+    the end of quarter 2. See the [timeline](../case-studies/northstar/timeline.md). New to Northstar?
+    Read [the year in brief](../case-studies/northstar/year-in-brief.md) and the
     [cast](../case-studies/northstar/cast.md).
 
 Priya never had a 90-day plan, so this example shows the plan as a reset she and the director could
-write in week 2. The calendar figures, the four changes, and their levels come from the case; the layout
+write in week 2 (weeks count from the director's first week). The calendar figures, the four changes, and their levels come from the case; the layout
 and the day-90 criteria are illustrative. In her first month a bulk upload failure reached customers;
 she fixed it herself and assigned the follow-up test to herself. It was never done, and the same failure
 returned as INC-421, a Sev1 in which a bulk upload dropped every line beyond row 500.

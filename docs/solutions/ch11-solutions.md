@@ -174,7 +174,7 @@ Imposed, it becomes a status meeting held for the director. Teams differ: Data a
 little operational load; Billing's on-call burden needs a different agenda.
 
 **Cost:** a 30-minute weekly meeting for 80 engineers is 40 engineer-hours a week, about one full-time
-engineer, roughly $185,000 a year at Northstar's cost. Folding it into existing ceremonies cuts most
+engineer, about $3,558 a week or roughly $185,000 a year at Northstar's planning rate. Folding it into existing ceremonies cuts most
 of that, which is another reason not to mandate a new meeting.
 
 **How to know within two quarters:** per team, near misses recorded (rising first), commitments

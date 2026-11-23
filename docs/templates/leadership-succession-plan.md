@@ -25,6 +25,11 @@ assignments, not just written down.
 The plan is confidential to the director, HR, and the CTO. The candidates themselves are told they are
 developing toward broader work, and what that work is; they are not told they are the heir.
 
+!!! tip "Minimum version"
+    On day one, list the critical roles and, for each, who would run it next week (or "none") and one
+    development action with an owner. Add the coverage rule, the double-count check, and whether each
+    candidate has been asked at the first twice-yearly review.
+
 ## How to fill it in
 
 1. **List the critical roles,** including the director's own and any person whose knowledge of a tier 1
@@ -103,10 +108,14 @@ counts:
     six engineering managers and three staff engineers. The year-2 organization proposal, drafted the
     same week, would split Customer Experience and make Mateo Arango Ríos (informal mobile lead)
     Mobile's manager; Victor Lindqvist (CTO) decides in week 46. See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 The ratings are the director's fictional judgments; the development actions are proposals with no
-recorded outcome. Each row names the role holder, who is a manager or staff engineer (see the cast).
+recorded outcome. Each row names the role holder, who is a manager or staff engineer (see the cast);
+the other people named are engineers on the team in their row. "Level 3" is a delegation level from
+Chapter 2: the candidate decides after telling the manager what they intend to do.
 
 | Critical role | Ready now or interim | In development | Covered by the rule? | Development action (proposed) and owner |
 |---|---|---|---|---|

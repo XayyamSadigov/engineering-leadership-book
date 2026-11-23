@@ -11,10 +11,15 @@ Recurrence and action closure are read monthly across all reviews.
 
 An incident review is a written account of one serious incident that changes the system so the same
 failure is less likely or less damaging. It looks for contributing causes, not for a person to blame:
-a [blameless review](../glossary.md#blameless-review). People who were involved know best how the
+a [blameless](../glossary.md#blameless-review) review. People who were involved know best how the
 system allowed the failure, and they give an accurate account only if they are not at risk for doing
 so. Use it after every incident that meets your trigger, defined in advance with the
 [severity](../glossary.md#severity-sev1-sev2-sev3) levels.
+
+!!! tip "Minimum version"
+    For the first review, write four parts: the summary, the timeline, the contributing causes, and at
+    most three actions with an owner and a due date. Add the recurrence check as soon as you have earlier
+    reviews to search.
 
 ## How to fill it in
 
@@ -85,7 +90,9 @@ What we still do not understand, and who is finding out.
 !!! info "Northstar so far"
     The baseline quarter, just before the director's week 1. Northstar had 30 Sev1 and Sev2 incidents
     that quarter; 11 were recurrences. This review is one of them, from the incident data. See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 [INC numbers](../glossary.md#inc-numbers) identify incidents in Northstar's records. INC-427 is the
 Billing incident in which credit notes were applied twice.
@@ -158,8 +165,9 @@ capacity, which is why actions 1 and 2 name a staff engineer and a manager.
 ## Evidence and references
 
 - [Lunney and Lueder, Postmortem Culture](../references/bibliography.md#google2017postmortem)
-  describe blameless postmortems that seek contributing causes without indicting anyone, and
-  recommend setting review triggers in advance (**practitioner consensus**).
+  describe blameless incident reviews (they call them postmortems) that seek contributing causes
+  without indicting anyone, and recommend setting review triggers in advance (**practitioner
+  consensus**).
 - [Allspaw, 2012](../references/bibliography.md#allspaw2012blameless) gives the information argument:
   people who expect blame leave out what they saw, and the failure recurs (**expert opinion**).
 - [Cook, 1998](../references/bibliography.md#cook1998complex) argues that failures in complex systems

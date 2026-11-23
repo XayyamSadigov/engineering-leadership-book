@@ -30,7 +30,7 @@ again. Any single team metric inherits the attribution problem.
 
 | Item | Hours | Level it belongs to |
 |---|---|---|
-| Reviewing pull requests in one team | 6 | Senior engineer or tech lead |
+| Reviewing merge requests in one team | 6 | Senior engineer or tech lead |
 | Planning session with one team | 2 | Engineering manager |
 | Debugging an incident as an individual responder | 3 | Senior engineer |
 | Four one-on-ones with managers | about 4 | Director |

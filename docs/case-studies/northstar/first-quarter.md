@@ -1,13 +1,15 @@
-# Northstar: the director's first year
+# Northstar: year 1 record (reference)
+
+This is a lookup page: use it to check a fact, not to learn the story. For the year told in prose, read
+[the year in brief](year-in-brief.md) first.
 
 !!! warning "Fictional"
     Everything on this page is invented for the book. See the note on the
     [Northstar overview](index.md).
 
-This page is the record of the Engineering Director's first year at Northstar, in time order: the
+The year 1 record holds the Engineering Director's first year at Northstar in time order: the
 decisions that hold for the rest of the book, quarter 1 week by week, the day-90 results, and then
-quarters 2, 3, and 4. Each row names the chapter that tells that part of the story, so that the
-chapters agree with each other.
+quarters 2, 3, and 4. Each row names the chapter that tells that part of the story in full.
 
 Weeks are counted from the director's first day. Each of the director's quarters is 13 weeks:
 quarter 1 is weeks 1–13, quarter 2 weeks 14–26, quarter 3 weeks 27–39, and quarter 4 weeks 40–52.
@@ -110,7 +112,7 @@ reader. Their outcomes are not recorded.
 | Situation | Chapter |
 |---|---|
 | Rafael Duarte asks whether to pursue management again or the staff track; there is no open manager role | 4 |
-| Flow changes for the accounting integration: Billing reserves weeks 1 to 3 for the ledger export; Li Na Zhou proposes a ledger-export contract | 16 |
+| Flow changes for the accounting integration: Billing reserves the first three weeks of quarter 2 (weeks 14 to 16) for the ledger export; Li Na Zhou proposes a ledger-export contract | 16 |
 | Further flow changes: Platform Operations runs a two-person interrupt rotation with a single intake and self-service test environments; Payments and Integrations lowers its WIP limits | 16 |
 | A re-sample in week 5 of quarter 2 (week 18) shows environment waits falling from about 6 days to 2, and requests from other teams falling from 20 to 14 points of Platform Operations capacity | 16 |
 | Forecast for bulk ordering: 44 backlog items at the director's arrival, historically growing 15 to 35 percent | 17 |
@@ -335,7 +337,7 @@ start of quarter 5 (week 53). The CTO decides; the outcome is open (Chapters 35 
 | Alternative C | Also split Orders into Order Capture and Catalog and Pricing, and grow the platform to 8 (78 engineers, 8 managers) |
 | Alternative D | Two managers of managers (77 engineers, 9 managers) |
 | Transition plan | Decision week 46, announcement week 51, reporting lines week 53, search-svc week 54, all handoffs by week 57, review week 64; about 21 engineer-weeks of transition cost, excluding Mateo's seat |
-| Gap in the proposal | document-store is not assigned an owner, although the transition plan requires every component to appear exactly once in the ownership register by week 57 (a gap Project 4 asks the learner to find) |
+| Gap in the proposal | document-store is not assigned an owner, although the transition plan requires every component to appear exactly once in the ownership register by week 57 |
 | Succession coverage (week 44) | 10 critical roles; none with a ready-now successor; 6 with interim cover; 4 with none (Billing manager, Data and Analytics manager, the core-domain and the data-and-integration staff roles) |
 
 ### Executive and company facts in quarter 4
@@ -450,7 +452,7 @@ Service credits reduce subscription revenue. Figures are Finance's week 46 lates
 | Capitalization policy: rate and amortization | Rate $157,250 per FTE-year (85 percent of $185,000; overhead excluded). Straight-line amortization over three years, company policy. Finance applies the current guidance and is assessing ASU 2025-06 |
 | Capitalized engineering cost | FY−2 $1.8M, FY−1 $2.1M, FY0 $2.4M, FY1 $2.4M (about 15.3 FTE-years) |
 | FY2 engineering budget draft, weeks 46–48 | Personnel $16.73M at 87 full seats (3 percent merit, $0.15M promotion and market reserve), $16.31M after expected vacancy; cloud and tooling $4.2M flat. Outcome open |
-| TR-01 cost scenarios | 120, 190, and 243 engineer-days ($96,000, $152,000, $194,400 at $800 a day); expensed, since it adds no functionality. Funding open |
+| TR-01 cost scenarios | 120, 190, and 243 engineer-days ($96,000, $152,000, $194,400 at Finance's day rate of $800, which is $185,000 ÷ about 230 working days and higher per day than the $3,558-a-week planning rate because Finance counts only working days); expensed, since it adds no functionality. Funding open |
 
 #### Risk, security, and compliance (Chapter 53)
 

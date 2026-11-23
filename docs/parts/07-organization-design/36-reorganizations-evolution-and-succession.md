@@ -77,18 +77,16 @@ Research does not answer the question a director most wants answered: does reorg
 delivery? What exists is narrower, and points one way: change has costs, and how it is run changes
 their size.
 
-A systematic review of 39 longitudinal studies (2000 to 2012) found that restructuring, with and
-without staff reductions, mainly harmed employee well-being, in most studies over both the short and
-the long term ([de Jong et al., 2016](../../references/bibliography.md#dejong2016restructuring)).
-Factors that intervened included job control, communication, provision of information, training,
-procedural justice (whether people see the process as fair), job insecurity, and acceptance of the
-change. Those are research findings with a caution: many restructurings studied were mergers or
+A systematic review of 39 longitudinal studies found that restructuring, with and without staff
+reductions, mainly harmed employee well-being, in most studies over both the short and the long term
+([de Jong et al., 2016](../../references/bibliography.md#dejong2016restructuring)). Factors that
+intervened included job control, communication, information, procedural justice (whether people see
+the process as fair), and job insecurity. Those are research findings with a caution: many restructurings studied were mergers or
 downsizings, larger than redrawing team boundaries, and the outcome is well-being, not delivery.
 
-A review of 79 quantitative studies of reactions to organizational change sorts their antecedents into
-the people and context before the change and features of the change itself: its process, perceived
-benefit or harm, and content ([Oreg, Vakola, and Armenakis, 2011](../../references/bibliography.md#oreg2011recipients)).
-The abstract supports a narrower point: how a change is run is a lever separate from what it is.
+A review of 79 quantitative studies of reactions to change supports a narrower point: how a change is
+run is a lever separate from what it is
+([Oreg, Vakola, and Armenakis, 2011](../../references/bibliography.md#oreg2011recipients)).
 
 In software, one study of a large project found proximity to an organizational change significantly
 associated with a higher probability of customer-reported defects, and recent departures associated
@@ -154,7 +152,7 @@ provides. This book's recommendation has three properties:
   criteria should be. Do not run the assignment of people as a public discussion; it turns every name
   into a negotiation.
 - **Tell each affected person before any group.** Everyone whose manager, team, or ownership changes
-  hears it one to one, on announcement day and before the group does.
+  hears it one-on-one, on announcement day and before the group does.
 - **Set dates for the work, not only the chart.** Reporting lines on one date; each component's
   ownership, rotation, planning, and budget line on its own date. The reorganization is finished when
   those dates have passed.
@@ -163,7 +161,7 @@ provides. This book's recommendation has three properties:
 flowchart TD
     A["Problem and criteria shared"] --> B["Design decided privately"]
     B --> C["Every name and component"]
-    C --> D["One-to-ones, same day"]
+    C --> D["One-on-ones, same day"]
     D --> E["Group announcement, FAQ"]
     E --> F["Effective within 2 weeks"]
     F --> G["Handoffs by week 6"]
@@ -174,6 +172,22 @@ Patrick Lencioni argues that leaders should agree on a few answers and repeat th
 than feels necessary ([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage);
 **expert opinion**).
 Here: why the structure changes, what does not, where each person sits, and when uncertainty ends.
+
+A skeleton for the written announcement (**this book's recommendation**), sent after the
+one-on-ones:
+
+1. **The problem**, with the evidence, in two or three sentences.
+2. **The change**: the new teams, their managers, and what each owns.
+3. **What does not change**: pay, levels, and the teams and systems not affected.
+4. **The dates**: when reporting lines change, and each handoff date.
+5. **Where to ask**: a named person and an open session within the week.
+
+FAQ headings that answer most of what people ask: Why now? Why not a smaller change? Does my job,
+level, or pay change? Who is my manager, and who reviews my work? What happens to my current work and
+on-call? When will we know if it worked?
+
+Tell a manager whose scope shrinks before anyone else, in person, with the reason and their next
+scope already defined. Ask what they need to say to their team, and let them say it.
 
 A manager who inherits a team is in a new role. Michael Watkins treats the first months in a new role
 as a period that needs its own plan: diagnose, secure early wins, build key relationships deliberately
@@ -216,9 +230,10 @@ A misfit has three responses, from cheapest to dearest:
 | Partial reversal | One part failed and the rest works | One team's transition again |
 | Full reversal | The diagnosis behind the change was wrong | A full transition cost, plus lost trust in the next proposal |
 
-Most failed reorganizations need an adjustment. Take this chapter's 60-engineer example: suppose that
-after two quarters the cross-team items fell from 30 to 26, not to the forecast 18, and most of the 26
-touch one component the new boundary split. Moving that component is the answer; undoing the whole
+Most failed reorganizations need an adjustment. Take the illustrative 60-engineer reorganization worked
+in this chapter's Engineering Organization Example: it moves 14 engineers, costs about 70
+engineer-weeks, and forecasts cross-team items falling from 30 to 18 a quarter. Suppose that after two
+quarters they fell only to 26, and most of the 26 touch one component the new boundary split. Moving that component is the answer; undoing the whole
 design would spend another 70 engineer-weeks to get back to the old problem.
 
 Communicate a reversal the way the original was meant to be: the evidence, what the forecast got
@@ -372,7 +387,7 @@ share of engineers, and the director owns it. What keeps it in weeks is preparat
 every component's owner, and a calendar of announcement-day conversations. Involve human resources early; where job content changes
 substantially, local employment rules may require consultation, so check before promising dates.
 
-In distributed organizations, second-site and remote people get their one-to-ones in their working
+In distributed organizations, second-site and remote people get their one-on-ones in their working
 hours, and nobody attends the announcement as the remote audience of a room.
 
 At this size, succession coverage fits in one table of 10 to 20 roles, reviewed twice a year with the
@@ -421,28 +436,26 @@ to name possible successors for each director and show them already doing parts 
     Week 44, in quarter 4 (weeks 40 to 52) of the director's first year. Quarter 3 had 14 [Sev1 and
     Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents against 30 at baseline, and both renewal
     commitments are delivered. The director has just drafted a year-2 organization for the CTO. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the [cast](../../case-studies/northstar/cast.md).
 
 This case is **fictional**. It is set at Northstar in week 44, and it is a plan, not a result: whether
-Victor Lindqvist (CTO) approves the reorganization, and how it goes, is left open. The starting state is
-in the [baseline data](../../case-studies/northstar/baseline-data.md) and
-[the director's first year](../../case-studies/northstar/first-quarter.md).
+Victor Lindqvist (CTO) approves the reorganization, and how it goes, is left open.
 
 **The proposal in brief.** Chapter 35 describes the design and its alternatives in full. In short,
 effective in week 53 (the first week of year 2):
 
 - Customer Experience splits into Web (Daniel Cho, its current manager, with 11 engineers) and Mobile
   (5 engineers in Bogotá under Mateo Arango Ríos, their informal lead, whose seat is not backfilled).
-- core/permissions, an unowned tier 1 module of Core, moves to Orders (Priya Raman's team); search-svc
+- core/permissions, a tier 1 Core module changed by four teams and unowned since baseline, moves to
+  Orders (Priya Raman's team); search-svc
   moves from Orders to Data and Analytics (Farah Haddad's team).
 - Platform Operations becomes Developer Platform under Tom Becker. The result is 79 engineers and seven
   managers.
 
-Against the three tests, the evidence is structural. Daniel has 17 reports. Mobile and web share one
-board and cadence. Two Sev2 incidents sat at the mobile-bff and mobile boundary. core/permissions has
-been tier 1 without an owner since before the director arrived. Each part is also close to the
-smallest change that answers its problem: six people change manager (Mateo and his five engineers),
-and two components change owner.
+The evidence is structural: Daniel has 17 reports, mobile and web share one board and cadence, and two
+Sev2 incidents sat at the mobile-bff and mobile boundary. Each part is close to the smallest change
+that answers its problem: six people change manager, and two components change owner.
 
 **Transition cost (this chapter's assumptions).**
 
@@ -470,44 +483,47 @@ Mockus finding says to expect trouble.
 | 45 | Victor Lindqvist reviews proposal and plan; no announcement |
 | 46 | Victor decides on Mateo's unbackfilled seat; the director and Daniel confirm with Mateo that he wants the role |
 | 47–49 | Ownership table, rotations, and dates complete; Priya and the director agree the core/permissions readiness criteria; Mobile's board and cadence designed with Mateo |
-| 51 | Announcement day (a Tuesday): the director and Daniel in Bogotá; one-to-ones with Mateo's five engineers there, then Hannah Lindgren (the informal web lead) and the web engineers in Minneapolis by video, then managers and staff engineers, then an all-engineering call with everyone on their own screen, then the written rationale and FAQ |
+| 51 | Announcement day (a Tuesday); order below |
 | 53 | Reporting lines effective; Web and Mobile start separate boards |
 | 54 | search-svc ownership moves to Data and Analytics |
 | 53–56 | core/permissions: runbook and user-facing alerts, Orders engineers shadow incidents, readiness check (Chapter 24), then Orders' on-call starts; nonessential changes frozen in the handover week |
 | 57 | All handoffs done; every component appears once in the ownership inventory |
 | 64 | 90-day review: forecast against actual, transition cost recorded |
 
-What does not change: pay, levels, the ledger rotation, the weekly Core release, and every other
-team's membership. The plan also names that Mateo becomes the first manager based in Bogotá.
+On announcement day the director and Daniel are in Bogotá. They hold one-on-ones with Mateo's five
+engineers there, then with Hannah Lindgren (the informal web lead) and the web engineers in
+Minneapolis by video, then managers and staff engineers. An all-engineering call follows, everyone on
+their own screen, then the written rationale and FAQ. What does not change: pay, levels, the ledger
+rotation, the weekly Core release, and every other team's membership.
 
-**Succession coverage.** Writing the plan raised a question the proposal had not asked: if a name on
-the new chart left, who would step in? In week 44 the director rated cover for the ten critical roles
-(six managers, three staff engineers, the director). The ratings are fictional judgments.
-
-The table names people who have not appeared yet in this chapter: Aisha Bello and Rafael Duarte,
-senior engineers in Orders; Teodora Vasquez-Lund, Billing's senior ledger expert; Sunil Varghese, a
-senior engineer in Data and Analytics who designed the warehouse pipelines; Bram Verhoeven, a senior
-infrastructure engineer who built Core's Jenkins pipeline; and Payments and Integrations' informal tech
-lead, who is not named. The staff engineers are Ines Carvalho (Core domain), Kwame Mensah
-(infrastructure and reliability), and Li Na Zhou (data and integration).
+**Succession coverage.** The point of the table is the difference between coverage on paper and real
+coverage. Writing the plan raised a question the proposal had not asked: if a name on the new chart
+left, who would step in? In week 44 the director rated cover for the ten critical roles (six managers,
+three staff engineers, the director). The ratings are fictional judgments. Several people appear for
+the first time in this chapter; the [cast](../../case-studies/northstar/cast.md) lists everyone.
 
 | Critical role | Ready now or interim | In development | Gap |
 |---|---|---|---|
-| Orders (Priya Raman) | Aisha Bello, interim | Aisha Bello; Rafael Duarte if he chooses management | Nobody ready now |
-| Billing (Marcus Oyelaran) | None | None | Teodora covers ledger knowledge, not management |
-| Payments and Integrations (Elena Sokolova) | Informal tech lead, interim | Same person | One person in both columns |
+| Orders (Priya Raman) | Aisha Bello, interim | Aisha; Rafael Duarte, if he chooses management | Nobody ready now |
+| Billing (Marcus Oyelaran) | None | None | No cover |
+| Payments (Elena Sokolova) | Informal tech lead, interim | Same person | One person in both columns |
 | Customer Experience (Daniel Cho) | Hannah Lindgren, interim | Mateo Arango Ríos | Each covers half the team |
-| Data and Analytics (Farah Haddad) | None | Sunil, architecture half only | Farah holds two roles |
-| Platform Operations (Tom Becker) | Kwame, interim | None | Kwame holds a critical role |
-| Staff, Core domain (Ines) | None | Aisha, Rafael (order capture); Teodora (ledger) | Nobody covers the whole domain |
-| Staff, infrastructure (Kwame) | Bram, Core Jenkins only | None | Bram's expectations plan is open (Chapter 9) |
-| Staff, data and integration (Li Na) | None | Sunil (warehouse); Payments' informal tech lead (integration) | Split cover |
-| Director | Elena, interim | Elena | If Elena acts, Payments falls to its informal tech lead |
+| Data and Analytics (Farah Haddad) | None | Sunil Varghese, architecture only | Farah holds two roles |
+| Platform Operations (Tom Becker) | Kwame Mensah, interim | None | Cover holds a critical role |
+| Staff, Core domain (Ines Carvalho) | None | Aisha, Rafael; Teodora Vasquez-Lund | Nobody covers the whole domain |
+| Staff, infrastructure (Kwame) | Bram Verhoeven, Jenkins only | None | Partial cover |
+| Staff, data and integration (Li Na Zhou) | None | Sunil; Payments' tech lead | Split cover |
+| Director | Elena, interim | Elena | Payments then falls to its tech lead |
 
-In total: none of the 10 roles has a ready-now cover, 6 have an interim cover, and 4 have none (Billing,
-Data and Analytics, and the Core-domain and data-and-integration staff roles). Kwame and Elena already
-hold critical roles. By the coverage rule only Orders, Payments and Integrations, and Customer
-Experience are covered, two of them by one person in both columns.
+Who they are: Aisha Bello and Rafael Duarte are senior engineers in Orders. Teodora Vasquez-Lund is
+Billing's senior ledger expert, who covers ledger knowledge but not management. Sunil Varghese is a
+Data and Analytics senior engineer who designed the warehouse pipelines. Bram Verhoeven is the senior
+infrastructure engineer who built Core's Jenkins pipeline. Payments and Integrations' informal tech
+lead is not named.
+
+In total: none of the 10 roles has a ready-now cover, 6 have an interim cover, and 4 have none. By the
+coverage rule only Orders, Payments and Integrations, and Customer Experience are covered, two of them
+by one person in both columns.
 
 The table also changes the reorganization. Promoting Mateo Arango Ríos, Customer Experience's
 development candidate, leaves the new Mobile manager role with no cover, in a site where nobody else
@@ -516,9 +532,8 @@ director adds a step: the table is redone in week 49 with seven teams, and Mobil
 development action, such as a senior mobile engineer running Mobile's planning, before the
 announcement.
 
-Other proposed actions (fictional): Teodora Vasquez-Lund is asked, without commitment, about a
-management trial; Sunil Varghese co-owns warehouse architecture with Farah Haddad; Elena Sokolova
-chairs the operations review during the director's two weeks of leave. Outcomes are open.
+Other proposed actions: Teodora is asked, without commitment, about a management trial; Sunil
+co-owns warehouse architecture with Farah. Outcomes are open.
 
 ## Exercises
 

@@ -69,7 +69,7 @@ register entries need more than a day of continuous work. Mechanism: ownership a
 free hours. Disconfirming test: if an entry with a named owner and two protected weeks still does not
 move, the mechanism is something else (skill, a blocking decision).
 
-**Carriers.** The managers' weekly meeting chooses which register entries matter most and which team
+**Carriers.** The leadership team meeting chooses which register entries matter most and which team
 holds each. Amara Okafor agrees the capacity in quarter 4 planning, since it comes out of the 8 FTE
 prevention allocation, not on top of it. The staff engineer for the domain reviews the scope.
 
@@ -105,13 +105,13 @@ as such. Both make the next proposal harder to believe.
 **To Marcus.** Thank him and treat it as information, not disloyalty. Ask what would make the managers
 act sooner: which past announcements they waited out and why. Do not ask him to name the two managers.
 
-**What changes in how you propose.** Proposals come to the managers' weekly meeting as a diagnosis first, with the
+**What changes in how you propose.** Proposals come to the leadership team meeting as a diagnosis first, with the
 solution designed there. Every proposal carries a stopping rule and a named person who calls it. The
 change register is shared, so managers can see their load before anything is added. You make fewer
 promises, and you keep them visibly: report each commitment's status at the monthly review.
 
 **Evidence that credibility is returning.** Managers propose changes to your drafts (a sign they expect
-to be heard). The lag between a decision in the managers' weekly meeting and action in teams shortens. A manager
+to be heard). The lag between a decision in the leadership team meeting and action in teams shortens. A manager
 raises a failing initiative before its checkpoint. The quarterly commitments review shows few slips.
 
 A strong answer accepts that recovery takes at least a quarter and is shown, not claimed. The weak answer
@@ -132,7 +132,7 @@ stopped after three days rather than defended.
 
 **Ask of Amara.** That the next practice change is agreed with product before launch, with its capacity
 inside the prevention allocation she already approved, and that product managers raise conflicts
-through the managers' weekly meeting rather than by asking teams to skip. Offer her a seat in the
+through the leadership team meeting rather than by asking teams to skip. Offer her a seat in the
 design of the pilot.
 
 A strong answer keeps the account short and factual, separates the concession from the defense, and

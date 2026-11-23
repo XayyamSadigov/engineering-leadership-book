@@ -70,8 +70,10 @@ changed.
 
 What predicts turnover depends on the setting. That is the conclusion of the two large
 [meta-analyses](../../glossary.md#meta-analysis) (statistical syntheses of many studies) that are the
-usual starting points ([Griffeth, Hom, and Gaertner, 2000](../../references/bibliography.md#griffeth2000meta);
-[Rubenstein et al., 2018](../../references/bibliography.md#rubenstein2018surveying)).
+usual starting points: both stress how much context changes each predictor
+([Griffeth, Hom, and Gaertner, 2000](../../references/bibliography.md#griffeth2000meta);
+[Rubenstein et al., 2018](../../references/bibliography.md#rubenstein2018surveying)). Their summaries
+do not single out predictors that hold everywhere, so this chapter does not list any.
 
 The consequence (**this book's recommendation**, resting on that **research finding**): a ranked list of
 "top reasons engineers leave" from other companies is a weak guide to yours. Your organization is the
@@ -80,10 +82,16 @@ context, and you have to measure it. Two further ideas are directly useful to a 
 **Decision paths.** Lee and Mitchell's unfolding model describes voluntary turnover as four distinct
 decision paths, each with its own psychological process and external events, rather than one slow slide
 from dissatisfaction to departure
-([Lee and Mitchell, 1994](../../references/bibliography.md#lee1994unfolding)). A manager can
-take one inference from it (**this book's recommendation**): an exit question that asks only "what were
-you unhappy with?" misses departures that began with an event. Ask instead what happened in the months
-before the person started looking.
+([Lee and Mitchell, 1994](../../references/bibliography.md#lee1994unfolding)). This book does not
+reproduce the four paths. For a manager, a simpler working split is enough (**this book's
+recommendation**, not the model's own categories):
+
+| How the departure began | What it looks like | What to ask |
+|---|---|---|
+| With an event | A weekend incident, a rejected proposal, or a manager change starts the person looking, sometimes within weeks | "What happened in the months before you started looking?" |
+| With slow pressure | Dissatisfaction builds over quarters until an offer arrives | "When did this stop being a place you wanted to stay?" |
+
+An exit question that asks only "what were you unhappy with?" misses the first kind.
 
 **Job embeddedness.** Mitchell and colleagues defined embeddedness as a person's links to other people
 and groups, their fit with job, organization, and community, and what they would sacrifice by leaving.
@@ -106,9 +114,16 @@ goals lower it ([Ryan and Deci, 2000](../../references/bibliography.md#ryan2000s
 contingent tangible rewards undermine intrinsic motivation is **contested**, as the paper itself notes;
 do not read it as "pay does not matter". Pay is fairness and market position, covered in Chapter 8.
 
-For software engineers, a systematic review by Beecham and colleagues found that motivation
-depends on the engineer's characteristics (such as a need for variety), internal controls (such as
-personality), and external moderators (such as career stage), and that existing models did not capture
+What a manager can do with each need (**this book's recommendation**, applying the theory):
+
+| Need | What erodes it in engineering | What you can change this quarter |
+|---|---|---|
+| Autonomy | Decisions overruled without reasons; tasks handed down fully designed | Delegate outcomes with a stated level of control (Chapter 2); explain the constraint when you overrule |
+| Competence | Endless interrupts, no time to finish anything well; no feedback | Protect blocks of focus time; give specific feedback on the work (Chapter 6); one stretch assignment |
+| Relatedness | Isolation on a remote edge of the team; credit going elsewhere | Pair people across locations; name contributions in public; hold the one-on-ones you schedule |
+
+For software engineers, a systematic review by Beecham and colleagues found that motivation depends on
+the engineer's characteristics, personality, and career stage, and that existing models did not capture
 how much these needs vary ([Beecham et al., 2008](../../references/bibliography.md#beecham2008motivation)).
 The implication: what retains a staff engineer eleven years into a codebase is not what
 retains a second-year engineer, and you learn which by asking. Of the manager-effect evidence in Chapter
@@ -213,9 +228,9 @@ de-risking, not confrontation: spread the knowledge on a schedule, and say why.
 
 A counter-offer is an improved package offered to keep someone who has resigned or holds an outside
 offer. The evidence is thin. The one peer-reviewed study this book found, of 650 US research-university
-faculty, states that few studies examine the process, describes retention offers as discretionary and
-often inequitable, and found that women and racially minoritized faculty were less likely to receive
-them, while desire to leave and telling leadership were associated with receiving one
+faculty, describes retention offers as discretionary and often inequitable. Women and racially
+minoritized faculty were less likely to receive them, while desire to leave and telling leadership
+were associated with receiving one
 ([White-Lewis et al., 2024](../../references/bibliography.md#whitelewis2024counteroffers)).
 It says nothing about engineers or about whether those retained stayed. Widely repeated figures on how
 many acceptors leave within a year come from recruiting firms with undisclosed methods; this book does
@@ -236,9 +251,11 @@ not necessarily the underpaid or the most valuable. The rest is **this book's re
     Week 20 of the Engineering Director's first year at Northstar, the book's fictional order-to-cash
     company. Serious (Sev1 and Sev2) incidents fell from 30 to 21 in the first quarter. Billing still
     relies on three ledger engineers for most of its on-call pages, after a fourth resigned before the
-    director arrived. See the [timeline](../../case-studies/northstar/timeline.md).
+    director arrived. See the [timeline](../../case-studies/northstar/timeline.md). New to Northstar?
+    Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
-This worked example is **illustrative**. It uses the
+This worked example is **illustrative**. It prices the offer that ends the Case Study below, using the
 [baseline](../../case-studies/northstar/baseline-data.md) on-call and attrition figures, plus
 assumptions stated in the text.
 
@@ -258,9 +275,8 @@ $185,000 fully loaded cost per engineer-year:
 | Recruiting | Agency or internal recruiting time (assumption) | about $25,000 |
 | **Total** | | **about $124,000** |
 
-**What the table does not show.** In the baseline quarter the three ledger engineers handled 126 of
-Billing's 180 pages and 54 of its 64 after-hours pages. If two people absorb the same load, each handles
-about 50 percent more pages, day and night (63 a quarter instead of 42). That is exactly the pressure
+**What the table does not show.** In the baseline quarter the three ledger engineers handled about 42
+pages each. If two people absorb the same load, each handles about 50 percent more, day and night. That is exactly the pressure
 that preceded the last ledger resignation (see the Case Study). The second-order risk is a
 second departure, which is collective turnover.
 
@@ -295,7 +311,7 @@ flowchart TD
 
 | Question | How to answer it | Weak answer |
 |---|---|---|
-| Would you regret the departure? | Decided before the resignation, in a talent review; not re-decided under pressure | "Everyone is regretted when they resign" |
+| Would you regret the departure? | Decided before the resignation, in a talent review (a periodic meeting where managers review their people's risk and potential); not re-decided under pressure | "Everyone is regretted when they resign" |
 | Is pay the cause? | The stay interview and the conversation now, not the exit form | Taking "a better offer" as the cause |
 | Is the cause fixable, credibly and soon? | A change you can make within weeks and they can verify | Promises you made before and did not keep |
 | Is the person underpaid against peers and market? | Pay data for the role and level | Comparing only to the outside offer |
@@ -339,7 +355,8 @@ everything and frustrated by how little changes. Countermeasure: a written manda
 (Chapter 4).
 
 **Retention as an HR metric.** Attrition becomes a manager's target. Signal: departures reclassified as
-"non-regretted" after the fact; low performers kept to protect the number. Countermeasure: classify
+"non-regretted" ([regretted attrition](../../glossary.md#attrition-and-regretted-attrition) counts only
+people you wanted to keep) after the fact; low performers kept to protect the number. Countermeasure: classify
 regret before anyone resigns; review attrition with on-call and decision-wait data, not alone.
 
 **Collective blindness.** Departures reviewed one at a time. Signal: two of a small group of experts
@@ -405,8 +422,8 @@ with leading indicators: on-call load, after-hours work, and how long proposals 
 ## Case Study
 
 This case is **fictional**. The exit data cover the twelve months before the director arrived; the stay
-interviews and the offer are set in quarter 2 (weeks 14 to 26), after
-[the first quarter](../../case-studies/northstar/first-quarter.md), with outcomes left open.
+interviews and the offer are set in quarter 2 (weeks 14 to 26), after the first quarter (see
+[the year 1 record](../../case-studies/northstar/first-quarter.md)), with outcomes left open.
 
 **What the exit records said.** Eight engineers left in the twelve months before arrival: two
 each from Billing, Orders, and Data and Analytics, one each from Customer Experience and Payments and
@@ -437,11 +454,10 @@ he resigned; he declined. In this chapter's terms: pressure, an event, an altern
 counter-offer aimed at the one factor that was not the cause.
 
 **Ines Carvalho's stay interview.** Ines, a staff engineer, has eleven years at Northstar. At
-baseline she answered about eight hours a week of unscheduled questions about Core, the shared Java
-monolith, without owning decisions. Her first-quarter mandate covers Core module boundaries and
-contract tests, and she owns the Core code standard. Her redesign of core/customer, a module four teams
-change, would take about three engineer-years and is not funded. A first slice, extracting permissions
-from core/customer, is funded for quarter 2, and she leads it (Chapter 21). In week 14 the director
+baseline she answered unscheduled questions about Core, the shared Java monolith, without owning
+decisions. Her first-quarter mandate covers Core module boundaries and contract tests, and she owns the
+Core code standard. Her full redesign of core/customer, a module four teams change, is not funded; a
+first slice, extracting permissions, is funded for quarter 2, and she leads it. In week 14 the director
 held a stay interview with her. What keeps her: the domain, the engineers she has trained, and the
 mandate, the first time her authority was written down. What would make her leave: the redesign
 rejected with no path for the rest of it, and the interruptions continuing. Recruiters contact her monthly; she has not replied.
@@ -453,23 +469,26 @@ issues: her judgment on Core is the company's best, and the way it is delivered 
 **Billing's remaining ledger experts.** Marcus Oyelaran held stay interviews with the three in weeks 14
 and 15. All three named the team and the domain as reasons to stay. Two named after-hours escalation as
 what would make them leave; one, Tomasz Wierzbicki, also said his pay had not been reviewed in two years.
-In week 20, Tomasz told Marcus he had an offer 20 percent above his base salary.
+In week 20 he brought Marcus an outside offer (priced in the Engineering Organization Example).
 
 The director holds four decisions: whether to counter Tomasz's offer; what to change in ledger
 escalation regardless; what further slices of Ines's redesign, beyond the funded extraction, can be
-funded; and how to address her review behavior without making her feel managed out. The exercises take
-them in turn.
+funded; and how to address her review behavior without making her feel managed out. The lesson of the
+case: each warning was visible in stay data months before any offer. The exercises take the decisions
+in turn.
 
 ## Exercises
 
-Worked solutions are in the [chapter 10 solutions](../../solutions/ch10-solutions.md).
+Worked solutions are in the [chapter 10 solutions](../../solutions/ch10-solutions.md). Northstar data is
+on the [baseline page](../../case-studies/northstar/baseline-data.md); who's who is on the
+[cast](../../case-studies/northstar/cast.md) page.
 
 ### Foundational
 
 **F1.** Using the Case Study's two tables, write the one-paragraph summary of Northstar's attrition that
 HR should have sent the previous leadership. State which recorded reasons you would keep, which you would
-recode, and the two questions you would add to the exit interview to capture events and decision
-paths. Explain why one primary reason per leaver misled the company.
+recode, and the two questions you would add to the exit interview to capture events and how each
+decision began. Explain why one primary reason per leaver misled the company.
 
 **F2.** Draft a 30-minute stay interview guide for one of Billing's ledger engineers. Include no more than
 six questions, map each to a part of the mental model (pressure, event, binding, alternative), and say

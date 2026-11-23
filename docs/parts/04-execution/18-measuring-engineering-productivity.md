@@ -2,18 +2,15 @@
 
 Sooner or later someone senior asks how productive engineering is, and wants one number. This chapter
 explains what the best-known measurement frameworks measure, how their evidence was produced, how every
-metric gets gamed, and why the book refuses to score individual engineers with delivery metrics. Related
-topics have their own chapters. They are flow and lead time from commitment to customer (Chapter 16), quality
-measures ([Chapter 19](../05-engineering-quality/19-defining-measuring-and-owning-quality.md)), the
-quality scorecard ([Chapter 27](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)),
-scorecards in the operating system (Chapter 38), individual performance (Chapter 9), and claims about AI
-and productivity (Chapter 54).
+metric gets gamed, and why the book refuses to score individual engineers with delivery metrics. Flow
+(Chapter 16), quality measures ([Chapter 19](../05-engineering-quality/19-defining-measuring-and-owning-quality.md)),
+individual performance (Chapter 9), and AI productivity claims (Chapter 54) have their own chapters.
 
 ## Why This Matters
 
 **For a team**, measurement is a feedback loop. A team that sees its
 [change lead time](../../glossary.md#lead-time) (commit to running in production) and its
-[change failure rate](../../glossary.md#change-failure-rate) (share of deployments that fail) can tell
+[change failure rate](../../glossary.md#change-failure-rate) (share of changes that fail in production) can tell
 whether last month's pipeline work helped.
 
 **For an organization of 50 to 150 engineers**, measurement is how a director sees work they no longer
@@ -87,7 +84,7 @@ metrics, the [DORA metrics](../../glossary.md#dora-metrics). Its current guide (
 | Throughput | Change lead time | Time from commit to version control to deployment in production |
 | Throughput | Deployment frequency | Deployments over a period, or time between them |
 | Throughput | Failed deployment recovery time | Time to recover from a deployment that needs immediate intervention |
-| Instability | Change fail rate (DORA's term; this book says change failure rate) | Share of deployments needing immediate intervention, such as a rollback or hotfix |
+| Instability | Change failure rate | Share of deployments needing immediate intervention, such as a rollback or hotfix |
 | Instability | Deployment rework rate | Share of deployments that are unplanned and caused by a production incident |
 
 Three properties matter. The metrics describe **a delivery system**: the guide applies them to one
@@ -106,8 +103,8 @@ Compare an organization with itself over time, under one written definition.
 DORA's claims rest on an annual survey. The 2023 report's methodology describes recruiting through blog
 posts, email, social media, and snowball sampling (people forwarding the survey), topped up with a
 panel to reach under-represented groups and industries. Nearly 3,000 professionals responded that year,
-more than 36,000 over the program's life. Survey items are grouped into constructs validated with factor
-analysis, and hypothesized models are tested with Bayesian structural equation models
+more than 36,000 over the program's life. DORA groups related questions into measures and uses
+statistical models to test which practices predict which outcomes
 ([DORA, 2023](../../references/bibliography.md#dora2023accelerate)). *Accelerate* presents earlier years
 of the program for a general audience
 ([Forsgren, Humble, and Kim, 2018](../../references/bibliography.md#forsgren2018accelerate)).
@@ -244,23 +241,24 @@ behavior (Chapter 9); delivery data can open a conversation, not deliver the ver
     This example uses the baseline quarter, before the director arrived: 30 Sev1 and Sev2 incidents (the
     two highest severity levels), 34 percent of capacity on unplanned work, and Core shipping on a
     two-week release train. The case study below moves to the start of quarter 2 (week 14). See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This example is **illustrative**. It uses Northstar's fictional baseline to show what a "deployments per
-engineer" league table would say. Deployments per month are from `teams.csv`; quarterly figures assume
-three equal months.
+engineer" league table would say. Deployments per month are from `teams.csv`.
 
-| Team | Engineers | Deploys per month | Per engineer | Change failure rate | Failures in a quarter (approx.) | 95% interval |
-|---|---|---|---|---|---|---|
-| Payments and Integrations | 12 | 22 | 1.83 | 21% | 14 of 66 | 13–33% |
-| Customer Experience | 15 | 26 | 1.73 | 17% | 13 of 78 | 10–26% |
-| Platform Operations | 12 | 14 | 1.17 | 15% | 6 of 42 | 7–28% |
-| Data and Analytics | 11 | 11 | 1.00 | 12% | 4 of 33 | 5–27% |
-| Orders | 14 | 11 | 0.79 | 29% | 10 of 33 | 17–47% |
-| Billing | 13 | 8 | 0.62 | 34% | 8 of 24 | 18–53% |
+| Team | Engineers | Deploys per month | Per engineer | Change failure rate | Plausible range |
+|---|---|---|---|---|---|
+| Payments and Integrations | 12 | 22 | 1.83 | 21% | 13–33% |
+| Customer Experience | 15 | 26 | 1.73 | 17% | 10–26% |
+| Platform Operations | 12 | 14 | 1.17 | 15% | 7–28% |
+| Data and Analytics | 11 | 11 | 1.00 | 12% | 5–27% |
+| Orders | 14 | 11 | 0.79 | 29% | 17–47% |
+| Billing | 13 | 8 | 0.62 | 34% | 18–53% |
 
-The intervals are Wilson score intervals, a standard way to state the uncertainty of a proportion from a
-small count. Four readings:
+The plausible range is a standard 95 percent interval for a rate built from one quarter's small number
+of deployments (24 to 78 per team). Four readings:
 
 **The ranking measures architecture.** Orders and Billing ship most changes through the Core
 [release train](../../glossary.md#release-train), a release that left on a fixed schedule twice a month
@@ -368,6 +366,7 @@ the director looks for friction shared across teams, usually platform work.
 (Chapter 38 covers scorecards and capacity allocation; the
 [quality scorecard template](../../templates/engineering-quality-scorecard.md) runs alongside). Access rules
 are written before the first dashboard ships, including that no per-person view exists.
+
 ## CTO Perspective
 
 At executive level, "how productive is engineering?" usually means one of three questions, and none is
@@ -382,6 +381,18 @@ DORA's throughput metrics and the friction measures locate it.
 
 **Are we competitive?** Benchmarks tempt most here and mislead most: self-selected respondents, other
 definitions.
+
+An **illustrative** answer to a CFO, from a hypothetical company, shows the register:
+
+> "You asked whether our 120 engineers are productive. Last year 38 percent of their time went to new
+> capability, 22 percent to prevention, and 40 percent to unplanned work, mostly incidents. Prevention
+> cut that unplanned share from 48 percent, which returned about ten engineers to product work. Lead
+> time from commit to production fell from 12 days to 5, and the change failure rate held. Next
+> quarter's decision is whether to keep prevention at 22 percent. I recommend yes, and I will report
+> the unplanned share monthly. I will not report output per engineer: it would reward splitting work
+> and penalize the reviewing and incident work that made these gains."
+
+The [executive update template](../../templates/executive-update.md) gives the full format.
 
 The CTO also protects the instrument. A per-engineer number admitted to the board pack is hard to remove,
 and every later productivity claim, including the AI tool claims of Chapter 54, will be argued in it.
@@ -405,9 +416,8 @@ and every later productivity claim, including the AI tool claims of Chapter 54, 
 ## Case Study
 
 This case is **fictional**. It describes how Northstar measures delivery at baseline and a decision the
-reader faces at the start of the director's second quarter. Quarter 1 cut Sev1 and Sev2 incidents from
-30 to 21 and moved Core to weekly releases
-([the director's first quarter](../../case-studies/northstar/first-quarter.md)).
+reader faces at the start of the director's second quarter, after quarter 1 moved Core to weekly
+releases (see the [year 1 record](../../case-studies/northstar/first-quarter.md)).
 
 **How delivery is measured today.** Deployment counts and lead times come from pipeline logs in four CI
 systems, joined by hand; the four shell-script services log nothing, so their numbers are estimates from
@@ -438,7 +448,7 @@ and offers:
 | Friction | Review wait (21 working hours at baseline), Core pipeline duration (74 minutes), main-branch red time, failures unrelated to the change | Repository | Code host and CI |
 | Experience | Twice-yearly survey: feedback loops, cognitive load, flow, satisfaction | Team, at least five respondents | New; first run in quarter 2 |
 | Investment | Capacity by category: features, [prevention](../../glossary.md#prevention-allocation) (12 [FTE](../../glossary.md#fte), full-time equivalent engineers), unplanned work | Organization | Planning tool, time sampling |
-| Excluded | Per-engineer counts; story points across teams; survey scores in reviews | | Written into the access rules |
+| Excluded | Per-engineer counts; [story points](../../glossary.md#velocity-and-story-points) (relative size estimates) across teams; survey scores in reviews | | Written into the access rules |
 
 The director estimates about six engineer-weeks of Platform Operations time, paid from
 the prevention allocation, to build the shared deployment-event store, which retires the monthly hand join.

@@ -1,7 +1,7 @@
 # Project 3 solution: an engineering quality transformation plan for Northstar
 
 This is one worked answer to [Project 3](../p3-quality-transformation-plan.md). It follows the
-director's actual choices on the [first quarter](../../case-studies/northstar/first-quarter.md) page
+director's actual choices on the [year 1 record](../../case-studies/northstar/first-quarter.md)
 where the baseline data supports them, and departs from them in two places where the data available
 at arrival supported a better move. Other answers can score as well; the last sections say which, and
 show how the rubric separates a strong plan from a weak one. All Northstar facts are fictional.

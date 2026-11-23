@@ -18,7 +18,7 @@ a team's diagnostic view).
 |---|---|---|
 | Contractual availability or main customer outcome | Customer-detected share | Director (row), reliability staff engineer (data) |
 | Quality block, by reference to the quality scorecard | As defined there | As defined there |
-| Deployment frequency | Change fail rate | A manager (row), platform team (data) |
+| Deployment frequency | Change failure rate | A manager (row), platform team (data) |
 | Committed items delivered | Forecast calibration | Director |
 | Capacity by category against plan | Unplanned share by team | Director (row), time-sampling owner (data) |
 | Sev1 and Sev2 count (in the quality block if it exists) | Customer-detected share and a severity audit | Incident process owner |
@@ -53,14 +53,14 @@ team from completed items, since the 15 to 35 percent range is Orders' history, 
 Goal-setting research suggests a specific, difficult goal will focus effort on it; that is the point.
 The risk, which both sides of the Ordóñez and Locke and Latham exchange accept as a mechanism, is
 neglect of what lies outside the goal. Here the likely distortions are smaller but emptier releases,
-releases with no change counted, or pressure to skip checks to keep the cadence, so change fail rate and
+releases with no change counted, or pressure to skip checks to keep the cadence, so change failure rate and
 recurrence could rise while the key result is met. DORA's guide also warns that using its metrics as
 goals makes gaming more likely.
 
 **A better version:** make the objective the outcome ("Core changes reach customers faster and more
-safely"), with key results such as median Core lead time below an agreed figure, paired with change fail
+safely"), with key results such as median Core lead time below an agreed figure, paired with change failure
 rate and with deployment rework. If deployment frequency stays as a key result, count only releases
-with at least one change and publish it beside change fail rate. **Criteria:** names a concrete gaming
+with at least one change and publish it beside change failure rate. **Criteria:** names a concrete gaming
 path, adds a pair, moves the key result toward an outcome. **Weak answer:** "daily is too ambitious",
 which argues about difficulty rather than what the goal will distort.
 
@@ -125,7 +125,7 @@ by several between quarters by chance. Offer an outcome instead, paired with the
    percent for the quarter. Pair: customer-detected share and the weekly severity audit.
 2. **We keep what we promise.** KR: at least 85 percent of committed items delivered. Pair: forecast
    calibration and the size of the target band, so the line is not lowered to hit the number.
-3. **Fewer of our own changes hurt customers.** KR: Core change fail rate below an agreed figure from
+3. **Fewer of our own changes hurt customers.** KR: Core change failure rate below an agreed figure from
    quarter 2's measured baseline. Pair: deployment frequency and recurrence.
 
 **Criteria:** three objectives tied to the allocation, every KR paired with a scorecard row, no KR that

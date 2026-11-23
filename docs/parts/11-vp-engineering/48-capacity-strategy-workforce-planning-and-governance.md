@@ -30,7 +30,8 @@ slows every decision that crosses it.
 
 After this chapter you will be able to:
 
-- Build a workforce plan that models attrition, time to fill, promotion, and level mix, with its
+- Build a workforce plan that models [attrition](../../glossary.md#attrition-and-regretted-attrition)
+  (people leaving), time to fill, promotion, and level mix, with its
   assumptions stated.
 - Decide where to place engineering work by location and sourcing model, using the evidence on
   distributed and offshored development rather than rate cards alone.
@@ -100,6 +101,28 @@ helps to read costs as finance does
 ([Berman and Knight, 2006](../../references/bibliography.md#berman2006financial)): fully loaded cost (salary, benefits, taxes, equipment, space) rather than salary, and a
 budget that assumes every funded seat is filled every week. Vacancy weeks are approved budget unspent.
 
+**Demand against supply.** Start the plan from demand: the funded bets, translated into the skills
+and domains they need, compared with who is here. Chapter 47's Commerce gap table does this by area.
+A plan does it by skill too, as in this **illustrative** group of 60 engineers:
+
+| Skill or domain | Needed next year (FTE) | Present (FTE) | Gap and action |
+|---|---|---|---|
+| Payments integration | 8 | 5 | −3: two backfills shaped toward payments, one internal move |
+| Search and ranking | 4 | 6 | +2: lend to the catalog bet, no backfill |
+| Mobile | 6 | 6 | None |
+| Data pipelines | 5 | 3 | −2: hire one, train one |
+
+Backfills are where the gaps close, so the table tells each
+[requisition](../../glossary.md#requisition) (an approved request to hire into a seat) what to look
+for.
+
+**Planning growth.** When headcount may grow, the limit is usually absorption, not budget. Three
+throughputs cap it (**this book's recommendation**; measure your own). Recruiting: each hire costs
+recruiter time and dozens of interviewer hours, so count interview loops per quarter that your
+interviewers can staff (Chapter 7). Onboarding: each new person takes mentor time for months. Team
+absorption: a team that adds more than one or two people a quarter spends that quarter teaching.
+Plan hires by team and quarter against these limits, and fund the mentoring as capacity.
+
 ### Attrition, vacancy, and knowledge
 
 > average missing capacity = departures per year × weeks to fill ÷ 52
@@ -108,12 +131,13 @@ Add ramp-up: the idea credited to Brooks is that new people consume the time of 
 ([Brooks, 1995](../../references/bibliography.md#brooks1995mythical); **expert opinion**). The
 research is about knowledge. In one large project, recent departures were associated with a higher probability of
 customer-reported defects ([Mockus, 2010](../../references/bibliography.md#mockus2010volatility);
-**research finding**, observational). A study of Chrome and a project at Avaya found that historical losses
-from departed developers' files could exceed three times the expected loss. Naming successors reduced
-expected loss by up to 15 percent
+**research finding**, observational). Rigby and colleagues measured abandoned files, those whose
+knowledgeable developers had all left, in Chrome and a project at Avaya. In bad periods the loss ran
+to more than three times its expected level, and naming successors for at-risk files cut the expected
+loss by up to 15 percent
 ([Rigby et al., 2016](../../references/bibliography.md#rigby2016turnover); **research finding**, two
-projects). Plan for the average vacancy; protect the few knowledge areas where one departure is a tail
-risk.
+projects). So plan for the average vacancy, and name successors for the few areas where one departure
+is a tail risk.
 
 Attrition is partly a management outcome: at one high-tech firm, survey-measured people management
 skills had a strong negative relation to turnover
@@ -286,8 +310,8 @@ Senior and above rises to 325 (65 percent).
 $1,060,000 a year, about 1 percent of the held-mix payroll of $102.9 million, decided by nobody.
 
 **Cost of holding it.** If each of 38 entry-level hires needs four hours a week of senior time for 26
-weeks (an assumption), that is 3,952 hours, about 2.1 senior engineer-years at 1,840 hours a year.
-Policy 2 also makes no external Staff hires at all. So the VP sets **a band per group**: the platform organization may hold
+weeks (an assumption), that is about 2 senior engineer-years of mentoring. Policy 2 also makes no
+external Staff hires at all. So the VP sets **a band per group**: the platform organization may hold
 a higher senior share; feature-heavy product groups hire more at entry level and staff the mentoring.
 
 **Vendors.** About 60 contractors on two contracts sit outside the 500. Every vendor scope
@@ -311,7 +335,7 @@ The rest belongs to the VPs and their directors.
 
 ## Decision Framework
 
-**For each departure, before the requisition (the approved request to hire into a seat) opens:**
+**For each departure, before the requisition opens:**
 
 | Question | If yes | If no |
 |---|---|---|
@@ -440,68 +464,62 @@ Lindqvist (CTO), raised in week 45 (Chapter 47).
 ## Case Study
 
 !!! info "Northstar so far"
-    Week 41 of the director's first year. Sev1 and Sev2 incidents fell from 30 a quarter to 14 in
-    quarter 3 with headcount flat at 80 engineers. The level mix in week 40 was 39 Engineers, 38
-    Seniors, and 3 Staff. Victor Lindqvist (CTO) has asked for the year-2 plans. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    Week 41 of the director's first year. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3)
+    incidents (the two most severe levels) fell from 30 a quarter to 14 in quarter 3 with headcount
+    flat. Victor Lindqvist (CTO) has asked for the year-2 plans. See the
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 This case is **fictional**, set in weeks 41 to 49; the decision has no recorded outcome, and it is
 yours.
 
 **The request.** In week 41 Rajiv Menon (CFO) asks for a year-2 workforce plan to accompany the budget
-pack; Victor asks for options. The rule holds: 87 seats (80 engineers), backfills allowed, no net
-additions.
+pack; Victor asks for options. The rule holds: 87 [seats](../../glossary.md#seat), backfills allowed,
+no net additions. A seat is any funded position: Northstar's 87 are 80 engineers, 6 managers, and the
+director.
 
-**Supply.** The mix at arrival was 44 Engineers, 33 Seniors, 3 Staff; the quarter-3 cycle promoted
-five to Senior, giving 39, 38, and 3 (assuming departures since arrival were backfilled at the same
-level). Locations: Minneapolis 52, Bogotá 16, remote US 12. Finance's figure for a Bogotá
-engineer-year, fully loaded with the office, is about $110,000. Against Northstar's $185,000 average
-over 87 people, US-based staff therefore average about $202,000.
+**The facts the plan uses.**
 
-**Flows.** Assume the baseline rate continues: 8 departures a year and 15 weeks to fill. Vacancy is
-2.3 engineers on average, about $427,000 of approved budget unspent. If the year-2 proposal's Mobile
-team is approved, one engineer becomes its manager, that seat is not backfilled, and the plan starts
-at 79 engineers; it must work either way.
+| Fact | Value |
+|---|---|
+| Level mix, week 40 | 39 Engineers, 38 Seniors, 3 Staff |
+| Locations | Minneapolis 52, Bogotá 16, remote US 12 |
+| Loaded cost | About $110,000 a year in Bogotá; about $168,000 for a US Engineer |
+| Flows | 8 departures a year, 15 weeks to fill: 2.3 engineers missing on average, about $427,000 unspent |
+| Knowledge risk | At baseline one person could safely change ledger period close, and one currency and rounding |
 
-| Option | What it does | Capacity | Cost | Risks |
-|---|---|---|---|---|
-| A. Like-for-like | Same level, team, location | Vacancy about 2.3 FTE | Baseline | Senior drift; eight decisions unused |
-| B. Shaped | Entry level unless a named knowledge gap; seats in teams with a Bogotá cluster may move there | As A, plus mentoring | Saves about $91,000 (level) and $174,000 (location) at full year | Mentoring load; Bogotá has no site manager unless the proposal passes |
-| C. Hire ahead | Two requisitions open before departures, for ledger and Core roles | Vacancy about 0.9 FTE | Within budget; up to $370,000 over if attrition falls short | Engineers briefly 81 or 82 (88 or 89 of the 87 seats); needs an explicit, dated exception to the 87-seat rule from Victor Lindqvist and Rajiv Menon |
-| D. Vendor | Fixed-scope contract for the Core framework migration (120 to 180 engineer-days) | Frees Core engineers | From the underspend; needs a quote | Core, the Java monolith, has 41 percent line coverage, so the work is weakly verifiable |
+One condition: if the year-2 organization proposal creates a Mobile team, its manager comes from the
+engineers and that seat is not refilled, so the plan starts at 79 engineers. It must work either way.
 
-The arithmetic, with assumptions:
+| Option | What it does | Cost or saving | Main risk |
+|---|---|---|---|
+| A. Like-for-like | Same level, team, location | Baseline | Senior drift; eight decisions unused |
+| B. Shaped | Entry level unless a named knowledge gap; some seats move to Bogotá | Saves about $91,000 (level) and $174,000 (location) at full year | Mentoring load; no Bogotá site manager |
+| C. Hire ahead | Two requisitions open before departures, for ledger and Core | Vacancy falls to about 0.9 FTE; up to $370,000 over if fewer leave | Briefly 88 or 89 seats: needs a dated exception |
+| D. Vendor | Fixed-scope contract for the Core framework migration | Paid from the vacancy underspend | Core's low test coverage makes the work hard to verify |
 
-- **B, level.** Leavers half Engineer, half Senior (the mix is 39 to 38). Hiring two of four Senior
-  replacements at Engineer level saves $45,500 per seat, so $91,000. (US salary midpoints of $152,500
-  and $120,000, times Chapter 8's 1.4 loading assumption.)
-- **B, location.** Last year's departures: Billing 2, Orders 2, Data and Analytics 2, Customer
-  Experience 1, Payments and Integrations 1. Up to four seats are in teams with a Bogotá cluster (the
-  Customer Experience one only if mobile). Moving three saves about $58,000
-  each (a loaded US Engineer at midpoint, $168,000, against the Bogotá average). That is $174,000 at
-  full year, about half in year 2 if hires land mid-year.
-- **C.** With an approved pipeline of candidates, the lag falls from 15 weeks to about 6 (one to
-  offer, five of notice, as on Billing's last ledger hire): 8 × 6 ÷ 52 = 0.9
-  [FTE](../../glossary.md#fte), recovering about 1.4. If fewer than
-  eight leave, up to two extra people: 2 × $185,000 = $370,000.
+The derivations (which seats, which salaries, the shorter hiring lag) are in the
+[solutions](../../solutions/ch48-solutions.md#x1-northstars-year-2-workforce-plan-recommendation).
 
-**Governance.** The draft adopts Chapter 44's delivery rule as an organization-wide policy: no date
-to a customer without an engineering estimate and a named owner, with estimates within five working
-days. It passes the externality test, because a missed customer date lands on sales, customer success,
-and the renewal. Greg Tanaka (VP Sales) objects that it slows deals.
+**Governance.** The draft also makes one delivery rule organization-wide: no date to a customer
+without an engineering estimate and a named owner. It passes the externality test, because a missed
+customer date lands on sales, customer success, and the renewal. Greg Tanaka (VP Sales) objects that
+it slows deals.
 
-**Where it stands.** In week 49 the director sends the draft to Victor and Rajiv with the
-recommendation left open. Rajiv likes B and dislikes C, because a headcount above the 87 seats, however brief,
-appears in the board pack. Victor wants ledger risk first: at baseline one person could safely change
-period close and one currency and rounding, and B's entry-level default does not obviously reach
-either. The outside offer a Billing ledger engineer reported in week 20, and the year-2 proposal, are
-still open.
+**Where it stands.** In week 49 the draft goes to Victor and Rajiv with the recommendation open. Rajiv
+likes B and dislikes C, because any headcount above 87 appears in the
+[board pack](../../glossary.md#board-pack). Victor wants ledger
+risk first, and B's entry-level default does not obviously reach it. The open choice is how to buy
+down the ledger risk without breaking the seat rule Rajiv reports to the board.
 
 ## Exercises
 
-Solutions are in [chapter 48 solutions](../../solutions/ch48-solutions.md). Northstar's data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md) and the
-[first quarter page](../../case-studies/northstar/first-quarter.md).
+Solutions are in [chapter 48 solutions](../../solutions/ch48-solutions.md). Northstar's data is in the
+[quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md), the
+[baseline data](../../case-studies/northstar/baseline-data.md), and
+[the year 1 record](../../case-studies/northstar/first-quarter.md).
 
 ### Foundational
 
@@ -527,7 +545,7 @@ team's manager, asks to backfill both in Minneapolis at Senior level, "because t
 Her 11 engineers sit 4 in Minneapolis, 5 in Bogotá, and 2 remote, and before these departures were
 about 5 at Engineer level and 6 Seniors. Yusuf Demir, an Engineer on her team, received a
 [not yet](../../glossary.md#not-yet) for Senior in quarter 3; his plan is to lead the ledger-export
-contract design through Billing's review. Use the backfill questions to decide each seat's level and
+contract design through Billing's review, so he may be ready for Senior within the year. Use the backfill questions to decide each seat's level and
 location, and say what you need to know first.
 
 **A2.** Tom Becker, the Platform Operations manager, proposes four contractors for nine months to

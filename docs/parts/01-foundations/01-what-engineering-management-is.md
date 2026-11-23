@@ -144,6 +144,10 @@ the two: Drucker supplies the measurement, Grove the criterion.
 4. Compare the split with the role definition. A role that gives technical direction to the tech lead
    and a calendar with a third of its hours in design reviews disagree; one of them is wrong.
 
+This is the book's one calendar audit. Later chapters add an optional column to it rather than a new
+procedure: Chapter 3 adds a leverage band, and Chapter 4 adds the lowest level that could have done the
+work.
+
 ```mermaid
 flowchart TD
     A["Two weeks of calendar"] --> B["Classify by job"]
@@ -174,11 +178,11 @@ leaders into management for influence, and lose technical direction. A staff tra
 ### Where staff-plus engineers sit
 
 [Staff-plus engineers](../../glossary.md#staff-plus-engineer) (staff, principal, and above) are senior individual contributors whose job is
-technical leadership beyond their own work. Larson describes four common archetypes: the **tech
-lead**, who guides the approach and delivery of one team or a few; the **architect**, who owns the
-direction of a central technical area; the **solver**, who works through hard, high-priority problems
-one after another; and the **right hand**, who extends an executive's reach on cross-cutting problems,
-mainly in very large organizations. He notes that most companies recognize only one or two of these,
+technical leadership beyond their own work. Larson describes four common archetypes. The **tech
+lead** guides the approach and delivery of one team or a few. The **architect** owns the direction of
+a central technical area. The **solver** works through hard, high-priority problems one after another.
+The **right hand** extends an executive's reach on cross-cutting problems, mainly in very large
+organizations. He notes that most companies recognize only one or two of these,
 and some have no technical leadership track at all
 ([Larson, staff archetypes](../../references/bibliography.md#larson-staff-archetypes);
 [Larson, 2021](../../references/bibliography.md#larson2021staff)). This is expert opinion, not a
@@ -224,9 +228,10 @@ real. But each study has a specific population, and none studied software teams.
 - **Productivity.** Using one company's data on technology-based service workers, Lazear, Shaw, and
   Stanton's abstract reports that replacing a supervisor in the bottom 10 percent of quality with one in the top
   10 percent raised a team's output by more than adding a worker to a nine-person team would, and
-  that workers with better supervisors were less likely to leave
-  ([Lazear, Shaw, and Stanton, 2015](../../references/bibliography.md#lazear2015value)). **Research
-  finding**; one firm.
+  that workers with better supervisors were less likely to leave. Under a separate normalization, the
+  average boss was about 1.75 times as productive as the average worker: a comparison of a boss with a
+  worker, not of teams ([Lazear, Shaw, and Stanton, 2015](../../references/bibliography.md#lazear2015value)).
+  **Research finding**; one firm.
 - **Attrition.** Using personnel data and employee surveys at a large high-tech firm, Hoffman and
   Tadelis's working-paper abstract reports that survey-measured people management skills have a strong negative relation to
   turnover, with designs that support a causal reading, but that those skills did not consistently
@@ -289,7 +294,7 @@ A reallocation frees about 33 hours a fortnight. Its assumptions:
 Jo puts 10 of the freed hours into hiring and 8 into career conversations and feedback, and keeps the
 rest as slack for cross-team work.
 
-The cost: Jo loses the satisfaction of shipping code, and Sam gains a decision area Jo used to share.
+The cost: Jo loses the satisfaction of shipping code, and Ari gains a decision area Jo used to share.
 Whether the trade pays shows only in the team's output over the next two quarters.
 
 ## Decision Framework
@@ -418,6 +423,8 @@ This case is **fictional**; Northstar's people and numbers are on the
     Before week 1. You are about to join Northstar, a 620-person order-to-cash software company, as
     Engineering Director over six teams (80 engineers). Last quarter brought 30 Sev1 and Sev2 incidents
     and $410,000 in service credits. See the [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 !!! note "Northstar in one paragraph"
     Northstar sells software that lets wholesale distributors take orders, invoice, and get paid, with
@@ -472,18 +479,17 @@ Before starting, the director drafted a one-page role definition:
 | Technical direction | Ensure cross-team technical decisions have an owner; decide personally only when nobody else can |
 | Not doing | Running a team's planning, joining incidents as a responder, writing production code |
 
-What happened next is on [the director's first quarter](../../case-studies/northstar/first-quarter.md)
-page. In the first quarter the staff engineers received mandates (Kwame Mensah release and detection,
-Ines Carvalho Core module boundaries and contract tests, Li Na Zhou migration and configuration
-safety). The six managers were trained as
+What happened next is in [the year 1 record](../../case-studies/northstar/first-quarter.md): the
+staff engineers received written mandates, and the managers were trained as
 [incident commanders](../../glossary.md#incident-commander), who coordinate a response rather than
-join it as an extra responder. This chapter's question comes earlier: before any transformation, would you
-change how the six managers split their jobs, and in what order?
+join it. This chapter's question comes earlier: before any transformation, would you change how the
+six managers split their jobs, and in what order?
 
 ## Exercises
 
 Solutions are in [chapter 1 solutions](../../solutions/ch01-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md).
+[baseline page](../../case-studies/northstar/baseline-data.md); who's who is on the
+[cast](../../case-studies/northstar/cast.md) page.
 
 ### Foundational
 
@@ -523,13 +529,13 @@ choice to be a real one.
 
 ### Executive Decision-Making
 
-**X1.** Victor Lindqvist, the CTO, proposes the tech lead manager model across engineering: every
+**X1.** Victor Lindqvist (CTO, the director's manager) proposes the tech lead manager model across engineering: every
 manager owns all three jobs, and the staff engineer role is retired, saving the cost of three senior
 individual contributors. Assume $185,000 fully loaded per engineer-year; set the saving against last
 quarter's $410,000 in service credits and the $9M of renewals at risk. Write your response, including the conditions under which the proposal would
 work, the teams for which it would fail, and an alternative.
 
-**X2.** Rajiv Menon, the CFO, asks whether Northstar could run its 80 engineers with four managers
+**X2.** Rajiv Menon (CFO) asks whether Northstar could run its 80 engineers with four managers
 instead of six, merging teams, to hold operating expense flat. Assume a manager costs about the
 $185,000 engineer average, against an engineering personnel budget of about $16.1M a year. Prepare the analysis you would take to
 the CTO: what the change does to each manager's span and calendar, what the manager-effect evidence

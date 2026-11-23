@@ -64,9 +64,9 @@ flowchart TD
     G --> A
 ```
 
-The loop helps explain why Northstar's earlier request to Billing's experts to "document as you go",
-with no time and no named reader, did not reduce their load: documents written that way feed the loop
-rather than break it.
+The loop helps explain a Northstar failure. Before the director arrived, Billing's overloaded ledger
+experts were asked to "document as you go", with no time and no named reader. Their load did not fall:
+documents written that way feed the loop rather than break it.
 
 ## Deep Conceptual Explanation
 
@@ -87,11 +87,10 @@ together pays off alongside a good plan for the work, not instead of one.
 Google's Project Aristotle points the same way. Its guide lists structure and clarity (clear roles,
 plans, and goals) among five dynamics of effective teams, after psychological safety and dependability
 ([Google re:Work](../../references/bibliography.md#rework-team-effectiveness)): **documented practice**,
-one company's self-report. Patrick Lencioni is known for the argument that leaders must create clarity
-about a few basic questions and repeat it until it is believed. His questions are why we exist, how we
-behave, what we do, what matters most now, and who does what
-([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage)), **expert opinion** that maps
-closely onto a charter's four questions.
+one company's self-report. Patrick Lencioni argues that leaders must answer a few basic questions (why
+we exist, how we behave, what we do, what matters most now, who does what) and repeat the answers until
+they are believed ([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage)). That
+**expert opinion** maps closely onto a charter's four questions.
 
 ### Boundaries, interfaces, and decision rights
 
@@ -128,6 +127,18 @@ Three properties separate agreements that work from posters on a wall (**this bo
 | Owned | Imposed by the manager | Proposed and agreed by the team, manager included |
 | Checked | Never revisited | Reviewed at a fixed retrospective; kept, changed, or dropped |
 
+A full set for a hypothetical product team of eight, each one observable and each answering a problem
+the team actually had:
+
+1. A review request gets a first response within one working day.
+2. A decision made in a call is written in the team channel the same day.
+3. Nobody merges their own change to a tier 1 component without a second reviewer.
+4. Whoever is on interrupt duty takes every new request; the rest plan without it.
+5. An item blocked for two days is raised at the next stand-up by its owner.
+6. The manager speaks last in design reviews and retrospectives.
+
+The team checks the list in the first retrospective of each month.
+
 Peer enforcement works only where raising a lapse is safe, which Edmondson's field study links to team
 learning ([Edmondson, 1999](../../references/bibliography.md#edmondson1999psychological); Chapter 11).
 Where telling the manager they broke the review agreement is
@@ -146,9 +157,9 @@ surveyed from 67 projects mostly agreed the method had found the main authors
 finding** about open source.
 
 Rigby and colleagues measured files abandoned when knowledgeable developers left Chrome and a project at
-Avaya. Projects were exposed to losses several times larger than the expected loss; simple truck-factor
-estimates exaggerated the potential for loss; and naming successors reduced expected loss by up to 15
-percent ([Rigby et al., 2016](../../references/bibliography.md#rigby2016turnover)). Two lessons follow
+Avaya. In a bad case, a project could lose several times the average (expected) loss. Simple
+truck-factor estimates exaggerated the potential for loss, and naming successors reduced expected loss
+by up to 15 percent ([Rigby et al., 2016](../../references/bibliography.md#rigby2016turnover)). Two lessons follow
 (**this book's recommendation**, extending the findings). The truck factor is a screen, not a measure: a
 value of 1 says where to look, not how bad a loss would be, because colleagues can often learn an area
 from its code. And risk is uneven: most departures cost little and a few cost a great deal, so the work
@@ -224,25 +235,25 @@ Carvalho (staff engineer for the Core domain) are a natural candidate for office
     Week 14, the start of quarter 2. The director's first quarter cut Sev1 and Sev2 incidents (the two
     highest severity levels) from 30 to 21. Billing still has the highest incident count, and three
     ledger engineers carry most of its on-call pages. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
-The figures are **illustrative** (Northstar is fictional). Billing had four ledger experts until one
-left before the director arrived; a backfill, Tamsin Achterberg, joined about 24 weeks before the
-director. At the start of quarter 2, Marcus Oyelaran (Billing's engineering manager) and the three
-remaining ledger engineers mapped ledger knowledge as it stood at the end of the baseline quarter. They split the ledger and invoicing
-work into five areas and counted, for each, how many of Billing's 13 engineers could respond to a page
-alone and how many could change the area safely with ordinary review.
+The figures are **illustrative** (Northstar is fictional). Billing has three ledger experts and a
+newer engineer, Tamsin Achterberg, who is learning the ledger but is not yet on call. Marcus Oyelaran
+(Billing's engineering manager) and the three experts split the ledger and invoicing work into five
+areas. For each, they counted how many of Billing's 13 engineers could respond to a page alone and how
+many could change the area safely with ordinary review.
 
 | Ledger area | Respond alone | Change safely | Changes last two quarters |
 |---|---|---|---|
 | Posting and journal rules | 3 | 3 | 14 |
-| Credit notes and adjustments | 4* | 2 | 9 |
+| Credit notes and adjustments | 3 + Tamsin | 2 | 9 |
 | Period close and month-end | 2 | 1 | 4 |
 | Ledger schema migrations | 2 | 2 | 6 |
 | Currency and rounding | 1 | 1 | 3 |
 
-\* The three experts plus the backfill, who was not yet on the on-call rotation. Every other count is
-made up of the three experts only; no other Billing engineer could do either in any area.
+Apart from Tamsin's one cell, every count is made up of the three experts only.
 
 "Respond alone" means restoring service without escalating in a typical incident in that area. "Change
 safely" means a change the person would merge with one reviewer.
@@ -266,8 +277,8 @@ hours. [Chapter 3](../01-foundations/03-managerial-leverage-and-systems-thinking
 and the routing rule that reverses it. The area map tells the routing rule where to send learners first.
 
 The shell-script deploys are a different shape: one script, understood by one person, deploys
-auth-svc, webhooks, document-store, and export-svc. That is a truck factor of 1 for four services, and
-INC-416 showed the coupling when a change to the script broke rollback for all four. Here spreading is
+auth-svc, webhooks, document-store, and export-svc. That is a truck factor of 1 for four services.
+INC-416 showed the coupling: a change to the script broke rollback for all four. Here spreading is
 the wrong first move. The durable remedy is removal into a standard pipeline (Chapter 23); knowledge
 work only covers the months until then.
 
@@ -345,9 +356,10 @@ In an organization of 50 to 150 engineers, charters and knowledge maps are how a
 organization's shape without attending every team's meetings.
 
 **Charters as a set.** Side by side, the six charters should cover every component, with none in two
-"owns" lists. Overlaps and gaps are the director's to resolve. Northstar did this exercise without charters in week
-4, when the director gave owners to two unowned Core modules, core/customer and core/scheduler
-([first quarter](../../case-studies/northstar/first-quarter.md)). One page per team, in one place, with a quarterly review date, is enough.
+"owns" lists. Overlaps and gaps are the director's to resolve. Northstar did this exercise without
+charters in week 4, when the director gave owners to two unowned Core modules, core/customer and
+core/scheduler ([year 1 record](../../case-studies/northstar/first-quarter.md)). One page per team, in
+one place, with a quarterly review date, is enough.
 
 **A knowledge-risk register.** Each manager maps knowledge for their tier 1 areas and brings the
 single-person areas to a quarterly review. The director keeps the short organization-level list, each
@@ -385,6 +397,7 @@ For a manager writing a charter and agreements and reducing knowledge risk over 
 1. **Sample the last quarter's work**: what the team did, where requests came from, what it refused.
    Draft the charter from that, not from the team you wish you had.
 2. **Write one page with the team**: mission, owns, does not own, disputed, interfaces, decision rights.
+   The [team charter template](../../templates/team-charter.md) has the headings and a worked example.
 3. **Show it to the neighbors** named in the interfaces; send disputes to the director with a proposal.
 4. **Agree five to seven observable working agreements** from problems the team has actually had, and
    schedule the retrospective that reviews them.
@@ -398,20 +411,19 @@ For a manager writing a charter and agreements and reducing knowledge risk over 
 
 ## Case Study
 
-This case is **fictional**. It is set at the start of quarter 2, after the director's first 90 days
-([first quarter](../../case-studies/northstar/first-quarter.md)). It describes a draft and the decisions
+This case is **fictional**. It is set at the start of quarter 2. It describes a draft and the decisions
 it raises, and does not fix their outcome.
 
 Data and Analytics, managed by Farah Haddad, had eleven engineers (eight data, three software). It had
-the lowest [change failure rate](../../glossary.md#change-failure-rate) (share of releases that fail) in
-the organization, 12 percent, two [Sev1 or Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents, and little
-contact with other teams ([baseline](../../case-studies/northstar/baseline-data.md)). It looked like the
-team least in need of attention. Two facts said otherwise. Requests from other teams took 12 points of
-its capacity: half its [unplanned work](../../glossary.md#unplanned-work), and more than in any other
-product team (only Platform Operations had more). And its two incidents were a month-end report that timed out at new data volume and was
-reported by a customer after eight hours (INC-408), and a warehouse maintenance window that overlapped
-scheduled customer exports (INC-423). Reviewing INC-423, the team found nobody had written down who
-announces warehouse maintenance or who must be told.
+the lowest [change failure rate](../../glossary.md#change-failure-rate) (share of changes that fail in
+production) in the organization and little contact with other teams
+([baseline](../../case-studies/northstar/baseline-data.md)). It looked like the team least in need of
+attention. Two facts said otherwise. First, requests from other teams took 12 points of its capacity,
+half its [unplanned work](../../glossary.md#unplanned-work); among product teams, nobody received more.
+Second, its two serious incidents were both about interfaces. In INC-408 a month-end report timed out at
+new data volume, and a customer reported it after eight hours. In INC-423 a warehouse maintenance window
+overlapped scheduled customer exports, and nobody had written down who announces maintenance or who
+must be told.
 
 Farah drafted a charter with the team over two sessions, starting from a sample of the previous
 quarter's requests.

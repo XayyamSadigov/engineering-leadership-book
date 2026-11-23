@@ -35,7 +35,7 @@ lower: about three to four working days saved per escalation. Information passes
 80 percent per level, the director sees about 64 percent of what matters instead of about 51.
 
 **Losses.** Fourteen managers is far above four to six. One-on-ones with each manager shrink or become
-fortnightly; new managers lose their coach; the director's calendar becomes the queue. The latency
+every two weeks; new managers lose their coach; the director's calendar becomes the queue. The latency
 model assumes the decider has time: a director with fourteen reports and a weekly staff meeting may
 add more wait per hop than the layer did.
 

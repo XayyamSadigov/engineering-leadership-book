@@ -17,8 +17,8 @@ pattern, and they concentrate in Billing."
 "compensation" entries: keep pay as a factor for the two below peers, and record the offer as the final
 step, not the cause, for the other two. "Personal" and "not recorded" stay, but get the event question.
 
-**Two added questions.** "What happened in the three months before you started looking?" (decision
-paths and events, after Lee and Mitchell) and "What would have had to be different for you to stay?"
+**Two added questions.** "What happened in the three months before you started looking?" (whether
+the decision began with an event or with slow pressure, after the chapter's split) and "What would have had to be different for you to stay?"
 (names a fixable cause).
 
 **Why one reason misled.** A single dropdown forces a choice, and the outside offer is the most

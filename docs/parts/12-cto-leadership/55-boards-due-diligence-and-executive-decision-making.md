@@ -22,8 +22,10 @@ At organization scale, decisions cross teams and quarters. A director who cannot
 was made finds it reopened by every new stakeholder. A director whose reports change definitions from
 quarter to quarter loses the executive team's trust in every number.
 
-At executive scale, the audience changes in kind. A board approves the operating plan and budget
-envelope, hires and evaluates the CEO, and oversees risk; it sees engineering four times a year.
+At executive scale, the audience changes in kind. A board approves the
+[operating plan](../../glossary.md#operating-plan) (the year's targets, headcount, and budget) and the
+[budget envelope](../../glossary.md#budget-envelope) (the total spending limit), hires and evaluates the
+CEO, and oversees risk; it sees engineering four times a year.
 Investors and buyers price the company partly on what technology diligence finds. The CTO's decisions
 commit years of capacity. The engineering facts are the same as the director's; what changes is who must
 understand them, in what units, and how much depends on that understanding.
@@ -50,10 +52,10 @@ After this chapter you will be able to:
 > money at risk, commitments, and options. Each conversion must match the last one. Every decision is
 > written down with what was known, who disagreed, and what would change it.
 
-The same incident count serves three readers. To the director it is a signal about change safety. To the
-board it is evidence about whether the reliability sold to customers will hold through next year's
-renewals. To a buyer it is one input to what the platform will cost to keep running. The translation
-changes the units, never the number or its definition.
+The same incident count serves three readers. To the director it signals change safety; to the board,
+whether the reliability sold to customers will hold through next year's renewals; to a buyer, what the
+platform will cost to keep running. The translation changes the units, never the number or its
+definition.
 
 ```mermaid
 flowchart TD
@@ -83,7 +85,8 @@ flowchart TD
 A board of directors has a few formal powers. It appoints and evaluates the CEO, approves strategy, the
 operating plan, and major transactions, and oversees how management handles risk. In a private company
 with an investor on the board, as at Northstar, it also represents the investor's interest in the
-company's value. Directors are part-time and see the business through the board pack and a few hours of
+company's value. Directors are part-time and see the business through the
+[board pack](../../glossary.md#board-pack) (the papers sent before each meeting) and a few hours of
 meeting a quarter.
 
 Technology reaches the board in three forms:
@@ -94,21 +97,20 @@ Technology reaches the board in three forms:
 - **Options**: investments or decisions that change future value, such as a modernization or an
   acquisition.
 
-Boards' expectations about technology and cybersecurity oversight, including public-company disclosure
-rules, are covered in [Chapter 53](53-risk-governance-regulation-and-security-strategy.md). This chapter's
-concern is how that content reaches the board.
+What boards must oversee, including disclosure rules, is in
+[Chapter 53](53-risk-governance-regulation-and-security-strategy.md); this chapter covers how it reaches
+the board.
 
 ### Reporting to a board: exposure, consistency, and the ask
 
 Chapter 39 gives the structure of an executive report: headline, commitments, measures, risks, decisions
 needed. A board report keeps that structure and changes three things.
 
-**The currency is exposure.** The National Association of Corporate Directors advises management to move
-from technical updates to quantitative reports in the same language and metrics as other material risks
-(**practitioner consensus**). It recommends reporting at least quarterly, with thresholds that trigger an
-update between meetings, and treating reporting as a dialogue in which directors challenge assumptions
-([NACD, 2026](../../references/bibliography.md#nacd2026cyber)). The advice is written for cyber risk but
-generalizes. "Change failure rate 23 percent" is not exposure. This is: "about $7.0M of annual recurring
+**The currency is exposure.** The National Association of Corporate Directors advises management to
+report technology risk in the same quantitative terms as other material risks, at least quarterly, with
+thresholds that trigger an update between meetings
+([NACD, 2026](../../references/bibliography.md#nacd2026cyber); **practitioner consensus**, written for
+cyber risk). "Change failure rate 23 percent" is not exposure. This is: "about $7.0M of annual recurring
 revenue renews in the next four quarters with six of our largest customers, on a product whose
 reliability is in their contracts, and we are 13 minutes a quarter short of the contract".
 
@@ -140,16 +142,16 @@ advice, with decisions staying where they belong. The **pre-meeting decision** h
 with directors settle the outcome before the board meets. Meeting directors beforehand is good practice,
 but Chapter 49's transcript test applies: every director should be able to read the notes of every
 conversation and find the same facts. Larson describes this layer of the job from practice
-([Larson, 2024](../../references/bibliography.md#larson2024primer); **expert opinion**), and Chapter 52
-covers the financial statements a board reads.
+([Larson, 2024](../../references/bibliography.md#larson2024primer); **expert opinion**).
 
 ### Ethics at board level: the misleading headline and disclosure
 
 The CTO's duty to the board is an accurate picture, even when a flattering one is available and someone
 senior prefers it (**this book's recommendation**). The pressure rarely asks for a false number. It asks
-for a true number chosen or framed to mislead: a headline target picked because chance or re-rating will
-probably deliver it, a measure redefined in the quarter it would have missed, a miss moved to an
-appendix, a known vulnerability left out of the risk page "until it is fixed".
+for a true number chosen or framed to mislead. Examples: a headline target that chance or re-rating will
+probably deliver (re-rating is lowering an incident's severity after the fact, so it drops out of a
+count); a measure redefined in the quarter it would have missed; a miss moved to an appendix; a known
+vulnerability left off the risk page "until it is fixed".
 
 Three tests catch most of it. Would the page lead a careful director to believe something you know is
 false? Would you be comfortable if the director later saw the version you rejected? Would a buyer's
@@ -162,13 +164,13 @@ If you are overruled on something material, write down what you advised and why.
 problem, such as a suspected breach or a contractual measure being missed, must reach the people who
 decide what the board, auditors, and counterparties are told. That is the lesson of the Yahoo case below
 ([SEC, 2018](../../references/bibliography.md#sec2018altaba)). Where the normal path fails, the audit
-committee chair and the company's counsel are the route. Status reports already lose candor under
-powerful sponsors ([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)); at the top,
-the CTO is the person who keeps them honest.
+committee chair and the company's counsel are the route. At the top, the CTO is the person who keeps
+status reports honest.
 
 ### Technology due diligence
 
-Due diligence is the investigation a buyer or investor makes before committing money: is what it has
+[Due diligence](../../glossary.md#due-diligence) is the investigation a buyer or investor makes before
+committing money: is what it has
 been told true, and what would it inherit? Technology diligence asks whether the product works, who owns
 the code, what it costs to run, and whether the people who understand it will stay.
 
@@ -190,16 +192,27 @@ include deal teams rewarded for closing, sunk-cost pressure, and unaudited compl
 | People | Who can change what; who might leave | Knowledge maps, attrition, key-person dependencies |
 | Debt and roadmap | What the roadmap assumes about the platform | Debt register, end-of-support dates, migration estimates |
 
-Two **standards** make parts of this checkable. ISO/IEC 5230 (from the OpenChain project) defines an
-open source license compliance program
-([OpenChain Project, 2020](../../references/bibliography.md#openchain-iso5230)). An
-[SBOM](../../glossary.md#sbom), the software bill of materials Chapter 53 defines, lets a buyer see what
-a product is built from without reading its code; NTIA set its minimum elements
+Two **standards** make parts of this checkable: ISO/IEC 5230 defines an open source license compliance
+program ([OpenChain Project, 2020](../../references/bibliography.md#openchain-iso5230)), and an
+[SBOM](../../glossary.md#sbom) (software bill of materials) shows what a product is built from
 ([NTIA, 2021](../../references/bibliography.md#ntia2021sbom)).
 
 **What findings become.** A finding is useful only when it changes the deal. Each one ends in one of four
-places: the price, the terms (specific warranties, indemnities, escrow, a closing condition), the
-integration plan and its budget, or the decision to walk away.
+places: the price, the terms, the integration plan and its budget, or the decision to walk away.
+
+!!! note "Deal terms in plain words"
+    - **[Warranty](../../glossary.md#warranty-indemnity-and-escrow)**: the seller's written promise that
+      a fact is true ("no undisclosed breaches"). If it proves false, the buyer can claim damages.
+    - **Indemnity**: the seller agrees to pay if a named problem later costs the buyer money, such as a
+      license claim.
+    - **Escrow**: part of the price held back by a third party for a period, to pay such claims.
+    - **Closing condition**: something that must be true or done before the deal completes, such as a
+      key engineer signing a retention agreement.
+    - **Material adverse effect**: a serious change in the target's business between signing and closing
+      that lets the buyer walk away or renegotiate.
+    - **Copyleft license**: an open source license that requires software built on the code to be
+      released under the same terms if it is distributed; "strongly copyleft" licenses apply this
+      widely.
 
 ```mermaid
 flowchart TD
@@ -253,13 +266,11 @@ looks worse than it is.
 
 ### Deciding under uncertainty and disagreement
 
-An executive decision differs from a team decision in three ways: less of the relevant information is in
-the decider's head, its effects arrive late, and the people who disagree are often peers with their own
-authority. Several tools from earlier chapters apply unchanged: hidden profiles and decision methods
-([Chapter 13](../03-high-performing-teams/13-decision-making-in-teams.md)), reversibility (Chapters 13
-and 51), the premortem ([Chapter 51](51-enterprise-technology-strategy.md)), and the bias checklist for
-a team's recommendation ([Chapter 52](52-technology-investment-budgeting-and-financial-literacy.md)).
-Four things are new at this level.
+An executive decision differs from a team decision in three ways. Less of the relevant information is
+in the decider's head, its effects arrive late, and the people who disagree are often peers with their
+own authority. Earlier tools still apply, from decision methods
+([Chapter 13](../03-high-performing-teams/13-decision-making-in-teams.md)) to the premortem
+([Chapter 51](51-enterprise-technology-strategy.md)). Four things are new at this level.
 
 **Judge the decision, not the outcome.** In five studies, people rated the same reasoning as better, and
 the decider as more competent, when the outcome was favorable. They did so even though they had all the
@@ -290,17 +301,17 @@ decision records hold most decisions. The CTO's own consequential decisions need
 | Reversal triggers | The evidence that would reopen the decision, set before the outcome is known |
 | Review date | When the decision is judged against what was known then, not what happened |
 
-Clear decision roles matter to performance
-([Rogers and Blenko, 2006](../../references/bibliography.md#rogers2006whohasd); **expert opinion**), and
-the record makes the role visible after the fact.
+The record also makes clear, after the fact, who held the decision, which matters to performance
+([Rogers and Blenko, 2006](../../references/bibliography.md#rogers2006whohasd); **expert opinion**).
 
 ## Engineering Organization Example
 
 !!! info "Northstar so far"
-    Week 48 of the director's first year. Sev1 and Sev2 incidents fell from 30 a quarter to 14 in
-    quarter 3, the first quarter within the mandate's 15, and availability reached 99.89 percent against
-    a 99.9 percent contract. The year-2 decisions are drafted and open, and the board meets in week 50.
-    See the [timeline](../../case-studies/northstar/timeline.md) and the
+    Week 48 of the director's first year. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3)
+    incidents fell to 14 in quarter 3, the first quarter within [the mandate](../../glossary.md#the-mandate)'s
+    limit of 15. The board meets in week 50. See the [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
     [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 The figures are **illustrative** and fictional, from Northstar's record. The example converts the
@@ -312,45 +323,48 @@ engineering page of a board pack from engineering measures into exposure.
 - availability on the contractual paths 99.89 percent, against a 99.9 percent commitment;
 - [service credits](../../glossary.md#service-credits) of $60,000;
 - unplanned work at 25 percent;
-- 13 of 15 [tier 1](../../glossary.md#tier-1) components meeting the four operational minimums.
+- 13 of 15 [tier 1](../../glossary.md#tier-1) components meeting the four
+  [operational minimums](../../glossary.md#tier-1-operational-minimums) (the baseline reliability
+  practices every tier 1 component must have).
 
 | Engineering measure | Board translation | Arithmetic |
 |---|---|---|
-| 99.89% availability | About 13 minutes a quarter short of the contract | 91-day quarter = 131,040 minutes; 0.11% is about 144 unavailable; 99.9% allows about 131 |
+| 99.89% availability | About 13 minutes a quarter short of the contract | 144 minutes down against 131 allowed |
 | Credits $60,000 a quarter | About $240,000 a year at the current rate, against $1.64M at baseline | $60,000 × 4; $410,000 × 4 |
 | Six top-40 renewals in quarters 5–8 | About $7.0M of [ARR](../../glossary.md#arr) (annual recurring revenue) renewing with customers for whom reliability matters | 6 × $1.17M = $7.02M |
-| 14 Sev1 and Sev2 | Mandate met for the first time (at most 15); one quarter is not a trend | |
+| 14 Sev1 and Sev2 | Mandate met for the first time (at most 15); one quarter is not a trend | None |
 | Unplanned work 25% | About 20 of 80 engineers' capacity on recovery and interrupts | 80 × 25% |
 | Engineering spend | About $20.3M a year, about 14.5% of ARR | $16.1M + $4.2M = $20.3M; $20.3M ÷ $140M |
 
-The board does not need Core's change failure rate or flaky-test counts. It needs to know that the
-contractual promise is nearly but not yet kept, what that is worth in renewals and credits, what keeping
-it costs, and what management will do if it slips. Stage 2 of
+The board does not need Core's change failure rate or flaky-test counts. It needs four things: the
+contractual promise is nearly but not yet kept; what that is worth in renewals and credits; what keeping
+it costs; and what management will do if it slips. Stage 2 of
 [the continuation](../../glossary.md#the-continuation), the director's proposal to keep funding the
 quality program, uses 6 FTE of existing capacity (about $1.11M a year) plus $150,000 of new tooling. The
 board sees the $150,000 inside the envelope it approves; the 6 FTE are a choice management makes inside
 it.
 
-**The headline as a decision under uncertainty.** Victor proposed "Sev1 and Sev2 incidents below 10 per
-quarter". The director's draft counter is "at or below 40 over year 2 as a rolling four-quarter total",
-paired with 99.9 percent every quarter (Chapter 46). Chance alone makes a quarterly target fragile: even
-if the true average is 9 a quarter, a single quarter reaches 10 or more about 4 times in 10.
+**The headline as a decision under uncertainty.** The plain point first: a quarterly threshold close to
+the true average is missed often by chance, and four quarters in a row almost never pass. Victor proposed
+"Sev1 and Sev2 incidents below 10 per quarter". The director's counter, drafted in Chapter 46 as an answer
+to that anchor, is "at or below 40 over year 2 as a rolling four-quarter total", paired with 99.9 percent
+availability every quarter.
 
-| True average per quarter | Meets "below 10" in one quarter | Meets it all four quarters | Annual total at or below 40 |
+| True average per quarter | Meets "below 10" in one quarter | All four quarters | Year total at or below 40 |
 |---|---|---|---|
 | 9 | 59% | 12% | 78% |
 | 10 | 46% | 4% | 54% |
 | 12 | 24% | under 1% | 14% |
 
-The figures assume incidents vary randomly around a fixed average (a Poisson model); the calculation is
-in the solutions.
+The figures use a Poisson model, the standard model for counts of independent random events. All four
+quarters is the one-quarter chance multiplied four times (0.59 × 0.59 × 0.59 × 0.59 is about 0.12).
 
 Neither headline is free of risk. A quarterly target fails by chance even in a year that improves; an
 annual total reports later and gives the board less to react to each quarter. The decision is Victor's,
 and the record should show which risk he chose.
 
 **A hypothetical diligence read.** Suppose, purely as a scenario (no transaction is part of the
-Northstar case), that a buyer's technology team read Northstar's estate. Using facts from Northstar's
+Northstar case), that a buyer's technology team examined Northstar's systems. Using facts from Northstar's
 record, the triage would look like this:
 
 | Finding (source) | Likely branch | Why |
@@ -358,13 +372,12 @@ record, the triage would look like this:
 | Core framework past free community support; migration 120 to 180 engineer-days (TR-01, quarter 2 register) | Price or integration plan | Estimable cost |
 | Four build and deploy paths, one of them shell scripts; CI target undecided | Integration plan | Known work, a decision away |
 | Integrations read 12 ledger tables directly; [ADR-0001](../../glossary.md#adr-0001), the decision on how they should read them, is open | Integration plan; terms if data correctness is warranted | Correctness risk is hard to size |
-| Four critical roles with no succession cover (week 44) | Terms (retention) and integration plan | Key-person risk |
+| Four of ten critical roles with no succession cover (week 44) | Terms (retention) and integration plan | Key-person risk |
 | SBOM per build on 14 of 15 tier 1 components (all but auth-svc, the script-deployed authentication service); no signed provenance (0 of 15), week 44 | Integration plan | Known work, partly done |
 | Availability 99.89% against 99.9%; credits $60,000 a quarter | Price | Estimable, and falling |
 
 Nothing here breaks a plausible thesis. Most of it is the visible cost of an 11-year-old product, and
-every item already has an owner. That is the point of surviving diligence: the findings were already in
-the board's view.
+every item already has an owner and was already in the board's view.
 
 ## Decision Framework
 
@@ -407,15 +420,9 @@ For decisions on the "not cheap to reverse" branch:
 **Transparency against alarm.** Reporting every risk in full invites directors to manage it; reporting
 only conclusions hides the evidence they need. Report exposure and treatment, with detail on request.
 
-**Pre-meetings against fairness.** Briefing the chair and the expert director avoids surprises; briefing
-some directors more than others creates two boards. Brief everyone on the same facts.
-
 **Diligence readiness against delivery.** A permanently current evidence set costs a few engineer-weeks a
 year and pays off in customer questionnaires as well as transactions. Building it only when a deal
 appears is cheaper in quiet years and expensive in the one that matters.
-
-**Speed against inclusion.** Collecting written positions and running a premortem costs days: waste for
-decisions that are cheap to reverse, cheap insurance for the rest.
 
 **Recording dissent against cohesion.** A named dissent can harden positions; an unrecorded one gets
 relitigated. Record it in the dissenter's agreed wording, with an explicit commitment to the decision.
@@ -443,8 +450,8 @@ be absorbed, not priced. Early sign: engineering is invited to diligence in the 
 **Outcome-based review.** A good decision that turned out badly is reversed, and a lucky one is copied.
 Early sign: decision reviews that discuss only results.
 
-**Consensus by fatigue.** The executive team agrees because the meeting has run long. Early sign: a
-decision nobody will defend a week later.
+**Consensus by fatigue.** The team agrees because the meeting has run long. Early sign: nobody defends
+the decision a week later.
 
 ## Enterprise Application
 
@@ -454,9 +461,9 @@ carries a few engineering figures every month. A workable practice:
 - **A standing technology page** in every board pack: three to five stable measures with definitions,
   the change since last quarter, risks above a threshold, and labeled items. The
   [executive update template](../../templates/executive-update.md) is a starting point.
-- **An escalation threshold** agreed with the CEO and the audit committee chair. It says which events
-  reach directors between meetings, and how fast: for example a long Sev1 on the payment path, a
-  suspected breach, or a missed contractual measure.
+- **An escalation threshold** agreed with the CEO and the audit committee chair: which events reach
+  directors between meetings, and how fast. Examples: a long Sev1 on the payment path, a suspected
+  breach, a missed contractual measure.
 - **A pre-meeting rhythm**: the chair a week before, the expert director on substance, the audit
   committee chair on risk, each given the same facts.
 - **A diligence-ready evidence set**, maintained as part of normal work.
@@ -470,12 +477,10 @@ At Northstar's size the CTO is often the only person who sees engineering, the b
 once, which makes the CTO the translator by default. The risk is becoming a filter that smooths bad news
 on the way up and board anxiety on the way down.
 
-At Halvard Systems, the fictional 500-engineer company of
-[Chapter 35](../07-organization-design/35-designing-organizations-at-four-scales.md), the board sees
-five vice presidents' organizations through one CTO page. The CTO must decide which group measures roll
-up without losing meaning. Letting each vice president present separately turns the board into an
-arbiter of budget fights. Acquisitions are also likelier at that scale, so the CTO must budget
-integration (Chapter 58) before the price is agreed.
+At [Halvard Systems](../../glossary.md#halvard-systems), the fictional 500-engineer company, the board
+sees five vice presidents' organizations through one CTO page. Letting each vice president present
+separately turns the board into an arbiter of budget fights. Acquisitions are likelier at that scale, so
+the CTO budgets integration (Chapter 58) before the price is agreed.
 
 The CTO's own decisions are the hardest to record honestly, because nobody above asks. A CTO whose
 decisions appear in the log with their dissent makes the decision system credible for everyone below.
@@ -501,17 +506,15 @@ decisions appear in the log with their dissent makes the decision system credibl
 
 ## Case Study
 
-This case is **fictional**. It is set in weeks 46 to 49; the meeting's outcome is not recorded, and the
-decisions below are the reader's.
+This case is **fictional**, set in weeks 46 to 49. The meeting's outcome is not recorded; the decisions
+are the reader's.
 
 **The meeting.** In week 50 the board is asked to approve the year-2 operating plan and budget envelope,
-presented by Helena Marsh (CEO). Its engineering page was drafted by the director in weeks 41 to 45 at
-Victor's request. Victor's own agenda item is a discussion of the three-year technology strategy
-(Chapter 51). The year-2 organization, the quality continuation, the workforce plan, and the VP question
-are management decisions inside the envelope; none is on the agenda for decision (the
-[quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md) describes each). The pack goes
-to directors at the end of week 49. In the same week the [audit committee](../../glossary.md#audit-committee),
-chaired by Margaret Lin, holds the technology risk session she requested in week 43 (Chapter 53).
+presented by Helena Marsh (CEO). The director drafted the engineering page at Victor's request. Victor's
+own item is the three-year technology strategy, for discussion (Chapter 51). The year-2 management
+decisions stay inside the envelope; none is on the agenda for decision. The pack goes to directors at
+the end of week 49. The same week, the [audit committee](../../glossary.md#audit-committee) holds a
+technology risk session (Chapter 53).
 
 **The directors' known concerns,** gathered by Victor in calls in weeks 46 to 48:
 
@@ -521,26 +524,25 @@ chaired by Margaret Lin, holds the technology risk session she requested in week
 | Helena Marsh (CEO) | Renewals: six of the 40 largest customers renew in quarters 5 to 8 | Reliability against contract through those quarters |
 | Natalie Brooks (Calder Ridge Partners, the growth-equity minority investor) | What a buyer's technology diligence would find, and whether Northstar could answer it quickly | Known estate risks and their owners; evidence readiness |
 | Samuel Osei (Calder Ridge Partners) | Whether flat headcount can carry the roadmap | Capacity for product work in year 2 |
-| Margaret Lin (independent, former CFO, audit committee chair) | That the measures mean the same thing every quarter | Definitions, sources, the severity audit |
+| Margaret Lin (independent, former CFO, audit committee chair) | That the measures mean the same thing every quarter | Definitions, sources, the severity audit (the weekly check that incidents were rated correctly) |
 | David Ferrante (independent, former payments technology executive) | The payment path, the availability miss, Core's unsupported framework | Technical substance he can probe; he offered to review the architecture himself |
 
-Natalie Brooks's question is about readiness, not a transaction; no sale or investment is part of the
-case.
+Natalie Brooks's question is about readiness; no transaction is part of the case.
 
 **The open choice on the page.** The draft at week 48 carries two forms of the reliability headline side
 by side. One is Victor's "Sev1 and Sev2 below 10 per quarter". The other is the director's counter: "at
 or below 40 over year 2 as a rolling four-quarter total, reported with the severity audit, and 99.9
-percent availability every quarter". Victor must choose one before the pack goes out. The director has argued, with the table
-in the example, that the quarterly form will be missed by chance even in a good year. Margaret Lin will
-also ask how the count is protected from re-rating. Victor's original request, in week 41, was for a
-number the board can check every quarter.
+percent availability every quarter". Victor must choose before the pack goes out. The director argues,
+with the table in the example, that the quarterly form will be missed by chance even in a good year.
+Victor wants a number the board can check every quarter. Margaret Lin will ask how the count is
+protected from re-rating.
 
 **What Victor has prepared.** The exposure table from the example, with each measure's definition and
 source, and the availability miss stated in minutes in the first paragraph. For the audit committee, the
-director's draft risk register with its three appetite lines, and Victor's week 48 commitment to sign
-the auth-svc security exception before week 50 or restrict the service further (Chapter 53). For Natalie
-Brooks, the register's estate risks and the evidence Northstar can and cannot produce today, without
-claiming untested readiness. For David Ferrante, a working session after the meeting with Kwame Mensah
+director's draft risk register with its three appetite lines, and Victor's commitment to sign the
+auth-svc security exception before week 50 or restrict the service further (Chapter 53). For Natalie
+Brooks, the register's technology risks and the evidence Northstar can and cannot produce today,
+without claiming untested readiness. For David Ferrante, a working session after the meeting with Kwame Mensah
 and Ines Carvalho (staff engineers), as advice to management rather than a director's architecture
 review. And a draft decision record for the headline, with the decision field blank:
 
@@ -554,10 +556,9 @@ review. And a draft decision record for the headline, with the decision field bl
 | Reversal triggers | Two consecutive quarters above 12 reopen the prevention allocation (from the director's counter) |
 | Review date | After quarter 6 (week 78), judged against this record |
 
-**What is open.** Which headline Victor puts in the pack, and whether he records the director's dissent if
-he keeps his own. How he answers Natalie Brooks without alarming the board or overstating readiness. How
-he uses David Ferrante's expertise without handing him engineering decisions. And what the board
-approves in week 50.
+**The open choice.** Which headline goes in the pack, and whether the losing side's dissent is recorded.
+How Victor answers Natalie Brooks without alarming the board or overstating readiness, and uses David
+Ferrante's expertise without handing him engineering decisions.
 
 ## Exercises
 

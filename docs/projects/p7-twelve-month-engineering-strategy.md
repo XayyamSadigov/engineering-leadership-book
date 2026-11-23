@@ -77,22 +77,12 @@ Alvarez the VP Customer Success. The managers, Amara
 Okafor (CPO), and Rajiv Menon (CFO) read it before Victor does. The executive team meets in week 49 and
 the board in week 50.
 
-**The time rule.** Use facts dated week 47 or earlier. They are in
-[quarter 3 results](../case-studies/northstar/first-quarter.md#quarter-3-results), the weeks 40 to 47
-entries of the [quarter 4 calendar](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4),
-[the year-2 organization proposal](../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44),
-[three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51),
-and [finances](../case-studies/northstar/first-quarter.md#finances-chapter-52); the
-[timeline](../case-studies/northstar/timeline.md) and the
-[quarter 4 briefing](../case-studies/northstar/quarter-4-briefing.md) help you find them (the briefing
-also mentions later weeks, which stay off limits). Specifically: the quarter 3 results, the week-40
-corrected-order analysis, the week-42 draft counter for the board page, the week-44 organization proposal, the week-45
-continuation proposal, the executives' positions from weeks 46 and 47, Helena Marsh's week 46 confirmation
-of the business choices, Victor Lindqvist's week 47 three-year strategy draft
-([Chapter 51's case study](../parts/12-cto-leadership/51-enterprise-technology-strategy.md#case-study)), and Finance's week 46 latest estimate for fiscal year 1
-([Chapter 52](../parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md)).
-Quarter 4 results do not exist yet. Victor's week 48 premortem and the week 49 executive meeting are after
-the time rule. No outcome is recorded for any decision due in weeks 46 to 51; treat each as open.
+**The time rule.** Use only facts dated week 47 or earlier ([weeks](../glossary.md#weeks-quarters-and-years)
+count from the director's first week). The fact sheet under Starting Dataset lists the case facts the
+project needs, each with its week; anything else you use from the case must also be dated week 47 or
+earlier. Quarter 4 results do not exist yet. Victor's week 48 premortem and the week 49 executive
+meeting are after the time rule. No outcome is recorded for any decision due in weeks 46 to 51; treat
+each as open.
 
 **Constraints.** These are binding.
 
@@ -103,7 +93,7 @@ the time rule. No outcome is recorded for any decision due in weeks 46 to 51; tr
    on: 80 engineers today, 79 under the main organization proposal, 78 if a VP takes a seat.
 3. **No Core rewrite** (constraint 3 on the [Northstar overview](../case-studies/northstar/index.md)).
 4. **Open decisions stay open.** The year-2 organization, the VP question, the continuation (6 FTE, or 4
-   FTE plus two engineers on deal features), the workforce plan, the week 34 portfolio forum, the CI
+   FTE plus two engineers on deal features), the workforce plan, the week 34 portfolio forum (on a third deal feature), the CI
    target, ADR-0001, tax-svc, and the board's envelope. You may recommend; you must show how the strategy
    changes under each outcome you consider plausible.
 5. **No new cash assumed.** The $150,000 of tooling in the continuation needs Rajiv Menon's approval with an
@@ -121,7 +111,7 @@ Use these sources:
 - [Northstar overview](../case-studies/northstar/index.md), including
   [executive and board context](../case-studies/northstar/index.md#executive-and-board-context);
   [baseline data](../case-studies/northstar/baseline-data.md), especially the extended baseline on
-  architecture, estate, and people; and [the first quarter](../case-studies/northstar/first-quarter.md),
+  architecture, estate, and people; and [the year 1 record](../case-studies/northstar/first-quarter.md),
   especially the year 2 proposal, "Quarter 3 results", "Quarter 4", and
   [executive and company facts in quarter 4](../case-studies/northstar/first-quarter.md#executive-and-company-facts-in-quarter-4)
   for Victor's week 47 draft (four groups, four policies, draft allocation, options and decision weeks) and
@@ -143,19 +133,44 @@ for the baseline quarter and quarters 1 to 3, and [`p7-open-decisions.csv`](data
 lists the open decisions with their decider, due date, and the recorded options. Blank cells mean the
 value is not recorded; do not fill them with estimates presented as readings.
 
-**Facts your submission must use.**
+**Project fact sheet.** Every case fact the submission must use, one per row, each dated week 47 or
+earlier. You do not need to search the case pages for these.
 
-| Area | Facts |
-|---|---|
-| Year-1 results | Sev1 and Sev2 30, 21, 17, 14; availability 99.62 percent, not recorded, 99.86, 99.89 (about 144 of 131,040 minutes unavailable; 99.9 allows about 131); credits $410,000, not recorded, $95,000, $60,000; unplanned work 34, 31, 28, 25 percent; tier 1 at the four minimums 3, 8, 11, 13 of 15 |
-| Correctness | 8 of the 14 baseline customer-detected incidents were correctness failures; invoice correctness SLO (99.99 percent) defined but dependent on reconciliation; week 40: 7,800 corrected orders of about 600,000 (1.3 percent); sample of 400: 340 errors (price changes 130, wrong unit 85, duplicate submissions 70 with no idempotency key, wrong delivery site 35, other 20) |
-| Estate and knowledge | Four build systems, CI target open; Core framework past free community support (120 to 180 engineer-days to migrate); register TR-01 to TR-09; ledger currency and rounding changed safely by one person at baseline; 10 critical roles, none with a ready-now successor, 4 with no cover; core/permissions exemption lapsed at week 39 |
-| Organization | Main proposal: 79 engineers, 7 managers, the director; alternatives B, C, D; about 21 engineer-weeks of transition cost; document-store has no owner in the proposal; VP recommendation due week 48 |
-| Capacity | Quarter 3 plan: unplanned 22 percent planned and 28 cautious, prevention 8 FTE, platform 4.5, product 49.9 planned and 45.1 cautious; continuation: 6 FTE in quarters 5 and 6, 5 FTE in quarters 7 and 8 |
-| Commitments in play | Draft board counter: at or below 40 Sev1 and Sev2 over year 2 as a rolling four-quarter total, 99.9 percent every quarter, two consecutive quarters above 12 reopen prevention; continuation gates in weeks 56, 78, and 104 |
-| Victor's week 47 draft | Business choices confirmed in week 46: mid-market distributors with the largest 40 mattering most; trusted with money; cross-border growth moved to year 3. Excellent: financial correctness, availability of order and payment paths, accounting and bank integration, safe weekly change. Adequate: ordering screens, internal reporting, Core module structure. Buy: tax content, CI and observability tooling, corporate business systems. Not doing for three years: Core rewrite, multi-region active-active, customer-specific code branches, a new tier 1 runtime or datastore without retiring one. Policies: reliability before reach; money data moves by contract or events, never tables (ADR-0001 by week 60); converge before adding; stage anything above 10 FTE-quarters. Year-2 allocation on 79 engineers: unplanned 17.4, prevention 5.5, platform 4.5, estate currency 2.0, product for today's customers 37.6, horizon 2 10.0, horizon 3 2.0. The CI target is chosen at the week 78 gate |
-| Stakeholders | Helena Marsh: six of the 40 largest customers renew in quarters 5 to 8. Rajiv Menon: operating expense flat, any new cash offset. Greg Tanaka: prevention engineers to deal features; a private offer in week 47 that the director declined. Amara Okafor: allocation fixed per stage. Sofia Alvarez: customer incident notifications kept |
-| Money | $185,000 per engineer-year; $46,250 per FTE-quarter; about $3,558 per engineer-week; gross margin 72 percent; discount rate 10 percent; top-40 customers about $1.17M ARR each |
+| Fact | Value | Week | Source |
+|---|---|---|---|
+| Sev1 and Sev2 incidents | 30 at baseline; 21, 17, 14 in quarters 1 to 3 | Weeks 13, 26, 39 | [Timeline](../case-studies/northstar/timeline.md) |
+| Availability, contractual paths | 99.62 percent; not recorded; 99.86; 99.89 (about 144 of 131,040 minutes unavailable in quarter 3, where 99.9 allows about 131) | Weeks 13, 26, 39 | [Timeline](../case-studies/northstar/timeline.md) |
+| Service credits a quarter | $410,000; not recorded; $95,000; $60,000 | Weeks 13, 26, 39 | [Timeline](../case-studies/northstar/timeline.md) |
+| Unplanned work | 34, 31, 28, 25 percent | Weeks 13, 26, 39 | [Timeline](../case-studies/northstar/timeline.md) |
+| Tier 1 at the four operational minimums | 3, 8, 11, 13 of 15 | Weeks 13, 26, 39 | [Timeline](../case-studies/northstar/timeline.md) |
+| Correctness failures | 8 of the 14 baseline customer-detected incidents | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Invoice correctness SLO | 99.99 percent, defined but dependent on reconciliation | Year 1 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
+| Corrected orders | 7,800 of about 600,000 submissions in 28 days (1.3 percent) | Week 40 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Corrected-order sample | 400 corrections, 340 errors: price changes 130, wrong unit 85, duplicate submissions 70 (no idempotency key), wrong delivery site 35, other 20 | Weeks 40–41 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Build systems | Four; the CI (continuous integration) target is open | Baseline; open | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| TR-01, Core's framework | Past free community support; 120 to 180 engineer-days to migrate (the register's estimate) | Week 14 | [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md) |
+| Technology risk register | TR-01 to TR-09 ([register IDs](../glossary.md#register-ids)) | Week 14 | [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md) |
+| Ledger knowledge | Currency and rounding changed safely by one person | Baseline | [Ledger knowledge map](../case-studies/northstar/baseline-data.md#billing-on-call-and-ledger-knowledge) |
+| Succession | 10 critical roles; none with a ready-now successor; 4 with no cover | Week 44 | [Chapter 36](../parts/07-organization-design/36-reorganizations-evolution-and-succession.md) |
+| core/permissions | Exemption from having an owner lapsed | Week 39 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
+| Main organization proposal | 79 engineers, 7 managers, the director; about 21 engineer-weeks of transition cost; document-store has no owner | Week 44 | [Year-2 organization proposal](../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44) |
+| Organization alternatives | B: keep Customer Experience whole (80 engineers, 6 managers); C: also split Orders and grow the platform (78, 8); D: two managers of managers (77, 9) | Week 44 | [Year-2 organization proposal](../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44) |
+| VP question | Recommendation due week 48 | Week 45 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Quarter 3 capacity plan | Unplanned work 22 percent planned, 28 cautious; prevention 8 FTE; platform 4.5; product 49.9 planned, 45.1 cautious | Week 26 | [Chapter 38](../parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md) |
+| The continuation | 6 FTE of prevention in quarters 5 and 6, 5 FTE in quarters 7 and 8; gates in weeks 56, 78, and 104 | Week 45 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Draft board counter | At or below 40 Sev1 and Sev2 over year 2 as a rolling four-quarter total; 99.9 percent every quarter; two consecutive quarters above 12 reopen prevention | Week 42 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Business choices | Mid-market distributors, with the largest 40 mattering most; trusted with money; cross-border growth moved to year 3 | Week 46 | [Three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51) |
+| Victor's draft: excellent | Financial correctness; availability of order and payment paths; accounting and bank integration; safe weekly change | Week 47 | [Three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51) |
+| Victor's draft: adequate and buy | Adequate: ordering screens, internal reporting, Core module structure. Buy: tax content, CI and observability tooling, corporate business systems | Week 47 | [Three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51) |
+| Victor's draft: not doing for three years | Core rewrite; multi-region active-active; customer-specific code branches; a new tier 1 runtime or datastore without retiring one | Week 47 | [Three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51) |
+| Victor's draft: policies | Reliability before reach; money data moves by contract or events, never tables ([ADR-0001](../glossary.md#adr-0001) decided by week 60); converge before adding; stage anything above 10 FTE-quarters | Week 47 | [Three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51) |
+| Victor's draft: year-2 allocation (FTE, 79 engineers) | Unplanned 17.4; prevention 5.5; platform 4.5; estate currency 2.0; product for today's customers 37.6; horizon 2 10.0; horizon 3 2.0 | Week 47 | [Three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51) |
+| CI target | Chosen at the week 78 gate | Week 47 | [Three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51) |
+| Helena Marsh (CEO) | Six of the 40 largest customers renew in quarters 5 to 8 | Weeks 46–47 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Rajiv Menon (CFO) | Operating expense flat; any new cash offset | Weeks 46–47 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Greg Tanaka (VP Sales) | Prevention engineers to deal features; a private offer in week 47 that the director declined | Weeks 46–47 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Amara Okafor (CPO); Sofia Alvarez (VP Customer Success) | Allocation fixed per stage; customer incident notifications kept | Weeks 46–47 | [Calendar of quarter 4](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) |
+| Money | $185,000 per engineer-year; $3,558 per engineer-week, the planning rate; $46,250 per FTE-quarter; gross margin 72 percent; discount rate 10 percent; top-40 customers about $1.17M ARR each | Quarter 4 | [Quarter 4 assumptions](../case-studies/northstar/first-quarter.md#assumptions-and-people-used-in-quarter-4) |
 
 **Facts you do not have.** Quarter 4 results; the outcome of the week 46 organization decision, the VP
 recommendation, the continuation, the workforce plan, the week 34 forum, and the board meeting; whether the

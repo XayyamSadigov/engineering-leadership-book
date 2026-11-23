@@ -93,8 +93,11 @@ The cash leaves in the same week either way. What changes is which line shows it
       future money to today's value. Northstar's Finance uses 10 percent.
     - **Annuity factor**: converts a yearly amount into today's money at the discount rate. Three years at
       10 percent gives 2.487, so $1 a year for three years is worth about $2.49 today (Chapter 45).
-    - **Fiscal years**: FY1 is the director's first year (weeks 1 to 52), FY0 the year before, FY−2
-      the year before that, and FY2 is year 2.
+    - **Fiscal years**: Finance labels years FY. FY1 is year 1 (the director's first year, weeks 1 to
+      52), FY2 is year 2, and FY0 is the year before the director arrived. Prose uses "year 1" and
+      "year 2"; tables keep Finance's labels.
+    - **FASB and GAAP**: the FASB (Financial Accounting Standards Board) is the body that writes US
+      accounting rules; GAAP (generally accepted accounting principles) is the rule book it maintains.
 
 ## Deep Conceptual Explanation
 
@@ -116,8 +119,9 @@ top-down:
 | Operating income | Gross profit minus operating expenses | The figure "flat operating expense" protects |
 | EBITDA | Earnings before interest, tax, depreciation, and amortization | Adds back amortization, so capitalization raises it |
 
-Revenue is not [ARR](../../glossary.md#arr): annual recurring revenue is the run rate of contracts in
-force at a moment (Chapter 45), revenue what was earned over a period. They diverge whenever the business grows or
+Revenue is not [ARR](../../glossary.md#arr): annual recurring revenue is the
+[run rate](../../glossary.md#run-rate) of contracts in force at a moment, that is, their yearly value if
+nothing changed (Chapter 45). Revenue is what was earned over a period. They diverge whenever the business grows or
 shrinks.
 
 **The balance sheet** is a snapshot. Three lines matter to a CTO of a subscription company.
@@ -143,7 +147,7 @@ spreads the cost over its useful life as amortization (SEC, 2014). Accounting st
 software work qualifies; finance applies them and auditors check them. Engineering's job is to describe
 the work accurately. This chapter is not accounting advice.
 
-**The engineer's rule.** Under the current US standard, as amended in 2025, three questions decide most
+**The engineer's rule.** Under the FASB's current rules, as amended in 2025, three questions decide most
 cases (**standard**, in this book's words) ([FASB, 2025](../../references/bibliography.md#fasb2025asu202506)):
 
 1. Has management authorized and committed funding for the project?
@@ -162,13 +166,13 @@ complete. Otherwise they are expensed.
 | Upgrades and enhancements that add functionality the software did not have | Maintenance, and minor upgrades not separable from it at reasonable cost |
 | Software that converts old data for new systems | Other data conversion |
 
-**Which guidance applies.** Software a software-as-a-service company uses to serve customers falls under
-the US internal-use software guidance, ASC 350-40; software sold or licensed falls under ASC 985-20. A
-software-as-a-service company is, in accounting terms, mostly an internal-use software company. The 2025
-update (ASU 2025-06) replaced the older project stages (preliminary, application development,
+**Which rules apply.** Software a software-as-a-service company uses to serve its customers falls under
+the internal-use software rules; software sold or licensed to customers has rules of its own. So a
+software-as-a-service company is, in accounting terms, mostly an internal-use software company. The
+2025 update replaced the older project stages (preliminary, application development,
 post-implementation), which fit iterative development badly, with the threshold above. Most companies,
-Northstar included, still apply the stage-based guidance until the update takes effect; the FASB expects
-little change for most software.
+Northstar included, still apply the stage-based rules until the update takes effect; the FASB expects
+little change for most software. The codification references are in the References entry.
 
 **When a project stalls.** If completion stops being probable, capitalization stops and the asset is
 impaired, which means written down. The standard presumes uncompleted software is worth zero, and its
@@ -235,9 +239,14 @@ Four distinctions decide most budget arguments:
 - **Seats versus dollars.** Seat budgets hide vacancy, approved money unspent and capacity lost
   (Chapter 48); dollar budgets expose it and tempt finance to bank it.
 
-**Variance**, the gap between budget and actual, has three causes: the plan was wrong, conditions
-changed, or execution differed. Vacancy underspend is not efficiency, and a cloud overspend from a new
-customer may be good news. Explain variances before finance finds them.
+**Variance**, the gap between budget and actual, has three causes. Explain each before finance finds
+it. The examples are **illustrative**:
+
+| Cause | Example | What the CTO says |
+|---|---|---|
+| The plan was wrong | Hosting budgeted on last year's load; an upgrade needed larger databases | The estimate missed this; here is the new forecast and the fix to how we estimate |
+| Conditions changed | A new large customer doubled order volume | Spend rose with revenue; cost per order fell |
+| Execution differed | Two hires started a quarter late | The underspend is vacancy, not savings: 26 engineer-weeks of capacity were lost |
 
 ### Investment cases with scenarios
 
@@ -283,27 +292,29 @@ holds funds.
 ## Engineering Organization Example
 
 !!! info "Northstar so far"
-    Week 47 of the director's first year. Sev1 and Sev2 incidents fell from 30 a quarter to 14 in
-    quarter 3, and service credits from $410,000 to $60,000 a quarter, with headcount flat at 80
-    engineers. The year-2 budget, organization, and quality continuation are drafted but not decided.
-    See the [timeline](../../case-studies/northstar/timeline.md) and the
+    Week 47 of the director's first year. Service credits fell from $410,000 to $60,000 a quarter with
+    headcount flat at 80 engineers. The year-2 budget is drafted but not decided. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
     [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 The figures are **illustrative** and fictional, taken from Northstar's
 [finance record](../../case-studies/northstar/first-quarter.md#finances-chapter-52). Northstar reports
-under US GAAP (the US accounting standards), and its statements are audited. In week 46, Rajiv Menon
-(CFO) sends the executive team Finance's FY1 latest estimate (LE: quarters 1 to 3 actual, quarter 4
-forecast) and the draft FY2 envelope for the week 50 board. You are Victor Lindqvist (CTO) in week 47,
-reading it before your one-on-one with Rajiv.
+under US GAAP, and its statements are audited. In week 46, Rajiv Menon (CFO) sends the executive team
+Finance's latest estimate for year 1 (LE: quarters 1 to 3 actual, quarter 4 forecast). He adds the draft
+year-2 [budget envelope](../../glossary.md#budget-envelope), the spending limit the week 50 board will
+approve. You are Victor Lindqvist (CTO) in week 47, reading it before your one-on-one with Rajiv.
 
-**The income statement, FY1 latest estimate ($M).**
+**The income statement, FY1 latest estimate ($M).** The lesson: engineering is a small share of costs,
+and its spending is split across three lines.
 
 | Line | FY1 LE | Note |
 |---|---|---|
 | Subscription revenue, net of service credits | 140.0 | ARR roughly flat at about $140M |
 | Professional services revenue | 5.0 | Implementation and onboarding |
 | **Total revenue** | **145.0** | |
-| Cost of revenue | 40.6 | Support and success 18.0, services staff 8.5, payment and data fees 6.0, production hosting 3.1, amortization of capitalized software 2.1, other 2.9 |
+| Cost of revenue | 40.6 | Support, success, and services staff 26.5, production hosting 3.1, amortization of capitalized software 2.1, fees and other 8.9 |
 | **Gross profit** | **104.4** | 72 percent gross margin |
 | Research and development | 16.4 | Engineering personnel expensed 13.7, development tooling 1.1, product management 1.6 |
 | Sales and marketing | 46.0 | |
@@ -312,7 +323,9 @@ reading it before your one-on-one with Rajiv.
 | EBITDA | 23.9 | 21.0 + 2.1 amortization + 0.8 depreciation |
 | Net income | 16.8 | After 1.4 interest income and 25 percent tax |
 
-**Where the $20.3M of engineering spending is.**
+**Where the $20.3M of engineering spending is.** The lesson: no single line in the statements equals
+engineering's budget. The table is the budget's two views side by side: the function view on the left,
+the accounting view on the right.
 
 | Engineering spending | $M | Where it appears |
 |---|---|---|
@@ -332,41 +345,46 @@ dollar of operating income. The baseline quarter's $410,000 ran at $1.64M a year
 runs at $240,000. The difference, about $1.4M a year, is 6.7 percent of FY1 operating income, with no
 headcount added: the year-1 quality program in the CFO's lens.
 
-**The balance sheet ($M).**
+**The balance sheet and cash flow, in two sentences.** Deferred revenue is $55M, about 39 percent of
+ARR, because most customers pay a year in advance: it is service Northstar owes, and the reason a lost
+renewal reaches cash before revenue. Free cash flow is $17.5M, against operating cash flow of $20.7M,
+because $2.4M of capitalized software and $0.8M of equipment count as investing.
 
-| Line | End FY0 | End FY1 LE |
-|---|---|---|
-| Cash | 56.0 | 73.5 |
-| Accounts receivable | 17.0 | 17.5 |
-| Prepaid and other | 3.0 | 3.0 |
-| Capitalized software, net | 4.4 | 4.7 |
-| Property and equipment, net | 2.4 | 2.4 |
-| **Total assets** | **82.8** | **101.1** |
-| Payables and accrued expenses | 6.0 | 6.2 |
-| Accrued compensation | 7.0 | 7.3 |
-| Deferred revenue | 54.0 | 55.0 |
-| **Total liabilities** | **67.0** | **68.5** |
-| **Shareholders' equity** | **15.8** | **32.6** |
+??? note "The full balance sheet and cash-flow statement"
+    **The balance sheet ($M).**
 
-Deferred revenue is about 39 percent of ARR because most customers pay a year in advance: $55M of
-service Northstar owes, and the reason a lost renewal reaches cash before revenue. Equity rose by 16.8,
-exactly net income, since there were no distributions or new investment.
+    | Line | End FY0 | End FY1 LE |
+    |---|---|---|
+    | Cash | 56.0 | 73.5 |
+    | Accounts receivable | 17.0 | 17.5 |
+    | Prepaid and other | 3.0 | 3.0 |
+    | Capitalized software, net | 4.4 | 4.7 |
+    | Property and equipment, net | 2.4 | 2.4 |
+    | **Total assets** | **82.8** | **101.1** |
+    | Payables and accrued expenses | 6.0 | 6.2 |
+    | Accrued compensation | 7.0 | 7.3 |
+    | Deferred revenue | 54.0 | 55.0 |
+    | **Total liabilities** | **67.0** | **68.5** |
+    | **Shareholders' equity** | **15.8** | **32.6** |
 
-**The cash-flow statement, FY1 LE ($M).**
+    Equity rose by 16.8, exactly net income, since there were no distributions or new investment.
 
-| Line | FY1 LE | Note |
-|---|---|---|
-| Net income | 16.8 | From the income statement |
-| Amortization and depreciation | +2.9 | Non-cash costs added back |
-| Working capital | +1.0 | Mostly the growth in deferred revenue |
-| **Operating cash flow** | **20.7** | |
-| Capitalized software | −2.4 | Investing |
-| Equipment | −0.8 | Investing |
-| Financing | 0.0 | None |
-| **Change in cash** | **17.5** | Also free cash flow, since there is no financing |
+    **The cash-flow statement, FY1 LE ($M).**
 
-**The capitalization test.** Finance has capitalized $1.8M, $2.1M, $2.4M, and $2.4M in FY−2 to FY1,
-amortizing each year's amount over the next three years:
+    | Line | FY1 LE | Note |
+    |---|---|---|
+    | Net income | 16.8 | From the income statement |
+    | Amortization and depreciation | +2.9 | Non-cash costs added back |
+    | Working capital | +1.0 | Mostly the growth in deferred revenue |
+    | **Operating cash flow** | **20.7** | |
+    | Capitalized software | −2.4 | Investing |
+    | Equipment | −0.8 | Investing |
+    | Financing | 0.0 | None |
+    | **Change in cash** | **17.5** | Also free cash flow, since there is no financing |
+
+**The capitalization test.** The lesson: capitalization moves EBITDA, not cash. Finance capitalized
+$1.8M, $2.1M, $2.4M, and $2.4M in the four years up to and including year 1, amortizing each year's
+amount over the next three years:
 
 | FY1 measure | As reported | If everything were expensed | Change |
 |---|---|---|---|
@@ -384,8 +402,8 @@ real money, and the engineering time data under it is a CTO responsibility.
 "engineering cost" means one thing in the board pack. The credits line, as the year-1 result in
 operating-income terms. And a warning: if the year-2 pack compares investments by income-statement cost,
 prevention will look far more expensive than features. A prevention engineer-year shows $185,000 of
-expense in the year. A fully capitalized feature engineer-year shows only the $27,750 of overhead that
-cannot be capitalized; the rest arrives as amortization later. The cash is identical, so Victor asks
+expense in the year. A fully capitalized feature engineer-year shows only the overhead that cannot be
+capitalized ($185,000 × 15 percent = $27,750); the rest arrives as amortization later. The cash is identical, so Victor asks
 that the pack compare investments in cash and capacity and show the accounting effect separately.
 
 ## Decision Framework
@@ -422,7 +440,7 @@ flowchart TD
 | Its discovery and prototyping weeks | Expense | Preliminary stage under the current guidance; unresolved requirements under the amended one |
 | Prevention allocation, incident response, flaky-test repair | Expense | Maintenance; no new functionality |
 | Permissions extraction inside Core | Expense, unless it delivers new capability | Restructuring that the software could already do |
-| Core framework migration (TR-01) | Expense | Keeps existing function on a supported version |
+| Migrating Core (Northstar's monolith) off its unsupported framework | Expense | Keeps existing function on a supported version |
 | Training the quality engineers | Expense | Training is excluded |
 | Internal tool for service-credit statements | Capitalize if authorized and probable | Internal-use software for Northstar's own operations |
 
@@ -485,10 +503,11 @@ shared by the engineering leader, a finance business partner, and the controller
 artifacts:
 
 - **One reconciliation** from the engineering budget to the three statements, updated quarterly; every
-  engineering number in the board pack comes from it.
+  engineering number in the [board pack](../../glossary.md#board-pack) (the papers sent to directors
+  before a meeting) comes from it.
 - **A written capitalization method**: which projects are capitalizable, how time is recorded, who
-  classifies a project and when. Review it annually and when the standard changes, as it does with ASU
-  2025-06.
+  classifies a project and when. Review it annually and when the standard changes, as it does with the
+  2025 update.
 - **A quarterly variance review** inside the operating reviews of
   [Chapter 39](../08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md).
 - **A case threshold**: above a set size (say a quarter of a team's capacity), the business case
@@ -498,7 +517,8 @@ The transition costs a quarter, and engineers' goodwill if time tracking arrives
 
 ## CTO Perspective
 
-First, **the CTO negotiates the envelope, not the lines.** The board approves an operating plan and a
+First, **the CTO negotiates the envelope, not the lines.** The board approves an
+[operating plan](../../glossary.md#operating-plan) (the year's targets, headcount, and budget) and a
 budget envelope; management allocates inside it. Leverage is greatest while Finance drafts and smallest
 after the board meets.
 
@@ -541,15 +561,19 @@ the year-2 envelope nor whether TR-01 is funded is recorded.
 **The situation.** You are Victor Lindqvist in week 48. TR-01 has been on the technology risk register
 since quarter 2: [Core](../../glossary.md#core), Northstar's monolith, runs on an application framework a
 major version past free community support, with no extended support bought (Chapter 30). The migration
-is estimated at 120 to 180 engineer-days, at Northstar's planning rate of $800 per engineer-day. The
-draft year-2 envelope:
+is estimated at 120 to 180 engineer-days. Costs here use **Finance's day rate** of $800 per
+engineer-day ($185,000 ÷ about 230 working days). It is higher per day than the book's planning rate of
+$3,558 per engineer-week because Finance counts only working days. The draft year-2 envelope:
 
 | Line | Year 2 ($M) |
 |---|---|
-| Engineering personnel at full seats ($16.10M, plus 3 percent merit increase $0.483M, plus $0.15M reserve for promotions and market adjustments) | 16.73 |
+| Engineering personnel at full seats | 16.73 |
 | Less expected vacancy (Chapter 48) | −0.43 |
 | **Personnel after vacancy** | **16.31** |
 | Cloud and tooling | 4.2 |
+
+Full seats: $16.10M, plus a 3 percent merit increase ($0.483M), plus a $0.15M reserve for promotions and
+market adjustments.
 
 Rajiv Menon wants the quality continuation's $150,000 of tooling offset inside the $4.2M. (The
 [continuation](../../glossary.md#the-continuation) is the director's staged proposal to keep the quality
@@ -560,11 +584,13 @@ describe it to Rajiv and, if asked, the board.
 to 35 percent between start and delivery. Using it as the uplift is a judgment, since a framework
 migration is not a feature:
 
-| Scenario | Engineer-days | Cost at $800 | Engineer-weeks displaced | Story |
-|---|---|---|---|---|
-| Optimistic | 120 | $96,000 | 24 | Low end, no growth |
-| Base | about 190 | $152,000 | 38 | Midpoint 150 × 1.25 |
-| Pessimistic | about 243 | $194,400 | about 49 | 180 × 1.35, plus a regression found late |
+| Scenario | Engineer-days | Cost at $800 a day | Basis |
+|---|---|---|---|
+| Optimistic | 120 | $96,000 | Low end, no growth |
+| Base | about 190 | $152,000 | Midpoint 150 × 1.25 |
+| Pessimistic | about 243 | $194,400 | 180 × 1.35, plus a regression found late |
+
+In engineer-weeks displaced, the three scenarios are 24, 38, and about 49.
 
 **The booking.** The migration adds no functionality, so it is expensed: $96,000 to $194,400 of FY2
 operating expense. The personnel are already budgeted, so it reallocates capacity rather than adding
@@ -578,8 +604,8 @@ patches, not the migration.
 [tier 1](../../glossary.md#tier-1) framework with no upstream fixes accumulates unpatched
 vulnerabilities, while Northstar's remediation service level for critical internet-facing issues is 7
 days (Chapter 26). At the base cost, the migration breaks even over three years at the 10 percent rate
-if it avoids an expected loss of about $61,100 a year. That is $152,000 divided by the three-year annuity
-factor of 2.487: for example, a 1-in-10 yearly chance of a $611,000 event. Nobody at Northstar can yet
+if it avoids an expected loss of about $61,100 a year ($152,000 ÷ the three-year annuity factor of
+2.487). For example, that is a 1-in-10 yearly chance of a $611,000 event. Nobody at Northstar can yet
 defend a probability. The case states the break-even and asks Joon Park (IT security lead) and Ines
 Carvalho (staff engineer, Core domain) whether they believe the risk exceeds it.
 
@@ -707,8 +733,9 @@ would offer instead.
 
 - [SEC, 2014](../../references/bibliography.md#sec2014beginners). The SEC's beginners' guide to the
   financial statements; clear standard definitions, free.
-- [FASB, 2025](../../references/bibliography.md#fasb2025asu202506). ASU 2025-06 on internal-use
-  software; its four-page summary is readable by engineers and states the new capitalization threshold
+- [FASB, 2025](../../references/bibliography.md#fasb2025asu202506). Accounting Standards Update (ASU)
+  2025-06 on internal-use software, which amends ASC 350-40 (software sold or licensed falls under
+  ASC 985-20). Its four-page summary is readable by engineers and states the new capitalization threshold
   (paragraph 350-40-25-12A on development uncertainty, 350-40-35-3 on impairment, BC13 on cloud
   arrangements). It applies to annual periods beginning after December 15, 2027, with early adoption
   allowed.

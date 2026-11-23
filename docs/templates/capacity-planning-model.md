@@ -15,6 +15,11 @@ dip in feature capacity is a decision rather than a surprise. It is a planning i
 forecast: every row rests on an assumption, and the model is only as honest as the unplanned-work
 sample behind it.
 
+!!! tip "Minimum version"
+    On day one, fill the organization table for the coming quarter: engineers, measured unplanned work,
+    prevention, and the feature capacity left. Add the per-team table and the cautious case before
+    commitments are made, and the monthly revisions once the quarter starts.
+
 ## How to fill it in
 
 1. Count capacity in FTE per team, for the quarter. Exclude
@@ -75,7 +80,9 @@ model:
     Northstar Technologies is a fictional company with 80 engineers. In week 4 of the Engineering
     Director's first year, the director agreed this model with Victor Lindqvist (CTO) and Amara Okafor
     (CPO) to fund a quality program inside flat headcount. See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 Assumptions: 80 engineers; unplanned work at 34 percent (27.2 FTE) at baseline; prevention of 12 FTE
 in quarters 1 and 2, 8 in quarter 3, and 6 in quarter 4.
@@ -85,36 +92,26 @@ in quarters 1 and 2, 8 in quarter 3, and 6 in quarter 4.
 | Baseline | 34% = 27.2 FTE | 0 | 52.8 FTE | — |
 | Quarter 1 plan | 33% = 26.4 FTE | 12 FTE | 41.6 FTE | −21% |
 | Quarter 1 measured | 31% = 24.8 FTE | 12 FTE | 43.2 FTE | −18% |
-| Quarter 2 | 28% = 22.4 FTE | 12 FTE | 45.6 FTE | −14% |
-| Quarter 3 | 22% = 17.6 FTE | 8 FTE | 54.4 FTE | +3% |
-| Quarter 4 | 18% = 14.4 FTE | 6 FTE | 59.6 FTE | +13% |
+| Quarter 2 measured | 28% = 22.4 FTE | 12 FTE | 45.6 FTE | −14% |
+| Quarter 3 plan (measured: 25%) | 22% = 17.6 FTE | 8 FTE | 54.4 FTE | +3% |
+| Quarter 4 plan (not measured) | 18% = 14.4 FTE | 6 FTE | 59.6 FTE | +13% |
 
 Cautious case: unplanned work falls only to 26 percent by quarter 4, leaving 53.2 FTE of feature
 capacity, roughly the baseline. The year's prevention is 38 [FTE-quarters](../glossary.md#fte-quarter)
 (9.5 engineer-years), about $1.76M at $185,000 per engineer-year.
 
-**Quarter 1 by team.** 12 FTE of prevention, sized by where the inflow comes from and where the
-renewal commitments sit: Billing 25 percent; Orders and Payments and Integrations 10 percent; the
-others, including the staff engineers, 15 percent. Teams as at the start of the quarter.
+Quarter 1's 12 FTE of prevention was split by where the incidents come from and where the
+[renewal commitments](../glossary.md#renewal-commitments) (features promised to customers who renew)
+sit: Billing 25 percent of its engineers, Orders and Payments and Integrations 10 percent, the others 15
+percent.
 
-| Team | Engineers | Share | Prevention (FTE) |
-|---|---|---|---|
-| Orders | 14 | 10% | 1.40 |
-| Billing | 13 | 25% | 3.25 |
-| Payments and Integrations | 12 | 10% | 1.20 |
-| Customer Experience | 15 | 15% | 2.25 |
-| Data and Analytics | 11 | 15% | 1.65 |
-| Platform Operations | 12 | 15% | 1.80 |
-| Staff engineers | 3 | 15% | 0.45 |
-| **Total** | **80** | | **12.00** |
-
-**Quarter 3 by team.** Quarter 3 (weeks 27 to 39) splits the 54.4 FTE of feature capacity into a
+**Quarter 3 plan by team.** Quarter 3 (weeks 27 to 39) splits the 54.4 FTE of feature capacity into a
 platform line of 4.5 FTE and 49.9 FTE of product capacity. The platform line is 3 FTE of Platform
 Operations planned work plus 1.5 FTE in product teams for pipeline migrations, held until the CI
 target is decided. Teams are as after week 10, when the seven QA engineers moved into product teams.
 The per-team unplanned figures are illustrative: the case gives only the total, so 2.0 FTE is Platform
 Operations' interrupt rotation and the other 15.6 FTE is spread in proportion to each team's baseline
-rate and headcount.
+rate and headcount. The table uses the 22 percent plan; measured unplanned work came in at 25 percent.
 
 | Team | Engineers | Unplanned (FTE) | Prevention (FTE) | Platform (FTE) | Product (FTE) |
 |---|---|---|---|---|---|
@@ -129,8 +126,8 @@ rate and headcount.
 | **Total** | **80** | **17.6** | **8.0** | **4.5** | **49.9** |
 
 Each row sums to the team's engineers, and the columns sum to 80. Billing keeps the largest prevention
-share (6 of the 11 baseline recurrences); Orders' share rises because bulk ordering no longer holds its
-capacity.
+share (6 of the 11 baseline recurrences); Orders' share rises because bulk ordering, the renewal feature
+due at the end of quarter 2, no longer holds its capacity.
 
 | Cautious case, quarter 3 | FTE |
 |---|---|

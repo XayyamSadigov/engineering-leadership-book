@@ -13,14 +13,15 @@ reference for the case. If a chapter and these pages disagree, these pages are r
 chapter has a defect.
 
 !!! tip "How to use these pages"
-    Read this overview first (about 15 minutes). Then use the other pages as references:
+    Read this overview first (about 15 minutes), then [the year in brief](year-in-brief.md) (about six
+    minutes), which tells the director's first year as a story. Use the other pages as references:
 
     - [Cast](cast.md): every named person, with role, team, and the chapters where they matter.
     - [Timeline](timeline.md): the director's year week by week, and results by quarter.
     - [Quarter 4 briefing](quarter-4-briefing.md): where things stand at week 40 and the open
       decisions; start here if you begin at Parts X–XIII.
     - [Baseline data](baseline-data.md): the measured starting state, by topic.
-    - [The director's first year](first-quarter.md): the full record, quarter by quarter.
+    - [Year 1 record](first-quarter.md): the full record, quarter by quarter, for looking up facts.
     - [Halvard Systems](halvard.md): the 500-engineer comparison company used from Chapter 34 on.
 
 ## The company
@@ -167,7 +168,8 @@ commitment within twelve months, with no net growth in headcount, and without dr
 customer commitments that the renewals depend on.
 
 What you find, in summary (the numbers are on the [baseline data](baseline-data.md) page; what
-happens next is on [the director's first year](first-quarter.md) page):
+happens next is told in [the year in brief](year-in-brief.md) and recorded in
+[the year 1 record](first-quarter.md)):
 
 - 30 Sev1 and Sev2 incidents last quarter, almost two thirds of them caused by Northstar's own
   changes, and almost half of them reported by a customer before any alert fired.

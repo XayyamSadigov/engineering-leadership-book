@@ -61,16 +61,12 @@ assessments. Each manager writes a self-assessment against the rubric before the
 **Window.** Weeks 1 to 26 (quarters 1 and 2). Baseline-quarter facts are context, not window evidence,
 as in the template's example.
 
-**The time rule.** Use only facts dated week 26 or earlier: the
-[Northstar overview](../case-studies/northstar/index.md), the
-[baseline data](../case-studies/northstar/baseline-data.md), the first-year record through
-[quarter 2 results](../case-studies/northstar/first-quarter.md#quarter-2-results) and
-[the renewals and the operating system in quarter 2](../case-studies/northstar/first-quarter.md#the-renewals-and-the-operating-system-in-quarter-2),
-the [timeline](../case-studies/northstar/timeline.md) to week 26, and the
-[cast](../case-studies/northstar/cast.md). Everything after week 26 is off limits, including any
-quarter 3 outcome and the week-44 succession ratings in Chapter 36 (use Chapter 36 for the method, not
-as evidence). Whether bulk ordering ships at the end of week 26 is not known when you
-draft; treat it as a branch.
+**The time rule.** Use only facts dated week 26 or earlier ([weeks](../glossary.md#weeks-quarters-and-years)
+count from the director's first week). The fact sheet under Starting Dataset lists the case facts the
+project needs, each with its week; anything else you use from the case must also be dated week 26 or
+earlier. Everything after week 26 is off limits, including any quarter 3 outcome and the week-44
+succession ratings in Chapter 36 (use Chapter 36 for the method, not as evidence). Whether bulk ordering
+ships at the end of week 26 is not known when you draft; treat it as a branch.
 
 **Constraints.** These are binding.
 
@@ -103,10 +99,10 @@ Use these sources:
   [people and management](../case-studies/northstar/baseline-data.md#people-and-management),
   [levels, reviews, promotions, pay, and attrition](../case-studies/northstar/baseline-data.md#levels-reviews-promotions-pay-and-attrition),
   and [locations and working arrangements](../case-studies/northstar/baseline-data.md#locations-and-working-arrangements), and
-  [the first quarter](../case-studies/northstar/first-quarter.md), including the timeline, the starting
+  [the year 1 record](../case-studies/northstar/first-quarter.md), including the timeline, the starting
   points for quarter 2, and the quarter 2 facts.
 - [`teams.csv`](../case-studies/northstar/data/teams.csv) for the baseline teams; team sizes from week
-  10 are in the first quarter page (quality engineers joined product teams).
+  10 are in the year 1 record (the seven QA engineers joined product teams as quality engineers).
 - The [Engineering Manager performance rubric](../templates/engineering-manager-rubric.md), including
   its worked example for Elena Sokolova.
 - Chapter 41's evidence notes and Chapter 36's readiness scale and coverage rule.
@@ -117,18 +113,30 @@ from the case**, not new, and it is an index, not an assessment: it
 does not say which dimension an item bears on, whether it is evidence or context, or whether it helps
 or hurts. Deciding that is the project.
 
-**Facts your submission must use.**
+**Project fact sheet.** Every case fact the submission must use, one per row, each dated week 26 or
+earlier. You do not need to search the case pages for these.
 
-| Area | Facts |
-|---|---|
-| Teams from week 10 | Orders 16 (Priya Raman), Billing 15 (Marcus Oyelaran), Payments and Integrations 13 (Elena Sokolova), Customer Experience 17 (Daniel Cho), Data and Analytics 11 (Farah Haddad), Platform Operations 5 (Tom Becker); three staff engineers report to the director |
-| Expectations | Week 2: Priya's cap of 8 hands-on hours a week; weeks 4 and 5: incident commander training for all six; quarter 1: every kept corrective action has a manager owner; tier 1 minimums; week 22: the one-page expectation on six dimensions. Nobody set Daniel Cho expectations for leading across sites, or told Farah Haddad which of her two roles came first |
-| Signal | Individual skip-levels from week 16, four a week (36 by week 24, 44 by week 26); no group skip-levels; Mateo Arango Ríos's week-17 conversation was the first with a mobile engineer |
-| People | Aisha Bello and Rafael Duarte (Orders seniors); Teodora Vasquez-Lund, Tomasz Wierzbicki, and a third ledger engineer (Billing); Hannah Lindgren and Mateo Arango Ríos (Customer Experience informal leads); Payments' informal tech lead (unnamed); Sunil Varghese (Data); Bram Verhoeven (Platform); staff engineers Ines Carvalho, Kwame Mensah, Li Na Zhou |
-| Ladder | Ladder rewrite drafted; first calibrated promotion cycle at the start of quarter 3; no formal tech lead role at Northstar |
-| Knowledge | Billing ledger knowledge (respond alone / change safely): posting rules 3/3, credit notes 4/2, period close 2/1, schema migrations 2/2, currency and rounding 1/1 |
-| Attrition | 8 leavers in the 12 months before arrival, median 15 weeks from resignation to the replacement's first day; recoded causes include no career conversation in six months (5) and after-hours load (4) |
-| Cost | $185,000 per engineer-year; a 47-hour director week |
+| Fact | Value | Week | Source |
+|---|---|---|---|
+| Teams and managers | Orders 16 (Priya Raman), Billing 15 (Marcus Oyelaran), Payments and Integrations 13 (Elena Sokolova), Customer Experience 17 (Daniel Cho), Data and Analytics 11 (Farah Haddad), Platform Operations 5 (Tom Becker); three staff engineers report to the director | From week 10 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
+| Priya Raman's time budget | Hands-on work capped at 8 hours a week | Week 2 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
+| Incident commander training | All six managers | Weeks 4 and 5 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
+| Corrective actions | Every kept action has a manager owner | Quarter 1 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
+| Tier 1 minimums | Every [tier 1](../glossary.md#tier-1) component meets the four [operational minimums](../glossary.md#tier-1-operational-minimums) | Quarter 1 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
+| Written expectations | The one-page expectation on the rubric's six dimensions | Week 22 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#the-renewals-and-the-operating-system-in-quarter-2) |
+| Unset expectations | Nobody set Daniel Cho expectations for leading across sites, or told Farah Haddad which of her two roles came first | By week 26 | [Evidence index](data/p6-manager-evidence.csv) |
+| Skip-levels | Individual skip-levels four a week (36 by week 24, 44 by week 26); no group skip-levels | From week 16 | [Chapter 41](../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md) |
+| Mobile signal | Mateo Arango Ríos's conversation was the director's first with a mobile engineer | Week 17 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2) |
+| Orders senior engineers | Aisha Bello and Rafael Duarte | Baseline | [Cast](../case-studies/northstar/cast.md) |
+| Billing ledger engineers | Teodora Vasquez-Lund, Tomasz Wierzbicki, and a third ledger engineer | Baseline | [Cast](../case-studies/northstar/cast.md) |
+| Informal leads | Hannah Lindgren (web) and Mateo Arango Ríos (mobile) in Customer Experience; Payments' informal tech lead (unnamed) | Baseline | [Cast](../case-studies/northstar/cast.md) |
+| Other engineers named | Sunil Varghese (Data and Analytics); Bram Verhoeven (Platform Operations) | Baseline | [Cast](../case-studies/northstar/cast.md) |
+| Staff engineers | Ines Carvalho (Core domain), Kwame Mensah (infrastructure), Li Na Zhou (data and integration) | Baseline | [Cast](../case-studies/northstar/cast.md) |
+| Career ladder | Rewrite drafted; first calibrated promotion cycle at the start of quarter 3 (week 27); no formal tech lead role | By week 26 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2) |
+| Billing ledger knowledge (respond alone / change safely) | Posting rules 3/3; credit notes 4/2; period close 2/1; schema migrations 2/2; currency and rounding 1/1 | Baseline (rebuilt later) | [Ledger knowledge map](../case-studies/northstar/baseline-data.md#billing-on-call-and-ledger-knowledge) |
+| Attrition | 8 leavers in the 12 months before arrival; median 15 weeks from resignation to the replacement's first day | Year before week 1 | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Recoded leaving causes | Include no career conversation in six months (5) and after-hours load (4) | Quarter 2 | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Cost | $185,000 per engineer-year; a 47-hour director week | Baseline; week 16 | [Overview](../case-studies/northstar/index.md); [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md) |
 
 **Facts you do not have.** Whether bulk ordering ships at the end of week 26; how candid Orders is with
 Priya Raman (Chapter 11 left it open); the name and ambitions of Payments' informal tech lead; whether

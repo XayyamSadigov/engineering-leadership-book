@@ -140,8 +140,19 @@ question. Peers see each other's work, and the artifact becomes rubric evidence.
 "what would you change?", not "who got it wrong?".
 
 **Delegated decisions.** The strongest tool is a real decision handed over at an explicit level of
-control; Chapter 2's five levels (from "I decide, you carry out" to "you decide, no need to tell
-me") work for managers too. David Marquet argues for moving decisions to the people with the
+control. Chapter 2's five levels
+([delegating with an explicit level of control](../01-foundations/02-from-individual-contributor-to-leader.md#delegating-by-outcome-with-an-explicit-level-of-control))
+work for managers too:
+
+| Level | Who decides | The delegate says |
+|---|---|---|
+| 1. Direct | The director | "Here is what I found" |
+| 2. Recommend | The director, from the manager's options | "I recommend X, because" |
+| 3. Intent | The manager, after telling the director | "I intend to do X on Thursday" |
+| 4. Act and inform | The manager | "I did X; here is why" |
+| 5. Own | The manager; the director hears by exception | Reports outcomes in the regular review |
+
+David Marquet argues for moving decisions to the people with the
 information ([Marquet, 2012](../../references/bibliography.md#marquet2013turn)). Liz Wiseman argues
 that some leaders amplify others' capability while others diminish it
 ([Wiseman, 2010](../../references/bibliography.md#wiseman2010multipliers)). Both are **expert
@@ -160,15 +171,12 @@ finding**, as the abstract reports it, concerns formal programs, not a director'
 argues against one off-site course from a catalog. The rubric is the needs analysis, real decisions
 are the practice, quarterly rechecks are the spacing.
 
-Management is learned mostly on the job, and the research on how is young. A review of 25 years of
-leader development research says so
-([Day et al., 2014](../../references/bibliography.md#day2014advances)). Linda Hill's study of nineteen
-new managers is described by its publisher as showing that the transition is learned mainly from
-experience and that many do not make it ([Hill, 2019](../../references/bibliography.md#hill2019becoming)).
-Practitioner guides by Camille Fournier
-([Fournier, 2017](../../references/bibliography.md#fournier2017manager)) and Julie Zhuo
-([Zhuo, 2019](../../references/bibliography.md#zhuo2019making)) agree. None of this says which manager
-will grow, so recheck every quarter.
+Management is learned mostly on the job, and the research on how is young
+([Day et al., 2014](../../references/bibliography.md#day2014advances);
+[Hill, 2019](../../references/bibliography.md#hill2019becoming)); practitioner guides agree
+([Fournier, 2017](../../references/bibliography.md#fournier2017manager);
+[Zhuo, 2019](../../references/bibliography.md#zhuo2019making)). None of it says which manager will
+grow, so recheck every quarter.
 
 ### Building the bench
 
@@ -201,8 +209,8 @@ slot is not counted: it sits inside the weekly leadership team meeting.
 
 What it can buy: at baseline eight engineers left in a year, with a median 15 weeks to a replacement's
 first day. Catching one avoidable departure a year saves about 15 engineer-weeks, roughly $53,000 at
-Northstar's [fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000 per engineer-year, before
-ramp-up. It is a plausibility check, not a forecast.
+the book's planning rate of $3,558 per engineer-week (a
+[fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000 a year ÷ 52), before ramp-up. It is a plausibility check, not a forecast.
 
 The more telling number: in the first Northstar rubric (Case Study), drafted before any group
 skip-level, 5 of 36 cells are "No evidence". Rating all 36 from impression would have produced a tidy
@@ -227,11 +235,11 @@ flowchart TD
 | Pattern | Likely meaning | Response |
 |---|---|---|
 | "Not yet" on one dimension, expectation stated | Skill gap | One-quarter plan with a delegated decision and a check |
-| "Not yet" caused by the system (release train, span, ownership) | The director's problem | Fix the system; rate the manager's response |
+| "Not yet" caused by the system ([release train](../../glossary.md#release-train), span, ownership) | The director's problem | Fix the system; rate the manager's response |
 | "Not yet" on several dimensions for two quarters despite a plan | Possible role fit | Chapter 9's expectations process, including a return to engineering |
 | "No evidence" anywhere | Information gap | Go and look; do not rate |
 | "Expectation not set" | The director's gap | State the expectation; rate next cycle |
-| "Strong" on people growth and leverage | Ready for more scope | Stretch decision at level 3 or 4; bench for a larger role |
+| "Strong" on people growth and leverage | Ready for more scope | Stretch decision at level 3 or 4 (the manager decides); bench for a larger role |
 | "Strong" everywhere, team runs without them | Ready now, or about to leave | Career conversation this month |
 
 Two more criteria (**this book's recommendation**). Weigh dimensions by the team's situation: outcomes
@@ -271,7 +279,7 @@ Then run the transition in this order:
 ## Trade-offs
 
 **Consistency against context.** One rubric makes comparison fair to read, and also invites comparing a
-team on the Core train with one that deploys at will. Keep dimensions common, evidence local, and never rank.
+team on the shared Core release train with one that deploys at will. Keep dimensions common, evidence local, and never rank.
 
 **Real decisions against risk.** A delegated decision that matters can go wrong and the director owns the
 result; a trivial one develops nobody. The level of control, not the size of the decision, is the valve.
@@ -345,10 +353,14 @@ hours buys the visible half of manager development.
 ## Case Study
 
 !!! info "Northstar so far"
-    Week 24 of the director's first year, late in quarter 2. Sev1 and Sev2 incidents fell from 30 to
-    21 in quarter 1. The accounting integration has been live since week 19; bulk ordering is due in
-    week 26. Individual skip-levels started in week 16. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    Week 24 of the director's first year, late in quarter 2.
+    [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels)
+    fell from 30 to 21 in quarter 1. Of the two
+    [renewal commitments](../../glossary.md#renewal-commitments), the accounting integration has been
+    live since week 19 and bulk ordering is due in week 26. See the
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This case is **fictional**. The director drafts the assessment in week 24, holds the conversations in
 weeks 25 and 26, and finalizes it in week 27, the first week of quarter 3. The rating window is
@@ -382,72 +394,64 @@ Of 36 cells: 16 Solid, 4 Strong, 9 Not yet, 5 No evidence, and 2 Expectation not
 starred cells rest only on facts from before the window, which the rule treats as context. Before
 week 27 the director must find quarter 2 evidence for each or change it to No evidence.
 
-**Two managers in full.** Marcus and Daniel show how each rating traces to a dated item.
-
-*Marcus Oyelaran, Billing.*
-
-| Dimension | Dated evidence | Source | Rating |
-|---|---|---|---|
-| Outcomes | Seven of Billing's eight baseline incidents came through Core releases or migrations, so results are read against the release train (context). In quarter 2 Billing reserved weeks 14 to 16 for the ledger export the accounting integration needed | Incident records; quarter 2 plan | Solid |
-| Operational ownership | Three engineers handled 126 of 180 pages at baseline; his responses had been a higher stipend, an alert after each serious incident, and "document as you go" with no time (context). He asked to skip incident commander training | Page data; training records | Not yet |
-| People growth | A ledger knowledge map exists, but nobody new can yet respond alone to ledger incidents | Knowledge map | No evidence |
-| Team health | The ledger engineers' stay interviews (weeks 14 and 15) named after-hours load; in week 20 Tomasz Wierzbicki, a ledger expert, reported an outside offer 20 percent above base | Stay interviews; one-on-one notes | Not yet |
-| Leverage | Reviewed contract tests on a shared boundary for meaning, not form; raised the tax-svc risk himself | Review records; strategy draft | Solid |
-| Running the role | "No capacity" was Billing's first answer on testing ownership, flaky tests, and runbooks. Once prevention capacity was budgeted, Billing did act, deleting 15 and rewriting 23 of its 38 quarantined tests | Standards and testing threads | Not yet |
-
-*Daniel Cho, Customer Experience.* Nine web and six mobile engineers, the mobile ones in Bogotá.
+**One manager in full.** Marcus Oyelaran's row shows how each rating traces to one dated item and
+its source.
 
 | Dimension | Dated evidence | Source | Rating |
 |---|---|---|---|
-| Outcomes | Delivery measures look healthy; the team deploys most often | Deployment data | Solid |
-| Operational ownership | Two of the team's four baseline Sev2 incidents were at the mobile boundary; INC-426 (offline sync corrupted drafts) took 1,310 minutes to restore. No quarter 2 item yet | Incident records | Not yet* |
-| People growth | Weeks 14 to 19: 84 of 90 one-on-ones held, 55 mainly status; 9 of 15 engineers had no career conversation in six weeks. Mateo Arango Ríos, the informal mobile lead, said in week 17 he had done a lead's job for over a year unrecognized | One-on-one review; skip-level | Not yet |
-| Team health | Week 16 health check: mobile rated four areas red. No expectation for leading across sites had been set | Health check | Expectation not set |
-| Leverage | Nothing observed yet | None | No evidence |
-| Running the role | About 45 percent of his time on people (baseline, context); after the one-on-one review he drafted the changes himself | Calendar; his draft | Solid |
+| Outcomes | Weeks 14–16: Billing built the ledger export the accounting integration needed, on time. Most baseline Billing incidents came through shared releases (context) | Quarter 2 plan | Solid |
+| Operational ownership | Asked to skip incident commander training while three engineers still carry most pages | Training records | Not yet |
+| People growth | A ledger knowledge map exists; nobody new can yet answer ledger incidents alone | Knowledge map | No evidence |
+| Team health | Weeks 14–15: ledger engineers' stay interviews named after-hours load | Stay interviews | Not yet |
+| Leverage | Reviewed contract tests on a shared boundary for meaning; raised the tax service's risk himself | Review records | Solid |
+| Running the role | "No capacity" was his first answer on testing, flaky tests, and runbooks; once prevention was budgeted, Billing deleted 15 and rewrote 23 of 38 quarantined tests | Standards threads | Not yet |
+
+**The rules at work.** Daniel Cho's team has 17 reports: nine web engineers, six mobile engineers in
+Bogotá, and, since week 10, two [quality engineers](../../glossary.md#quality-engineer) (former QA engineers). Three of his cells:
+
+| Dimension | Dated evidence | Rating |
+|---|---|---|
+| People growth | Weeks 14–19: 84 of 90 one-on-ones held, 55 mainly status; 9 of 15 engineers had no career conversation | Not yet |
+| Team health | Week 16: mobile rated four areas red in a health check, but nobody had set an expectation for leading across sites | Expectation not set |
+| Operational ownership | Two mobile-boundary Sev2 incidents at baseline; nothing yet from quarter 2 | Not yet* (needs window evidence) |
 
 The other four, in one line each:
 
-- *Priya Raman.* Delegation held where written down (Aisha Bello leads bulk ordering). The Not yet on
-  running the role: hands-on time of 8, 10, and 12 hours a week at the week 16, 20, and 24 checks,
-  against the cap of 8 she agreed in week 2. Team health is No evidence: nobody has asked how candid
-  Orders is with her.
-- *Elena Sokolova.* The accounting integration has been live since week 19 with daily
-  reconciliation. She built the payment [SLI](../../glossary.md#sli-slo-and-sla) (the measured success
-  rate of payments) in two weeks and has run a weekly operations review for two years, with a
-  near-miss log of 17 entries in the baseline quarter. Its blind spot: payments-gateway configuration
-  edits never reached the log. People growth is Solid, not Strong, because her informal tech lead is
-  the only cover for her seat.
-- *Farah Haddad.* Her team charter answered INC-423 (a warehouse maintenance window that broke
-  customer exports) with a maintenance notice and gave other teams one queue. People growth is Not
-  yet: one promotion to Senior in two years. About 45 percent of her time is technical, and technical
-  direction lives with her; which role comes first was never set.
-- *Tom Becker.* By week 18 environment waits fell from about 6 days to 2. People growth and team health
-  are starred Not yet on one baseline pattern: for nine months he moved 31 of Bram Verhoeven's 74
-  tickets to others without saying why, wrote "meets expectations", and left two colleagues covering.
-  His quarter 2 plan for Bram is a strong response; the decision on it is open.
-
-The fuller record behind these lines is in Chapters 2, 5, 9, 12, 14, 16, 19, 20, 22, and 24.
+- *Priya Raman.* Hands-on time of 8, 10, and 12 hours a week at the week 16, 20, and 24 checks,
+  against a cap of 8 she agreed in week 2 (running the role: Not yet). Aisha Bello, a senior
+  engineer, leads bulk ordering as delegated.
+- *Elena Sokolova.* Built the payment [SLI](../../glossary.md#sli-slo-and-sla) (the measured success
+  rate of payments) in two weeks; has run a weekly operations review with a near-miss log for two
+  years. People growth is Solid, not Strong: her informal tech lead is the only cover for her seat.
+- *Farah Haddad.* One promotion to Senior in two years (people growth: Not yet). About 45 percent of
+  her time is technical; which of her two roles comes first was never set.
+- *Tom Becker.* For nine months he moved 31 of Bram Verhoeven's 74 tickets to others without saying
+  why and wrote "meets expectations" (a baseline pattern, so starred). His quarter 2 plan for Bram is
+  a strong response; the decision on it is open.
 
 **Quarter 3 plans (proposed, outcomes open).**
 
+Every delegated decision below is at level 3: the person decides after telling their manager.
+
 | Manager | Focus | Delegated decision | Bench action | Check |
 |---|---|---|---|---|
-| Priya | Running the role | Aisha Bello runs Orders' quarter 3 planning at level 3 | Aisha as named interim cover | Hands-on hours at or below 8 in weeks 32 and 38 |
-| Marcus | Operational ownership | Teodora Vasquez-Lund, a senior ledger engineer, leads the pairing plan that spreads ledger currency and rounding knowledge (risk TR-07 on the technology risk register) at level 3; Marcus joins ledger incidents only as commander | A senior engineer takes one named piece of his job | Knowledge map recount, week 38 |
-| Elena | Organization-wide leverage | Chairs a monthly artifact-review slot on operational readiness, level 3 | Informal tech lead represents the team in cross-team planning | Peer managers asked, week 38 |
-| Daniel | People growth | A career conversation with every engineer; a sponsorship action each for Hannah Lindgren (informal web lead) and Mateo | Hannah and Mateo as half-team covers | One-on-one recode, weeks 32 to 37 |
-| Farah | Running the role | Sunil Varghese, the senior engineer who designed the warehouse pipelines, leads one warehouse design decision at level 3 | Sunil on the architecture half | Technical share in the week 38 calendar |
-| Tom | People growth | Raises any performance gap with the person within two weeks | None yet | Quarter 3 skip-level group: is work moved silently? |
+| Priya | Running the role | Aisha Bello runs Orders' quarter 3 planning | Aisha as interim cover | Hands-on hours at most 8, weeks 32 and 38 |
+| Marcus | Operational ownership | A senior ledger engineer leads a pairing plan to spread ledger knowledge; Marcus joins ledger incidents only as commander | A senior engineer takes one piece of his job | Knowledge map recount, week 38 |
+| Elena | Wider leverage | Chairs a monthly artifact review on operational readiness | Her tech lead joins cross-team planning | Peer managers asked, week 38 |
+| Daniel | People growth | A career conversation with every engineer; sponsorship for the informal web and mobile leads | Those two leads as half-team covers | One-on-one recode, weeks 32–37 |
+| Farah | Running the role | A senior engineer leads one warehouse design decision | That engineer on the architecture half | Technical share of her week 38 calendar |
+| Tom | People growth | Raises any performance gap with the person within two weeks | None yet | Skip-level group: is work moved silently? |
 
 The director's own line: written expectations for every manager by week 27, answering or explicitly
-deferring the leading-across-sites and dual-role questions. How the plans interact with the open
-decisions (Customer Experience's structure, Bram's plan, Tomasz's offer, Rafael's track) is for the exercises.
+deferring the leading-across-sites and dual-role questions.
+
+The open choice: how these plans hold up against the decisions still pending, such as Customer
+Experience's structure and Bram's plan.
 
 ## Exercises
 
 Solutions are in [chapter 41 solutions](../../solutions/ch41-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md) and [the first quarter](../../case-studies/northstar/first-quarter.md) page.
+[baseline page](../../case-studies/northstar/baseline-data.md) and in [the year 1 record](../../case-studies/northstar/first-quarter.md).
 
 ### Foundational
 

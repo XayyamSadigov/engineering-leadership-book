@@ -14,6 +14,11 @@ An executive update tells a busy reader, in the first three lines, what changed,
 what decision is needed from them. Everything after the headline supports it. The update is not a status report of activity. A reader should be able to act on it without a
 meeting, and should never learn something important about engineering from someone else first.
 
+!!! tip "Minimum version"
+    On day one, send three things: a two-sentence headline, the same three to five measures every time
+    with a one-phrase reading, and each decision you need with a deadline. Add the commitments table,
+    risks, and "decided since last time" in the second month.
+
 ## How to fill it in
 
 1. **Write the headline last, and put it first.** Two to four sentences: the main result, the main
@@ -81,9 +86,11 @@ decided_since_last:
 
 !!! info "Northstar so far"
     Week 40 of the Engineering Director's first year at Northstar Technologies, a fictional company.
-    Quarter 3 is the first quarter at the CTO's incident target; the renewal features shipped in
-    quarter 2. The director writes to Victor Lindqvist (CTO). See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    Quarter 3 is the first quarter at the CTO's incident target; the renewal features shipped in quarter
+    2. The director writes to Victor Lindqvist (CTO). See the
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 Figures come from [quarter 3 results](../case-studies/northstar/first-quarter.md#quarter-3-results).
 Delivery of the cross-team initiatives is not recorded, so the update says **not recorded**, which is
@@ -91,7 +98,10 @@ how a real update should show a figure not yet in hand. The wording, the risks' 
 are illustrative. People named: Greg Tanaka (VP Sales), Sofia Alvarez (VP Customer Success), Rajiv
 Menon (CFO), Amara Okafor (CPO), Marcus Oyelaran and Priya Raman (Billing and Orders managers).
 The core/permissions module is a [tier 1](../glossary.md#tier-1) part of Core, the monolith, that four
-teams change; its temporary exemption from having an owner has lapsed.
+teams change; its temporary exemption from having an owner has lapsed. Weeks count from the director's
+first week; the [mandate](../glossary.md#the-mandate) is the CTO's target of 15 or fewer Sev1 and Sev2
+incidents a quarter. The forum is the week 34 portfolio forum on a third deal feature, purchase approval
+rules, that Greg Tanaka requested in week 31.
 
 > **Engineering update to Victor Lindqvist, end of quarter 3 (week 40)**
 >

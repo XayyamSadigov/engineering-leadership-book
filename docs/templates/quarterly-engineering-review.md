@@ -13,6 +13,11 @@ meeting and not a celebration. A review that produces no decision, no changed al
 retired [scorecard](../glossary.md#scorecard) measure has been run as a ritual. Keep the document to
 about four pages; the first page is the executive summary and is the only page some readers will see.
 
+!!! tip "Minimum version"
+    For the first review, write one page: last quarter's commitments copied verbatim, five scorecard
+    measures with a one-line reading, what went wrong, and at most three decisions for next quarter. Add
+    capacity plan against actual and the team sections the following quarter.
+
 ## How to fill it in
 
 1. Copy the commitments and targets from last quarter's review verbatim, before looking at results.
@@ -81,14 +86,17 @@ Sections after page one:
 ## Example: Northstar, end of quarter 1
 
 !!! info "Northstar so far"
-    Week 13 of the Engineering Director's first year at Northstar Technologies, a fictional company
-    with 80 engineers. In quarter 1 the director named Core's release train as the main source of
-    incidents, moved Core to weekly releases, published severity definitions, and agreed a
+    Week 13 of the Engineering Director's first year at Northstar Technologies, a fictional company with
+    80 engineers. In quarter 1 the director named Core's release train as the main source of incidents,
+    moved Core to weekly releases, published severity definitions, and agreed a
     [prevention allocation](../glossary.md#prevention-allocation) of 12 FTE. See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 Figures come from the [day-90 results](../case-studies/northstar/first-quarter.md#day-90). Quarter 1
-roadmap delivery by item is not recorded, so it is left out rather than invented.
+roadmap delivery by item is not recorded, so it is left out rather than invented. Weeks count from the
+director's first week.
 
 **Mandate:** halve Sev1 and Sev2 incidents and meet the 99.9 percent commitment within twelve
 months, with no net headcount growth, keeping the two renewal commitments.

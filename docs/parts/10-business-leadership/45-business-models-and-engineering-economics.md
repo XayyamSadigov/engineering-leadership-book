@@ -15,12 +15,12 @@ someone states both in the same unit.
 
 At organization scale, the director allocates fixed capacity among product, prevention, and platform
 (Chapter 38). At Northstar's baseline, [unplanned work](../../glossary.md#unplanned-work) consumed about $5.0M a
-year of engineering capacity, and the quarter's [service credits](../../glossary.md#service-credits)
+year of engineering capacity (34 percent of 80 engineers' time), and the quarter's [service credits](../../glossary.md#service-credits)
 (refunds owed when availability falls below contract) were $410,000. A director who cannot connect such figures
 to revenue and margin funds whatever arrives with a customer's name on it.
 
 At executive scale, the CFO and CEO think in recurring revenue, margin, cash, and risk. A CTO who
-brings velocity charts is managed as a cost center; one who brings "protects $9M of renewals, costs
+brings velocity charts is managed as a cost center; one who brings "protects two renewals worth $9M, costs
 about $250,000 of capacity, pays back in about a year under these assumptions" is a peer.
 
 ## Learning Objectives
@@ -121,9 +121,11 @@ how delay is priced:
 | Short life, peak affected | The window closes; late delivery earns a lower peak, briefly | Seasonal or event-driven features |
 | External deadline | Nothing is lost until a date, then much is | Renewal conditions, regulatory dates |
 
-For the first profile, cost of delay per week is roughly the weekly benefit; for the second, add the
-permanent loss. A deadline item is scheduled backward from its date with a margin rather than ranked
-by ratio, as Northstar did with its two renewal commitments (Chapter 15).
+For the first profile, cost of delay per week is roughly the weekly benefit. For the second, add the
+permanent loss: estimate the share of the market lost for good per week of delay, times its yearly
+margin, over the years you count. A deadline item is scheduled backward from its date with a margin
+rather than ranked by ratio. Northstar did this with its two renewal commitments, features that two
+large customers made a condition of renewing (Chapter 15).
 
 **Estimation.** At Maersk Line, requirements were triaged into the four benefit types in under a
 week, with assumptions exposed and challenged in weekly sessions; the stated goal was accuracy rather
@@ -131,15 +133,14 @@ than precision (Arnold and Yüce, 2013). The practical form is a one-line formul
 example deal ARR × probability the feature decides the deal × gross margin ÷ 52, with every factor a
 claim someone owns and can be checked later.
 
-**Evidence.** The Maersk Line case, presented at the Agile 2013 conference, applied cost of delay
-across a portfolio of about $100M. One feature's cost of delay was about $210,000 a week, and its 38
-weeks in queues cost nearly $8M of missed opportunity. Treat it as **documented practice**: one
-company, no control group, and other practices introduced at the same time. The authors do not
-attribute their reported improvements to cost of delay alone. It shows the method can run at
-portfolio scale, not how much it helps.
+**Evidence.** The Maersk Line case applied cost of delay across a portfolio of about $100M. One
+feature's cost of delay was about $210,000 a week, and its 38 weeks in queues cost nearly $8M of
+missed opportunity. Treat it as **documented practice**: one company, no control group, other
+practices introduced at the same time. It shows the method can run at portfolio scale, not how much
+it helps.
 
-**Origin.** Donald Reinertsen is widely credited with popularizing cost of delay in product
-development ([Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles)).
+Donald Reinertsen is widely credited with popularizing the idea in product development
+([Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles)).
 
 ### Opportunity cost and sunk cost
 
@@ -151,10 +152,25 @@ planning violates both routinely.
 
 With fixed headcount, the opportunity cost of a 70
 [engineer-week](../../glossary.md#engineer-week-engineer-day-engineer-year) project is not its salary
-cost of about $249,000 (an engineer-week at $185,000 a year is about $3,558). It is the value of the
-best work those weeks would otherwise produce, usually the cost of delay of the displaced item. Salary
-cost remains a useful yardstick. But a portfolio that compares every project against it approves
-anything worth more than its payroll, and never asks whether something else was worth more still.
+cost of about $249,000. It is the value of the best work those weeks would otherwise produce, usually
+the cost of delay of the displaced item. Salary cost remains a useful yardstick. But a portfolio that
+compares every project against it approves anything worth more than its payroll, and never asks
+whether something else was worth more still.
+
+**The book's rate for engineer time.** Wherever this book prices capacity, it uses one planning
+rate: **$3,558 per engineer-week**, Northstar's $185,000 average
+[fully loaded cost](../../glossary.md#fully-loaded-cost) divided by 52 weeks. That is also $46,250
+per [FTE-quarter](../../glossary.md#fte-quarter). A few chapters quote **Finance's day rate** of $800
+per engineer-day ($185,000 ÷ about 230 working days); it is higher per day because Finance counts only
+working days. $157,250 per capitalized FTE-year is the capitalized share (85 percent) of $185,000
+(Chapter 52). Agree one rate with your own finance team and use it everywhere.
+
+**Cash versus capacity.** A saving comes in two kinds, and a CFO reads them differently. **Cash
+savings** (lower credits, cloud bills, or contractor spend) reduce what the company pays. **Returned
+capacity** (engineers freed from unplanned work) reduces nothing: the salaries are paid anyway. It is
+worth the cost of delay of the work those engineers now do. Valuing it at salary, as the examples
+below do, is a convention to agree with finance, not a cash figure. Show any case that relies on
+returned capacity twice, with cash only and with cash plus capacity, labeled.
 
 Sunk cost shows up as "we are 60 percent through the migration". The only question is what the
 remaining 40 percent costs against what it delivers. Chapter 43 covers why people keep going
@@ -250,9 +266,8 @@ flowchart TD
 
 The diagram is a routing rule, not a ladder of sophistication. Most weekly decisions end at CD3; NPV
 earns its effort for multi-quarter investments; staging comes first whenever one input could swing the
-answer. Financial numbers rest on estimates and judgment, so the skill is knowing which assumptions
-carry the result, the lesson of finance books for non-financial managers such as
-[Berman and Knight, 2006](../../references/bibliography.md#berman2006financial).
+answer. The skill is knowing which assumptions carry the result
+([Berman and Knight, 2006](../../references/bibliography.md#berman2006financial)).
 
 ## Engineering Organization Example
 
@@ -260,7 +275,10 @@ carry the result, the lesson of finance books for non-financial managers such as
     Week 31 of the director's first year. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3)
     incidents (the two most severe levels) fell from 30 to 17 a quarter by quarter 2, and service credits
     from $410,000 to $95,000. Both renewal features are delivered. Greg Tanaka (VP Sales) has just asked
-    for a third deal feature. See the [timeline](../../case-studies/northstar/timeline.md).
+    for a third deal feature. See the [timeline](../../case-studies/northstar/timeline.md). New to
+    Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 The following example is **illustrative**, like all Northstar figures. The prevention package and the
 cost and probability estimates are this example's assumptions.
@@ -269,37 +287,31 @@ cost and probability estimates are this example's assumptions.
 distributors on recurring contracts, with a 99.9 percent quarterly availability commitment on the
 order and payment paths, backed by service credits.
 
-| Measure | Value | Derivation |
-|---|---|---|
-| ARR | $140M | case figure |
-| Average ARR per customer | about $74,000 | $140M ÷ 1,900 |
-| Top 40 customers | about $46.7M, about $1.17M each | one third of $140M, ÷ 40 |
-| Other 1,860 customers | about $93.3M, about $50,000 each | remaining two thirds ÷ 1,860 |
-| Engineering people plus cloud and tooling | $20.3M, 14.5 percent of ARR | $16.1M + $4.2M |
-| Service credits, baseline quarter | $410,000 ($1.64M a year, 1.2 percent of ARR) | case figure |
-| Service credits, quarter 2 | $95,000 ($380,000 a year annualized) | case figure |
-| Gross margin | 72 percent | used for new revenue only |
-| Finance's hurdle rate | 10 percent a year | used for NPV |
+| Measure | Value |
+|---|---|
+| ARR | $140M |
+| Top 40 customers | about $46.7M (one third), about $1.17M each |
+| Other 1,860 customers | about $93.3M, about $50,000 each |
+| Service credits, baseline quarter | $410,000 ($1.64M a year, 1.2 percent of ARR) |
+| Service credits, quarter 2 | $95,000 ($380,000 a year annualized) |
+| Gross margin | 72 percent, applied to new revenue only |
+| Finance's hurdle rate | 10 percent a year, used for NPV |
 
 Reading it: concentration means 40 customers carry half as much revenue as the other 1,860
 combined, and losing one top-40 customer costs as much as losing about 23 of the others. With
 credits down from $410,000 to $95,000 a quarter, prevention's cash case has shrunk; it now rests more
-on renewals and on capacity returned from unplanned work. Quarter 3 later came in at $60,000, which
-weakens the credits term further.
+on renewals and on capacity returned from unplanned work.
 
 **Step 2: three candidate investments**, compared as uses of capacity as the director saw them in
 week 31. A and C are the items in Chapter 42's portfolio; B is a hypothetical prevention package.
 
-| | A. Purchase approval rules | B. Payment-path prevention package | C. Automated service-credit statements |
-|---|---|---|---|
-| Channel | Increase revenue | Protect revenue, reduce costs | Reduce costs |
-| Size | 70 engineer-weeks (about $249,000) | 70 engineer-weeks (about $249,000) | 50 engineer-weeks (about $178,000) |
-| Probability it works | 0.5 | 0.6 | 0.9 |
-| Expected annual benefit | $227,000 | $171,000 | about $54,000 |
-| NPV, 3 years at 10% | about +$315,000 | about +$176,000 | about −$44,000 |
-| Cost of delay per week | about $4,800 | about $3,300 | about $1,000 |
+The inputs:
 
-Where the benefits come from:
+| Investment | Channel | Size (engineer-weeks) | Probability it works |
+|---|---|---|---|
+| A. Purchase approval rules | Increase revenue | 70 (about $249,000) | 0.5 |
+| B. Payment-path prevention | Protect revenue, reduce costs | 70 (about $249,000) | 0.6 |
+| C. Service-credit statements | Reduce costs | 50 (about $178,000) | 0.9 |
 
 - **A:** a prospect at $700,000 ARR, at 72 percent margin, is $504,000 a year, less $25,000 of upkeep.
   The 0.5 is Greg Tanaka's estimate that the prospect signs, unchecked.
@@ -307,16 +319,26 @@ Where the benefits come from:
   (full-time equivalent engineer) of unplanned work returned ($185,000 a year).
 - **C:** 160 analyst-hours a quarter at $70 ($44,800 a year) plus $15,000 a year of disputes avoided.
 
-Each NPV is the expected annual benefit times the annuity factor 2.487, minus the size; for A, $227,000
-× 2.487 − $249,000 = about $315,000. Cost of delay is the expected benefit ÷ 52, without A's upkeep,
-which starts only at go-live. Payback is about 1.1, 1.5, and 3.3 years.
+The results:
+
+| Investment | Expected benefit a year | NPV, 3 years at 10% | Cost of delay a week | Payback |
+|---|---|---|---|---|
+| A | $227,000 | about +$315,000 | about $4,800 | 1.1 years |
+| B | $171,000 | about +$176,000 | about $3,300 | 1.5 years |
+| C | about $54,000 | about −$44,000 | about $1,000 | 3.3 years |
+
+How computed: NPV is the expected benefit × 2.487 (the annuity factor) − size; cost of delay is the
+expected benefit ÷ 52, without A's upkeep, which starts only at go-live.
 
 **Step 3: what the table really says.** The ranking A, B, C is less interesting than its fragility:
 
 - **A turns on one number.** At a win probability of 0.25, A's expected benefit falls to $101,000 a
   year and its NPV to about $2,000: break-even. That probability is the input to buy information about,
   and its owner, the sponsor, should write it down and be checked later.
-- **B is undervalued.** It counts no renewal protection. If it cut by 15 points the probability of
+- **B's case is mostly capacity.** With cash only (expected credits saved, 0.6 × $100,000 a year), its
+  NPV is about −$100,000; the returned engineer is what makes it +$176,000. A CFO will ask what that
+  engineer will do instead, and the answer is B's real benefit.
+- **B is also undervalued.** It counts no renewal protection. If it cut by 15 points the probability of
   losing one top-40 customer, that alone adds about 0.15 × $1.17M × 72% = $126,000 a year, and B passes
   A. Whether that is plausible is a question for the renewal data of Sofia Alvarez (VP Customer
   Success).
@@ -352,8 +374,6 @@ decision that rests entirely on them.
 ([SAFe, WSJF](../../references/bibliography.md#safe-wsjf)). Dollars take longer but can be checked
 against outcomes and added across teams. Scores suit a team's own ordering; dollars suit decisions a
 CFO will read.
-
-**Speed versus rigor.** Scale the analysis with the size and irreversibility of the commitment.
 
 **Short horizons versus prevention.** A three-year horizon is honest about software's churn but
 penalizes slow-growing benefits such as platform and prevention. Test a longer one and report flips.
@@ -415,8 +435,8 @@ growth, retention, efficiency, and risk fits the strategy. A CTO who shows the s
 expected return argues for a mix rather than defending a total.
 
 Second, **risk becomes an investment category**. Reliability and security work protects revenue and
-avoids losses that never appear as line items. Northstar's baseline credits of $1.64M a year and $9M
-of renewals at risk made this concrete; the harder task is keeping the category funded after the
+avoids losses that never appear as line items. Northstar's baseline credits of $1.64M a year, and two
+renewals worth $9M in which reliability was the customers' stated concern, made this concrete; the harder task is keeping the category funded after the
 credits fall and the urgency fades.
 
 Third, **the CTO owns the honesty of the numbers**. Accounting choices such as capitalizing

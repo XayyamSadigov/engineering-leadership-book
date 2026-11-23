@@ -68,7 +68,9 @@ instead.
 
 **Read the overview first.** The [Northstar overview](case-studies/northstar/index.md) takes about
 fifteen minutes and introduces the company, the people, the six teams, and the mandate. Every chapter
-assumes it.
+assumes it. Then read [the year in brief](case-studies/northstar/year-in-brief.md) (about six minutes),
+which tells the whole year as a story: what was tried, what worked, what failed, and what is still
+open.
 
 **The book's order is not the story's order.** Chapters are ordered by topic, and each sets its case at
 the week that suits the topic. Most chapters in Parts I to IV are set in quarter 2; Part V (quality)
@@ -76,14 +78,16 @@ goes back to the first 90 days; Parts VI to XI move through quarters 2 to 4; the
 chapters (Parts XII and XIII) and the capstone are set in quarter 4, when the year-2 decisions are
 being made. You do not need to have read earlier chapters to follow a case. Each chapter's first
 Northstar passage opens with a short "Northstar so far" box that says which week it is and what has
-happened. Four reference pages fill in the rest:
+happened. These pages fill in the rest:
 
 | Page | Use it when |
 |---|---|
+| [The year in brief](case-studies/northstar/year-in-brief.md) | You skipped earlier chapters and want the story so far |
 | [Cast](case-studies/northstar/cast.md) | You meet a name and need the person's role and team |
 | [Timeline](case-studies/northstar/timeline.md) | You want to know what happened before the week a chapter is set in |
 | [Quarter 4 briefing](case-studies/northstar/quarter-4-briefing.md) | You read Chapters 47 to 60, which turn on decisions still open at year end |
 | [Baseline data](case-studies/northstar/baseline-data.md) | You want the starting numbers and the small CSV files to do the analysis yourself |
+| [Year 1 record](case-studies/northstar/first-quarter.md) | You need an exact figure, week, or decision from the year |
 
 Outcomes in quarter 4 are deliberately left open: where a chapter says the CTO has not decided yet,
 that is the point of the exercise.

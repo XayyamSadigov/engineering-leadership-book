@@ -3,7 +3,7 @@
 
 # Curriculum
 
-The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are published, and 60 more are on the site awaiting human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation; the site-wide announcement says the book awaits human review. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
+The book is designed as 60 chapters in 15 parts. **All 60 chapters are on the site; none has yet completed human review.** A chapter is published only when it passes the automated validation and the human review checklist. A chapter awaiting review has passed the automated validation; the site-wide announcement says the book awaits human review. Planned chapters are designed (objectives and sources below) but not yet written, and do not appear in the site navigation.
 
 | Part | Chapters | On the site |
 |---|---|---|
@@ -20,7 +20,7 @@ The book is designed as 60 chapters in 15 parts. **0 of 60 chapters are publishe
 | XI. VP of Engineering | 47–49 | 3 of 3 |
 | XII. CTO Leadership | 50–55 | 6 of 6 |
 | XIII. Advanced Leadership Problems | 56–59 | 4 of 4 |
-| XIV. Practical Management Systems and Playbooks | templates | 0 of 0 |
+| XIV. Practical Management Systems and Playbooks | templates | 24 of 24 templates |
 | XV. Capstone: Build and Transform an Engineering Organization | 60 | 1 of 1 |
 
 ## Part I — Foundations of Engineering Leadership
@@ -835,11 +835,11 @@ Primary sources: [forsgren2018accelerate](references/bibliography.md#forsgren201
 
 | Project | Status |
 |---|---|
-| P1: Build an Engineering Management Operating System | On the site, awaiting human review |
-| P2: Diagnose a Low-Performing Engineering Team | On the site, awaiting human review |
-| P3: Create an Engineering Quality Transformation Plan | On the site, awaiting human review |
-| P4: Redesign an Organization of 80 Engineers | On the site, awaiting human review |
-| P5: Build a Delivery Performance and Reliability Scorecard | On the site, awaiting human review |
-| P6: Create Engineering Manager Development and Succession Plans | On the site, awaiting human review |
-| P7: Design a 12-Month Engineering Strategy | On the site, awaiting human review |
-| P8: Build a CTO Technology Investment Proposal | On the site, awaiting human review |
+| [P1: Build an Engineering Management Operating System](projects/p1-management-operating-system.md) | On the site, awaiting human review |
+| [P2: Diagnose a Low-Performing Engineering Team](projects/p2-diagnose-a-low-performing-team.md) | On the site, awaiting human review |
+| [P3: Create an Engineering Quality Transformation Plan](projects/p3-quality-transformation-plan.md) | On the site, awaiting human review |
+| [P4: Redesign an Organization of 80 Engineers](projects/p4-redesign-an-80-engineer-organization.md) | On the site, awaiting human review |
+| [P5: Build a Delivery Performance and Reliability Scorecard](projects/p5-delivery-and-reliability-scorecard.md) | On the site, awaiting human review |
+| [P6: Create Engineering Manager Development and Succession Plans](projects/p6-manager-development-and-succession.md) | On the site, awaiting human review |
+| [P7: Design a 12-Month Engineering Strategy](projects/p7-twelve-month-engineering-strategy.md) | On the site, awaiting human review |
+| [P8: Build a CTO Technology Investment Proposal](projects/p8-cto-technology-investment-proposal.md) | On the site, awaiting human review |

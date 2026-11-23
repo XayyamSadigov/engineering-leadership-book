@@ -110,7 +110,7 @@ retirement routine by putting the burden of proof back on the standard.
 
 ### Paved roads before review boards
 
-A paved road is the supported default: a service template with health checks, logging, and alert rules;
+A [paved road](../../glossary.md#paved-road) is the supported default: a service template with health checks, logging, and alert rules;
 a shared pipeline that runs the agreed checks and records every deployment. A team on it meets most
 standards without thinking. It is the cheapest enforcement because it removes the per-change cost, and
 it reframes autonomy: teams may leave the road, and the road's quality persuades them to stay.
@@ -235,7 +235,8 @@ production change goes through an auditable pipeline with automated rollback" ca
     Week 3 of the director's first year. The baseline quarter had 30 Sev1 and Sev2 incidents and
     $410,000 in service credits. The director has classified those incidents and is publishing
     severity definitions; this chapter's story then runs to day 90. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the [cast](../../case-studies/northstar/cast.md).
 
 All figures are **illustrative** (see the [baseline](../../case-studies/northstar/baseline-data.md)).
 
@@ -276,8 +277,9 @@ The director and the three staff engineers triaged the 52 rules with three quest
 harm someone outside the team; can a tool check it without false alarms; has anyone cited it in the last
 year? Result: **14 kept as mandatory** (9 to be tool-checked, 5 sampled in review), **17 rewritten as
 guidance** with intent added, and **21 retired**, including the coverage rule (Chapter 22 argues for a
-test portfolio designed from risk rather than a coverage target). Add the five tier 1 minimums and the
-mandatory set falls from 52 unverified rules to 19, each checked, sampled, or reported per component.
+test portfolio designed from risk rather than a coverage target). Add five tier 1 standards (the four
+operational minimums plus the auditable-pipeline standard) and the mandatory set falls from 52
+unverified rules to 19, each checked, sampled, or reported per component.
 
 Cost: writing the 19 in full is about two weeks of staff time. Automating the 9 checkable rules in
 Jenkins and GitLab CI, including clearing existing violations, is about one engineer for most of a
@@ -449,11 +451,13 @@ The guild objected; its regulars had expected to become the approving body. The 
 the place standards are proposed, explained the queue arithmetic, and declined to give it approval
 rights. A Payments and Integrations engineer from the guild later wrote the first new guidance page.
 
-The tier 1 minimums were announced in week 5 with the exemption register already open. Two exemptions
-followed. core/permissions could not have on-call until someone owned it; its exemption carried a
-compensating control (Platform Operations would page an incident lead assigned by the director's
-office) and expired with the ownership decision. auth-svc could not use an auditable pipeline until it
-left scripts; its exemption expired at the end of quarter 2.
+The tier 1 minimums were announced in week 5 with the exemption register already open. The first two
+entries show what a register entry needs:
+
+| Component | Gap | Compensating control | Expires |
+|---|---|---|---|
+| core/permissions | No on-call: no owning team | Platform Operations pages an incident lead the director assigns | When ownership is decided |
+| auth-svc | No auditable pipeline: deploys by script | None recorded | End of quarter 2 |
 
 Two things went badly. The first Jenkins check went live without clearing the Core backlog, produced 180
 build failures on day one, and was reverted within hours; it returned two weeks later, failing only on
@@ -516,7 +520,9 @@ the organization in the following month.
 
 ### Executive Decision-Making
 
-**X1.** Victor Lindqvist (CTO) is preparing for a security review with one of the two renewal customers and
+**X1.** Victor Lindqvist (CTO) is preparing for a security review with one of the two customers whose renewals depend on the
+[renewal commitments](../../glossary.md#renewal-commitments) (a bulk-ordering feature and an accounting
+integration), and
 wants to say that "every production change at Northstar goes through an auditable pipeline with
 automated rollback." Four services still deploy by script, one tier 1, under an exemption expiring at
 the end of quarter 2. Advise him what to say, what not to say, and what evidence to bring, and explain

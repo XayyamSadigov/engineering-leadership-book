@@ -13,13 +13,14 @@ role (escalation judgment) and operational ownership. Note the second half: the 
 he did after objecting, which a judgment of character hides.
 
 **"Elena is the best manager we have."** Rewrite into several items, each on its own dimension: payment
-SLI built in two weeks (outcomes), operations review for two years with a near-miss log of 17 entries
-(team health), the configuration-edit blind spot (operational ownership). "Best" is a ranking, which the
+SLI built in two weeks (outcomes), a weekly operations review with a near-miss log for two years
+(operational ownership), her informal tech lead as the only cover for her seat (people growth). "Best"
+is a ranking, which the
 rubric forbids.
 
 **"Daniel really cares about his people."** Rewrite: "84 of 90 one-on-ones held in weeks 14 to 19; 55
-mainly status; 9 of 15 engineers had no career conversation." Care is real (45 percent of his time on
-people); the evidence says the channel carries status.
+mainly status; 9 of 15 engineers had no career conversation." Care may be real; the evidence says the
+channel carries status.
 
 **"Farah is too technical."** Rewrite: "45 percent of her time is technical as data architect (baseline);
 technical direction lives with her." The case rates it "Expectation not set". This one needs a judgment about the role, not
@@ -42,7 +43,7 @@ checkpoint or at it.
 
 **What to agree for weeks 25 and 26.** Not a lecture on the cap two weeks before a renewal date. A
 temporary, named exception (for example up to 12 hours on testing support only, ending week 26), review
-questions routed to Rafael Duarte and Aisha Bello, and a reset to 8 hours from week 27 with a check in
+questions routed to Aisha Bello and another senior Orders engineer, and a reset to 8 hours from week 27 with a check in
 week 32. That keeps the rule honest: exceptions are stated and expire.
 
 The weak answer either accepts "it's temporary" with no end date, or insists on the cap regardless of the
@@ -64,8 +65,8 @@ and implies a decision the director cannot make there.
 
 **What goes back to Daniel.** Under Chapter 40's rule, themes always ("mobile still waits for decisions
 made in Minneapolis"), quotes and attributions never; anyone who wants a confidential individual
-conversation can ask for one. Hannah Lindgren and Mateo Arango Ríos, who are both informal
-leads and development candidates, should not be singled out.
+conversation can ask for one. The informal web and mobile leads, who are
+both development candidates, should not be singled out.
 
 **What the director will not do.** Make or promise decisions, discuss individuals, or tell Daniel who
 said what. If a group raises something only the director can fix (the structure, the travel budget), the
@@ -98,7 +99,7 @@ moved, which teaches managers to hide risk.
 **The plan.** Focus: operational ownership. The objection is real (two experts critical, one with an
 offer), so the plan must reduce risk now rather than ask for a large program.
 
-- Delegated decision: Teodora Vasquez-Lund leads the TR-07 pairing plan at level 3, choosing which two
+- Delegated decision: a senior ledger engineer leads the pairing plan at level 3, choosing which two
   non-ledger engineers pair on credit notes and posting rules, the two areas with the most changes.
 - Marcus joins ledger incidents only as incident commander, which frees about the hours he spent as an
   additional responder at baseline and models the rotation.
@@ -111,7 +112,7 @@ slower response in the first weeks, which should be stated to Elena and the dire
 **If he declines.** Ask what he would do instead to reduce concentration this quarter; his alternative
 is evidence for the running-the-role dimension. If there is no alternative, the director states the
 expectation in writing and rechecks next quarter; after two quarters of "Not yet" despite a plan, the
-Chapter 9 process applies. Tomasz's offer remains a separate decision (Chapter 10). The weak answer
+Chapter 9 process applies. The outside offer remains a separate decision (Chapter 10). The weak answer
 removes the plan because Billing is busy, which keeps it busy.
 
 ## A3 — Tom contests his rating

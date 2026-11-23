@@ -109,8 +109,8 @@ understanding its neighbors' interfaces and domain, and in a changing system tha
 Work goes faster when coordination matches technical dependencies. Cataldo, Herbsleb, and Carley made
 the idea measurable. They derive **coordination requirements** from
 technical dependencies and compare them with the coordination that actually happens. When developers'
-coordination matched their coordination needs, modification requests were resolved significantly
-faster, and logical dependencies (files that change together) mattered far more than call or data
+coordination matched their coordination needs, modification requests (change tickets) were
+resolved significantly faster, and logical dependencies (files that change together) mattered far more than call or data
 dependencies ([Cataldo et al., 2008](../../references/bibliography.md#cataldo2008congruence)). This
 **research finding**, from a single study, gives a leader a test: find which teams' changes touch the same
 code, and check whether those teams have a cheap channel. Herbsleb and Mockus found that work spread
@@ -209,7 +209,9 @@ spans).
     Week 14, the start of quarter 2 of the director's first year. [Sev1 and
     Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
     to 21 in quarter 1. In week 4 orphaned components got owners, and in week 10 the seven QA engineers
-    joined product teams. See the [timeline](../../case-studies/northstar/timeline.md).
+    joined product teams. See the [timeline](../../case-studies/northstar/timeline.md). New to
+    Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This example assesses one team at Northstar, the book's fictional company. In week 14 the director asks
 Priya Raman (Orders manager) to assess the cognitive load of Orders: 14 engineers plus, since week 10,
@@ -218,8 +220,8 @@ two quality engineers. All figures are **illustrative**.
 **Scope.** Orders now owns seven components across six domains: order capture, catalog, pricing (two
 components), search, customer data (from week 4), and notifications (from quarter 2). Four are
 [tier 1](../../glossary.md#tier-1), the most business-critical tier. Bulk ordering, due in week 26,
-occupies 5 Orders engineers. Priya has said she would accept the still unowned core/permissions after
-week 26.
+occupies 5 Orders engineers. Priya has said she would accept core/permissions, a tier 1 Core module
+changed by four teams and unowned since baseline, after week 26.
 
 **Knowledge map.** As Billing did for its ledger (Chapter 12), Priya counts the Orders engineers who
 could change each component safely today. Operational columns are from the baseline component file.
@@ -328,7 +330,9 @@ owning team can change them safely, as with search-svc in Orders.
 
 **The interrupt-sink platform.** A team called platform whose real job is answering everyone's
 requests. Detect it: its unplanned share is the highest in the organization and it receives the most
-dependency links (Platform Operations: 46 percent and 29 of 86, Chapter 16).
+dependency links. A dependency link is one work item of a week or more in which one team needed
+another, counted per quarter. At Northstar's baseline, Platform Operations spent 46 percent of its
+capacity on unplanned work and received 29 of the 86 links.
 
 **Permanent collaboration.** Two teams "collaborating" for years because nobody decided the boundary.
 Detect it: no end date, and a release-channel argument about whose change broke whose code.
@@ -396,15 +400,14 @@ engineers cannot take one more product, the honest answer is load, and the knowl
 ## Case Study
 
 This case is **fictional** and set at Northstar at the start of quarter 2 (week 14); the outcomes are
-open. Since the QA engineers moved into product teams in week 10, Platform Operations is five
-infrastructure engineers under its manager, Tom Becker.
+open. Platform Operations is five infrastructure engineers under its manager, Tom Becker.
 
 | Team | Closest type | Where the label is untrue |
 |---|---|---|
 | Orders | Stream-aligned (ordering) | Six domains, seven components |
 | Billing | Stream-aligned (invoice to ledger) | The ledger behaves like a complicated subsystem with three experts |
 | Payments and Integrations | Stream-aligned | Two streams (payments, customer integrations) |
-| Customer Experience | Organized by channel | Depends on Orders more than on any other team; its structure is Chapter 14's open question |
+| Customer Experience | Organized by channel | Depends on Orders more than on any other team; its own structure is undecided |
 | Data and Analytics | Mixed | Customer reporting plus other teams' requests (12 percent of its capacity) |
 | Platform Operations | Platform in name | Interrupt sink; also runs auth-svc, a tier 1 service on every login path |
 | Staff engineers | Enabling, perhaps | Three individuals with decision rights over standards |
@@ -412,19 +415,15 @@ infrastructure engineers under its manager, Tom Becker.
 **Conway at Northstar.** notification-svc was owned by Customer Experience while most commits came
 from Orders and Billing. [INC-412](../../glossary.md#inc-numbers), in which a renamed template variable
 sent blank order confirmations, is a congruence gap between the people changing the code and the people
-operating it. The quarter 2 move to Orders
-aligns ownership with the main committers and adds to Orders' load. search-svc is nominally Orders',
-written by engineers now in Data and Analytics, with nobody on call, as INC-407 showed when a search
-cluster node was lost. core/permissions was
-changed by four teams and designed by none. INC-405 (mobile-bff deployed against an older pricing-svc
-contract) crossed the Customer Experience and Orders boundary with no contract.
+operating it. The quarter 2 move to Orders aligns ownership with the main committers and adds to
+Orders' load. search-svc is nominally Orders', written by engineers now in Data and Analytics, with
+nobody on call.
 
-**Platform Operations as interrupt sink.** It received 29 of 86 dependency links (a link is one work
-item of a week or more in which one team needed another; Chapter 34 teaches the method). It spent 46
-percent of its capacity on unplanned work. The quarter 2 interrupt rotation and self-service test environments (Chapter 16) are
-its first platform behavior: something consumed as a service rather than requested. By week 18 other
-teams' requests fell from 20 to 14 percent of its capacity. Still missing: a list of capabilities teams consume, a
-roadmap, and a decision on whether auth-svc belongs with an infrastructure team (Chapter 31).
+**Platform Operations as interrupt sink.** It received 29 of 86 dependency links and spent 46 percent
+of its capacity on unplanned work. The quarter 2 interrupt rotation and self-service test environments
+are its first platform behavior: something consumed as a service rather than requested. By week 18
+other teams' requests fell from 20 to 14 percent of its capacity. Still missing: a list of capabilities
+teams consume, a roadmap, and a decision on whether auth-svc belongs with an infrastructure team.
 
 ```mermaid
 flowchart TD
@@ -450,14 +449,17 @@ ordering and prevention.
 | A. Fund learning only | Some germane load | Scarce capacity; keeps six domains |
 | B. Move search-svc to Data and Analytics | A zero-knowledge component | Adds load to a team giving 12 percent of its capacity to requests |
 | C. Split Orders after week 26 (ordering; pricing and catalog) | Halves domains per team | A second manager under flat headcount (an engineer's seat, not backfilled); a new boundary; weeks of disruption |
-| D. Defer core/permissions | Prevents more load | A tier 1 module unowned longer, under its exemption |
+| D. Defer core/permissions | Prevents more load | A tier 1 module unowned longer, under its exemption (a recorded, time-limited waiver) |
 
-The director leans toward three things. B waits for the next structural review, since quarter 2 moves
-no people (Chapter 35 takes up the year-2 design). C is reconsidered after bulk ordering ships, and D
-holds in any case. Three facts bear on it: Data and Analytics' draft charter lists search-svc as
-disputed; option C would need a seventh manager, which Victor Lindqvist (CTO) would have to approve; and
-Rafael Duarte, a senior engineer in Orders, has asked about the management track (Chapter 4). Exercise X1
-asks you to decide.
+The director's leaning: no structural move in quarter 2, while bulk ordering is in flight. Defer core/permissions
+(D) in any case. Revisit moving search-svc (B) and splitting Orders (C) after bulk ordering ships in
+week 26.
+
+Two facts bear on B and C. Data and Analytics' draft charter lists search-svc as disputed, so B needs
+that team's agreement, not only a decision. And C needs a seventh manager, which Victor Lindqvist (CTO)
+would have to approve. Rafael Duarte, a senior engineer in Orders, has asked about the management
+track, so a candidate exists; but a split must be justified by the work, not by a person's career.
+Exercise X1 asks you to decide.
 
 ## Exercises
 
@@ -520,8 +522,8 @@ including sequencing, transition costs in engineer-weeks, and what you would mea
 around four value streams at the start of quarter 3, so that Core, the Java monolith, "breaks apart
 along the new lines". [Constraint 3](../../glossary.md#the-five-constraints) means no rewrite of Core is
 funded. Assess the proposal against the evidence in this chapter, name what it
-would cost, and propose what you would do instead or first. (Customer Experience's own structure is
-Chapter 14's open question; treat it as given.)
+would cost, and propose what you would do instead or first. Treat Customer Experience's own structure
+as given.
 
 ## Reflection Questions
 

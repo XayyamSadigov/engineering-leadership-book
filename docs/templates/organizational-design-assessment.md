@@ -14,6 +14,11 @@ manager) workable? Where does work cross team lines? What has no owner? Which te
 [cognitive load](../glossary.md#cognitive-load) than it can hold? Options come last, each with its
 [transition cost](../glossary.md#transition-cost).
 
+!!! tip "Minimum version"
+    On day one, fill the team inventory (manager, people, components) and the ownership gaps. Add the
+    dependency matrix after one quarter of data, and write options only when someone proposes a change,
+    each with its spans and transition cost.
+
 ## How to fill it in
 
 1. Fix the date and the strategy question the structure must serve (for example: "meet the
@@ -80,12 +85,18 @@ team:
 
 !!! info "Northstar so far"
     Northstar Technologies is a fictional company: 80 engineers (3 of them staff engineers), six
-    managers, and an Engineering Director, 87 people held flat by the CTO's mandate. In week 10 the seven QA engineers moved into product teams; in week 44 the director drafts a year-2
-    organization for Victor Lindqvist (CTO) to decide. See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    managers, and an Engineering Director, 87 people held flat by the CTO's mandate. In week 10 the
+    seven QA engineers moved into product teams; in week 44 the director drafts a year-2 organization
+    for Victor Lindqvist (CTO) to decide. See the [timeline](../case-studies/northstar/timeline.md). New
+    to Northstar? Read [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 **Strategy question:** can the structure carry the reliability mandate and both renewal commitments
 at flat headcount (87 people)?
+
+Headcount is counted in [seats](../glossary.md#seat): all 87 people, engineers, managers, and the
+director. An engineer promoted to manager keeps their seat, and it is not backfilled, so each option's
+engineer count falls as managers are added. Weeks count from the director's first week.
 
 **Team inventory, after week 10** (seven QA engineers moved into product teams):
 
@@ -143,7 +154,8 @@ permissions extraction.
 | Bulk ordering (renewal commitment) | −65 |
 | Prevention | −18.2 |
 | **Left** | **33.3** (about 2.6 engineers) |
- Among its four tier 1 components, core/customer has two engineers who
+
+Among its four tier 1 components, core/customer has two engineers who
 can change it safely and core/pricing-rules four; search-svc (tier 2) has none.
 
 **Options** (the year-2 proposal of week 44 is option A):
@@ -155,8 +167,9 @@ can change it safely and core/pricing-rules four; search-svc (tier 2) has none.
 | C. A, plus Orders split and the platform grown to 8 | Order Capture; Catalog and Pricing | 78 engineers, 8 managers | About 4 new links and about 58 co-changing merge requests a quarter cross owners |
 | D. Two managers of managers | A layer over order-to-cash | 77 engineers, 9 managers | 27 links resolved one level down; 48 links gain a hop; a peer promoted over peers |
 
-Every option totals 87 people: engineers plus managers plus the director. The quarter 2 alternative to moving people was cheaper: a Billing-owned
-order-to-invoice contract with contract tests on both sides.
+Every option totals 87 people: engineers plus managers plus the director. The quarter 2 alternative
+to moving people was cheaper: a Billing-owned order-to-invoice contract with contract tests on both
+sides.
 
 ## Common mistakes
 

@@ -30,21 +30,25 @@ Sev2.)
 | Database migrations | 3 |
 | Service deployments | 2 |
 
-The chapter uses ten of these incidents. Their numbers come from Northstar's incident log
-(`incidents-last-quarter.csv`, linked from the [baseline page](../../case-studies/northstar/baseline-data.md)):
+The chapter names ten of these incidents by their [INC numbers](../../glossary.md#inc-numbers),
+always with a few words on what happened.
 
-| Incident | What happened | Team |
-|---|---|---|
-| INC-404 | auth-svc token lifetime changed in production config; mobile sessions dropped | Platform Operations |
-| INC-405 | mobile-bff deployed against an older pricing-svc contract; cart totals blank | Customer Experience |
-| INC-410 | payments-gateway flag enabled for all tenants instead of one | Payments and Integrations |
-| INC-412 | Email template variable renamed; order confirmations sent blank | Customer Experience |
-| INC-416 | Shared deploy-script change broke rollback for four services | Platform Operations |
-| INC-419 | Pricing-rule migration ran before the code that expected it | Orders |
-| INC-426 | Mobile offline sync corrupted drafts; the fix waited for app store review | Customer Experience |
-| INC-427 | Credit notes applied twice after a Core release; manual data repair | Billing |
-| INC-428 | Every Jenkins-based deploy failed; cause never found | Platform Operations |
-| INC-430 | payments-gateway rate limit lowered tenfold by a mistyped value | Payments and Integrations |
+??? note "The ten incidents this chapter uses"
+    From Northstar's incident log (`incidents-last-quarter.csv`, linked from the
+    [baseline page](../../case-studies/northstar/baseline-data.md)).
+
+    | Incident | What happened | Team |
+    |---|---|---|
+    | INC-404 | auth-svc token lifetime changed in production config; mobile sessions dropped | Platform Operations |
+    | INC-405 | mobile-bff deployed against an older pricing-svc contract; cart totals blank | Customer Experience |
+    | INC-410 | payments-gateway flag enabled for all tenants instead of one | Payments and Integrations |
+    | INC-412 | Email template variable renamed; order confirmations sent blank | Customer Experience |
+    | INC-416 | Shared deploy-script change broke rollback for four services | Platform Operations |
+    | INC-419 | Pricing-rule migration ran before the code that expected it | Orders |
+    | INC-426 | Mobile offline sync corrupted drafts; the fix waited for app store review | Customer Experience |
+    | INC-427 | Credit notes applied twice after a Core release; manual data repair | Billing |
+    | INC-428 | Every Jenkins-based deploy failed; cause never found | Platform Operations |
+    | INC-430 | payments-gateway rate limit lowered tenfold by a mistyped value | Payments and Integrations |
 
 At executive scale the delivery path is an undesigned risk control. Asked how changes reach
 production, a chief technology officer (CTO) who can answer "reviewed, built once, deployed progressively, reversible in
@@ -164,8 +168,8 @@ integrating more contributions without an observable loss of quality
 ([Vasilescu et al., 2015](../../references/bibliography.md#vasilescu2015quality)).
 
 Core's main branch is red for 22 percent of working hours, about 9 hours a week. An **illustrative**
-estimate puts up to about 10 hours a week of that on unrelated failures alone, so the 22 percent may
-be mostly a pipeline problem.
+upper bound on false reds (about 10 hours a week, see the note) is larger than the measured red time
+itself. So most of the 22 percent is probably pipeline noise rather than broken changes.
 
 ??? note "How the 10 hours are estimated"
     The full pipeline runs on every merge, about 85 a week. At 9 percent unrelated failures that is
@@ -187,9 +191,9 @@ flowchart TD
 
 The rule this chapter owns is **revert first**: when a change turns main red, revert it within minutes
 and fix it off main, unless a fix is already in hand. A red caused by a flaky test is not a reason to
-revert; that test leaves the blocking set under the quarantine rule in
-[Chapter 22](22-testing-strategy-and-test-architecture.md#flaky-tests-as-a-reliability-problem), which
-pairs a capped quarantine list with a per-test owner and fix-or-delete deadline.
+revert; that test leaves the blocking set under **the quarantine rule** of
+[Chapter 22](22-testing-strategy-and-test-architecture.md#flaky-tests-as-a-reliability-problem): a
+capped quarantine list, with a per-test owner and a fix-or-delete deadline.
 
 ### Trunk-based development or long-lived branches
 
@@ -250,18 +254,19 @@ later release. INC-419, a migration that ran before the code expecting it, is th
 ### Change approval and pipeline outcomes
 
 DORA reports finding that heavyweight external change approval hurts delivery performance, with no
-evidence that it lowers change fail rates, and explains this by batch size
+evidence that it lowers [change failure rate](../../glossary.md#change-failure-rate), and explains this
+by batch size
 ([DORA, change approval](../../references/bibliography.md#dora-cap-change-approval)). It keeps
 recorded peer review as the approval that satisfies **segregation of duties**, the audit rule that no
 one person can both write and deploy a change unchecked. The pipeline's outcomes are DORA's
 **throughput** measures (how fast changes flow, such as lead time and deployment frequency) and
-**instability** measures (how often they fail, such as change fail rate)
+**instability** measures (how often they fail, such as change failure rate)
 ([DORA, metrics guide](../../references/bibliography.md#dora-metrics-guide)). Chapter 18 owns them.
 
 Two points belong here. A pipeline that emits no deploy events cannot be measured. And Northstar's
-[change failure rate](../../glossary.md#change-failure-rate) counts a release as failed if a hotfix,
-rollback, or linked incident follows within 72 hours. That local definition differs from DORA's change
-fail rate, so compare Northstar with itself over time, not with published benchmarks.
+change failure rate counts a release as failed if a hotfix, rollback, or linked incident follows
+within 72 hours. That local definition differs from DORA's, so compare Northstar with itself over time,
+not with published benchmarks.
 
 ## Engineering Organization Example
 
@@ -270,7 +275,8 @@ fail rate, so compare Northstar with itself over time, not with published benchm
     pass, and 31 percent of its releases are followed by a hotfix, rollback, or incident. This week a
     release working group led by Kwame Mensah (staff engineer, infrastructure and reliability) takes on
     the train; the first weekly release runs in week 5. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the [cast](../../case-studies/northstar/cast.md).
 
 This example is **illustrative**. It decomposes Core's 19-day median
 [change lead time](../../glossary.md#lead-time) (first commit to running in production) to show what
@@ -360,8 +366,7 @@ approved changes.
 
 **The red main nobody owns.** Everyone assumes someone else is fixing the build. Signal: red time and
 reruns rising. Countermeasure: revert-first, a named build steward each day, red time on the team
-scorecard. When the reds come from flaky tests, the fix is Chapter 22's quarantine rule, not more
-reruns.
+scorecard. When the reds come from flaky tests, the fix is the quarantine rule, not more reruns.
 
 **Flag debt.** Flags accumulate, many on for everyone, some with forgotten purposes. Northstar's
 payments-gateway has 64 flags and settings, 23 over a year old. Countermeasure: expiry date at
@@ -411,7 +416,7 @@ larger releases afterwards, and DORA's change approval findings point the same w
 to offer a better control and explain why it is safer.
 
 **Fund release safety as one program.** Fund the flag service, CI consolidation, and canary tooling
-together against measured outcomes (change fail rate, recovery time, lead time), not as separate
+together against measured outcomes (change failure rate, recovery time, lead time), not as separate
 tool purchases.
 
 ## Practical Playbook
@@ -429,8 +434,7 @@ flowchart TD
 
 1. Measure duration, unrelated-failure rate, red time, merges per week, and review wait.
 2. Split the pipeline into a commit stage of ten to fifteen minutes and an extended stage.
-3. Adopt revert-first, and quarantine flaky tests under Chapter 22's rule (capped list, per-test owner
-   and fix-or-delete deadline).
+3. Adopt revert-first, and quarantine flaky tests under the quarantine rule.
 4. Put every pipeline, deploy script, and configuration file under version control with review, and
    exercise rollback once for every tier 1 component.
 
@@ -440,7 +444,7 @@ flowchart TD
 6. Automate the highest-value remaining cases each week, starting where train incidents came from.
 7. Require expand and contract for every schema change.
 
-**Stage 2: twice weekly (next quarter).** Entry: change fail rate falling for eight weeks; flags in Core.
+**Stage 2: twice weekly (next quarter).** Entry: change failure rate falling for eight weeks; flags in Core.
 
 8. Introduce release toggles in Core; stop opening long-lived branches and retire existing ones.
 9. Set review norms: first response within four working hours, owner-based reviewers, a size guideline.
@@ -450,23 +454,23 @@ flowchart TD
 from every pipeline.
 
 11. Deploy from green main daily with canary and automated rollback; release by tenant through flags.
-12. Step back a stage if change fail rate rises for two consecutive months, and say so openly.
+12. Step back a stage if change failure rate rises for two consecutive months, and say so openly.
 
 ## Case Study
 
 This case is **fictional**. It follows the release workstream of the director's first quarter, weeks
 4 to 13, from the [baseline](../../case-studies/northstar/baseline-data.md).
 
-The release working group, led by Kwame Mensah with owners from the teams, began by measuring: most
-red periods began with a test that passed on rerun. The group split the pipeline into a 15-minute
-commit stage and a 38-minute extended stage in parallel shards. From week 4 it quarantined the worst
-flaky tests under Chapter 22's rule, each with an owner and a fix-or-delete deadline. Teams adopted
-revert-first. Red time fell below
-10 percent in week 4 and averaged 9 percent over the last four weeks of the quarter.
+Kwame Mensah's release working group began by measuring: most red periods began with a test that
+passed on rerun. The group split the pipeline into a 15-minute commit stage and a 38-minute extended
+stage in parallel shards, applied the quarantine rule from week 4
+([Chapter 22](22-testing-strategy-and-test-architecture.md#case-study) tells that part), and teams
+adopted revert-first. Red time fell below 10 percent in week 4 and averaged 9 percent over the last
+four weeks of the quarter.
 
 The first weekly train ran in week 5. Two QA engineers chose about 600 regression cases, weighted
-toward invoicing, ledger, and order capture; all seven triaged the manual suite with the teams, and
-five also automated cases. Core made eleven releases in the quarter instead of six or seven. In week 6, after reviewing INC-410 and INC-430
+toward invoicing, ledger, and order capture. Core made eleven releases in the quarter instead of six
+or seven. In week 6, after reviewing INC-410 and INC-430
 together, Payments and Integrations moved its flags and settings into version control with schema and
 bounds checks and per-tenant rollout. Its deployment frequency did not fall.
 
@@ -475,7 +479,9 @@ twice after a migration and dependent code shipped in the same train ([Chapter 2
 Release engineering made it longer. Rolling the train back failed, because the migration had already
 changed the schema the previous version read, so service was restored by a forward fix. Expand and
 contract had been a written rule that nothing enforced. An interim rule followed (no release may
-contain a ledger migration and code that depends on it) until a pipeline check landed in week 11.
+contain a ledger migration and code that depends on it) until a pipeline check landed in week 11. The
+lesson: a rule nothing enforces is not a control, and a rollback is only as good as its compatibility
+with the data.
 
 At the quarterly reset the group proposed stage 2, and the director added one condition: Core's flag
 mechanism would be a paved road with expiry dates required from the first flag, so that Core would
@@ -496,7 +502,7 @@ evaluate the proposal. Say what you would change in Core's review practice inste
 expect each change to do to lead time.
 
 **F2.** Northstar's quarter had five configuration-change incidents: INC-404, INC-410, INC-412,
-INC-416, and INC-430. The incident table in Why This Matters describes each, and
+INC-416, and INC-430. The incident list under Why This Matters describes each, and
 `incidents-last-quarter.csv` has detection and restore times. For each, identify which property of a trustworthy delivery path was missing
 and which single control would most likely have prevented the incident or limited its impact. Then
 say which of your controls would also have helped in the Knight Capital deployment.
@@ -508,9 +514,9 @@ actually fell.
 
 ### Applied Leadership
 
-**A1.** Priya Raman (Orders) and Marcus Oyelaran (Billing) complain that Core main is red so often
+**A1.** Priya Raman (Orders manager) and Marcus Oyelaran (Billing manager) complain that Core main is red so often
 that their engineers have stopped trusting the pipeline and rerun failures by habit. Tom Becker
-(Platform Operations) says
+(Platform Operations manager) says
 his infrastructure engineers own the Jenkins servers, not the tests. Design the main-branch policy
 for Core, decide who owns which part of it, and plan the conversation in which you introduce
 revert-first to engineers who see it as an accusation.

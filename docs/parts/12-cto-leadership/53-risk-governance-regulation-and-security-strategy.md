@@ -17,7 +17,7 @@ Related chapters: [26](../05-engineering-quality/26-security-and-software-supply
 ## Why This Matters
 
 At team scale, risk is a list of things that might break, and the people who would fix them are in the
-room. Most decisions are obvious.
+room.
 
 At organization scale, risks cross team lines and stop having a natural owner. A single Jenkins
 controller is Platform Operations' problem until it stops every team's releases. Without a register that
@@ -87,12 +87,10 @@ register differs in three ways.
 3. **Connection.** It feeds the company's risk register, so technology risk is weighed against the
    company's other risks.
 
-A NIST standard describes this structure for cybersecurity: registers at system and organizational
-levels, rolled up so that cybersecurity risk is managed alongside other enterprise risks
-([Quinn et al., 2025](../../references/bibliography.md#nist2025ir8286r1); **standard**).
-
-Rolling up does not mean copying every line upward. Each level keeps the risks it can treat and passes
-up only those that need a higher authority, grouped by consequence.
+A NIST standard describes this roll-up for cybersecurity
+([Quinn et al., 2025](../../references/bibliography.md#nist2025ir8286r1); **standard**). Rolling up does
+not mean copying every line upward: each level keeps the risks it can treat and passes up, grouped by
+consequence, only those that need a higher authority.
 
 A useful entry states the risk as cause, event, and consequence: "Because X, Y may happen, which would
 cause Z". It lists the lower-level items it groups. It names an owner, an accepter, a rating (with an
@@ -106,8 +104,8 @@ Four responses to a risk are **practitioner consensus**: **reduce** likelihood o
 part of the consequence through insurance or a contract (never customer trust); **avoid** the activity;
 or **accept** it, explicitly and for a period.
 
-Acceptance is where governance fails most often. A risk in the register for six quarters with the
-same rating and no action has been accepted, but nobody accepted it. This book recommends three rules:
+Acceptance is where governance fails most often: a risk left for six quarters with no action has been
+accepted, but nobody accepted it. This book recommends three rules:
 
 1. Every acceptance has a named accepter, a reason, and an expiry of at most two quarters (Chapter 20's
    limit for standards exemptions).
@@ -154,13 +152,13 @@ So stop at matrices less often rather than banning them. Use the matrix to separ
 matter from the forty that do not, not to order the ten. Put a dollar range on risks that can carry one.
 Write the reasoning beside every score, so two risks rated 12 for different reasons say so.
 
-Quantitative methods go further, expressing information risk in money with calibrated estimates
+Quantitative methods express risk in money with calibrated estimates
 ([The Open Group, Open FAIR](../../references/bibliography.md#opengroup-open-fair), **standard**;
 [Hubbard and Seiersen, 2023](../../references/bibliography.md#hubbard2023cybersecurity), **expert
-opinion**). At Northstar's size, quantifying the top three or four risks is usually worth it; every line
-is not. Assessments exist to help senior leaders choose responses
-([Joint Task Force, 2012](../../references/bibliography.md#nist2012sp800-30r1); **standard**), so a
-rating that changes no response has not done its job.
+opinion**). At Northstar's
+size, quantify the top three or four risks, not every line. A rating that changes no response has not
+done its job ([Joint Task Force, 2012](../../references/bibliography.md#nist2012sp800-30r1);
+**standard**).
 
 ### Security strategy with recognized frameworks
 
@@ -182,20 +180,15 @@ Chapter 26 used three frameworks as maps for a director's gap analysis. All are 
 
 At CTO level the same frameworks serve three purposes.
 
-**A shared vocabulary with outsiders.** Customers, auditors, insurers, and acquirers ask questions in
-framework terms.
+**A shared vocabulary** with customers, auditors, insurers, and acquirers, who ask in framework terms.
 
-**A way to choose a few outcomes.** A security strategy, like any strategy, is a diagnosis, a guiding
-policy, and a few coherent actions (Chapter 30). The frameworks make gaps visible; they do not choose
-the actions, and CSF 2.0 says its Core is not a checklist. The CTO picks three to five target outcomes
-for the next year, each with a measure, an owner, and a cost.
+**A way to choose a few outcomes.** The frameworks make gaps visible; they do not choose the actions, and
+CSF 2.0 says its Core is not a checklist. The CTO picks three to five target outcomes for the next year,
+each with a measure, an owner, and a cost. Start from the outcomes whose loss would hurt customers or
+revenue, then ask which framework outcomes protect them.
 
 **A structure for governance.** CSF 2.0's Govern function is where the CTO's work lives: roles, risk
 appetite, policy, and oversight of supply-chain risk.
-
-Frameworks fail predictably at this level: every subcategory is answered in a spreadsheet, and the
-spreadsheet is called the strategy. Start instead from the outcomes whose loss would hurt customers or
-revenue, then ask which framework outcomes protect them.
 
 A short worked form of a security strategy, as this book recommends it:
 
@@ -228,13 +221,12 @@ reports the company chooses to obtain. Examples for an order-to-cash platform:
   the criteria is proposed; check its status before planning an audit cycle.
 - **Public-company disclosure.** In the United States, the SEC's 2023 rules require listed companies to
   report material cybersecurity incidents, generally within four business days of deciding they are
-  material. The annual report must describe how the board oversees cybersecurity risk
+  material. Material means important enough that a reasonable investor would want to know. The annual report must describe how the board oversees cybersecurity risk
   ([SEC, 2023](../../references/bibliography.md#sec2023cyberrule); **standard**). A private company is
   not bound, but acquirers and investors preparing for a listing ask the same questions.
 
 This chapter does not survey privacy and data-protection law, which varies by jurisdiction and needs
-legal advice; the evidence here is thin. Nor does it cover business continuity or cyber insurance beyond
-their place in the register. The engineering method is the same for every obligation.
+legal advice; the evidence here is thin. The engineering method is the same for every obligation.
 
 ```mermaid
 flowchart TD
@@ -256,13 +248,32 @@ and an SSDF practice.
 
 | Obligation | Engineering control | Evidence produced by |
 |---|---|---|
-| 99.9 percent availability with credits | SLOs, error budgets, tier 1 minimums (Chapter 24) | Synthetic checks, incident tracker |
+| 99.9 percent availability with credits | [SLOs](../../glossary.md#sli-slo-and-sla), [error budgets](../../glossary.md#error-budget-and-burn-rate), tier 1 minimums (Chapter 24) | Synthetic checks, incident tracker |
 | Change management (SOC 2, questionnaires) | Reviewed changes through an auditable pipeline | Pipeline and repository logs |
 | Vulnerability management | Remediation service levels and exceptions (Chapter 26) | Scanner records, exception register |
 | Supply-chain questions (SBOM, SSDF) | [SBOM](../../glossary.md#sbom) (software bill of materials, a machine-readable list of a build's components) per build; provenance | Build artifacts |
 | Card data protection | Scope boundary; tokenization; access control | Network and access configuration, scope review |
 | Incident disclosure readiness | Severity definitions with a materiality escalation path | Incident records, decision log |
 
+### Breach response and continuity: what must be ready
+
+When a breach or a long outage happens, the CTO has no time to design a process, so three things must
+exist beforehand (**this book's recommendation**; incident response itself is taught in
+[Chapter 25](../05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md)).
+
+1. **An incident-to-disclosure path.** A written rule for which technical events reach the CEO, legal
+   counsel, and the board, and how fast. A suspected data exposure goes up within hours, before the
+   facts are complete: someone outside engineering must judge whether it is material and who must be
+   told. Name that person and a deputy.
+2. **A tabletop exercise.** Twice a year, walk the executive team through a scenario on paper: a leaked
+   key, a ransomware note, the payment provider down for a day. The output is the list of gaps (who
+   was not reachable, which customer contract nobody could find), each with an owner.
+3. **A continuity plan for the paths that earn money.** For the order and payment paths and the build
+   path, write how long the business can survive without each, how the service is restored, and when
+   the restore was last tested. A backup that has never been restored is a hope, not a control.
+
+All three produce evidence (the escalation log, the exercise record, the restore test), which belongs
+in the evidence library; cyber insurers ask for exactly this.
 ### Reporting risk to non-specialists
 
 Executives and audit committee members judge risk and read financial statements well; most are not
@@ -278,18 +289,19 @@ technologists. Four rules (**this book's recommendation**, consistent with Chapt
 4. **Name what is accepted.** An audit committee's job is oversight; it cannot oversee acceptance it
    is never told about.
 
-Security reporting drifts toward activity measures (training completion, phishing click rates) that
-are easy to move and say little about exposure. Report exposure instead: criticals past service level,
-known-exploited items open, tier 1 control coverage, exceptions by age. Pair it with a check on whoever
-classifies the findings (Chapter 18).
+Report exposure, not activity. Training completion and phishing click rates are easy to move and say
+little; criticals past service level, known-exploited items open, tier 1 control coverage, and
+exceptions by age say what could go wrong. Pair them with a check on whoever classifies the findings
+(Chapter 18).
 
 ## Engineering Organization Example
 
 !!! info "Northstar so far"
-    Week 43 of the director's first year. Sev1 and Sev2 incidents fell from 30 a quarter to 14 in
-    quarter 3, and availability reached 99.89 percent, just under the 99.9 percent contract. Security sits
-    in Corporate IT, outside engineering, and Northstar has no SOC 2 report. See the
-    [timeline](../../case-studies/northstar/timeline.md) and the
+    Week 43 of the director's first year. Availability reached 99.89 percent, just under the 99.9
+    percent contract. Security sits in Corporate IT, outside engineering, and Northstar has no SOC 2
+    report. See the [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
     [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 The following is **fictional**. The questionnaire figures, ratings, and exposure ranges are
@@ -304,19 +316,20 @@ runs a two-person security function that reports to Marta, who reports to Rajiv.
 lists penetration test findings, phishing click rate, and training completion. Northstar's only
 independent assurance is an annual external penetration test.
 
-Engineering's register, drafted in quarter 2 (Chapter 30), has nine items:
+Engineering's register, drafted in quarter 2 (Chapter 30), has nine items. They are the raw input to
+the enterprise register below:
 
-| ID | Technology risk | Owner |
-|---|---|---|
-| TR-01 | Core's application framework is a major version past community support | Ines Carvalho |
-| TR-02 | One Jenkins controller with about 60 plugins (INC-428: all Jenkins deploys failed until a restart) | Tom Becker |
-| TR-03 | Core's Java runtime has free updates promised for only about 12 more months | Ines Carvalho |
-| TR-04 | Core's XML library is unmaintained upstream and held the oldest critical vulnerability | Ines Carvalho |
-| TR-05 | The configuration server is a single instance, two major versions behind | Kwame Mensah |
-| TR-06 | Shell-script deploys are understood by one engineer | Tom Becker |
-| TR-07 | Ledger currency and rounding: one person can respond or change it | Marcus Oyelaran |
-| TR-08 | One partner bank route with no fallback (INC-413: a bank outage left payments queued) | Elena Sokolova |
-| TR-09 | tax-svc rate tables maintained by hand by one engineer (INC-414, a tax-rate error) | Marcus Oyelaran |
+| ID | Technology risk |
+|---|---|
+| TR-01 | Core's application framework is a major version past community support |
+| TR-02 | One Jenkins build controller with about 60 plugins; it has already stopped all deploys once |
+| TR-03 | Core's Java runtime has free updates promised for only about 12 more months |
+| TR-04 | Core's XML library is unmaintained upstream and held the oldest critical vulnerability |
+| TR-05 | The configuration server is a single instance, two major versions behind |
+| TR-06 | Shell-script deploys are understood by one engineer |
+| TR-07 | Ledger currency and rounding: one person can respond or change it |
+| TR-08 | One partner bank route with no fallback; a bank outage has already left payments queued |
+| TR-09 | tax-svc rate tables maintained by hand by one engineer; a tax-rate error has already caused an incident |
 
 In week 43 Margaret Lin asks, through Rajiv, for a technology risk session at the committee's week 50
 meeting: the top technology risks in business terms, their owners, what is being done, and what the
@@ -327,52 +340,49 @@ register with Marta and Joon, for his review in week 48.
 security snapshot, and Joon tallies a year of customer security questionnaires. auth-svc, the
 authentication service, still deploys by script and carries a known-exploited critical vulnerability.
 
-| Week 44 measure | Day 90 | Week 44 |
+| Measure | End of quarter 1 | Week 44 |
 |---|---|---|
 | Components with dependency scanning | 20 in pipeline, 4 by weekly scan | unchanged |
-| Open critical vulnerabilities | 3, all under exceptions | 2, both under exceptions: auth-svc (known-exploited, restricted at the load balancer, exception to week 52) and one Core item that waits on TR-01 |
+| Open critical vulnerabilities | 3, all under exceptions | 2 under exceptions: auth-svc (known-exploited, restricted at the load balancer) and a Core item waiting on TR-01 |
 | Open highs past the 90-day service level | not measured | 9 |
 | Tier 1 components with an SBOM per build | 6 of 15 | 14 of 15 (all but auth-svc) |
 | Tier 1 components with signed build provenance (SLSA Build L2) | not measured | 0 of 15 |
 | Script services with secrets in plain files | 2 | 2 |
-| Questionnaires, last four quarters | not measured | 34; 11 asked for a SOC 2 report, 6 for an SBOM or SSDF evidence; about 14 hours each |
+| Questionnaires, last four quarters | not measured | 34 (11 asked for SOC 2, 6 for SBOM or SSDF evidence), about 14 hours each |
 
 The questionnaires cost about 476 hours a year, about 0.26 FTE. That excludes Victor's own 2 hours a
 week on security reviews ([Chapter 50](50-what-a-cto-actually-does.md)). In week 42, Greg Tanaka (VP
 Sales) reported a prospect worth about $310,000 a year whose terms require a SOC 2 report within 12
 months of signature.
 
-**Consolidation.** The director collects 22 candidate items: TR-01 to TR-09, six security findings,
-four items from Marta's IT list, two compliance items (no SOC 2 report; the questionnaire load), and the
-reliability record. Grouping by consequence yields nine enterprise risks.
+**Consolidation.** The lesson comes first: 22 scattered items become nine risks stated as business
+consequences, and the highest score is not a security risk. The director collects TR-01 to TR-09, six
+security findings, four items from Marta's IT list, two compliance items (no SOC 2 report; the
+questionnaire load), and the reliability record, then groups them by consequence.
 
-| ID | Risk (consequence) | Sources | Owner | Treatment |
+| ID | Risk (consequence) | Grouped sources | Owner | Score |
 |---|---|---|---|---|
-| ER-01 | A large customer leaves at renewal over reliability | Reliability record, TR-05, TR-08 | Engineering Director | Reduce: quality continuation (Chapter 49) |
-| ER-02 | A financial error reaches customers | TR-07, TR-09 | Marcus Oyelaran | Reduce: pairing plan, tax-svc decision |
-| ER-03 | A known vulnerability on an internet-facing tier 1 component is exploited | auth-svc, Core critical, highs past service level | Tom Becker (auth-svc), Ines Carvalho (Core) | Reduce; accepted meanwhile by exception |
-| ER-04 | The build and deploy path is compromised or lost | TR-02, TR-06, plain-file secrets, no signed provenance | Kwame Mensah | Reduce: CI consolidation phase 1, secrets manager |
-| ER-05 | The Core platform cannot be patched | TR-01, TR-03, TR-04 | Ines Carvalho | Accept with patches until a migration decision |
-| ER-06 | Missing assurance costs deals and renewals | No SOC 2 report, questionnaire load | Victor Lindqvist | Decision open |
-| ER-07 | Card data scope is wider than believed | Scope never reviewed since integration | Joon Park | Reduce: scope review |
-| ER-08 | A corporate identity compromise reaches production | Two IT items | Marta Kowalczyk | Reduce |
-| ER-09 | Corporate business systems are lost | Two IT items | Marta Kowalczyk | Reduce: restore tests |
+| ER-01 | A large customer leaves at renewal over reliability | Reliability record, TR-05, TR-08 | Engineering Director | 20 |
+| ER-02 | A financial error reaches customers | TR-07, TR-09 | Marcus Oyelaran (Billing manager) | 12 |
+| ER-03 | A known vulnerability on an internet-facing tier 1 component is exploited | auth-svc, Core critical, overdue highs | Tom Becker (Platform Operations manager), Ines Carvalho (staff engineer, Core domain) | 15 |
+| ER-04 | The build and deploy path is compromised or lost | TR-02, TR-06, plain-file secrets, no provenance | Kwame Mensah | 15 |
+| ER-05 | The Core platform cannot be patched | TR-01, TR-03, TR-04 | Ines Carvalho | 12 |
+| ER-06 | Missing assurance costs deals and renewals | No SOC 2 report, questionnaire load | Victor Lindqvist | 12 |
+| ER-07 | Card data scope is wider than believed | Scope never reviewed | Joon Park | 8 |
+| ER-08 | A corporate identity compromise reaches production | Two IT items | Marta Kowalczyk | 12 |
+| ER-09 | Corporate business systems are lost | Two IT items | Marta Kowalczyk | 6 |
 
-| ID | L | I | Score | Exposure (illustrative) |
-|---|---|---|---|---|
-| ER-01 | 4 | 5 | 20 | One top-40 customer: about $1.17M ARR, $842,000 a year of gross margin; credits $240,000 to $380,000 a year |
-| ER-02 | 3 | 4 | 12 | Not quantified; Sev1 by definition |
-| ER-03 | 3 | 5 | 15 | Not quantified |
-| ER-04 | 3 | 5 | 15 | Not quantified |
-| ER-05 | 4 | 3 | 12 | Migration $96,000 to $194,400 (Chapter 52) |
-| ER-06 | 4 | 3 | 12 | At least one $310,000 deal; 0.26 FTE a year |
-| ER-07 | 2 | 4 | 8 | Review about 5 days |
-| ER-08 | 3 | 4 | 12 | Not quantified |
-| ER-09 | 2 | 3 | 6 | Not quantified |
+The score is likelihood times impact, each 1 to 5. Most treatments are "reduce"; ER-03 is accepted
+meanwhile by exception, ER-05 is accepted with patches until a migration decision, and ER-06 is open.
+The exposures that Northstar's numbers support are illustrative:
 
-L is likelihood and I impact, each 1 to 5. ER-01 is rated likely because six large renewals fall in
-quarters 5 to 8 and availability has been below 99.9 percent in every measured quarter. The derivations
-are in the solutions.
+- **ER-01:** one top-40 customer (one of the 40 largest) is about $1.17M of ARR. At the 72 percent gross
+  margin that is about $842,000 a year, plus $240,000 to $380,000 a year of credits at quarter 3's and
+  quarter 2's rates. It is rated likely because six large renewals fall in quarters 5 to 8 and
+  availability has been below 99.9 percent in every measured quarter.
+- **ER-05:** the migration, $96,000 to $194,400 ([Chapter 52](52-technology-investment-budgeting-and-financial-literacy.md)).
+- **ER-06:** at least one $310,000 deal, plus 0.26 FTE a year of questionnaires.
+- The others are not quantified; ER-02 would be a Sev1 by definition.
 
 Three observations. First, four risks score 12 and have nothing in common: a financial error, an
 unpatchable platform, a commercial assurance gap, and an identity compromise. This is Cox's resolution
@@ -412,9 +422,9 @@ necessary:
    not, the first year's money buys controls, not a report.
 3. **Cost of the alternative.** What do questionnaires, lost deals, and renewal friction cost?
 
-Real demand and low readiness: fund readiness first, with a dated decision on the audit. Real demand
-and high readiness: the report is mostly an audit fee. Weak demand: invest in the evidence pipeline that
-makes questionnaires cheap, and revisit.
+Real demand, low readiness: fund readiness first and date the audit decision. Real demand, high
+readiness: the report is mostly an audit fee. Weak demand: build the evidence pipeline that makes
+questionnaires cheap, and revisit.
 
 ## Trade-offs
 
@@ -446,8 +456,8 @@ same exception with a new date and the same approver. Countermeasure: the accept
 **Framework as strategy.** A spreadsheet maps every CSF subcategory and nothing in engineering changes.
 Signal: the strategy has no funded actions.
 
-**Activity reporting.** The committee sees training completion and click rates. Signal: no reported
-measure would move if a tier 1 component became exposed. Countermeasure: exposure measures.
+**Activity reporting.** No measure the committee sees would move if a tier 1 component became exposed.
+Countermeasure: exposure measures.
 
 **Evidence by hand.** Each questionnaire or audit is answered from memory and screenshots. Signal: two
 answers to the same question differ. Countermeasure: controls that emit evidence; one evidence library
@@ -471,9 +481,12 @@ quarterly with the CFO and head of IT. Report to the audit committee twice a yea
 a risk is outside appetite.
 
 **Vendors and suppliers.** At this size much technology risk sits in vendors: a cloud provider, a
-partner bank, a payments processor. Record each material vendor as a source under the consequence it
-could cause, note concentration (TR-08's single bank route is one), and ask vendors for their own
-evidence, such as their SOC 2 report, rather than accepting a questionnaire answer.
+partner bank, a payments processor. A material vendor is one whose failure would stop a money path or
+expose customer data. Record each as a source under the consequence it could cause, and ask for its own
+evidence, such as its SOC 2 report, rather than accepting a questionnaire answer. Weigh concentration
+against switching cost (**this book's recommendation**). A second bank route (TR-08's gap) costs
+integration work and a second contract. Add one where an outage would breach a customer contract;
+elsewhere, accept the dependency with a written fallback.
 
 ## CTO Perspective
 
@@ -488,12 +501,12 @@ proposal in measurable terms with the cost of each line stated. A line the compa
 is a statement of intent, not appetite.
 
 **Advise on the security function's placement.** Where security reports, how large it is, and whether
-the company needs a CISO (chief information security officer, a dedicated security executive) are
+the company needs a [CISO](../../glossary.md#ciso) (chief information security officer, a dedicated
+security executive) are
 choices the CEO often makes. The CTO should say plainly what the current placement cannot see.
 
-The CTO's credibility rests on reporting risks before they materialize and never presenting a
-reassuring number that a sample would contradict. At Halvard's size the same roles hold, but each vice
-president's register feeds the CTO's, and vendor contracts become a risk category of their own.
+At Halvard's size the same roles hold, but each vice president's register feeds the CTO's, and vendor
+contracts become a risk category of their own.
 
 ## Practical Playbook
 

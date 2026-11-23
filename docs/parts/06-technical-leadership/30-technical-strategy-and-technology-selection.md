@@ -19,8 +19,9 @@ four build systems, three ways to store configuration, a library nobody has upda
 
 At organization scale, the cost of that sum arrives as operational load and fragility. Every technology
 needs monitoring, upgrades, security patches, and people who understand its failure modes. At Northstar,
-four CI systems cost about 1.5 [FTE](../../glossary.md#fte) (full-time equivalent engineers) a year to run, and the oldest open critical vulnerability sat in a
-Core XML library for 19 months because nobody was responsible for watching it. These are strategy
+four CI systems (continuous integration: build and test on every change) cost about 1.5
+[FTE](../../glossary.md#fte) (full-time equivalent engineers) a year to run. The oldest open critical
+vulnerability sat in a Core XML library for 19 months because nobody was responsible for watching it. These are strategy
 failures, not team failures: no policy said what to converge on or who watches what ages.
 
 At executive scale, technology choices become commitments that outlive the people who made them.
@@ -114,27 +115,21 @@ Two questions decide most cases (**this book's recommendation**, a synthesis of 
    because the first version is cheap; the cost is in years two and three. Buying looks expensive
    because the subscription is visible; the hidden costs are integration, vendor management, and exit.
 
-Exit cost deserves its own line. Opara-Martins, Sahandi, and Tian surveyed 114 participants about cloud
-migration and concluded that lock-in risk grows as resources move to the cloud. They stress
-interoperability, portability, and standards, and propose mitigations: contract terms, vendors that
-support standard formats and APIs, and understanding dependencies among services
-([Opara-Martins et al., 2016](../../references/bibliography.md#opara-martins2016lockin); **research
-finding**, survey-based, as the abstract reports it). The practical consequence: when you buy, put the vendor behind
-an interface you own, and know how you would get your data out.
+Exit cost deserves its own line: when you buy, put the vendor behind an interface you own, and know
+how you would get your data out. A survey of 114 participants about cloud migration concluded that
+lock-in risk grows as resources move to the cloud, and proposed contract terms and standard formats
+and APIs as mitigations ([Opara-Martins et al., 2016](../../references/bibliography.md#opara-martins2016lockin);
+**research finding**, survey-based, as the abstract reports it).
 
 Adopting open source shifts cost rather than removing it. You pay no license, but you inherit upgrade
-work and the project's health. Kula and colleagues studied more than 4,600 GitHub projects. Their
-abstract reports that 81.5 percent kept outdated dependencies, that developers were unlikely to respond
-to security advisories, and that 69 percent of those surveyed did not know they used vulnerable
-dependencies ([Kula et al., 2018](../../references/bibliography.md#kula2018developers); **research
-finding** in open-source projects). Decan, Mens, and Constantinou examined nearly 400 security reports
-over six years in the npm dependency network, asking how vulnerabilities are found and fixed and how far
-they reach dependent packages ([Decan et al., 2018](../../references/bibliography.md#decan2018impact)):
-the exposure of an adopted package includes everything it depends on. Before adopting, check whether
-the project is maintained and how it handles security; the OpenSSF Scorecard automates checks such as
-maintenance activity, security policy, code review, and pinned dependencies
-([OpenSSF Scorecard](../../references/bibliography.md#openssf-scorecard)). A good score is a hygiene
-signal, not proof that a project is safe or will stay maintained.
+work and the project's health, including everything the project depends on. In a study of more than
+4,600 GitHub projects, 81.5 percent kept outdated dependencies, and developers were unlikely to respond
+to security advisories ([Kula et al., 2018](../../references/bibliography.md#kula2018developers);
+**research finding** in open-source projects; on how vulnerabilities spread through dependencies, see
+[Decan et al., 2018](../../references/bibliography.md#decan2018impact)). Before adopting, check whether
+the project is maintained and how it handles security. The
+[OpenSSF Scorecard](../../references/bibliography.md#openssf-scorecard) automates such checks; a good
+score is a hygiene signal, not proof that a project is safe or will stay maintained.
 
 ### Technology selection
 
@@ -165,6 +160,28 @@ Two instruments make restraint routine:
 
 Record each decision (Chapter 28 covers decision records and decision rights), naming the policy it
 applies and the exit path.
+
+### Running an evaluation
+
+When a candidate does reach Trial, or a purchase is on the table, run the evaluation as a short,
+bounded experiment (**this book's recommendation**).
+
+1. **Write the criteria before seeing the candidates.** Two or three characteristics from the
+   diagnosis, plus exit cost and staffing. Weight them. Criteria written after a demo describe the
+   demo.
+2. **Test the hard case, not the happy path.** A proof of concept of two to four weeks uses your
+   data, your failure modes, and your integration points. "Faster on the prototype" is not evidence;
+   "kept the order path under 2 seconds with the vendor down" is.
+3. **Score in a small table.** One row per candidate, including "do nothing" and "extend what we
+   have". If the weights decide the winner, say so and get the weights agreed first.
+4. **Check the vendor, not only the product.** For a purchase: financial viability and customer base,
+   contract length and renewal terms, the availability commitment and what it pays when broken, data
+   export format and notice period on exit, and the security review your customers will ask about.
+5. **Name the exit before signing.** The interface you own, how data leaves, and a rough switching
+   cost. If nobody can describe the exit, the exit cost is not tolerable.
+
+The output is a decision record with the score table attached. A losing candidate stays recorded,
+so the same evaluation is not rerun next year.
 
 ### The technology risk register
 
@@ -197,11 +214,13 @@ codebases do not keep up, and most teams do not know what they are exposed to.
     Week 14, the start of quarter 2 of the director's first year. [Sev1 and
     Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
     to 21 in quarter 1 after ownership, severity, and weekly release changes. Both renewal commitments
-    are on track (weeks 19 and 26). See the [timeline](../../case-studies/northstar/timeline.md).
+    are on track (weeks 19 and 26). See the [timeline](../../case-studies/northstar/timeline.md). New
+    to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This example applies the chapter to Northstar, the book's fictional company. Its facts come from the
 [baseline data](../../case-studies/northstar/baseline-data.md) and
-[the director's first year](../../case-studies/northstar/first-quarter.md); the strategy draft and all
+[the year 1 record](../../case-studies/northstar/first-quarter.md); the strategy draft and all
 scores are **illustrative**. In week 14 the director drafts a one-page technical strategy with the three
 staff engineers: Ines Carvalho (Core domain), Kwame Mensah (infrastructure and reliability), and Li Na
 Zhou (data and integration).
@@ -224,36 +243,44 @@ the Jenkins controller, and ledger currency and rounding each depend on one pers
 3. *Every tier 1 component runs on supported versions and has two people who can change it.*
 
 **Coherent actions.** A technology risk register reviewed monthly by the director and staff engineers
-(enforcement); exceptions to policy 1 decided by the director within 10 working days, the same window
-as the standards process in [Chapter 20](../05-engineering-quality/20-engineering-standards-and-their-governance.md)
-(escalation). An exception is a risk trade-off, so the director decides it, per the trade-off row of
-[Chapter 28](28-architecture-decision-making-and-governance.md)'s decision-rights table. Then a
-supported-version plan for Core and a second responder for each one-person system
-(transitions). CI consolidation itself remains the decision discussed in Chapters 23 and 27, with the
-quarter 2 roadmap and target choice in [Chapter 32](32-platform-engineering-developer-experience-and-modernization.md).
+(enforcement). Exceptions to policy 1 decided by the director within 10 working days, because an
+exception is a risk trade-off (escalation). A supported-version plan for Core and a second responder
+for each one-person system (transitions). CI consolidation is decided separately
+([Chapter 32](32-platform-engineering-developer-experience-and-modernization.md)).
 
-The first register uses three-point scales. Likelihood: 3 means the trigger is expected within two
-quarters or is already happening. Impact: 3 means a tier 1 path or financial correctness is at stake.
+The first register scores likelihood times impact, each on a three-point scale. Likelihood 3 means
+the trigger is expected within two quarters or is already happening; impact 3 means a tier 1 path or
+financial correctness is at stake.
 
-| ID | Item | Kind | Likelihood | Impact | Score | Owner | Response |
-|---|---|---|---|---|---|---|---|
-| TR-01 | Core application framework, major version past community support | EOL | 3 | 3 | 9 | Ines Carvalho | Scope migration; patch fixes under exception meanwhile |
-| TR-02 | Single Jenkins controller, about 60 plugins; [INC-428](../../glossary.md#inc-numbers), all Jenkins deploys failing until a restart, cause unknown | Concentration, skills | 3 | 3 | 9 | Tom Becker (Platform Operations manager) | Configuration as code; second responder beside Bram Verhoeven, the senior infrastructure engineer who built it |
-| TR-03 | Core Java runtime: free updates from the chosen distribution promised for at least 12 more months | EOL | 2 | 3 | 6 | Ines Carvalho | Plan with TR-01 |
-| TR-04 | Core XML library, unmaintained upstream; held the oldest critical | EOL, security | 3 | 2 | 6 | Ines Carvalho | Replace (exit) |
-| TR-05 | Configuration server, single instance, two major versions behind | EOL, concentration | 2 | 3 | 6 | Kwame Mensah | Upgrade with a standby |
-| TR-06 | Shell-script deploys understood by one engineer | Skills | 2 | 3 | 6 | Tom Becker | Migration proposed (Chapter 32 roadmap, phase 1) |
-| TR-07 | Ledger currency and rounding: one person can respond or change | Skills | 2 | 3 | 6 | Marcus Oyelaran (Billing manager) | Pairing plan |
-| TR-08 | One partner bank route, no fallback (INC-413: a partner bank outage left payments queued) | Concentration | 2 | 3 | 6 | Elena Sokolova (Payments and Integrations manager) | Evaluate a second route |
-| TR-09 | tax-svc rate tables maintained by hand by one engineer (INC-414) | Skills, correctness | 3 | 2 | 6 | Marcus Oyelaran | Build-versus-buy decision (Case Study) |
+| ID | Item | Kind | Score | Response |
+|---|---|---|---|---|
+| TR-01 | Core framework past community support | EOL | 9 | Scope migration; patch meanwhile |
+| TR-02 | Single Jenkins controller, about 60 plugins | Concentration, skills | 9 | Configuration as code; second responder |
+| TR-03 | Core Java runtime, free updates for at least 12 more months | EOL | 6 | Plan with TR-01 |
+| TR-04 | Core XML library, unmaintained upstream | EOL, security | 6 | Replace (exit) |
+| TR-05 | Configuration server, single instance, two versions behind | EOL, concentration | 6 | Upgrade with a standby |
+| TR-06 | Shell-script deploys known by one engineer | Skills | 6 | Migrate (Chapter 32 roadmap) |
+| TR-07 | Ledger currency and rounding, one person | Skills | 6 | Pairing plan |
+| TR-08 | One partner bank route, no fallback | Concentration | 6 | Evaluate a second route |
+| TR-09 | tax-svc rate tables kept by hand by one engineer | Skills, correctness | 6 | Build or buy (Case Study) |
 
-Three observations. First, two items score 9 and both are in the build and runtime layer that every
-team depends on, which confirms the first finding of the diagnosis. Second, the scores cluster at 6.
-Three-point scales do this; the register's value is in the owners and responses, not the ranking.
-Third, the work is not small. The director's illustrative estimate for TR-01 is 120 to 180
-engineer-days, about $96,000 to $144,000. (This chapter prices an engineer-day at $800: $185,000 over 230
-working days.) That is separate from the 30-day patch-level fix of two Core criticals in Chapter 26.
-TR-02's mitigation is about 20 engineer-days ($16,000). Both compete for capacity with the
+Owners: Ines Carvalho for TR-01, TR-03, and TR-04; Tom Becker (Platform Operations manager) for TR-02
+and TR-06; Kwame Mensah for TR-05; Marcus Oyelaran (Billing manager) for TR-07 and TR-09; Elena
+Sokolova (Payments and Integrations manager) for TR-08. Behind the rows: TR-02's controller, built by
+Bram Verhoeven (senior infrastructure engineer), caused [INC-428](../../glossary.md#inc-numbers), in
+which all Jenkins deploys failed until a restart. TR-04's library held the oldest critical
+vulnerability. TR-08's route caused INC-413 (a partner bank outage left payments queued), and TR-09's
+tables caused INC-414 (a new jurisdiction's rate missing its effective date).
+
+The point of the register is its owners and responses, not its scores. Three-point scales cluster,
+and seven of nine items score 6. The two 9s both sit in the build and runtime layer every team
+depends on, which confirms the diagnosis.
+
+The work is not small. The director's illustrative estimate for TR-01 is 120 to 180 engineer-days,
+and TR-02's mitigation about 20. This chapter prices engineer time at **Finance's day rate** of $800
+per engineer-day ($185,000 ÷ about 230 working days), so TR-01 costs about $96,000 to $144,000. Per
+day it is higher than the book's planning rate of $3,558 per engineer-week, because Finance counts only
+working days. Both items compete for capacity with the
 [prevention allocation](../../glossary.md#prevention-allocation), the capacity reserved per team for
 removing the sources of incidents. That is why they belong in the strategy rather than in a backlog.
 
@@ -283,7 +310,7 @@ For technology selection, place each candidate on the internal radar:
 |---|---|---|
 | Already used widely, failure modes known | Adopt | Nothing beyond normal review |
 | Solves a problem existing tools cannot, with a written reason | Trial | Owner, time box, success criteria, retirement plan for what it replaces |
-| Interesting, no current problem | Assess | Reading or a spike outside production |
+| Interesting, no current problem | Assess | Reading or a spike (a short throwaway experiment) outside production |
 | Being retired or known to hurt | Caution | Exception from the director for new use |
 
 For the risk register, the response depends on whether you can act before the trigger:
@@ -387,41 +414,40 @@ revenue paths belong in the CTO's own risk reporting to the CEO and board, along
 
 ## Case Study
 
-This case is **fictional**. INC-414 and tax-svc's ownership, tier, and readiness come from Northstar's
-record; the costs, quotes, and staffing below are **illustrative**.
+This case is **fictional**; the costs, quotes, and staffing are **illustrative**.
 
-In week 14, Marcus Oyelaran (Billing manager) brings register item TR-09 to the director.
-tax-svc, a tier 1 Billing service built on Jenkins with no runbook and partial alerting, calculates sales
-tax on orders and invoices. In the baseline quarter, INC-414 happened because the tax rate table lacked
-the effective date for a new jurisdiction. A customer found it; it took 300 minutes to detect and 450 to
-restore.
+In week 14, Marcus Oyelaran (Billing manager) brings register item TR-09 to the director. tax-svc, a
+tier 1 Billing service with no runbook and partial alerting, calculates sales tax on orders and
+invoices. In the baseline quarter, INC-414 happened because the tax rate table lacked the effective
+date for a new jurisdiction. A customer found it; restoring took 450 minutes.
 
-The rate tables hold about 2,300 rows and are updated monthly by hand by one Billing engineer, from
-jurisdictions' published notices. Rate upkeep and tax tickets take about 0.6 FTE a year. The team looked
-for open-source options and found calculation libraries but no project with maintained rate content, so
-adopting open source would leave the hard part, the content, unsolved.
+One Billing engineer updates the 2,300-row rate tables monthly by hand. Rate upkeep and tax tickets
+take about 0.6 FTE a year. Open-source libraries calculate tax but none maintains rate content, so
+adopting one would leave the hard part unsolved.
 
-Three options, each over three years, at $800 an engineer-day and $185,000 an FTE-year:
+Three options over three years:
 
 | Option | Upfront | Annual | Three-year TCO |
 |---|---|---|---|
-| A. Build out: effective-dated tables, validation, import tooling; rates still researched in-house | 120 engineer-days, $96,000 | 0.5 FTE, $92,500 | $373,500 |
-| B. Buy a commercial tax engine (API) | Integration 80 engineer-days, $64,000 | Subscription $150,000 plus 0.15 FTE ($27,750) | $597,250 |
-| C. Hybrid: keep tax-svc, buy a rate-content subscription | 70 engineer-days, $56,000 | Subscription $45,000 plus 0.25 FTE ($46,250) | $329,750 |
+| A. Build out the tables and tooling | $96,000 | $92,500 | $373,500 |
+| B. Buy a tax engine (API) | $64,000 | $177,750 | $597,250 |
+| C. Keep tax-svc, buy rate content | $56,000 | $91,250 | $329,750 |
 
-Three-year TCO is the upfront cost plus three years of the annual cost.
+Upfront is engineer-days at Finance's day rate (A 120, B 80, C 70 days). Annual is subscription plus
+engineer time at $185,000 an FTE-year: A 0.5 FTE, rates still researched in-house; B $150,000 plus 0.15
+FTE; C $45,000 plus 0.25 FTE. TCO is upfront plus three years of annual cost.
 
 The table leaves out four things the director has to weigh.
 
 - **Differentiation.** Tax calculation is not why distributors buy Northstar, but wrong tax on an invoice
-  is a wrong financial record, which the severity definitions written in week 3 make a Sev1.
+  is a wrong financial record, which Northstar classifies as a Sev1.
 - **Skills.** Option A keeps rate research with one person; B and C transfer it to a vendor.
 - **Concentration and the order path.** B puts a vendor API on the order path. The order path's
   proposed [SLO](../../glossary.md#sli-slo-and-sla) (service level objective, an internal reliability
   target) is 99 percent of submissions within 2 seconds. It needs cached rates as a fallback, which is extra build work
   not in the table, and a contract with availability at least as strict as Northstar's own 99.9 percent.
 - **Budget and capacity.** B's subscription alone would use 60 percent of the $250,000 discretionary
-  tooling budget, the same budget the observability purchase in Chapter 27 would draw on. All three
+  tooling budget, which every other tooling request competes for. All three
   options take Billing engineer-days in quarter 2, when Billing has reserved weeks 14 to 16 for the
   ledger export behind the accounting integration (due week 19).
 
@@ -461,7 +487,7 @@ it applies, the exit path, the fallback on the order path, who owns the vendor r
 evidence after two quarters would make you reverse it. Account for Billing's quarter 2 commitments.
 
 **A3.** Tom Becker (Platform Operations manager) says the Jenkins controller item (TR-02) should not be on the register because "the
-CI consolidation decision will make it irrelevant". Bram Verhoeven spends 45 percent of his time on
+CI consolidation decision will make it irrelevant". Bram Verhoeven, who built the controller, spends 45 percent of his time on
 Jenkins interrupts. Decide whether TR-02 stays, what mitigation you fund now, and how you keep the
 register from becoming a substitute for the consolidation decision.
 

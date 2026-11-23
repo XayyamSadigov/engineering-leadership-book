@@ -75,9 +75,9 @@ flowchart TD
 
 ### SLI, SLO, SLA
 
-The SRE book's chapter on service level objectives supplies the vocabulary most organizations use
+The SRE book supplies the vocabulary most organizations use
 ([Jones et al., Service Level Objectives](../../references/bibliography.md#google2017service)). A
-**service level indicator (SLI)** is a carefully defined quantitative measure of some aspect of the
+**[service level indicator (SLI)](../../glossary.md#sli-slo-and-sla)** is a carefully defined quantitative measure of some aspect of the
 service. A **service level objective (SLO)** is a target value or range for an SLI. A **service level
 agreement (SLA)** is a contract that attaches consequences to meeting or missing its SLOs; without a
 consequence, the chapter treats the commitment as an SLO. This is **documented practice**, widely
@@ -101,17 +101,28 @@ rolling window as a default
 
 The leadership skill is choosing which journeys and which SLI types. Ask what a user loses when this
 breaks. A Northstar distributor loses the ability to take orders and to get paid: availability and
-latency journeys. But the 14 customer-detected incidents reveal a third loss:
+latency journeys. But the 14 customer-detected incidents reveal a third loss. Sorted by what the
+customer noticed:
 
-| What the customer noticed | Incidents | Seen by an order or payment availability SLI? |
-|---|---|---|
-| Orders could not be submitted | INC-403 (legacy price lists rejected), INC-429 (next-year delivery dates rejected) | INC-403 yes; INC-429 only if wrongly rejected orders count as bad |
-| Wrong money or wrong order data | INC-401 (invoice rounding), 405 (blank cart totals), 409 (duplicate invoices), 412 (blank confirmation emails), 414 (missing tax rate), 417 (payments in the wrong period), 421 (bulk-order lines dropped), 427 (credit notes applied twice) | No: requests succeeded with wrong results |
-| Other paths | INC-408 (month-end report timeout), 411 (catalog import rejected), 418 (webhook signature change), 426 (mobile drafts corrupted) | No |
+| What the customer noticed | Incidents |
+|---|---|
+| Orders could not be submitted | 2 |
+| Wrong money or wrong order data | 8 |
+| Other paths | 4 |
 
 Eight of the 14 were correctness failures: invoices rounded wrongly or duplicated, payments posted to
-the wrong period, credit notes applied twice, order lines silently dropped. An availability SLO would
-have reported a healthy quarter through most of them. The SLI types must follow how your users are
+the wrong period, credit notes applied twice, order lines silently dropped. In each, requests
+succeeded with wrong results, so an availability SLO would have reported a healthy quarter.
+
+??? note "The 14 incidents, by their [INC numbers](../../glossary.md#inc-numbers)"
+    Could not order: INC-403 (legacy price lists rejected), INC-429 (next-year delivery dates rejected).
+    Wrong money or data: INC-401 (invoice rounding), 405 (blank cart totals), 409 (duplicate invoices),
+    412 (blank confirmation emails), 414 (missing tax rate), 417 (payments in the wrong period), 421
+    (bulk-order lines dropped), 427 (credit notes applied twice). Other paths: INC-408 (month-end
+    report timeout), 411 (catalog import rejected), 418 (webhook signature change), 426 (mobile drafts
+    corrupted).
+
+ The SLI types must follow how your users are
 actually hurt, which you learn from incident and support history, not from a list of standard
 signals.
 
@@ -141,11 +152,10 @@ In this book's judgment, budgets break down under six conditions:
 2. **The SLI does not match user pain.** The budget protects the wrong thing and product leaders learn
    to ignore it.
 3. **Traffic is low.** A single failure produces a huge burn rate; the Workbook suggests synthetic
-   traffic, combining services, or a lower SLO or longer window
+   traffic, combining services, or a longer window
    ([Thurgood et al., Alerting on SLOs](../../references/bibliography.md#thurgood2018alerting)).
-4. **A dependency spends the budget.** The Workbook records two schools of thought on whether a
-   dependency miss should freeze changes. Freezing feature releases will not bring a partner bank
-   back; resilience work on that dependency might.
+4. **A dependency spends the budget.** Freezing feature releases will not bring a partner bank back;
+   resilience work on that dependency might.
 5. **Nobody can enforce it.** If product did not agree, the first exhausted budget becomes an
    escalation, and the policy dies in that meeting.
 6. **The numbers are gamed**, as the Failure Modes section shows.
@@ -187,14 +197,12 @@ use causes for debugging, and make every page urgent, actionable, and in need of
 ### Observability in practice
 
 SLOs tell you **that** users are hurting; observability decides how long it takes to learn **why**.
-Monitoring answers questions you knew to ask: dashboards and alerts on predefined signals, such as the
-SRE book's four golden signals of latency, traffic, errors, and saturation
-([Ewaschuk](../../references/bibliography.md#google2017monitoring)). Observability, as Charity Majors, Liz Fong-Jones, and
-George Miranda use the term, is the ability to ask new questions of a running system about failures
-nobody anticipated ([Majors, Fong-Jones, and Miranda, 2022](../../references/bibliography.md#majors2022observability)).
-That is **expert opinion** from authors at an observability vendor; the distinction is widely used.
-Northstar shows the gap: in INC-428, deploys failed for every Jenkins-based service and the cause was
-never found.
+Monitoring answers questions you knew to ask, such as the SRE book's four golden signals of latency,
+traffic, errors, and saturation ([Ewaschuk](../../references/bibliography.md#google2017monitoring)).
+Observability is the ability to ask new questions about failures nobody anticipated, in the
+**expert opinion** of authors at an observability vendor
+([Majors, Fong-Jones, and Miranda, 2022](../../references/bibliography.md#majors2022observability)).
+Northstar shows the gap: in INC-428 every Jenkins-based deploy failed, and the cause was never found.
 
 **Three signal types.** OpenTelemetry, the vendor-neutral instrumentation standard, names them
 ([OpenTelemetry, Signals](../../references/bibliography.md#otel-signals)):
@@ -218,20 +226,18 @@ the trace to the logs of the failing hop
 4. Traces across the services on tier 1 paths.
 5. Deploys and flag changes as events on the same timeline, so "what changed?" takes seconds.
 
-**Cost.** Telemetry bills grow with volume and with the number of distinct label values kept, so cost
-is a design choice. Sample traces: OpenTelemetry calls sampling one of the most effective ways to cut
-observability cost, and tail sampling can keep every trace that contains an error
-([OpenTelemetry, Sampling](../../references/bibliography.md#otel-sampling)). Keep debug logs short-lived, and never put
-per-request values such as order IDs into metric labels. Judge a tool by one test: for last quarter's
-incidents, could on-call have gone from alert to cause with the data it would hold?
+**Cost.** Telemetry bills grow with volume and with the number of distinct label values, so cost is a
+design choice. Sample traces; tail sampling can keep every trace that contains an error
+([OpenTelemetry, Sampling](../../references/bibliography.md#otel-sampling)). Keep debug logs
+short-lived, and never put per-request values such as order IDs into metric labels. Test a tool on last
+quarter's incidents: could on-call have gone from alert to cause with its data?
 
 ### Operational readiness
 
-The SRE book describes Google's **Production Readiness Review** as a prerequisite for an SRE team
-taking on a service, covering architecture and dependencies, monitoring, emergency response, capacity,
-change management, and performance. It also records that the model did not scale, since each
-onboarding took two or three SREs several quarters, and that Google moved toward shared frameworks and
-platforms ([Cruz and Bhambhani, Evolving SRE Engagement Model](../../references/bibliography.md#google2017engagement)).
+The SRE book describes Google's **Production Readiness Review**, a check before an SRE team takes on
+a service, covering architecture, monitoring, emergency response, capacity, and change management. It
+records that the model did not scale (each onboarding took two or three SREs several quarters) and
+that Google moved toward shared frameworks and platforms ([Cruz and Bhambhani, Evolving SRE Engagement Model](../../references/bibliography.md#google2017engagement)).
 Amazon Web Services (AWS) describes its **Operational Readiness Review** as questions distilled from
 its own post-incident analyses, answered by teams as self-assessments throughout a service's life
 ([AWS, Operational Readiness Reviews](../../references/bibliography.md#aws2022orr)). Both are **documented practice**.
@@ -249,13 +255,33 @@ and says out-of-hours on-call should be compensated
 a quarter of an SRE's time and warns that underload is also a risk, because rarely used skills decay
 ([Spadaccini, Being On-Call](../../references/bibliography.md#google2017oncall)).
 
-The health research is thinner and not about software. Reviews from other occupations found that
-on-call work can pose risks to sleep, mental health, and personal life, and that on-call from home appears to
-reduce sleep ([Nicol and Botterill, 2004](../../references/bibliography.md#nicol2004oncall);
-[Hall et al., 2017](../../references/bibliography.md#hall2017oncall)). These are **research findings** from other
-occupations; the evidence for software engineers specifically is thin. The
-direction is still clear: on-call load is a cost borne by specific people,
-and it should be measured like any other cost.
+On-call load is a cost borne by specific people; measure it like any other cost. Reviews from other
+occupations found that on-call work can pose risks to sleep, mental health, and personal life, and
+that on-call from home appears to reduce sleep
+([Nicol and Botterill, 2004](../../references/bibliography.md#nicol2004oncall);
+[Hall et al., 2017](../../references/bibliography.md#hall2017oncall)). These are **research findings**
+from outside software; for software engineers the evidence is thin.
+
+### Designing a rotation
+
+Load caps say how much on-call is too much; rotation design decides who carries it and how knowledge
+spreads. Five elements, **practitioner consensus** rather than research:
+
+- **Primary and secondary.** The primary answers every page. The secondary takes over if the primary
+  does not acknowledge in a set time, and is the first person the primary pulls in. Secondary is also
+  the safest place to learn.
+- **Shadow, then reverse shadow.** A new engineer first shadows a shift, seeing every page without
+  owning it. Then they take primary with an experienced engineer shadowing them.
+- **Handoff.** Each shift ends with a short written note: open incidents, noisy alerts, risky changes
+  due. Without it, each shift relearns the same context.
+- **Escalation by agreement.** Experts sit behind the rotation as a named escalation tier, for problems
+  the runbook does not cover, with an agreed limit on how often they are called.
+- **Compensation.** Paid standby, time off after night pages, or both, written down and reviewed with
+  human resources.
+
+Billing shows the stakes: three ledger experts carry most pages. The pattern moves experts from the
+front of the rotation to escalation, and ends every escalation with a runbook update, so that each
+month the experts are called less.
 
 ## Engineering Organization Example
 
@@ -263,7 +289,9 @@ and it should be measured like any other cost.
     Week 3 of the director's first year. Northstar has just published severity definitions written by
     the director, Kwame Mensah (staff engineer, infrastructure and reliability), and Sofia Alvarez (VP
     Customer Success). In week 4 the director reserves 12 FTE (full-time equivalent engineers) for
-    prevention work. See the [timeline](../../case-studies/northstar/timeline.md).
+    prevention work. See the [timeline](../../case-studies/northstar/timeline.md). New to Northstar?
+    Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This design is **illustrative**: Northstar's first SLOs. Assumptions: about 600,000 valid order
 submissions (web and mobile) and about 240,000 payment attempts per 28 days, with traffic treated as
@@ -295,8 +323,9 @@ a policy question; whether it justifies a fallback route is not.
     INC-413: at about 6 attempts a minute, roughly 890 attempts missed the 60-second threshold in 150
     minutes, against a budget of 240.
 
-**Blind spots.** The invoice reconciliation SLI is the only one that could have seen INC-401, 409,
-417, and 427, and it depends on a job Northstar does not run. That job may be the most valuable
+**Blind spots.** The invoice reconciliation SLI is the only one that could have seen the invoice and
+posting errors (INC-401 rounding, 409 duplicates, 417 wrong period, 427 double credit notes), and it
+depends on a job Northstar does not run. That job may be the most valuable
 reliability investment in Billing's backlog, and no standard signal list would have suggested it.
 
 **Alerts.** Northstar adopts the Workbook's burn rates unchanged; over 28 days rather than 30, a
@@ -350,11 +379,10 @@ flowchart TD
     E --> H
 ```
 
-Against this bar, Northstar's 15 proposed tier 1 components fall well short: 3 have complete
-alerting, 6 have a runbook, and 3 have nobody on call (8 of all 24 components lack a rotation); 3
-of the 15 meet all four minimums. Only those four ever block, and only new tier 1 launches. Gaps in
-existing components, and untested rollback, become dated gaps owned by the team. The review stays a
-conversation, yet nothing reaches the payment path without someone to answer at 3 a.m.
+Northstar's 15 proposed tier 1 components fall well short: 3 have complete alerting, 6 a runbook,
+and 3 nobody on call; 3 meet all four minimums. Only those four ever block, and only new tier 1
+launches. Other gaps become dated gaps owned by the team. The review stays a conversation, yet nothing
+reaches the payment path without someone to answer at 3 a.m.
 
 ## Trade-offs
 
@@ -365,13 +393,6 @@ it only once the service is reliably in budget.
 **Request-based against time-based.** Counting requests captures partial outages; the contract's
 probes count minutes. Northstar needs both until the contract changes: one to manage, one to settle
 credits.
-
-**Precision against recall.** Burn-rate alerting manages this trade without removing it; quiet paths
-need synthetic traffic or longer windows.
-
-**Central review against team ownership.** A central team brings consistency and becomes a queue;
-self-assessment scales and is easier to game. The middle course: teams assess, a staff engineer joins
-tier 1 conversations, and gaps are reviewed monthly.
 
 **On-call breadth against depth.** The three Billing engineers who carry most pages are the team's
 experts and its single point of failure. Spreading the load costs pairing time and slower first
@@ -395,15 +416,12 @@ ones as bad.
 everything stops or everyone ignores it. Countermeasure: reporting mode until in budget.
 
 **Alert accretion.** Each incident review adds an alert and none are removed; pages rise without
-incidents rising. Countermeasure: trial new pages in non-paging mode, as the Workbook's on-call chapter
-suggests, and delete alerts that never led to action.
+incidents rising. Countermeasure: trial new pages in non-paging mode, and delete alerts that never led
+to action.
 
 **Readiness theater.** Runbooks written to pass the review, rollback never tested. Signal: the runbook
 went unused in the last incident. Countermeasure: game-day drills and scheduled rollback tests for
 tier 1.
-
-**Tier dodging.** Teams argue components down a tier to escape requirements. Countermeasure: the tier
-follows user impact, decided under the CTO's policy.
 
 **The invisible pager.** On-call load is never measured, and the people who carry it leave.
 Countermeasure: report pages per shift and after-hours pages per person monthly, beside the SLOs.
@@ -421,8 +439,8 @@ gaps, and their rotations: who is on call, how loaded, and how knowledge is spre
 bank, and tier 1 review conversations. At Northstar, Kwame Mensah leads this as part of the
 director's work on detection.
 
-Three practices make it run. **One SLO document per journey**, with the Workbook's fields (authors,
-approvers, review date, implementation, rationale); the rationale survives turnover. **A readiness
+Three practices make it run. **One SLO document per journey**, with authors, approvers, review date,
+implementation, and rationale; the rationale survives turnover. **A readiness
 question bank grown from incidents**: every review (Chapter 25) asks whether a question would have
 caught the failure. Northstar's first bank writes itself: certificate expiry monitored (INC-425),
 migrations safe before or after the code (INC-419), rollback tested (INC-416), someone on call
@@ -438,9 +456,8 @@ SLO. A customer asking for 99.95 percent on a path running at 99.62 is asking fo
 should be able to name it.
 
 **Investment.** An error budget turns "reliability versus features" into a number the chief product
-officer (CPO) and chief financial officer (CFO) can reason about. A budget consistently unspent means
-over-investment in that journey; one consistently overspent means the trade has already been made, by
-default.
+officer (CPO) and chief financial officer (CFO) can reason about. A budget always unspent means
+over-investment; one always overspent means the trade was made by default.
 
 **People.** On-call is a working-conditions policy with legal and health implications: compensation,
 rest after night pages, rotation size. It belongs in the CTO's policy set, reviewed with HR.
@@ -477,32 +494,32 @@ Marcus Oyelaran (Billing manager): four in invoicing and the ledger, one in tax-
 reconciliation job joined the order and payment SLIs as a first-quarter deliverable, owned by Billing,
 with Li Na Zhou (staff engineer, data and integration) advising.
 
-The team of Elena Sokolova (Payments and Integrations manager) built the payment SLI in two weeks from gateway logs. Its first shadow window
+Payments and Integrations built the payment SLI in two weeks from gateway logs. Its first shadow window
 showed payments stuck for minutes in a retry queue during partner-bank slowdowns, unseen by the probe.
+The first order SLI counted every client-error response as good, so a replay of INC-429 (valid
+next-year delivery dates rejected) looked perfect; the team began counting unexpected validation
+failures as bad.
 
-The first order SLI counted every client-error response as good; a replay of INC-429 looked
-perfect. The team began counting unexpected validation failures as bad.
-
-The budget policy took two meetings with Amara Okafor (CPO). She refused a freeze rule while the renewal
-commitments were in flight, and the director agreed, since the order journey was so far below target
+The budget policy took two meetings with Amara Okafor (CPO). She refused a freeze rule while the
+[renewal commitments](../../glossary.md#renewal-commitments) (two features the largest renewals depend
+on) were in flight, and the director agreed, since the order journey was so far below target
 that a freeze would have been permanent. They wrote a reporting-mode policy: budgets published weekly,
 any incident spending more than a fifth of a journey's budget reviewed with a tracked action,
 dependency spend routed to resilience work, and the full policy to start after the first 28-day window
 in budget. Victor Lindqvist (CTO) was named arbiter.
 
-Daniel Cho (Customer Experience manager) argued that notification-svc should not be tier 1, since a blank confirmation email stops
-neither an order nor a payment. The director agreed, moved it to tier 2, assigned it to Orders (whose
-engineers made most of its commits, with Billing's), and required a correctness check on rendered
-templates instead of a 24/7 rotation, from quarter 2. Readiness counts for year 1 still use the
-original list of 15, so that quarters compare. The shared
-modules stayed tier 1: core/customer had gone to Orders in week 4; core/permissions was still
-unowned at day 90, under a recorded exemption.
+Daniel Cho (Customer Experience manager) argued that notification-svc should not be tier 1, since a
+blank confirmation email stops neither an order nor a payment. The director agreed: from quarter 2 it
+moved to tier 2 under Orders, with a correctness check on rendered templates instead of a 24/7
+rotation. The shared Core modules stayed tier 1.
 
 What went wrong: the first payment burn-rate alerts paged four times in one week at night, on single
 failures in low traffic. The team added overnight synthetic payments, as the Workbook suggests.
 
-By day 90, 8 of the 15 tier 1 components met all four operational minimums, up from 3, and 11 had a
-runbook. Customers first reported 29 percent of Sev1 and Sev2 incidents, down from 47 percent.
+By day 90, 8 of the original 15 tier 1 components met all four operational minimums, up from 3, and 11
+had a runbook. Customers first reported 29 percent of Sev1 and Sev2 incidents, down from 47 percent.
+The lesson: the SLIs found what the probe missed, and a budget policy fitted to a service far below
+target kept product at the table.
 
 ## Exercises
 
@@ -546,7 +563,8 @@ and will not change, and how you keep the budget useful without turning it into 
 
 ### Executive Decision-Making
 
-**X1.** One of the two renewal customers asks for contractual availability on the order and payment
+**X1.** One of the two customers whose renewals depend on the renewal commitments asks for contractual
+availability on the order and payment
 paths to rise from 99.9 to 99.95 percent, measured to include the mobile app, in exchange for a
 three-year renewal. Sales wants to agree this week. As CTO, decide what you tell the CEO, which
 conditions you would accept, and what you need to know first.

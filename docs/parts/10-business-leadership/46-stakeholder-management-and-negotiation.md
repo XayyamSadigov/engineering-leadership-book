@@ -87,7 +87,8 @@ of interest against power. Eden and Ackermann describe a widely used version
 - **Context setters** (high power, low interest) can change the outcome but are not yet paying
   attention. The work is to raise their awareness before they arrive late with a veto.
 - The **crowd** is low on both.
- Bryson's review of stakeholder techniques states the purpose: shape proposals that are technically feasible and
+
+Bryson's review of stakeholder techniques states the purpose: shape proposals that are technically feasible and
 politically acceptable, and build a coalition able to adopt them
 ([Bryson, 2004](../../references/bibliography.md#bryson2004what)). Eden and Ackermann illustrate their
 method with one case rather than testing it, and Bryson reviews techniques. Treat the grid as **expert
@@ -219,10 +220,8 @@ starting. The floor requires a load test for bulk endpoints and a rehearsed back
 | C. Full scope, skip load test and rehearsal | 25 to 30 engineer-weeks | 5.6 to 6.7 weeks | Crosses the floor; may still miss week 6 |
 | D. Full scope, borrow two engineers for four weeks | Nominal +8 engineer-weeks | Weeks 5 to 7 | Another team's committed item slips about four weeks |
 
-Arithmetic: A, 30 / 4.5 = 6.7 and 36 / 4.5 = 8.0. B, 18 / 4.5 = 4.0 and 21.6 / 4.5 = 4.8. C saves 5
-engineer-weeks: 25 / 4.5 = 5.6, with growth 30 / 4.5 = 6.7. D: 6.5 engineer-weeks a week for four
-weeks is 26, leaving 4 to 10 at 4.5 a week (0.9 to 2.2 weeks); if ramp-up halves the borrowed output for
-two weeks, 6 to 12 remain (1.3 to 2.7 weeks). Either way, weeks 5 to 7.
+Each forecast divides the effort by the team's 4.5 engineer-weeks a week; D's range allows for the
+borrowed engineers' ramp-up.
 
 Option C shows why the floor matters in arithmetic, not only in principle: scope growth alone consumes
 what the shortcut saves. The leader does not offer it, and says so in one sentence if product raises it.
@@ -359,7 +358,10 @@ The CTO does this with the CEO and models it for directors doing it with the CTO
     incidents (the two most severe levels) fell from 30 a quarter to 14 in quarter 3, availability
     reached 99.89 percent against a 99.9 commitment, and credits fell to $60,000. Prevention took 8
     [FTE](../../glossary.md#fte) of 80 engineers in quarter 3. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 This case is **fictional**, set in weeks 41 to 44; the decisions are yours. Quarter 3 is the latest
 measured quarter, so the arithmetic uses it.
@@ -415,9 +417,9 @@ year 2, becomes his board problem. That is the director's opening.
 2. **Pair it with the customer outcome:** contractual availability at or above 99.9 percent every
    quarter (99.89 percent in quarter 3, still below the commitment), with service credits as Rajiv's line.
 3. **State the price:** prevention at 6 FTE in quarters 5 and 6 and 5 FTE in quarters 7 and 8, down
-   from quarter 3's 8 FTE, with flat headcount. These are the figures the director's two-year
-   continuation proposal later carries ([Chapter 49](../11-vp-engineering/49-multi-year-transformation-communication-and-politics.md)). The 2 to 3 FTE
-   released (26 to 39 engineer-weeks a quarter) go back to product; the risk is whether 5 to 6 FTE can
+   from quarter 3's 8 FTE, with flat headcount
+   ([Chapter 49](../11-vp-engineering/49-multi-year-transformation-communication-and-politics.md) builds
+   the multi-year proposal around this price). The 2 to 3 FTE released (26 to 39 engineer-weeks a quarter) go back to product; the risk is whether 5 to 6 FTE can
    hold the total at 40.
 4. **A trigger:** two consecutive quarters above 12 reopen the prevention allocation with Victor and
    Amara.
@@ -432,9 +434,10 @@ Victor answers "the board wants a quarterly number".
 
 ## Exercises
 
-Solutions are in [chapter 46 solutions](../../solutions/ch46-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md) and the
-[first quarter](../../case-studies/northstar/first-quarter.md) page.
+Solutions are in [chapter 46 solutions](../../solutions/ch46-solutions.md). Northstar data is in the
+[quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md), the
+[baseline data](../../case-studies/northstar/baseline-data.md), and
+[the year 1 record](../../case-studies/northstar/first-quarter.md).
 
 ### Foundational
 
@@ -458,8 +461,8 @@ and a configuration workaround could cover the prospect's demo.
 ### Applied Leadership
 
 **A1.** In week 43 Amara Okafor asks Billing for itemized credit notes on invoices for a renewal
-customer by week 47. The team of Marcus Oyelaran (Billing manager) can make week 47 only by skipping the migration rehearsal mandatory for tier 1
-data since week 10; with it, the forecast is week 48 or 49. Amara says the customer was promised week 47.
+customer by week 47. The team of Marcus Oyelaran (Billing manager) can make week 47 only by skipping the migration rehearsal,
+which has been on the quality floor for tier 1 data since week 10; with it, the forecast is week 48 or 49. Amara says the customer was promised week 47.
 Prepare the negotiation (interests, floor, both alternatives, priced options, first proposal) and write
 the first two minutes of what Marcus should say.
 

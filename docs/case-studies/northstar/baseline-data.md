@@ -297,7 +297,7 @@ Used in Chapters 15–18.
 | Fact | Value |
 |---|---|
 | How the 17 committed items were chosen | 31 candidates collected by product managers; in a two-hour meeting four executives (Amara Okafor, Greg Tanaka, Sofia Alvarez, Victor Lindqvist) each distributed 100 points; no value estimates on any item |
-| Renewal commitments | Agreed late in the baseline quarter as renewal conditions; dates and staffing in [the director's first year](first-quarter.md) |
+| Renewal commitments | Agreed late in the baseline quarter as renewal conditions; dates and staffing in [the year 1 record](first-quarter.md) |
 | Sizing against capacity | About 560 engineer-weeks committed against an assumed 780 (1,040 less a 25 percent allowance); actual unplanned work left about 686 |
 | Dates given to customers before sizing | 5 of 17, including Greg Tanaka's two deal features |
 | Cross-team items | 9 of 17. Of the 7 delivered, 6 were single-team; of the 10 missed, 8 were cross-team |

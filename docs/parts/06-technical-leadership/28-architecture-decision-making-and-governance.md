@@ -223,7 +223,7 @@ flowchart TD
 so only those five learn to make such decisions.
 
 **Approval with conditions.** A board that cannot say no without blocking a team says yes with
-conditions ("add a circuit breaker"). Nobody checks them, so the record says the risk was controlled
+conditions ("add a circuit breaker", a guard that stops calls to a failing dependency). Nobody checks them, so the record says the risk was controlled
 and the system says otherwise.
 
 Signals: median time to decision, the share of submissions already in build, conditions verified,
@@ -445,7 +445,8 @@ reason as not recorded, and set a trigger such as "the next schema migration of 
     Week 14, the start of quarter 2 of the director's first year. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
     to 21 in quarter 1 after ownership, severity, and weekly release changes. Both renewal commitments
     are on track: the accounting integration is due in week 19. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the [cast](../../case-studies/northstar/cast.md).
 
 This case is **fictional**. It describes how architecture was decided at
 [Northstar](../../case-studies/northstar/index.md) before the director arrived, then sets a quarter 2
@@ -453,13 +454,11 @@ decision for the reader, continuing
 [Chapter 16](../04-execution/16-flow-lead-time-dependencies-and-unplanned-work.md). The outcome is
 deliberately not fixed.
 
-**How Northstar decided architecture.** Nobody did, on the record. A 2019 standards page was written
-by a principal architect who left in 2021. The three staff engineers had no mandate. Ines Carvalho
-(staff engineer, Core domain) was consulted on most changes to Core, the Java monolith, without owning
-decisions. In Billing, technical direction was decided during incidents
-([baseline data](../../case-studies/northstar/baseline-data.md)). The principal architect had chaired
-a monthly architecture review that approved service extractions; it stopped when they left. At the
-director's arrival no repository held a decision record or design document.
+**How Northstar decided architecture.** Nobody did, on the record. The three staff engineers had no
+mandate. Ines Carvalho (staff engineer, Core domain) was consulted on most changes to Core, the Java
+monolith, without owning decisions. In Billing, technical direction was decided during incidents
+([baseline data](../../case-studies/northstar/baseline-data.md)). At the director's arrival no
+repository held a decision record or design document.
 
 Decisions were made by whichever team built first, in chat threads, or during incidents. When a
 dispute reached Victor Lindqvist (CTO), he settled it in conversation, unrecorded. [INC-418](../../glossary.md#inc-numbers) shows the
@@ -468,14 +467,15 @@ events. Nobody had decided that the format was a contract.
 
 The ledger shows the same gap. The older erp-sync connectors and Data and Analytics' warehouse
 pipelines read 12 core/ledger tables directly through the read replicas. Every ledger migration
-changes an interface nobody wrote down. INC-424 (replicas serving stale balances after a migration)
-showed the replicas themselves can lag.
+changes an interface nobody wrote down, and INC-424 (stale balances served after a migration) showed
+the replicas themselves can lag.
 
 **The decision at the start of quarter 2.** Payments and Integrations, managed by Elena Sokolova, is
 building the new erp-sync connector for the accounting-system renewal commitment, due at the end of
 week 19. Billing, managed by Marcus Oyelaran, has reserved two engineers in weeks 14 to 16 (six
-engineer-weeks) for the posted-invoice export the reconciliation reads. Most of the nine dependency
-links between the two teams were ledger fields. Li Na Zhou, staff engineer for data, migration, and
+engineer-weeks) for the posted-invoice export the reconciliation reads. In the baseline quarter the
+two teams needed each other nine times (nine dependency links: work items of a week or more that
+needed the other team), mostly for ledger fields. Li Na Zhou, staff engineer for data, migration, and
 configuration standards, was asked to propose a ledger-export contract with contract tests.
 
 In week 14 Li Na Zhou opened [ADR-0001](../../glossary.md#adr-0001), Northstar's first decision
@@ -501,14 +501,14 @@ the domain but wrote the proposal. Billing provides the interface but has no tec
 Marcus Oyelaran's capacity is the constraint. Elena Sokolova's team carries the date. The director
 owns a decision-rights map that does not yet exist.
 
-Who owns core/permissions stays open (Chapter 13). The reader's decisions are who decides ADR-0001,
-by when, how Victor Lindqvist's remark is handled, and what the record must say.
+The reader's decisions: who decides ADR-0001, by when, how Victor Lindqvist's remark is handled, and
+what the record must say.
 
 ## Exercises
 
 Solutions are in [chapter 28 solutions](../../solutions/ch28-solutions.md). Northstar data is on the
 [baseline page](../../case-studies/northstar/baseline-data.md) and in the
-[first quarter](../../case-studies/northstar/first-quarter.md) record.
+[year 1 record](../../case-studies/northstar/first-quarter.md).
 
 ### Foundational
 

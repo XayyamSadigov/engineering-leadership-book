@@ -6,8 +6,9 @@ fully understands. This chapter covers how to tell whether a platform team is wo
 developer-experience improvements by the feedback loops and mental burden they remove, and how to
 modernize a legacy system without a rewrite. The running
 example is the fictional [Northstar Technologies](../../case-studies/northstar/index.md), where
-Platform Operations has just lost its QA half. Chapter 18 owns developer-experience measurement,
-Chapter 23 CI/CD mechanics, Chapter 21 debt economics, and Chapter 31 service boundaries; this chapter
+Platform Operations' seven QA engineers moved to product teams in week 10, leaving five
+infrastructure engineers. Chapter 18 owns developer-experience measurement, Chapter 23 the mechanics of
+CI/CD (continuous integration and delivery), Chapter 21 debt economics, and Chapter 31 service boundaries; this chapter
 uses them without re-teaching them.
 
 ## Why This Matters
@@ -79,8 +80,8 @@ Evan Bottcher describes a digital platform as a foundation of self-service APIs,
 knowledge, and support, arranged as a compelling internal product that lets delivery teams ship with
 less coordination. He argues it cannot succeed on mandate alone, because internal infrastructure
 teams hold a monopoly; teams should choose it because it is easier than building their own
-([Bottcher, 2018](../../references/bibliography.md#bottcher2018platforms); expert opinion). The CNCF
-platforms white paper, a community document, agrees: design and evolve platforms like products, with
+([Bottcher, 2018](../../references/bibliography.md#bottcher2018platforms); expert opinion). The
+platforms white paper of the CNCF (Cloud Native Computing Foundation), a community document, agrees: design and evolve platforms like products, with
 users involved early, and do not rely on top-down mandates. It adds that a platform can be as thin as
 a page of links to standard procedures
 ([CNCF TAG App Delivery, n.d.](../../references/bibliography.md#cncf-platforms-whitepaper);
@@ -95,33 +96,32 @@ own domain, to get a change into production safely.
 
 | Property | Product-run platform | Infrastructure queue |
 |---|---|---|
-| Unit of work | A capability users invoke themselves | A ticket a platform engineer fulfils |
+| Unit of work | A capability users invoke themselves | A ticket a platform engineer fulfills |
 | Success signal | Teams choose it; their loops get shorter | Tickets closed; tool uptime |
 | Roadmap source | Observed friction in users' workflows | Loudest requester, plus the team's own interests |
 
 ### What the evidence says about platforms
 
-The best available evidence is industry research, and it is mixed in an instructive way. In DORA's
-2024 survey, respondents using an internal developer platform reported 8 percent higher individual
-productivity and 10 percent higher team performance, and organizational performance was 6 percent
-higher. Throughput was 8 percent lower and change stability (how rarely changes fail in production) 14 percent
-lower among platform users,
-which the authors call surprising and explain only with hypotheses: more handoffs, platforms letting
-bad changes through, or troubled organizations being the ones that build platforms
-([DORA, 2024](../../references/bibliography.md#dora2024accelerate), pp. 49–54; industry research).
-
-Where developers could complete tasks without involving an enabling team (developer independence),
-productivity was about 5 percent higher. Respondents required to use the platform exclusively for the
-whole application lifecycle reported 6 percent lower throughput, and not collecting user feedback had
-a negative effect ([DORA, 2024](../../references/bibliography.md#dora2024accelerate), pp. 51–53).
-DORA's capability page lists matching pitfalls: no user research, rigid central standards, operating
-as a ticket queue, launching too late, and a one-size-fits-all "golden cage"
-([DORA platform engineering capability](../../references/bibliography.md#dora-cap-platform-engineering)).
-
-The data are cross-sectional and self-reported and the effects modest. They support two narrow
-claims, neither controlled: self-service and user feedback go with better outcomes, and compelled
-exclusive use with lower throughput. The stability finding is a warning: a platform that makes
+The evidence supports two narrow claims: self-service and user feedback go with better outcomes, and
+compelled exclusive use goes with lower throughput. It also carries a warning: a platform that makes
 deploying easier without making changes safer can raise the failure rate.
+
+The source is [DORA](../../glossary.md#dora-metrics)'s 2024 survey (DevOps Research and
+Assessment), which is **industry research**: cross-sectional, self-reported, with modest
+effects ([DORA, 2024](../../references/bibliography.md#dora2024accelerate), pp. 49–54).
+
+| Group compared | Measure | Direction and size |
+|---|---|---|
+| Platform users versus not | Individual productivity | 8 percent higher |
+| Platform users versus not | Change stability (how rarely changes fail) | 14 percent lower |
+| Developer independence: tasks done without an enabling team | Productivity | About 5 percent higher |
+| Platform use required for everything | Throughput | 6 percent lower |
+
+The authors call the stability drop surprising and offer only hypotheses: more handoffs, platforms
+letting bad changes through, or troubled organizations being the ones that build platforms. DORA's
+capability page lists matching pitfalls: no user research, rigid central standards, operating as a
+ticket queue, launching too late, and a one-size-fits-all "golden cage"
+([DORA platform engineering capability](../../references/bibliography.md#dora-cap-platform-engineering)).
 
 ### Developer experience: choose by feedback loop and cognitive load
 
@@ -153,7 +153,7 @@ industry research, as DORA summarizes it), which fits the rule.
 ### Adoption metrics, and how they are gamed
 
 The CNCF white paper groups platform measures into user satisfaction (active users, retention,
-surveys), organizational efficiency (time to fulfil a request, time for a new service to reach
+surveys), organizational efficiency (time to fulfill a request, time for a new service to reach
 production), and delivery outcomes such as the DORA metrics
 ([CNCF TAG App Delivery, n.d.](../../references/bibliography.md#cncf-platforms-whitepaper)). Every
 adoption number can be gamed:
@@ -200,6 +200,27 @@ guard an architectural property on every build (the fitness functions associated
 [Ford et al., 2017](../../references/bibliography.md#ford2017building)) act as a ratchet so
 the old shape does not grow back.
 
+### One strangler slice, step by step
+
+A slice is finished only when the old path is switched off. Take moving permission checks out of a
+customer module inside a monolith, as Northstar's case below does:
+
+1. **Put a facade in front.** Every caller asks one interface, "may this user do this?", instead of
+   reading permission tables or calling customer code. At first the facade simply calls the old code.
+   The facade is the transitional architecture.
+2. **Build the new implementation behind it**, owned by one team, with its own tables or module.
+   Where old and new models differ, a thin translation layer keeps the old model's terms from leaking
+   into the new code.
+3. **Run both and compare.** For a period, the facade calls both implementations, returns the old
+   answer, and logs every disagreement. These parity checks are the specification the old code never
+   had. Fix each disagreement, or record why the old behavior was wrong.
+4. **Switch callers over in groups**, behind a flag that can switch them back.
+5. **Switch off the old path on a dated day**: delete the old code, revoke direct table access, and
+   add a build check that fails on any new direct read. Then decide whether the facade stays as the
+   module's interface or goes.
+
+The usual failure is stopping after step 4, with both paths alive and the parity log unread.
+
 ```mermaid
 flowchart TD
     A["Slows the business?"] -->|no| B["Leave it alone"]
@@ -223,6 +244,8 @@ rarely do.
     Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
     to 21 in quarter 1. In week 10 the seven QA engineers left Platform Operations for product teams,
     leaving it five infrastructure engineers. See the [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This example ranks the work Platform Operations could take on at the start of quarter 2 at Northstar,
 the book's fictional company. The figures come from Northstar's record; the environment request
@@ -248,8 +271,9 @@ All four force a context switch. Reading them with the selection rule:
 - **Review wait** belongs to the product teams and Chapter 23; listing it stops the platform claiming it.
 
 Cognitive load makes the case for CI consolidation. From
-[`components.csv`](../../case-studies/northstar/data/components.csv), Northstar has 17 deployable units:
-Core and four services on Jenkins, six services on GitLab CI, two frontends on GitHub Actions, and four
+[`components.csv`](../../case-studies/northstar/data/components.csv), Northstar has 17
+[deployable units](../../glossary.md#deployable-unit) (things released on their own; Core counts as
+one; 24 components in all): Core and four services on Jenkins, six services on GitLab CI, two frontends on GitHub Actions, and four
 services on shell scripts. Once notification-svc moves to Orders in quarter 2, the build systems each
 team must know are: Orders 2, Billing 1, Payments and Integrations 2, Customer Experience 2, Data and
 Analytics 2, and Platform Operations all 4.
@@ -413,20 +437,13 @@ internal work, or fails it: will teams use it unforced, and which loop does it s
 
 ## Case Study
 
-This case is **fictional**. Platform Operations' composition, the interrupt rotation, the
-deployment-event store, Bram Verhoeven's situation, and Core's constraints come from the
-[baseline](../../case-studies/northstar/baseline-data.md) and
-[first quarter](../../case-studies/northstar/first-quarter.md) pages; the roadmap draft and its
-estimates are **illustrative**. The case is set in week 14, the first week of quarter 2; the decisions
-are the reader's.
+This case is **fictional**; the roadmap draft and its estimates are **illustrative**. It is set in
+week 14, the first week of quarter 2, and the decisions are the reader's.
 
-**The team.** Since the QA engineers moved into product teams in week 10, Platform Operations is its
-manager, Tom Becker, and five infrastructure engineers, three in Minneapolis and two remote. Two rotate weekly as the
-interrupt role behind a single intake. Bram Verhoeven, who built Core's Jenkins pipeline and once
-proposed consolidating the build systems, is one of the five; Tom's proposed expectations agreement for
-him ([Chapter 9](../02-people-management/09-performance-management-and-underperformance.md)) awaits the
-director's decision. The team's baseline share of [unplanned work](../../glossary.md#unplanned-work) was 46 percent, the
-highest anywhere.
+**The team.** Platform Operations is its manager, Tom Becker, and five infrastructure engineers. Two
+rotate weekly as the interrupt role behind a single intake. The team's baseline share of
+[unplanned work](../../glossary.md#unplanned-work) was 46 percent, the highest anywhere. One of the
+five, Bram Verhoeven, built Core's Jenkins pipeline and once proposed consolidating the build systems.
 
 **The draft roadmap.** Tom Becker and Kwame Mensah, the staff engineer who owns the pipeline
 standards, bring the
@@ -457,7 +474,7 @@ target. The revised set:
 
 | Measure | Baseline | Paired outcome |
 |---|---|---|
-| Units migrated to the template since week 14 (of the 11 not on GitLab CI) | 0 | Change failure rate of migrated units |
+| Units migrated to the template since week 14 (of the 11 not on GitLab CI) | 0 | [Change failure rate](../../glossary.md#change-failure-rate) of migrated units |
 | Environment requests completed without a ticket | none | Median environment wait; other teams' requests (20 percent of Platform Operations' capacity at baseline) |
 | Product teams using self-service environments two months running | 0 of 5 | Feedback-loop and cognitive-load items in Chapter 18's survey, first run in quarter 2 |
 | Build systems each team must know | 1 to 2 per product team; 4 for Platform Operations | Toolchain run cost, about 1.5 FTE a year |
@@ -468,17 +485,14 @@ leads, treated as the first strangler slice with a removal date for its transiti
 test databases, which unblock Chapter 22's move to isolated test databases; and a build check that fails
 Core if new code outside core/permissions reads its tables directly. In the baseline quarter four teams
 made 38 merge requests to core/permissions; success is how many changes still need to touch it after the
-extraction. core/permissions still has no owner. The core/customer redesign (about three engineer-years)
+extraction. The core/customer redesign (about three engineer-years)
 stays unfunded; the draft proposes slicing it once the permissions seam has held.
 
-**Complications.** Consolidation is the project Bram proposed before the director arrived; a leading
-role could restore his belief that planned work matters, or reward the gap Tom's agreement is meant to
-close. Tom says 26 of 29 engineer-weeks leaves little slack, and Customer Experience asks why its
-frontends are not first.
+**Complications.** Tom says 26 of 29 engineer-weeks leaves little slack, and Customer Experience asks
+why its frontends are not first.
 
 The reader decides: whether to approve the roadmap and target as drafted, whether to require migration
-by a date or rely on adoption, how to report progress to Victor Lindqvist (CTO), and how the consolidation
-should and should not interact with Bram's agreement.
+by a date or rely on adoption, and how to report progress to Victor Lindqvist (CTO).
 
 ## Exercises
 

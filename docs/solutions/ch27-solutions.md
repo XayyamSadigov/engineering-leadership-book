@@ -44,7 +44,7 @@ is always safer without asking what the testing catches and what it costs in bat
 | Line coverage | Tests that execute code without meaningful assertions; coverage of trivial code | Drop as a target. Track escaped defects by detection point, and review a sample of new tests for assertions |
 | Bugs closed per sprint | Close duplicates and trivial bugs; split one bug into several; close without fixing | Defect inflow (new escaped defects per week) and reopened-bug rate |
 | Incident count | Reclassify incidents to a lower severity; merge related incidents | Pair with customer-detected share and with a weekly audit of severity decisions against written, impact-based definitions |
-| Number of releases | Release empty or trivial changes | Pair deployment frequency with change fail rate and lead time; frequency alone means nothing |
+| Number of releases | Release empty or trivial changes | Pair deployment frequency with change failure rate and lead time; frequency alone means nothing |
 | Postmortems written | Write short, shallow reviews; review only easy incidents | Follow-up action closure rate and recurrence rate of reviewed failure modes |
 
 A good answer is specific: it names the behavior a team would adopt, not just "it can be gamed". It
@@ -69,7 +69,7 @@ exposed to gaming once a scorecard exists.
 
 - The severity distribution, including Sev3, and an audit of a sample of severity decisions.
 - Customer-detected share and service credits, which are harder to reclassify.
-- Mechanism measures with many underlying events: Core change fail rate (dozens of releases), main
+- Mechanism measures with many underlying events: Core change failure rate (dozens of releases), main
   branch red time and pipeline failure rate (hundreds of runs), lead time (thousands of changes).
 - Recurrence: did reviewed failure modes come back?
 - Unplanned work share, which should fall if fewer things are breaking.
@@ -159,7 +159,7 @@ A strong memo fits on a page and leads with the decision:
 >
 > **If it works less well.** If unplanned work only falls to 26 percent, quarter 4 feature capacity is
 > about 53 engineers, equal to today, and incidents are still down. We will show you the model every
-> month and stop or resize the allocation if quarter 2 shows no movement in change fail rate or
+> month and stop or resize the allocation if quarter 2 shows no movement in change failure rate or
 > customer-detected incidents.
 >
 > **What I need from you.** Agreement to the quarter 1 dip, and help choosing which three roadmap

@@ -20,6 +20,11 @@ power, high interest), subjects (high interest, little power), context setters (
 interest), and the crowd. Keep the map private. "Skeptic" next to a colleague's name is preparation;
 circulated, it becomes a grievance. What you share is the decision document the map helped you write.
 
+!!! tip "Minimum version"
+    On day one, write the decision in one sentence with its decider and date, then one row for each of
+    the three to five people who can change the outcome: what they want, their stance and how you know,
+    and your next contact. Add positions on the two-by-two and alternatives before the decision meeting.
+
 ## How to fill it in
 
 1. **Write the decision in one sentence, with its date and decider.** If you cannot, you are not
@@ -98,12 +103,16 @@ after_decision:
     Week 44 of the Engineering Director's first year at Northstar Technologies, a fictional company with
     80 engineers in six teams and a flat headcount of 87. The director has drafted a year-2 organization
     for Victor Lindqvist (CTO) to decide in week 46; his decision is not recorded. See the
-    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 The decision, its dates, the proposal, and each executive's stated wants come from the
 [year-2 organization proposal](../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44)
 and the [Northstar overview](../case-studies/northstar/index.md). Every placement, stance, alternative,
-and engagement plan is an illustrative assessment.
+and engagement plan is an illustrative assessment. Weeks count from the director's first week.
+Mateo's [seat](../glossary.md#seat) is his place in the flat count of 87 people; not backfilling it
+keeps the total flat.
 
 **Decision this map is for:** whether Victor Lindqvist approves, in week 46, the year-2 organization
 proposal drafted in week 44, for announcement in week 51 and effect in week 53. The proposal splits

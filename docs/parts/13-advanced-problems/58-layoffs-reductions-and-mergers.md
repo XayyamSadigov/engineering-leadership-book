@@ -5,7 +5,8 @@ For an engineering leader they are the same problem from two sides. Both change 
 system faster than ownership normally changes, both are decided partly above the engineering
 organization, and both are judged afterwards by the people who stayed. This chapter covers planning a
 reduction responsibly (selection criteria, communication, continuity of ownership), leading the
-organization that remains, and integrating an acquired engineering team and its technology. The running
+organization that remains, and integrating an acquired engineering team and its technology, from either
+side of the deal or in a merger of peers. The running
 examples are two groups of Halvard Systems, the book's fictional 500-engineer
 [comparison company](../../case-studies/northstar/halvard.md).
 
@@ -29,10 +30,9 @@ examples are two groups of Halvard Systems, the book's fictional 500-engineer
 At team scale, a reduction is the worst conversation a manager has, and an acquisition is a group of
 strangers with a different build system.
 
-At organization scale, both events move ownership. A reduction of fifteen percent can remove the only
-person who has changed a billing component in a year; an acquisition can add eleven services that nobody
-in the acquiring company has ever paged for. The director decides whether ownership is moved on purpose
-or lost by accident.
+At organization scale, both events move ownership. A reduction can remove the only person who has
+changed a billing component in a year; an acquisition can add eleven services nobody has ever been paged
+for. The director decides whether ownership moves on purpose or is lost by accident.
 
 At executive scale, the decision is economic and the consequences are cultural. Whether a reduction or an
 acquisition delivers depends on what the remaining people believe about how it was done. A reduction run
@@ -61,9 +61,8 @@ After this chapter you will be able to:
 > running system still has an owner. The people who stay will judge the whole sequence, and their
 > judgment decides what it costs.
 
-The order matters because the reverse is the default. Under cost pressure the first artifact is usually a
-spreadsheet of names, from each manager's lowest performers or a percentage per team. Both leave the work
-unchanged: the same commitments with fewer people.
+The order matters because the reverse is the default: under cost pressure the first artifact is usually
+a spreadsheet of names, which leaves the same commitments with fewer people.
 
 ```mermaid
 flowchart TD
@@ -100,41 +99,40 @@ findings matter most for an engineering leader; all are **research findings**.
 
 **Reductions predict voluntary departures.** Across organizations, downsizing predicts higher voluntary
 turnover, partly through lower commitment
-([Trevor and Nyberg, 2008](../../references/bibliography.md#trevor2008downsizing)). Practices that convey
-procedural fairness or embed employees were expected to weaken the link. Plan for higher attrition after
-a cut, and know that the remedy is fairness and attachment, not a training budget.
+([Trevor and Nyberg, 2008](../../references/bibliography.md#trevor2008downsizing)). Plan for higher
+attrition after a cut; the remedy is fairness and attachment, not a training budget.
 
 **Survivors watch how the people who left were treated.** Survivors reacted worst when they identified
 with those laid off and believed them poorly compensated
-([Brockner et al., 1987](../../references/bibliography.md#brockner1987survivors)). Survivors who said the
-reasons were explained clearly reported better commitment and intention to stay, most of all under high
-uncertainty ([Brockner et al., 1990](../../references/bibliography.md#brockner1990explain)). Severance
-and explanation are therefore the main levers on the people staying, not only obligations to the people
-leaving.
+([Brockner et al., 1987](../../references/bibliography.md#brockner1987survivors)), and reported better
+commitment when the reasons were explained clearly
+([Brockner et al., 1990](../../references/bibliography.md#brockner1990explain)). Severance and
+explanation are the main levers on the people staying.
 
 **Insecurity and restructuring harm people.** Job insecurity harms attitudes and health
-([Sverke et al., 2002](../../references/bibliography.md#sverke2002insecurity)), and restructuring is
-mainly harmful to well-being, with communication and fair procedure among the factors that help
+([Sverke et al., 2002](../../references/bibliography.md#sverke2002insecurity)), and communication and
+fair procedure are among the factors that soften restructuring's harm to well-being
 ([de Jong et al., 2016](../../references/bibliography.md#dejong2016restructuring)). A long period of rumor
-before a reduction is not neutral waiting; it is insecurity imposed on everyone.
+is insecurity imposed on everyone.
 
-The research gives no tested recipe for running a reduction in a software organization. The procedures
-below are **this book's recommendation**, built on these findings and on the software evidence about
-knowledge loss.
+The research gives no tested recipe for a reduction in a software organization. The procedures below
+are **this book's recommendation**.
 
 ### Knowledge loss is the engineering-specific risk
 
 Software organizations hold much of their operational knowledge in a few people. About 65 percent of 133
 popular open-source projects had a truck factor (the number of developers whose departure would leave
-the project in serious trouble) of 2 or less
-([Avelino et al., 2016](../../references/bibliography.md#avelino2016truck)). Knowledge lost when
+the project in serious trouble) of 2 or less, estimated from authorship in version-control history
+([Avelino et al., 2016](../../references/bibliography.md#avelino2016truck)). A simple version of that
+estimate, which this book uses below: treat the few people who made most of a component's changes as
+its authors, and count how many must leave before the component has no remaining author. Knowledge lost when
 developers leave can far exceed what is expected, and naming successors reduces it
 ([Rigby et al., 2016](../../references/bibliography.md#rigby2016turnover); see also
 [Mockus, 2010](../../references/bibliography.md#mockus2010volatility)). These are **research findings**
 in limited settings.
 
-A reduction removes many people at once, often with access revoked the same day, so the ownership check is
-the only point at which knowledge loss can be prevented rather than discovered.
+A reduction removes many people at once, so the ownership check is the only point at which knowledge
+loss can be prevented rather than discovered.
 
 ### Selection criteria
 
@@ -142,7 +140,8 @@ A reduction needs a defensible answer to "why me?" for every affected person and
 person who stays. Four families of criteria are common; US agency guidance on severance waivers lists
 seniority, individual criteria such as performance, and eliminating a whole position or department
 ([EEOC, 2009](../../references/bibliography.md#eeoc2009waivers); **standard**, guidance without the
-force of law).
+force of law). A severance waiver is the release of legal claims an employee signs in exchange for
+severance pay.
 
 | Criterion family | Strength | How it fails |
 |---|---|---|
@@ -156,8 +155,9 @@ was recorded before the reduction was contemplated. Never use a reduction to rem
 never addressed performance; it damages both processes.
 
 Whatever the criteria, HR and counsel must review the selection list for disparate effects on protected
-groups before it is final. In the United States, for example, a group waiver of age claims requires
-disclosing the ages and job titles of those selected and not selected in the unit
+groups before it is final. In the United States, for example, when a group of people is asked to waive
+age-discrimination claims, the employer must disclose the ages and job titles of those selected and not
+selected in the unit
 ([EEOC, 2009](../../references/bibliography.md#eeoc2009waivers)). The test is useful anywhere: if you
 would be uncomfortable showing who was selected from which unit, the criteria are not doing the work.
 
@@ -174,7 +174,8 @@ before the list is final (**this book's recommendation**):
 - **No one selected for speaking up.** Check every selected name against recent complaints, incident
   reports, and concerns raised. If one matches, a second reviewer confirms the criteria alone explain it.
 
-Some moves are wrong even when lawful: timing notice to dodge a bonus or vesting date, pressing people
+Some moves are wrong even when lawful: timing notice to dodge a bonus or a
+[vesting](../../glossary.md#vesting) date (when granted equity becomes the employee's), pressing people
 into "voluntary" resignation, or giving different severance to similar cases. If you would not explain a
 choice to the survivors, do not make it.
 
@@ -185,8 +186,8 @@ Two official sources show the range (**standard**, both):
 
 | Regime | Trigger | Notice or consultation | Engineering consequence |
 |---|---|---|---|
-| US federal WARN Act ([US DOL, 2003](../../references/bibliography.md#dol2003warnemployer)) | Covered plant closings and mass layoffs by employers of broadly 100 or more full-time workers, measured per site; smaller layoffs within 90 days can be aggregated | At least 60 calendar days' written notice; many states add their own laws | Check aggregation with any other action in the company, not just this one's count |
-| EU collective redundancies directive ([Council of the EU, 1998](../../references/bibliography.md#eu1998collective)) | Thresholds such as 10 dismissals over 30 days in an establishment of 21 to 99 workers, or 20 over 90 days; applied through national law | Consult workers' representatives in good time, aiming at agreement, with reasons, numbers, timing, and criteria in writing; redundancies take effect no earlier than 30 days after notifying the authority | The selection list is a proposal until consultation ends, and that site's timeline is longer |
+| US federal WARN Act ([US DOL, 2003](../../references/bibliography.md#dol2003warnemployer)) | Mass layoffs by employers of broadly 100 or more full-time workers, per site; smaller layoffs within 90 days can be aggregated | At least 60 days' written notice; many states add their own laws | Check aggregation with any other action in the company |
+| EU collective redundancies directive ([Council of the EU, 1998](../../references/bibliography.md#eu1998collective)) | Thresholds such as 10 dismissals over 30 days in an establishment of 21 to 99 workers; applied through national law | Consult workers' representatives in good time, aiming at agreement; effective no earlier than 30 days after notifying the authority | The selection list is a proposal until consultation ends |
 
 A global announcement on one day may be unlawful in some places and merely unkind in others.
 
@@ -194,8 +195,7 @@ A global announcement on one day may be unlawful in some places and merely unkin
 
 The evidence on acquisitions is sobering. On average, acquiring firms' performance does not improve with
 acquisitions, and much of the variance is unexplained
-([King et al., 2004](../../references/bibliography.md#king2004metaanalyses); **research finding**). The
-average deal does not pay, and what distinguishes the deals that do is not well understood. For
+([King et al., 2004](../../references/bibliography.md#king2004metaanalyses); **research finding**). For
 technology acquisitions, three findings bear on engineering (**research findings**, from limited
 samples):
 
@@ -213,9 +213,8 @@ Haspeslagh and Jemison are known for classifying integration by how much autonom
 and how much interdependence the deal's value needs
 ([Haspeslagh and Jemison, 1991](../../references/bibliography.md#haspeslagh1991managing); **expert
 opinion**). This chapter applies that idea per dimension rather than per deal. Larson suggests running
-the acquired stack as it is for about six months and writing the plan down so the deal team and staff
-share the same assumptions ([Larson, 2023](../../references/bibliography.md#larson2023ma); **expert
-opinion**).
+the acquired stack as it is for about six months ([Larson, 2023](../../references/bibliography.md#larson2023ma);
+**expert opinion**).
 
 Conway's law adds the long-term constraint: an acquired team kept separate will keep a separate system,
 so merging the systems later requires merging the communication first
@@ -237,6 +236,29 @@ Apply the tree four times: to people and structure, product, platform, and polic
 absorbs security and incident policy on day one, stages the product, preserves the structure and leader,
 and holds the platform decision for about six months.
 
+### When you are acquired, or merging with a peer
+
+The rest of this chapter takes the acquirer's side. Two other positions need different moves (**this
+book's recommendation**).
+
+**On the acquired side.** Your team will learn about levels, reporting lines, and tools from you or from
+rumor. On day one, tell them what you know, what you do not, and the date by which each open question
+will be decided. Never promise what the acquirer has not committed in writing. Before close if you can,
+write down who holds the knowledge of each running system, with on-call and incident history; it is
+the evidence for which dimensions to preserve. Then ask to sit in calibration for your people.
+
+**Keeping key engineers.** Retention bonuses (cash paid for staying to a date) and new equity buy time,
+not commitment. What keeps engineers is the work: a named role in the integration, a level that matches
+what they actually do, and a manager they trust. Offer retention money only to the few people the deal
+thesis depends on, and pair each offer with a [stay interview](../../glossary.md#stay-interview) and a
+written role.
+
+**Merging with a peer.** When two comparable organizations combine, neither side's practice is the
+default. Choose one leader per area on the area's needs, not on which company they came from, and
+announce that rule before any names. Compare the two career ladders against real work samples before
+mapping anyone, then map once, with an appeal path. Decide each dimension with the tree above, and
+expect the losing side of every choice to feel acquired.
+
 ## Engineering Organization Example
 
 Halvard's second product group, **Field Operations**, builds software for companies that schedule and
@@ -249,30 +271,26 @@ roles (one vacant) under three directors:
 | Mobile Workforce | Ruth Halloran | 5 roles, one vacant | 40 | The technicians' mobile application |
 | Classic Scheduler | Tobias Engel | 4 | 32 | On-premises; license revenue down for three years |
 
-All figures are **illustrative**.
-
-In the year after the planning year described on the Halvard page, Halvard's executive team decides to end
-new development on Classic Scheduler, honor its support contracts for three more years, and move its
-customers to Dispatch. Finance's first proposal is a 15 percent cut across all three teams, about 17
+All figures are **illustrative**. Halvard's executive team decides to end new development on Classic
+Scheduler, honor its support contracts for three more years, and move its customers to Dispatch. Finance's first proposal is a 15 percent cut across all three teams, about 17
 engineers.
 
 **Step 1: the work that stops.** Imani rejects the across-the-board version in writing: Dispatch will
-absorb Classic's customers, so cutting it adds load where load is about to rise. Cheaper sources release
-nothing (no contractors staff the group, by assumption), and the four open requisitions are kept for
-placing affected people. The work that stops is new
-feature development on Classic Scheduler. The work that continues is:
+absorb Classic's customers, so cutting it adds load where load is about to rise. No contractors staff
+the group (an assumption), and the four open [requisitions](../../glossary.md#requisition) (approved,
+unfilled roles) are kept for placing affected people. The work that stops is new feature development on
+Classic Scheduler. The work that continues is:
 
 | Remaining Classic work | Assumed FTE | Basis |
 |---|---|---|
 | Security patches and dependency updates | 2 | Last four quarters of patch history |
-| Operating 3 [tier 1](../../glossary.md#tier-1) components (on-call, [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) response) | 4 | Assumed: one on-call rotation for the three components, shared with the escalation engineers |
+| Operating 3 [tier 1](../../glossary.md#tier-1) components (on-call, [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) response) | 4 | One on-call rotation, shared with the escalation engineers |
 | Customer escalations (third-line support) | 3 | Escalation volume, last two quarters |
 | Migration tooling to Dispatch (export, import, verification) | 5 | Migration estimate, four quarters |
 | Total sustaining team | 14 | |
 
-Classic therefore goes from 32 engineers to 14: 18 roles end. Dispatch and Mobile Workforce have two
-approved but unfilled engineering roles each; four of the 18 people are offered and accept them. Fourteen
-engineers are separated. Classic's manager roles fall from four to two; one displaced manager takes Mobile
+Classic therefore goes from 32 engineers to 14: 18 roles end. Four of the 18 people accept the open
+roles in Dispatch and Mobile Workforce, and fourteen are separated. Classic's manager roles fall from four to two; one displaced manager takes Mobile
 Workforce's vacant manager role and one is separated.
 
 | Team | Engineers before | Engineers after | Manager roles after |
@@ -288,14 +306,12 @@ history on the components the role covers. Third, performance ratings from the l
 Leah Marchetti, Field Operations' HR business partner, and employment counsel review the resulting list for
 disparate effects before it is final.
 
-**Step 3: the ownership check.** Classic owns 21 production components in Halvard's component register,
-three of them tier 1. For each, the team lists every person with a change in the last 12 months and every
-on-call responder in the last two quarters. Against the managers' first draft of the sustaining team, five
-components would have had nobody remaining with either, including the tier 1 license server. Because
-component history is already a selection criterion, two sustaining selections change; the license server
-and one other component are covered. The remaining three components change less than once a quarter; three
-departing engineers accept a paid two-week transition contract to record walkthroughs and update runbooks,
-reviewed by the sustaining engineers who inherit them.
+**Step 3: the ownership check.** Classic owns 21 production components, three of them tier 1. For each,
+the team lists every person with a change in the last 12 months and every on-call responder in the last
+two quarters. Against the managers' first draft, five components would have had nobody remaining with
+either, including the tier 1 license server. Two sustaining selections change, covering two of them.
+The other three change less than once a quarter; three departing engineers accept a paid two-week
+transition contract to record walkthroughs and update runbooks.
 
 **Step 4: cost.** The 14 separated engineers are 6 at Engineer, 7 at Senior, and 1 at Staff level.
 
@@ -305,17 +321,13 @@ reviewed by the sustaining engineers who inherit them.
 | One-time cost (severance and transition), assumed 25 percent of that | 0.25 × $2,795,000 | $698,750 |
 | Months of savings to recover the one-time cost | $698,750 ÷ ($2,795,000 ÷ 12) | 3.0 |
 
-The four placements save the cost of hiring into four open roles, which the plan does not count as savings.
-The manager's cost is excluded because the Halvard case does not price manager roles. The payback looks fast;
-the cost that does not appear in this table is the attrition that follows, priced in the Enterprise
-Application section below.
+The manager's cost is excluded because the Halvard case does not price manager roles. The payback looks
+fast; the attrition that follows is priced in the Enterprise Application section.
 
 **Step 5: jurisdiction.** Eleven of the separated engineers work at two US sites and three at a site in an
 EU member state, where four roles are affected. Counsel advises consulting employee representatives at the
-EU site before anything there is final, following national law and Halvard's own policy, even though the
-numbers are below the directive's thresholds; in the US the question was aggregation with other actions,
-not the count. The timeline for the four EU roles moves five weeks later, and the plan says so rather
-than announcing a decision that is not yet lawful there.
+EU site first, under national law and Halvard's policy, even though the numbers are below the
+directive's thresholds. The timeline for the four EU roles moves five weeks later, and the plan says so.
 
 ## Decision Framework
 
@@ -346,34 +358,27 @@ flowchart TD
 
 For acquisitions, the decision is per dimension, using the tree in the Deep Conceptual Explanation, with two
 fixed rules: security and incident policies apply on day one regardless of the autonomy chosen, and the
-platform consolidation decision is made on a date set at close, with an architecture decision record
+platform consolidation decision is made on a date set at close (the day the deal legally completes),
+with an architecture decision record
 ([Chapter 28](../06-technical-leadership/28-architecture-decision-making-and-governance.md)).
 
 ## Trade-offs
 
-**Speed against consultation.** A short interval between decision and notification limits rumor and
-insecurity. Consultation, where required, lengthens it, and consultation that can change the outcome is
-the point. Keep the interval short wherever the law allows.
+**Speed against consultation.** A short interval between decision and notification limits rumor;
+consultation, where required, lengthens it, and its power to change the outcome is the point.
 
 **Deep cut once against smaller cuts repeatedly.** Two smaller cuts in a year teach everyone that the next
-is coming, and the best people leave before it does. Cutting deeper than needed harms people
-unnecessarily. State the planning assumption and the conditions that would trigger another round.
+is coming, and the best people leave first; cutting deeper than needed harms people unnecessarily. State
+the conditions that would trigger another round.
 
 **Role-based selection against keeping the strongest people.** Eliminating a whole product's development
 may remove strong engineers while weaker ones stay in continuing teams. Moving strong people into continuing
 roles by displacing others ("bumping") keeps capability but is harder to explain and to defend. Open
 vacancies, offered to affected people, are the cheapest middle path.
 
-**Transparency against privacy.** Explain the work that stopped and the criteria; never explain an
-individual.
-
-**Autonomy against integration in an acquisition.** Preserving the acquired team keeps its momentum and
-delays the benefits of integration; integrating fast captures savings and risks the people who made the
-target worth buying. The answer differs by dimension.
-
-**Transition cost.** A reduction costs severance, legal fees, management time, a quarter of lower output,
-and elevated attrition. An integration costs migration work, duplicated tooling, and senior engineers'
-time. Budget both before the decision.
+**Transition cost.** A reduction costs severance, legal fees, management time, lower output, and
+attrition; an integration costs migration work, duplicated tooling, and senior engineers' time. Budget
+both before the decision.
 
 **Your own role and its limits.** A director may disagree with the reduction itself. Say so once, in
 writing, before the decision, using
@@ -396,15 +401,15 @@ survivors conclude ratings are a layoff list. Detect it when names arrive before
 **The silent expert.** The only person who can operate a component is on the list because nobody checked.
 Detect it with the ownership check, or later with the first incident nobody can diagnose.
 
-**Access before conversation.** People learn they are affected when their access stops working, the most
-humiliating version of the news. Detect it in the plan: revocation must follow each conversation.
+**Access before conversation.** People learn they are affected when their access stops working. Detect it
+in the plan: revocation must follow each conversation.
 
-**The rolling layoff.** Small cuts every few months, each below some threshold. Besides the cultural
-damage, they can be aggregated for notice purposes. Detect it when the same group has two reduction
-plans within two quarters.
+**The rolling layoff.** Small cuts every few months, each below a notice threshold, which they can be
+aggregated to cross anyway. Detect it when one group has two reduction plans within two quarters.
 
 **The vanished leader.** After notification day the vice president goes quiet, and survivors read absence
-as indifference. Detect it in the calendar: the next three weeks should be skip-levels and team meetings.
+as indifference. Detect it in the calendar: the next three weeks should be
+[skip-levels](../../glossary.md#skip-level) and team meetings.
 
 **Day-one absorption.** The acquired team is moved onto the acquirer's platform, ladder, tools, and
 processes in the first month. Detect it when the integration plan has no dimension marked "preserve".
@@ -415,10 +420,9 @@ led incidents) with the level assigned.
 
 ## Enterprise Application
 
-In an organization of 50 to 150 engineers, the leader running a reduction is usually a vice president or a
-senior director who knows most people by name. That helps with explanation and makes everything else
-harder. Field Operations shows the day itself and the second half of the work: leading the organization
-that remains. All figures are **illustrative**.
+In an organization of 50 to 150 engineers, the leader running a reduction usually knows most people by
+name, which helps with explanation and makes everything else harder. Field Operations shows the day
+itself and the second half of the work: leading the organization that remains (**illustrative**).
 
 **Notification day at the US sites.**
 
@@ -448,34 +452,30 @@ the manager; anything about performance when performance was not the stated crit
 the reason and creates legal exposure; and promises about future rounds or rehiring.
 
 **The survivors' note** states the reason, the work that stops, the criteria, the numbers, how the
-people leaving are supported (in general terms), whether more rounds are planned, and what changes for
-each team this week. It names no individual.
-
-**Weeks 1 to 2.** Each team receives its updated ownership map and the list of commitments that stopped,
-so the reduction is visibly a reduction in work.
+people leaving are supported, whether more rounds are planned, and what changes for each team. It names
+no individual. In weeks 1 and 2 each team receives its updated ownership map and the list of commitments
+that stopped, so the reduction is visibly a reduction in work.
 
 **Weeks 3 to 13 (the first quarter after).** Field Operations records 5 voluntary departures, an
-annualized rate of about 21 percent against Halvard's planning assumption of 12 percent (about 2.9 a
-quarter for 96 engineers). Three of the five are from the 14-person Classic sustaining team. Classic's
+annualized [attrition](../../glossary.md#attrition-and-regretted-attrition) rate of about 21 percent
+against Halvard's planning assumption of 12 percent (about 2.9 a quarter for 96 engineers). Three of the five are from the 14-person Classic sustaining team. Classic's
 Sev1 and Sev2 incidents rise from 2 in the quarter before the reduction to 4, one of them a Sev1. A pulse
 survey on whether people understand why the decision was made is 71 percent favorable in Dispatch and
 Mobile Workforce, and 38 percent in Classic.
 
 The pattern fits the research: departures concentrated where people identified most with those who left
-and where insecurity was highest. Imani's response is in three parts. She commits in writing that Classic's
-sustaining team has a three-year mandate and a named role in the migration, which addresses insecurity
-directly. Tobias Engel fills the three vacancies by internal transfer from Dispatch, with people who will
-later receive the migrated customers. And all four incidents get blameless reviews, the Sev1 under Halvard's Sev1
-policy, with actions on the runbooks the transition contracts produced
-([Chapter 25](../05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md)).
+and where insecurity was highest. Imani commits in writing that Classic's sustaining team has a
+three-year mandate and a named role in the migration. Tobias Engel fills the three vacancies by internal
+transfer from Dispatch. All four incidents get blameless reviews, with actions on the runbooks the
+transition contracts produced.
 
-**Weeks 14 to 26.** Departures fall to 3 (about 12.5 percent annualized), Classic's incidents
-return to 2, and the Classic understanding score rises to 54 percent. It is one group over two quarters, not proof.
-The measures to watch are attrition by team, not
-only in aggregate; incidents on the components whose owners changed; and whether people believe the reasons.
+**Weeks 14 to 26.** Departures fall to 3 (about 12.5 percent annualized), Classic's incidents return to
+2, and its understanding score rises to 54 percent: one group over two quarters, not proof. Watch
+attrition by team, incidents on components whose owners changed, and whether people believe the reasons.
 
 **The cost the payback table missed.** Two extra departures in the first quarter cost about $215,000,
-assuming replacement costs half a year of a Senior engineer's fully loaded cost, plus the lost output
+assuming replacement costs half a year of a Senior engineer's
+[fully loaded cost](../../glossary.md#fully-loaded-cost), plus the lost output
 while the roles were open. Small against $2.8 million a year; large against a leader's claim
 that the reduction was "fully costed".
 
@@ -483,10 +483,7 @@ that the reduction was "fully costed".
 
 The CTO's first job is to get the decision's size and shape right before it is a plan. Reductions are
 proposed in money; the CTO converts money into work that stops. If the executive team cannot name the
-work, the CTO says the reduction will be a spread cut and what that will break. Chapter 52 covers the budget arithmetic and Chapter
-55 the board conversation
-([Chapter 52](../12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md),
-[Chapter 55](../12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md)).
+work, the CTO says the reduction will be a spread cut and what that will break.
 
 The CTO also owns three commitments only the executive level can keep. **The number of rounds**: if a
 second round may be needed, say so to peers before the first; a broken promise of "only one" costs more
@@ -495,7 +492,7 @@ philosophies invite survivors to compare them. **Legal sequencing**: counsel's s
 the communications calendar, sets the dates.
 
 For acquisitions, the CTO's leverage is before the price is agreed: the integration plan, with its cost,
-belongs in the deal model. The Corvane case below shows it.
+belongs in the deal model, the financial model the acquirer uses to price the deal.
 
 Finally, the CTO's own message on notification day should be short, state the reason and the work that
 stops, and never be the first word anyone affected hears. That word belongs to their manager.
@@ -506,13 +503,13 @@ Planning a reduction:
 
 1. **Get the reason in writing** from the decision maker: the strategy change or cost target, the amount, and
    the date by which it must take effect.
-2. **List the work that stops**, product by product, with the customers and commitments affected. Exhaust
-   vacancies, contractors, and discretionary spending first and record what each covers.
+2. **List the work that stops**, with the customers and commitments affected, after exhausting
+   vacancies, contractors, and discretionary spending.
 3. **Size the remaining work** in FTE, with the basis for each line, and derive the roles.
 4. **Write the selection criteria** and have HR and counsel approve them before any names are discussed.
 5. **Map people to roles** using the criteria; offer open roles to affected people first.
-6. **Run the ownership check**: every production component, every tier 1 service, recent change and on-call
-   history against the proposed list. Change selections or fund paid transitions, then recheck.
+6. **Run the ownership check** on every production component; change selections or fund paid
+   transitions, then recheck.
 7. **Review for disparate effects** with HR and counsel, unit by unit.
 8. **Sequence by jurisdiction** with counsel: consultation, notice periods, authority notifications.
 9. **Prepare notification day**: managers rehearsed the day before, terms written, access revocation
@@ -531,16 +528,15 @@ Integrating an acquisition:
 14. **Before close**, write the integration plan per dimension, cost the platform decision, and name who leads
     the acquired team after close.
 15. **Day one**: identity, access review, secrets rotation, vulnerability scan, incident and security policies.
-16. **First 90 days**: leveling with calibration that includes the acquired leader; ownership register entries;
+16. **First 90 days**: leveling with [calibration](../../glossary.md#calibration) that includes the acquired leader; ownership register entries;
     no platform migration.
 17. **Month five or six**: the platform decision, recorded as an architecture decision with options and costs.
 
 ## Case Study
 
-This case is fictional; Halvard and Corvane are invented. Halvard's third product group, **Insights**, builds
-reporting and forecasting products used by customers of Halvard's other products. Its vice president is Henrik
-Sørlie. It has 100 engineers and 12 managers under two directors: Esther Castellanos runs Reporting (6 managers,
-52 engineers) and Kenji Iwasaki runs Forecasting (6 managers, 48 engineers).
+This case is fictional; Halvard and Corvane are invented. Halvard's third product group, **Insights**,
+builds reporting and forecasting products. Its vice president is Henrik Sørlie, with 100 engineers under
+two directors: Esther Castellanos (Reporting) and Kenji Iwasaki (Forecasting).
 
 In the same year as the Field Operations reduction, Halvard acquires **Corvane**, a 34-engineer company with 4
 managers whose product is a streaming event analytics engine. Its founder and chief technology officer is Dalia
@@ -550,10 +546,10 @@ embedded in Insights' reporting product within six months.
 
 **Diligence findings that shaped the plan.** Corvane runs 11 production services on a different cloud provider
 from Halvard, with its own pipeline and an on-call rotation of eight people. A truck-factor estimate from its
-repositories, using the authorship approach described above, finds 6 of the 11 services with a truck factor of 1
-or 2, concentrated in 7 engineers. Before signing, Halvard's CTO asks for the cost of moving Corvane onto the
-deployment platform run by Halvard's platform organization. The estimate, assuming two engineer-quarters per
-service, is 22 engineer-quarters, about $1.18 million at the Senior cost. It is added to the deal's cost. All figures are **illustrative**.
+repositories, using the authorship count described earlier, finds 6 of the 11 services with a truck
+factor of 1 or 2, concentrated in 7 engineers. Before signing, Halvard's CTO asks for the cost of moving
+Corvane onto Halvard's deployment platform: 22 engineer-quarters (two per service), about $1.18 million
+at the Senior cost, added to the deal's cost. All figures are **illustrative**.
 
 **The integration design, by dimension.**
 
@@ -564,22 +560,20 @@ service, is 22 engineer-quarters, about $1.18 million at the Senior cost. It is 
 | Platform | Hold: Corvane's stack runs as is; a decision record at month 5 | Practitioner advice to run the acquired stack for about six months; migration is costed and funded |
 | Policy | Absorb selectively | Security and incident rules cannot wait; the rest are phased |
 
-Halvard's six enterprise policies are applied on a schedule. A tracked review for every Sev1, the
-vulnerability remediation service levels, and the rule against customer dates without an estimate apply
-from day one, and each Corvane component gets an owning team in week one. The
-[tier 1 operational minimums](../../glossary.md#tier-1-operational-minimums) are due by month 6 and the
-auditable pipeline with rollback by month 9, through Corvane's own pipeline if it passes the audit.
+Halvard's six enterprise policies are applied on a schedule: Sev1 reviews, vulnerability service
+levels, and the estimate rule from day one; an owning team per component in week one; the
+[tier 1 operational minimums](../../glossary.md#tier-1-operational-minimums) by month 6; the auditable
+pipeline by month 9.
 
-**Leveling.** Corvane had flat titles. In month 2, calibration with Dalia Ferraz in the room maps its engineers;
-the final mapping, after the correction described next, is 11 Engineer, 19 Senior, and 4 Staff. The resulting cost is about $7.0 million a year. Two of the seven key engineers had led Corvane's incident response without a title that said so;
-the first draft placed them at Senior. Comparing each person's actual role to the ladder moved one to Staff; the
-other stayed at Senior with a written development plan toward Staff.
+**Leveling.** Corvane had flat titles. In month 2, calibration with Dalia Ferraz in the room maps its
+engineers to 11 Engineer, 19 Senior, and 4 Staff, about $7.0 million a year. Two of the seven key
+engineers had led incident response without a title that said so, and the first draft placed them at
+Senior. Comparing each person's actual role to the ladder moved one to Staff; the other stayed at Senior
+with a written development plan.
 
-**Month 6 results.** Thirty-two of Corvane's 34 engineers remain, giving Insights 132 in three units;
-one of the two departures is a key engineer, in month 4. Corvane's services have one Sev1, reviewed under
-Halvard's policy. The first embedded feature ships in Reporting in month 5. The month 5 platform decision record
-proposes migrating the four Corvane services with the highest operating cost first and leaving the rest for a
-second decision a year later; the group adopts it.
+**Month 6 results.** Thirty-two of Corvane's 34 engineers remain; one of the two departures is a key
+engineer, in month 4. The first embedded feature ships in month 5. The platform decision record migrates
+the four most expensive Corvane services first and leaves the rest for a second decision a year later.
 
 A preserve decision kept the people and the leader, and two platforms for at least a year longer, at a
 cost visible in the deal model rather than discovered afterwards.
@@ -631,11 +625,15 @@ the calibration rule you would set for the next acquisition.
 
 ### Executive Decision-Making
 
-**X1.** Suppose (a scenario for the reader, not part of Northstar's record) that in week 50 Northstar's board
-asks management to model a 10 percent cut to engineering personnel cost for year 2, about $1.67 million of the
-$16.73 million FY2 personnel draft (87 full seats), roughly nine engineering seats at $185,000 each. You are Victor Lindqvist. Using the
-Northstar case (80 engineers in six teams, the flat 87-seat rule, the open quarter 4 decisions on the quality
-continuation and the workforce plan), decide what you put in front of the board: whether a reduction is the
+**X1.** Suppose (a scenario for the reader, not part of Northstar's record) that in week 50 the board of
+Northstar, the book's fictional 80-engineer company (see the
+[overview](../../case-studies/northstar/index.md) and the
+[quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md)), asks management to model a
+10 percent cut to engineering personnel cost for year 2. That is about $1.67 million of Finance's $16.73
+million year-2 personnel draft, roughly nine engineering [seats](../../glossary.md#seat) at $185,000
+each. You are Victor Lindqvist (CTO). The case's rule is 87 seats in all (80 engineers, 6 managers, and
+the director), with backfills allowed and no net additions; the quality continuation and the workforce
+plan are open quarter 4 decisions. Decide what you put in front of the board: whether a reduction is the
 right tool, which work would stop, what the ownership check would have to cover, and what you would need to
 believe to recommend it. Do not decide any of the open quarter 4 decisions; show how each would be affected.
 

@@ -61,14 +61,10 @@ Zhou (staff engineer, data, migration, and configuration), and the Platform Oper
 Becker (its manager) hold most of the data. The [cast](../case-studies/northstar/cast.md) lists everyone
 named here. Amara Okafor (CPO) and Rajiv Menon read it.
 
-**The time rule.** Use facts dated week 26 or earlier: the
-[Northstar overview](../case-studies/northstar/index.md), the
-[baseline data](../case-studies/northstar/baseline-data.md), [day 90](../case-studies/northstar/first-quarter.md#day-90),
-[starting points for quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2),
-[quarter 2 results](../case-studies/northstar/first-quarter.md#quarter-2-results), and
-[the renewals and the operating system in quarter 2](../case-studies/northstar/first-quarter.md#the-renewals-and-the-operating-system-in-quarter-2),
-including the director's week-26 report (Chapter 39). The [timeline](../case-studies/northstar/timeline.md)
-shows what falls before week 27. Anything that happens in quarter 3 is off limits.
+**The time rule.** Use only facts dated week 26 or earlier ([weeks](../glossary.md#weeks-quarters-and-years)
+count from the director's first week). The fact sheet under Starting Dataset lists the case facts the
+project needs, each with its week; anything else you use from the case must also be dated week 26 or
+earlier. Anything that happens in quarter 3 is off limits.
 
 **Constraints.** These are binding.
 
@@ -92,7 +88,7 @@ shows what falls before week 27. Anything that happens in quarter 3 is off limit
 Use these sources:
 
 - [Baseline data](../case-studies/northstar/baseline-data.md), including how the numbers were
-  produced and their known weaknesses, and [the first quarter](../case-studies/northstar/first-quarter.md),
+  produced and their known weaknesses, and [the year 1 record](../case-studies/northstar/first-quarter.md),
   including the day-90 results and the quarter 2 results table.
 - [`teams.csv`](../case-studies/northstar/data/teams.csv) for baseline delivery by team,
   [`components.csv`](../case-studies/northstar/data/components.csv) for tiers, and
@@ -108,19 +104,34 @@ with numerators and denominators where the record gives them and a note where it
 from the case**, not new. Blank cells mean the value is not recorded; do not fill them with estimates
 presented as readings.
 
-**Facts your submission must use.**
+**Project fact sheet.** Every case fact the submission must use, one per row, each dated week 26 or
+earlier. Where a row gives three figures, they are the baseline quarter, quarter 1, and quarter 2.
 
-| Area | Facts |
-|---|---|
-| Reliability | 99.62 percent availability at baseline and 99.86 in quarter 2 against 99.9 by contract; service credits $410,000 and $95,000; synthetic checks from one region, mobile path not covered |
-| SLOs | Order submission 99.9 percent, order latency 99 percent within 2 seconds, payment final within 60 seconds 99.9 percent, invoice correctness 99.99 once reconciliation exists; about 600,000 order submissions and 240,000 payment attempts per 28 days; budgets in reporting mode, any incident consuming more than a fifth of a journey's budget gets a tracked review |
-| Incidents | 30, 21, 17 Sev1 and Sev2; via Core releases 9, 4, 2; recurrences 11, 5, 3; customer-detected 47, 29, 29 percent; 8 of the 14 baseline customer-detected incidents were correctness failures |
-| Delivery | Core releases 2 a month at baseline, 11 in quarter 1, 13 in quarter 2; Core change failure rate 31% (4 of 13 releases over the 26 weeks before arrival), 22% (2 of 9 weekly releases from week 5), 23% (3 of 13); Core lead time 19 days and services 3 at baseline; review wait 21 working hours; 74-minute pipeline |
-| Readiness and follow-through | [Tier 1](../glossary.md#tier-1) at the four [minimums](../glossary.md#tier-1-operational-minimums) 3, 8, 11 of 15 (year-1 counts keep the original list of 15 for comparability, although notification-svc moved to tier 2 from quarter 2; year 2 uses the current list of 14); corrective-action closure 32, 70, 78 percent |
-| Capacity | Unplanned work 34, 31, 28 percent; quarter 3 planned case 22 percent (17.6 FTE), cautious case 28 percent (22.4 FTE); prevention 8 FTE; platform 4.5 FTE; the week-31 trigger in Chapter 38 |
-| Friction | Environment waits about 6 days to 2 and other teams' requests 20 to 14 points by week 18 |
-| Measurement | Change failure rate linked by hand under a 72-hour rule; four shell-script services log nothing; unplanned work sampled for two weeks per team; severity assigned by on-call with a weekly audit since week 7 |
-| Money | $185,000 per engineer-year; 80 engineers |
+| Fact | Value | Week | Source |
+|---|---|---|---|
+| Availability, order and payment paths | 99.62 percent at baseline; quarter 1 not recorded; 99.86 in quarter 2 (contract: 99.9) | Baseline; week 26 | [Timeline](../case-studies/northstar/timeline.md) |
+| Service credits | $410,000 at baseline; $95,000 in quarter 2 | Baseline; week 26 | [Timeline](../case-studies/northstar/timeline.md) |
+| Synthetic checks | Run from one region; the mobile path is not covered | Baseline | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Proposed SLOs | Order submission 99.9 percent; order latency 99 percent within 2 seconds; payment final within 60 seconds 99.9 percent; invoice correctness 99.99 percent once reconciliation exists | Year 1, before week 26 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
+| SLO volumes | About 600,000 order submissions and 240,000 payment attempts per 28 days | By week 26 | [Chapter 24](../parts/05-engineering-quality/24-reliability-slos-and-operational-readiness.md) |
+| Error budgets | In reporting mode; any incident consuming more than a fifth of a journey's budget gets a tracked review | By week 26 | [Chapter 24](../parts/05-engineering-quality/24-reliability-slos-and-operational-readiness.md) |
+| Sev1 and Sev2 incidents | 30, 21, 17 | Baseline; weeks 13, 26 | [Timeline](../case-studies/northstar/timeline.md) |
+| Incidents via Core releases | 9, 4, 2 | Baseline; weeks 13, 26 | [Timeline](../case-studies/northstar/timeline.md) |
+| Recurrences | 11, 5, 3 | Baseline; weeks 13, 26 | [Timeline](../case-studies/northstar/timeline.md) |
+| Customer-detected share | 47, 29, 29 percent | Baseline; weeks 13, 26 | [Timeline](../case-studies/northstar/timeline.md) |
+| Correctness failures | 8 of the 14 baseline customer-detected incidents | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Core releases | 2 a month at baseline; 11 in quarter 1; 13 in quarter 2 | Baseline; weeks 13, 26 | [Timeline](../case-studies/northstar/timeline.md) |
+| Core [change failure rate](../glossary.md#change-failure-rate) | 31% (4 of 13 releases in the 26 weeks before arrival); 22% (2 of 9 weekly releases from week 5); 23% (3 of 13) | Baseline; weeks 13, 26 | [Quarterly readings](data/p5-quarterly-readings.csv) |
+| Lead time, review wait, pipeline | Core lead time 19 days and services 3; review wait 21 working hours; 74-minute pipeline | Baseline | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| [Tier 1](../glossary.md#tier-1) at the four [minimums](../glossary.md#tier-1-operational-minimums) | 3, 8, 11 of 15. Year-1 counts keep the original list of 15, although notification-svc moved to tier 2 from quarter 2; year 2 uses the current 14 | Baseline; weeks 13, 26 | [Timeline](../case-studies/northstar/timeline.md) |
+| Corrective-action closure | 32, 70, 78 percent | Baseline; weeks 13, 26 | [Timeline](../case-studies/northstar/timeline.md) |
+| Unplanned work | 34, 31, 28 percent | Baseline; weeks 13, 26 | [Timeline](../case-studies/northstar/timeline.md) |
+| Quarter 3 capacity plan | Planned case 22 percent unplanned (17.6 FTE), cautious case 28 percent (22.4 FTE); prevention 8 FTE; platform 4.5 FTE; the week-31 trigger | Weeks 25–26 | [Chapter 38](../parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md) |
+| Friction | Environment waits from about 6 days to 2; other teams' requests from 20 to 14 points of Platform Operations' capacity | Week 18 | [Year 1 record, quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2) |
+| Change failure linking | By hand, under a 72-hour rule; four shell-script services log nothing | By week 26 | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Unplanned work sampling | Two weeks per team | Baseline onward | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Severity | Assigned by on-call, with a weekly audit | Audit since week 7 | [Year 1 record](../case-studies/northstar/first-quarter.md) |
+| Money | $185,000 per engineer-year; 80 engineers | Baseline | [Overview](../case-studies/northstar/index.md) |
 
 **Facts you do not have.** Whether the invoice reconciliation job is running and producing data;
 quarter 1 availability and credits; any Core lead time, time to restore, or committed-delivery figure

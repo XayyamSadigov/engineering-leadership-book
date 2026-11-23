@@ -6,8 +6,9 @@
 
 This briefing is for readers who start at Parts X–XIII. It says where Northstar stands at week 40 of
 the director's first year, what the latest results are, and which decisions are open. None of these
-decisions has a recorded outcome, and the chapters leave each one open. The details are in
-[quarter 4 of the director's first year](first-quarter.md#quarter-4); the people are on the
+decisions has a recorded outcome, and the chapters leave each one open. If you have not followed the
+story, read [the year in brief](year-in-brief.md) first (about six minutes). The details are in
+[quarter 4 of the year 1 record](first-quarter.md#quarter-4); the people are on the
 [cast](cast.md) page; the [timeline](timeline.md) shows the weeks.
 
 ## Where things stand at week 40
@@ -37,22 +38,55 @@ Quarter 4 results are not recorded, so quarter 3 is the latest quarter anyone ca
 | Unplanned work | 34% | 25% |
 | Tier 1 components meeting the four operational minimums | 3 of 15 | 13 of 15 |
 
-## The open decisions
+## The three decisions that drive quarter 4
 
-| Decision | What is proposed | Who decides | By when |
+Three decisions shape everything else in quarter 4. Each draws on the same fixed pool of 87 people
+(80 engineers, 6 managers, and the director; see [seat](../../glossary.md#seat)).
+
+**The year-2 organization.** The director proposes splitting Customer Experience into Web, under Daniel
+Cho, and Mobile, under Mateo Arango Ríos in Bogotá, whose engineering seat would not be backfilled.
+core/permissions moves to Orders, search-svc to Data and Analytics, and Platform Operations becomes
+Developer Platform, run as an internal product. Three alternatives are in the draft: keep Customer
+Experience whole with two subteams (B), also split Orders and grow the platform team (C), or add two
+managers of managers (D). Victor Lindqvist decides by week 46; the change would be announced in week 51
+and take effect in week 53, the start of year 2. At stake: about 21 engineer-weeks of transition cost,
+and whether the shape that carried year 1 fits year 2.
+
+**The quality continuation.** The director's two-year proposal continues the quality program in two
+named stages. Stage 2, "Hold", covers quarters 5–6 with 6 FTE of prevention work and $150,000 of
+tooling. Stage 3, "Converge", covers quarters 7–8 with 5 FTE, plus $100,000 of tooling only if a CI
+target is chosen. Each stage ends at a gate, a review where written exit criteria decide whether the
+next stage is funded, in weeks 56, 78, and 104 (the "week 78 gate" is the end of stage 2). There is no
+headcount request. Management decides inside the board's
+[budget envelope](../../glossary.md#budget-envelope); the executives took positions in weeks 46–47, and
+decisions are requested by week 51. At stake: whether prevention keeps its capacity, when Rajiv Menon
+(CFO) wants the tooling offset inside the existing budget and Greg Tanaka (VP Sales) wants the
+prevention engineers on deal features.
+
+**The board headline.** The engineering page of the [board pack](../../glossary.md#board-pack) needs
+one reliability promise. Victor proposes "Sev1 and Sev2 incidents below 10 per quarter" with flat
+headcount. The director's counter is at or below 40 over year 2 as a rolling four-quarter total,
+reported with the severity audit, together with 99.9 percent availability every quarter and prevention
+funded as in the continuation. The draft page carries both; the pack goes to the board at the end of
+week 49. At stake: the number the board will hold engineering to for a year, and whether it rewards
+reclassifying incidents instead of preventing them.
+
+## Other open items
+
+| Item | What is at stake | Who decides | By when |
 |---|---|---|---|
-| Year-2 organization | Split Customer Experience into Web (Daniel Cho) and Mobile (Mateo Arango Ríos); core/permissions to Orders; search-svc to Data and Analytics; Platform Operations becomes Developer Platform. Alternatives B, C, D are in the draft | Victor Lindqvist | Decision week 46; announcement week 51; effective week 53 |
-| VP of Engineering | Whether Northstar needs a VP in year 2 or the director grows into the role. A VP takes one of the 87 seats | Victor asked for a recommendation | Week 48 |
-| Quality continuation | Stage 2 "Hold" (quarters 5–6, 6 FTE, $150,000 tooling) and stage 3 "Converge" (quarters 7–8, 5 FTE); no headcount request | Management, inside the board's budget envelope; executives took positions in weeks 46–47 | Requested by week 51 |
-| Workforce plan | Four options: like-for-like, shaped backfills, two requisitions held ahead, a fixed-scope vendor contract; plus the rule "no customer date without an engineering estimate and a named owner" | Draft to Victor and Rajiv Menon (CFO) in week 49; recommendation left open | With the budget pack |
-| Week 34 portfolio forum | Greg Tanaka's third deal feature (purchase approval rules) against the limit of three cross-team initiatives | The portfolio forum | Held week 34; outcome not recorded |
-| CI target | GitLab CI was proposed as the consolidation target in quarter 2. Stage 3 tooling depends on a choice | Open; Victor's strategy draft says the week 78 gate | Week 78 (draft) |
-| ADR-0001 | How integrations read posted ledger data: read the tables, a versioned export contract (Li Na Zhou's recommendation), or ledger posting events | Nobody's decision rights are mapped; Victor's strategy draft reverses his week 14 "read the tables" remark | Week 60 (proposed) |
-| Board headline | Victor's "Sev1 and Sev2 below 10 per quarter" or the director's counter (at or below 40 over year 2, rolling, with the severity audit) | Open; the draft page carries both | Board pack sent end of week 49 |
-| SOC 2 | Option A (audit in year 2), B (readiness in quarters 5–6, decision at week 78; recommended), or C (evidence library only). A prospect worth about $310,000 a year requires a report | Not named; the options are in the risk register drafted for Victor's review | Not set; option B decides at week 78 |
-| AI position | An interim AI-assisted engineering policy; a staggered coding-assistant trial in quarter 5; non-AI fixes first for order checking; the order assistant deferred; no backfills held open on AI | Victor, for whom the position is written; all decisions open | Trial would start week 53 |
-| Security reporting line | Marta Kowalczyk (Head of IT) objects to moving security out of IT; three reporting options recorded without a recommendation | Open; none chosen | Not set |
-| TR-01 funding | The Core framework migration (TR-01 on the technology risk register): 120, 190, or 243 engineer-days ($96,000 to $194,400), expensed. One open critical vulnerability waits on it | Open | Not set |
+| VP of Engineering | Whether Northstar adds a VP in year 2 or the director grows into the role. A VP takes one of the 87 seats, so one engineer seat goes | Victor asked for a recommendation | Week 48 |
+| Workforce plan | How vacancies are filled in year 2. Four options: like-for-like backfills, shaped backfills, two [requisitions](../../glossary.md#requisition) held ahead (which needs an exception to the 87-seat rule), or a fixed-scope vendor contract; plus the rule "no customer date without an engineering estimate and a named owner", which Greg opposes | Draft to Victor and Rajiv in week 49; recommendation left open | With the budget pack |
+| Week 34 portfolio forum | Whether Greg's third deal feature (purchase approval rules) breaks the limit of three cross-team initiatives in progress | The portfolio forum | Held week 34; outcome not recorded |
+| CI target | Which build system the other three converge on. GitLab CI was proposed in quarter 2, and stage 3's tooling depends on the choice | Open; Victor's strategy draft says the week 78 gate | Week 78 (draft) |
+| [ADR-0001](../../glossary.md#adr-0001) | How integrations read posted ledger data: read the tables, a versioned export contract (Li Na Zhou's recommendation), or ledger posting events. Victor's strategy draft reverses his week 14 "read the tables" remark | Nobody's decision rights are mapped | Week 60 (proposed) |
+| SOC 2 | Whether Northstar gets an independent audit report on its controls: option A (audit in year 2), B (readiness in quarters 5–6, decision at week 78; recommended), or C (evidence library only). A prospect worth about $310,000 a year requires a report | Not named; the options are in the risk register drafted for Victor's review | Not set; option B decides at week 78 |
+| AI position | How engineers may use AI tools, and which AI features to build: an interim policy, a staggered coding-assistant trial in quarter 5, non-AI fixes first for order checking, the order assistant deferred, no backfills held open on AI | Victor, for whom the position is written; all decisions open | Trial would start week 53 |
+| Security reporting line | Whether the two-person security function stays inside IT. Marta Kowalczyk (Head of IT) objects to moving it; three options are recorded without a recommendation | Open; none chosen | Not set |
+| TR-01 funding | Whether to pay for the Core framework migration, item TR-01 on the technology risk register (see [register IDs](../../glossary.md#register-ids)): 120, 190, or 243 engineer-days ($96,000 to $194,400 at Finance's day rate of $800), expensed. One open critical vulnerability waits on it | Open | Not set |
+
+Finance's day rate is $185,000 ÷ about 230 working days. It is higher per day than the book's planning
+rate of $3,558 per engineer-week because Finance counts only working days.
 
 Two further items fall in quarter 4. Victor says he will either sign the auth-svc security exception
 before week 50 or have auth-svc restricted further. The rules and processes inventory (weeks 50–51)

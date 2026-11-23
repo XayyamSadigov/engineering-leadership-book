@@ -75,11 +75,9 @@ A [career ladder](../../glossary.md#career-ladder) (also called a leveling guide
 and the behaviors that produce them. It serves the engineer planning growth, the manager giving
 feedback, the promotion committee, and whoever sets pay ranges.
 
-Practitioner books treat the ladder as organizational infrastructure. Camille Fournier's account of
-the management path is known for discussing career ladders as part of making a growing organization's
-expectations explicit ([Fournier, 2017](../../references/bibliography.md#fournier2017manager)), and
-Will Larson's book on engineering management is known for treating leveling and performance processes
-as systems to design ([Larson, 2019](../../references/bibliography.md#larson2019elegant)).
+Practitioners treat the ladder as infrastructure that makes a growing organization's expectations
+explicit ([Fournier, 2017](../../references/bibliography.md#fournier2017manager);
+[Larson, 2019](../../references/bibliography.md#larson2019elegant)).
 
 **This book's recommendation**: four to six dimensions, each described at every level.
 
@@ -111,10 +109,9 @@ Such a ladder promotes whoever sits where the dependencies are, unless managers 
 
 Chapter 4 covers the choice of track. For the ladder, each track needs its own criteria, and levels need
 explicit equivalence across tracks (same level, same band), or engineers conclude that management is the
-real way up. Larson's book on staff-plus work is known for arguing that reaching staff level usually
-takes sponsorship and visible work ([Larson, 2021](../../references/bibliography.md#larson2021staff)),
-and his archetypes show how differently staff roles are shaped
-([Larson, Staff archetypes](../../references/bibliography.md#larson-staff-archetypes)). A staff level
+real way up. Larson's archetypes show how differently staff roles are shaped
+([Larson, 2021](../../references/bibliography.md#larson2021staff);
+[Larson, Staff archetypes](../../references/bibliography.md#larson-staff-archetypes)), so a staff level
 written for one archetype rejects the others. Chapter 29 covers staff roles.
 
 ### Why one manager's judgment is not enough
@@ -124,23 +121,21 @@ tendencies explained more of the differences between ratings than the ratee's pe
 ([Scullen, Mount, and Goff, 2000](../../references/bibliography.md#scullen2000latent); a **research
 finding**, detailed in Chapter 9).
 
-Bias is the second reason, and declaring a process fair does not remove it; structure does. The
-**research findings**, none about software engineers:
+Bias is the second reason. Declaring a process fair does not remove it; structure does. The
+**research findings**, none about software engineers, point the same way:
 
-- In one large service organization, women and minorities received less salary growth than white men
-  with the same performance scores ([Castilla, 2008](../../references/bibliography.md#castilla2008gender)).
-- In three experiments with 445 people with managerial experience, presenting an organization as
-  explicitly meritocratic increased the reward gap in favor of men with equal profiles
+- **Equal scores, unequal rewards.** In one large service organization, women and minorities received
+  less salary growth than white men with the same performance scores
+  ([Castilla, 2008](../../references/bibliography.md#castilla2008gender)). In experiments, calling an
+  organization meritocratic widened the gap
   ([Castilla and Benard, 2010](../../references/bibliography.md#castilla2010paradox)).
-- Among 29,809 management-track employees of a retail chain, women received lower "potential" ratings
-  despite higher performance ratings. The potential gap explained about half of the gender promotion
-  gap, and women later outperformed, so the ratings were poor forecasts
+- **"Potential" is a biased forecast.** In a retail chain, women received lower potential ratings
+  despite higher performance ratings, and later outperformed
   ([Benson, Li, and Shue, 2026](../../references/bibliography.md#benson2026potential)).
-- In a field study of almost 9,000 employees, a reward gap between groups with equal performance
-  scores shrank after the company made reward decisions accountable and transparent
-  ([Castilla, 2015](../../references/bibliography.md#castilla2015accounting)).
-- Whether university teaching was rated on a 6-point or a 10-point scale changed the gender gap in the
-  most male-dominated fields ([Rivera and Tilcsik, 2019](../../references/bibliography.md#rivera2019scaling)).
+- **Structure helps.** A reward gap shrank after one company made reward decisions accountable and
+  transparent ([Castilla, 2015](../../references/bibliography.md#castilla2015accounting)), and even the
+  rating scale's length changed a gender gap
+  ([Rivera and Tilcsik, 2019](../../references/bibliography.md#rivera2019scaling)).
 
 Two lessons follow, which **this book recommends**. Promote on **demonstrated scope at the next
 level**, not on a forecast of potential. And use structure: written criteria, evidence per criterion,
@@ -156,21 +151,6 @@ that measures whether calibration meetings as engineering organizations run them
 the evidence is thin. The practice below is **practitioner consensus** plus this book's
 recommendation.
 
-Calibration also adds biases of its own, described in the next subsection. Countermeasures (**this
-book's recommendation**):
-
-- A written **evidence packet** per case, each claim linked to an artifact (design document, incident
-  review, merge requests, peer statements) and a ladder dimension.
-- **Independent readers** present the case; the nominating manager answers questions.
-- A **decision rule** stated in advance: every dimension at the next level, sustained for two quarters.
-- A **facilitator** who owns consistency and records disputed criteria for the ladder owner.
-- **No quota**, but a published budget for the pay promotions cost. A quota limits who is recognized; a
-  budget limits how fast pay moves.
-- An **outcome review**: promotion rates by team, level, and any group your jurisdiction lets you
-  analyze, against the eligible population.
-
-### Bias inside the calibration meeting
-
 A calibration meeting removes some of one manager's bias and adds the room's. The patterns are
 predictable (**practitioner consensus**, consistent with the research above):
 
@@ -182,8 +162,18 @@ predictable (**practitioner consensus**, consistent with the research above):
 | Affinity | Cases from people like the room read as stronger | Written evidence first; ask "what would we need to see?" before discussing the person |
 | "Potential" | Forecasts replace demonstrated scope | Strike potential from the form; decide on evidence only |
 
-Afterwards, compare outcomes by team and, where lawful, by group (see the outcome review below). A
-pattern the meeting cannot explain from the evidence is a finding about the meeting.
+Countermeasures for the whole process (**this book's recommendation**):
+
+- A written **evidence packet** per case, each claim linked to an artifact (design document, incident
+  review, merge requests, peer statements) and a ladder dimension.
+- **Independent readers** present the case; the nominating manager answers questions.
+- A **decision rule** stated in advance: every dimension at the next level, sustained for two quarters.
+- A **facilitator** who owns consistency and records disputed criteria for the ladder owner.
+- **No quota**, but a published budget for the pay promotions cost. A quota limits who is recognized; a
+  budget limits how fast pay moves.
+- An **outcome review**: promotion rates by team, level, and any group your jurisdiction lets you
+  analyze, against the eligible population. A pattern the meeting cannot explain from the evidence is
+  a finding about the meeting.
 
 ### A "not yet" that can be used
 
@@ -202,6 +192,31 @@ Kim Scott's book is known for pairing caring personally with challenging directl
 ([Scott, 2017](../../references/bibliography.md#scott2017radical)); a vague "not yet" fails the
 second, one without a commitment fails the first. Chapter 5 covers the one-on-one where this happens;
 Chapter 9 covers the different conversation when performance at the current level is the problem.
+
+### The career conversation
+
+Most engineers are not up for promotion in a given cycle, and some never want the next level. Career
+development is the larger job, and it happens in a conversation held once or twice a year, separate
+from the review (**this book's recommendation**, in the spirit of Chapter 5's growth record).
+
+Cover four things, in this order:
+
+1. **Aspirations.** Where do they want to be in two to three years, and what do they want more and
+   less of? "I don't know" is a fine answer; ask what they enjoyed most in the last year instead.
+2. **Strengths and energy.** What do others come to them for? Development that builds on a strength
+   usually moves faster than development that only patches a weakness.
+3. **The next experience, not the next title.** Name one assignment that would stretch them in the
+   direction they chose: leading an incident review, owning a migration, mentoring a new hire, a
+   rotation into another team. An experience produces evidence; a title is the result of evidence.
+4. **Moves across, not only up.** A lateral move to another team, a switch from backend to data, or a
+   trial on the other track (Chapter 4) is development too. A manager who blocks a good move to keep a
+   strong engineer usually loses the engineer anyway, later.
+
+Growing within a level is legitimate. A mid-level engineer who is content, reliable, and learning
+should hear that this is valued, and should still have one growth goal, such as deeper on-call
+competence or a new part of the system. Write the agreed goal and the next experience in the running
+record, and check it at the monthly summary. The [career development
+plan](../../templates/career-development-plan.md) template gives a format.
 
 ### Compensation: three defensible grounds
 
@@ -227,7 +242,8 @@ newcomer earns more than the person who trained them.
 
 Base salary is only part of what engineers are paid. **Total compensation** usually adds a cash bonus
 (often a target percentage of base, paid on company or individual results), equity (stock options or
-restricted stock units that vest over several years), and benefits. In most mid-size companies HR and
+restricted stock units that [vest](../../glossary.md#vesting), become the employee's, over several
+years), and benefits. In most mid-size companies HR and
 finance set the bonus plan, equity pools, and benefits; the engineering manager controls the inputs:
 the level, the performance evidence, and the case for an exception. Know what each part is worth for
 your reports and explain it plainly. An engineer who sees only base pay compares it with an outside
@@ -247,11 +263,10 @@ what evidence would move it.
 
 Pay law differs by jurisdiction, and this book does not give legal advice. Many legal systems require
 equal pay for equal work or work of equal value, and transparency is being written into law. The
-European Union's Pay Transparency Directive, for example, gives applicants a right to information on
-initial pay or its range, forbids asking about pay history, requires the criteria for pay and
-progression to be accessible to workers, lets workers request average pay by sex for comparable work,
-and requires larger employers to report gender pay gaps, with a joint pay assessment where an
-unjustified gap of at least 5 percent persists in a category of workers
+European Union's Pay Transparency Directive, for example, gives applicants a right to the pay range,
+forbids asking about pay history, and lets workers request average pay by sex for comparable work.
+Larger employers must report gender pay gaps, with a joint pay assessment where an unjustified gap of
+at least 5 percent persists
 ([Directive (EU) 2023/970](../../references/bibliography.md#eu2023paytransparency)). Treat it as a
 **standard**, not evidence about outcomes; a directive binds member states, whose national laws set the
 actual obligations. Ask HR or employment counsel in each country before changing pay practice.
@@ -269,6 +284,8 @@ pay and remove room for one-off deals: good for equity, hard on the manager who 
     Before week 1. Northstar, a fictional order-to-cash software company, has 80 engineers in six teams
     and a new Engineering Director about to arrive. Eight engineers left in the past year, and the only
     career ladder is one wiki page. See the [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 The figures are **illustrative**.
 
@@ -349,9 +366,8 @@ counter-offer decision itself.
 optimizers. Broad criteria allow judgment and invite the bias the research describes. A middle course:
 observable examples per cell, stated as illustrations rather than a complete list.
 
-**Calibration against speed.** A calibrated cycle takes weeks, twice a year at most. An exceptional case
-may wait six months, and some people leave. Allow rare out-of-cycle cases with the same packet and two
-calibrators.
+**Calibration against speed.** A calibrated cycle takes weeks, so an exceptional case may wait six
+months. Allow rare out-of-cycle cases with the same packet and two calibrators.
 
 **Transparency against flexibility.** Published bands and criteria reduce unexplained gaps and the
 negotiator's advantage; they also remove the manager's quiet tools and may compress pay. Publishing
@@ -462,10 +478,9 @@ This case is **fictional**. It runs from quarter 2 to week 27, the start of quar
 incidents had fallen from 30 a quarter to 17, and the two renewal features the CTO's mandate protected
 were delivered (see the [timeline](../../case-studies/northstar/timeline.md)).
 
-**Where it starts.** The ladder is the "Engineering levels" wiki page described in Chapter 4: three
-short paragraphs, the staff one describing a "recognized technical expert" with no scope, and no
-manager criteria. Eight engineers left in the year before the director arrived; two were from Data and
-Analytics, and one told Farah Haddad that another company had offered a senior title she had been told
+**Where it starts.** The ladder is the three-paragraph "Engineering levels" wiki page, with no scope
+for staff and no manager criteria. One of two engineers who left Data and Analytics in the previous
+year told Farah Haddad (its manager) that another company had offered a senior title she had been told
 was "a year or two away".
 
 **The rewrite.** In quarter 2 the director and an HR partner drafted the five dimensions above at three
@@ -474,11 +489,10 @@ the draft's Staff column on scope: her team had been holding Senior to a staff s
 operational responsibility dimension placed several Billing engineers above their titles; the people
 carrying the ledger pages had never been credited for it.
 
-**The first calibrated cycle.** At the start of quarter 3, managers nominated nine engineers for Senior.
-Two managers from other teams read each packet, with the three staff engineers (Ines Carvalho, Kwame
-Mensah, and Li Na Zhou) reading technical evidence. Five were promoted, including two Billing ledger engineers and a Bogotá
-data engineer. Two of Customer Experience's three nominations received "not yet", with the same gap:
-features shipped well, but no design decision others had built on.
+**The first calibrated cycle.** At the start of quarter 3, managers nominated nine engineers for Senior,
+with managers from other teams and the three staff engineers reading the packets. Five were promoted,
+including two Billing ledger engineers. Two of Customer Experience's three nominations received "not
+yet", with the same gap: features shipped well, but no design decision others had built on.
 
 **A "not yet" in Data and Analytics.** Yusuf Demir, a data engineer in Minneapolis with three years at
 Northstar, also received a "not yet". Farah gave all five parts. The gap was influence beyond the team:
@@ -489,12 +503,15 @@ check at three months. Yusuf said it was the first time anyone had told him what
 
 **The pay question.** The equity review flagged Sunil Varghese ($24,000 below the outside hire at the
 same level and scope) and five more US Senior Engineers below 0.92 compa-ratio, all promoted internally.
-Rajiv Menon (CFO) said the year's merit budget was set. How to fund and sequence the adjustments is exercise X1.
+Rajiv Menon (CFO) said the year's merit budget was set. The lesson of the case: a clear ladder found
+the problems, and fixing them costs money the plan did not hold. How to fund and sequence the
+adjustments is exercise X1.
 
 ## Exercises
 
 Solutions are in [chapter 8 solutions](../../solutions/ch08-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md).
+[baseline page](../../case-studies/northstar/baseline-data.md); who's who is on the
+[cast](../../case-studies/northstar/cast.md) page.
 
 ### Foundational
 

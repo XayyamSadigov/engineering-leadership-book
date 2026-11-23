@@ -8,11 +8,12 @@ This page shows the Engineering Director's first year at Northstar on one page: 
 each week, where the full record is, and which chapter tells it. The second table gives the headline
 results quarter by quarter. Weeks are counted from the director's first day. Each quarter is 13 weeks:
 quarter 1 is weeks 1–13, quarter 2 weeks 14–26, quarter 3 weeks 27–39, and quarter 4 weeks 40–52.
-People are listed on the [cast](cast.md) page.
+People are listed on the [cast](cast.md) page. For the same year told as a story, read
+[the year in brief](year-in-brief.md).
 
 ## Week by week
 
-The "Record" column links to the section of [the director's first year](first-quarter.md) or
+The "Record" column links to the section of [the year 1 record](first-quarter.md) or
 another page that holds the details.
 
 ### Quarter 1: ownership, severity, and the release train

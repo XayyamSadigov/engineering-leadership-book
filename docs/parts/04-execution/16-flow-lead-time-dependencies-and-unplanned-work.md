@@ -5,12 +5,9 @@ build this" and "a customer can use it" is spent waiting: in a backlog, a review
 plan, a release. The chapter shows how to map where that time goes, how work in progress and batch
 size govern it, how to make unplanned work visible and sort it by cause, and how to treat cross-team
 dependencies as a design problem. The running example is Northstar Technologies, the fictional
-company in the [case study](../../case-studies/northstar/index.md).
-
-Chapter 23 will look inside one step, Northstar's Core [release train](../../glossary.md#release-train)
-(a release that leaves on a fixed schedule carrying every ready change). This chapter follows a feature
-along its whole path. The capacity model for quality-driven unplanned work is in Chapter 27,
-systems-thinking basics in Chapter 3, and team design in Chapters 33 and 34.
+company in the [case study](../../case-studies/northstar/index.md). It follows a feature along its
+whole path; Chapter 23 looks inside one step (release), Chapter 27 sizes quality-driven unplanned work,
+and Chapters 33 and 34 cover team design.
 
 ## Why This Matters
 
@@ -70,7 +67,7 @@ customers can use it. The book uses two senses of the term, and this chapter use
 
 | Term | Starts | Ends | Northstar figures that use it |
 |---|---|---|---|
-| Change lead time (DORA's "lead time for changes") | Commit | Running in production | The baseline team table: Core 19 days, Payments and Integrations 4, Customer Experience 6 (Chapters 14, 15, 18) |
+| Change lead time (DORA's "lead time for changes") | Commit | Running in production | The baseline team table: Core 19 days, Payments and Integrations 4, Customer Experience 6 |
 | Lead time, commitment to customer | The organization commits to the work | Customers can use it | This chapter: the 76-day standing-orders feature; medians of 11, 24, and 41 days by number of dependencies |
 
 The commit-to-production slice is often the smallest part of the second. That is how a team with a
@@ -92,13 +89,32 @@ a benchmark: it depends on how generously "work" is counted. Use it to compare y
 the map is the location of the waits, which in cross-team work cluster at intake, at handoffs between
 teams, and at release.
 
+### Flow measures: throughput, cycle time, and work item age
+
+A map follows one item. Three measures watch every item on a team's board; with work in progress, they
+are the Kanban Guide's four flow measures (Chapter 15):
+
+| Measure | What it counts | Example reading |
+|---|---|---|
+| Throughput | Items finished per week | "We finish about 9 items a week" |
+| [Cycle time](../../glossary.md#cycle-time) | Elapsed days from start of work to done, for finished items | "85 percent of items finish within 9 days" |
+| Work item age | Days an item still open has been in progress | "Three items are older than 9 days" |
+
+Cycle time is the team's slice of lead time: it starts when someone begins the work, not when the
+organization commits to it, so the wait before work starts is outside it. Read cycle time as
+percentiles, not an average. The 85th percentile ("85 percent finish within 9 days") is what a team
+can tell a requester about a single small item (Chapter 17). Work item age is the early warning: an
+open item older than the team's 85th-percentile cycle time is already unusual, and a daily look at the
+oldest items catches stalls before they become misses.
+
 ### Little's law and work in progress
 
 John Little proved in 1961 that, for a queueing system in a steady state, the average number of items
 in the system equals the average arrival rate times the average time an item spends there: L = λW
 ([Little, 1961](../../references/bibliography.md#little1961proof)). In his fiftieth-anniversary
 review, Little notes that operations management writes it as work in process equals throughput times
-cycle time. Over a finite window in which the system starts and ends empty, it holds exactly for the
+cycle time; "cycle time" there means time in the system, whichever start point you choose. Over a
+finite window in which the system starts and ends empty, it holds exactly for the
 measured data ([Little, 2011](../../references/bibliography.md#little2011law)). This is a
 **research finding** in the strongest form available: a theorem, not a correlation.
 
@@ -131,8 +147,8 @@ In the simplest queueing model (one server, random arrivals and service times), 
 equals the service time multiplied by ρ ÷ (1 − ρ), where ρ is utilization. At 80 percent utilization
 an item waits about four service times; at 90 percent, nine; at 95 percent, nineteen. Real teams are
 not this model, but the shape carries over: near full utilization, waits grow much faster than load.
-Reinertsen's book on product development flow is widely known for arguing that development
-organizations ignore this because their queues are invisible
+Reinertsen argues that product development organizations ignore this because their queues are
+invisible
 ([Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles)); treat that as
 **expert opinion** built on standard queueing results.
 
@@ -187,9 +203,17 @@ A director who sees only "34 percent unplanned" will hand it all to the quality 
 requests between teams, the quality program cannot touch that half.
 
 A team that receives many requests becomes an **interrupt sink**: other teams' work and failures
-arrive there. Standard protections are a rotating interrupt role (one or two people a week absorb
-requests so the rest can plan), one intake with a stated response time, and the most frequent request
-types turned into self-service.
+arrive there. Standard protections are a rotating interrupt role, one intake with a stated response
+time, and the most frequent request types turned into self-service.
+
+**Running an interrupt rotation** (**this book's recommendation**). One or two people, sized to the
+measured interrupt load, take the role for a week, then hand over in writing. They take every new
+request, page, and urgent question, and start no planned work. They finish what they can within a day
+and turn the rest into tickets ranked with everything else, so the role is triage, not a second
+backlog. Planned work is not handed to them because they look free. Two habits keep the role from
+becoming a dumping ground: in a quiet week the person improves a runbook or automates the most
+frequent request, and the team reviews the request log monthly to find what self-service should
+remove next. Everyone on the team rotates, including seniors, or the role becomes a junior penalty.
 
 ### Dependencies as a design problem
 
@@ -209,7 +233,7 @@ alone; columns with high totals are on everyone's critical path. Three responses
 preference for recurring dependencies:
 
 - **Remove it**: move ownership to the team that needs the change, or provide self-service. *Team
-  Topologies* is known for arguing that teams should be designed for fast flow with few deliberate
+  Topologies* argues that teams should be designed for fast flow with few deliberate
   interactions ([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team)); Chapter
   33 covers team types and cognitive load.
 - **Loosen it**: replace a synchronous dependency with a stable contract (versioned API, contract
@@ -222,12 +246,17 @@ preference for recurring dependencies:
 !!! info "Northstar so far"
     This example is set in the baseline quarter, before the director arrived. Northstar delivered 7 of
     17 committed roadmap items on time, 34 percent of capacity went to unplanned work, and Core shipped
-    on a two-week release train. See the [timeline](../../case-studies/northstar/timeline.md).
+    on a two-week release train. See the [timeline](../../case-studies/northstar/timeline.md). New to
+    Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
-This example is **illustrative**. It maps a feature Northstar shipped in the baseline quarter: *standing orders*, which let a distributor's customer schedule a repeating
-order. It touched Orders (order capture, and core/scheduler, then unowned), Billing (invoicing),
-Customer Experience (web and mobile screens), and Platform Operations (a test environment and the
-release train). It was reconstructed from tickets, merge requests, and release notes. Assumptions:
+This example is **illustrative**. It maps a feature Northstar shipped in the baseline quarter:
+*standing orders*, which let a distributor's customer schedule a repeating order. It touched Orders
+(order capture, and core/scheduler, then unowned), Billing (invoicing), Customer Experience (web and
+mobile screens), and Platform Operations (a test environment and the
+[release train](../../glossary.md#release-train), the fixed-schedule Core release carrying every ready
+change). "Refinement" is the session where a team breaks down and clarifies work before starting it.
+The map was reconstructed from tickets, merge requests, and release notes. Assumptions:
 only the critical path is mapped; "work" counts calendar days in which someone actively worked on the
 item, which overstates effort.
 
@@ -399,35 +428,27 @@ dependencies rather than effort. Chapter 17 turns flow data into forecasts; Chap
 
 ## Case Study
 
-This case is **fictional**. It is set at the start of quarter 2 (week 14), after
-[the director's first quarter](../../case-studies/northstar/first-quarter.md). Quarter 1 cut Sev1 and
-Sev2 incidents from 30 to 21, and Core has shipped weekly since week 5.
+This case is **fictional**. It is set at the start of quarter 2 (week 14); see the
+[year 1 record](../../case-studies/northstar/first-quarter.md). Core has shipped weekly since week 5.
 
-Amara Okafor (CPO) asked why the accounting-system integration, a renewal commitment due at the end
-of week 19 (the sixth week of quarter 2), still looked tight although Core now shipped weekly. Four Payments and Integrations
-engineers were building a new erp-sync connector with daily reconciliation of posted invoices. It
-needed Billing (posted-invoice data) and Platform Operations (test environments mimicking customers'
-accounting systems). The director brought the standing-orders map (most waiting sat in other teams'
-queues) and two more pieces of evidence.
+Amara Okafor (CPO) asked why the accounting-system integration, a renewal commitment due in week 19,
+still looked tight although Core now shipped weekly. Four Payments and Integrations engineers were
+building a new erp-sync connector with daily reconciliation of posted invoices. It needed Billing
+(posted-invoice data) and Platform Operations (test environments mimicking customers' accounting
+systems). The director brought the standing-orders map (most waiting sat in other teams' queues) and
+two more pieces of evidence.
 
-**The dependency count.** Li Na Zhou (staff engineer for data and integration) and the managers
-counted the baseline quarter's work items of a week or more: 164 items, 61 needing at least one other
-team, 86 dependency links. The full team-by-team matrix is on the
-[baseline page](../../case-studies/northstar/baseline-data.md#cross-team-dependencies); the pairs that
-matter most:
-
-| Pair | Links, by direction | Total |
-|---|---|---|
-| All teams to Platform Operations | Orders 8, Billing 7, Customer Experience 6, Payments and Integrations 5, Data and Analytics 3 | 29 |
-| Orders and Billing | Orders to Billing 9, Billing to Orders 6 | 15 |
-| Customer Experience and Orders | Customer Experience to Orders 8, Orders to Customer Experience 3 | 11 |
-| Payments and Integrations and Billing | Billing to Payments and Integrations 5, the reverse 4 | 9 |
-
+**The dependency count: every extra team lengthens the wait.** Li Na Zhou (staff engineer for
+data and integration) and the managers counted the baseline quarter's work items of a week or more.
 Median lead time (commitment to customer) was 11 days for the 103 items with no dependency, 24 for the
-42 with one, and 41 for the 19 with two or more. Platform Operations received 34 percent of all links.
+42 with one, and 41 for the 19 with two or more. Platform Operations received 29 of the 86 dependency
+links, more than any other team; Orders and Billing were the busiest pair, with 15. The full
+team-by-team matrix is on the
+[baseline page](../../case-studies/northstar/baseline-data.md#cross-team-dependencies).
 
-**The unplanned work breakdown.** The baseline's two-week sample was re-coded with one shared
-definition. Figures are percentage points of each team's capacity; rows sum to the baseline shares.
+**The unplanned work breakdown: most of it is not a quality problem.** The baseline's two-week sample
+was re-coded with one shared definition. Figures are percentage points of each team's capacity; rows
+sum to the baseline shares.
 
 | Team | Failure recovery | Other teams' requests | Toolchain and environment | Expedited | Total |
 |---|---|---|---|---|---|
@@ -439,15 +460,20 @@ definition. Figures are percentage points of each team's capacity; rows sum to t
 | Platform Operations | 14 | 20 | 10 | 2 | 46 |
 | Staff engineers | 8 | 10 | 2 | 0 | 20 |
 
-In engineers, that is about 27 [FTE](../../glossary.md#fte) (full-time equivalent engineers). Failure
-recovery is 43 percent of it, other teams' requests 29, toolchain 15, and expedites 12. The quality
-program targets the first category; the other 57 percent are flow and design problems. Platform Operations was the clearest interrupt sink: 20 of its
-46 points were other teams' requests, mostly test environments, access, and pipeline changes across
-four build systems.
+In engineers, that is about 27 [FTE](../../glossary.md#fte) (full-time equivalent engineers), split by
+source:
+
+| | Failure recovery | Other teams' requests | Toolchain | Expedited |
+|---|---|---|---|---|
+| Share of unplanned work | 43% | 29% | 15% | 12% |
+
+The quality program can reach only the first column; the other 57 percent are flow and design problems.
+Platform Operations was the clearest interrupt sink: 20 of its 46 points were other teams' requests,
+mostly test environments, access, and pipeline changes across four build systems.
 
 The director proposed four decisions, and Amara and Victor Lindqvist (CTO) agreed:
 
-1. **Book the Billing dependency.** Billing reserved capacity in weeks 1 to 3 for the posted-invoice
+1. **Book the Billing dependency.** Billing reserved capacity in weeks 14 to 16 for the posted-invoice
    export the reconciliation reads, with a Billing engineer reviewing the integration side.
    Coordination, accepted because the integration is a one-off.
 2. **Loosen Payments and Integrations and Billing.** Their 9 links were mostly ledger fields the

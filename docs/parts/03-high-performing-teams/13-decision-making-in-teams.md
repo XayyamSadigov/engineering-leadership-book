@@ -11,7 +11,8 @@ director's first quarter.
 
 At team scale, slow or unclear decisions are a hidden queue. Work waits for a decision nobody knows
 they own, engineers build on assumptions later reversed, and the same debate returns because nothing
-recorded the last one. It shows up in lead time, not in sprint reports.
+recorded the last one. It shows up in lead time (how long work takes from request to delivery), not in
+sprint reports.
 
 At organization scale, the costly decisions are between teams: who owns a shared module, whose
 roadmap gives way. Inside a team a manager breaks ties; between teams there is often no obvious
@@ -103,8 +104,7 @@ door into a two-way door, often more cheaply than deciding more carefully. Secon
 build on stop being reversible. A module owner can be changed on paper in a day, but the owning team's
 runbooks, alerts, and habits cannot.
 
-Peter Drucker's account of the effective executive is known for arguing that executives should make
-few decisions, address the generic problem behind a recurring one, and build the action into the
+Peter Drucker argued that effective executives make few decisions, address the generic problem behind a recurring one, and build the action into the
 decision ([Drucker, 1967](../../references/bibliography.md#drucker1967effective)). A decision that
 recurs every month is a missing rule: decide the rule once and give an owner the cases.
 
@@ -169,7 +169,8 @@ repository and numbered, so that a reversed decision is marked superseded rather
 is that without the rationale, newcomers can only accept old decisions blindly or reverse them blindly
 ([Nygard, 2011](../../references/bibliography.md#nygard2011adr)). Chapter 28 (Architecture
 Decision-Making and Governance) covers them in depth. The format works just as well for organizational
-decisions such as ownership, on-call policy, or a team's working agreement.
+decisions such as ownership, on-call policy, or a team's working agreement; the
+[decision record template](../../templates/architecture-decision-record.md) is a starting point.
 
 A record survives personnel change only if it answers the questions a successor will ask (**this book's
 recommendation**):
@@ -210,8 +211,7 @@ Chapter 11).
 
 **Groupthink**, Irving Janis's term for cohesive groups suppressing dissent, is famous, but its support
 as a complete model is contested. The book uses only the narrow point: dissent that is not asked for is
-often not offered. Jerry
-Harvey's essay on the **Abilene paradox** is known for a related pattern: a group agrees on a course
+often not offered. Jerry Harvey's essay on the **Abilene paradox** describes a related pattern: a group agrees on a course
 each member privately rejects, because each believes the others want it
 ([Harvey, 1974](../../references/bibliography.md#harvey1974abilene)).
 
@@ -219,7 +219,7 @@ each member privately rejects, because each believes the others want it
 
 Kahneman, Lovallo, and Sibony argued that awareness of cognitive biases has done little to improve
 business decisions, and that executives making big bets typically rely on a team's proposal. Their
-article is known for a checklist a decision maker applies to such a recommendation
+article offers a checklist a decision maker applies to such a recommendation
 ([Kahneman, Lovallo, and Sibony, 2011](../../references/bibliography.md#kahneman2011bigdecision)). The
 idea the book borrows: review the process behind a recommendation, not only its conclusion. Were
 alternatives seriously considered, was dissent heard, and does the team have an interest in the
@@ -395,15 +395,17 @@ For an engineering manager or director setting up decision-making for a team or 
 
 ## Case Study
 
-This case is **fictional**. It analyzes a decision left open in the director's
-[first quarter](../../case-studies/northstar/first-quarter.md) and then sets a decision for the reader
+This case is **fictional**. It analyzes a decision left open in the director's first quarter (see the
+[year 1 record](../../case-studies/northstar/first-quarter.md)) and then sets a decision for the reader
 at the start of quarter 2. The outcome is deliberately not fixed.
 
 !!! info "Northstar so far"
     Week 14, the start of quarter 2. In quarter 1 the director set minimum obligations for
     [tier 1](../../glossary.md#tier-1) components (those on the order or payment path), assigned owners
     to most unowned components, and cut Sev1 and Sev2 incidents (the two highest severity levels) from
-    30 to 21. See the [timeline](../../case-studies/northstar/timeline.md).
+    30 to 21. See the [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the
+    year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 !!! note "What you need to know for this case"
     - **The module.** core/permissions, part of the Core monolith. At baseline four teams changed it,
@@ -413,8 +415,8 @@ at the start of quarter 2. The outcome is deliberately not fixed.
       standards process recorded an exemption. Its compensating control (a substitute safeguard while
       the rule is not met): Platform Operations pages an incident lead whom the director's office
       assigns.
-    - **The deadline.** The exemption expires with the decision, and exemptions last at most two
-      quarters, so it lapses by the end of quarter 3 (week 39).
+    - **The deadline.** The exemption lasts until someone decides ownership, but no longer than two
+      quarters: the end of quarter 3 (week 39).
 
 **What happened in quarter 1.** In week 4 the director assigned two of the three unowned Core
 modules: core/customer to Orders and core/scheduler to Billing. core/permissions stayed undecided at
@@ -423,10 +425,9 @@ day 90, covered by the exemption above.
 **Reading it as decision avoidance.** The record does not say why the decision stayed open, and this
 case does not invent a story. But every element of the avoidance loop is present. Component ownership
 is assigned by the director, so no staff engineer's ten-day queue contains it. The exemption reduced
-the risk, and with it the urgency. Its expiry is tied to the decision, so the workaround cannot force
-the decision that ends it. The ten-working-day rule worked as designed, on the exemption; the decision
-that needed a service level was the ownership itself. Only the two-quarter limit remains as an outside
-deadline.
+the risk, and with it the urgency. It ends when the decision is made, so it cannot force the decision.
+The ten-day queue did its job: it granted the exemption on time. But the decision that needed a
+deadline was the ownership itself, and only the two-quarter limit supplies one.
 
 **The decision at the start of quarter 2.** The facts on the table:
 
@@ -435,12 +436,13 @@ deadline.
 - Platform Operations in quarter 2 has five infrastructure engineers, since all seven QA engineers
   moved into product teams in week 10. None of the five has changed Core code.
 - Priya Raman's position: Orders makes most of the changes and already owns core/customer, but it also
-  carries bulk ordering, due in week 26, and takes notification-svc from quarter 2. She would accept
-  core/permissions after week 26.
+  carries bulk ordering, due in week 26, and takes over notification-svc (the customer notification
+  service) from quarter 2. She would accept core/permissions after week 26.
 - Tom Becker's position: permissions belongs with identity, next to auth-svc, which his team owns. But
   his team cannot support Core Java code and would need Orders engineers for every change.
-- A permissions extraction from core/customer is funded for quarter 2, led by Ines Carvalho (staff
-  engineer for Core code standards). New work will land in or next to the unowned module.
+- Permission checks now embedded in core/customer are being moved out of it, inside Core, in quarter 2.
+  Ines Carvalho (staff engineer for Core code standards) leads the work. Whoever owns core/permissions
+  will inherit new code that lands in or next to it.
 
 Even Orders, the largest contributor, made fewer than half the changes (17 of 38). Whichever team owns
 the module, most changes will come from other teams and the owner must review them. That argues for an
@@ -536,7 +538,7 @@ what evidence you would gather, how you would answer her, and what you would cha
 ## References and Further Reading
 
 - [Stasser and Titus, 1985](../../references/bibliography.md#stasser1985pooling). The founding
-  hidden-profile study. Abstract level.
+  hidden-profile study.
 - [Lu, Yuan, and McLeod, 2012](../../references/bibliography.md#lu2012hiddenprofiles). Meta-analysis of
   65 hidden-profile studies and their moderators.
 - [Edmondson, 1999](../../references/bibliography.md#edmondson1999psychological). Why people do or do
@@ -548,7 +550,7 @@ what evidence you would gather, how you would answer her, and what you would cha
   [Bain, RAPID](../../references/bibliography.md#bain-rapid), and
   [Rogers and Blenko, 2006](../../references/bibliography.md#rogers2006whohasd). Decision-role models.
 - [Kahneman, Lovallo, and Sibony, 2011](../../references/bibliography.md#kahneman2011bigdecision).
-  Reviewing a team's recommendation for bias. Summary level here.
+  Reviewing a team's recommendation for bias.
 - [Harvey, 1974](../../references/bibliography.md#harvey1974abilene). The Abilene paradox.
 - [Drucker, 1967](../../references/bibliography.md#drucker1967effective) and
   [Grove, 1983](../../references/bibliography.md#grove1983high). Few decisions; discussion, decision,

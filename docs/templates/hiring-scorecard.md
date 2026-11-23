@@ -16,6 +16,11 @@ scored on the same scale, against the same attributes. Use it for every hire and
 because the common alternative, a loop that ends with "would I work with this person", measures the
 interviewers' confidence more than the candidate.
 
+!!! tip "Minimum version"
+    For the next search, write three first-year outcomes, four attributes with the must-haves marked, the
+    session that measures each, and a decision rule, all before the first candidate. Add full rubrics, the
+    debrief protocol, and the six-month check before the second search.
+
 ## How to fill it in
 
 1. **Write three to five first-year outcomes** with two engineers from the team. For a backfill, start
@@ -78,9 +83,10 @@ post_hire: {six_month: "", twelve_month: "", milestones: []}
 
 !!! info "Northstar so far"
     Week 14 of the Engineering Director's first year at Northstar Technologies, a fictional company.
-    Billing has the most incidents, and three ledger engineers carry most of its on-call pages. The
-    last ledger backfill took 15 weeks and, about 24 weeks after starting, the new hire was not yet on
-    call. See the [timeline](../case-studies/northstar/timeline.md) and the
+    Billing has the most incidents, and three ledger engineers carry most of its on-call pages. The last
+    ledger backfill took 15 weeks and, about 24 weeks after starting, the new hire was not yet on call.
+    See the [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
     [cast](../case-studies/northstar/cast.md).
 
 Before the director arrived, each manager ran a loop of an algorithm puzzle, an unstructured "team chat",

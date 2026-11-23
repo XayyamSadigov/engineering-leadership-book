@@ -22,9 +22,8 @@ problems look harsh by comparison. The opposite failure is just as real: a proce
 as low performers when the cause was an impossible role, a broken toolchain, or an interrupt load
 nobody measured.
 
-At executive scale, the question is the system: review cadence, whether ratings are trusted, whether
-forced distributions are used, and whether managers are expected to act. Once people distrust these
-choices, they are hard to reverse.
+At executive scale, the question is the system: review cadence, whether ratings are trusted, and
+whether managers are expected to act. Once people distrust these choices, they are hard to reverse.
 
 ## Learning Objectives
 
@@ -75,13 +74,12 @@ Several causes usually coexist, so run the whole checklist rather than stopping 
 ### Four causes, and the evidence that separates them
 
 Diagnose before you remedy, and check the environment before the person. That is the shared point of
-three classic practitioner works. Andrew Grove reduced failure to perform to capability or motivation
-([Grove, 1983](../../references/bibliography.md#grove1983high)). Robert Mager and Peter Pipe offered a
-blunt test for a skill gap: if the person's job truly depended on the task, could they do it? If so,
-training is not the remedy ([Mager and Pipe, 1997](../../references/bibliography.md#mager1997analyzing)).
-Thomas Gilbert argued that most performance deficits come from the environment (information,
-resources, incentives) rather than the individual
-([Gilbert, 1978](../../references/bibliography.md#gilbert1978human)).
+three classic practitioner works: Grove's split of failure into capability or motivation, Gilbert's
+argument that most deficits come from the environment, and Mager and Pipe's test for a skill gap (if
+the person's job truly depended on the task, could they do it? If so, training is not the remedy)
+([Grove, 1983](../../references/bibliography.md#grove1983high);
+[Gilbert, 1978](../../references/bibliography.md#gilbert1978human);
+[Mager and Pipe, 1997](../../references/bibliography.md#mager1997analyzing)).
 
 This book uses four causes, extending those ideas (**this book's recommendation**):
 
@@ -142,12 +140,9 @@ Ask the person for a short self-review first; it surfaces work you missed. A rev
 for the one you chose. "Meets expectations" means the agreed expectations were met; it is not a
 polite word for a problem you have not raised.
 
-**Strong performers.** They get the least attention and need specific feedback as much as anyone:
-what exactly made the work strong, what the next level asks of them, and one sponsorship action
-(Chapter 5). A strong performer who hears only praise concludes that nobody is watching their growth.
-
-**Delivery.** Share the written review a day before the conversation, so the meeting is a discussion,
-not a reading.
+**Strong performers** need specific feedback as much as anyone: what made the work strong, what the
+next level asks, and one sponsorship action (Chapter 5). Share every written review a day before the
+conversation, so the meeting is a discussion, not a reading.
 
 ### Performance evidence when code is AI-assisted
 
@@ -166,10 +161,10 @@ organizations everyone, including the person on it, reads a PIP as the first ste
 both sides believe is a formality cannot succeed, and the manager loses what it was supposed to
 produce: evidence of whether the person can meet the bar with support.
 
-Elaine Pulakos and Ryan O'Leary argue that performance management has been reduced to formal
-administrative steps, disconnected from the daily guidance that decides whether it works
+Pulakos and O'Leary argue that performance management has shrunk to administrative steps cut off
+from the daily guidance that makes it work
 ([Pulakos and O'Leary, 2011](../../references/bibliography.md#pulakos2011broken)). It is a position
-paper, not an experiment, but it names the PIP failure: a form replacing weekly guidance.
+paper, but it names the PIP failure: a form replacing weekly guidance.
 
 A process with a real chance of success has five properties (**this book's recommendation**):
 
@@ -215,15 +210,37 @@ formal plan starts, not after it fails.
   complaints carry specific duties or protections in many jurisdictions. Stop and take advice.
 - **No pretext.** If the decision is already made, a plan is dishonest and often legally risky.
 
+### When the answer is exit
+
+Some plans end in an exit. How it is done decides what the person carries away and what the team
+learns about you. The steps below are **this book's recommendation**; HR sets the legal and
+contractual details.
+
+**The conversation.** Short, private, early in the week, with HR present or available. State the
+decision in the first minute, plainly: "We have decided to end your employment. The plan's criteria
+were not met." Do not re-argue the evidence; the weekly notes already did that. Explain what happens
+next (last day, pay, references, any support the company offers) and give it in writing. Let the
+person react, answer practical questions, and do not try to make them agree.
+
+**Access and handover.** Agree with HR in advance when access ends; for most engineers, the end of the
+conversation day is enough, and escorting someone out of the building is rarely needed. Plan the
+handover of on-call shifts, open work, and credentials without the person's help, so that nothing
+depends on goodwill you have just tested.
+
+**Telling the team.** The same day, briefly: the person has left, who now owns their work, and what
+changes for the team. Do not give reasons or details; the person's privacy outlasts their employment.
+Expect questions in one-on-ones and answer the ones about the team's work, not about the person.
+
+**Afterwards.** Step 10 of the Practical Playbook applies.
+
 ### The cost of acting late
 
-Managers delay because acting is unpleasant, and others pay for the delay. Will Felps, Terence
-Mitchell, and Eliza Byington reviewed research on negative group members: people who withhold effort, express persistent negative emotion, or violate important
-interpersonal norms. Their model proposes that teammates react with a sense of unfairness, negative
-mood, and reduced trust, leading to defensive responses such as lashing out or withdrawal that damage
-cooperation ([Felps, Mitchell, and Byington, 2006](../../references/bibliography.md#felps2006bad)).
-It is a proposed model, not a measured effect, and most underperformers are not "bad apples". But the withholding-effort path applies: a teammate who visibly does less without consequence
-is a fairness signal to everyone.
+Managers delay because acting is unpleasant, and others pay for the delay. Felps, Mitchell, and
+Byington's model of negative group members, including people who withhold effort, proposes that
+teammates react with a sense of unfairness and reduced trust, then withdraw or lash out
+([Felps, Mitchell, and Byington, 2006](../../references/bibliography.md#felps2006bad)). It is a
+proposed model, not a measured effect, and most underperformers are not "bad apples". But a teammate
+who visibly does less without consequence is a fairness signal to everyone.
 
 The practical cost is usually measurable, as the Engineering Organization Example shows. Kim Scott
 calls the manager's failure here ruinous empathy: withholding a hard message to be kind
@@ -231,12 +248,11 @@ calls the manager's failure here ruinous empathy: withholding a hard message to 
 
 ### What ratings measure
 
-Steven Scullen, Michael Mount, and Maynard Goff decomposed ratings of managers in two large samples
-(2,350 and 2,142 managers, each rated on three dimensions by two bosses, two peers, two subordinates,
-and themselves). Idiosyncratic rater effects, the individual rater's own tendencies, accounted for 62
-and 53 percent of the differences between ratings; the ratee's actual performance accounted for 21 and
-25 percent ([Scullen, Mount, and Goff, 2000](../../references/bibliography.md#scullen2000latent)).
-In those data, a rating said more about who gave it than about who received it.
+A rating says more about who gave it than about who received it. Scullen, Mount, and Goff decomposed
+ratings of over 4,000 managers, each rated by bosses, peers, subordinates, and themselves. The
+individual rater's own tendencies accounted for 62 and 53 percent of the differences between ratings
+in the two samples; the ratee's actual performance accounted for 21 and 25 percent
+([Scullen, Mount, and Goff, 2000](../../references/bibliography.md#scullen2000latent)).
 
 These were developmental ratings, not ratings tied to pay, and the ratees were managers. Even so,
 three consequences follow (**this book's recommendation**, extending the finding):
@@ -253,15 +269,14 @@ three consequences follow (**this book's recommendation**, extending the finding
 Forced distribution requires managers to place fixed shares of their people in each rating band, and
 in its strongest form to remove the bottom band every year. A well-known simulation by Scullen,
 Bergey, and Aiman-Smith found such a system could noticeably improve a workforce's average performance
-potential, that most of the improvement came in the first several years, and that the gain depended
-mainly on the percentage fired and on voluntary turnover
+potential, mostly in the first several years, depending on the share fired and on voluntary turnover
 ([Scullen, Bergey, and Aiman-Smith, 2005](../../references/bibliography.md#scullen2005forced)).
 
 Read carefully, that result argues against routine forced ranking in engineering (**this book's
 recommendation**). The gains are front-loaded, so a permanent cull keeps paying costs after the
 benefits shrink. The simulation does not report effects on cooperation or willingness to take hard,
 low-visibility work, and it relies on ratings with the rater effects above. Forced distribution can be
-a one-time correction where ratings have inflated into meaninglessness; as a permanent system it ranks
+a one-time correction where ratings have inflated into meaninglessness. As a permanent system it ranks
 people against each other in work that requires them to help each other.
 
 ## Engineering Organization Example
@@ -270,11 +285,13 @@ people against each other in work that requires them to help each other.
     Before week 1: the baseline quarter at Northstar, the book's fictional order-to-cash company, just
     before the new Engineering Director arrives. Platform Operations has five infrastructure engineers
     and seven QA engineers who run a three-day manual test pass before each release of Core, the shared
-    monolith. See the [timeline](../../case-studies/northstar/timeline.md).
+    monolith. See the [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
-The figures are **illustrative**. They reconstruct the cost of a performance problem in Platform
-Operations in the baseline quarter. The person is Bram Verhoeven, a senior infrastructure engineer
-(see the Case Study).
+The Case Study below tells the story of Bram Verhoeven, a senior infrastructure engineer in Tom
+Becker's Platform Operations team; this section holds its numbers. The figures are **illustrative**.
+They reconstruct the cost of a performance problem in the baseline quarter.
 
 Assumptions: a 13-week quarter of 40-hour weeks; five infrastructure engineers; ticket effort taken
 from the queue's own time records.
@@ -303,10 +320,9 @@ Bram's own reconstruction of his last six weeks, from his calendar and the queue
 | Meetings and other | 48 | 20% |
 | **Total** | **240** | **100%** |
 
-Bram had built Core's Jenkins pipeline and was still the person everyone asked when it broke. Core's
-main branch was red (its build failing) 22 percent of working hours at baseline, so that load was
-large, unrecorded, and his alone. The reassigned tickets were mostly for the six services on GitLab
-CI, which he had never worked on. The slipped Jenkins upgrade needed uninterrupted days he did not have.
+Bram had built Core's Jenkins pipeline and was still the person everyone asked when it broke, so that
+load was large, unrecorded, and his alone. The reassigned tickets were mostly for the six services on
+GitLab CI, which he had never worked on. The slipped upgrade needed uninterrupted days he did not have.
 
 So the diagnosis found a system cause (45 percent of his time on unowned interrupts), a skill gap
 (GitLab CI), a will component (see the Case Study), and no role-fit problem. A formal plan on day one
@@ -408,9 +424,8 @@ managers act: where managers who address problems are seen as difficult, the pro
 is tolerance for brilliant but damaging people. A senior engineer who delivers but drives others away
 has a performance problem, and every manager watches how the CTO handles the first such case.
 
-Two shortcuts deserve resistance: the annual forced cull as a way to "raise the bar" without
-headcount, and a reduction in force used to remove people whose managers never acted, which damages
-trust in both processes (Chapter 58). The CTO also owns the honesty of the numbers: a board pack showing
+Two shortcuts deserve resistance: the annual forced cull to "raise the bar" without headcount, and a
+reduction in force used to remove people whose managers never acted (Chapter 58). The CTO also owns the honesty of the numbers: a board pack showing
 two percent below expectations, when managers privately describe ten percent as struggling, reports
 the inflation, not the workforce.
 
@@ -437,8 +452,8 @@ For a manager who believes someone on the team is underperforming:
 
 ## Case Study
 
-This case is **fictional** ([the first quarter](../../case-studies/northstar/first-quarter.md)). The
-time reconstruction covers the baseline quarter; Tom Becker (Platform Operations manager) drafts his
+This case is **fictional** ([the year 1 record](../../case-studies/northstar/first-quarter.md)). The
+time reconstruction in the Engineering Organization Example covers the baseline quarter; Tom Becker (Platform Operations manager) drafts his
 proposal at the start of quarter 2 (week 14), and the decision is the reader's.
 
 Bram Verhoeven joined Northstar six years before the director arrived and was one of Platform
@@ -455,11 +470,9 @@ quarter, and said nothing about why. Bram's annual review, written four months b
 arrived, rated him "meets expectations" and called him a solid contributor. One of the two colleagues
 told Tom they were tired of covering for him.
 
-Tom's framing was that Bram had "checked out". Then they reconstructed his last six weeks before the
-director arrived, and the picture changed. Nearly half his hours went to Core pipeline interrupts
-nobody had assigned or counted. The tickets he let age were mostly for GitLab CI services he had never
-been trained on. Bram
-also said what Tom had half known: after the consolidation was shelved he stopped believing his planned
+Tom's framing was that Bram had "checked out". The six-week reconstruction in the Engineering
+Organization Example changed the picture: unowned pipeline interrupts and untrained GitLab CI work.
+Bram also said what Tom had half known: after the consolidation was shelved he stopped believing his planned
 work mattered, and fixing other people's pipelines felt like the only thing anyone wanted from him.
 
 None of that made the gap acceptable: Bram had let tickets age silently and never raised the
@@ -476,20 +489,19 @@ it, and a formal plan only if eight weeks did not close the gap. He would tell t
 the reassignments would stop and that the situation was being addressed, without details.
 
 There were complications. Rotating the Jenkins interrupts added load to the other four infrastructure
-engineers, two of whom had just covered Bram's tickets for nine months. In week 10 the seven QA engineers moved out of Platform Operations into the product teams as quality
-engineers, so the team is now five infrastructure engineers and Bram is a fifth of its capacity.
-Quarter 1 helped at the edges. Core's red-build time fell from 22 to 9 percent, and 140 flaky tests
-(tests that fail at random) were set aside, which cut Jenkins interrupts but did not remove them. And
-because the last review said "meets expectations", any written record of a problem would begin almost
-now.
+engineers, two of whom had just covered Bram's tickets for nine months. Since the QA engineers moved to
+the product teams in week 10, the team is five infrastructure engineers, so Bram is a fifth of its
+capacity. Quarter 1 reduced, but did not remove, the Jenkins interrupts. And because the last review
+said "meets expectations", any written record of a problem would begin almost now.
 
-The case ends with the reader's decision: approve Tom's proposal as it stands, change it, or ask for
-something else.
+The lesson: a fair process starts from the diagnosis, not from the first impression. The decision is
+the reader's: approve Tom's proposal as it stands, change it, or ask for something else.
 
 ## Exercises
 
 Solutions are in [chapter 9 solutions](../../solutions/ch09-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md).
+[baseline page](../../case-studies/northstar/baseline-data.md); who's who is on the
+[cast](../../case-studies/northstar/cast.md) page.
 
 ### Foundational
 
@@ -526,8 +538,9 @@ engineer in week 10 is struggling. Their exploratory testing is valued, but thei
 arrive slowly and are often flaky, and the team of Marcus Oyelaran (Billing manager) has started
 routing automation work around them. They had years of strong reviews in the manual regression role.
 During the transition all seven QA engineers triaged the manual test suite, but only five also
-automated test cases; this engineer was not one of them. Northstar's standing rule is that any plan
-that changes the QA engineers' work must say what they do next. Decide how Marcus should diagnose and respond,
+automated test cases; this engineer was not one of them. One of Northstar's
+[standing constraints](../../case-studies/northstar/index.md#constraints-that-hold-throughout-the-book)
+is that any plan that changes the QA engineers' work must say what they do next. Decide how Marcus should diagnose and respond,
 and what the organization owes this engineer given how the role change happened.
 
 **A3.** Six weeks into Bram's eight-week agreement, he meets the acknowledgment target every week, has

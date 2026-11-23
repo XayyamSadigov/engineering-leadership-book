@@ -8,17 +8,21 @@ platform-enabled ownership) and says when each fits. And it shows how to choose 
 honest account of how each misleads. The running example is Northstar Technologies, the fictional
 company in the [case study](../../case-studies/northstar/index.md).
 
-**Part V at a glance.** The nine quality chapters work as one system. This chapter defines quality
-and who owns it. Chapter 20 turns the few properties that must hold everywhere into standards;
-Chapter 21 prices technical debt; Chapter 22 designs the tests; Chapter 23 shapes the path from
-merge to customer. Chapter 24 sets reliability targets and readiness, Chapter 25 handles incidents and
-what they teach, and Chapter 26 treats security as one more quality attribute. Chapter 27 combines
-them into one funded program. Each chapter follows one workstream of the same Northstar quarter, the
-director's first. The director arrives after a quarter of 30 serious incidents (Sev1 and Sev2, defined below) and publishes severity
-definitions in week 3. In week 4 the director reserves 12 FTE (full-time equivalent engineers) for
-prevention work, and Core, the main monolith, moves from a two-week to a weekly release in week 5.
-The seven QA engineers join product teams in week 10. By day 90, serious incidents have fallen from
-30 to 21. The [timeline](../../case-studies/northstar/timeline.md) lists every week.
+**Part V at a glance.** The nine quality chapters work as one system:
+
+- Chapter 19 (this one): what quality means and who owns it.
+- Chapter 20: standards for the few properties that must hold everywhere.
+- Chapter 21: pricing technical debt.
+- Chapter 22: designing the tests.
+- Chapter 23: the path from merge to customer.
+- Chapter 24: reliability targets and operational readiness.
+- Chapter 25: incidents and what they teach.
+- Chapter 26: security as one more quality attribute.
+- Chapter 27: combining them into one funded program.
+
+Each chapter follows one workstream of the director's first quarter at Northstar, which cuts serious
+incidents from 30 to 21. The [timeline](../../case-studies/northstar/timeline.md) lists every week, and
+the [cast](../../case-studies/northstar/cast.md) lists every person.
 
 ## Why This Matters
 
@@ -251,6 +255,8 @@ than rank teams
     Weeks 1 to 3 of the director's first year. The baseline quarter has just closed: 30 Sev1 and Sev2
     incidents, 99.62 percent availability against a 99.9 percent commitment, and $410,000 in service
     credits. Nothing has changed yet. See the [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This analysis is **illustrative**: the figures are Northstar's fictional baseline, and the proposals
 are the director's.
@@ -410,7 +416,8 @@ Northstar's Platform Operations combines five infrastructure engineers
 and seven QA engineers under one manager and carries the highest unplanned-work share (46 percent),
 because other teams' failures arrive there as interrupts. Housing central QA inside a platform team
 makes quality look like infrastructure, something provided to product teams rather than done by them.
-Product teams should own outcomes and the platform capabilities, visibly in the org chart.
+The org chart should show product teams owning quality outcomes and the platform team owning the
+capabilities that make testing cheap.
 
 ## CTO Perspective
 
@@ -454,9 +461,9 @@ director was also classifying the baseline quarter's incidents, and uses only th
 [baseline data](../../case-studies/northstar/baseline-data.md).
 
 In the first one-to-ones, the director asked each manager: "Who is responsible for the quality of
-what your team ships?" Four answers named the QA group or the release train. Tom Becker (Platform
-Operations), who manages the QA engineers, said they caught problems "before the train leaves".
-Elena Sokolova (Payments and Integrations) said her team was, and could name its last three escaped
+what your team ships?" Four answers named the QA group or the release train. Tom Becker, who manages
+Platform Operations and its QA engineers, said they caught problems "before the train leaves".
+Elena Sokolova (manager, Payments and Integrations) said her team was, and could name its last three escaped
 defects. Her team deploys 22 times a month, and
 its change failure rate (21 percent) is well below the 29 and 34 percent of the two teams that ship
 through the Core train.
@@ -472,13 +479,16 @@ regression suite did not cover, because nobody had told them the workflows had c
 was distance from the teams, not effort, and hearing it from them moved the managers more than the
 data did.
 
-Marcus Oyelaran (Billing) objected that his team, with three people carrying most on-call pages, had
+Marcus Oyelaran (manager, Billing) objected that his team, with three people carrying most on-call pages, had
 no capacity to take on testing it had never owned. The director recorded the concern as a transition
 cost, not a reason to keep the old model. The session ended with a draft quality profile for the
 order and payment paths, the six measures, and an ownership map with two open disputes. No role
 changes were announced. That was right for the analysis and hard on the QA engineers, who left
-knowing their roles would change without knowing how. The new roles were announced only in week 10,
-after two QA engineers had asked whether they were being automated out of a job.
+knowing their roles would change without knowing how. The new roles were announced only in week 10
+([Chapter 27](27-quality-transformation-at-enterprise-scale.md#case-study) tells that part).
+
+The lesson: let the defect data, not the org chart, assign ownership, and say early what the people
+whose roles change will do next.
 
 ## Exercises
 

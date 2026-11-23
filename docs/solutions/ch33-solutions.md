@@ -178,7 +178,7 @@ covers this cost.
 **Instead, or first.** Fund the code work that makes the target cheaper (the permissions extraction is
 the pilot), use co-change data to find which modules actually cluster by stream, move single components
 where congruence is clearly broken (search-svc, notification-svc), and reconsider team boundaries when
-a module has a clean interface. Leave Customer Experience's structure to Chapter 14's recheck.
+a module has a clean interface. Leave Customer Experience's own structure as given.
 
 **Weak answer:** accepting the proposal because "Conway's law says so," or rejecting it without
 offering a path to the architecture Victor wants.

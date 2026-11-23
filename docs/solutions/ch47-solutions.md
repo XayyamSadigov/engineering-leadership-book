@@ -122,7 +122,10 @@ slow" means in observable terms (decisions waiting, one-on-ones cancelled, respo
 goals are being met because of the director or despite them (are managers deciding things above their
 level?); and the director's own account, including load and context the managers may not see.
 
-**Evidence that would justify a change.** A pattern across sources, not three anecdotes: decisions the
+**Evidence that would justify a change.** Use the chapter's four kinds of evidence (outcomes and
+system health, skip-level signals, managers' growth, peer conduct), and first rule out allocation and
+boundary problems, though here the area is meeting its goals, so those are unlikely. Look for a
+pattern across sources, not three anecdotes: decisions the
 managers needed that waited weeks, a team health or engagement signal declining, a manager considering
 leaving, and no change after clear, specific feedback with a date. Meeting goals does not settle it,
 because a capable manager team can carry an absent director for a while, and that is precisely the

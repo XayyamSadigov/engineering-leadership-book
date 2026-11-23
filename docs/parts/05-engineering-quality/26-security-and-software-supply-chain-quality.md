@@ -103,9 +103,8 @@ The **measure** describes exposure, not activity; the measurement section below 
 
 **The [CSF](../../glossary.md#nist-csf) 2.0**, from NIST (the US National Institute of Standards and
 Technology), organizes cybersecurity outcomes under six functions: Govern, Identify, Protect, Detect,
-Respond, and Recover. Govern sits at the center because it informs the others, and version 2.0 adds
-emphasis on governance and supply chains. The document states that its outcomes are not a checklist of actions and that the order of
-functions implies neither sequence nor importance. It proposes a Current Profile (outcomes achieved
+Respond, and Recover. Govern sits at the center because it informs the others. The document states that its outcomes are
+not a checklist of actions. It proposes a Current Profile (outcomes achieved
 today), a Target Profile (outcomes chosen as priorities), and a gap analysis that yields a prioritized
 action plan ([NIST, 2024](../../references/bibliography.md#nist2024csf)). Treat it as a **standard**:
 shared vocabulary and a sensible process, not evidence that any control reduces risk.
@@ -138,12 +137,13 @@ that already exist:
 
 ### Supply-chain integrity with SLSA
 
-The software supply chain is everything between a developer's change and the running artifact:
-repository, dependencies, build platform, artifact store, deployment. The leader's question is whether
+The software supply chain is everything between a developer's change and the running artifact. The
+leader's question is whether
 the organization could prove, for any running artifact, which reviewed source and which build produced
 it.
 
-[SLSA](../../glossary.md#slsa) gives that question levels on two tracks
+That proof is **provenance**: a signed record of which source revision and which build produced an
+artifact. [SLSA](../../glossary.md#slsa) gives the question levels on two tracks
 ([SLSA, v1.2](../../references/bibliography.md#slsa-spec)). Older articles describe a single ladder of
 levels 1 to 4; that structure was replaced.
 
@@ -179,8 +179,8 @@ flowchart TD
 A software bill of materials ([SBOM](../../glossary.md#sbom)) is a machine-readable list of a
 product's components and their relationships. The 2021 minimum elements from NTIA (the US National
 Telecommunications and Information Administration) cover three areas. Data fields identify each
-component, its supplier, version, and dependencies. Automation support means standard formats such as
-SPDX and CycloneDX. And practices set frequency, depth, and distribution
+component, its supplier, version, and dependencies. Automation support means standard formats (SPDX and
+CycloneDX are the two common ones). And practices set frequency, depth, and distribution
 ([NTIA, 2021](../../references/bibliography.md#ntia2021sbom)). The US Cybersecurity and Infrastructure
 Security Agency (CISA) has since drafted an update
 ([CISA, 2025](../../references/bibliography.md#cisa2025sbom-draft)).
@@ -194,8 +194,12 @@ Most code in a modern service is someone else's, including transitive dependenci
 Decan, Mens, and Constantinou studied nearly 400 npm security reports over six years, asking when
 vulnerabilities were found and fixed and how far they reached dependent packages given those
 packages' version constraints ([Decan, Mens, and Constantinou, 2018](../../references/bibliography.md#decan2018impact)).
-The abstract supports a mechanism rather than a number: an upstream fix protects you only when your
-constraints and upgrade habits let it in.
+The lesson is a mechanism, not a number: an upstream fix protects you only when your constraints and
+upgrade habits let it in.
+
+Severity words come from the Common Vulnerability Scoring System (CVSS), the public standard that gives
+each disclosed vulnerability a **base score** from 0 to 10. Critical means 9.0 or above, high 7.0 to
+8.9. The base score describes the flaw in general, not your exposure to it.
 
 A remediation policy has four parts:
 
@@ -272,9 +276,9 @@ before the next big customer review; a bounty last, if ever.
 
 ### Champions and central teams
 
-Practitioners argue for **security champions** (engineers in product teams with a part-time security
-role) or for a **central application security team** that sets policy, runs tools, and reviews
-high-risk designs. The research is thin but pointed. A case study of five teams in a large e-commerce
+The choice is between **security champions** (engineers in product teams with a part-time security
+role) and a **central application security team** that sets policy, runs tools, and reviews high-risk
+designs. The research is thin but pointed: a champion is a channel, not a program. A case study of five teams in a large e-commerce
 company found that adoption of secure practices varied widely after champions were appointed.
 Champions felt unsupported by security experts and management, and the authors concluded that
 appointing champions is not enough without organizational commitment
@@ -282,8 +286,7 @@ appointing champions is not enough without organizational commitment
 champions at a Norwegian software company found voluntary and assigned champions differed in
 motivation and tasks, with problems in onboarding and training
 ([Nguyen-Duc et al., 2023](../../references/bibliography.md#nguyenduc2023champions)). Both are
-single-organization **research findings**. Together they suggest a champion is
-a channel, not a program.
+single-organization **research findings**.
 
 ### Measuring security without vanity counts
 
@@ -298,8 +301,8 @@ who classify findings are often the people measured on them. Prefer exposure and
 | Tier 1 share with scanning, SBOM, auditable pipeline | Scans nobody reads | Share of findings with an owner's decision |
 | Secrets and certificates with owner and expiry alert | Inventory omits hard cases | Expiry and leaked-credential incidents |
 
-Counts rise when scanning becomes honest, so a falling count in a program's first quarter more likely
-means narrow scanning than good security. And no peer-reviewed outcome evidence shows that SBOMs, SLSA
+Counts rise when scanning becomes honest, so an early fall more likely means narrow scanning than good
+security. And no peer-reviewed outcome evidence shows that SBOMs, SLSA
 levels, or remediation service levels reduce breach rates. These measures show shrinking
 exposure and faster answers; they cannot prove an attack was prevented.
 
@@ -309,7 +312,8 @@ exposure and faster answers; they cannot prove an attack was prevented.
     Week 2 of the director's first year. The baseline quarter had 30 Sev1 and Sev2 incidents and
     $410,000 in service credits, and the director is classifying them. Northstar has no chief
     information security officer; security is a two-person function inside corporate IT. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the [cast](../../case-studies/northstar/cast.md).
 
 The following is **fictional**. The security facts come from the extended baseline (Security section
 of the [baseline data](../../case-studies/northstar/baseline-data.md)); the capacity estimates are
@@ -392,10 +396,6 @@ central team owns policy, tooling, and hard cases, and pairs on each team's firs
 **Coverage against depth.** Shallow scanning everywhere finds known dependency issues; deep review of
 critical paths finds design flaws. Early, coverage wins, because without an inventory you do not know
 where depth is needed.
-
-**Compliance effort against engineering time.** Gap analysis costs days and produces a plan.
-Row-by-row compliance can consume weeks of staff engineer time per questionnaire. Build evidence once,
-from systems.
 
 **Remediation speed against stability.** Rushing a framework upgrade to meet a 7-day target can cause
 the outage the vulnerability never would. A compensating control with a recorded exception is often
@@ -501,7 +501,9 @@ A 90-day plan that runs inside a quality program.
 This case is **fictional**. It continues the Northstar story from the
 [baseline](../../case-studies/northstar/baseline-data.md).
 
-In week 3, Joon Park forwarded a questionnaire from one of the two renewal customers asking for an
+In week 3, Joon Park forwarded a questionnaire from one of the two customers whose renewals depend on
+the [renewal commitments](../../glossary.md#renewal-commitments) (the two features promised for the
+largest renewals), asking for an
 SBOM, evidence of secure development practices with reference to the SSDF, and Northstar's time to fix
 critical vulnerabilities. Honest answers on week 2 data were "no", "partly, undocumented", and
 "unknown; the oldest open critical is 19 months old". The director treated the questionnaire as a
@@ -574,7 +576,7 @@ record the decision.
 time they get, what they do in their team, how they connect to Joon Park's two-person function, and how
 you will know after two quarters whether the role is working rather than nominal.
 
-**A3.** The renewal customer's questionnaire asks Northstar to "confirm alignment with NIST SSDF".
+**A3.** The renewal customer's questionnaire (see the Case Study) asks Northstar to "confirm alignment with NIST SSDF".
 Draft the structure of the response you would send in week 6, given the program's day-30 state. Decide
 what you will claim, what you will describe as in progress, and what you will decline to claim.
 

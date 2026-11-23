@@ -72,10 +72,9 @@ flowchart TD
     R --> D
 ```
 
-Shortcuts here means skipped tests, bigger batches, and deferred fixes. Prevention means tests,
-alerts, and clear ownership. Both loops run in either direction: a team caught in them gets worse
-each quarter without anyone deciding to lower standards, and a team that breaks them gets better,
-because recovered capacity goes into further prevention.
+Shortcuts means skipped tests, bigger batches, and deferred fixes; prevention means tests, alerts, and
+clear ownership. Both loops run in either direction: a team caught in them gets worse each quarter,
+and a team that breaks them gets better, because recovered capacity goes into further prevention.
 
 The **constraint** ([Goldratt and Cox, 1984](../../references/bibliography.md#goldratt1984goal)) in
 a quality decline is the mechanism through which most of the damage enters; at Northstar, the Core
@@ -142,8 +141,7 @@ owner, and 8 have nobody on call.
 
 ### The speed objection
 
-The common objection is that the program will slow delivery. For a quarter it usually does, and the
-capacity model below says by how much. The industry research of DORA (DevOps Research and
+The common objection is that the program will slow delivery. For a quarter it usually does. The industry research of DORA (DevOps Research and
 Assessment), summarized in *Accelerate*
 ([Forsgren, Humble, and Kim, 2018](../../references/bibliography.md#forsgren2018accelerate)) and its
 current guide ([DORA, metrics guide](../../references/bibliography.md#dora-metrics-guide)), reports
@@ -202,8 +200,8 @@ work is automated. Five moves (this book's recommendation) keep both the people 
    remaining manual work, a move to another function, or a supported exit with notice. Nobody should
    learn their option from the org chart.
 
-At Northstar, constraint 5 of the case required any plan to say what the seven QA engineers would do
-next. The plan moved each into a product team as a quality engineer reporting to that team's
+At Northstar, one of the [five fixed conditions](../../glossary.md#the-five-constraints) on the
+director's plan says that any plan changing the QA engineers' work must say what they do next. The plan moved each into a product team as a quality engineer reporting to that team's
 manager: two to Orders, two to Billing, two to Customer Experience, and one to Payments and
 Integrations. The director delayed the announcement until week 10, after two QA engineers had asked
 whether they were being automated out of a job. That delay is the part not to copy. The transition
@@ -220,9 +218,8 @@ abandoned at the first roadmap slip. The honest model has three parts:
    allocation; security, debt, standards, and testing work are paid out of it, not on top of it.
 3. **Feature capacity**: what remains.
 
-Prevention starts before unplanned work falls, so feature capacity dips first. If prevention works,
-unplanned work later falls by more than prevention costs. The director negotiates the depth of the
-dip with product and finance.
+Prevention starts before unplanned work falls, so feature capacity dips first; if prevention works,
+unplanned work later falls by more than prevention costs.
 
 ## Engineering Organization Example
 
@@ -230,7 +227,8 @@ dip with product and finance.
     Weeks 1 to 4 of the director's first year; this chapter then follows the whole first quarter. The
     baseline quarter had 30 Sev1 and Sev2 incidents, 99.62 percent availability against a 99.9 percent
     commitment, $410,000 in service credits, and 34 percent of capacity on unplanned work. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the [cast](../../case-studies/northstar/cast.md).
 
 The following model is **illustrative**. The figures for the first quarter come from Northstar's
 baseline; the later quarters are the director's projection, and every assumption is stated.
@@ -262,11 +260,18 @@ Second, the plan pays back within the year only if the unplanned-work assumption
 work falls only to 26 percent by quarter 4, feature capacity is 53.2 FTE, roughly baseline. Present
 that pessimistic case alongside the planned one.
 
-Third, the money is not small. At Northstar's average fully loaded cost of $185,000 per engineer,
-the 38 FTE-quarters of prevention in the plan (one FTE for one quarter each) cost about $1.76M. Against that: service credits
-running at $1.64M a year, $9M of revenue in at-risk renewals, and, if the plan works, about 13 FTE of
-unplanned work removed by quarter 4, worth about $2.4M a year in recovered capacity. This is the
-shape of the business case in Chapter 52, and of Project 8.
+Third, the money is not small:
+
+| Item | Amount |
+|---|---|
+| Prevention: 38 FTE-quarters at $46,250 each | about $1.76M |
+| Service credits at the baseline run rate | $1.64M a year |
+| Revenue in at-risk renewals | $9M a year |
+| Recovered capacity if the plan works (about 13 FTE by quarter 4) | about $2.4M a year |
+
+Costs use the planning rate of $185,000 per engineer-year ($46,250 per FTE-quarter). In the
+pessimistic case recovered capacity is about half, roughly $1.2M a year. This is the shape of the
+business case in Chapter 52, and of Project 8.
 
 Allocation need not be uniform. It should follow where the inflow comes from and where commitments
 sit; the case shows Northstar's split by team.
@@ -334,10 +339,6 @@ changes (Chapter 23 reviews the
 **Transparency against gaming.** Broad publication of team scorecards adds accountability and
 pressure to optimize. A middle course: team scorecards visible to managers and staff engineers,
 organization-level aggregates reported upward.
-
-**People in changing roles.** Northstar's seven QA engineers know real customer workflows better
-than anyone in engineering. Moving them into product teams costs a transition period and retraining,
-and keeps that knowledge; automating around them is cheaper this quarter and loses it.
 
 ## Failure Modes
 
@@ -469,7 +470,7 @@ working document.
 
 This case is **fictional**. It continues the Northstar story from the
 [baseline](../../case-studies/northstar/baseline-data.md); the full record of the quarter is
-[the director's first year](../../case-studies/northstar/first-quarter.md).
+the [year 1 record](../../case-studies/northstar/first-quarter.md).
 
 In week 2, the new director spent two afternoons with Kwame Mensah (staff engineer, infrastructure and
 reliability) classifying incidents. Two things
@@ -478,25 +479,23 @@ release train, and its incidents took longest to restore. And 11 of the 30 were 
 failure modes the organization had already reviewed, including a bulk-upload failure (INC-421) that
 matched an incident two quarters earlier almost exactly.
 
-The managers' explanations had been different. Marcus Oyelaran (Billing) believed his team's
-incidents came from unclear requirements. The data showed seven of his team's eight incidents were
-triggered by Core releases or migrations. Tom Becker (Platform Operations) believed the problem was
-too little manual testing; the data showed that the three-day manual pass had not caught any of the
-nine train-triggered incidents.
+The managers' explanations had been different. Marcus Oyelaran (Billing manager) blamed unclear
+requirements; seven of his team's eight incidents were triggered by Core releases or migrations. Tom
+Becker (Platform Operations manager) blamed too little manual testing; the three-day pass had caught
+none of the nine train-triggered incidents.
 
 The director put the capacity model to Victor Lindqvist (CTO) and Amara Okafor (CPO) in week 4. Amara accepted
-the quarter 1 dip on two conditions: the two renewal commitments kept their dates, and she saw the
-model updated monthly. The director sized the 12 FTE prevention allocation per team: Billing at 25
-percent, Orders and Payments and Integrations at 10 percent (because of the renewal commitments),
-and the others at 15 percent. A release working group led by Kwame, with owners from the teams, took
-the release-train work. Also in week 4, core/customer went to Orders and core/scheduler to Billing.
+the quarter 1 dip on two conditions: the two [renewal commitments](../../glossary.md#renewal-commitments)
+(a bulk-ordering feature and an accounting integration) kept their dates, and she saw the model
+updated monthly. The director sized the 12 FTE prevention allocation per team: Billing at 25 percent;
+Orders and Payments and Integrations, which own the renewal commitments, at 10 percent; and the others
+at 15 percent. A release working group led by Kwame, with owners from the teams, took the
+release-train work.
 
 Three things went wrong.
 
-In week 7, the weekly review noticed four consecutive incidents rated Sev3, one of them a two-hour
-payment delay for nine customers. The severity definitions were being read creatively under
-scorecard pressure. The director re-rated it in the review, explained why, and added severity audit
-to the weekly meeting.
+In week 7, four consecutive incidents were rated Sev3, one of them a two-hour payment delay for nine
+customers. The director re-rated it in the review and added a severity audit to the weekly meeting.
 
 In week 9, a Sev1 in Billing, the repeat of INC-427 in which credit notes were applied twice, brought
 a call from the CEO asking who had made the change. The director answered with the mechanism, and the
@@ -518,11 +517,10 @@ At day 90, the numbers were these:
 | Renewal commitments on track | — | both |
 
 The director's report to the CTO called the direction encouraging and the evidence not yet
-conclusive. Incidents are rare, and a count of 30 can move by several between quarters with no
-change in the underlying rate, so the fall to 21 was consistent with improvement without proving it.
-The stronger evidence was in the mechanisms: Core change failure rate and customer-detected share
-had both moved, and both rest on many more events. The report proposed keeping the allocation
-through quarter 2 and setting team targets from the new baseline.
+conclusive. A count of 30 can move by several between quarters by chance, so the fall to 21 was
+consistent with improvement without proving it. The stronger evidence was in the mechanisms, which
+rest on many more events. The report proposed keeping the allocation through quarter 2. The lesson:
+fix the constraint first, and judge early progress by mechanism measures, not incident counts.
 
 ## Exercises
 

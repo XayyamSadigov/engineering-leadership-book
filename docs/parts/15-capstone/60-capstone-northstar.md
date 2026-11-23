@@ -19,9 +19,8 @@ At team scale, decisions are short-lived enough that you see their consequences 
 making them. A sprint's working agreement is tested within two weeks.
 
 At organization scale, a director's early documents outlive the context that produced them. A severity
-definition or an exemption with an expiry date is written to solve a week-4 problem. It becomes an input
-to work done three quarters later, by people who never saw the reasoning. A director who treats each
-document as finished when approved produces good documents that disagree with each other.
+definition written to solve a week-4 problem becomes an input to work done three quarters later, by
+people who never saw the reasoning. Documents treated as finished when approved end up disagreeing.
 
 At executive scale, the disagreements reach people who decide money. A board member asks whether a
 measure means the same thing every quarter: a question about a choice made in the first month. The CTO
@@ -39,14 +38,14 @@ After this capstone you will be able to:
   was knowable then rather than by how they turned out.
 - Extend the director's work into a 12-month strategy, an investment case, and a three-year technology
   strategy from the CTO's seat, reconciled to one capacity envelope.
-- Communicate the result to a board so that each director's question traces back to a recorded
+- Communicate the result to a board so that each board member's question traces back to a recorded
   decision.
 
 ## The Mental Model
 
 > **Mental model:** Every artifact you produce is a commitment to your later self and to everyone who
-> will build on it. Later stages must honor each commitment or revise it in writing, with a bridge for
-> anything that is compared over time. A transformation is coherent when its documents can be read in
+> will build on it. Later stages must honor each commitment or revise it in writing, with a measurement
+> bridge (old and new definitions reported side by side) for anything that is compared over time. A transformation is coherent when its documents can be read in
 > sequence without contradiction, and fragile when each was right only on the day it was approved.
 
 Each stage consumes earlier outputs and constrains later ones. The diagram shows the dependencies; the
@@ -86,11 +85,10 @@ nothing, because nothing above them says what matters most.
 
 ### What integration adds to the projects
 
-Each project fixes one moment and hands you the earlier choices; Project 5, for example, gives you the
-severity definitions. Integration failures are invisible inside any one project for that reason. In the capstone
-nothing is handed to you that you did not produce. If your stage 1 diagnosis defines a change failure
-rate that breaks when releases go weekly, your stage 3 scorecard inherits the problem, and so does your
-stage 10 board page. Rumelt argues that a strategy's actions must be coherent, each supporting the
+Each project fixes one moment and hands you the earlier choices, so integration failures are invisible
+inside it. In the capstone nothing is handed to you that you did not produce. If your stage 1 change
+failure rate breaks when releases go weekly, your stage 3 scorecard and stage 10 board page inherit the
+problem. Rumelt argues that a strategy's actions must be coherent, each supporting the
 others ([Rumelt, 2011](../../references/bibliography.md#rumelt2011good); **expert opinion**). The
 capstone applies that test to a whole year of a leader's documents.
 
@@ -98,43 +96,42 @@ Two forces push a year of documents apart. The first is the
 [capability trap](../../glossary.md#capability-trap): cutting improvement time to meet today's demand
 erodes capability, and managers then blame effort
 ([Repenning and Sterman, 2001](../../references/bibliography.md#repenning2001nobody); **research
-finding**, mostly outside software). At Northstar the prevention allocation is the improvement time. It
-falls from 12 FTE in quarter 1 to 8 in quarter 3, and the continuation proposes 6 and then 5. Each step
-is defensible. Together they are the trap, unless each step is tied to evidence that the capability now
-holds. The second force is escalation of commitment, the tendency to keep funding a course one chose
+finding**, mostly outside software). At Northstar the prevention allocation falls from 12 FTE in
+quarter 1 to 8 in quarter 3, and the continuation proposes 6 and then 5. Each step is defensible;
+together they are the trap, unless each is tied to evidence that the capability holds. The second force is escalation of commitment, the tendency to keep funding a course one chose
 oneself, the idea Staw is known for ([Staw, 1976](../../references/bibliography.md#staw1976knee);
 **expert opinion**). In the CTO stages you judge the author of stage 6, who is you.
 
 ### Measurement continuity
 
 A scorecard compares quarters. Comparison needs the definition, the population, and the period to stay
-fixed, or to change with a bridge. DORA's guide says its delivery metrics are for improvement over time,
-not for competition between teams, and that setting them as goals invites gaming
-([DORA metrics guide](../../references/bibliography.md#dora-metrics-guide); **industry research**).
-[Chapter 18](../04-execution/18-measuring-engineering-productivity.md) covers gaming in general.
+fixed, or to change with a measurement bridge. DORA's guide warns that setting its delivery metrics as
+goals invites gaming ([DORA metrics guide](../../references/bibliography.md#dora-metrics-guide);
+**industry research**; [Chapter 18](../04-execution/18-measuring-engineering-productivity.md)).
 
 The capstone adds one obligation: a definition chosen in stage 1 is a promise about what stage 10 can
 say. Northstar's record shows four places where that promise had to be managed:
 
-| Measure | What changed | Rule used |
+| Measure | What changed | Rule used, and its effect |
 |---|---|---|
-| Severity | Baseline recorded as 7 Sev1 and 23 Sev2; 9 and 21 under the week-3 definitions | Total of 30 unchanged; both splits kept |
-| Core change failure rate | Releases went weekly from week 5 | Quarter 1's 22 percent counts 2 of 9 weekly releases only |
-| Tier 1 list | 15 components in year 1, 14 in year 2 | Year-1 comparisons keep 15 |
-| Quarter length | 90 days at baseline, 91 from quarter 1 | Allowances computed per period |
+| Severity | New definitions in week 3 re-rate the baseline from 7 Sev1 and 23 Sev2 to 9 and 21 | Report the total (30, unchanged) and keep both splits, so no one reads a re-rating as a change |
+| Core change failure rate | Releases went from fortnightly to weekly in week 5 | Count weekly releases only: quarter 1 is 2 failed of 9 (22 percent). The baseline 31 percent came from the old cadence, so the two are compared only with this caveat |
+| Tier 1 list | 15 components in year 1, 14 in year 2 | Year-1 comparisons keep the original 15; year 2 starts a new series |
+| Quarter length | 90 days at baseline, 91 from quarter 1 | Availability allowances are computed for each period's own length, so a longer quarter does not look worse |
 
 Without such rules in stage 1, you discover the need in stage 10, in front of the chair of the
 [audit committee](../../glossary.md#audit-committee).
 
 ### Judging earlier stages without outcome bias
 
-Between stage 6 and stage 7 you read what happened in quarters 1 to 3 and audit your director-stage work
-against it. The danger is judging decisions by results. In Baron and Hershey's studies, people rated the same decision as better thinking when its outcome was
-good. They did so even though they had all the information the decision maker had ([Baron and Hershey, 1988](../../references/bibliography.md#baron1988outcome);
-**research finding**, with students judging medical decisions and gambles). The test case is the week-9
-Billing Sev1. After INC-427 (credit notes applied twice after a Core release), a migration check was
-promised for week 7. It slipped, and the outcome was bad. Whether scheduling it for week 7 was a bad
-decision depends on what was known in week 3.
+Between stage 6 and stage 7 you audit your director-stage work against quarters 1 to 3. The danger is
+judging decisions by results. In Baron and Hershey's studies, people rated the same decision as better
+thinking when its outcome was good, with the same information
+([Baron and Hershey, 1988](../../references/bibliography.md#baron1988outcome);
+**research finding**, with students judging medical decisions and gambles). The test case is a
+migration check promised for week 7, after INC-427 (a baseline incident in which a Core release applied
+credit notes twice). The check slipped, and in week 9 a Billing Sev1 repeated the failure. Whether
+scheduling it for week 7 was a bad decision depends on what was known when it was promised.
 
 The hinge therefore asks three questions of each commitment: reasonable on what was known then; kept,
 revised, or dropped; and the lesson for the next commitment of its kind.
@@ -144,8 +141,10 @@ revised, or dropped; and the lesson for the next commitment of its kind.
 !!! info "Northstar so far"
     The example runs from the baseline quarter to week 48. By quarter 3, Sev1 and Sev2 incidents fell
     from 30 to 14 a quarter and unplanned work from 34 to 25 percent; prevention took 8 FTE. Every
-    quarter 4 decision is still open. See the [timeline](../../case-studies/northstar/timeline.md) and
-    the [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
+    quarter 4 decision is still open. See the [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 One thread, followed through the stages, shows what integration means in numbers: the capacity
 Northstar spends on prevention and the capacity it gets back. All figures are **illustrative** values
@@ -158,8 +157,8 @@ from the case. The terms come from earlier chapters:
 | [Unplanned work](../../glossary.md#unplanned-work) | Incidents, interruptions, and urgent fixes, as a share of capacity |
 | Estate currency | Keeping Core's framework and libraries current; a line in Victor's draft ([Chapter 51](../12-cto-leadership/51-enterprise-technology-strategy.md#engineering-organization-example)) |
 | [Horizon 2 and horizon 3](../../glossary.md#horizons) | Horizon 2 extends the business to new customers or markets; horizon 3 creates options for the future |
-| The stress rule | Victor's rule from the week 48 premortem: an unplanned-work overrun comes out of horizon 2, never prevention or horizon 3 |
-| Seat counts | The week-44 proposal has 79 engineers. Alternative B (Customer Experience kept whole) has 80. A VP of Engineering takes one seat, leaving 78. Alternative C (Orders also split) has 78, or 77 with a VP. Alternative D (two managers of managers) has 77. See the [proposal](../../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44) and [Chapter 47](../11-vp-engineering/47-the-vp-of-engineering.md) |
+| The stress rule | Victor's rule from the week 48 premortem (a session imagining the plan has failed): an unplanned-work overrun comes out of horizon 2, never prevention or horizon 3 |
+| Absorbing line | The allocation line that gives up capacity when the seat count drops |
 
 | Moment | Document | Prevention | Unplanned work |
 |---|---|---|---|
@@ -169,18 +168,13 @@ from the case. The terms come from earlier chapters:
 | Week 45 | Continuation proposal | 6 FTE in quarters 5–6, 5 in quarters 7–8 | at most 18% by stage 3 |
 | Week 47 | Three-year draft (stage 9) | 5.5 FTE in year 2 | 22% of 79 = 17.4 FTE |
 
-Quarter 1's 12 FTE came from the teams (11.55 FTE, from 25 percent of Billing down to 10 percent of
-Orders) and the three staff engineers (0.45). It cost $555,000 of capacity.
-
 **Does the continuation agree with the three-year draft?** Yes. The continuation's 6, 6, 5, and 5 FTE
-average 5.5, exactly the draft's year-2 prevention line. The agreement was not automatic: different
-authors wrote them two weeks apart. This is the check the capstone requires at every hand-off.
+average 5.5, exactly the draft's year-2 prevention line, though different authors wrote them two weeks
+apart. This is the check the capstone requires at every hand-off.
 
-**Is the program paying for itself yet?** In capacity alone, not quite; with service credits, clearly.
-[Chapter 59](../13-advanced-problems/59-transformation-under-constraint-and-scaling-without-bureaucracy.md#engineering-organization-example)
-works the numbers. A stage 8 investment case that shows only the credits overstates the case to Greg
-Tanaka (VP Sales). One that shows only capacity understates it to Rajiv Menon (CFO). Both lines belong on
-the page.
+**Is the program paying for itself yet?** In capacity alone, not quite; with service credits, clearly
+([Chapter 59](../13-advanced-problems/59-transformation-under-constraint-and-scaling-without-bureaucracy.md#engineering-organization-example)
+works the numbers). A stage 8 investment case needs both lines on the page.
 
 **Does the year-2 envelope survive a bad quarter?** Victor's draft spreads 79 engineers across seven
 lines:
@@ -195,14 +189,25 @@ lines:
 | Horizon 2 | 10.0 |
 | Horizon 3 | 2.0 |
 
-If year 2 runs at quarter 3's actual 25 percent, unplanned work is 19.75 FTE, 2.35 over plan. Under the
-stress rule, horizon 2 falls from 10.0 to 7.65 FTE. The integration point is that stage 7's year-2
-commitments to Amara Okafor (CPO) must already show horizon 2 as the shock absorber. Otherwise the first
-bad quarter will look like a broken promise.
+If year 2 runs at quarter 3's actual 25 percent, unplanned work is 19.75 FTE, 2.35 over plan, and under
+the stress rule horizon 2 falls from 10.0 to 7.65 FTE. So stage 7's commitments to Amara Okafor (CPO)
+must already show horizon 2 as the shock absorber, or the first bad quarter looks like a broken promise.
 
-**Which seat count?** The draft assumes 79 engineers, but the open decisions allow 77 to 80, and the
-draft does not say which line absorbs a lost seat. Your submission must, at 80, 79, and 78, and for a
-fourth seat at 77.
+**Which seat count?** The draft assumes 79 engineers, but the open decisions allow 77 to 80. Northstar
+has 87 [seats](../../glossary.md#seat) (funded positions) in all, and every added manager or VP of
+Engineering takes one that an engineer would otherwise fill:
+
+| Option (week 44) | What changes | Engineers | With a VP |
+|---|---|---|---|
+| The proposal | Customer Experience split into web and mobile teams; 7 managers | 79 | 78 |
+| Alternative B | Customer Experience kept whole; 6 managers | 80 | 79 |
+| Alternative C | Orders also split; 8 managers | 78 | 77 |
+| Alternative D | Two managers of managers, in place of a VP; 9 managers | 77 | not paired |
+
+Sources: the [proposal](../../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44)
+and [Chapter 47](../11-vp-engineering/47-the-vp-of-engineering.md). The draft does not name its
+absorbing line. Your submission must show the envelope at 80, 79, and 78 engineers, and name the line
+that gives up capacity if the count falls to 77.
 
 ## Decision Framework
 
@@ -214,13 +219,13 @@ flowchart TD
     A["Earlier commitment met"] --> B{"Still serves the goal?"}
     B -->|yes| C["Honor it"]
     B -->|no| D{"Compared over time?"}
-    D -->|yes| E["Revise with a bridge"]
+    D -->|yes| E["Revise, measurement bridge"]
     D -->|no| F{"Others rely on it?"}
     F -->|yes| G["Revise in writing"]
     F -->|no| R["Retire and record"]
 ```
 
-A **bridge** reports the old and new definitions side by side for at least one period. Northstar does
+A **measurement bridge** reports the old and new definitions side by side for at least one period. Northstar does
 this for the tier 1 list: year-1 counts keep the original 15, and year-2 reports use 14. **Revise in
 writing** means the change reaches the [decision log](../../glossary.md#decision-log) with its reason,
 and the people who relied on the old version are told. **Retire and record** means the commitment is
@@ -232,7 +237,7 @@ Use these checks on the whole portfolio before you call it done. Each is pass or
 | Check | Passes when |
 |---|---|
 | Traceability | Every number in stages 7 to 10 traces to a figure in the case, a definition written in stage 1 or 3, or a stated assumption |
-| One envelope | Stages 7, 8, and 9 use the same capacity table for year 2, at 80, 79, and 78 engineers, and state which line absorbs a fourth seat at 77 |
+| One envelope | Stages 7, 8, and 9 use the same capacity table for year 2, at 80, 79, and 78 engineers, and name the line that gives up capacity at 77 |
 | Ownership closure | Every component appears exactly once in the stage 2 register, or has an exemption with an owner of its expiry |
 | No silent revisions | Every commitment in the register is marked honored, bridged, revised in writing, or retired |
 | Time rule | No stage uses a fact dated after its moment; assumptions are labeled as yours |
@@ -241,10 +246,9 @@ Use these checks on the whole portfolio before you call it done. Each is pass or
 
 ## Trade-offs
 
-**Consistency against learning.** A director who honors every early commitment learns nothing from the
-year. One who revises freely leaves nothing comparable. The bridge rule buys both. Its price is
-reporting two numbers for a quarter, which executives find tedious and which is cheaper than an
-indefensible trend.
+**Consistency against learning.** Honoring every early commitment learns nothing; revising freely
+leaves nothing comparable. The measurement bridge buys both, at the price of reporting two numbers for a
+quarter.
 
 **Completeness against time.** The temptation is to write stages 1 to 6 thinly and the CTO stages at
 length. The board stages are only as good as the definitions and owners beneath them. If you must cut,
@@ -253,22 +257,15 @@ cut length in the CTO stages, not rigor in the director stages.
 **Reusing the case against reasoning from scratch.** Northstar's record is one worked answer. Copying it
 scores on consistency and fails on judgment; departing from it without reasons fails on both.
 
-**The director's plan against the CTO's view.** Defending stage 6 because you wrote it is escalation;
-discarding it to look independent is waste. Judge it on what it handed forward.
-
-**Precision against honesty about thin data.** Several of Northstar's measures rest on samples, manual
-linking, or a probe in one region. The board is better served by fewer measures stated with their
-weakness than by a page of figures no one can defend.
+**Precision against honesty about thin data.** Several of Northstar's measures rest on samples or a
+probe in one region. Fewer measures stated with their weakness beat a page no one can defend.
 
 ## Failure Modes
 
-**The stapled portfolio.** Ten artifacts, each sound, that disagree. The scorecard counts 15 tier 1
-components and the strategy counts 14 without saying why; the investment case assumes 8 FTE of
-prevention and the strategy 5.5. Early sign: two documents give different figures for the same thing
-and neither mentions the other.
-
-**Silent redefinition.** A measure changes meaning between quarters and the trend line continues
-unbroken. Early sign: an improvement that coincides with a change in how the number is produced.
+**The stapled portfolio.** Ten artifacts, each sound, that disagree: the scorecard counts 15 tier 1
+components and the strategy 14 without saying why. A measure that changes meaning while its trend line
+continues is the same failure. Early sign: two documents give different figures for the same thing and
+neither mentions the other.
 
 **The orphan commitment.** An early promise that no later document mentions, so it lapses unnoticed, like
 the core/permissions exemption in the case study. Early sign: a register entry with an expiry date and
@@ -277,9 +274,6 @@ no owner of the expiry.
 **Hindsight leakage.** A director-stage artifact that uses facts from later in the story, such as the
 week-40 corrected-order rate or the week-14 Orders knowledge table. It reads well and teaches nothing.
 Early sign: a week-4 document that anticipates exactly what happened.
-
-**Recording outcomes that do not exist.** A CTO-stage artifact that states what the board decided in
-week 50. Early sign: a past-tense sentence about anything after week 49.
 
 **The CTO doing the director's job.** In Victor's seat, rewriting the year-2 organization or the
 continuation line by line instead of deciding the questions only the CTO can decide. Early sign: stage 7
@@ -299,29 +293,24 @@ The capstone's method transfers to any organization of 50 to 150 engineers, with
   bridged, revised in writing, revised silently, or orphaned. The last two are the findings.
 - **Write counting rules in the first month.** They cost an afternoon then and a board meeting later.
 - **Make one capacity table the source** for every planning document in a year.
-- **Use the capstone as a development assignment.** Apply the ten stages to your own organization's
-  last year with a manager preparing for a director role. Have them present the hinge review, and grade
-  it on outcome bias.
+- **Use the capstone as a development assignment** for a manager preparing for a director role: apply
+  the ten stages to your own organization's last year and grade the hinge review on outcome bias.
 
 ## CTO Perspective
 
 From the CTO's seat, the director's documents are inputs, and the CTO's job is to ask whether they add
-up. Victor's quarter 4 desk holds the year-2 organization proposal, the VP question, the quality
-continuation, a workforce plan request, a board page with two headlines, a draft enterprise
-[risk register](../../glossary.md#risk-register), an AI position, and his own three-year draft. Each
-was written by someone competent for a reason. None was written to agree with the others, and their
-seat counts range from 77 to 80 engineers.
+up. Victor's quarter 4 desk holds eight documents, from the year-2 organization proposal to a draft
+[risk register](../../glossary.md#risk-register) and his own three-year draft. Each was written by
+someone competent; none was written to agree with the others, and their seat counts range from 77 to 80.
 
 The CTO's distinctive contribution is the frame that makes them agree: the business choices Helena Marsh
 (CEO) confirmed in week 46, the groups and policies of Victor's week-47 draft, and one year-2 envelope.
 It also includes the CTO's own record. The case study shows Victor reversing an earlier remark of his own
 in writing, which keeps the record credible.
 
-A larger company has to turn threads into policy. Halvard Systems, the book's fictional 500-engineer
+A larger company turns threads into policy. Halvard Systems, the book's fictional 500-engineer
 company ([Halvard](../../case-studies/northstar/halvard.md)), has six enterprise policies, each owned by
-a principal engineer, such as one owning team per production component and the
-[tier 1 operational minimums](../../glossary.md#tier-1-operational-minimums). At that scale no single
-register could hold the threads, so they became policy with owners.
+a principal engineer, because no single register could hold its threads.
 
 ## Practical Playbook
 
@@ -331,7 +320,10 @@ register could hold the threads, so they became policy with owners.
 your manager, or a study group that meets after each block of stages. Working alone, treat a future you
 as the reader and set a review date. You are done when every stage meets its "good enough" criteria
 below, the register carries a status for every entry, the two-page integration memo is written, and all
-seven Decision Framework checks pass.
+seven Decision Framework checks pass. To calibrate, use the
+[grading aid](../../solutions/ch60-solutions.md#grading-aid-for-the-ten-stages), which gives excellent,
+adequate, and weak answers for each stage, and the
+[sample stage 1 page](../../solutions/ch60-solutions.md#sample-stage-1-trust-table-and-counting-rules).
 
 **Prerequisites.** Read the [Northstar overview](../../case-studies/northstar/index.md), the
 [cast](../../case-studies/northstar/cast.md), and the
@@ -360,27 +352,31 @@ carry the integration. The short path takes about 45 to 55 hours.
 6. Stage 9, then stage 7 (weeks 47 and 48), then stage 8 (to week 49), then stage 10 (to week 50).
 7. The integration memo and the Decision Framework checks.
 
-**Facts packet.** Each stage may use only the facts available at its moment. Rows A to C are open to
-stages 1 to 6. Everything else opens at the hinge or later.
+**Facts packet.** Each stage may use only the facts available at its moment. Four groups of pages:
 
-| Row | Facts | Where | Open to |
+| Group | Facts | Where | Open to |
 |---|---|---|---|
-| A | Company, people, system, the five constraints | [Overview](../../case-studies/northstar/index.md) | All stages |
-| B | Baseline quarter measures and the three CSV files | [Baseline](../../case-studies/northstar/baseline-data.md), [data files](../../case-studies/northstar/data/components.csv) | All stages |
-| C | Later-dated entries on the baseline page: staff engineers' time (weeks 12–13), Orders knowledge (week 14), the Billing ledger knowledge map, dependency causes, recoded departures (early quarter 2) | [People](../../case-studies/northstar/baseline-data.md#people-and-management), [ledger](../../case-studies/northstar/baseline-data.md#billing-on-call-and-ledger-knowledge), [dependencies](../../case-studies/northstar/baseline-data.md#cross-team-dependencies), [attrition](../../case-studies/northstar/baseline-data.md#levels-reviews-promotions-pay-and-attrition), [estate](../../case-studies/northstar/baseline-data.md#architecture-and-the-technology-estate) | Hinge onward |
-| D | Quarters 1 to 3: decisions, day 90, quarter 2 and 3 results | [Decisions](../../case-studies/northstar/first-quarter.md#decisions-that-hold-for-the-rest-of-the-book), [day 90](../../case-studies/northstar/first-quarter.md#day-90), [quarter 2](../../case-studies/northstar/first-quarter.md#quarter-2), [quarter 3](../../case-studies/northstar/first-quarter.md#quarter-3) | Hinge onward |
-| E | Where things stand at week 40 and the open decisions | [Quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md) | Stages 7 to 10 |
-| F | Weeks 40–47: corrected orders, Rajiv's request, Amara Okafor's conditions, the week-44 proposal, the continuation, executive positions, Greg Tanaka's offer | [Calendar](../../case-studies/northstar/first-quarter.md#calendar-of-quarter-4), [proposal](../../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44) | Stages 7 to 10 |
-| G | Victor's week, the warehouse inventory, AI survey and position, security snapshot, risk register, SOC 2 options, Finance's FY1 estimate and FY2 draft | [CTO's job](../../case-studies/northstar/first-quarter.md#the-ctos-job-chapter-50), [data and AI](../../case-studies/northstar/first-quarter.md#data-and-ai-chapter-54), [risk](../../case-studies/northstar/first-quarter.md#risk-security-and-compliance-chapter-53), [finances](../../case-studies/northstar/first-quarter.md#finances-chapter-52) | Stages 7 to 10 |
-| H | Victor's three-year draft (week 47) and the week-48 premortem; directors' concerns (weeks 46–48) | [Strategy](../../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51), [board](../../case-studies/northstar/first-quarter.md#board-preparation-chapter-55) | Stages 7 to 10 |
-| I | The week-49 executive team meeting and the workforce plan draft | [Strategy](../../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51), [calendar](../../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) | Stages 8 and 10 only |
-| J | Anything in week 50 or later | Not recorded | No stage |
+| Director facts | Company, people, system, the five constraints; baseline measures and the three CSV files | [Overview](../../case-studies/northstar/index.md), [baseline](../../case-studies/northstar/baseline-data.md), [data files](../../case-studies/northstar/data/components.csv) | All stages, except the baseline sections listed below |
+| Hinge facts | Quarters 1 to 3 in [the year 1 record](../../case-studies/northstar/first-quarter.md) (decisions, day 90, quarters 2 and 3), plus the baseline sections listed below | [Decisions](../../case-studies/northstar/first-quarter.md#decisions-that-hold-for-the-rest-of-the-book), [day 90](../../case-studies/northstar/first-quarter.md#day-90), [quarter 2](../../case-studies/northstar/first-quarter.md#quarter-2), [quarter 3](../../case-studies/northstar/first-quarter.md#quarter-3) | The hinge and stages 7 to 10 |
+| CTO facts | Everything in quarter 4 up to week 48: the [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md) and the year 1 record's quarter 4 sections | [Calendar](../../case-studies/northstar/first-quarter.md#calendar-of-quarter-4), [proposal](../../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44) | Stages 7 to 10 |
+| Week 49 | The executive team meeting and the workforce plan draft | [Strategy](../../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51), [calendar](../../case-studies/northstar/first-quarter.md#calendar-of-quarter-4) | Stages 8 and 10 only |
+
+Nothing from week 50 on is recorded, so no stage may use it.
+
+!!! warning "Baseline entries that stay closed until the hinge"
+    The baseline page also records facts gathered later in the year. Stages 1 to 6 skip these entries:
+
+    - staff engineers' time, weeks 12–13 ([people and management](../../case-studies/northstar/baseline-data.md#people-and-management));
+    - the ledger knowledge map ([Billing on-call and ledger knowledge](../../case-studies/northstar/baseline-data.md#billing-on-call-and-ledger-knowledge));
+    - the causes of dependency links ([cross-team dependencies](../../case-studies/northstar/baseline-data.md#cross-team-dependencies));
+    - the recoded departures ([attrition](../../case-studies/northstar/baseline-data.md#levels-reviews-promotions-pay-and-attrition));
+    - Orders knowledge, week 14 ([architecture and estate](../../case-studies/northstar/baseline-data.md#architecture-and-the-technology-estate)).
 
 **Budget and finish line per stage.** Hours assume you reuse earlier projects where they exist.
 
 | Stage | Hours | Deliverable | Good enough when |
 |---|---|---|---|
-| 1 Diagnosis | 8–10 | 3–4 pages | Each claim cites a measure from row B; the trust table marks which measures you will compare; counting rules survive a change in release cadence |
+| 1 Diagnosis | 8–10 | 3–4 pages | Each claim cites a baseline measure; the trust table marks which measures you will compare; counting rules survive a change in release cadence |
 | 6 draft | 1–2 | 1 page | Lists workstreams and decision requests, with no allocations yet |
 | 2 Ownership | 5–7 | Register of 24 rows plus 1 page | Every component appears once or has an exemption; every exemption has an ending decision, a week, and an owner of its expiry |
 | 4 Debt | 5–7 | 10–15 priced entries plus 1 page | Each entry has interest in engineer-weeks, incidents, or dollars; each names the owner of the decision, not only of the code |
@@ -389,14 +385,14 @@ stages 1 to 6. Everything else opens at the hinge or later.
 | 6 revised | 6–8 | 3–4 pages plus capacity sheet | Every stage 2–5 commitment has a funded line; prevention has a step-down rule; the QA engineers' next roles are named |
 | Hinge | 4–6 | Register annotations plus 2 pages | Every entry has a status; one "reasonable, went badly" and one "lucky" decision are named |
 | 9 Three-year | 8–10 | 4–5 pages | Each policy traces to a stage 1 finding or stage 4 entry; year-2 column matches stage 7; options carry decision weeks |
-| 7 12-month | 6–8 | 3 pages plus envelope table | Envelope at 80, 79, and 78 with the line that absorbs a seat at 77; a fate for every register entry |
+| 7 12-month | 6–8 | 3 pages plus envelope table | Envelope at 80, 79, and 78, naming the line that gives up capacity at 77; a fate for every register entry |
 | 8 Investment | 8–10 | 4 pages plus spreadsheet | Fits stage 7's envelope exactly; capacity and cash on separate lines; each candidate links to a stage 4 entry |
-| 10 Board | 4–6 | 1 page plus 1 page of notes | Each director's concern maps to an artifact; a measurement note states every bridge; nothing about the meeting's outcome |
+| 10 Board | 4–6 | 1 page plus 1 page of notes | Each board member's concern maps to an artifact; a measurement note states every measurement bridge; nothing about the meeting's outcome |
 | Memo | 3–4 | 2 pages | Names the five threads, where each was honored or revised, and the one week-4 commitment you would change |
 
 ### Before you start: the time rule and the register
 
-1. Respect the facts packet: stages 1 to 6 use rows A and B only.
+1. Respect the facts packet: stages 1 to 6 use the director facts only.
 2. Open a commitment register with columns: entry, stage, date, author, what depends on it, review
    trigger, and status.
 3. Where you need a fact the case does not give, write it as an assumption, labeled as yours, with the
@@ -426,18 +422,15 @@ stages 1 to 6. Everything else opens at the hinge or later.
   [organizational design assessment](../../templates/organizational-design-assessment.md) structures it.
 - **Add:** for each exemption, the decision that would end it, the week by which it must be made, and an
   owner of its expiry.
-- **Hand forward:** the week-44 proposal and the continuation's exit criterion ("every component in
-  the ownership register exactly once") will be checked against this register. Do not restructure teams
-  here; structure follows the boundaries you are only now drawing.
+- **Hand forward:** the week-44 proposal and the continuation will be checked against this register.
+  Do not restructure teams here; structure follows the boundaries you are only now drawing.
 
 ### Stage 3: Scorecard (week 4)
 
 - **Produce:** the scorecard of Project 3's deliverable 3, using the
   [engineering quality scorecard](../../templates/engineering-quality-scorecard.md), published as a
-  baseline with no targets.
-  [Chapter 38](../08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md)
-  and [Chapter 24](../05-engineering-quality/24-reliability-slos-and-operational-readiness.md) cover
-  metric pairs and SLOs.
+  baseline with no targets
+  ([Chapter 38](../08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md)).
 - **Add:** a continuity rule per row (what happens if its definition, population, or source changes).
   Add a row for anything the contracts depend on that you cannot yet measure; at baseline that includes
   invoice correctness and the mobile path.
@@ -489,10 +482,9 @@ stages 1 to 6. Everything else opens at the hinge or later.
 
 ### The hinge: commitment audit (week 40)
 
-Now read facts packet rows C and D. For each register entry, and for the case's own week-4 decisions,
-write three things. First, whether it was reasonable on what was known then (yes, no, unclear). Second,
-its status by week 40 (honored, bridged, revised in writing, revised silently, orphaned). Third, the
-lesson for the next commitment of its kind. Name at least one decision that was reasonable and went
+Now read the hinge facts. For each register entry, and for the case's own week-4 decisions, write
+whether it was reasonable on what was known then; its status by week 40 (honored, bridged, revised in
+writing, revised silently, orphaned); and the lesson for the next commitment of its kind. Name at least one decision that was reasonable and went
 badly, and one that went well partly by luck. Compare your stage 6 allocation with the case's, and say
 which you would now defend.
 
@@ -509,7 +501,7 @@ From here on you sit in Victor's seat. Read the
   4 entry. Draw the risk view from
   [Chapter 53](../12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md) and the
   [risk register](../../templates/risk-register.md) template.
-- **Facts:** rows E to H. The week-49 meeting and the board's week-50 response are not available.
+- **Facts:** the CTO facts. The week-49 meeting and the board's week-50 response are not available.
 - **Hand forward:** the year-2 column, which stage 7 must match.
 
 ### Stage 7: 12-month strategy (week 48)
@@ -517,9 +509,9 @@ From here on you sit in Victor's seat. Read the
 - **Produce:** the year-2 layer of the strategy, using Project 7's method and the
   [engineering strategy](../../templates/engineering-strategy.md) template.
 - **Add:** a year-2 fate for every register entry (continue, end, hand to a policy owner). Add one
-  envelope table at 80, 79, and 78 engineers, with the line that absorbs a fourth seat at 77. List the
-  documents on your desk that must change to agree with it.
-- **Facts:** rows E to H, including the week-48 premortem with the stress rule and the people line.
+  envelope table at 80, 79, and 78 engineers, naming the line that gives up capacity if the count falls
+  to 77. List the documents on your desk that must change to agree with it.
+- **Facts:** the CTO facts, including the week-48 premortem with the stress rule and the people line.
   Quarter 4 results do not exist.
 - **Assume:** the case leaves Victor's week-46 organization decision unrecorded. State as your assumption
   whether you decided it or deferred it, and show the envelope under the alternatives. Every later
@@ -536,7 +528,7 @@ From here on you sit in Victor's seat. Read the
 - **Add:** for each candidate, the stage 4 register entry it came from and the interest figure it uses.
   Where stage 4 recorded none, state the assumption you now make and its break-even. Fit the package to
   stage 7's envelope exactly.
-- **Facts:** rows E to I. Row I deliberately widens Project 8's week-47 rule; note any figure that
+- **Facts:** the CTO facts and week 49, which widens Project 8's week-47 rule; note any figure that
   changes because of it.
 - **Hand forward:** what the board's envelope must contain for the package to fit.
 
@@ -545,10 +537,10 @@ From here on you sit in Victor's seat. Read the
 - **Produce:** the engineering page of the year-2 board plan and your notes for the strategy discussion,
   using [Chapter 55](../12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md) and
   the [executive update](../../templates/executive-update.md) template.
-- **Add:** a table mapping each director's stated concern to the stage whose artifact answers it, and a
-  measurement note stating every bridge and continuity rule a board member would need.
-- **Facts:** rows E to I. The board pack goes out at the end of week 49. Write nothing about the
-  meeting's outcome.
+- **Add:** a table mapping each board member's stated concern to the stage whose artifact answers it, and a
+  measurement note stating every measurement bridge and continuity rule a board member would need.
+- **Facts:** the CTO facts and week 49. The [board pack](../../glossary.md#board-pack) goes out at the
+  end of week 49. Write nothing about the meeting's outcome.
 
 ### Assembling the submission
 
@@ -558,26 +550,24 @@ you would change, chosen on what was knowable in week 4. Then run the Decision F
 
 ## Case Study
 
-These events are **illustrative** and fictional. They are recorded on the
+These events are **illustrative** and fictional, from the
 [baseline](../../case-studies/northstar/baseline-data.md) and
-[first-year](../../case-studies/northstar/first-quarter.md) pages. The case follows two threads from the
+[the year 1 record](../../case-studies/northstar/first-quarter.md). The case follows two threads from the
 director's first month to the CTO's quarter 4 desk. Neither has a recorded outcome.
 
 **Thread one: core/permissions.** Core is Northstar's Java monolith, and core/permissions is one of its
-modules. In the baseline quarter 38 merge requests changed it: Orders 17, Customer Experience 9, Billing
-8, Payments and Integrations 4, Platform Operations none. In week 4 the director assigned owners to
-core/customer (Orders) and core/scheduler (Billing). core/permissions was left undecided between Orders
-and Platform Operations, covered by a recorded exemption in quarter 1. Both candidates had a case on
-week-4 information. Orders made the most changes but carried a renewal commitment. Platform Operations
-was taking auth-svc, next door, but none of its infrastructure engineers had ever changed Core code.
+modules. In the baseline quarter 38 merge requests changed it, 17 of them from Orders and none from
+Platform Operations. In week 4 it was left undecided between those two teams, covered by a recorded
+exemption. Both had a case on week-4 information. Orders made the most changes but carried a renewal
+commitment. Platform Operations was taking auth-svc, next door, but none of its infrastructure engineers
+had ever changed Core code.
 
-In quarter 2 a permissions extraction led by Ines Carvalho (staff engineer, core domain) was funded.
-Priya Raman (Orders manager) said she would accept the module after week 26. Tom Becker (Platform
-Operations manager) saw it next to auth-svc but could not support Core Java. The exemption reached its
-two-quarter maximum at the end of quarter 3 (week 39) and lapsed without renewal. Nobody had been named
-to own its expiry. In week 44 the year-2 organization proposal moved core/permissions to Orders, since
-Priya's condition was met. It was the first document to resolve the question. Victor's decision was due
-in week 46 and is not recorded.
+In quarter 2 a permissions extraction was funded, and Priya Raman (Orders manager) said she would
+accept the module after week 26. The
+exemption reached its two-quarter maximum in week 39 and lapsed without renewal, because nobody had
+been named to own its expiry. In week 44 the year-2 organization proposal moved core/permissions to
+Orders, the first document to resolve the question. Victor's decision was due in week 46 and is not
+recorded.
 
 In capstone terms, the stage 2 choice was reasonable; what failed was the hand-forward. The exemption
 was a commitment with a date and no owner of the date, so no later document was obliged to mention it.
@@ -597,21 +587,19 @@ to "read the tables now and clean it up later". Nobody's decision rights had bee
 the accounting integration went live with daily reconciliation, and no ledger read path was named.
 ADR-0001 stayed open.
 
-By week 41 the cost was visible. Farah Haddad (Data and Analytics manager) found 29 of 46 nightly
-warehouse pipelines reading Core tables directly. Seven of quarter 3's 11 failed or partial loads traced
-to Core schema changes. In week 47 Victor's three-year draft set the policy that money data moves by
-contract or events, never tables. The draft states it as a reversal of his week-14 remark and proposes
-deciding ADR-0001 by week 60. The ledger posting events option in his draft depends on it.
+By week 41 the cost was visible: 29 of 46 nightly warehouse pipelines read Core tables directly, and
+seven of quarter 3's 11 failed or partial loads traced to Core schema changes. In week 47 Victor's
+three-year draft set the policy that money data moves by contract or events, never tables. The draft
+states it as a reversal of his week-14 remark and proposes deciding ADR-0001 by week 60.
 
-In capstone terms, the stage 5 decision-rights map is where this thread could have been caught. A map
-with a CTO lane would have made the week-14 remark either a recorded decision or not a decision at all.
-Victor's written reversal 33 weeks later is the repair, and the right one: it makes the record
-consistent again before the board sees the strategy.
+In capstone terms, the stage 5 decision-rights map is where this thread could have been caught: a map
+with a CTO lane would have made the remark either a recorded decision or not a decision at all.
+Victor's written reversal is the right repair, because it makes the record consistent before the board
+sees the strategy.
 
-**What the two threads share.** Both started with a reasonable choice under uncertainty. Both drifted
-because the commitment had no owner for its next step. Both resurfaced in quarter 4 on the CTO's desk,
-in documents the board will read. The case leaves both decisions open. Your submission must take a
-position on each and say how it would change under the other outcome.
+**What the two threads share.** Both started with a reasonable choice and drifted because the
+commitment had no owner for its next step. The case leaves both open; your submission takes a position
+on each and says how it would change under the other outcome.
 
 ## Exercises
 
@@ -621,16 +609,16 @@ Scenarios marked hypothetical are for practice and are not part of Northstar's r
 
 ### Foundational
 
-**F1.** Using only facts packet rows A and B (the time rule for stages 1 to 6), write the first ten
+**F1.** Using only the facts packet's director facts (the time rule for stages 1 to 6), write the first ten
 entries of your commitment register: definitions, lists, rules, and allocations you will set in stages
 1 to 3. For each, name the later stage that will rely on it. Then pick the three entries you judge most
-likely to need revision within a year, and write their bridge rules now.
+likely to need revision within a year, and write their measurement bridges now.
 
 **F2.** Using the facts packet, assign each fact to the earliest stage permitted to use it, and explain
 one way a director-stage artifact would mislead if it used a fact too early: the Orders knowledge table
 (week 14); the baseline co-change pairs; 7,800 corrected orders (week 40); the Bogotá cost of about
 $110,000 per engineer (quarter 4); the week-3 security questionnaire asking for an SBOM (a software bill
-of materials), recorded on the first-year page; Finance's week-46 estimate for fiscal year 1; the
+of materials), recorded in the year 1 record; Finance's week-46 estimate for fiscal year 1; the
 Billing ledger knowledge table; the week-44 proposal's document-store gap.
 
 **F3.** The Engineering Organization Example shows that the continuation and the week-47 draft agree on
@@ -651,7 +639,7 @@ the case.
 **A2.** Margaret Lin, who chairs the audit committee, asks whether Northstar's measures mean the same
 thing every quarter. Write the measurement note for the week-49 board pack, covering the Sev1 and Sev2
 count, Core's change failure rate, tier 1 operational readiness, and contractual availability. For each,
-state every definition or population change since baseline, the bridge used, and what the reader should
+state every definition or population change since baseline, the measurement bridge used, and what the reader should
 and should not conclude from the trend.
 
 **A3.** Take the five entries of the technical debt register example (TD-001 to TD-005) and the estate
@@ -672,13 +660,14 @@ separately from its outcome, and say what information would have changed it.
 the year-2 organization unrecorded: state as your own assumption whether you decided or deferred it, and
 show the envelope under the alternatives. On your desk: the organization proposal at 79 engineers, the VP
 question that would leave 78, the continuation at 6 and 5 FTE, your draft allocation at 79, and quarter
-3's actual unplanned work of 25 percent. Build one year-2 envelope at 80, 79, and 78 engineers and apply
-the stress rule. Say which documents must change and how you will tell their authors, and list what you
+3's actual unplanned work of 25 percent. Build one year-2 envelope at 80, 79, and 78 engineers, apply
+the stress rule, and name the line that gives up capacity if the count falls to 77. Say which documents must change and how you will tell their authors, and list what you
 will deliberately not decide this week.
 
 **X2.** You are Victor Lindqvist in week 48, finishing the engineering page for the week-49 board pack.
-Directors have raised five concerns. Anders Holm (chair) asks about dependence on a few people. Natalie
-Brooks (investor director) asks what a buyer's diligence would find. Samuel Osei (investor director)
+Board members have raised five concerns. Anders Holm (board chair) asks about dependence on a few people.
+Natalie Brooks (investor board member) asks what a buyer's
+[due diligence](../../glossary.md#due-diligence) would find. Samuel Osei (investor board member)
 asks whether flat headcount carries the roadmap. Margaret Lin (audit committee chair) asks about
 measurement consistency. David Ferrante (independent, former payments technology executive) asks about
 the payment path, the availability miss, and Core's unsupported framework. Map each to the year-1
@@ -712,7 +701,8 @@ your choice is not simply the commitment that turned out worst.
 - Put the CTO's lane on the decision-rights map, so executive remarks become decisions or nothing.
 - Tie each reduction of improvement capacity to evidence that the capability holds, or the program
   shrinks into the capability trap.
-- Reconcile every year-2 document to one capacity envelope at every plausible seat count, from 77 to 80.
+- Reconcile every year-2 document to one capacity envelope at every plausible seat count, from 77 to 80,
+  and name the line that gives up capacity when a seat goes.
 - Judge past decisions by what was knowable, not by how they turned out, and record both.
 - In the CTO's seat, decide what only the CTO can decide, and reverse your own earlier positions in writing.
 

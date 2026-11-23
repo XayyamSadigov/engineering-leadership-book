@@ -142,7 +142,7 @@ and advising. Facts from the case about each person (Ines's rejected-design hist
 **Cost of D now.** Two engineering seats become management seats (79 to 77 engineers), about 2.5
 percent of engineering capacity. A layer between the director and the teams carrying the reliability
 mandate adds decision latency (Chapter 34). Two new group leads are learning a new job during the
-second year of the reliability programme.
+second year of the reliability program.
 
 **Cost of moving to D later.** One more structural change: the teams stay, and only a reporting
 layer is added above them, which disturbs far fewer people than a boundary change (Chapter 36). The

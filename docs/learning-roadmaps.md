@@ -10,7 +10,7 @@ and staff-plus engineers, and one for a quality transformation. Chapter numbers 
 | You are | Path | Reading | With practice |
 |---|---|---|---|
 | A senior engineer becoming a manager, or in your first year | [A](#path-a-new-engineering-manager) | 16 chapters | about 18 weeks |
-| A manager with a year or more running a team | [B](#path-b-experienced-engineering-manager) | 14 chapters | about 19 weeks |
+| A manager with a year or more running a team | [B](#path-b-experienced-engineering-manager) | 15 chapters | about 20 weeks |
 | Managing managers, or about to | [C](#path-c-engineering-director) | 13 chapters | about 20 weeks |
 | A director becoming a VP, or a new VP | [D](#path-d-vp-of-engineering) | 10 chapters | about 16 weeks |
 | A VP or senior director preparing for a CTO role | [E](#path-e-cto-aspirant) | 5 chapters, then the capstone | about 13 weeks, plus the capstone |
@@ -27,7 +27,8 @@ hours, or five to nine weeks at the same pace; each project also has a shorter c
 [projects index](projects/index.md)).
 
 **Before you start any path,** read the [Northstar overview](case-studies/northstar/index.md) (about
-fifteen minutes) and glance at the [timeline](case-studies/northstar/timeline.md). Every chapter uses
+fifteen minutes) and [the year in brief](case-studies/northstar/year-in-brief.md) (about six), and
+glance at the [timeline](case-studies/northstar/timeline.md). Every chapter uses
 the case, and the chapters are not in story order. The [cast](case-studies/northstar/cast.md) and the
 [glossary](glossary.md) are there when you meet an unfamiliar name or term.
 
@@ -67,7 +68,7 @@ senior and staff engineers, work across teams, and prepare for a larger scope.
 |---|---|---|
 | 1 | 4 (the leadership ladder) | Where you are, and what the next level asks |
 | 2 | 17 (predictability) | Commitments other teams can rely on |
-| 3 | 19, 21, 22, 23 (quality, technical debt, testing, code review and CI/CD) | Quality as something your team engineers, not inspects |
+| 3 | 19, 21, 22, 23, 26 (quality, technical debt, testing, code review and CI/CD, security) | Quality as something your team engineers, not inspects, including the security of what it ships |
 | 4 | 24, 25 (reliability and SLOs, incidents) | Running a service in production |
 | 5 | 28, 29 (architecture decisions, staff and principal engineers) | Sharing technical authority with your strongest engineers |
 | 6 | 44, 42, 46 (working with product, cross-team dependencies and influence, stakeholders) | Getting things done through people you do not manage |
@@ -78,7 +79,7 @@ Engineering Team (about 18 to 24 hours). It is set one level up: you play the ne
 Billing, a team of 13, in your first three weeks. The team is at the scale you know, and the director's
 view is the rehearsal for the next role. It applies Chapter 56 and draws on Chapters 9, 16, and 25, all in
 Paths A and B, and on Chapter 40's advice on gathering signal as a director (Path C).
-**Schedule:** about 14 weeks of reading, about 19 with the project.
+**Schedule:** about 15 weeks of reading, about 20 with the project.
 
 ## Path C: Engineering director
 
@@ -101,7 +102,7 @@ apply are in Paths A to C):
 
 | If your problem is | Project |
 |---|---|
-| Quality is declining and you have just arrived | [Project 3](projects/p3-quality-transformation-plan.md), quality transformation plan (Chapter 26 also helps) |
+| Quality is declining and you have just arrived | [Project 3](projects/p3-quality-transformation-plan.md), quality transformation plan |
 | Your calendar and meetings have grown back | [Project 1](projects/p1-management-operating-system.md), management operating system |
 | Your managers need development and you have no bench | [Project 6](projects/p6-manager-development-and-succession.md), manager development and succession |
 | The structure no longer fits the work | [Project 4](projects/p4-redesign-an-80-engineer-organization.md), redesign an 80-engineer organization |

@@ -73,9 +73,9 @@ mandatory, which may be missed with a re-scope, and who decides.
 
 **The success paradox.** The first stage removes the visible pain. At Northstar, service credits fell
 from $410,000 in the baseline quarter to $95,000 in quarter 2, and the remaining work has no outage
-attached to it. Kotter's account of failed transformations is known for warning against declaring
-victory too soon ([Kotter, 1995](../../references/bibliography.md#kotter1995leading)); the multi-year
-version is not a speech but a budget cycle in which nobody declares anything and the allocation shrinks.
+attached to it. Kotter is known for warning against declaring victory too soon
+([Kotter, 1995](../../references/bibliography.md#kotter1995leading)); the multi-year version is a
+budget cycle in which nobody declares anything and the allocation shrinks.
 
 **Escalation of commitment.** The opposite failure: funding continues because stopping would admit
 waste. Staw's study is known for introducing this tendency
@@ -112,11 +112,10 @@ inspected by someone outside the owning team.
 
 Rumelt's account of strategy is known for its kernel of diagnosis, guiding policy, and coherent actions
 ([Rumelt, 2011](../../references/bibliography.md#rumelt2011good)). A staged program re-diagnoses at
-every gate; a diagnosis that never changes was never specific enough to be wrong. Kane and colleagues are known for arguing that digital transformation is mostly about
-people, culture, and organization rather than technology
-([Kane et al., 2019](../../references/bibliography.md#kane2019technology)). Later stages are usually
-about ownership, habits, and successors; a year two that is a list of tools to buy has probably
-mistaken its stage.
+every gate; a diagnosis that never changes was never specific enough to be wrong. Kane and colleagues
+are known for arguing that digital transformation is mostly about people and organization rather than
+technology ([Kane et al., 2019](../../references/bibliography.md#kane2019technology)). A year two that
+is a list of tools to buy has probably mistaken its stage.
 
 ### Communicating to executives in their terms
 
@@ -139,6 +138,10 @@ following Minto's governing point first ([Minto, 2002](../../references/bibliogr
 **The cost of no.** Doing nothing looks cheaper because its costs go unwritten. Write which risk rises,
 which measure regresses, and when executives would see it.
 
+**Downward too.** The engineers and managers doing the work need the same story, told for them: why
+stage 2 matters after "we hit the target", and what the gate means for their teams. Chapter 43 covers
+communicating change through the organization.
+
 **Bad news first.** Keil and colleagues report that executive sponsorship can make people less candid
 and that senior executives sometimes ignore reported bad news
 ([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)). The director sponsors their
@@ -147,7 +150,10 @@ own program, so state the measure missing its target before an executive finds i
 ### A sample page one
 
 Page one carries the whole decision; the rest is evidence. Here is a page one for the continuation
-proposal in this chapter's case study, using only the case's figures (**illustrative**):
+proposal in this chapter's case study, using only the case's figures (**illustrative**). Two things to
+know first. Northstar counts year 1 as stage 1, already funded, with its gate in week 56, once quarter
+4's data is in; the proposal asks for stage 2 (quarters 5 and 6). And "at most 40" is the director's
+year-2 commitment from Chapter 46: Sev1 and Sev2 incidents counted as a rolling four-quarter total.
 
 > **Decision requested by week 51.** Fund stage 2 of the quality program, "Hold", for quarters 5 and
 > 6: 6 of our existing 80 engineers on prevention and $150,000 of new tooling, conditional on the
@@ -156,7 +162,8 @@ proposal in this chapter's case study, using only the case's figures (**illustra
 > **Why now.** Six of our 40 largest customers renew in quarters 5 to 8. Year 1 cut Sev1 and Sev2
 > incidents from 30 a quarter to 14 and service credits from $410,000 to $60,000. The gains are not
 > yet secure. Availability, at 99.89 percent in quarter 3, is still below our 99.9 percent
-> commitment, and Core's change failure rate has not improved since quarter 1.
+> commitment, and Core's [change failure rate](../../glossary.md#change-failure-rate) has not improved
+> since quarter 1.
 >
 > **What it costs.** No new headcount. The 6 engineers are $555,000 of capacity that would otherwise
 > go to roadmap work. The $150,000 is the only new operating expense and needs the CFO's approval.
@@ -165,7 +172,7 @@ proposal in this chapter's case study, using only the case's figures (**illustra
 > incidents and credits drift back up during the renewals, visible first in quarter 5's numbers.
 >
 > **How you will know.** A gate in week 78 with written exit criteria: the rolling incident total on
-> course for at most 40 over year 2, 99.9 percent availability every quarter, and credits at most
+> course for at most 40 over year 2 (our year-2 commitment), 99.9 percent availability every quarter, and credits at most
 > $25,000 a quarter. A miss without an understood cause stops the program for review.
 
 Each paragraph does one job: the decision and its date, the reason in the reader's currency, the price
@@ -199,10 +206,9 @@ everyone who attended.
 Organizational politics is the use of influence on decisions where interests differ and authority does
 not settle the matter. Pfeffer is known for arguing that managers should diagnose whose support a
 decision needs rather than treat politics as beneath them
-([Pfeffer, 1992](../../references/bibliography.md#pfeffer1992managing)). Lencioni is known for putting a
-cohesive leadership team at the base of organizational health
-([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage)); such a team leaves little
-room for side deals.
+([Pfeffer, 1992](../../references/bibliography.md#pfeffer1992managing)); Lencioni, for putting a
+cohesive leadership team, which leaves little room for side deals, at the base of organizational
+health ([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage)).
 
 Two research findings pull in different directions.
 
@@ -215,10 +221,11 @@ personality and general mental ability
 correlational findings about individual outcomes, not about whether the organization gains.
 
 **Perceived politics hurts everyone else.** A meta-analysis studied employees' *perceptions* of
-organizational politics, the sense that decisions are driven by self-serving maneuvering. It found them
-associated with strain (.48), turnover intentions (.43), lower job satisfaction (−.57), and lower
-task performance (−.20) ([Chang et al., 2009](../../references/bibliography.md#chang2009perceptions)).
-These are correlations, not causal estimates, and not small ones.
+organizational politics, the sense that decisions are driven by self-serving maneuvering. Where
+perceived politics was higher, strain, intent to leave, and dissatisfaction were clearly higher too
+(moderate to strong associations); task performance was somewhat lower (a weaker association)
+([Chang et al., 2009](../../references/bibliography.md#chang2009perceptions)). These are
+correlations, not causal estimates.
 
 Together they define constructive politics, in this book's terms: influence exercised so that the rest
 of the organization would not see it as self-serving if they could see all of it. Three tests:
@@ -252,11 +259,14 @@ assignment with real stakes ([Chapter 41](../09-engineering-directorship/41-mana
     incidents (the two most severe levels) fell from 30 a quarter to 14 in quarter 3, the mandate's
     target of 15 met for the first time; availability reached 99.89 percent, just short of 99.9.
     Prevention took 8 FTE of 80 engineers. The director now drafts a two-year continuation. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 The figures are **illustrative**, from the Northstar case. Year 2 is quarters 5 to 8 (weeks 53 to
-104). Capacity is priced at $185,000 per engineer per year, so one
-[FTE-quarter](../../glossary.md#fte-quarter) (one full-time engineer for a quarter) costs $46,250. Assumption: year 2's $250,000
+104). Capacity is priced at the book's planning rate (Chapter 45), $185,000 per engineer per year, so
+one [FTE-quarter](../../glossary.md#fte-quarter) (one full-time engineer for a quarter) costs $46,250. Assumption: year 2's $250,000
 discretionary tooling budget is already committed to existing tools, so new tooling needs the CFO.
 
 | Stage | Prevention capacity | Capacity cost | New tooling | Total |
@@ -277,10 +287,10 @@ engineers are 7.5 percent of the 80. The proposal shows both lines to everyone.
 
 The credit line is small because year one took most of it: the baseline ran at $410,000 a quarter,
 $1.64M a year. That is the success paradox in numbers. The strongest argument for continuing is the
-fragility of the gains, which needs evidence. Northstar has some. The change failure rate of Core
+fragility of the gains, which needs evidence. Northstar has some. The change failure rate (the share
+of releases that cause a failure) of Core
 (the Java monolith) fell from 31 percent at baseline to 22 in quarter 1 and then held at 23 in quarter
-2. Releases are smaller but no safer since quarter 1, on counts too small to call a trend (4 of 13, 2
-of 9, and 3 of 13 releases).
+2: releases are smaller but no safer since quarter 1, on counts too small to call a trend.
 
 ## Decision Framework
 
@@ -316,7 +326,8 @@ migration), and then ask for that commitment alone.
 suit work whose results show within a quarter; year-long stages suit long-lag work such as a platform
 migration, at the cost of later correction.
 
-**Sharp criteria against gaming.** "Tier 1 components meeting all four operational minimums" is easy to
+**Sharp criteria against gaming.** "[Tier 1](../../glossary.md#tier-1) (business-critical) components
+meeting all four operational minimums" is easy to
 judge and easy to game by narrowing tier 1. "Ownership is clear" cannot be gamed or judged. Pair sharp
 criteria with inspection.
 
@@ -325,7 +336,7 @@ badly, it moves the decision into private rooms. Bring what you learned into the
 the meeting decides on what everyone heard.
 
 **Succession against delivery.** Giving a workstream to a developing manager slows it; keeping it makes
-the program fragile. Price the slowdown in the stage rather than hide it.
+the program fragile. Price the slowdown in the stage.
 
 **Continuing against stopping.** Ending at a gate because the work has become ordinary operations is
 success: prevention becomes a line in the quarterly capacity plan
@@ -368,8 +379,7 @@ shape:
 - **The stage as a line in the quarterly plan**, so any reduction is a visible decision, carried in the
   [capacity planning model](../../templates/capacity-planning-model.md); the
   [quarterly engineering review](../../templates/quarterly-engineering-review.md) can host the gate.
-- **A stakeholder map refreshed before each gate**: each funder's interest, position, needed evidence,
-  and who they listen to. Private, but containing nothing you could not defend.
+- **A stakeholder map refreshed before each gate**, containing nothing you could not defend.
 - **At least one people criterion per stage**: cover for a critical role, a manager running a
   workstream, a staff engineer owning a standard.
 
@@ -427,56 +437,67 @@ of downtime in the quarter. Quarter 4's numbers arrive after week 52, so year 2 
 proposed before the year-1 verdict.
 
 **The proposal.** In week 45, a week after the year-2 organization proposal (decision due week 46), the
-director drafts a two-year continuation with no headcount request.
+director drafts a two-year continuation with no headcount request. The
+[quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md) lists the other open
+decisions.
 
-| Stage | Ask | Exit criteria (gate week) |
+| Stage | Ask | Gate |
 |---|---|---|
-| 1: Stabilize (year 1) | Funded | Sev1+Sev2 at most 15 in two consecutive quarters; 99.9% in a full quarter (week 56, the first gate after quarter 4 data is in) |
-| 2: Hold (quarters 5–6) | 6 FTE prevention; $150,000 tooling | Sev1+Sev2 at most 12 and 99.9% in each quarter, read as explained below; credits at most $25,000 a quarter; 14 of 14 tier 1 (current list) meeting the minimums; every component in the ownership register exactly once; no critical role without cover (week 78) |
-| 3: Converge (quarters 7–8) | 5 FTE prevention; $100,000 if a CI target is chosen | Tier 1 deployed through an auditable pipeline with automated rollback; unplanned work at most 18%; every critical role with someone ready now or ready with development (week 104) |
-| Year 3 option | Not requested | Core boundary work, decided at week 104; "VP or second layer" listed as an open question (Chapter 47) |
+| 1: Stabilize (year 1) | Already funded | Week 56, the first gate after quarter 4 data |
+| 2: Hold (quarters 5–6) | 6 FTE prevention; $150,000 tooling | Week 78 |
+| 3: Converge (quarters 7–8) | 5 FTE; $100,000 only if a CI target is chosen | Week 104 |
+| Year 3 option | Not requested | Decided at week 104 |
+
+The exit criteria:
+
+- **Stage 1:** Sev1 and Sev2 at most 15 in two consecutive quarters; 99.9 percent in a full quarter.
+- **Stage 2:** Sev1 and Sev2 at most 12 and 99.9 percent in each quarter, read as explained below;
+  credits at most $25,000 a quarter; all 14 tier 1 components meeting the minimums\*; every component
+  in the ownership register exactly once; no critical role without cover.
+- **Stage 3:** tier 1 deployed through an auditable pipeline with automated rollback; unplanned work at
+  most 18 percent; every critical role with someone ready now or ready with development.
+- **Year 3 option:** Core boundary work; whether Northstar needs a VP or a second layer (Chapter 47).
+
+\* Year 2 counts 14 tier 1 components because notification-svc moved to tier 2 in quarter 2; year-1
+figures keep the original 15 so quarters compare.
 
 **How the stage 2 incident figure is read.** "At most 12 in each quarter" is a review trigger, not a
 pass mark. Chapter 46 showed why: incident counts vary by chance, and a program that truly averages 10
 a quarter would exceed 12 in at least one of stage 2's two quarters about a third of the time. So the
-gate tests the rolling four-quarter total against the director's year-2 commitment of at most 40
-(Chapter 46's counter). A quarter above 12 triggers a written analysis at the gate, and two in a row
-reopen the prevention allocation. Availability, which chance moves far less, is read quarter by
-quarter. The rolling incident total and availability are mandatory; any other miss permits a
-re-scope with a gate four weeks later, decided by Victor Lindqvist (CTO).
+gate tests the rolling four-quarter total against the commitment of at most 40. A quarter above 12
+triggers a written analysis at the gate, and two in a row reopen the prevention allocation.
+Availability, which chance moves far less, is read quarter by quarter. The rolling incident total and
+availability are mandatory; any other miss permits a re-scope with a gate four weeks later, decided by
+Victor Lindqvist (CTO).
 
-Stage 2 also picks up two open items. The week 44 succession review found four critical roles with no
-cover: the Billing manager, the Data and Analytics manager, and the core-domain and
-data-and-integration staff engineer roles. And the year-2 organization proposal requires every
-component to appear exactly once in the ownership register. Two technical choices become stage 2
-decisions with owners: the target for consolidating Northstar's four build systems (GitLab CI was
-proposed), and [ADR-0001](../../glossary.md#adr-0001), the open decision on how integrations read
-ledger data. Tier 1 counts use 14 components in year 2, because notification-svc moved to tier 2 in
-quarter 2; year-1 counts keep the original 15 so quarters compare.
+Stage 2 also takes on open items, each with an owner:
+
+| Item | Why it is in stage 2 |
+|---|---|
+| Four critical roles with no cover (week 44 review): Billing manager, Data and Analytics manager, two staff engineer roles | The "no role without cover" criterion |
+| Every component in the ownership register exactly once | Required by the year-2 organization proposal |
+| Two technical choices: one target for the four build systems (GitLab CI proposed), and [ADR-0001](../../glossary.md#adr-0001), how integrations read ledger data | Stage 3's pipeline criterion and tooling depend on them |
 
 **The funders.** In weeks 46 and 47 the director held one-on-ones and asked what each executive needed.
 
-- **Victor** supports staging, will not take a headcount request to the board, and
-  asked that the proposal follow the week 46 organization decision rather than share its meeting.
-- **Helena Marsh (CEO)** is focused on the next renewal cycle: six of the largest 40 customers renew in
-  quarters 5 to 8. She wants to know whether reliability will hold through them.
-- **Rajiv Menon (CFO)** wants operating expense flat. The $150,000 falls outside the committed discretionary
-  budget and needs his approval. He will consider it only with an offset elsewhere in the $4.2M cloud
-  and tooling budget, and he asked when the program ends.
-- **Greg Tanaka (VP Sales)** argues the incident mandate is met and the 6 FTE should move to deal
-  features. In week 47 he privately offered his support if two
-  engineers moved to his deal features without going through the cross-team portfolio forum.
-- **Amara Okafor (CPO)** wants the allocation fixed per stage so she can plan around it.
-- **Sofia Alvarez (VP Customer Success)** supports continuing and wants the customer incident status
-  notifications kept on the plan.
+- **Victor** supports staging, will not take a headcount request to the board, and wants the proposal
+  kept out of the week 46 organization meeting.
+- **Helena Marsh (CEO)** asks whether reliability will hold through the next renewals: six of the 40
+  largest customers renew in quarters 5 to 8.
+- **Rajiv Menon (CFO)** wants operating expense flat. He will approve the $150,000 only with an offset
+  in the $4.2M cloud and tooling budget, and asked when the program ends.
+- **Greg Tanaka (VP Sales)** says the mandate is met and the 6 FTE should build deal features. In week
+  47 he privately offered his support if two engineers moved to his deal features without going
+  through the cross-team portfolio forum.
+- **Amara Okafor (CPO)** wants the allocation fixed per stage.
+- **Sofia Alvarez (VP Customer Success)** supports continuing and wants customer incident
+  notifications kept.
 
-**What changed after the one-on-ones.** Page one now opens with Helena Marsh's question, framing the
-ask as protecting reliability through six renewals, and states the cost of no with the change failure
-rate evidence. An end state answers Rajiv Menon: after stage 3, prevention becomes a normal line in the
-quarterly plan and the program ends. Fixed per-stage allocations answer Amara Okafor. Greg Tanaka's
-alternative appears as a priced option: moving 2 of the 6 FTE to Greg's deal features for quarters 5
-and 6, which is $185,000 of capacity. That leaves stage 2 at 4 FTE, and the proposal lists which exit
-criteria would then move to stage 3.
+**What changed after the one-on-ones.** Page one now opens with Helena's question: the ask protects
+reliability through six renewals. An end state answers Rajiv: after stage 3, prevention becomes a
+normal line in the quarterly plan. Fixed per-stage allocations answer Amara. Greg's alternative
+appears as a priced option: 2 of the 6 FTE on deal features for quarters 5 and 6 ($185,000 of
+capacity), leaving stage 2 at 4 FTE, with the exit criteria that would move to stage 3.
 
 The director declined Greg's private offer in the same conversation and told him the option would go in
 the written proposal for the whole executive team. That passes the transcript and record tests; whether
@@ -581,8 +602,7 @@ program, and explain how you keep the gate from becoming a contest of advocacy.
   management.
 - [Minto, 2002](../../references/bibliography.md#minto2002pyramid): the governing point first.
 - [Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls): why status reporting fails.
-- [Pfeffer, 1992](../../references/bibliography.md#pfeffer1992managing): power and influence (idea
-  level).
+- [Pfeffer, 1992](../../references/bibliography.md#pfeffer1992managing): power and influence.
 - [Ferris et al., 2005](../../references/bibliography.md#ferris2005development) and
   [Munyon et al., 2015](../../references/bibliography.md#munyon2015political): political skill.
 - [Chang et al., 2009](../../references/bibliography.md#chang2009perceptions): perceived politics.

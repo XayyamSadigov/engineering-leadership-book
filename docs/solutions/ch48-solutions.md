@@ -147,6 +147,22 @@ rule, or retire it without asking what harm it was meant to prevent.
 
 ## X1 — Northstar's year-2 workforce plan recommendation
 
+**How the case's option figures are computed.** All are assumptions, stated so they can be attacked.
+
+- **B, level.** Leavers are half Engineer, half Senior (the mix is 39 to 38), so about four of eight
+  are Seniors. Hiring two of those four replacements at Engineer level saves $45,500 per seat, so
+  $91,000 (US salary midpoints of $152,500 and $120,000, times Chapter 8's 1.4 loading assumption).
+- **B, location.** Last year's departures: Billing 2, Orders 2, Data and Analytics 2, Customer
+  Experience 1, Payments and Integrations 1. Up to four seats are in teams with a Bogotá cluster (the
+  Customer Experience one only if mobile). Moving three saves about $58,000 each (a loaded US Engineer
+  at midpoint, $168,000, against Bogotá's $110,000): $174,000 at full year, about half in year 2 if
+  hires land mid-year.
+- **C.** With an approved pipeline of candidates, the lag falls from 15 weeks to about 6 (one to
+  offer, five of notice, as on Billing's last ledger hire): 8 × 6 ÷ 52 = 0.9 FTE, recovering about
+  1.4. If fewer than eight leave, up to two extra people: 2 × $185,000 = $370,000.
+- **D.** The Core framework migration is estimated at 120 to 180 engineer-days. Core, the Java
+  monolith, has 41 percent line coverage, so a vendor's work would be weakly verifiable.
+
 Several recommendations are defensible. One worked answer:
 
 **Recommendation.** Combine three parts. (1) Option B's level rule, with an explicit exception: ledger

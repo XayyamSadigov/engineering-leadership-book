@@ -14,7 +14,6 @@ company, needs a VP at all.
 
 At team scale, a VP is invisible most weeks and decisive a few times a year: whether a team is staffed
 for its roadmap, whether its director is the right one, whether its area is funded next year.
-Engineers feel these as "the reorg" or "the project cancelled in March".
 
 At organization scale, the VP is the first level at which capacity moves between areas. A director can
 rebalance inside an area; only someone above several directors can say that one area shrinks so that
@@ -22,9 +21,9 @@ another grows. If nobody does that, allocation follows last year's org chart, an
 its boxes instead of its bets.
 
 At executive scale, companies often get this [layer](../../glossary.md#layer) (a level of management
-between engineers and the top) wrong. Some hire a VP before there are directors
-to manage, adding a layer that relays messages. Others reach several hundred engineers with a CTO who
-still arbitrates every director dispute. Both cost speed, and both are design choices.
+between engineers and the top) wrong. Some hire a VP before there are directors to manage; others
+reach several hundred engineers with a CTO who still arbitrates every director dispute. Both cost
+speed.
 
 ## Learning Objectives
 
@@ -67,11 +66,9 @@ the evidence says so, not every time someone asks.
 ### Three roles, four company shapes
 
 Titles do not define these roles. Larson defines the engineering executive as the person responsible
-for all of engineering, whatever the title, and observes that companies use CTO, VP of Engineering, and
-Head of Engineering inconsistently
-([Larson, 2023a](../../references/bibliography.md#larson2023executive-job)). His *Engineering
-Executive's Primer* is known as a guide to that executive job
-([Larson, 2024](../../references/bibliography.md#larson2024primer)); **expert opinion**.
+for all of engineering, whatever the title, and notes that companies use the titles inconsistently
+([Larson, 2023a](../../references/bibliography.md#larson2023executive-job);
+[Larson, 2024](../../references/bibliography.md#larson2024primer)); **expert opinion**.
 
 This book defines the roles by the decisions they own (**this book's recommendation**):
 
@@ -99,15 +96,12 @@ VP; **expert opinion**, without data.
 
 ### Why who sits at the top matters
 
-Upper echelons theory holds that organizational outcomes are partially predicted by top managers'
-backgrounds, because experiences and values shape how executives interpret situations
+Upper echelons theory holds that top managers' backgrounds partially predict organizational outcomes,
+because experience shapes how executives read situations
 ([Hambrick and Mason, 1984](../../references/bibliography.md#hambrick1984upper);
-[Hambrick, 2007](../../references/bibliography.md#hambrick2007upper)). The 1984 article offers
-propositions, not a test. Treat it as a **research finding** at the level of established theory about
-firms' top teams, not a measured effect in engineering.
-
-The inference here is modest (**this book's recommendation**). A VP's directors are a small upper echelon:
-what they notice depends on who they are. Three directors who came up through product teams will see
+[Hambrick, 2007](../../references/bibliography.md#hambrick2007upper)): a **research finding** at the
+level of established theory about firms' top teams, not a measured effect in engineering. The modest
+inference (**this book's recommendation**): three directors who came up through product teams will see
 platform debt late; three from infrastructure will underweight customer requests. Staffing the director
 team decides which problems the group can see.
 
@@ -125,9 +119,8 @@ area. So give each director two kinds of goal (**this book's recommendation**):
 2. **One shared goal**, identical for every director, for an outcome no area reaches alone (a
    group-wide reliability target, a migration every area must finish).
 
-Larson, drawing on Lencioni, describes a leader's peers as their "first team". A leader's incentives,
-he notes, are often at odds with peers' incentives. He advises setting explicit expectations with
-direct reports, including how they will be judged and how to resolve tension between peers' goals
+Larson, drawing on Lencioni, describes a leader's peers as their "first team", and advises written
+expectations on how directors will be judged and how tension between peers' goals is resolved
 ([Larson, 2023c](../../references/bibliography.md#larson2023gelling);
 [Lencioni, 2002](../../references/bibliography.md#lencioni2002five)): **expert opinion**. The shared
 goal makes the first team real.
@@ -146,11 +139,10 @@ follows is **this book's recommendation**, built on the written expectations abo
 | Portfolio review | Quarterly, half a day | Re-rank bets; decide reallocations at their triggers |
 | One-on-ones and operating reviews | Weekly and monthly, per director | The director's own area and development |
 
-A weekly agenda that works: the shared goal's measure first, five minutes, discussed only if it moved.
-Then decisions that cross areas, each submitted in writing a day ahead with its options and their
-costs. Then one problem a director wants the team's help with. Status about one area stays in the
-operating review. Reallocation requests are heard only here, with every director present, which makes
-the allocation hard to lobby.
+A weekly agenda that works: the shared goal's measure (five minutes); cross-area decisions, each
+submitted in writing a day ahead with options and costs; one problem a director wants help with.
+Status about one area stays in the operating review. Reallocation requests are heard only here, with
+every director present, which makes the allocation hard to lobby.
 
 **Decision rights.** Write down which decisions the team owns and how each is made
 ([decision rights](../../glossary.md#decision-rights)), and revisit the list twice a year:
@@ -171,9 +163,8 @@ stakeholders. Larson attributes competition among peers partly to habits learned
 existing capacity paid better than creating new capacity, and partly to an executive who does not
 enforce norms ([Larson, 2023c](../../references/bibliography.md#larson2023gelling)) (**expert
 opinion**). So enforce them. When a director undercuts a decision, raise it in your next one-on-one:
-name the behavior and its cost to the team, and restate the route (new evidence reopens a decision,
-in the meeting). If it recurs, it belongs in the director's assessment, because peer conduct is part
-of the job the shared goal defines.
+name the behavior and its cost, and restate the route (new evidence reopens a decision, in the
+meeting). If it recurs, it belongs in the director's assessment.
 
 A sign the team works: directors raise their own areas' problems in the meeting before the VP hears of
 them elsewhere, and a director sometimes argues for giving capacity to a peer.
@@ -184,21 +175,17 @@ The VP's main recurring instrument is a monthly operating review with each direc
 area's scorecard (Chapter 38), progress on funded bets, staffing, and what the director wants decided.
 It inspects the director's system, as Chapter 39 describes one level down.
 
-Status reports are biased, and the bias compounds with each layer. Keil and colleagues report that in
-a review of 56 experienced software project managers, status reports were biased 60 percent of the
-time. They advise seeking corroboration, and warn that aggressive auditing can backfire into more
-misreporting
-([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)). That is a **research
-finding**, from samples that need caution in generalizing. A VP sits two filters above Chapter 40's
-director.
+Status reports are biased, and the bias compounds with each layer. Keil and colleagues report that
+experienced software project managers' status reports were biased 60 percent of the time; they advise
+seeking corroboration, and warn that aggressive auditing can backfire into more misreporting
+([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)) (**research finding**, from
+samples that need caution in generalizing).
 
-Aghion and Tirole's formal model, as its abstract describes it, distinguishes formal authority (the
-right to decide) from real authority (effective control). Real authority follows information, and a
-superior's overload shifts it to subordinates
-([Aghion and Tirole, 1997](../../references/bibliography.md#aghion1997formal)). A VP over five
-directors holds formal authority over everything and real authority over little. The VP should choose
-where to hold it (allocation, director staffing, a few shared standards) rather than
-lose it by overload. The opposite failure is distance: Larson argues that a disengaged executive does
+Aghion and Tirole's formal model distinguishes formal authority (the right to decide) from real
+authority (effective control), which follows information and shifts to subordinates when a superior
+is overloaded ([Aghion and Tirole, 1997](../../references/bibliography.md#aghion1997formal)). A VP
+over five directors holds formal authority over everything and real authority over little, so choose
+where to hold it (allocation, director staffing, a few shared standards). The opposite failure is distance: Larson argues that a disengaged executive does
 more damage than a somewhat over-involved one, because decisions stall and struggling leaders go
 unaddressed ([Larson, 2023d](../../references/bibliography.md#larson2023micromanage)); **expert
 opinion**.
@@ -227,20 +214,17 @@ Chapter 42 limits how many cross-team initiatives a director runs at once; Chapt
 director's capacity into categories. The VP decides how much capacity each director gets for the year,
 and for what.
 
-Larson divides executive planning into an annual financial plan with headcount, a portfolio allocation
-between internal priorities and cross-functional requests, and a roadmap agreed with product and sales.
-He recommends allocating coarsely, to an area's leader rather than its teams, and infrequently, partly
-because frequent changes make teams compete for allocation in a zero-sum way
+Larson recommends allocating coarsely, to an area's leader rather than its teams, and infrequently,
+partly because frequent changes make teams compete for allocation in a zero-sum way
 ([Larson, 2023b](../../references/bibliography.md#larson2023planning)): **expert opinion**.
 
 Research adds a bias: allocations follow the org chart. Bardolet, Fox, and Lovallo argue that
 multibusiness firms tend toward even allocation across divisions, so allocations depend on how the
-firm is divided ("partition dependence"). Their abstract reports an archival study that found capital
-allocations biased toward equality across business units. Two experiments with experienced managers
-found allocations still varied with the divisional structure presented
-([Bardolet et al., 2011](../../references/bibliography.md#bardolet2011capital)). That is a **research
-finding** about capital budgets; applying it to engineering capacity is this book's extension. The mechanism transfers: if a VP funds each director a share of their own plan, the
-shape of the org chart drives the allocation. Staw's work on escalation of commitment, the tendency to
+firm is divided ("partition dependence"). An archival study and two experiments with experienced
+managers support it ([Bardolet et al., 2011](../../references/bibliography.md#bardolet2011capital)): a
+**research finding** about capital budgets; applying it to engineering capacity is this book's
+extension. If a VP funds each director a share of their own plan, the org chart drives the
+allocation. Staw's work on escalation of commitment, the tendency to
 put more into a failing course one chose oneself
 ([Staw, 1976](../../references/bibliography.md#staw1976knee)), adds a second hazard: the VP's own bets
 are the hardest to cut.
@@ -267,16 +251,46 @@ fund the area's next-best item.
 The VP's highest-leverage and most delayed decisions concern directors: who they are, how their areas
 are bounded, when one must change. Larson advises testing first impressions before acting, then making
 necessary personnel changes quickly
-([Larson, 2023c](../../references/bibliography.md#larson2023gelling)). Chapter 36 covers succession
-coverage, Chapter 41 manager development, Chapter 9 underperformance; the VP applies them one level up.
-The VP-specific question is whether an area's problem is the director, the allocation, or the
-boundary, because the remedies differ in cost and reversibility.
+([Larson, 2023c](../../references/bibliography.md#larson2023gelling)). Chapters 36, 41, and 9 cover
+succession, manager development, and underperformance; what follows applies them one level up
+(**this book's recommendation**).
+
+**Assessing a director.** Use four kinds of evidence from different sources, so no single biased
+channel decides:
+
+| Evidence | Source | A warning sign |
+|---|---|---|
+| Outcomes and system health | The area's scorecard | Goals met while incidents, unplanned work, or attrition rise |
+| Skip-level signals | The director's managers and senior engineers | Managers route decisions around the director |
+| Managers' growth | Hires, promotions, moves | No manager closer to a bigger role than a year ago |
+| Peer conduct | The director team | Decisions reopened privately; the shared goal never gets capacity |
+
+Write the assessment every half, with its evidence, and discuss it with the director.
+
+**Director, allocation, or boundary?** The remedies differ in cost and reversibility, so ask in order.
+Was the area funded for what it was asked to do? If the gap table showed it short and nothing moved,
+the problem is allocation, and a new director fixes nothing. Does the boundary force constant
+negotiation with another area (shared components, one customer journey split in two)? If peers report
+the same friction, redraw the boundary. Only when funding and boundary are sound does the evidence
+point at the director. For example, an area misses a commitment by two months. A peer area with
+similar funding delivered, and the area's managers say decisions wait on the director: that is a
+director problem.
+
+**Coach, move, or replace.** Coach a gap the director acknowledges, with a measure and a date, usually
+one half. Move a director who would be strong in a different kind of area. Replace when a written
+assessment stays poor past its decision date. Every change is a transition for the whole area, so
+decide once, on evidence.
+
+**Hiring or promoting a director.** Write the role first: the area's goals, what its managers need,
+and the blind spot the director team lacks. Test an internal candidate in an acting or stretch scope
+with a review date; judge by how their managers perform. Interview an outside candidate against the
+written role (Chapter 7), take references from former reports, and agree a 90-day plan in week one.
+Let the other directors meet the candidates: they will be the newcomer's first team.
 
 ## Engineering Organization Example
 
-This example is **illustrative** and fictional. It uses Halvard Systems from Chapter 35 (500 engineers,
-about 63 first-line managers, about 11 directors, four product groups and a platform organization of 70
-engineers, each under a VP). The Commerce details below are on the
+This example is **illustrative** and fictional. Halvard Systems (Chapter 35) has 500 engineers in
+four product groups and a platform organization, each under a VP; details are on the
 [Halvard page](../../case-studies/northstar/halvard.md).
 
 **The group.** Nadia Brennan is VP of Commerce, Halvard's largest product group: 130 engineers and 16
@@ -341,7 +355,6 @@ chart, not the ranking, would have chosen: partition dependence in miniature.
 Each option is defensible; the arithmetic makes the choice explicit and Nadia's rather than the org
 chart's.
 
-
 ## Decision Framework
 
 Use the first table to decide whether a VP layer is warranted, the second to decide which decisions a
@@ -373,16 +386,12 @@ directors and delegates what stays inside one area.
 VP brings experience of the next scale. Upper echelons theory suggests either choice shapes what the
 leadership team notices, so the question is which blind spots the company can least afford.
 
-**CTO and VP split, or one executive.** A split frees the CTO for strategy and adds a seam where
-priorities get argued twice.
-
 **Stable allocation against responsiveness.** Infrequent reallocation lets directors plan and stops
 lobbying; it also funds a fading bet for months. Written triggers ("if enterprise deals in the second
 quarter are below four, bet 2 drops to 20 FTE") buy responsiveness without constant renegotiation.
 
-**Inspection against autonomy.** A thorough review catches problems early; per Keil and colleagues'
-warning about aggressive auditing, it must also reward early bad news, or it produces polished
-reports.
+**Inspection against autonomy.** A thorough review catches problems early, but unless it rewards
+early bad news it produces polished reports (Keil and colleagues' warning).
 
 **Moving people against moving work.** People moves fix a lasting mismatch at a transition cost;
 work moves keep teams intact and add coordination. Use the first for mismatches expected to outlast a
@@ -407,11 +416,10 @@ bets before mapping them to areas, and compare the result with headcount by area
 another function. Detection: corroborate each review with a second source (Chapter 40's signal
 sources).
 
-**The director tournament.** Directors compete for headcount, hoard engineers, and escalate privately.
-Larson warns that rewarding private headcount escalations turns the agreed plan into a fiction
+**The director tournament.** Directors compete for headcount and escalate privately; Larson warns
+that rewarding this turns the agreed plan into a fiction
 ([Larson, 2023b](../../references/bibliography.md#larson2023planning)). Signal: one-on-one requests to
-move capacity. Detection: every reallocation request goes through the director team meeting, with the
-other directors present.
+move capacity. Detection: reallocation requests go only through the director team meeting.
 
 **The unreplaced director.** A failing director stays for a year. Signal: the area's managers route
 around them to the VP. Detection: a written assessment every half, with a decision date when it is
@@ -423,27 +431,25 @@ In an organization of 50 to 150 engineers, there is usually one director, or two
 The VP's work still exists in small form, and someone has to do it.
 
 **Allocation.** At 80 to 150 engineers, the director decides annual allocation with the CTO and the
-head of product, using Chapter 38's categories and Chapter 42's portfolio limit. The VP-level addition
-is to rank bets before mapping them to teams, so that six teams do not quietly fund six favorites.
+head of product (Chapters 38 and 42). The VP-level addition is to rank bets before mapping them to
+teams, so that six teams do not quietly fund six favorites.
 
 **The second director.** The first VP-shaped decision is usually whether to create a second director
 role. Chapter 35 covers the design; the VP lens adds one test: will the two directors' claims on capacity
 conflict, and who will decide between them? If the answer is "the CTO", the CTO is acting as VP and
 should say so.
 
-**Growing into the role.** A director who expects to become VP builds the evidence in the current job:
-allocation by ranking rather than by team, managers who could become directors (Chapter 41's bench),
-and working relationships with executive peers.
+**Growing into the role.** A director who expects to become VP builds the evidence now: allocation by
+ranking, managers who could become directors (Chapter 41), and relationships with executive peers.
 
 ## CTO Perspective
 
 The CTO designs the VP role, or decides not to have one. Three choices are the CTO's.
 
-**What the CTO keeps.** Larson describes the engineering executive's job as merging the CEO's,
-executive peers', and engineering's views into the problem the company actually has, as a company-first
-problem solver rather than an advocate for one function
+**What the CTO keeps.** Larson describes the engineering executive as a company-first problem solver
+rather than an advocate for one function
 ([Larson, 2023e](../../references/bibliography.md#larson2023balancing)). In a CTO and VP split, both
-cannot do that job for the same decisions. Write down which decisions each owns: typically the CTO
+cannot do that job for the same decisions; a split also adds a seam where priorities get argued twice. Write down which decisions each owns: typically the CTO
 keeps technical strategy, major build-or-buy calls, and the external face; the VP keeps allocation,
 director staffing, and the operating rhythm.
 
@@ -478,55 +484,55 @@ them to groups, and accepts that a group may shrink.
 
 !!! info "Northstar so far"
     Week 45 of the director's first year. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3)
-    incidents fell from 30 a quarter to 14 in
-    quarter 3 with headcount flat at 80 engineers. In week 44 the director drafted a year-2 organization
-    proposal; Victor Lindqvist (CTO) decides on it in week 46. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    incidents fell from 30 a quarter to 14 in quarter 3 with headcount flat. In week 44 the director
+    drafted a year-2 organization proposal; Victor Lindqvist (CTO) decides on it in week 46. See the
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
+    [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 This case is **fictional**, set in weeks 45 to 48; the decision has no recorded outcome, and it is
-yours.
+yours. The quarter 4 briefing lists the other open decisions.
 
-**The situation.** The week-44 draft splits Customer Experience into separate web and mobile teams
-and proposes 79 engineers, 7 managers, and the director (87 people);
-the director's direct reports rise to 10 (seven managers, three staff engineers). Its alternative D
-adds two managers of managers (77 engineers, 9 managers). Northstar has no VP; Victor has the director as
-his only engineering leader. Headcount is flat at 87 seats for the whole organization.
+!!! note "The year-2 organization proposal in brief"
+    Northstar has 87 [seats](../../glossary.md#seat) (80 engineers, 6 managers, and the director), and
+    the total stays flat. The main proposal splits Customer Experience into Web and Mobile teams, with
+    the informal mobile lead as Mobile's manager and his engineering seat not refilled: 79 engineers and
+    7 managers. The director's direct reports rise to 10 (seven managers, three staff engineers).
+    Alternative D adds two managers of managers: 77 engineers, 9 managers.
 
-**Week 45.** Reading the draft, Victor asks a question it does not answer: "For year 2, do we need a
-VP of Engineering above you, or do you grow into that role?" He wants more of his own time for
-technical strategy and year-2 planning, and doubts that a director with a [span](../../glossary.md#span-of-control) of 10 direct reports can run the
+**Week 45.** Northstar has no VP; the director is Victor's only engineering leader. Reading the draft,
+Victor asks a question it does not answer: "For year 2, do we need a VP of Engineering above you, or do
+you grow into that role?" He wants more of his own time for technical strategy, and doubts that a
+director with a [span](../../glossary.md#span-of-control) of 10 direct reports can run the
 organization and the cross-functional portfolio at once. He asks for a recommendation by week 48.
 
 **Evidence the director has.**
 
-| Fact | Value | Source |
+| Fact | Value | How measured |
 |---|---|---|
-| Director's meetings, quarter 2 | About 25 hours of a 47-hour week | Chapter 37 |
-| Director's firsthand time, weeks 14 to 15 | 4.7 percent of hours | Chapter 40 |
-| [Succession coverage](../../glossary.md#succession-coverage), week 44 | 10 critical roles; none ready-now; 4 with no cover | Chapter 36 |
-| Headcount | Flat at 87; a VP hire takes a seat | Northstar's flat-headcount constraint |
+| Director's time in meetings | About 25 hours of a 47-hour week | Calendar count, quarter 2 |
+| Firsthand time (seeing the work, not reports) | 4.7 percent of hours | Time study, weeks 14 to 15 |
+| [Succession coverage](../../glossary.md#succession-coverage) | 10 critical roles; none ready-now; 4 with no cover | Succession review, week 44 |
+| Headcount | 87 seats; a VP takes one | The flat-headcount rule |
 
 **The options as the director frames them.**
 
-1. **Hire a VP of Engineering above the director.** Under the flat rule, the seat comes from an
-   engineering seat left unfilled (one fewer engineer, about 1.3 percent of the 79 engineers in the main proposal). The VP would manage
-   one director: the pass-through layer this chapter warns against, unless the role also takes
-   decisions the director does not have today.
+1. **Hire a VP above the director.** The seat comes from an engineering seat left unfilled. The VP
+   would manage one director: the pass-through layer this chapter warns against, unless the role also
+   takes decisions the director does not have today.
 2. **The director grows into the role.** Victor delegates in writing the VP decisions that exist at
-   Northstar: annual allocation across teams with Amara Okafor (CPO), manager staffing, and the operating
-   rhythm. The director's span of 10 remains the open risk.
-3. **Alternative D's layer as the VP's substitute.** Two managers of managers absorb some span; the
-   director's job moves toward the VP's. Its cost is in the week-44 proposal: two seats of engineering
-   capacity compared with the main proposal (77 against 79 engineers).
+   Northstar: annual allocation across teams with Amara Okafor (CPO), manager staffing, and the
+   operating rhythm. The span of 10 remains the open risk.
+3. **Alternative D's layer as the VP's substitute.** Two managers of managers absorb some span, and the
+   director's job moves toward the VP's. Its cost: two engineering seats (77 engineers against 79).
 4. **Decide later, with triggers.** No VP in year 2; written triggers for revisiting, such as approved
-   headcount growth, a second director role, or the director's span staying above a stated number for
-   two quarters.
+   headcount growth, a second director role, or the span staying above a stated number for two
+   quarters.
 
-None is free, and each depends on Victor's week 46 decision on the year-2 proposal, which remains
-open.
-
-**The reader decides:** what the director should recommend in week 48, what decisions the
-recommendation transfers and to whom, and what evidence would change it.
+Each depends on Victor's week 46 decision on the organization proposal. **The reader decides:** what
+the director should recommend in week 48, what decisions the recommendation transfers and to whom, and
+what evidence would change it.
 
 ## Exercises
 
@@ -603,14 +609,12 @@ evidence each VP brings, and how you prevent private escalation from becoming th
   reach together.
 - Run a monthly operating review per director, corroborate it with a second source, and reward early
   bad news.
-- Rank bets before mapping them to directors; allocation that follows the org chart funds boxes, not
-  outcomes.
-- Treat a large gap between funded work and an area's headcount as an explicit decision: move people,
-  move work, or change the ranking.
+- Rank bets before mapping them to directors, and treat a large gap against an area's headcount as an
+  explicit decision: move people, move work, or change the ranking.
 - Reallocate at written triggers in a forum with all directors present, never through private
   escalation.
-- Staffing the director team decides which problems the organization can see; make director changes
-  on evidence, and without a year's delay.
+- Staffing the director team decides which problems the organization can see. Before changing a
+  director, rule out allocation and boundary; then decide on written evidence, without a year's delay.
 
 ## References and Further Reading
 

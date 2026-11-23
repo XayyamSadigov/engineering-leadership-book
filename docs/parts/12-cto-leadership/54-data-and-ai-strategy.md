@@ -80,16 +80,12 @@ makes the cost of an error, and who catches it, the central design question.
 
 ### Data foundations come first
 
-AI projects fail more often from data than from models. Interviews with 53 AI practitioners in
-high-stakes domains describe **data cascades**: compounding downstream failures caused by data problems,
-reported by 92 percent of interviewees, invisible, delayed, and often avoidable
-([Sambasivan et al., 2021](../../references/bibliography.md#sambasivan2021data); qualitative **research
-finding**). Others frame the same problem as technical debt specific to machine-learning systems, such
-as undeclared data consumers and hidden feedback loops
-([Sculley et al., 2015](../../references/bibliography.md#sculley2015hidden); **expert opinion**). DORA's
-AI capabilities model lists "healthy data ecosystems" among its seven capabilities
-([Storer and DeBellis, 2025](../../references/bibliography.md#dora2025aicapabilities); survey-based
-**industry research**).
+AI projects fail more often from data than from models. In interviews with 53 AI practitioners, 92
+percent reported **data cascades**: data problems that compound downstream, show up late, and were often
+avoidable ([Sambasivan et al., 2021](../../references/bibliography.md#sambasivan2021data); qualitative
+**research finding**). Machine-learning technical debt and DORA's "healthy data ecosystems" capability
+make the same point ([Sculley et al., 2015](../../references/bibliography.md#sculley2015hidden);
+[Storer and DeBellis, 2025](../../references/bibliography.md#dora2025aicapabilities)).
 
 This does not mean a data-governance program must precede everything. It means a short readiness test
 for the specific data an initiative will use (**this book's recommendation**, building on
@@ -107,6 +103,27 @@ A learning model adds a sixth question: **are there labels?** The labeled exampl
 assumed it had often turn out to be a few hundred hand-classified rows. Most of what the test finds is
 worth fixing whether or not the AI initiative proceeds, which makes data work the low-regret first stage
 of almost every AI plan.
+
+### Data strategy beyond readiness
+
+The readiness test judges one dataset for one initiative. A data strategy decides, once for the company,
+who owns data and how it is served (**this book's recommendation**). Four choices matter at CTO level.
+
+1. **Who owns meaning.** The function that creates a fact owns its definition: Finance owns revenue and
+   the ledger, Product owns order states, Customer Success owns ticket categories. The data team owns
+   the pipelines and the platform, not the definitions. Write the owner for each of the ten or twenty
+   datasets the company runs on; leave the rest unowned on purpose.
+2. **Product or by-product.** A dataset other teams depend on is a product: it has a versioned
+   interface, a quality measure, and a consumer list, like a service. Everything else stays a
+   by-product of the system that created it. Most companies need only a handful of data products.
+3. **Where the data team sits.** At 50 to 150 engineers it usually sits in engineering, as a platform
+   team serving analysts and product teams. Put it under Finance or Product only if that function is
+   its main customer, and then write who decides platform choices.
+4. **Platform choices.** Choose the warehouse, the transformation tooling, and the catalog as an
+   "adequate" bin item ([Chapter 51](51-enterprise-technology-strategy.md)): standard, bought, and
+   changed rarely. The differentiating work is the data contracts and definitions, not the tools.
+
+Each choice has an owner and a review date in the technology strategy, like any other policy.
 
 ### Three kinds of AI decision, and buy, build, or wait
 
@@ -127,7 +144,8 @@ recommendation**):
 - **Differentiation lives in data and workflow, not models.** Companies win by attaching a bought model
   to proprietary data and a workflow customers depend on. "Build" usually means the data pipeline,
   evaluation, and integration around a bought model.
-- **The frontier is jagged.** In a preregistered experiment with 758 consultants, GPT-4 users completed
+- **The frontier is jagged.** In a preregistered experiment (one whose analysis plan was published
+  before the data came in) with 758 consultants, GPT-4 users completed
   12.2 percent more tasks, 25.1 percent faster, on tasks inside the model's capability. They were 19
   percent less likely to be correct on a task outside it
   ([Dell'Acqua et al., 2026](../../references/bibliography.md#dellacqua2026jagged); **research
@@ -162,8 +180,8 @@ at once. Each needs an owner before launch (**this book's recommendation** unles
 **Inference cost is a cost-of-revenue line.** Every call to a model costs money, so an AI feature lowers
 [gross margin](../../glossary.md#gross-margin) in proportion to use (Chapter 52 shows where cost of
 revenue sits). Price it per business transaction before building. An **illustrative** example: a feature
-that makes 4 model calls per order at $0.01 each costs $0.04 an order; at 500,000 orders a month that is
-$20,000 a month, or $240,000 a year, which must be covered by price, retention, or saved support cost.
+that makes 4 model calls per order at $0.01 each costs $0.04 an order. At 500,000 orders a month that is
+$240,000 a year, which price, retention, or saved support cost must cover.
 Usage grows with success, so model the cost at the volume you hope for, not the pilot's.
 
 **Provider dependence is a change you do not control.** Providers change prices, retire model versions,
@@ -214,6 +232,14 @@ research**). A workable policy has six parts (**this book's recommendation**):
 5. **Disclosure**, so the company can answer customers truthfully about AI and their data.
 6. **Owners and a six-month review**, because these tools change faster than the rest of the toolchain.
 
+**Agents that act need their own rules.** Coding agents that open pull requests, run commands, or make
+multi-step changes raise three questions an assistant does not (**this book's recommendation**). First,
+permissions: give an agent its own identity with the least access it needs, never an engineer's
+credentials, and no route to production secrets. Second, review load: an agent can open more pull
+requests in a day than a team can review well, so cap its open changes and count its output against the
+review queue, not as free capacity. Third, attribution: every agent change names the human who asked for
+it and who answers for it, so the accountability rule above still holds.
+
 Two public **standards** help show a customer or auditor that the policy covers recognized ground. NIST's
 voluntary AI Risk Management Framework organizes AI risk work into four functions: Govern, Map, Measure,
 and Manage ([NIST, 2023](../../references/bibliography.md#nist2023airmf)). A generative AI profile
@@ -234,6 +260,10 @@ randomized controlled trial.
 | [Becker et al., 2025](../../references/bibliography.md#becker2025metr) | RCT; 16 experienced open-source developers; 246 tasks in their own mature repositories | Completion time | 19 percent slower; forecast 24 percent faster, believed afterwards 20 percent faster |
 | [Harvey and DeBellis, 2024](../../references/bibliography.md#dora2024announcing) | DORA survey | Associations with adoption | Better documentation, code quality, review speed; an estimated 1.5 percent lower throughput and 7.2 percent lower stability as adoption increased |
 
+A standard error says how far the true effect could plausibly be from the estimate: a gain of 26 percent
+with a standard error of 10.3 could, on the usual rule of two standard errors either side, be anywhere
+from roughly 6 to 46 percent. A "wide interval" means the
+same thing for the Paradis result.
 Four readings matter to a CTO.
 
 **The settings differ more than the results.** Large speedups come from well-specified tasks and less
@@ -246,7 +276,8 @@ applies: faster output becomes outcome only if the delivery system absorbs it. D
 rising adoption with lower estimated stability (correlational **industry research**).
 
 **Perception is not measurement.** Developers in the METR trial believed they were faster while being
-slower ([Becker et al., 2025](../../references/bibliography.md#becker2025metr); small sample, preprint).
+slower ([Becker et al., 2025](../../references/bibliography.md#becker2025metr); a small sample, and a
+preprint, meaning not yet peer reviewed).
 The acceptance rate of suggestions tracks *perceived* productivity
 ([Ziegler et al., 2022](../../references/bibliography.md#ziegler2022productivity); **research
 finding**). A survey asking "does AI make you faster?" and a vendor's acceptance dashboard measure the
@@ -283,10 +314,11 @@ reward using the tool rather than delivering with it
 ## Engineering Organization Example
 
 !!! info "Northstar so far"
-    Week 41 of the director's first year. Sev1 and Sev2 incidents fell from 30 a quarter to 14 in
-    quarter 3, with headcount flat at 80 engineers. A top-40 distributor has complained about correcting
-    orders, and a sample of 400 corrected orders found 340 errors. See the
-    [timeline](../../case-studies/northstar/timeline.md) and the
+    Week 41 of the director's first year, with headcount flat at 80 engineers. A top-40 distributor (one
+    of the 40 largest customers) has complained about correcting orders. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+    New to Northstar? Read [the year in brief](../../case-studies/northstar/year-in-brief.md), the
+    [cast](../../case-studies/northstar/cast.md), and the
     [quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md).
 
 All figures below are **illustrative** and fictional.
@@ -308,7 +340,7 @@ inventoried the warehouse:
 The order and ledger data fail the readiness test on owner, lineage, and permitted use.
 
 **AI use (the week 42 survey).** The director and Li Na Zhou (staff engineer, data and integration) ran
-an anonymous AI-use survey; 63 of 80 engineers responded. 41 use an AI coding assistant at least weekly,
+an anonymous AI-use survey. 63 of 80 engineers responded. 41 use an AI coding assistant at least weekly,
 29 of them on personal or free accounts. 17 have pasted Northstar code into a chat tool and 6 have pasted
 customer data. 34 of the 41 weekly users say AI makes them faster. There is no AI policy. In week 41 a
 top-40 customer's renewal security questionnaire asked whether Northstar uses generative AI and whether
@@ -433,9 +465,8 @@ requests that look more urgent.
 **Hold the evidence line.** Boards and executives bring numbers from vendors and peers. The CTO says what
 each measured, where, and what the company would have to observe to believe it applies.
 
-**Own data as a company asset.** Finance owns its ledger, product its features, the data team its pipelines;
-nobody owns meaning. The CTO asks for named owners for the few datasets that matter and puts the data
-foundation in the technology strategy
+**Own data as a company asset.** The CTO gets owners of meaning named for the few datasets that matter
+and puts the data foundation in the technology strategy
 ([Chapter 51](51-enterprise-technology-strategy.md)) with a cost and a date.
 
 **Answer customers truthfully** from a written policy, not a survey of what engineers happen to do. This ties
@@ -500,7 +531,8 @@ work lands on her team, whose manager role has no succession cover. It also rece
 54 if the year-2 organization proposal is approved.
 
 The draft has weaknesses. Its second wave starts after the week 53 reporting-line change, if approved,
-so the waves are confounded with the reorganization. Six teams in two waves can detect a large effect or
+so the waves are confounded with the reorganization: the two changes land together, and their effects
+cannot be separated. Six teams in two waves can detect a large effect or
 clear harm, not a modest gain. And it says nothing about AI in Data and Analytics' analysis work, where customer personal
 data is most likely to meet an AI tool. What you decide is exercise X1.
 

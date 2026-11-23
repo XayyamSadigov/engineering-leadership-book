@@ -70,6 +70,22 @@ sources, a way to judge how much to trust the solid path, team by team.
 
 ## Deep Conceptual Explanation
 
+### What a director owns
+
+A director answers for an organization's results without doing its work. The split below is **this
+book's recommendation** for 50 to 150 engineers; the case study shows one company's version.
+
+| | What it covers |
+|---|---|
+| Owns (answers for the result) | Reliability and delivery of the whole organization; cross-team commitments; the managers' development; the information system (scorecard, decision log, reports upward) |
+| Decides | Owners for components several teams change; the split of capacity among product, prevention, and platform; mandatory standards and severity definitions; staff engineers' mandates; who decides each cross-team question |
+| Delegates | Team plans and working methods; design inside a team's boundary; hiring within a team, against a shared bar; incident command |
+| Does not do | Production code on the critical path; running incidents; planning a team's work; assigning work to engineers two levels down |
+
+Two rows carry the risk. Every item under "Decides" that stays undecided becomes a cross-team
+problem with no owner. Every item under "Does not do" that the director does anyway takes a job from
+a manager and a week from the year.
+
 ### What changes when you manage managers
 
 **Information.** A first-line manager watches the work. A director watches managers watching the
@@ -241,7 +257,7 @@ source that tests them best (**this book's recommendation**).
 | Is quality improving? | Scorecard (Chapter 27) | Raw incident records; severity audit | Severities drifting down while customer escalations do not |
 | Is this commitment real? | Manager's forecast (Chapter 17) | Board and dependency data | Status green, dependencies unstarted |
 | What do customers experience? | Customer Success reports | Joining escalation reviews; reading tickets | Engineering and Customer Success describe different problems |
-| Is this manager effective? | Evidence across four areas (Chapter 4) | Skip-levels, neighboring teams | Only the manager's own account is available |
+| Is this manager effective? | Evidence on outcomes, team health, people growth, leverage (Chapter 4) | Skip-levels, neighboring teams | Only the manager's own account is available |
 
 When a cross-check disagrees with the primary source, the sequence matters:
 
@@ -312,7 +328,7 @@ with a system.
 
 Three practices fit this size (**this book's recommendation**): a **skip-level rotation** covering
 everyone once a quarter in groups, plus an individual list of fewer than ten; a **weekly hour of raw
-data** (pages, a postmortem, customer escalations, the board of the team you know least); and a
+data** (pages, an incident review write-up, customer escalations, the board of the team you know least); and a
 **written skip-level rule** (above), announced to managers first.
 
 Multi-site organizations need the rotation more and get it less: people at a second site have the
@@ -380,36 +396,37 @@ courtesy.
 
 !!! info "Northstar so far"
     End of week 26, the close of quarter 2. Sev1 and Sev2 incidents fell from 30 at baseline to 21 in
-    quarter 1. The accounting integration has been live since week 19, and bulk ordering is forecast
-    to ship this week. The director has held individual skip-levels since week 16. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    quarter 1. Of the two [renewal commitments](../../glossary.md#renewal-commitments), the
+    accounting integration has been live since week 19, and bulk ordering is forecast to ship this
+    week. The director has held individual skip-levels since week 16. See the
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../../case-studies/northstar/year-in-brief.md) and the
+    [cast](../../case-studies/northstar/cast.md).
 
 This case is **fictional**. The time shares other than weeks 14 and 15 are the director's estimates,
 and the quarter 3 calendar is a proposal.
 
-**The role.** The director's written role definition covers reliability and delivery of the whole
-organization, the managers' development, staff mandates, cross-team commitments, and owners for
-cross-team decisions. It excludes team planning, incident response, and production code. At the end
-of week 26 the director reconstructed the two quarters from calendar and chat history, as Chapter 1
-asks every manager to.
+**The role.** Northstar's written role definition follows the "What a director owns" table: it
+excludes team planning, incident response, and production code. At the end of week 26 the director
+reconstructed the two quarters from calendar and chat history, as Chapter 1 asks every manager to.
 
 **Two quarters by period.** The table shows the share of hours spent on firsthand signal (sources not
-passing through a direct report). The recurring forums are those Chapter 37 reconstructs for quarter
-2.
+passing through a direct report).
 
-| Weeks | Events that shaped the time | Firsthand share |
+| Weeks | What filled the time | Firsthand share |
 |---|---|---|
-| 1–4 | Incident classification with Kwame Mensah (staff engineer); severity definitions; capacity model; first owners | about 25% |
-| 5–9 | Weekly Core releases; week 7 severity re-rating; week 9 Billing Sev1 | about 12% |
-| 10–13 | QA transition announced; migration check lands; day-90 report | about 8% |
-| 14–15 | Stay interview with Ines Carvalho (staff engineer); technical strategy draft; ADR-0001 opened | 4.7% (measured) |
-| 16–19 | Skip-level conversations start (four a week); Customer Experience health check; first conversation with a mobile engineer (week 17) | about 9% |
-| 20–26 | Individual skip-levels continue; Tomasz Wierzbicki, a Billing ledger expert, reports an outside offer; bulk ordering due | about 9% |
+| 1–4 | Learning the system: classifying incidents with a staff engineer, defining severity, naming first owners | about 25% |
+| 5–9 | Running weekly releases; a serious Billing incident in week 9 | about 12% |
+| 10–13 | Moving QA engineers into product teams; the day-90 report | about 8% |
+| 14–15 | A technical strategy draft, a stay interview, the first architecture decision | 4.7% (measured) |
+| 16–19 | Individual skip-levels start, four a week | about 9% |
+| 20–26 | Skip-levels continue; a retention risk in Billing; the bulk-ordering deadline | about 9% |
 
 Firsthand time fell as the operating system routed information through managers, to a twentieth of
 the week by weeks 14 and 15. Skip-levels from week 16 recovered some of it.
 
-**The weeks 14 and 15 sample.** Two measured weeks of 48 hours each:
+**The weeks 14 and 15 sample.** Two measured weeks of 48 hours each (Chapter 37's 47-hour week is the typical week from week 16). The forum hours are Chapter 37's
+calendar without skip-levels, which had not started:
 
 | Block | Hours, two weeks |
 |---|---|
@@ -420,7 +437,7 @@ the week by weeks 14 and 15. Skip-levels from week 16 recovered some of it.
 
 There was no skip-level, no customer contact, and no conversation with any Bogotá engineer.
 
-**What firsthand signal had found.** In week 7, reading the incidents in the weekly review exposed
+**What firsthand signal had found.** In week 7, reading the incidents in the weekly operational review exposed
 four consecutive Sev3 ratings. One was a two-hour payment delay for nine customers, and the director
 re-rated it. In week 16, a health check facilitated by Elena Sokolova (Payments and Integrations
 manager) showed Customer Experience's mobile engineers rating four areas red. In week 17, in the
@@ -429,8 +446,10 @@ Bogotá) said he had been doing a lead's job for over a year without anyone sayi
 with Daniel Cho (Customer Experience manager) were "where I tell Daniel where mobile is". He agreed
 the director could raise it.
 
-Through summaries, things arrived late. The slipped migration check surfaced only in the week 9 Sev1,
-and mobile's frustration appeared in none of Daniel's one-on-ones for weeks 14 to 19. The main channel
+Through summaries, things arrived late. A release check promised after INC-427 (credit notes applied
+twice after a release) was due in week 7 and slipped; the director learned of the slip only when a
+Sev1 hit the gap in week 9. Mobile's frustration appeared in none of Daniel's one-on-ones for weeks
+14 to 19. The main channel
 carried status, which is what it was built to carry.
 
 **The quarter 3 proposal.** Chapter 37 proposes the director's recurring forums for quarter 3, about
@@ -439,7 +458,7 @@ carried status, which is what it was built to carry.
 
 | Block | Weeks 14–15, per week | Quarter 3, per week |
 |---|---|---|
-| Recurring forums and one-on-ones, excluding skip-levels | 14 | 12 |
+| Recurring forums and one-on-ones, without skip-levels | 14 | 12 |
 | Skip-levels | 0 | 2 |
 | Strategy and structure, two protected half-days | 11 | 11 |
 | Executives, escalations, and administration | 20.75 | 15.5 |
@@ -448,10 +467,10 @@ carried status, which is what it was built to carry.
 | **Total** | **48** | **48** |
 
 The two skip-level hours change format: two groups of three, 45 minutes each, plus one individual
-conversation. That covers all 77 engineers on the teams once a quarter, the 16 Bogotá engineers in
-the first five weeks. The individual slots go to eight people chosen for informal leadership or
+conversation. That covers all 77 engineers on the teams once a quarter (the 80 less the three staff
+engineers, whom the director sees in one-on-ones), the 16 Bogotá engineers in the first five weeks. The individual slots go to eight people chosen for informal leadership or
 concentrated knowledge, each seen about every eight weeks. The other firsthand signal is one incident
-review the director chooses, a raw-data hour with a postmortem, and the customer escalation review
+review the director chooses, a raw-data hour with an incident review write-up, and the customer escalation review
 run by Sofia Alvarez (VP Customer Success) every two weeks. In total, firsthand signal rises to 5.5
 hours, about 11.5 percent of the week. A two-day Bogotá visit needs travel budget Northstar has never
 had as a line.
@@ -464,8 +483,8 @@ the Customer Experience groups look like an investigation? The exercises take th
 ## Exercises
 
 Solutions are in [chapter 40 solutions](../../solutions/ch40-solutions.md). Northstar data is on the
-[baseline page](../../case-studies/northstar/baseline-data.md) and
-[the first quarter](../../case-studies/northstar/first-quarter.md) page.
+[baseline page](../../case-studies/northstar/baseline-data.md) and in
+[the year 1 record](../../case-studies/northstar/first-quarter.md).
 
 ### Foundational
 
@@ -493,7 +512,8 @@ Mateo's request before or after the first Customer Experience group.
 
 **A2.** In a skip-level group in week 29, two Billing engineers say the after-hours escalation path for
 the ledger has not changed since quarter 1, while Marcus Oyelaran's (Billing manager) updates describe it as "in
-progress". Walk through the chapter's discrepancy diagram and decide what you do in the next two weeks,
+progress". Tomasz Wierzbicki, one of Billing's three ledger experts, reported an outside offer in
+week 20. Walk through the chapter's discrepancy diagram and decide what you do in the next two weeks,
 and what you do not do.
 
 **A3.** From week 16 the director held four individual 30-minute skip-levels a week, 44 conversations

@@ -2,12 +2,80 @@
 
 На этой странице простыми словами определены термины, которые книга использует чаще всего, — для
 читателя с инженерным бэкграундом и без подготовки в менеджменте, финансах или психологии. Термины
-сгруппированы по темам; чтобы найти нужный, воспользуйтесь поиском в браузере. В каждой статье указано
+сгруппированы по темам; указатель от А до Я ниже ссылается на каждую статью. В каждой статье указано
 значение, в котором термин используется в книге, единица измерения, если она есть, и ссылка на раздел
 главы, где тема разобрана полностью. Если две главы употребляют слово в разных смыслах, статья приводит
 оба и говорит, какая глава использует какой. Статьи о Northstar и Halvard описывают вымышленные компании
 книги, а не реальные. В заголовках статей рядом с русским термином приведён английский, чтобы его было
 проще найти в английских главах.
+
+## Указатель от А до Я { #az-index }
+
+**A:** [ADR-0001](#adr-0001), [ARR](#arr)
+
+**C:** [CD3 и WSJF](#cd3-and-wsjf), [CISO](#ciso), [Core](#core)
+
+**D:** [Due diligence (комплексная проверка)](#due-diligence)
+
+**E:** [EBITDA](#ebitda)
+
+**F:** [FTE](#fte), [FTE-квартал](#fte-quarter)
+
+**H:** [Halvard Systems](#halvard-systems)
+
+**L:** [Lead time](#lead-time)
+
+**N:** [NIST CSF](#nist-csf), [Northstar Technologies](#northstar-technologies)
+
+**O:** [OKR](#okr)
+
+**S:** [SBOM](#sbom), [SLI, SLO и SLA](#sli-slo-and-sla), [SLSA](#slsa), [SOC 2](#soc-2), [SPACE](#space), [SSDF](#ssdf), [Staff-plus-инженер](#staff-plus-engineer)
+
+**T:** [Tier 1](#tier-1)
+
+**А:** [Активно эксплуатируемая уязвимость (KEV)](#known-exploited-vulnerability-kev), [Альтернативные издержки и невозвратные затраты](#opportunity-cost-and-sunk-cost), [«Асфальтированная дорога»](#paved-road), [Аудит серьёзности](#severity-audit)
+
+**Б:** [Безобвинительный разбор](#blameless-review), [Бюджет ошибок и скорость его расходования](#error-budget-and-burn-rate)
+
+**В:** [Валовая маржа](#gross-margin), [Вестинг](#vesting), [Время цикла](#cycle-time), [Встреча через уровень](#skip-level), [Выделение на профилактику](#prevention-allocation)
+
+**Г:** [Гарантия, возмещение и эскроу](#warranty-indemnity-and-escrow), [Годовой темп](#run-rate), [Горизонты](#horizons)
+
+**Д:** [Доля инцидентов, обнаруженных клиентами](#customer-detected-share), [Доля неудачных изменений](#change-failure-rate)
+
+**Е:** [Единая точка отказа по знаниям](#single-point-of-knowledge-failure)
+
+**Ж:** [Журнал решений](#decision-log)
+
+**З:** [Закон Конвея и обратный манёвр Конвея](#conways-law-and-the-reverse-conway-maneuver), [Закон Литтла](#littles-law), [Запас и поток](#stock-and-flow), [Запись архитектурного решения (ADR)](#architecture-decision-record-adr), [Заявка на найм](#requisition)
+
+**И:** [Идентификаторы реестров](#register-ids), [Инженер по качеству](#quality-engineer), [Инженеро-неделя, инженеро-день, инженеро-год](#engineer-week-engineer-day-engineer-year), [Интервью об удержании](#stay-interview)
+
+**К:** [Калибровка](#calibration), [Канал ценности и профиль срочности](#value-channel-and-urgency-profile), [Капитализация ПО и списание на расходы](#capitalized-versus-expensed-software), [Карта показателей](#scorecard), [Карьерная лестница](#career-ladder), [Когнитивная нагрузка](#cognitive-load), [Комитет по аудиту](#audit-committee), [Контрактный тест](#contract-test), [Координатор инцидента](#incident-commander), [Коэффициент валидности](#validity-coefficient)
+
+**Л:** [Ловушка возможностей](#capability-trap)
+
+**М:** [Мандат](#the-mandate), [Место](#seat), [Метаанализ](#meta-analysis), [Метки доказательности](#evidence-labels), [Метрики DORA](#dora-metrics)
+
+**Н:** [Недели, кварталы и годы](#weeks-quarters-and-years), [Незавершённая работа (WIP) и лимит WIP](#work-in-progress-wip-and-wip-limit), [Незапланированная работа](#unplanned-work), [Номера INC](#inc-numbers)
+
+**О:** [Обязательства по продлению](#renewal-commitments), [Ограничение](#constraint), [Операционные минимумы tier 1](#tier-1-operational-minimums), [Операционные расходы](#operating-expense), [Операционный план](#operating-plan), [Операционный разбор и операционное ревью](#operational-review-and-operating-review), [Опыт разработчиков](#developer-experience-devex), [Охват управления](#span-of-control)
+
+**П:** [Пакет для совета директоров](#board-pack), [Переоценка серьёзности](#re-rating), [План улучшения результативности (PIP)](#performance-improvement-plan-pip), [Плановый и осторожный сценарии](#planned-case-and-cautious-case), [Повторный инцидент](#recurrence), [Подгонка метрик: закон Кэмпбелла, закон Гудхарта](#metric-gaming-campbells-law-goodharts-law), [«Пока нет»](#not-yet), [Покрытие преемниками](#succession-coverage), [Полная стоимость сотрудника](#fully-loaded-cost), [Права на решения](#decision-rights), [Прогноз, цель и обязательство](#forecast-target-and-commitment), [Продолжение](#the-continuation), [Пропущенный дефект](#escaped-defect), [Процентильный прогноз и моделирование Монте-Карло](#percentile-forecast-and-monte-carlo-simulation), [Психологическая безопасность](#psychological-safety), [Путь эскалации](#escalation-path), [Пять ограничений](#the-five-constraints)
+
+**Р:** [Разбор инцидента](#incident-review), [Развёртываемая единица](#deployable-unit), [Размер эффекта (d, g)](#effect-size-d-g), [Рамки бюджета](#budget-envelope), [Реестр рисков](#risk-register), [Релизный поезд](#release-train), [Риск-аппетит](#risk-appetite)
+
+**С:** [Связь зависимости](#dependency-link), [Сервисные кредиты](#service-credits), [Серьёзность](#severity-sev1-sev2-sev3), [Скорость команды и стори-поинты](#velocity-and-story-points), [Список непрофинансированного](#unfunded-list), [Ставка дисконтирования и барьерная ставка](#discount-rate-and-hurdle-rate), [Стоимость задержки](#cost-of-delay), [Стоимость перехода](#transition-cost), [Структурированное интервью](#structured-interview)
+
+**Т:** [Текучесть и нежелательная текучесть](#attrition-and-regretted-attrition), [Технический долг: основной долг и проценты](#technical-debt-principal-and-interest), [Технологический ландшафт](#estate), [Типы команд и режимы взаимодействия](#team-types-and-interaction-modes), [Топ-40 клиентов](#top-40-customers), [Точка предотвращения](#prevention-point), [Точка рычага](#leverage-point)
+
+**У:** [Уровень управления](#layer), [Усиливающие и балансирующие петли](#reinforcing-and-balancing-loops)
+
+**Ф:** [Фича-флаг](#feature-flag)
+
+**Х:** [Хартия команды и рабочее соглашение](#team-charter-and-working-agreement)
+
+**Ч:** [Чистая приведённая стоимость (NPV)](#net-present-value-npv)
 
 ## Деньги и бизнес { #money-and-business }
 
@@ -41,6 +109,30 @@ Annual recurring revenue, годовая регулярная выручка: г
 исследования и разработка (большая часть зарплат инженеров), продажи и маркетинг, общие и
 административные расходы. Когда CFO просит «операционные расходы без роста», речь идёт об этой строке.
 Единица: доллары в год. Подробно:
+[глава 52](parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md#the-three-statements-read-by-a-technology-leader).
+
+### Операционный план (operating plan) { #operating-plan }
+
+План компании на следующий год: финансовые цели, численность и бюджет; обычно совет директоров утверждает
+его до начала года. Часть разработки — страница плана и доля бюджета. В Northstar совету предлагают
+утвердить операционный план на год 2 на неделе 50. Подробно:
+[глава 52](parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md#the-engineering-budget).
+
+### Рамки бюджета (budget envelope) { #budget-envelope }
+
+Общий лимит расходов, который совет директоров утверждает вместе с операционным планом. Решения внутри
+рамок остаются за менеджментом; всё, что выходит за них, возвращается к совету или CFO. В Northstar
+организация на год 2, продолжение программы качества и план по персоналу решаются внутри рамок.
+Единица: доллары в год. Подробно:
+[глава 52](parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md#the-engineering-budget).
+
+### Годовой темп (run-rate) { #run-rate }
+
+Текущая величина, пересчитанная на полный год, как если бы она сохранялась. Годовой темп затрат — это
+стоимость полного года на сегодняшнем уровне; он расходится с фактическими расходами этого года, когда
+что-то меняется посреди года: место, пустующее с шестого месяца, экономит половину своей стоимости в этом
+году и всю — в годовом темпе. ARR — это годовой темп выручки по действующим контрактам. Единица: доллары
+в год. Подробно:
 [глава 52](parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md#the-three-statements-read-by-a-technology-leader).
 
 ### Капитализация ПО и списание на расходы (capitalized versus expensed software) { #capitalized-versus-expensed-software }
@@ -85,6 +177,15 @@ IAS 38 по МСФО), а решение принимают финансы; к�
 обратном порядке от даты. Подробно:
 [глава 15](parts/04-execution/15-planning-prioritization-and-delivery-methods.md#prioritization-as-economics).
 
+### Канал ценности и профиль срочности (value channel and urgency profile) { #value-channel-and-urgency-profile }
+
+Две метки, которые бизнес-кейс книги присваивает каждой выгоде. **Канал ценности** говорит, как выгода
+доходит до компании: рост выручки, защита выручки, снижение затрат или предотвращение затрат. **Профиль
+срочности** говорит, как её ценность меняется при задержке: от долгоживущих выгод, пик которых сдвиг не
+затрагивает, до работы, ценность которой резко падает после фиксированной даты. Вместе они делают
+стоимость задержки сопоставимой между задачами. Определены в шаблоне
+[бизнес-кейса инвестиций в технологии](templates/technology-investment-business-case.md).
+
 ### Альтернативные издержки и невозвратные затраты (opportunity cost and sunk cost) { #opportunity-cost-and-sunk-cost }
 
 Альтернативные издержки — ценность лучшей альтернативы, от которой отказываются при выборе. При
@@ -127,13 +228,23 @@ Full-time equivalent, эквивалент полной ставки: полно
 ресурса. Единица: FTE-кварталы. Подробно:
 [глава 38](parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md#engineering-organization-example).
 
+### Место (seat) { #seat }
+
+Одна профинансированная позиция в штате, занятая или вакантная. Лимиты численности считают в местах:
+в инженерной организации Northstar их 87 (80 инженеров, 6 руководителей и директор), а «правило 87
+мест» означает, что новая роль, например VP или новый руководитель, стоит одного из существующих мест,
+обычно инженерного. Пустующее место экономит деньги, но не работу. Описано в
+[обзоре Northstar](case-studies/northstar/index.md#executive-and-board-context), подробно —
+[глава 48](parts/11-vp-engineering/48-capacity-strategy-workforce-planning-and-governance.md#what-a-workforce-plan-contains).
+
 ### Инженеро-неделя, инженеро-день, инженеро-год (engineer-week, engineer-day, engineer-year) { #engineer-week-engineer-day-engineer-year }
 
-Рабочая неделя, день или год одного инженера; используются для оценки объёма работы. Книга оценивает
-инженеро-год в $185 000, а инженеро-неделю примерно в $3558 ($185 000, делённые на 52 недели).
-Некоторые главы (21, 30, 52) оценивают инженеро-день примерно в $800 ($185 000, делённые на 230 рабочих
-дней), поэтому в этих главах пять инженеро-дней стоят больше одной инженеро-недели; сравнивайте
-сопоставимое. Подробно:
+Рабочая неделя, день или год одного инженера; используются для оценки объёма работы. Плановая ставка
+книги — $185 000 за инженеро-год, то есть около $3 558 за инженеро-неделю ($185 000, делённые на 52) и
+$46 250 за FTE-квартал. Когда в кейсе встречается $800 за инженеро-день, это дневная ставка финансов
+($185 000, делённые примерно на 230 рабочих дней); в пересчёте на день она выше плановой, потому что
+финансы считают только рабочие дни. Ставка капитализации $157 250 за FTE-год — капитализируемая доля
+(85%) от $185 000. Не смешивайте дневную и недельную ставки в одном расчёте. Подробно:
 [глава 45](parts/10-business-leadership/45-business-models-and-engineering-economics.md#opportunity-cost-and-sunk-cost).
 
 ### Плановый и осторожный сценарии (planned case and cautious case) { #planned-case-and-cautious-case }
@@ -197,6 +308,21 @@ FTE. Подробно:
 Подробно:
 [глава 17](parts/04-execution/17-predictability-and-managing-uncertainty.md#forecasting-from-throughput).
 
+### Скорость команды и стори-поинты (velocity and story points) { #velocity-and-story-points }
+
+Стори-поинты — относительный размер задачи бэклога в оценке команды («эта примерно вдвое больше той»), а
+не единица времени. Скорость (velocity) — сколько поинтов команда завершает за спринт. Оба помогают
+выявить разногласия о составе работы; ни то, ни другое надёжно не переводится в даты, а сравнение между
+командами провоцирует подгонку, потому что поинты у каждой команды свои. Подробно:
+[глава 17](parts/04-execution/17-predictability-and-managing-uncertainty.md#story-points-planning-poker-and-t-shirt-sizes).
+
+### Время цикла (cycle time) { #cycle-time }
+
+Время от начала работы над задачей до её завершения, для завершённых задач. Это доля lead time,
+приходящаяся на команду, без ожидания до начала работы. Читайте его как процентиль («85% задач
+завершаются за 9 дней»), а не как среднее. Единица: дни. Подробно:
+[глава 16](parts/04-execution/16-flow-lead-time-dependencies-and-unplanned-work.md#flow-measures-throughput-cycle-time-and-work-item-age).
+
 ## Поставка и качество { #delivery-and-quality }
 
 ### Lead time { #lead-time }
@@ -221,7 +347,7 @@ time, в терминах DORA — lead time for changes) — время от к
 
 ### Доля неудачных изменений (change failure rate) { #change-failure-rate }
 
-Доля развёртываний или релизов, которые заканчиваются неудачей. DORA считает развёртывания, потребовавшие
+Доля развёртываний или релизов, которые заканчиваются неудачей. DORA называет её change fail rate и считает развёртывания, потребовавшие
 немедленного вмешательства, например отката или хотфикса. Northstar считает релиз неудачным, если в
 течение 72 часов за ним последовали хотфикс, откат или связанный инцидент; это другое, локальное
 определение. Единица: проценты. Подробно:
@@ -249,6 +375,15 @@ time, в терминах DORA — lead time for changes) — время от к
 регрессии поведения, которое раньше работало), и классифицирует каждый по точке обнаружения: самому
 раннему шагу, на котором разумная проверка поймала бы дефект. Единица: штук за квартал. Подробно:
 [глава 19](parts/05-engineering-quality/19-defining-measuring-and-owning-quality.md#detection-points-tell-you-who-should-own-a-check).
+
+### Инженер по качеству (quality engineer) { #quality-engineer }
+
+Специалист по качеству, который работает в продуктовой команде: отвечает за стратегию тестирования
+рискованных областей команды, проводит исследовательское тестирование, обучает разработчиков и строит
+автоматизацию, а не выполняет каждую проверку сам. В Northstar семь QA-инженеров стали инженерами по
+качеству в продуктовых командах с недели 10. Подробно:
+[глава 19](parts/05-engineering-quality/19-defining-measuring-and-owning-quality.md#the-four-ownership-models) и
+[глава 27](parts/05-engineering-quality/27-quality-transformation-at-enterprise-scale.md#changing-roles-without-losing-the-people).
 
 ### Технический долг: основной долг и проценты (technical debt) { #technical-debt-principal-and-interest }
 
@@ -300,6 +435,22 @@ Northstar (неделя 3): «путь заказа или оплаты недо
 Sev1 и Sev2. Якорь для ссылок: `#severity-sev1-sev2-sev3`. Подробно:
 [глава 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#severity-definitions-that-resist-reclassification).
 
+### Переоценка серьёзности (re-rating) { #re-rating }
+
+Изменение серьёзности инцидента задним числом. Понижение оценки выводит инцидент из счёта Sev1 и Sev2,
+поэтому книга разрешает повышать серьёзность любому, а понижать — только координатору инцидента, с
+записанной причиной. Главный показатель, которого можно достичь переоценкой, вводит в заблуждение. В
+Northstar директор переоценил двухчасовую задержку платежей, оценённую как Sev3 (неделя 7). Подробно:
+[глава 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#severity-definitions-that-resist-reclassification) и
+[глава 55](parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#ethics-at-board-level-the-misleading-headline-and-disclosure).
+
+### Аудит серьёзности (severity audit) { #severity-audit }
+
+Еженедельная проверка того, что инциденты оценены правильно по записанным определениям серьёзности.
+Northstar включила её в еженедельный разбор на неделе 7, а предложенный директором главный показатель
+для совета отчитывается вместе с ней, чтобы счёт инцидентов был защищён от переоценки. Подробно:
+[глава 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#severity-definitions-that-resist-reclassification).
+
 ### Tier 1 { #tier-1 }
 
 Высший из трёх уровней критичности, которые назначают каждому компоненту обязательства по влиянию на
@@ -345,13 +496,20 @@ agreement, SLA) — договор, который привязывает к н�
 планирование. Подробно:
 [глава 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#roles-separate-coordinating-from-fixing).
 
+### Разбор инцидента (incident review) { #incident-review }
+
+Структурированный разбор после инцидента: как он произошёл и что изменить. Другие названия — постмортем
+и безобвинительный разбор (blameless review); книга говорит «разбор инцидента». Хороший разбор
+безобвинительный: он ищет сопутствующие факторы, не обвиняя человека или команду, чтобы люди и дальше
+рассказывали, что произошло на самом деле. Книга предпочитает несколько сопутствующих факторов одной
+«первопричине», на которой поиск останавливается на последнем шаге перед сбоем. Подробно:
+[глава 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#blameless-review-and-its-critics);
+формат — [шаблон разбора инцидента](templates/incident-review.md).
+
 ### Безобвинительный разбор (blameless review) { #blameless-review }
 
-Разбор после инцидента (его также называют постмортемом), который ищет сопутствующие факторы, не обвиняя
-человека или команду, чтобы люди и дальше рассказывали, что произошло на самом деле. Книга предпочитает
-несколько сопутствующих факторов одной «первопричине», на которой поиск останавливается на последнем шаге
-перед сбоем. Подробно:
-[глава 25](parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#blameless-review-and-its-critics).
+[Разбор инцидента](#incident-review), проведённый без поиска виноватых. В этой книге «безобвинительный»
+— определение, а сам разбор называется разбором инцидента.
 
 ### Повторный инцидент (recurrence) { #recurrence }
 
@@ -430,6 +588,15 @@ Vulnerabilities агентства CISA. Предлагаемый книгой �
 оговорённый срок. Подробно:
 [глава 53](parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md#treatment-decisions-and-who-may-make-them).
 
+### CISO { #ciso }
+
+Chief information security officer, директор по информационной безопасности: руководитель, который
+отвечает за стратегию, риски и реагирование в области безопасности по всей компании. Нужен ли он
+компании размера Northstar и кому подчиняется безопасность — вопрос для CTO и совета директоров. В
+Northstar CISO нет; служба безопасности из двух человек находится внутри корпоративного ИТ, которое
+подчиняется CFO. Подробно:
+[глава 53](parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md#security-strategy-with-recognized-frameworks).
+
 ### SOC 2 { #soc-2 }
 
 Проверка независимым лицензированным аудитором тех контролей компании, которые относятся к безопасности,
@@ -495,6 +662,29 @@ Vulnerabilities агентства CISA. Предлагаемый книгой �
 бы уйти и что одно вы бы изменили. Подробно:
 [глава 10](parts/02-people-management/10-motivation-retention-and-senior-engineers.md#exit-data-stay-data-and-system-data).
 
+### Текучесть и нежелательная текучесть (attrition and regretted attrition) { #attrition-and-regretted-attrition }
+
+Текучесть — доля людей, ушедших за период, обычно за год. Нежелательная текучесть учитывает только те
+уходы, которые организация предотвратила бы, если бы могла; считать ли уход нежелательным, стоит решать на
+обзоре талантов до того, как кто-то подаст заявление, а не после. Общий показатель по организации может
+скрывать команду или компетенцию, которая теряет гораздо больше. Единица: процент в год. Подробно:
+[глава 10](parts/02-people-management/10-motivation-retention-and-senior-engineers.md#what-the-turnover-research-supports) и
+[глава 48](parts/11-vp-engineering/48-capacity-strategy-workforce-planning-and-governance.md#attrition-vacancy-and-knowledge).
+
+### Заявка на найм (requisition) { #requisition }
+
+Одобренный запрос на найм на конкретное место. Заявка говорит, для чего это место и кого искать;
+держать заявки открытыми заранее, до ухода людей, — один из вариантов плана по персоналу Northstar, и для
+него нужно исключение из правила 87 мест. Подробно:
+[глава 48](parts/11-vp-engineering/48-capacity-strategy-workforce-planning-and-governance.md#what-a-workforce-plan-contains).
+
+### Вестинг (vesting) { #vesting }
+
+Акции, например опционы или restricted stock units, переходят в собственность сотрудника со временем,
+обычно частями в течение нескольких лет; до вестинга уход означает их потерю. Даты вестинга влияют на
+то, когда люди уходят, и становятся вопросом справедливости при сокращениях. Подробно:
+[глава 8](parts/02-people-management/08-career-development-promotion-and-compensation.md#total-compensation-and-choosing-a-level-at-offer).
+
 ### Психологическая безопасность (psychological safety) { #psychological-safety }
 
 То, как люди воспринимают последствия межличностного риска на работе, например признания ошибки или
@@ -538,6 +728,14 @@ factor) — наименьшее число людей, внезапное от�
 Уровень управления между инженером и человеком, который может принимать решения за всю организацию.
 Каждый добавленный уровень стоит задержки решений и потери информации по пути наверх. Подробно:
 [глава 34](parts/07-organization-design/34-spans-layers-and-dependency-mapping.md#what-a-layer-costs).
+
+### Связь зависимости (dependency link) { #dependency-link }
+
+Одна задача объёмом от недели, в которой одной команде понадобилась другая; считается поквартально.
+Матрица связей зависимости между командами показывает, где границы стоят координации: по строке видно,
+что команда просила у других, по столбцу — что другие просили у неё. В базовом квартале Northstar их было
+86, из них 29 пришлись на Platform Operations. Единица: связи за квартал. Подробно:
+[глава 34](parts/07-organization-design/34-spans-layers-and-dependency-mapping.md#from-dependency-map-to-boundary-design).
 
 ### Закон Конвея и обратный манёвр Конвея (Conway's law and the reverse Conway maneuver) { #conways-law-and-the-reverse-conway-maneuver }
 
@@ -648,6 +846,62 @@ Objectives and key results, цели и ключевые результаты: �
 результаты падают, а давление растёт ещё сильнее. Подробно:
 [глава 3](parts/01-foundations/03-managerial-leverage-and-systems-thinking.md#the-capability-trap).
 
+### Запас и поток (stock and flow) { #stock-and-flow }
+
+Запас — всё, что можно посчитать в данный момент, например инженеров, которые могут безопасно менять
+ledger. Поток — скорость, которая наполняет или опустошает запас, например обученных инженеров за квартал
+или увольнений за год. Запас меняется только через свои потоки, поэтому меняется медленно, а большой
+запас может скрывать остановившийся приток. Подробно:
+[глава 3](parts/01-foundations/03-managerial-leverage-and-systems-thinking.md#stocks-flows-and-slow-change).
+
+### Усиливающие и балансирующие петли (reinforcing and balancing loops) { #reinforcing-and-balancing-loops }
+
+Усиливающая петля подаёт свой выход обратно на вход, поэтому изменение в любую сторону усиливает само
+себя (меньше людей, способных отреагировать, — больше вызовов на эксперта и меньше времени на обучение).
+Балансирующая петля действует на разрыв между целью и текущим состоянием и тянет систему к некоторому
+уровню, часто такому, который никто не выбирал. Подробно:
+[глава 3](parts/01-foundations/03-managerial-leverage-and-systems-thinking.md#feedback-loops).
+
+### Точка рычага (leverage point) { #leverage-point }
+
+Место в системе, где вмешательство меняет её поведение. Изменение параметров (чисел вроде доплаты или
+доли выделения) — самый слабый вид; изменение информационных потоков, правил, целей и убеждений обычно
+сильнее. Подробно:
+[глава 3](parts/01-foundations/03-managerial-leverage-and-systems-thinking.md#leverage-points).
+
+### Технологический ландшафт (estate) { #estate }
+
+Весь набор систем, которые эксплуатирует технологическая организация: приложения, сервисы, хранилища
+данных, инфраструктура и инструменты. Работа со стратегией и рисками касается ландшафта целиком, а не
+одной системы за раз. Подробно:
+[глава 30](parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md#the-technology-risk-register) и
+[глава 51](parts/12-cto-leadership/51-enterprise-technology-strategy.md#deliberate-and-emergent-strategy).
+
+### Пакет для совета директоров (board pack) { #board-pack }
+
+Материалы, которые совет директоров получает перед каждым заседанием: отчёт CEO, финансы и вопросы на
+решение. Инженерные показатели обычно доходят до совета через него, поэтому важнее, что говорит пакет и
+насколько одинаково он говорит это из квартала в квартал, чем само заседание. В Northstar инженерные
+показатели входят в ежемесячный пакет CEO. Подробно:
+[глава 55](parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#what-a-board-does-with-technology).
+
+### Due diligence (комплексная проверка) { #due-diligence }
+
+Проверка, которую покупатель или инвестор проводит перед сделкой, чтобы понять, что он покупает.
+Технологическая due diligence смотрит на ландшафт систем, его риски, людей с критическими знаниями,
+лицензии и безопасность, и каждая находка меняет цену, условия, план интеграции или решение отказаться от
+сделки. Подробно:
+[глава 55](parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#technology-due-diligence).
+
+### Гарантия, возмещение и эскроу (warranty, indemnity, and escrow) { #warranty-indemnity-and-escrow }
+
+Условия сделки, которые превращают находки due diligence в деньги. Гарантия (warranty) — письменное
+обещание продавца, что некий факт верен; если он окажется ложным, покупатель может требовать возмещения
+ущерба. Возмещение (indemnity) — согласие продавца заплатить, если названная проблема позже обойдётся
+покупателю в деньги. Эскроу — часть цены, которую третья сторона удерживает на время, чтобы оплачивать
+такие требования. Это не юридическая консультация. Подробно:
+[глава 55](parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#technology-due-diligence).
+
 ## Доказательства и исследования { #evidence-and-research }
 
 ### Метки доказательности (evidence labels) { #evidence-labels }
@@ -730,13 +984,26 @@ permissions, scheduler) в базовом квартале меняли четы
 релизным поездом; остальные четырнадцать сервисов развёртываются независимо. Описан в
 [обзоре Northstar](case-studies/northstar/index.md#the-system).
 
+### Развёртываемая единица (deployable unit) { #deployable-unit }
+
+То, что собирается и развёртывается целиком. У Northstar 24 компонента, но 17 развёртываемых единиц,
+потому что модули Core выпускаются вместе и считаются за одну. «17 единиц» в книге означает
+17 развёртываемых единиц (Core считается за одну; всего 24 компонента). Описано в
+[исходных данных](case-studies/northstar/baseline-data.md#technical-debt-tests-and-the-pipeline).
+
+### Топ-40 клиентов (top-40 customers) { #top-40-customers }
+
+40 крупнейших клиентов Northstar: вместе они дают около трети выручки, примерно $1,17 млн ARR каждый.
+Несколько продлений и жалоб в кейсе приходятся на эту группу. Описано в
+[обзоре Northstar](case-studies/northstar/index.md#the-company).
+
 ### Недели, кварталы и годы (weeks, quarters, and years) { #weeks-quarters-and-years }
 
 Неделя 1 — первая неделя директора. Квартал 1 («квартал трансформации») — недели 1–13, квартал 2 —
 недели 14–26, квартал 3 — недели 27–39, квартал 4 — недели 40–52. «Базовый квартал» — квартал до прихода
 директора. Год 2 — недели 53–104 (кварталы 5–8); финансовый год 1 (FY1) совпадает с неделями 1–52.
-Квартал 3 — последний измеренный квартал; решения четвёртого квартала открыты. Описано на
-[странице о первом годе](case-studies/northstar/first-quarter.md).
+Квартал 3 — последний измеренный квартал; решения четвёртого квартала открыты. Описано
+в [хронике года 1](case-studies/northstar/first-quarter.md).
 
 ### Номера INC (INC numbers) { #inc-numbers }
 
@@ -744,12 +1011,21 @@ permissions, scheduler) в базовом квартале меняли четы
 перечисленные в [файле инцидентов](case-studies/northstar/data/incidents-last-quarter.csv); главы
 называют каждый несколькими словами о том, что произошло.
 
+### Идентификаторы реестров (register IDs) { #register-ids }
+
+Короткие идентификаторы записей в реестрах и журналах Northstar. INC- — инцидент (см.
+[номера INC](#inc-numbers)); DL- — запись журнала решений организации; ADR- — запись архитектурного
+решения; TD- — пункт реестра технического долга (глава 21); TR- — пункт реестра технологических рисков,
+составленного во втором квартале (TR-01 — миграция фреймворка Core); ER- — пункт корпоративного реестра
+технологических рисков, составленного на неделе 47 (ER-01 – ER-09). Номер — это метка, а не ранг. Описано
+в [хронике года 1](case-studies/northstar/first-quarter.md).
+
 ### ADR-0001 { #adr-0001 }
 
 Первая запись архитектурного решения в Northstar, открытая Li Na Zhou (staff-инженер, данные и интеграции)
 в неделю 14: как интеграциям читать проведённые данные главной книги — напрямую из таблиц, через
 версионированный контракт экспорта или из событий проводок. К неделе 26 вопрос всё ещё был открыт.
-Описано на [странице о первом годе](case-studies/northstar/first-quarter.md); формат ADR разобран в
+Описано в [хронике года 1](case-studies/northstar/first-quarter.md); формат ADR разобран в
 [главе 28](parts/06-technical-leadership/28-architecture-decision-making-and-governance.md#architecture-decision-records).
 
 ### Продолжение (the continuation) { #the-continuation }

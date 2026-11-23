@@ -36,8 +36,8 @@ that reduces the inflow of new defects before it spends effort on old ones, that
 and that will survive the first bad week.
 
 The book tells one version of what happened next, on the
-[first quarter](../case-studies/northstar/first-quarter.md) page and in Chapter 27's case study. That
-story is one worked answer, not the answer. Do not read the first-quarter page until you have
+[year 1 record](../case-studies/northstar/first-quarter.md) and in Chapter 27's case study. That
+story is one worked answer, not the answer. Do not read the year 1 record until you have
 submitted. A plan that reaches a different constraint, a different allocation, or a different
 sequence can score as well or better if the data supports it.
 
@@ -85,28 +85,41 @@ Use these sources:
 - [`teams.csv`](../case-studies/northstar/data/teams.csv): six teams and the staff engineers, with
   delivery and stability measures.
 
-**The time rule.** Use the [Northstar overview](../case-studies/northstar/index.md), the
+**The time rule.** Use only what was known before your arrival: the fact sheet below,
+plus the [Northstar overview](../case-studies/northstar/index.md), the
 [baseline data](../case-studies/northstar/baseline-data.md), the [cast](../case-studies/northstar/cast.md),
-and the "Before week 1" row of the [timeline](../case-studies/northstar/timeline.md). You may use
-facts the baseline page says were reconstructed later (such as Billing's on-call pages), because your
-first two weeks of diagnosis could have produced them. You may not use any fact about events after
-your arrival. That rules out the [first-quarter page](../case-studies/northstar/first-quarter.md)
-(except the renewal commitments in constraint 2), the rest of the timeline, and the extended-baseline
-rows dated by a later week or quarter: the recoded attrition reasons, staff engineers' time in weeks
-12 and 13, design reviews by Ines Carvalho (staff engineer) in weeks 7 to 12, and the week 14 Orders
-knowledge map.
+and the "Before week 1" row of the [timeline](../case-studies/northstar/timeline.md). Facts the baseline
+page says were reconstructed later (such as Billing's on-call pages) are allowed, because your first two
+weeks of diagnosis could have produced them. Off limits: anything after your arrival, which rules out
+[the year 1 record](../case-studies/northstar/first-quarter.md) (except the renewal commitments), the
+rest of the timeline, and baseline rows dated by a later week: the recoded attrition reasons, staff
+engineers' time in weeks 12 and 13, Ines Carvalho's design reviews in weeks 7 to 12, and the week 14
+Orders knowledge map. Weeks count from the director's first week.
 
-**Facts your submission must use.** Each must appear, with its number, where it supports a decision:
+**Project fact sheet.** Each fact must appear, with its number, where it supports a decision. All are
+allowed under the time rule. You do not need to search the case pages for these.
 
-| Area | Facts |
-|---|---|
-| Incidents | 30 Sev1 and Sev2 (7 and 23); triggers from the incident file; 14 detected by customers, 11 by monitoring, 5 by engineers; median detection 108 minutes when a customer reported, 6 when monitoring did; 11 recurrences; median restoration 3 hours 10 minutes overall, 4 hours 50 minutes for release-train incidents |
-| Defects | 212 [escaped defects](../glossary.md#escaped-defect), 81 regressions; the five detection-point classes (57, 49, 41, 38, 27) |
-| Delivery | [Core](../glossary.md#core), the monolith: 2 releases a month, 19-day [lead time](../glossary.md#lead-time), 31 percent [change failure rate](../glossary.md#change-failure-rate); services: 3 deployments a week, 3 days, 18 percent; pipeline 74 minutes; main branch red 22 percent of working hours; 9 percent of runs fail for unrelated reasons; about 140 flaky tests |
-| Ownership and readiness | 8 of 24 components disputed, shared, or orphaned; 8 with no on-call; 15 proposed [tier 1](../glossary.md#tier-1), of which 3 meet all four [operational minimums](../glossary.md#tier-1-operational-minimums) |
-| Follow-through | 96 corrective actions in two quarters, 31 closed |
-| Capacity and money | 80 engineers at $185,000; unplanned work 34 percent (27.2 engineer-years); unplanned work by category; service credits $410,000 a quarter; manual regression about 2.4 engineer-years |
-| Commitments | 7 of 17 committed roadmap items delivered; the two renewal commitments and their staffing |
+| Fact | Value | Week | Source |
+|---|---|---|---|
+| Sev1 and Sev2 incidents | 30 (7 Sev1, 23 Sev2), with their triggers | Baseline quarter | [Incident file](../case-studies/northstar/data/incidents-last-quarter.csv) |
+| Detection | 14 by customers, 11 by monitoring, 5 by engineers | Baseline quarter | [Incident file](../case-studies/northstar/data/incidents-last-quarter.csv) |
+| Median detection time | 108 minutes when a customer reported; 6 when monitoring did | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Recurrences | 11 of 30 | Baseline quarter | [Incident file](../case-studies/northstar/data/incidents-last-quarter.csv) |
+| Median restoration | 3 hours 10 minutes overall; 4 hours 50 minutes for release-train incidents | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Escaped defects | 212, of which 81 regressions | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Escaped defects by detection point | Five classes: 57, 49, 41, 38, 27 | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| [Core](../glossary.md#core), the monolith | 2 releases a month; 19-day [lead time](../glossary.md#lead-time); 31 percent [change failure rate](../glossary.md#change-failure-rate) | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Independent services | 3 deployments a week; 3-day lead time; 18 percent change failure rate | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Core pipeline | 74 minutes; main branch red 22 percent of working hours; 9 percent of runs fail for unrelated reasons; about 140 flaky tests | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Ownership | 8 of 24 components disputed, shared, or orphaned; 8 with no on-call | Baseline | [`components.csv`](../case-studies/northstar/data/components.csv) |
+| Tier 1 readiness | 15 proposed [tier 1](../glossary.md#tier-1) components, 3 meeting all four [operational minimums](../glossary.md#tier-1-operational-minimums) | Baseline | [`components.csv`](../case-studies/northstar/data/components.csv) |
+| Corrective actions | 96 in two quarters, 31 closed | Two quarters before week 1 | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Engineers and cost | 80 engineers at $185,000 a year fully loaded | Baseline | [Overview](../case-studies/northstar/index.md) |
+| Unplanned work | 34 percent (27.2 engineer-years), with its breakdown by category | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Service credits | $410,000 a quarter | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Manual regression pass | About 2.4 engineer-years a year of QA time | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Roadmap delivery | 7 of 17 committed items delivered | Baseline quarter | [Baseline data](../case-studies/northstar/baseline-data.md) |
+| Renewal commitments | Bulk ordering due week 26; accounting integration due week 19; staffing as in constraint 2 | Set before week 1 | [Overview](../case-studies/northstar/index.md) |
 
 **Project-only data: claims to test.** In your first week you hear these explanations. Two come from
 the case (Chapter 27). The other four are **invented for this project only**, and no chapter relies on

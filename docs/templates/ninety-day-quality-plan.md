@@ -15,6 +15,11 @@ does not try to finish the transformation. The capacity trade is a
 [prevention allocation](../glossary.md#prevention-allocation): engineering time set aside, in
 [FTE](../glossary.md#fte), for work that stops failures arriving.
 
+!!! tip "Minimum version"
+    By day 30, write page one only: the mandate, the named constraint with its evidence, the capacity
+    trade, what keeps its date, what stops, and three measures with baselines. Add the workstream table
+    and the pre-commitments before the plan goes to the CTO.
+
 ## How to fill it in
 
 1. **Write the mandate in the words of whoever gave it.** If it has no number, agree one before the
@@ -73,7 +78,7 @@ Write down in advance what you will do when these happen; they usually do.
 |---|---|---|
 | Severity reclassification | Shift toward lower severities without fewer customer escalations | Weekly audit; director re-rates in the review |
 | Roadmap commitment slips | Product review shows protected item at risk | Move prevention capacity off that team for the remainder of the quarter |
-| A major incident during the plan | Sev1 on a tier 1 path | Blameless review led by the team; director briefs executives on mechanism, not person |
+| A major incident during the plan | Sev1 on a tier 1 path | Blameless incident review led by the team; director briefs executives on mechanism, not person |
 | Central work becomes permanent | No receiving team named for a deliverable | No central deliverable starts without a receiving team and hand-back date |
 
 ## Example: Northstar, the director's first quarter
@@ -82,7 +87,9 @@ Write down in advance what you will do when these happen; they usually do.
     Week 4 of the Engineering Director's first year at Northstar Technologies, a fictional company with
     80 engineers in six teams. The baseline quarter had 30 Sev1 and Sev2 incidents and 99.62 percent
     availability; the capacity model has just been agreed with Victor Lindqvist (CTO) and Amara Okafor
-    (CPO). See the [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+    (CPO). See the [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
+    [the year in brief](../case-studies/northstar/year-in-brief.md) and the
+    [cast](../case-studies/northstar/cast.md).
 
 **Mandate:** halve Sev1 and Sev2 incidents and meet the 99.9 percent availability commitment within
 twelve months, with no net headcount growth, keeping the two renewal commitments.
@@ -162,7 +169,7 @@ with the capacity arithmetic in Chapter 38.
 - [Humble and Farley, 2010](../references/bibliography.md#humble2010continuous): the case for small
   batches and an automated pipeline, which underlies the release-train constraint.
 - [Forsgren, Humble, and Kim, 2018](../references/bibliography.md#forsgren2018accelerate): the DORA
-  research behind change failure rate and lead time as measures.
+  (DevOps Research and Assessment) research behind change failure rate and lead time as measures.
 - [Campbell, 1979](../references/bibliography.md#campbell1979assessing): the source usually credited
   for the problem of indicators that become targets, and so for pairing every measure.
 

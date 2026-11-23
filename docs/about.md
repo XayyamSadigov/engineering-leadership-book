@@ -32,7 +32,7 @@ bibliography entry records which details were confirmed and on which page; chapt
 confirmed entries; and a human reviewer checks each cited claim against its source.
 
 Where that review stands: every chapter, template, and project has passed the book's automated checks
-and an editorial self-review. None has yet completed the human review, so every page carries an
+and an editorial self-review. None has yet completed the human review, so every page carries a
 notice at the top of the site; the review status of each page is recorded in the repository as the
 review is done. If you find a claim
 that its citation does not support, please report it (the repository's CONTRIBUTING file says how).

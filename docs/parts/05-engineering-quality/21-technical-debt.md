@@ -1,7 +1,7 @@
 # Chapter 21 — Technical Debt: Identification, Economics, and Prioritization
 
-This chapter treats technical debt as an
-economic object: something with a recurring cost in time and risk, a price for removal, and a claim
+This chapter treats [technical debt](../../glossary.md#technical-debt-principal-and-interest) as an economic
+object: something with a recurring cost in time and risk, a price for removal, and a claim
 on the same engineers as features. It covers where the metaphor helps and misleads, how to measure
 interest instead of ugliness, how to rank debt against features, and how to secure capacity that
 survives a roadmap crunch. The running example is the debt register of Northstar Technologies, the
@@ -220,40 +220,47 @@ with a review date).
     Week 3 of the director's first year. The baseline quarter had 30 Sev1 and Sev2 incidents and
     $410,000 in service credits, and about a third of capacity went to unplanned work. In week 4 the
     director will reserve 12 FTE for prevention, with Billing's share at 25 percent. See the
-    [timeline](../../case-studies/northstar/timeline.md).
+    [timeline](../../case-studies/northstar/timeline.md). New to Northstar? Read [the year in
+    brief](../../case-studies/northstar/year-in-brief.md) and the [cast](../../case-studies/northstar/cast.md).
 
-The template's Northstar register lists five entries. Here the director adds two non-code entries
-and prices the top of the register. Every number is **illustrative**. Northstar figures come from the
+The [register template](../../templates/technical-debt-register.md) holds Northstar's first five
+entries, TD-001 to TD-005 (the [register IDs](../../glossary.md#register-ids)). Here the director adds
+two non-code entries, TD-006 and TD-007, and prices the top of the register. Every number is
+**illustrative**. Northstar figures come from the
 [baseline](../../case-studies/northstar/baseline-data.md), including its extended section on technical
 debt, which supplies the pipeline volume of [Core](../../glossary.md#core) (the Java monolith) and CI
 maintenance effort.
 
 Assumptions:
 
-- An engineer-day costs about $800 ($185,000 a year over 230 working days).
+- An engineer-day costs about $800. This is Finance's day rate ($185,000 a year over about 230
+  working days). It is higher per day than the book's planning rate of $3,558 per engineer-week
+  because Finance counts only working days.
 - Core's pipelines run about 1,000 times a month (baseline). At the baseline's 9 percent
   of runs failing for reasons unrelated to the change, that is about 90 spurious failures a month,
-  each assumed to cost 30 minutes of an engineer's attention. The 74-minute rerun wait is ignored.
+  each assumed to cost 30 minutes of an engineer's attention. Waiting for the 74-minute pipeline to
+  rerun is not counted.
 - Running four continuous integration (CI) systems costs about 1.5 [FTE](../../glossary.md#fte)
   (full-time equivalent engineers) of infrastructure time a year (baseline).
-- Risk is valued conservatively. Service credits averaged about $13,700 per Sev1 or Sev2 incident
-  last quarter ($410,000 ÷ 30), and the model counts half of that per incident. Sev1 and Sev2 are the
-  two highest [severity](../../glossary.md#severity-sev1-sev2-sev3) ratings: an order or payment path
-  down, or wrong financial records, for Sev1; narrower failures for Sev2.
+- Risk is valued conservatively: half the average service credit per serious incident, about $6,850
+  ($410,000 over 30 incidents, halved). Serious means Sev1 or Sev2, the two highest
+  [severity](../../glossary.md#severity-sev1-sev2-sev3) ratings: an order or payment path down, or
+  wrong financial records, for Sev1; narrower failures for Sev2.
 
-| ID | Kind | Annual time interest | Annual risk value | Principal (midpoint) | Ratio | Trigger |
-|---|---|---|---|---|---|---|
-| TD-001 Core release process | Process, test | QA pass ≈ $440,000 | 9 incidents a quarter; not counted | 2 engineer-years ≈ $370,000 | 1.2 | Renewals in 2 quarters |
-| TD-002 Deploy scripts | Infrastructure, knowledge | 36 engineer-days ≈ $29,000 | Tier 1 auth on one person | 40 engineer-days ≈ $32,000 | 0.9 | One engineer leaving |
-| TD-004 Migration practice | Process | Repairs; not counted | 12 incidents × $6,850 ≈ $82,000 | 25 engineer-days ≈ $20,000 | 4.1 | Year-end volumes |
-| TD-006 Four CI systems | Infrastructure | 1.5 FTE ≈ $278,000 | Not counted | 2 engineer-years ≈ $370,000 | 0.75 | None known |
-| TD-007 Flaky Core tests | Test | 68 engineer-days ≈ $54,000 | Not counted | 25 engineer-days ≈ $20,000 | 2.7 | None known |
+| Entry | Annual interest | Principal | Ratio | Trigger |
+|---|---|---|---|---|
+| TD-001 Core release process | $440,000 of QA time (incidents not counted) | $370,000 | 1.2 | Renewals in 2 quarters |
+| TD-002 Deploy scripts | $29,000 | $32,000 | 0.9 | One engineer leaving |
+| TD-003 Unowned Core modules | Not priced: review delays | $800 (a decision) | — | None |
+| TD-004 Migration practice | $82,000 of risk | $20,000 | 4.1 | Year-end volumes |
+| TD-006 Four CI systems (new) | $278,000 | $370,000 | 0.75 | None known |
+| TD-007 Flaky Core tests (new) | $54,000 | $20,000 | 2.7 | None known |
 
-How two figures are derived:
-
-- TD-007: 90 failures × 0.5 hours × 12 months = 540 hours, about 68 engineer-days or $54,000 a year.
-- TD-004: 3 migration-triggered incidents last quarter, about 12 a year if nothing changes, at half
-  the average credit.
+In engineer time: TD-001 interest 2.4 engineer-years, principal 2 engineer-years; TD-002 36 and 40
+engineer-days; TD-004 principal 25 engineer-days; TD-006 1.5 FTE and 2 engineer-years; TD-007 68 and 25
+engineer-days. TD-004's risk is about 12 migration-triggered incidents a year (3 last quarter) at
+$6,850. TD-007's time is 90 failures × 0.5 hours × 12 months = 540 hours. TD-005, the webhook
+payload format, is contained by a freeze on format changes and is not priced here.
 
 Three observations.
 
@@ -266,8 +273,8 @@ incidents a quarter; with any risk value it rises above 2. TD-002's ratio is bel
 could arrive any week and would leave a tier 1 service unmaintainable. Both move up by judgment, with
 the reason written in the decision field.
 
-Third, TD-003 (three Core modules shared by four teams with no owner) has a principal of about one day
-for the ownership decision. A debt with near-zero principal is not a project; it is a decision someone
+Third, TD-003 (three Core modules shared by four teams with no owner) has a principal of about one day:
+the ownership decision. A debt with near-zero principal is not a project; it is a decision someone
 has been avoiding.
 
 ## Decision Framework
@@ -455,6 +462,9 @@ only about 30 changes had touched it. The redesign was split: a permissions extr
 the slow changes touched, was funded for the next quarter, led by Ines; the rest was accepted with a
 review date.
 
+The lesson: a big proposal earns funding with interest data, and the cheap, high-interest items go
+first.
+
 ## Exercises
 
 Solutions are in [chapter 21 solutions](../../solutions/ch21-solutions.md). Data files are linked
@@ -474,7 +484,7 @@ person understands; Core main branch red 22 percent of working hours; core/sched
 teams with no owner.
 
 **F3.** A colleague cites "developers lose 23 percent of their time to technical debt" to argue that
-Northstar is losing about 18 engineers' worth of capacity. Evaluate the argument: what the source
+Northstar, with 80 engineers, is losing about 18 engineers' worth of capacity. Evaluate the argument: what the source
 measured, how it was measured, what it can and cannot support, and what Northstar should measure
 instead.
 
@@ -486,9 +496,12 @@ have no interest data for the module. Plan your response in the meeting and the 
 you agree to, what you ask for, and how you avoid both rejecting a good engineer's proposal and
 funding a rewrite on conviction.
 
-**A2.** Amara Okafor, the CPO, has agreed to the quarter's 12 FTE prevention allocation (25 percent
-of Billing's capacity, 10 percent in the two renewal teams, 15 percent elsewhere). She now asks why
-any of it should go to "debt" rather than to incident fixes while two renewal commitments are due.
+**A2.** Amara Okafor, the chief product officer (CPO), has agreed to the quarter's 12 FTE prevention
+allocation: 25 percent of Billing's capacity, 10 percent in Orders and in Payments and Integrations,
+and 15 percent elsewhere. Those two teams get less because they own the two
+[renewal commitments](../../glossary.md#renewal-commitments), a bulk-ordering feature and an accounting
+integration that the two largest renewals depend on. She now asks why any of it should go to "debt"
+rather than to incident fixes while those commitments are due.
 Prepare the conversation using the priced register in this chapter: what you show her, what part of
 the allocation you propose for register entries and why, what you will not give up, and how you will
 report the results to her each month.
