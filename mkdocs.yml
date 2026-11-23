@@ -7,11 +7,15 @@ repo_url: https://github.com/XayyamSadigov/engineering-leadership-book
 repo_name: XayyamSadigov/engineering-leadership-book
 edit_uri: edit/main/docs/
 docs_dir: docs
+# MkDocs always excludes /templates/; re-include it, since the template library lives there.
+exclude_docs: |
+  !/templates/
 copyright: Text CC BY 4.0 · Code MIT · Northstar Technologies is fictional
 
 theme:
   name: material
   custom_dir: overrides
+  language: en
   features:
     - announce.dismiss
     - navigation.sections
@@ -37,6 +41,238 @@ theme:
 
 plugins:
   - search
+  # Russian edition: page.ru.md beside page.md, served under /ru/. Pages without a .ru.md fall back
+  # to English. Russian terminology: research/translation-ru-glossary.md.
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ru
+          name: Русский
+          build: true
+          site_name: Руководство по инженерному лидерству
+          site_description: >-
+            Открытый учебник, опирающийся на исследования, о том, как строить, вести, масштабировать
+            и трансформировать инженерные организации: от senior-инженера до CTO.
+          copyright: Текст CC BY 4.0 · Код MIT · Northstar Technologies — вымышленная компания
+          theme:
+            palette:
+              - media: "(prefers-color-scheme: light)"
+                scheme: default
+                primary: blue grey
+                accent: amber
+                toggle: {icon: material/weather-night, name: Тёмная тема}
+              - media: "(prefers-color-scheme: dark)"
+                scheme: slate
+                primary: blue grey
+                accent: amber
+                toggle: {icon: material/weather-sunny, name: Светлая тема}
+          nav_translations:
+            "Home": "Главная"
+            "About this book": "Об этой книге"
+            "How to use this book": "Как пользоваться книгой"
+            "Glossary": "Глоссарий"
+            "Learning roadmaps": "Маршруты обучения"
+            "Download": "Скачать"
+            "Download the book": "Скачать книгу"
+            "Case study: Northstar Technologies": "Кейс: Northstar Technologies"
+            "Company and organization": "Компания и организация"
+            "Cast of characters": "Действующие лица"
+            "Timeline and results": "Хронология и результаты"
+            "Baseline data": "Исходные данные"
+            "The director's first year": "Первый год директора"
+            "Quarter 4 briefing": "Брифинг по итогам четвёртого квартала"
+            "Halvard Systems (comparison company)": "Halvard Systems (компания для сравнения)"
+            "Curriculum": "Учебная программа"
+            "I. Foundations of Engineering Leadership": "I. Основы инженерного лидерства"
+            "Chapter 1 — What Engineering Management Actually Is": "Глава 1 — Что такое управление разработкой на самом деле"
+            "Chapter 2 — From Individual Contributor to Leader": "Глава 2 — От индивидуального исполнителя к руководителю"
+            "Chapter 3 — Managerial Leverage and Systems Thinking": "Глава 3 — Управленческий рычаг и системное мышление"
+            "Chapter 4 — The Leadership Ladder: Senior Engineer to CTO": "Глава 4 — Лестница лидерства: от senior-инженера до CTO"
+            "II. People Management": "II. Управление людьми"
+            "Chapter 5 — One-on-Ones, Coaching, and Mentorship": "Глава 5 — Встречи один на один, коучинг и менторство"
+            "Chapter 6 — Feedback, Conflict, and Difficult Conversations": "Глава 6 — Обратная связь, конфликты и трудные разговоры"
+            "Chapter 7 — Hiring and Structured Interviews": "Глава 7 — Найм и структурированные интервью"
+            "Chapter 8 — Career Development, Promotion, and Compensation": "Глава 8 — Карьерное развитие, повышения и вознаграждение"
+            "Chapter 9 — Performance Management and Underperformance": "Глава 9 — Управление результативностью и работа с отстающими"
+            "Chapter 10 — Motivation, Retention, and Managing Senior Engineers": "Глава 10 — Мотивация, удержание и управление опытными инженерами"
+            "III. Building High-Performing Teams": "III. Построение высокоэффективных команд"
+            "Chapter 11 — High Performance: Trust, Psychological Safety, and Accountability": "Глава 11 — Высокая эффективность: доверие, психологическая безопасность и подотчётность"
+            "Chapter 12 — Team Charters, Working Agreements, and Knowledge Sharing": "Глава 12 — Хартии команд, рабочие соглашения и обмен знаниями"
+            "Chapter 13 — Decision-Making in Teams": "Глава 13 — Принятие решений в командах"
+            "Chapter 14 — Distributed Teams, Team Health, and Diagnosing Dysfunction": "Глава 14 — Распределённые команды, здоровье команды и диагностика дисфункций"
+            "IV. Engineering Execution": "IV. Исполнение и поставка"
+            "Chapter 15 — Planning, Prioritization, and Delivery Methods": "Глава 15 — Планирование, приоритизация и методы поставки"
+            "Chapter 16 — Flow: Lead Time, Dependencies, and Unplanned Work": "Глава 16 — Поток: lead time, зависимости и незапланированная работа"
+            "Chapter 17 — Predictability and Managing Uncertainty": "Глава 17 — Предсказуемость и управление неопределённостью"
+            "Chapter 18 — Measuring Engineering Productivity: DORA, SPACE, and Their Limits": "Глава 18 — Измерение продуктивности разработки: DORA, SPACE и их пределы"
+            "V. Software Quality and Engineering Excellence": "V. Качество ПО и инженерное мастерство"
+            "Chapter 19 — Defining, Measuring, and Owning Software Quality": "Глава 19 — Качество ПО: определение, измерение и ответственность"
+            "Chapter 20 — Engineering Standards and Their Governance": "Глава 20 — Инженерные стандарты и управление ими"
+            "Chapter 21 — Technical Debt: Identification, Economics, and Prioritization": "Глава 21 — Технический долг: выявление, экономика и приоритизация"
+            "Chapter 22 — Testing Strategy and Test Architecture": "Глава 22 — Стратегия тестирования и архитектура тестов"
+            "Chapter 23 — Code Review, CI/CD, and Release Engineering": "Глава 23 — Код-ревью, CI/CD и релиз-инжиниринг"
+            "Chapter 24 — Reliability Engineering: SLOs, Error Budgets, Observability, and Operational Readiness": "Глава 24 — Инженерия надёжности: SLO, бюджеты ошибок, наблюдаемость и операционная готовность"
+            "Chapter 25 — Incidents, Postmortems, and Change Failure Analysis": "Глава 25 — Инциденты, постмортемы и анализ неудачных изменений"
+            "Chapter 26 — Security and Software Supply-Chain Quality": "Глава 26 — Безопасность и качество цепочки поставки ПО"
+            "Chapter 27 — Quality Transformation at Enterprise Scale": "Глава 27 — Трансформация качества в масштабе крупной организации"
+            "VI. Technical Leadership and Architecture": "VI. Техническое лидерство и архитектура"
+            "Chapter 28 — Architecture Decision-Making and Governance": "Глава 28 — Архитектурные решения и управление архитектурой"
+            "Chapter 29 — Staff and Principal Engineers": "Глава 29 — Staff- и principal-инженеры"
+            "Chapter 30 — Technical Strategy, Technology Selection, and Build versus Buy": "Глава 30 — Техническая стратегия, выбор технологий и «разработать или купить»"
+            "Chapter 31 — Service Boundaries: Microservices, Modular Monoliths, and Ownership": "Глава 31 — Границы сервисов: микросервисы, модульные монолиты и владение"
+            "Chapter 32 — Platform Engineering, Developer Experience, and Legacy Modernization": "Глава 32 — Платформенная инженерия, опыт разработчиков и модернизация legacy"
+            "VII. Organizational Design": "VII. Организационный дизайн"
+            "Chapter 33 — Conway's Law, Team Topologies, and Cognitive Load": "Глава 33 — Закон Конвея, Team Topologies и когнитивная нагрузка"
+            "Chapter 34 — Spans, Layers, and Dependency Mapping": "Глава 34 — Охват управления, уровни иерархии и карта зависимостей"
+            "Chapter 35 — Designing Organizations of 20, 50, 100, and 500 Engineers": "Глава 35 — Проектирование организаций на 20, 50, 100 и 500 инженеров"
+            "Chapter 36 — Reorganizations, Organizational Evolution, and Succession": "Глава 36 — Реорганизации, эволюция организации и преемственность"
+            "VIII. Engineering Management Operating System": "VIII. Операционная система управления разработкой"
+            "Chapter 37 — The Management Operating System: Cadences and Leadership Meetings": "Глава 37 — Операционная система управления: ритмы и встречи руководителей"
+            "Chapter 38 — Scorecards, Quarterly Planning, and Capacity Allocation": "Глава 38 — Карты показателей, квартальное планирование и распределение ресурсов"
+            "Chapter 39 — Reviews, Decision Logs, Escalation, and Executive Reporting": "Глава 39 — Обзоры, журналы решений, эскалация и отчётность перед руководством"
+            "IX. Engineering Directorship": "IX. Директор по разработке"
+            "Chapter 40 — The Director's Job: Leading 50 to 150 Engineers": "Глава 40 — Работа директора: руководство 50–150 инженерами"
+            "Chapter 41 — Managing and Developing Engineering Managers": "Глава 41 — Управление руководителями разработки и их развитие"
+            "Chapter 42 — Cross-Functional Dependencies, Portfolio Management, and Influence Without Authority": "Глава 42 — Кросс-функциональные зависимости, управление портфелем и влияние без формальной власти"
+            "Chapter 43 — Leading Organizational Change and Director Failure Patterns": "Глава 43 — Организационные изменения и типичные провалы директоров"
+            "X. Product and Business Leadership": "X. Продуктовое и бизнес-лидерство"
+            "Chapter 44 — Working with Product: Discovery and Outcome-Based Roadmaps": "Глава 44 — Работа с продуктом: discovery и дорожные карты, ориентированные на результат"
+            "Chapter 45 — Business Models, Engineering Economics, and Investment Decisions": "Глава 45 — Бизнес-модели, экономика разработки и инвестиционные решения"
+            "Chapter 46 — Stakeholder Management and Negotiation": "Глава 46 — Работа со стейкхолдерами и переговоры"
+            "XI. VP of Engineering": "XI. VP of Engineering"
+            "Chapter 47 — The VP of Engineering: Managing Directors and the Portfolio": "Глава 47 — VP of Engineering: управление директорами и портфелем"
+            "Chapter 48 — Capacity Strategy, Workforce Planning, and Enterprise Governance": "Глава 48 — Стратегия ресурсов, планирование персонала и корпоративное управление"
+            "Chapter 49 — Multi-Year Transformation, Executive Communication, and Constructive Politics": "Глава 49 — Многолетняя трансформация, коммуникация с руководством и конструктивная политика"
+            "XII. CTO Leadership": "XII. Лидерство CTO"
+            "Chapter 50 — What a CTO Actually Does": "Глава 50 — Чем на самом деле занимается CTO"
+            "Chapter 51 — Enterprise Technology Strategy and the Three-Year Roadmap": "Глава 51 — Технологическая стратегия компании и трёхлетняя дорожная карта"
+            "Chapter 52 — Technology Investment, Budgeting, and Financial Literacy": "Глава 52 — Инвестиции в технологии, бюджетирование и финансовая грамотность"
+            "Chapter 53 — Risk, Governance, Regulation, and Security Strategy": "Глава 53 — Риски, корпоративное управление, регулирование и стратегия безопасности"
+            "Chapter 54 — Data and AI Strategy": "Глава 54 — Стратегия данных и ИИ"
+            "Chapter 55 — Boards, Due Diligence, and Executive Decision-Making": "Глава 55 — Совет директоров, due diligence и решения высшего уровня"
+            "XIII. Advanced Leadership Problems": "XIII. Сложные задачи лидерства"
+            "Chapter 56 — Recovering a Failing Engineering Organization": "Глава 56 — Восстановление проваливающейся инженерной организации"
+            "Chapter 57 — Crises, Executive Disagreement, and Resistance to Change": "Глава 57 — Кризисы, разногласия в руководстве и сопротивление изменениям"
+            "Chapter 58 — Layoffs, Reductions, and Mergers and Acquisitions": "Глава 58 — Увольнения, сокращения, слияния и поглощения"
+            "Chapter 59 — Transformation Under Budget Constraint and Scaling Without Bureaucracy": "Глава 59 — Трансформация при урезанном бюджете и масштабирование без бюрократии"
+            "XIV. Templates and playbooks": "XIV. Шаблоны и плейбуки"
+            "Template library": "Библиотека шаблонов"
+            "Engineering quality scorecard": "Карта показателей инженерного качества"
+            "Technical debt register": "Реестр технического долга"
+            "Incident review": "Разбор инцидента"
+            "90-day quality transformation plan": "90-дневный план трансформации качества"
+            "Engineering Manager performance rubric": "Критерии оценки руководителя разработки"
+            "Director competency matrix": "Матрица компетенций директора"
+            "Organizational design assessment": "Оценка организационного дизайна"
+            "Quarterly engineering review": "Квартальный обзор разработки"
+            "Capacity planning model": "Модель планирования ресурсов"
+            "Engineering strategy": "Инженерная стратегия"
+            "Technology investment business case": "Бизнес-кейс инвестиций в технологии"
+            "Stakeholder map": "Карта стейкхолдеров"
+            "Executive update": "Отчёт для руководства"
+            "CTO competency matrix": "Матрица компетенций CTO"
+            "Risk register": "Реестр рисков"
+            "Architecture decision record": "Запись архитектурного решения (ADR)"
+            "1:1 template": "Шаблон встречи 1:1"
+            "Career development plan": "План карьерного развития"
+            "Team health assessment": "Оценка здоровья команды"
+            "Leadership succession plan": "План преемственности руководителей"
+            "Hiring scorecard and interview kit": "Карточка найма и набор для интервью"
+            "Performance improvement plan": "План улучшения результатов (PIP)"
+            "Team charter and working agreement": "Устав команды и рабочие договорённости"
+            "New manager's 90-day plan": "90-дневный план нового руководителя"
+            "XV. Capstone": "XV. Итоговый проект"
+            "Chapter 60 — Capstone: Transforming Northstar Technologies": "Глава 60 — Итоговый проект: трансформация Northstar Technologies"
+            "Projects": "Проекты"
+            "Overview": "Обзор"
+            "Project 1 — Management operating system": "Проект 1 — Операционная система управления"
+            "Project 2 — Diagnose a low-performing team": "Проект 2 — Диагностика слабой команды"
+            "Project 3 — Quality transformation plan": "Проект 3 — План трансформации качества"
+            "Project 4 — Redesign an organization of 80 engineers": "Проект 4 — Перепроектирование организации из 80 инженеров"
+            "Project 5 — Delivery and reliability scorecard": "Проект 5 — Карта показателей поставки и надёжности"
+            "Project 6 — Manager development and succession": "Проект 6 — Развитие руководителей и преемственность"
+            "Project 7 — Twelve-month engineering strategy": "Проект 7 — Инженерная стратегия на двенадцать месяцев"
+            "Project 8 — CTO technology investment proposal": "Проект 8 — Предложение CTO по инвестициям в технологии"
+            "Exercises and solutions": "Упражнения и решения"
+            "Index": "Указатель"
+            "References": "Источники"
+            "Bibliography": "Библиография"
+            "Evidence labels": "Метки доказательности"
+            "Chapter 1 solutions": "Решения к главе 1"
+            "Chapter 2 solutions": "Решения к главе 2"
+            "Chapter 3 solutions": "Решения к главе 3"
+            "Chapter 4 solutions": "Решения к главе 4"
+            "Chapter 5 solutions": "Решения к главе 5"
+            "Chapter 6 solutions": "Решения к главе 6"
+            "Chapter 7 solutions": "Решения к главе 7"
+            "Chapter 8 solutions": "Решения к главе 8"
+            "Chapter 9 solutions": "Решения к главе 9"
+            "Chapter 10 solutions": "Решения к главе 10"
+            "Chapter 11 solutions": "Решения к главе 11"
+            "Chapter 12 solutions": "Решения к главе 12"
+            "Chapter 13 solutions": "Решения к главе 13"
+            "Chapter 14 solutions": "Решения к главе 14"
+            "Chapter 15 solutions": "Решения к главе 15"
+            "Chapter 16 solutions": "Решения к главе 16"
+            "Chapter 17 solutions": "Решения к главе 17"
+            "Chapter 18 solutions": "Решения к главе 18"
+            "Chapter 19 solutions": "Решения к главе 19"
+            "Chapter 20 solutions": "Решения к главе 20"
+            "Chapter 21 solutions": "Решения к главе 21"
+            "Chapter 22 solutions": "Решения к главе 22"
+            "Chapter 23 solutions": "Решения к главе 23"
+            "Chapter 24 solutions": "Решения к главе 24"
+            "Chapter 25 solutions": "Решения к главе 25"
+            "Chapter 26 solutions": "Решения к главе 26"
+            "Chapter 27 solutions": "Решения к главе 27"
+            "Chapter 28 solutions": "Решения к главе 28"
+            "Chapter 29 solutions": "Решения к главе 29"
+            "Chapter 30 solutions": "Решения к главе 30"
+            "Chapter 31 solutions": "Решения к главе 31"
+            "Chapter 32 solutions": "Решения к главе 32"
+            "Chapter 33 solutions": "Решения к главе 33"
+            "Chapter 34 solutions": "Решения к главе 34"
+            "Chapter 35 solutions": "Решения к главе 35"
+            "Chapter 36 solutions": "Решения к главе 36"
+            "Chapter 37 solutions": "Решения к главе 37"
+            "Chapter 38 solutions": "Решения к главе 38"
+            "Chapter 39 solutions": "Решения к главе 39"
+            "Chapter 40 solutions": "Решения к главе 40"
+            "Chapter 41 solutions": "Решения к главе 41"
+            "Chapter 42 solutions": "Решения к главе 42"
+            "Chapter 43 solutions": "Решения к главе 43"
+            "Chapter 44 solutions": "Решения к главе 44"
+            "Chapter 45 solutions": "Решения к главе 45"
+            "Chapter 46 solutions": "Решения к главе 46"
+            "Chapter 47 solutions": "Решения к главе 47"
+            "Chapter 48 solutions": "Решения к главе 48"
+            "Chapter 49 solutions": "Решения к главе 49"
+            "Chapter 50 solutions": "Решения к главе 50"
+            "Chapter 51 solutions": "Решения к главе 51"
+            "Chapter 52 solutions": "Решения к главе 52"
+            "Chapter 53 solutions": "Решения к главе 53"
+            "Chapter 54 solutions": "Решения к главе 54"
+            "Chapter 55 solutions": "Решения к главе 55"
+            "Chapter 56 solutions": "Решения к главе 56"
+            "Chapter 57 solutions": "Решения к главе 57"
+            "Chapter 58 solutions": "Решения к главе 58"
+            "Chapter 59 solutions": "Решения к главе 59"
+            "Chapter 60 solutions": "Решения к главе 60"
+            "Project 1 solution": "Решение проекта 1"
+            "Project 2 solution": "Решение проекта 2"
+            "Project 3 solution": "Решение проекта 3"
+            "Project 4 solution": "Решение проекта 4"
+            "Project 5 solution": "Решение проекта 5"
+            "Project 6 solution": "Решение проекта 6"
+            "Project 7 solution": "Решение проекта 7"
+            "Project 8 solution": "Решение проекта 8"
 
 markdown_extensions:
   - admonition

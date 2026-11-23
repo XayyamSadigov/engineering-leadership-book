@@ -18,6 +18,7 @@ from booklib import (
     LIVE,
     Report,
     headings,
+    is_translation,
     iter_chapters,
     load_curriculum,
     main_guard,
@@ -25,6 +26,7 @@ from booklib import (
     rel,
     slugify,
     strip_code,
+    translation_of,
 )
 
 ID_RE = re.compile(r"""(?:id|name)=["']([^"']+)["']""")
@@ -112,11 +114,14 @@ def run() -> int:
                 continue
             if dest.is_dir() or dest.suffix != ".md":
                 continue
+            dest = translation_of(dest, md)
             if anchor and anchor not in anchors_of(dest, cache):
                 rep.error(f"{rel(md)}: anchor not found -> {target}")
 
     nav_set = set(nav)
     for md in md_files:
+        if is_translation(md):
+            continue
         r = str(md.relative_to(DOCS))
         if r not in nav_set:
             rep.warn(f"docs/{r} is not in the mkdocs nav")

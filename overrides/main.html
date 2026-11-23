@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 
 {% block announce %}
+{% if i18n_page_locale == "ru" %}
+Книга находится в статусе рецензируемого черновика: ссылки на источники ещё не проверены человеком.
+Русское издание в работе, непереведённые страницы показаны на английском.
+<a href="{{ config.site_url }}ru/about/">Подробнее</a> или сообщите о проблеме на
+<a href="{{ config.repo_url }}/issues">GitHub</a>.
+{% else %}
 This book is a reviewed draft: its citations have not yet been checked by a human reviewer.
 <a href="{{ config.site_url }}about/">Read more</a> or report a problem on
 <a href="{{ config.repo_url }}/issues">GitHub</a>.
+{% endif %}
 {% endblock %}

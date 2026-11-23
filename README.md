@@ -57,7 +57,7 @@ Requires Python 3.9+.
 
 ```bash
 python -m venv .venv && . .venv/bin/activate
-pip install "mkdocs>=1.6,<2" "mkdocs-material>=9.5,<10" "pyyaml>=6"
+pip install "mkdocs>=1.6,<2" "mkdocs-material>=9.5,<10" "mkdocs-static-i18n==1.3.1" "pyyaml>=6"
 
 python tools/build_curriculum.py      # regenerate curriculum, bibliography, and exercise index pages
 python tools/build_single_file.py     # regenerate dist/ENGINEERING_LEADERSHIP_HANDBOOK.md

@@ -18,6 +18,25 @@ CURRICULUM = ROOT / "curriculum.yaml"
 BIBLIOGRAPHY = RESEARCH / "bibliography.yaml"
 MKDOCS = ROOT / "mkdocs.yml"
 
+# Translations live beside the English page as page.<locale>.md (mkdocs-static-i18n, suffix mode).
+# The English checks (contract, nav coverage, bookkeeping) apply to English files only.
+TRANSLATION_LOCALES = ("ru",)
+TRANSLATION_RE = re.compile(r"\.(?:" + "|".join(TRANSLATION_LOCALES) + r")\.md$")
+
+
+def is_translation(path: Path) -> bool:
+    return bool(TRANSLATION_RE.search(path.name))
+
+
+def translation_of(path: Path, like: Path) -> Path:
+    """The page the i18n plugin serves for a link from `like` to `path`: same-locale file if present."""
+    m = TRANSLATION_RE.search(like.name)
+    if m and not is_translation(path):
+        candidate = path.with_name(path.name[: -len(".md")] + m.group(0))
+        if candidate.exists():
+            return candidate
+    return path
+
 # The chapter writing contract (CLAUDE.md, section "Chapter contract"). Order is enforced.
 REQUIRED_SECTIONS = [
     "Why This Matters",

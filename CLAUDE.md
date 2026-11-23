@@ -7,7 +7,7 @@ full, then read `PROJECT_STATUS.md`, before changing anything.
 
 1. Read `PROJECT_STATUS.md`: what is done, what is in flight, the next tasks.
 2. Run `.venv/bin/python tools/validate_book.py` (create the venv with
-   `uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r <(echo mkdocs mkdocs-material pyyaml ruff)`
+   `uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r <(echo mkdocs mkdocs-material mkdocs-static-i18n==1.3.1 pyyaml ruff)`
    or `pip install mkdocs mkdocs-material pyyaml` if it is missing). Fix any failure before new work.
 3. Pick the highest-priority task from the status file. Do not start a chapter whose sources are
    not yet in `research/bibliography.yaml` with verified fields.

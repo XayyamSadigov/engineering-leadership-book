@@ -37,6 +37,7 @@ from booklib import (
     Report,
     code_blocks,
     headings,
+    is_translation,
     iter_chapters,
     rel,
     section,
@@ -69,7 +70,7 @@ BOOKKEEPING_RE = re.compile(
     re.I,
 )
 BOOKKEEPING_DIRS = ("parts", "solutions", "templates", "projects")
-BOOKKEEPING_IS_ERROR = False  # switch to True once the readability cleanup is complete
+BOOKKEEPING_IS_ERROR = True
 
 
 def lint_mermaid(body: str) -> list[str]:
@@ -143,7 +144,8 @@ def check_text_hygiene(rep: Report) -> None:
         for i, line in enumerate(strip_code(raw).splitlines(), 1):
             if PLACEHOLDER_RE.search(line) and not PLACEHOLDER_ALLOW.search(line):
                 rep.error(f"{rel(md)}:{i}: placeholder text: {line.strip()[:80]}")
-            if rel(md).split("/")[1:2] and rel(md).split("/")[1] in BOOKKEEPING_DIRS:
+            if (rel(md).split("/")[1:2] and rel(md).split("/")[1] in BOOKKEEPING_DIRS
+                    and not is_translation(md)):
                 m = BOOKKEEPING_RE.search(line)
                 if m:
                     msg = f"{rel(md)}:{i}: maintainer bookkeeping in reader text: {m.group(0)!r}"

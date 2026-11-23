@@ -71,3 +71,31 @@ replace it with a repository-scoped fine-grained token.
 ## How to resume
 
 Read `CLAUDE.md`, then this file, then run `.venv/bin/python tools/validate_book.py --build`.
+
+## PAUSED 2026-11-22 (usage limit): readability program, phases 2–3 interrupted
+
+- Committed: phase 1 (glossary, cast, timeline, quarter 4 briefing, restructured case pages, front matter,
+  site-wide review notice instead of per-page banners), commit aa91ba1.
+- Interrupted after a few minutes: phases 2–3 (nine agents rewriting chapters 1–60, templates, projects per
+  `research/readability-brief.md` and the assessor reports in `research/readability/`) and the EPUB/PDF
+  pipeline. Their partial edits are uncommitted in the working tree. On resume: `git diff --stat` to see
+  what was touched, then either keep and finish each part or `git checkout -- <files>` and redo it.
+- Then: phase 4 (missing content, see `research/readability-assessment.md`), phase 5 (re-assessment with
+  `research/readability/rubric.md`, target average ≥ 4.5 on every scale, no chapter below 4), switch
+  `BOOKKEEPING_IS_ERROR = True` in `tools/validate_book.py` once warnings reach zero, EPUB/PDF pipeline,
+  then the Russian translation (requested by the user, to start after the readability work).
+
+## Russian edition, started 2026-11-23
+
+- Infrastructure: `mkdocs-static-i18n==1.3.1`, suffix mode (`page.ru.md` beside `page.md`), Russian under
+  `/ru/`, English fallback for untranslated pages, Russian nav translations and site name in `mkdocs.yml`,
+  Russian announcement in `overrides/main.html`. Plugin pinned in both workflows, `pyproject.toml`, README.
+- `mkdocs.yml` also gained `exclude_docs: !/templates/`: MkDocs always excluded `docs/templates/`, so the
+  template library had never been published on the site.
+- Validators skip `*.ru.md` for English checks (`booklib.is_translation`); links from Russian pages are
+  anchor-checked against the Russian target when one exists.
+- Term base and style guide: `research/translation-ru-glossary.md` (binding for translators).
+- Translated: index, about, how-to-use, learning-roadmaps, glossary, references/evidence-labels, and all
+  seven Northstar pages. Every Russian heading carries the English anchor (`{ #english-slug }`).
+- Next: translate chapters, solutions, templates, and projects once their rewrites settle; re-sync the
+  translated pages whenever their English sources change (record lags in the term base, section 5).
