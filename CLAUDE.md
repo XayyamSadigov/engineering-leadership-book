@@ -35,6 +35,7 @@ Workflow after any content change:
 ```bash
 .venv/bin/python tools/build_curriculum.py      # regenerate derived pages
 .venv/bin/python tools/build_single_file.py     # regenerate the single-file edition
+.venv/bin/python tools/build_readme.py          # regenerate README.md
 .venv/bin/python tools/validate_book.py --build # all checks plus mkdocs build --strict
 ```
 

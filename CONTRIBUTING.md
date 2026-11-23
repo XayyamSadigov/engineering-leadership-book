@@ -45,3 +45,49 @@ contributions to code under MIT, as described in `LICENSE-CONTENT.md` and `LICEN
 ## Conduct
 
 Participation is governed by [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
+
+## Building the book locally
+
+Requires Python 3.9+ (and Node.js only for diagram rendering and the EPUB/PDF build).
+
+```bash
+python -m venv .venv && . .venv/bin/activate
+pip install "mkdocs>=1.6,<2" "mkdocs-material>=9.5,<10" "mkdocs-static-i18n==1.3.1" "pyyaml>=6"
+
+python tools/build_curriculum.py      # regenerate curriculum, bibliography, and exercise index pages
+python tools/build_single_file.py     # regenerate dist/ENGINEERING_LEADERSHIP_HANDBOOK.md
+python tools/build_readme.py          # regenerate README.md (table of contents)
+python tools/validate_book.py --build # all checks plus mkdocs build --strict
+mkdocs serve                          # preview at http://127.0.0.1:8000/engineering-leadership-book/
+python tools/build_ebooks.py          # EPUB and PDF into dist/ (needs pandoc, pymupdf, Node.js)
+```
+
+`validate_book.py` checks that navigation matches chapter status, internal links and anchors resolve, every
+chapter has the sixteen required sections, exercises have solutions, citations resolve to verified
+bibliography entries, Mermaid blocks lint, generated files are current, and the site builds in strict mode.
+It does not check whether claims are true; that is the human review in
+`research/human-review-checklist.md`.
+
+### Repository layout
+
+```text
+curriculum.yaml        single source of truth for parts, chapters, status, objectives, sources
+docs/                  the book (MkDocs docs_dir); *.ru.md files are the Russian edition
+  parts/               chapters, one directory per part
+  solutions/           worked solutions, one file per chapter
+  templates/           Part XIV template library
+  projects/            practical projects and their solutions
+  case-studies/        Northstar Technologies and its data
+  references/          generated bibliography page, evidence labels
+research/              bibliography, evidence matrix, gaps, disputes, review checklist, assessments
+tools/                 validation and build scripts
+dist/                  generated single-file edition
+CLAUDE.md              binding authoring, research, and continuation rules
+PROJECT_STATUS.md      what is done, what is next
+```
+
+### Publishing
+
+`.github/workflows/validate.yml` runs validation, linting, and diagram rendering on every push and pull
+request. `.github/workflows/docs.yml` validates, builds the site and the EPUB/PDF editions, and deploys to
+GitHub Pages on pushes to `main`.
