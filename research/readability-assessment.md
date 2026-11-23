@@ -150,3 +150,22 @@ below 4. Remaining problems, by impact:
 6. Dense case tables in Ch 30, 38, 41, 48, 52, 53; Ch 59's scaling half is thin; Ch 60 seat-count cell.
 7. Small: home page says 20 templates (24); `curriculum.md` generator residue for Part XIV; learning
    paths A–E lack Chapter 26.
+
+## Round 3 (2026-11-23), after round-2 fixes (option B)
+
+Nine fresh assessors, same rubric, not shown earlier rounds; reports in `research/readability/round3/`.
+
+| Measure | Round 1 | Round 2 | Round 3 |
+|---|---|---|---|
+| Readability (book average) | 3.5 | 3.57 | 3.88 |
+| Clarity | 4.2 | 4.28 | 4.63 |
+| Completeness | 3.9 | 4.02 | 4.65 |
+| Northstar load | 3.0 | 3.33 | 3.83 |
+| Chapters with any score below 4 | most | 45 | 16 |
+| Scores of 5 | 0 | 0 | 85 |
+
+Chapters still below 4 on some scale: 10, 15, 26, 36, 38–41, 45, 48, 49, 51–53, 59, 60 (Ch 60 has a 2 for
+Northstar load). The remaining problems concentrate in the director, VP, and CTO chapters: arithmetic in
+prose, case back-story, ID tables. Book level: readability 3.5, clarity 4.0, completeness 4.0, Northstar
+load 2.75 (projects' fact sheets and the reference case pages are dense; Ch 24 lacks dependency
+resilience that Ch 27 points to; several exercises in Ch 24–27 need the incident CSV).
