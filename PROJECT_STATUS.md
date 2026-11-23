@@ -1,6 +1,6 @@
 # Project status
 
-Last updated: 2026-11-23 (session 5: readability program phases 1–5, Russian edition started).
+Last updated: 2026-11-23 (session 5: readability rounds 1–3, EPUB/PDF, README, Russian chapters 1–18). PAUSED by the user.
 
 **Summary.** The book is fully drafted: all 60 chapters (including the capstone), all 24 templates, and
 all 8 projects are written and on the site in `review` status. Each passed automated validation and an
@@ -100,3 +100,25 @@ Read `CLAUDE.md`, then this file, then run `.venv/bin/python tools/validate_book
   seven Northstar pages. Every Russian heading carries the English anchor (`{ #english-slug }`).
 - Next: translate chapters, solutions, templates, and projects once their rewrites settle; re-sync the
   translated pages whenever their English sources change (record lags in the term base, section 5).
+
+## Russian edition: state at the pause (2026-11-23)
+
+Process per chapter (binding): translate (`research/translation-ru-brief.md`) → Russian-only literary edit
+(`research/translation-ru-editing-brief.md`, editors see no English) → meaning check against the English
+(one bilingual agent per batch, report in `research/translation-ru/meaning-check-*.md`). At most three agents
+at a time (the user asked to go slowly to stay within usage limits).
+
+- Translated: chapters 1–18, front matter, glossary, evidence labels, all Northstar pages.
+- Literary edit done: chapters 1–14 (meaning check for 8–12 and 14 done; 1–7 and 13 checked by the
+  maintainer). **Next:** edit chapters 15–18, meaning-check them; then translate chapters 19–60 in batches of
+  three agents × two chapters, each batch followed by edit and meaning check; then solutions, templates,
+  projects; then a Russian download page and Russian EPUB/PDF.
+- English issues found by the meaning checks, still to fix in the English chapters: see "Possible problems in
+  the English" in `research/translation-ru/meaning-check-batch2.md` (access notes in Ch 8 and 12, Ch 8 X2
+  "pay compression", Ch 14 reflection 1, and others).
+
+## Readability: state at the pause
+
+Round 3 assessment (`research/readability/round3/`): readability 3.88, clarity 4.63, completeness 4.65,
+Northstar load 3.83; 16 chapters still have a score below 4 (10, 15, 26, 36, 38–41, 45, 48, 49, 51–53, 59,
+60). Optional next step: one targeted round on those chapters and the projects' fact sheets.
