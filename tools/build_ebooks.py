@@ -50,7 +50,7 @@ NODE_PREFIX = BUILD / "node"
 MERMAID_CLI = "@mermaid-js/mermaid-cli@11.4.2"
 SLUG = "engineering-leadership-handbook"
 SITE = "https://xayyamsadigov.github.io/engineering-leadership-book/"
-AUTHOR = "Khayyam Sadigov and contributors"  # LICENSE-CONTENT.md
+AUTHOR = "Khayyam Sadigov"  # LICENSE-CONTENT.md
 FONT_BASE = "https://github.com/google/fonts/raw/main/ofl/"
 FONT_FILES = [
     "ibmplexserif/IBMPlexSerif-Regular.ttf",

@@ -4,7 +4,7 @@ The prose, diagrams, templates, exercises, solutions, and fictional datasets of 
 file under `docs/`, `research/`, and `dist/`) are licensed under the **Creative Commons
 Attribution 4.0 International License (CC BY 4.0)**.
 
-Copyright (c) 2026 Khayyam Sadigov and contributors.
+Copyright (c) 2026 Khayyam Sadigov.
 
 You are free to share and adapt the material for any purpose, including commercially, as long as
 you give appropriate credit, link to the license, and indicate if changes were made.
