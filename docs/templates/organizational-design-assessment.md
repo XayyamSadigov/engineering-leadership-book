@@ -1,15 +1,18 @@
 # Organizational design assessment
 
-**Used in:** Chapter 33 (team types and cognitive load), Chapter 34 (spans, layers, and dependency
-mapping), Chapter 35 (designing organizations at four scales), Project 4.
+**Used in:** [Chapter 33](../parts/07-organization-design/33-conways-law-team-topologies-and-cognitive-load.md)
+(team types and cognitive load), [Chapter 34](../parts/07-organization-design/34-spans-layers-and-dependency-mapping.md)
+(spans, layers, and dependency mapping), [Chapter 35](../parts/07-organization-design/35-designing-organizations-at-four-scales.md)
+(designing organizations at four scales), [Project 4](../projects/p4-redesign-an-80-engineer-organization.md).
 **Owner:** the engineering director, with each manager supplying the team rows.
 **Cadence:** once a year, and before any proposed reorganization; refreshed when a team's scope
 changes.
 
-An organizational design assessment describes the current structure as evidence, before anyone
-draws a new chart. It answers four questions: are the spans workable, where does work cross team
-lines, what has no owner, and which team carries more than it can hold. Options come last, each with
-its transition cost.
+An organizational design assessment describes the current structure as evidence, before anyone draws
+a new chart. It answers four questions. Are the [spans](../glossary.md#span-of-control) (people per
+manager) workable? Where does work cross team lines? What has no owner? Which team carries more
+[cognitive load](../glossary.md#cognitive-load) than it can hold? Options come last, each with its
+[transition cost](../glossary.md#transition-cost).
 
 ## How to fill it in
 
@@ -23,7 +26,7 @@ its transition cost.
    week or more. Classify the heaviest links by what changed.
 5. List every component without a clear owner, on-call rotation, or two people who can change it.
 6. For each team, count domains, components, and the capacity left after unplanned work,
-   commitments, and prevention (Chapter 33's arithmetic).
+   commitments, and prevention (the arithmetic in Chapter 33).
 7. Write two to four options, including "no structural change". For each, recount the links and
    spans and state the transition cost in engineer-weeks and seats.
 
@@ -60,7 +63,7 @@ team:
   manager: ""
   people: 0
   span_target: [8, 10]       # from the five span factors
-  team_type: ""              # stream-aligned, platform, enabling, complicated subsystem
+  team_type: ""              # stream-aligned, platform, enabling, complicated subsystem (see glossary: team types)
   components: []
   tier_1_components: []
   domains: 0
@@ -75,8 +78,11 @@ team:
 
 ## Example: Northstar, quarters 2 to 4 (inventory as of quarter 2; options as of week 44)
 
-**Fictional.** From the [Northstar baseline](../case-studies/northstar/baseline-data.md) and
-[first quarter](../case-studies/northstar/first-quarter.md) pages and Chapters 33 to 35.
+!!! info "Northstar so far"
+    Northstar Technologies is a fictional company: 80 engineers (3 of them staff engineers), six
+    managers, and an Engineering Director, 87 people held flat by the CTO's mandate. In week 10 the seven QA engineers moved into product teams; in week 44 the director drafts a year-2
+    organization for Victor Lindqvist (CTO) to decide. See the
+    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
 
 **Strategy question:** can the structure carry the reliability mandate and both renewal commitments
 at flat headcount (87 people)?
@@ -93,7 +99,8 @@ at flat headcount (87 people)?
 | Platform Operations | Tom Becker | 5 | Platform in name; interrupt sink | ci-cd, cloud infrastructure, release train, auth-svc |
 | Staff engineers | Director | 3 | Enabling, perhaps | none |
 
-Check: 16 + 15 + 13 + 17 + 11 + 5 + 3 = 80 engineers. The director has nine direct reports.
+The rows total 80 engineers. The director has nine direct reports: six managers and three staff
+engineers.
 
 **Spans.** By the five factors every span is outside its range: Daniel at 17 across two sites,
 Priya at 16 in her first year, Billing at 15, Payments and Integrations at 13, Farah at 11 while
@@ -124,10 +131,19 @@ environments.
 | document-store | 2 | Orphaned; shared shell-script deploy | None |
 | notification-svc | 2 | Moved to Orders; 3 have committed to it, none has operated it | None |
 
-**Cognitive load of Orders.** 182 engineer-weeks in the quarter (14 engineers × 13), less 65.5 of
-unplanned work at 36 percent, 65 for bulk ordering, and 18.2 of prevention, leaves 33.3
-engineer-weeks: about 2.6 engineers for the rest of the roadmap, tier 1 minimums on core/customer,
-and the permissions extraction. Among its four tier 1 components, core/customer has two engineers who
+**Cognitive load of Orders.** After unplanned work, the renewal feature, and prevention, Orders has
+about 2.6 engineers left for everything else: the rest of the roadmap, the
+[tier 1 operational minimums](../glossary.md#tier-1-operational-minimums) on core/customer, and the
+permissions extraction.
+
+| Orders, one quarter | Engineer-weeks |
+|---|---|
+| Capacity (14 engineers × 13 weeks) | 182 |
+| Unplanned work (36 percent) | −65.5 |
+| Bulk ordering (renewal commitment) | −65 |
+| Prevention | −18.2 |
+| **Left** | **33.3** (about 2.6 engineers) |
+ Among its four tier 1 components, core/customer has two engineers who
 can change it safely and core/pricing-rules four; search-svc (tier 2) has none.
 
 **Options** (the year-2 proposal of week 44 is option A):
@@ -139,8 +155,7 @@ can change it safely and core/pricing-rules four; search-svc (tier 2) has none.
 | C. A, plus Orders split and the platform grown to 8 | Order Capture; Catalog and Pricing | 78 engineers, 8 managers | About 4 new links and about 58 co-changing merge requests a quarter cross owners |
 | D. Two managers of managers | A layer over order-to-cash | 77 engineers, 9 managers | 27 links resolved one level down; 48 links gain a hop; a peer promoted over peers |
 
-Check: each option totals 87 people with the director (80 + 6 + 1, 79 + 7 + 1, 78 + 8 + 1,
-77 + 9 + 1). The quarter 2 alternative to moving people was cheaper: a Billing-owned
+Every option totals 87 people: engineers plus managers plus the director. The quarter 2 alternative to moving people was cheaper: a Billing-owned
 order-to-invoice contract with contract tests on both sides.
 
 ## Common mistakes
@@ -149,7 +164,10 @@ order-to-invoice contract with contract tests on both sides.
 - **Counting links but not recounting them.** A move that removes six links and creates five is not
   worth a reorganization.
 - **Ignoring seats.** Under flat headcount every new manager is an engineer who stops building.
-- **Leaving out "no structural change".** It is often the right option for one more quarter.
+- **Leaving out "no structural change".** It is often the right option for one more quarter. At
+  Northstar, a Billing-owned contract cut the heaviest dependency without moving anyone.
+- **Filling the inventory from memory.** Team sizes and components come from HR and the ownership
+  inventory; memory undercounts specialists and orphaned components.
 
 ## Review questions
 
@@ -158,3 +176,21 @@ order-to-invoice contract with contract tests on both sides.
 3. Which links does each option create that the current matrix cannot see?
 4. Who owns every tier 1 component on day one of the new structure?
 5. What evidence, on what date, would make us reverse the change?
+
+## Evidence and references
+
+The method is in Chapters 33 to 35.
+
+- [Conway, 1968](../references/bibliography.md#conway1968committees): systems copy the communication
+  structure of the organization that builds them; an argument rather than a study.
+- [Colfer and Baldwin, 2016](../references/bibliography.md#colfer2016mirroring): a review of studies on
+  how far product structure mirrors organization structure, and when it does not.
+- [Cataldo, Herbsleb, and Carley, 2008](../references/bibliography.md#cataldo2008congruence): faster
+  resolution when coordination matches dependencies; the reason for the dependency matrix.
+- [Skelton and Pais, 2019](../references/bibliography.md#skelton2019team): team types, interaction
+  modes, and team cognitive load as vocabulary (**practitioner consensus**).
+- [Larson, 2018](../references/bibliography.md#larson2018sizing): practitioner benchmarks for span
+  sizes (**expert opinion**).
+
+The four-part structure, the five span factors, and the rule that options carry seats and transition
+cost are **this book's recommendation**.

@@ -49,7 +49,7 @@ answer swaps one slogan for the other ("monoliths are back").
 ## F3 — The ownership test on six components
 
 The test has four parts: the owner carries the pager, reviews changes, holds the runbook, and keeps
-dependencies current. From `components.csv` and the canon:
+dependencies current. From `components.csv` and the case study:
 
 | Component | Owner now | Fails on available data | Information still needed |
 |---|---|---|---|
@@ -61,7 +61,7 @@ dependencies current. From `components.csv` and the canon:
 | document-store | None | Fails every part | Callers, traffic, vulnerability status, who can deploy it |
 
 A good answer separates "fails" from "unknown" and does not assume the day 90 results (8 of 15 tier 1
-components meeting the four minimums) apply to these specific components; the canon does not say
+components meeting the four minimums) apply to these specific components; the case does not say
 which eight. It also notes that tier matters: export-svc at tier 3 may reasonably have no on-call,
 but no component should be undeployable by its owner. The weak answer marks every component with a
 listed owner as passing.
@@ -71,7 +71,7 @@ listed owner as passing.
 **Evaluation against the decision path.** Different change reason? Partly: permissions logic changes
 with the rules of who may do what, and Tom Becker's argument that it belongs with identity is a real
 design argument. Low co-change? No. customer and permissions changed together in 22 of customer's 33
-changes (67 percent), and permissions and order-capture in 11. The path stops at "move boundary
+changes (67 percent), and permissions also changed together with order-capture 11 times in the baseline quarter (11 of permissions' 38 changes). The path stops at "move boundary
 first", which is exactly the funded permissions extraction inside Core. One owning team? No, the
 ownership decision is open. The path stops there too.
 

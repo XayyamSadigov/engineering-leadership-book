@@ -65,8 +65,8 @@ quality of a manager, not the number of managers.
 
 So the conclusion inverts the evidence. If manager quality matters, the implication is to select and
 develop managers well, and perhaps to avoid stretching good managers too thin. A strong answer also
-notes the reading level: the studies were read at abstract or summary level, so precise magnitudes
-should not be quoted beyond what the abstracts state. The weak answer either accepts the claim or
+notes that the chapter reports these studies from their abstracts and summaries, so precise magnitudes
+should not be quoted beyond what those state. The weak answer either accepts the claim or
 dismisses all the evidence as "soft".
 
 ## A1 — The conversation with Marcus
@@ -131,8 +131,8 @@ rights.
 What the director would have to change for her choice to be real: a written mandate for Core (for
 example, owner of Core module boundaries and the Core code standards, with decision rights and an
 escalation path when managers disagree), visibility in the director's operating cadence, and a career
-path on which a staff engineer can progress without reports. The canon later gives her such a mandate
-during the quality transformation. If she still wants to manage after that, the choice is then about
+path on which a staff engineer can progress without reports. Northstar later gives her such a mandate,
+in the director's first quarter. If she still wants to manage after that, the choice is then about
 the job, not about influence. A weak answer either talks her out of management without fixing the
 mandate or encourages her into it as the only route to influence.
 
@@ -174,8 +174,8 @@ roughly 2.3 percent of the $16.1M personnel budget. State the assumption; manage
 **Evidence.** The manager-effect research concerns manager quality, not count, so it does not directly
 predict the effect of a wider span. It does suggest where the cost would surface: Lazear and colleagues
 and Hoffman and Tadelis both link manager quality to whether people leave, and a stretched manager is
-unlikely to perform at the same level. Span-of-control evidence for software teams is a gap (G8), so
-the analysis should say so.
+unlikely to perform at the same level. Span-of-control evidence for software teams is thin, so the
+analysis should say so.
 
 **Where the cost would show up.** Attrition among engineers with the most product knowledge;
 slower delivery from merged teams relearning each other's components; and risk to the reliability

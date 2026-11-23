@@ -151,7 +151,7 @@ and leaving the charter untested.
 
 ## X1 — Should search-svc move to Data and Analytics?
 
-**What the canon says.** search-svc is nominally owned by Orders, disputed because its authors moved to
+**What the case says.** search-svc is nominally owned by Orders, disputed because its authors moved to
 Data and Analytics. It is tier 2, has no runbook, partial alerts, and no on-call rotation, and INC-407 was
 a search cluster node loss with nobody on call.
 

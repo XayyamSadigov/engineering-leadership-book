@@ -18,7 +18,7 @@ Answers with different ramp-up assumptions are fine if the assumption is stated 
 shown.
 
 **Which input to measure better.** The strongest answer picks time to fill. The 15-week median rests
-on few events, and Tamsin Achterberg's hire shows its parts: 3 weeks waiting for approval, 6 sourcing
+on few events, and the hire of Tamsin Achterberg, Billing's most recent ledger engineer, shows its parts: 3 weeks waiting for approval, 6 sourcing
 and screening, 1 offer, 5 notice. The approval wait is entirely internal and is the cheapest weeks to
 remove; Rajiv Menon will ask why approval takes three weeks for a seat already in the budget. A good
 answer also notes that the attrition rate is from 8 events in one year, so the plan should show a
@@ -116,27 +116,34 @@ contractor spend reported in full-time equivalents beside headcount; and funding
 the actual vacancy underspend, which shrinks if option C is chosen. The weak answer approves because
 the money is "already in the budget", or refuses vendors on principle.
 
-## A3 — The customer-date rule
+## A3 — Retiring an unmeasured review rule
 
-**What the rule protects.** Northstar's committed roadmap delivery was 41 percent in the baseline
-quarter, and 5 of 17 dates were given before sizing, including Greg Tanaka's two deal features. A date
-given without an estimate is a promise engineering did not make and often cannot keep; at Northstar
-missed promises reach renewals.
+**The externality test.** Ask what harm a skipped review does outside the group that skipped it. A
+design flaw in a service another group depends on, or on a shared production path, can harm other
+groups and customers; a flaw inside one group's internal service mostly harms that group. So the rule
+as written fails the test for most services and passes it, at most, for services on shared or
+customer-facing paths.
 
-**Engineering's side of the bargain.** An estimate within five working days, given as a range with a
-confidence level (Chapter 17), and a named owner. If engineering misses the five days, Greg may give
-a date and engineering owns the consequence: the rule binds both sides.
+**The four requirements.** It has no owner who measures it, no enforcement point (nothing stops a
+release without a review), no exception path, and no measure from system data. Two groups stopped a
+year ago and nothing broke, which is weak evidence (a year without an incident proves little) but
+shows the rule is already decoupled from practice, the pattern Meyer and Rowan describe.
 
-**Exception path.** For a deal that cannot wait five days, Amara Okafor and the director can jointly
-approve a date the same day, recorded with its risk and the work it displaces. Exceptions are reviewed
-monthly; if they become routine, the service level is too slow.
+**Decision (one defensible answer).** Retire it as an enterprise rule and delegate design review to
+the VPs and their directors as a standard they may keep. If the principal engineer can name the
+specific harm (for example, changes to shared data contracts or the tier 1 path), redesign a narrow
+replacement: a required review for changes to registered shared interfaces, enforced where the
+interface registry or pipeline can check it, with an owner and a measure. That earns a place on the
+list; "every service, every major release" does not.
 
-**The conversation.** Start from Greg's interest (closing deals with credible dates), not the rule.
-Show what happened to the dates given before sizing last year, and ask which of his two deals would
-be hurt by a five-day wait. Criteria for a good answer: it treats the rule as a delivery policy with a
-service level, not a veto, and it offers a fast path. The weak answers are to exempt sales entirely,
-which leaves the rule empty, or to enforce it without any service level, which makes engineering the
-bottleneck Greg says it is.
+**Announcing it.** Say what is retired, why (no measure, no enforcement, fails the test for most
+services), what replaces it, and how the story of the caught outage informed the narrower rule.
+Thank the principal engineer for the case rather than overruling it silently.
+
+**Criteria.** A good answer uses the test and the four requirements rather than opinion, separates
+the rule's intent from its form, and treats one anecdote as a reason to look for a narrower rule, not
+as proof. The weak answers keep it because it "once prevented an outage", which would justify any
+rule, or retire it without asking what harm it was meant to prevent.
 
 ## X1 — Northstar's year-2 workforce plan recommendation
 
@@ -154,7 +161,7 @@ coverage for the affected paths is assessed. If a VP is added in year 2 (Victor'
 question), that seat also counts against the 87, so the plan should show the effect on engineers.
 
 **Both branches of the year-2 proposal.** If the Mobile team is approved, the plan starts at 79,
-Mateo Arango Ríos becomes Bogotá's first manager, and the location rule can apply to mobile seats. If
+Mateo Arango Ríos (the informal mobile lead) becomes Bogotá's first manager, and the location rule can apply to mobile seats. If
 not, the plan starts at 80 and Bogotá seats stay in Payments and Data clusters only. The arithmetic
 is shown for both.
 

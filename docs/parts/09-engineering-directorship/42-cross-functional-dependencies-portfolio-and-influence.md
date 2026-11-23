@@ -2,15 +2,19 @@
 
 A director spends much of the week on work that no one person controls: a feature promised by sales
 that needs three teams, an escalation landing on a full team, a roadmap and a reliability plan
-competing for the same engineers. This chapter covers three tools for that work: managing initiatives
-as one portfolio with an explicit limit on how many run at once, resolving dependencies with other
-functions through structure instead of heroics, and influencing peers and executives who do not
-report to you. The running example is Northstar Technologies, the fictional company in the
+competing for the same engineers. This chapter covers three tools for that work. The first is
+managing initiatives as one portfolio, with an explicit limit on how many run at once. The second is
+resolving dependencies with other functions through structure instead of heroics. The third is
+influencing peers and executives who do not report to you. The running example is Northstar Technologies, the fictional company in the
 [case study](../../case-studies/northstar/index.md), in its third quarter under the new director.
 
-Chapter 16 owns flow within and between teams; this chapter applies the same logic one level up, to
-initiatives. Chapter 38 owns quarterly planning and capacity allocation, Chapter 37 the meeting
-cadence, and Chapter 46 negotiation in depth.
+!!! info "Related chapters"
+    Flow within and between teams is in Chapter 16; this chapter applies the same logic one level up,
+    to initiatives. Quarterly planning and capacity allocation are in
+    [Chapter 38](../08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md),
+    the meeting cadence in
+    [Chapter 37](../08-management-operating-system/37-cadences-and-leadership-meetings.md), and
+    negotiation in depth in Chapter 46.
 
 ## Why This Matters
 
@@ -18,8 +22,8 @@ On a team, too much work in progress shows up as a crowded board that a manager 
 
 At 50 to 150 engineers, it is spread across a dozen initiatives, each with a sponsor who wants it now.
 Each is reasonable alone. Together they put every team on three or four cross-team efforts, all
-finish late, and each sponsor concludes engineering does not care about their item. Northstar's baseline shows the pattern:
-nine of the seventeen committed roadmap items needed more than one team, and only one of those nine
+finish late, and each sponsor concludes engineering does not care about their item. Northstar's
+baseline shows the pattern: nine of the seventeen committed roadmap items needed more than one team, and only one of those nine
 shipped in the quarter
 ([baseline data](../../case-studies/northstar/baseline-data.md)).
 
@@ -55,10 +59,10 @@ First, **a portfolio is a queue with the same arithmetic as a team board**. If t
 finishes about one cross-team initiative a month, ten in progress means each takes about ten months.
 Limit what is in progress, finish before starting, and show the waiting line.
 
-Second, **influence without authority works through interests, evidence, and coalition, in that
+Second, **influence without authority works through interests, evidence, and joint decision, in that
 order**. Positions ("start my feature now") collide; interests ("I need a date I can defend to this
-prospect") can often both be met. A coalition means the people who bear a decision's costs deciding
-it together, not allies assembled to outvote someone.
+prospect") can often both be met. A joint decision means the people who bear a decision's costs
+deciding it together, not allies assembled to outvote someone.
 
 ## Deep Conceptual Explanation
 
@@ -67,10 +71,10 @@ it together, not allies assembled to outvote someone.
 A **portfolio** is the full set of initiatives the organization has committed to, in progress or
 waiting. An **initiative** here is a piece of work of several engineer-weeks or more with a sponsor
 and an outcome; the cross-team ones, needing two or more engineering teams, are the ones that need
-portfolio management. Single-team work is governed by the team's own board and WIP limits
-(Chapter 16).
+portfolio management. Single-team work is governed by the team's own board and
+[WIP limits](../../glossary.md#work-in-progress-wip-and-wip-limit) (caps on work in progress, Chapter 16).
 
-Little's law, which Chapter 16 explains, relates averages: work in progress equals throughput times
+[Little's law](../../glossary.md#littles-law), which Chapter 16 explains, relates averages: work in progress equals throughput times
 time in the system. It holds exactly for measured data over a window that starts and ends empty, and
 it describes rather than settles trade-offs
 ([Little, 2011](../../references/bibliography.md#little2011law)). For a portfolio the items are
@@ -85,18 +89,16 @@ and 12, an average of 8, and the first delivers value in week 4. In parallel, al
 week 12 (later, counting switching), an average of 12. This is **illustrative** queueing reasoning.
 
 Two strands of evidence support keeping people on fewer efforts at once. DORA's capability guide
-states that its research associates WIP limits with better delivery performance, and names their
+states that its research associates WIP limits with better delivery performance. It also names their
 failure modes: limits set too high to bind, and limits raised whenever someone is idle
-([DORA, WIP limits](../../references/bibliography.md#dora-cap-wip-limits)); this is **industry
-research**, survey-based and correlational. And in a study of 849 primary care units, Crawford and
-colleagues found membership of several teams at once negatively associated with unit performance,
-more so when tasks were complex
-([Crawford et al., 2019](../../references/bibliography.md#crawford2019link)). That is a **research
-finding**, read at abstract level, from health care; applying it to engineers spread across
-initiatives is an extension, plausible but not demonstrated in software.
+([DORA, WIP limits](../../references/bibliography.md#dora-cap-wip-limits)). This is **industry
+research**, survey-based and correlational. And in a study of 849 primary care units, membership of
+several teams at once went with lower unit performance, more so when tasks were complex
+([Crawford et al., 2019](../../references/bibliography.md#crawford2019link)). That **research
+finding**, as the abstract reports it, comes from health care; applying it to engineers spread across
+initiatives is plausible but not demonstrated in software.
 
-Reinertsen's book on product development flow is widely known for arguing that development queues go
-unmanaged because they are invisible
+Reinertsen argues that development queues go unmanaged because they are invisible
 ([Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles)): **expert opinion**.
 So the limit must be drawn where people can see it: one board of every cross-team initiative in
 progress and waiting, in rank order.
@@ -111,7 +113,8 @@ A workable portfolio limit has four parts.
    finished per month over the last two quarters, times the lead time in months you will accept. One
    a month and three months' tolerance gives about three. This is **this book's recommendation**; no
    study gives a portfolio number.
-3. **The rank.** Waiting initiatives are ordered by cost of delay over duration, with value
+3. **The rank.** Waiting initiatives are ordered by [cost of delay](../../glossary.md#cost-of-delay) (the
+   value lost per week of waiting) over duration, with value
    estimates written by the sponsors (Chapter 15 owns the method; Chapter 45 prices delay).
 4. **The rule at the limit.** A new initiative starts when one finishes, or when the forum that owns
    the portfolio decides to stop or pause one in progress. Nobody adds a fourth by "just starting
@@ -147,60 +150,59 @@ finance take the same three forms, but the "contract" is usually a policy rather
 | Product | Priorities and scope decisions | Director and CPO renegotiate in hallways | One ranked portfolio; CPO owns rank of product items with written value estimates |
 | Sales | Dates and features promised in deals | Sales engineer messages an engineer directly; director rescues the date | Single intake for deal requests; a published rule for external dates (Chapter 17); a small reserved allowance for deal work |
 | Customer success | Escalations and incident status | Escalations to whichever manager answers | Severity-based intake with response targets; status communication owned and rehearsed |
-| Finance | Budget, capitalization, cost questions | Ad hoc data pulls before board meetings | A quarterly capacity-by-category report in finance's terms (Chapter 38) |
+| Finance | Budget, capitalization (which engineering costs are booked as an asset), cost questions | Ad hoc data pulls before board meetings | A quarterly capacity-by-category report in finance's terms (Chapter 38) |
 
-The heroic version works once and teaches that escalation is the fastest path. Herbsleb and Mockus found that the number of people involved in a work
-item was strongly related to its calendar time
-([Herbsleb and Mockus, 2003](../../references/bibliography.md#herbsleb2003empirical)), a **research
-finding** from distributed development, read at abstract level. Cataldo and colleagues found that
-when developers' actual coordination matched the coordination their technical dependencies required,
-modification requests were resolved significantly faster
-([Cataldo et al., 2008](../../references/bibliography.md#cataldo2008congruence)), also a **research
-finding** at abstract level. Both concern coordination inside engineering; the inference for other
-functions is this book's: put coordination where the dependency is, in a named intake and a standing
-policy, not in whoever escalates.
+The heroic version works once and teaches that escalation is the fastest path. Coordination works
+best where the dependency actually is. In distributed development, the more people a work item
+involved, the longer it took
+([Herbsleb and Mockus, 2003](../../references/bibliography.md#herbsleb2003empirical)). When developers'
+actual coordination matched what their technical dependencies required, change requests were resolved
+significantly faster ([Cataldo et al., 2008](../../references/bibliography.md#cataldo2008congruence)).
+Both are **research findings**, as the abstracts report them, about coordination inside engineering.
+The inference for other functions is this book's: put coordination where the dependency is, in a
+named intake and a standing policy, not in whoever escalates.
 
-Cagan and Jones's *Empowered* is widely known for arguing that product teams should be given problems
+Cagan and Jones argue that product teams should be given problems
 to solve rather than stakeholders' feature lists
 ([Cagan and Jones, 2020](../../references/bibliography.md#cagan2020empowered)): **expert opinion**.
 The implication: a sales request is an input to the product decision, not a commitment.
 
 ### Interests, positions, and evidence
 
-Fisher and Ury's *Getting to Yes* is widely known for principled negotiation: separate the people
-from the problem, look behind positions to interests, invent options that serve both sides, and
-agree on objective criteria; and for the idea that each side's real leverage is its best alternative
-to an agreement ([Fisher and Ury, 1981](../../references/bibliography.md#fisher1981getting)). Cohen
-and Bradford's *Influence Without Authority* is known for treating influence among peers as exchange:
-find what the other party values and offer it in return for cooperation
-([Cohen and Bradford, 1990](../../references/bibliography.md#cohen1990influence)). Both are
-**practitioner** books, credited here only for those ideas. Chapter 46 treats negotiation in depth.
+Two practitioner classics frame the approach (**expert opinion**). Fisher and Ury's *Getting to Yes*
+teaches principled negotiation: separate the people from the problem, look behind positions to
+interests, invent options that serve both sides, and agree on objective criteria. Each side's real
+leverage is its best alternative to an agreement
+([Fisher and Ury, 1981](../../references/bibliography.md#fisher1981getting)). Cohen and Bradford treat
+influence among peers as exchange: find what the other party values and offer it in return for
+cooperation ([Cohen and Bradford, 1990](../../references/bibliography.md#cohen1990influence)). Chapter
+46 treats negotiation in depth.
 
-What the research adds is which tactics work in which direction. Yukl and Tracey measured nine
-influence tactics through questionnaires completed by each manager's subordinates, peers, and boss.
-Rational persuasion, inspirational appeal, and consultation were the most effective; pressure,
-coalition, and legitimating (appealing to rules or authority) were the least effective. Exchange was
-moderately effective with peers and subordinates but not with superiors
-([Yukl and Tracey, 1992](../../references/bibliography.md#yukl1992consequences)). A meta-analysis
-by Higgins, Judge, and Ferris found rationality and ingratiation positively related to work outcomes,
-with effects of other tactics depending on situation and outcome
+Research shows which tactics work in which direction. Yukl and Tracey measured nine influence tactics
+through questionnaires completed by each manager's subordinates, peers, and boss. Rational persuasion,
+inspirational appeal, and consultation were the most effective. Pressure, coalition (enlisting others
+to push a target), and legitimating (appealing to rules or authority) were the least effective.
+Exchange was moderately effective with peers and subordinates but not with superiors
+([Yukl and Tracey, 1992](../../references/bibliography.md#yukl1992consequences)). A
+[meta-analysis](../../glossary.md#meta-analysis) found rationality and ingratiation positively related to
+work outcomes, with other tactics depending on the situation
 ([Higgins et al., 2003](../../references/bibliography.md#higgins2003influence)). Both are **research
-findings**, read at abstract level; the outcomes measured are commitment and evaluations, not
+findings**, as the abstracts report them. The outcomes measured are commitment and evaluations, not
 whether a portfolio decision held.
 
 Three practical consequences follow.
 
-- **"Coalition" in the research means enlisting others to push a target, and it backfires.** The
-  coalition this chapter means is the people who bear a decision's costs deciding it together, with
-  the affected party in the room. If it feels like ganging up, it will be received as pressure.
+- **Coalition, in the research sense, backfires.** A joint decision is different: the people who
+  bear a decision's costs decide it together, with the affected party in the room. If it feels like
+  ganging up, it will be received as pressure.
 - **"The policy says no" is legitimating, and it is weak.** Defend a WIP limit with its reasoning and
   by consulting on what to do at the limit.
 - **Upward, persuade; do not trade.** Bring the CFO evidence in finance's terms, not favors.
 
 ### When a disagreement goes up
 
-Chapter 39 owns escalation paths and decision logs, and Chapter 13 owns decision roles; use them as
-written there. The one portfolio-specific point is the destination: a contested portfolio request
+Use the [escalation path](../../glossary.md#escalation-path) and decision log of Chapter 39 and the decision
+roles of Chapter 13 as written there. The one portfolio-specific point is the destination: a contested portfolio request
 goes to the forum that owns the trade-off (the portfolio forum below), with every affected party
 present.
 
@@ -218,19 +220,23 @@ flowchart TD
 
 ## Engineering Organization Example
 
+!!! info "Northstar so far"
+    This example uses the quarter before the director arrived. The case is set in quarter 3 (weeks
+    27 to 39): by then Sev1 and Sev2 incidents had fallen from 30 to 21 in quarter 1 and 17 in
+    quarter 2, and both renewal commitments were delivered by week 26. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
 This example is **illustrative**. It applies the portfolio arithmetic to Northstar's baseline
-quarter, before the director arrived, using the canon in the
-[baseline data](../../case-studies/northstar/baseline-data.md).
+quarter, using the [baseline data](../../case-studies/northstar/baseline-data.md).
 
 The quarter committed 17 items: 9 cross-team and 8 single-team. Seven shipped: 6 single-team and 1
-cross-team. Check: 6 + 1 = 7 delivered; 8 − 6 = 2 single-team misses and 9 − 1 = 8 cross-team misses,
-10 in all, matching the canon. Single-team items shipped at 75 percent (6 of 8), cross-team items at
-11 percent (1 of 9).
+cross-team. Single-team items shipped at 75 percent (6 of 8), cross-team items at 11 percent (1 of
+9).
 
 Committing all 9 at the start of the quarter put them in progress together. With cross-team
 throughput of about one a quarter, Little's law read naively gives about nine quarters in progress.
-That is not a forecast (the system was not stable), but it shows the direction. The work-item data say the same at a smaller grain: median lead
-time was 11 days for items with no dependency, 24 with one, and 41 with two or more.
+That is not a forecast (the system was not stable), but it shows the direction. The work-item data say
+the same at a smaller grain: median [lead time](../../glossary.md#lead-time) was 11 days for items with no dependency, 24 with one, and 41 with two or more.
 
 Now apply a limit of three. The nine items drew on the same shared constraints: Platform Operations
 received 29 of the 86 dependency links, Billing 19. Run three at a time and the first three get those
@@ -362,11 +368,10 @@ commitments. Persuasion in their terms, follow-through, and early escalation rem
 ## Case Study
 
 This case is **fictional**. It is set in quarter 3 (weeks 27 to 39) of the director's time at
-Northstar. The capacity figures are those of Chapter 38's draft quarter 3 plan: of 80 engineers,
-unplanned work 17.6 FTE, prevention 8, platform 4.5, and product 49.9, with about 35.6 FTE-quarters
-(about 463 engineer-weeks) of product effort committed; this case uses only committed items, whatever
-was decided on Chapter 38's open questions. Initiatives, sizes, the limit, the prospect, and the week
-31 request are fictional additions for this chapter. The decision is the reader's.
+Northstar. The capacity figures are those of the quarter 3 plan in Chapter 38. Of 80 engineers, the
+planned case gives unplanned work 17.6 [FTE](../../glossary.md#fte) (full-time equivalent engineers),
+prevention 8, platform 4.5, and product 49.9. About 463 engineer-weeks of product effort are
+committed. This case uses only committed items. The decision is the reader's.
 
 **The relationships in week 27.** The director's four cross-functional peers each held a claim on the
 committed product effort.
@@ -383,23 +388,23 @@ output-per-engineer figure (Chapter 18) was still open.
 
 **The portfolio.** Four of the committed items were cross-team. The director proposed a limit of three
 cross-team initiatives in progress at once, on the reasoning in the Engineering Organization Example,
-and Amara and Victor Lindqvist agreed to try it for the quarter.
+and Amara and Victor Lindqvist (CTO) agreed to try it for the quarter.
 
 | Rank | Initiative | Sponsor | Lead team, others | Size (engineer-weeks) | Plan |
 |---|---|---|---|---|---|
 | 1 | Multi-currency price lists (deal feature) | Greg Tanaka | Orders; Billing, Customer Experience | 110 | Start week 27, forecast week 38 |
 | 2 | Catalog export for customers (deal feature) | Greg Tanaka | Data and Analytics; Orders | 60 | Start week 27, forecast week 34 |
 | 3 | Customer incident status notifications | Sofia Alvarez | Customer Experience; Payments and Integrations | 45 | Start week 27, forecast week 33 |
-| 4 | Automated service-credit statements | Rajiv Menon | Billing; Data and Analytics | 50 | Waiting; start when a slot frees, about week 33 |
+| 4 | Automated [service-credit](../../glossary.md#service-credits) statements (refunds owed for missed availability) | Rajiv Menon | Billing; Data and Analytics | 50 | Waiting; start when a slot frees, about week 33 |
 
-Cross-team committed effort: 110 + 60 + 45 + 50 = 265 engineer-weeks, leaving about 198 of the 463 for
-single-team items, governed by team boards. Multi-currency had one known constraint: of Billing's
+Cross-team committed effort is 265 engineer-weeks, leaving about 198 of the 463 for single-team items,
+governed by team boards. Multi-currency had one known constraint: of Billing's
 ledger engineers, only one could change currency and rounding safely, so its Billing share was
 sequenced around that person rather than spread.
 
 **Week 31.** Greg Tanaka came to the director with a third deal feature: purchase approval rules,
 letting a distributor's customer require approval for orders above a set amount. A prospect he valued
-at about $700,000 in annual recurring revenue wanted a delivery date before its decision in week 36.
+at about $700,000 in [annual recurring revenue](../../glossary.md#arr) wanted a delivery date before its decision in week 36.
 Sizing put it at about 70 engineer-weeks, led by Orders with Customer Experience. Greg asked for it to
 start now.
 
@@ -420,8 +425,8 @@ The director's arithmetic, prepared before the conversation:
 The director first met Greg alone and asked what a good outcome looked like. The answer changed the
 problem: the prospect needed a date it could rely on and evidence that Northstar understood its
 approval process, not software in week 36. The director offered two scoping sessions with the
-prospect in weeks 32 and 33 (a product manager and an Orders senior engineer, outside the portfolio)
-and a forecast range Greg could quote in week 35, then raised the possible swap with Rajiv before
+prospect in weeks 32 and 33 (a product manager and an Orders senior engineer, outside the portfolio).
+The director also offered a forecast range Greg could quote in week 35, then raised the possible swap with Rajiv before
 anyone proposed it in a meeting.
 
 **The decision.** The director brought three priced options to the week 34 portfolio forum, with
@@ -442,7 +447,9 @@ and whether a three-initiative limit is the right number for quarter 4.
 
 ## Exercises
 
-Solutions are in [chapter 42 solutions](../../solutions/ch42-solutions.md).
+Solutions are in [chapter 42 solutions](../../solutions/ch42-solutions.md). Northstar data is on the
+[baseline page](../../case-studies/northstar/baseline-data.md) and
+[the first quarter](../../case-studies/northstar/first-quarter.md) page.
 
 ### Foundational
 
@@ -504,7 +511,8 @@ line acceptable to the executive team.
 - At the limit, a new initiative starts only when one finishes or the forum swaps one out at a stated cost.
 - Replace recurring cross-functional escalations with an intake, a policy, or reserved capacity.
 - Map interests before positions; ask what a good outcome looks like for the other side.
-- Lead with evidence and consultation; pressure, appeals to policy, and lining up allies backfire.
+- Lead with evidence and consultation; pressure, appeals to policy, and lining up allies (coalition,
+  in the research sense) backfire.
 - The director owns the arithmetic and the process; the people who bear the costs own the trade-off.
 
 ## References and Further Reading

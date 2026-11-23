@@ -9,6 +9,17 @@ same few items, and one development plan contains no delegated decision. The rat
 solution's judgments, one defensible set among several; Chapter 41's are defensible under a different
 treatment of that page, which this solution states. All Northstar facts are fictional.
 
+People named, with roles (see the [cast](../../case-studies/northstar/cast.md)): Victor Lindqvist (CTO);
+the engineering managers Priya Raman (Orders), Marcus Oyelaran (Billing), Elena Sokolova (Payments and
+Integrations), Daniel Cho (Customer Experience), Farah Haddad (Data and Analytics), and Tom Becker
+(Platform Operations); the staff engineers Ines Carvalho, Kwame Mensah, and Li Na Zhou; and the
+engineers Aisha Bello and Rafael Duarte (Orders), Teodora Vasquez-Lund and Tomasz Wierzbicki (Billing
+ledger engineers), Hannah Lindgren and Mateo Arango Ríos (Customer Experience's informal web and mobile
+leads), Sunil Varghese (Data and Analytics), and Bram Verhoeven (senior infrastructure engineer).
+Incidents named: INC-421 (bulk order upload dropped lines beyond row 500, a repeat of an earlier
+failure), INC-423 (a warehouse maintenance window overlapped scheduled customer exports), and INC-426
+(offline sync corrupted mobile drafts; the fix waited for app store review).
+
 ## 1. The window and the week-22 page
 
 Window: weeks 1 to 26. Baseline-quarter facts are context.
@@ -37,7 +48,7 @@ Chapter 41 already treats two cells; this solution applies it to all six manager
 
 ## 2. Evidence and ratings
 
-One dated window item per cell, with the strongest contrary item. Sources are the canon pages and the
+One dated window item per cell, with the strongest contrary item. Sources are the case pages and the
 chapters indexed in [`p6-manager-evidence.csv`](../data/p6-manager-evidence.csv).
 
 **Priya Raman (Orders, 16).** Outcomes: No evidence at week 24; bulk ordering is due at the end of week
@@ -159,7 +170,7 @@ roadmap order is a real decision; the CI consolidation target is not offered, be
 entry (DL-10) with no decider.
 
 **Under the open decisions.** Rafael chooses the staff track: Aisha remains Orders' only development
-candidate, so a second is sought (Orders' other seniors are unnamed in the canon; ask Priya). Tomasz
+candidate, so a second is sought (Orders' other seniors are not named in the case; ask Priya). Tomasz
 leaves: Marcus's check moves from "one more person" to "no fewer people" able to respond alone, and the
 pairing plan reprioritizes posting rules. Customer Experience splits later: Hannah and Mateo each cover
 a whole team, not a half. Bram's plan is decided either way: Tom's bench action does not depend on him.

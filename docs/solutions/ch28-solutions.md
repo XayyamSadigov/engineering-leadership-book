@@ -60,16 +60,16 @@ standards. The weak answer judges the board by its approval rate alone, in eithe
 
 ## A1 — Choosing the decider for ADR-0001
 
-One defensible answer: the director names **Li Na Zhou as decider**, because the decision is a data
+One defensible answer: the director names **Li Na Zhou (staff engineer, data and integration) as decider**, because the decision is a data
 contract in Li Na Zhou's written standards domain (data, migration, configuration), and Li Na Zhou
 has the technical information. To meet the chapter's conditions, the director adds three things. The
 mandate for the domain is written down as the first decision-rights entry. Because the decider
 authored the proposal, the record must show a five-day written comment window that Billing, Payments
-and Integrations, and Data and Analytics actually used, and Ines Carvalho reads it as a second
+and Integrations, and Data and Analytics actually used, and Ines Carvalho (staff engineer, Core domain) reads it as a second
 technical reviewer. And the decider owns the review trigger and the fitness function, and so carries
 the consequences.
 
-Marcus Oyelaran and Elena Sokolova hold **agreement rights on capacity and dates only**: Marcus on
+Marcus Oyelaran (Billing manager) and Elena Sokolova (Payments and Integrations manager) hold **agreement rights on capacity and dates only**: Marcus on
 whether option B fits the six reserved engineer-weeks, Elena on whether the week 19 date holds. A
 design objection from either goes in the comment window, not through the agreement right.
 
@@ -81,7 +81,7 @@ decider), or Li Na Zhou deciding alone with no comment window.
 ## A2 — Handling the CTO's hallway remark
 
 The remark is an informal overrule before a decision exists, and two engineers are already acting on
-it. The aim is to bring Victor Lindqvist's view into the record, not to defeat it.
+it. The aim is to bring Victor Lindqvist's (the CTO's) view into the record, not to defeat it.
 
 **With Victor, privately, the same day.** Acknowledge the concern (week 19 is a renewal date) and that
 it is legitimate input. Explain the cost of option A (a third silent consumer of ledger tables, the
@@ -117,9 +117,9 @@ database grant, which the fitness function would then flag as a violation nobody
 
 ## X1 — The CTO's proposed review board
 
-Estimate the load first. The baseline recorded 61 cross-team work items of a week or more in a quarter
-and 86 dependency links. If even half of those items involved a design choice another team builds on,
-that is about 30 designs a quarter, about 2.3 a week (30 ÷ 13), plus team-internal hard-to-reverse
+Estimate the load first from the 61 cross-team work items and 86 dependency links in the exercise. If
+even half of those items involved a design choice another team builds on, that is about 30 designs a
+quarter, about 2.3 a week (30 ÷ 13), plus team-internal hard-to-reverse
 decisions if "cross-team" is read loosely. A weekly board that can review four proposals has headroom
 on paper, but the CTO as chair becomes a single point of scheduling, and his presence anchors every
 discussion.

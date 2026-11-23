@@ -4,8 +4,9 @@ This chapter is about producing an organization design: for a given headcount, a
 product portfolio, which teams exist, who leads them, and which roles sit above and beside them. It
 describes what tends to break as an organization passes roughly 20, 50, 100, and 500 engineers, which
 structures answer each breakage, and the order in which to introduce managers of managers, platform
-teams, and staff-plus roles. Chapter 33 owns team types and cognitive load, Chapter 34 spans, layers,
-and dependency mapping, and Chapter 36 carrying out a reorganization. The case is a proposed year 2
+teams, and [staff-plus](../../glossary.md#staff-plus-engineer) roles (senior engineers whose job is
+technical leadership beyond their own work). Chapter 33 covers team types and cognitive load, Chapter 34
+spans, layers, and dependency mapping, and Chapter 36 carrying out a reorganization. The case is a proposed year 2
 organization for Northstar Technologies, the fictional company in the
 [case study](../../case-studies/northstar/index.md), and the starting point for Project 4.
 
@@ -73,29 +74,30 @@ coordination cost somewhere less visible rather than removing it.
 
 ### Why coordination grows faster than headcount
 
-The usual argument is arithmetic. If everyone may need to talk to everyone, n people have n(n−1)/2
-possible communication paths: 10 people have 45, 20 have 190, 50 have 1,225. Brooks's essays are
-widely known for this argument and for the claim that adding people to a late project makes it later
-([Brooks, 1995](../../references/bibliography.md#brooks1995mythical)); by a secondary account, Brooks
-himself called the law an oversimplification. The formula is an upper bound, not a measurement: real
-organizations never use most of the possible paths. Its value is the direction it points. Structure
-exists to make most paths unnecessary.
+The usual argument is arithmetic, made famous by Brooks: n people have n(n−1)/2 possible communication
+paths, so 10 people have 45 and 50 have 1,225
+([Brooks, 1995](../../references/bibliography.md#brooks1995mythical)). The formula is an upper bound,
+not a measurement, but it points the right way: structure exists to make most paths unnecessary.
 
-Chapter 33 covers the empirical support for the direction: Conway's observation
-([Conway, 1968](../../references/bibliography.md#conway1968committees)) and the congruence studies
-behind it. One result belongs here, because it concerns structure at scale:
+Chapter 33 covers the empirical support for that direction, starting from
+[Conway's law](../../glossary.md#conways-law-and-the-reverse-conway-maneuver): systems copy the
+communication structures of the organizations that build them
+([Conway, 1968](../../references/bibliography.md#conway1968committees)). One result belongs here,
+because it concerns structure at scale.
 
-- **Research finding.** In a study of Windows Vista, Nagappan, Murphy, and Basili defined eight
-  organizational measures per binary, among them how many engineers edited it, how many had left, and
-  how many organizations contributed more than a tenth of its edits. Together these predicted which
-  binaries would fail after release (average precision 0.87, recall 0.84 over 50 random splits),
-  better than churn, complexity, coverage, dependency, or pre-release bug models
-  ([Nagappan, Murphy, and Basili, 2008](../../references/bibliography.md#nagappan2008organizational)).
-  It is one system at one company, and the authors say the result cannot be assumed to generalize.
+**Diffuse ownership predicts failures (research finding).** Nagappan, Murphy, and Basili studied
+Windows Vista. For each component they measured organizational facts, such as how many engineers
+edited it, how many of them had left, and how many separate organizations made a large share of its
+edits. Together these predicted which components would fail after release. They predicted better than
+code-based measures such as the size of changes, complexity, or test coverage. Most components flagged
+did fail, and most failures were flagged
+([Nagappan, Murphy, and Basili, 2008](../../references/bibliography.md#nagappan2008organizational)).
+It is one system at one company, and the authors say the result cannot be assumed to generalize.
 
 What the evidence does not give is a number. There is no validated optimal team size, span, or
 threshold for adding a layer; widely repeated group-size limits borrowed from anthropology do not come
-from studies of software organizations, and this book does not use them (research gap G8). The scale
+from studies of software organizations, and this book does not use them. The evidence here is thin.
+The scale
 points 20, 50, 100, and 500 are bands where practitioners commonly report the same breakages, not
 thresholds (**practitioner consensus**; the specific answers are **this book's recommendation**).
 
@@ -220,12 +222,15 @@ example and not benchmarks: 8 engineers per first-line manager and 6 managers pe
 
 The platform organization holds 70 engineers (14 percent), a choice tied to Halvard's estate of shared
 services, not a target. Three management layers (manager, director, VP) sit between an engineer and
-the CTO. At this scale the
-dominant problem is coordination across groups. A revelatory case study of a Norwegian programme with
-12 co-located teams and 175 people found many coordination arenas in use (a Scrum of Scrums, a
-"Metascrum" above it, demos, forums, instant messaging), found that the arenas changed over the
-programme's life, and noted that extra roles and arenas reduced team autonomy
-([Dingsøyr et al., 2018](../../references/bibliography.md#dingsoyr2018exploring)). At 500, that trade is the design's main tension.
+the CTO.
+
+At this scale the dominant problem is coordination across groups, and every answer costs autonomy.
+Dingsøyr and colleagues studied one Norwegian programme in depth: 12 co-located teams and 175 people.
+They found many coordination arenas in use. Among them were a Scrum of Scrums (a regular meeting of
+one representative per team), a "Metascrum" above it, demos, forums, and instant messaging. The arenas
+changed over the programme's life, and extra roles and arenas reduced team autonomy
+([Dingsøyr et al., 2018](../../references/bibliography.md#dingsoyr2018exploring); **research
+finding**, one case). At 500, that trade is the design's main tension.
 
 ## Decision Framework
 
@@ -250,10 +255,9 @@ an input with branches.
 staff role leaves a product team. Under flat headcount the platform team is paid for in roadmap
 capacity this year and repays it, if at all, over later years.
 
-**Fewer layers against developed managers.** A flat organization decides faster but its senior leader
-cannot coach a dozen managers. Rajan and Wulf found large US firms became flatter, with authority
-delegated downward ([Rajan and Wulf, 2006](../../references/bibliography.md#rajan2006flattening));
-that describes corporate hierarchies, not engineering teams, and gives no right number.
+**Fewer layers against developed managers.** A flat organization decides faster, but its senior
+leader cannot coach a dozen managers. The research on corporate flattening describes the top of large
+firms, not engineering teams, and gives no right number (Chapter 34).
 
 **Architecture alignment against product alignment.** Teams aligned to components keep ownership sharp
 and coordination of features costly. Teams aligned to products do the opposite. A monolith pushes
@@ -278,8 +282,9 @@ who run status meetings and relay information. Detection: ask each proposed grou
 decide that nobody decides now.
 
 **The platform dumping ground.** Everything nobody owns is assigned to the platform team, which becomes
-an interrupt queue. Signal: Northstar's Platform Operations at baseline, with 46 percent unplanned work
-and 29 of 86 dependency links landing on it. Detection: a platform team without a written product
+an interrupt queue. Signal: Northstar's Platform Operations at baseline, with 46 percent
+[unplanned work](../../glossary.md#unplanned-work) and 29 of 86 dependency links landing on it. (A
+dependency link is one work item of a week or more in which one team needed another; Chapter 34.) Detection: a platform team without a written product
 statement and an adoption measure is a dumping ground in waiting.
 
 **The title without a mandate.** Staff titles awarded as promotions with no scope. Signal: Northstar's
@@ -304,8 +309,8 @@ and staff mandates. Without it, ownership disputes have no reference.
 **Rerun the dependency overlay each half-year.** Chapter 34 owns the method; this chapter's use is as a
 trigger. Rising links across a boundary mean the boundary is drifting from the architecture.
 
-**Fund the platform from measured waste.** Northstar's four CI systems cost about 1.5 FTE a year
-(baseline): measured waste is the cleanest argument for platform capacity under flat headcount.
+**Fund the platform from measured waste.** Northstar's four CI systems cost about 1.5
+[FTE](../../glossary.md#fte) (full-time engineers) a year at baseline: measured waste is the cleanest argument for platform capacity under flat headcount.
 
 **Name the next structure in advance.** Agree with the CTO what evidence would trigger the next
 change, such as a second management layer, so that it is prepared in the open.
@@ -351,60 +356,83 @@ To produce an organization design:
 
 ## Case Study
 
-This case is **fictional**. It is set at Northstar in quarter 4 of the director's first year, as a
-proposal the reader evaluates; its outcome is deliberately not fixed. The starting state comes from
-[the first quarter](../../case-studies/northstar/first-quarter.md) page.
+!!! info "Northstar so far"
+    Week 44, in quarter 4 (weeks 40 to 52) of the director's first year. Quarter 3, the latest measured,
+    had 14 [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents against 30 at baseline, and both renewal commitments are delivered.
+    Customer Experience still runs web and mobile under one manager, and core/permissions has had no
+    owner since its exemption lapsed in week 39. See the [timeline](../../case-studies/northstar/timeline.md).
 
-**The starting point.** After the QA engineers moved into product teams in week 10, Northstar's 80
-engineers sit in these teams: Orders 16, Billing 15, Payments and Integrations 13, Customer Experience
-17, Data and Analytics 11, Platform Operations 5 (infrastructure only), and 3 staff engineers. Check:
-16 + 15 + 13 + 17 + 11 + 5 + 3 = 80. The director has 9 direct reports: 6 managers and 3 staff
-engineers. The whole organization is 87 people and stays flat; promoting an engineer into a new
-manager role is allowed only if that engineer's seat is not backfilled.
+This case is **fictional**. It is a proposal the reader evaluates, and its outcome is deliberately not
+fixed. The starting state comes from [the director's first year](../../case-studies/northstar/first-quarter.md).
 
-**The breakages the director names** (fictional framing of canon facts): Customer Experience runs two
-products with different release mechanics from one board across two sites, and Chapter 14's health
-check found mobile red on 4 of 10 indicators; core/permissions has no owner; search-svc's ownership is
-disputed between Orders and Data and Analytics (Chapter 12); and Platform Operations, with five
-engineers and a two-person interrupt rotation (Chapter 16), still answers requests as a ticket queue.
+**The starting point.** Since the QA engineers moved into product teams in week 10, Northstar's 80
+engineers sit in six teams plus 3 staff engineers (the table below shows the numbers). The whole
+organization is 87 people and stays flat under the first of the
+[five constraints](../../glossary.md#the-five-constraints). Promoting an engineer into a new manager
+role is allowed only if that engineer's seat is not backfilled. The director has 9 direct reports: 6
+managers and 3 staff engineers.
 
-**The proposal.** In week 44 (fictional), the director drafts a year 2 organization for Victor
-Lindqvist, to take effect at the start of quarter 5 (week 53). The CTO decides.
+**The breakages the director names.**
 
-| Team | Manager | Engineers | Change |
-|---|---|---|---|
-| Orders | Priya Raman | 16 | takes core/permissions (her stated condition, after week 26, is met); search-svc leaves |
-| Billing | Marcus Oyelaran | 15 | none |
-| Payments and Integrations | Elena Sokolova | 13 | none |
-| Web | Daniel Cho | 11 | 9 web engineers and the 2 quality engineers |
-| Mobile | Mateo Arango Ríos | 5 | the Bogotá mobile engineers; Mateo's seat not backfilled |
-| Data and Analytics | Farah Haddad | 11 | takes search-svc |
-| Developer Platform | Tom Becker | 5 | the infrastructure engineers, run as an internal product |
-| Staff engineers | the director | 3 | written architecture mandates |
+- Customer Experience, under Daniel Cho, runs two products with different release mechanics from one
+  board across two sites. Chapter 14's health check found mobile red on 4 of 10 indicators.
+- core/permissions, a [tier 1](../../glossary.md#tier-1) module of Core (on the order or payment path),
+  has no owner.
+- search-svc's ownership is disputed between Orders and Data and Analytics (Chapter 12).
+- Platform Operations, under Tom Becker, has five engineers and a two-person interrupt rotation
+  (Chapter 16), and still answers requests as a ticket queue.
 
-Check: 16 + 15 + 13 + 11 + 5 + 11 + 5 + 3 = 79 engineers, plus 7 managers (one of them an
-engineer-turned-manager) and the director: 87. The director has 10 direct reports (7 managers, 3
-staff). Six people change manager (Mateo and the five mobile engineers) and two components change
-owner. Mobile gives up one engineer's capacity, a sixth of its engineers, for a manager on its own site.
+Chapter 34's quarter 2 analysis adds three open items: every manager's span is out of range, the web
+and mobile links were never measured, and Orders and Billing remain the heaviest pair.
+
+**The proposal.** In week 44 the director drafts a year-2 organization for Victor Lindqvist (CTO). It
+would take effect in week 53, the first week of year 2. The CTO decides.
+
+| Team | Manager | Engineers now | Engineers proposed | Change |
+|---|---|---|---|---|
+| Orders | Priya Raman | 16 | 16 | takes core/permissions (her stated condition, after week 26, is met); search-svc leaves |
+| Billing | Marcus Oyelaran | 15 | 15 | none |
+| Payments and Integrations | Elena Sokolova | 13 | 13 | none |
+| Customer Experience | Daniel Cho | 17 | split | becomes Web and Mobile |
+| Web | Daniel Cho | | 11 | 9 web engineers and the 2 quality engineers |
+| Mobile | Mateo Arango Ríos | | 5 | the Bogotá mobile engineers; Mateo, their informal lead, becomes manager and his seat is not backfilled |
+| Data and Analytics | Farah Haddad | 11 | 11 | takes search-svc |
+| Platform Operations, renamed Developer Platform | Tom Becker | 5 | 5 | the infrastructure engineers, run as an internal product |
+| Staff engineers | the director | 3 | 3 | written architecture mandates |
+| Engineers | | 80 | 79 | |
+
+Proposed totals: 79 engineers, 7 managers (one of them an engineer-turned-manager), and the director,
+87 in all. The director has 10 direct reports (7 managers, 3 staff). Six people change manager (Mateo
+and the five mobile engineers) and two components change owner. Mobile gives up a sixth of its
+engineers' capacity for a manager on its own site.
 
 **Alternatives in the draft.**
 
 | Alternative | Arithmetic | Main cost |
 |---|---|---|
 | B. Keep Customer Experience whole, two subteams (Chapter 14's option B) | 80 engineers, 6 managers, director 9 reports | Daniel leads across sites; mobile's red indicators may persist |
-| C. Also split Orders (Order Capture 9, Catalog and Pricing 6, a manager from Orders) and grow the platform to 8 with one transfer each from Billing, Payments and Integrations, and Data | 78 engineers, 8 managers | About ten more people move; about 58 co-changing pricing-rules and order-capture merge requests a quarter cross a new boundary (Chapter 31), unless pricing-rules stays with Order Capture |
+| C. Also split Orders (Order Capture 9, Catalog and Pricing 6, a manager from Orders) and grow the platform to 8 with one transfer each from Billing, Payments and Integrations, and Data | 78 engineers, 8 managers | About ten more people move; Chapter 34's move M2, with its cost: 4 new links a quarter and about 58 merge requests crossing a new boundary, unless pricing-rules stays with Order Capture |
 | D. Two managers of managers above the teams | 77 engineers, 9 managers, director 5 reports | A layer between the director and the reliability work; two seats; two leads new to the job |
 
-**The director's reasoning.** The proposal answers the breakages with the fewest moves: one split
-where the evidence is strongest (two products, two sites, red health signals) and two ownership
+**Testing the proposal with Chapter 34's tools.**
+
+| Chapter 34's test | What the proposal does |
+|---|---|
+| Spans in range | Fixes the worst one (Customer Experience, 17). Leaves Orders 16, Billing 15, Payments and Integrations 13 above range. Data and Analytics stays at 11 while gaining search-svc. Developer Platform stays at 5, the floor |
+| Heaviest links | Leaves Orders and Billing (15) to the quarter 2 contract. Moving search-svc turns some Customer Experience to Orders links into links to Data and Analytics |
+| Links it may create | Web and Mobile links, unmeasured because the matrix counted Customer Experience as one team. core/permissions reviews, since 21 of its 38 baseline merge requests came from Customer Experience, Billing, and Payments and Integrations |
+| Seats | One engineering seat |
+| Layer | None; director at 10 |
+
+**The director's reasoning.** The proposal answers the breakages with the fewest moves. It makes one
+split where the evidence is strongest (two products, two sites, red health signals) and two ownership
 assignments that end recorded disputes. It leaves Orders at 16 with an added module, which is its main
-risk; alternative C answers that, at the price of a second split before the first has settled. On D, in
-the director's own assessment (fictional), the managers are getting monthly development time and
-cross-team decisions are not queuing on the director, so a layer would answer a breakage not yet
-observed. The draft names triggers for revisiting C and D: Orders' lead time or on-call load rising
-after core/permissions arrives, approved headcount growth, or manager development falling behind.
-Developer Platform keeps three builders after the interrupt rotation, so its first product must be
-small.
+risk. Alternative C answers that, at the price of a second split before the first has settled. On D,
+the director judges that the managers are getting monthly development time and that cross-team
+decisions are not queuing on the director. A layer would answer a breakage not yet observed. The draft
+names triggers for revisiting C and D: Orders' lead time or on-call load rising after core/permissions
+arrives, approved headcount growth, or manager development falling behind. Developer Platform keeps
+three builders after the interrupt rotation, so its first product must be small.
 
 How to carry out the change is Chapter 36's subject. Whether this is the right proposal is the subject
 of the exercises and Project 4.
@@ -421,10 +449,13 @@ request. Deployments wait on average two days for review, and the CTO is the onl
 approve a schema change. The CTO proposes hiring a VP of Engineering. Name the breakage, the cheaper
 answer to test first, and the structure you would add, with arithmetic.
 
-**F2.** Using Northstar's baseline dependency links by pair, count how many of the 86 links would
-cross a team boundary under alternative C, treating Order Capture and Catalog and Pricing as two teams.
-State what you must assume about how Orders' links split between the two new teams, and what the count
-tells you about the design.
+**F2.** Count how many dependency links would cross a team boundary under alternative C, treating
+Order Capture and Catalog and Pricing as two teams. The baseline quarter had 86 links, all between the
+six existing teams. Orders requested 23 (9 from Billing, 2 Payments, 3 Customer Experience, 1 Data, 8
+Platform) and received 18. Chapter 34's recount found 4 Orders work items of a week or more that touched
+both order capture and pricing, catalog, or search. State what you must assume about how Orders' links
+split between the two new teams, and what the count tells you about the design, including what it
+cannot see.
 
 **F3.** A colleague cites the n(n−1)/2 formula to argue that teams must never exceed seven people.
 Assess the argument using what the chapter says about the formula, the evidence, and the absence of a
@@ -432,24 +463,25 @@ validated team size.
 
 ### Applied Leadership
 
-**A1.** You are Tom Becker in week 46, reviewing the proposal. Developer Platform keeps its five
+**A1.** You are Tom Becker (Platform Operations manager) in week 46, reviewing the proposal. Developer Platform keeps its five
 engineers, and two remain on the interrupt rotation. Write the platform team's product statement for
 year 2, the two measures of adoption you would report, what you would refuse to take on, and whether
 you would argue for alternative C's three transfers.
 
-**A2.** Priya Raman objects to alternative C: she built Orders' domain knowledge into one team, and the
+**A2.** Priya Raman (Orders manager) objects to alternative C: she built Orders' domain knowledge into one team, and the
 split separates pricing rules from order capture, which change together often: 53 percent of
 pricing-rules merge requests in the baseline quarter also touched order-capture (Chapter 31), though
 only 4 of Orders' work items of a week or more touched both (Chapter 34). Decide whether these facts change the boundary, and what you would ask to see
 before deciding.
 
-**A3.** Write the one-paragraph mandates for Ines Carvalho, Kwame Mensah, and Li Na Zhou under the
-proposal, choosing an archetype for each and stating their decision scope and reporting line. Explain one
+**A3.** Write the one-paragraph mandates for the three staff engineers under the proposal: Ines
+Carvalho (Core domain), Kwame Mensah (infrastructure and reliability), and Li Na Zhou (data and
+integration), choosing an archetype for each and stating their decision scope and reporting line. Explain one
 case where the mandate should say "advises" rather than "decides".
 
 ### Executive Decision-Making
 
-**X1.** Victor Lindqvist prefers alternative D because "we will be 100 engineers in two years and I don't
+**X1.** Victor Lindqvist (CTO) prefers alternative D because "we will be 100 engineers in two years and I don't
 want to reorganize twice". Headcount growth is not approved. Prepare the director's response: the cost
 of D now, the cost of moving to D later, and the triggers you would commit to.
 

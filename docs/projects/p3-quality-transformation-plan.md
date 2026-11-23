@@ -2,20 +2,29 @@
 
 You are the new Engineering Director at Northstar Technologies, the fictional company of the
 [case study](../case-studies/northstar/index.md). It is your first week. Nothing in the
-transformation has happened yet. Your job in this project is to produce the documents a director
-needs before quarter 1 begins: a diagnosis, a named constraint, a scorecard, a capacity model, and a
-90-day plan that the CTO and the Chief Product Officer could agree to.
+transformation has happened yet. Your job is to produce the documents a director needs before
+quarter 1 begins: a diagnosis, a named [constraint](../glossary.md#constraint), a
+[scorecard](../glossary.md#scorecard), a capacity model, and a 90-day plan that the CTO and the Chief
+Product Officer (CPO) could agree to.
 
 The project applies [Chapter 27](../parts/05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)
-and draws on the practice chapters behind it, Chapters 19 to 26. It takes about 12 to 20 hours.
+and draws on the practice chapters behind it, Chapters 19 to 26. After that reading, the full project
+takes about 25 to 32 hours.
+
+!!! note "Core version (about 10 to 12 hours)"
+    Do parts 1, 2, and 3 only: the diagnosis, the constraint statement, and the scorecard. Apply
+    acceptance criteria 2, 3, 4, 5, and 10, and score the rubric rows Diagnosis from data, Constraint
+    and alternatives, and Scorecard design (50 of the 100 points; rescale to 100).
 
 ## Problem Statement
 
 Northstar's quality has declined to the point where customers, finance, and the executive team have
-noticed. Last quarter there were 30 Sev1 and Sev2 incidents, customers found almost half of them
-first, availability on the contractual paths was 99.62 percent against a 99.9 percent commitment, and
-the company paid $410,000 in service credits. About a third of engineering capacity went to unplanned
-work. Two renewals worth $9M in annual recurring revenue name reliability as the customer's concern.
+noticed. Last quarter there were 30 [Sev1 and Sev2](../glossary.md#severity-sev1-sev2-sev3) incidents,
+and customers found almost half of them first. Availability on the contractual paths was 99.62
+percent against a 99.9 percent commitment, and the company paid $410,000 in
+[service credits](../glossary.md#service-credits). About a third of engineering capacity went to
+[unplanned work](../glossary.md#unplanned-work). Two renewals worth $9M in annual recurring revenue
+([ARR](../glossary.md#arr)) name reliability as the customer's concern.
 
 The CTO, Victor Lindqvist, has given you the mandate in one sentence: halve the number of Sev1 and
 Sev2 incidents and meet the 99.9 percent commitment within twelve months, with no net growth in
@@ -76,37 +85,40 @@ Use these sources:
 - [`teams.csv`](../case-studies/northstar/data/teams.csv): six teams and the staff engineers, with
   delivery and stability measures.
 
-**The time rule.** You may use any fact that describes the baseline quarter or your arrival, including
+**The time rule.** Use the [Northstar overview](../case-studies/northstar/index.md), the
+[baseline data](../case-studies/northstar/baseline-data.md), the [cast](../case-studies/northstar/cast.md),
+and the "Before week 1" row of the [timeline](../case-studies/northstar/timeline.md). You may use
 facts the baseline page says were reconstructed later (such as Billing's on-call pages), because your
 first two weeks of diagnosis could have produced them. You may not use any fact about events after
-your arrival: anything on the first-quarter page except the renewal commitments in constraint 2, and
-the extended-baseline rows dated by a later week or quarter (the recoded attrition reasons, staff
-engineers' time in weeks 12 and 13, Ines Carvalho's design reviews in weeks 7 to 12, and the week 14
-Orders knowledge map).
+your arrival. That rules out the [first-quarter page](../case-studies/northstar/first-quarter.md)
+(except the renewal commitments in constraint 2), the rest of the timeline, and the extended-baseline
+rows dated by a later week or quarter: the recoded attrition reasons, staff engineers' time in weeks
+12 and 13, design reviews by Ines Carvalho (staff engineer) in weeks 7 to 12, and the week 14 Orders
+knowledge map.
 
 **Facts your submission must use.** Each must appear, with its number, where it supports a decision:
 
 | Area | Facts |
 |---|---|
 | Incidents | 30 Sev1 and Sev2 (7 and 23); triggers from the incident file; 14 detected by customers, 11 by monitoring, 5 by engineers; median detection 108 minutes when a customer reported, 6 when monitoring did; 11 recurrences; median restoration 3 hours 10 minutes overall, 4 hours 50 minutes for release-train incidents |
-| Defects | 212 escaped defects, 81 regressions; the five detection-point classes (57, 49, 41, 38, 27) |
-| Delivery | Core: 2 releases a month, 19-day lead time, 31 percent change failure rate; services: 3 deployments a week, 3 days, 18 percent; pipeline 74 minutes; main branch red 22 percent of working hours; 9 percent of runs fail for unrelated reasons; about 140 flaky tests |
-| Ownership and readiness | 8 of 24 components disputed, shared, or orphaned; 8 with no on-call; 15 proposed tier 1, of which 3 meet all four operational minimums |
+| Defects | 212 [escaped defects](../glossary.md#escaped-defect), 81 regressions; the five detection-point classes (57, 49, 41, 38, 27) |
+| Delivery | [Core](../glossary.md#core), the monolith: 2 releases a month, 19-day [lead time](../glossary.md#lead-time), 31 percent [change failure rate](../glossary.md#change-failure-rate); services: 3 deployments a week, 3 days, 18 percent; pipeline 74 minutes; main branch red 22 percent of working hours; 9 percent of runs fail for unrelated reasons; about 140 flaky tests |
+| Ownership and readiness | 8 of 24 components disputed, shared, or orphaned; 8 with no on-call; 15 proposed [tier 1](../glossary.md#tier-1), of which 3 meet all four [operational minimums](../glossary.md#tier-1-operational-minimums) |
 | Follow-through | 96 corrective actions in two quarters, 31 closed |
 | Capacity and money | 80 engineers at $185,000; unplanned work 34 percent (27.2 engineer-years); unplanned work by category; service credits $410,000 a quarter; manual regression about 2.4 engineer-years |
 | Commitments | 7 of 17 committed roadmap items delivered; the two renewal commitments and their staffing |
 
-**Project-only data: claims to test.** In your first week you hear these explanations. Two are canon
-(Chapter 27). The other four are **fictional additions for this project only**; they are not part of
-the Northstar canon and later chapters do not rely on them. Your diagnosis must test each against the
+**Project-only data: claims to test.** In your first week you hear these explanations. Two come from
+the case (Chapter 27). The other four are **invented for this project only**, and no chapter relies on
+them. Your diagnosis must test each against the
 data and say whether it holds, partly holds, or fails.
 
 | Who | Claim | Status |
 |---|---|---|
-| Marcus Oyelaran, Billing | "Our incidents come from unclear requirements." | Canon |
-| Tom Becker, Platform Operations | "We need more manual testing, not less." | Canon |
-| Priya Raman, Orders | "Most of our incidents start in the shared modules other teams change." | Project-only |
-| Elena Sokolova, Payments and Integrations | "Our problems are mostly the partner banks." | Project-only |
+| Marcus Oyelaran, Billing manager | "Our incidents come from unclear requirements." | From the case |
+| Tom Becker, Platform Operations manager | "We need more manual testing, not less." | From the case |
+| Priya Raman, Orders manager | "Most of our incidents start in the shared modules other teams change." | Project-only |
+| Elena Sokolova, Payments and Integrations manager | "Our problems are mostly the partner banks." | Project-only |
 | Sofia Alvarez, Customer Success | "Customers tell us before engineering knows." | Project-only |
 | Amara Okafor, CPO | "A quality program will cost us the renewals." | Project-only |
 
@@ -125,7 +137,7 @@ Submit one document of no more than about 12 pages, plus any spreadsheet you use
    would compute the same number, source, baseline, direction, paired measure, and how it would be
    gamed and audited. State what you will and will not set targets on in quarter 1.
 4. **Capacity model (one table and half a page).** Four quarters: unplanned work, prevention, feature
-   capacity, change from baseline. A planned and a pessimistic case. The quarter 1 prevention
+   capacity, change from baseline. A planned and a [cautious case](../glossary.md#planned-case-and-cautious-case). The quarter 1 prevention
    allocation by team, with the arithmetic shown so that it sums to your total. The cost of
    prevention in dollars and what it buys.
 5. **90-day plan.** Use the [90-day quality plan template](../templates/ninety-day-quality-plan.md):
@@ -161,9 +173,10 @@ Submit one document of no more than about 12 pages, plus any spreadsheet you use
    to the mechanism measures you expect to move within weeks. Apply the four design rules in Chapter
    27 and the gaming discussion in [Chapter 18](../parts/04-execution/18-measuring-engineering-productivity.md).
    Use the [scorecard template](../templates/engineering-quality-scorecard.md).
-9. **Build the capacity model.** Start from 80 FTE and 27.2 FTE of unplanned work. Choose a prevention
-   allocation per quarter and a projected unplanned-work path. State every assumption. Allocate
-   quarter 1 by team, remembering where the renewal staffing sits. Compute the pessimistic case.
+9. **Build the capacity model.** Start from 80 [FTE](../glossary.md#fte) (full-time equivalent
+   engineers) and 27.2 FTE of unplanned work. Choose a
+   [prevention allocation](../glossary.md#prevention-allocation) per quarter and a projected unplanned-work path. State every assumption. Allocate
+   quarter 1 by team, remembering where the renewal staffing sits. Compute the cautious case.
 10. **Write the plan.** Sequence workstreams so that inflow reduction starts in days 30 to 60. Give each
     workstream a lead who has the capability and the time. Say what you will stop doing to fund it.
 11. **Plan for the people.** The QA engineers, the three staff engineers without a mandate, the
@@ -220,7 +233,7 @@ rubric.
 5. The scorecard has six to ten measures; each has a definition, source, baseline, paired measure, and
    a stated gaming risk with an audit. No measure depends only on human classification without an
    audit.
-6. The capacity model sums to 80 FTE in every quarter, includes a pessimistic case, and the quarter 1
+6. The capacity model sums to 80 FTE in every quarter, includes a cautious case, and the quarter 1
    team allocation sums to the stated total.
 7. The renewal staffing (5 Orders, 2 Customer Experience web, 4 Payments and Integrations engineers)
    is shown as protected in quarter 1 capacity.
@@ -237,10 +250,10 @@ Weights total 100. A strong pass is 75 or more with no criterion weak.
 | Diagnosis from data | 20 | Classifies from the CSV, not the summary; shows trigger, detection, recurrence, and restoration minutes; tests all six claims and finds the partial truths; the loop diagram carries numbers | Uses the baseline summary correctly; tests most claims; loop drawn without numbers | Restates the overview's bullet points; claims accepted or dismissed by assertion |
 | Constraint and alternatives | 15 | One mechanism, three or more independent lines of evidence, honest case against, rejected alternatives with data; parallel workstreams justified by cost and speed | Constraint named with evidence; alternatives mentioned briefly | Several "top priorities"; or a constraint chosen by intuition (more testing, a rewrite, a tool) |
 | Scorecard design | 15 | Paired measures; system-generated sources preferred; severity audited; many-event measures marked as early evidence; no targets before a baseline quarter; distribution measures included | Sensible measures with pairs and sources; gaming addressed generally | Line coverage, bugs closed, or incident count alone; targets set on day one; no gaming analysis |
-| Capacity model and funding | 20 | Four quarters, planned and pessimistic, every assumption stated, team allocation by inflow and commitments with sums shown, dollar cost and return, dip disclosed to the CPO before the quarter | Planned case with stated assumptions and a dip; team split present | No model, or prevention assumed free ("absorb it"), or a uniform cut without arithmetic |
+| Capacity model and funding | 20 | Four quarters, planned and cautious, every assumption stated, team allocation by inflow and commitments with sums shown, dollar cost and return, dip disclosed to the CPO before the quarter | Planned case with stated assumptions and a dip; team split present | No model, or prevention assumed free ("absorb it"), or a uniform cut without arithmetic |
 | Plan sequencing and ownership | 15 | Inflow reduction starts by day 30 to 60; leads have capability and time; staff engineers given mandates; hand-back for central work; stop list funds the plan | Reasonable sequence and owners; stop list thin | Backlog drained first; a quality sprint as the strategy; owners are "all teams" |
 | People and stakeholders | 10 | QA engineers each have a credible role and a date to hear it; manager accountability for the system, not blame; CPO, CFO, and CEO each get the trade in their own terms | QA plan present; stakeholders addressed | QA "automated away" or unmentioned; the plan names culprits |
-| Honesty about uncertainty | 5 | Says what one quarter of incident counts can and cannot show; pessimistic case and triggers for changing course | Some uncertainty acknowledged | Promises a number ("zero Sev1", "halved by Q2") with no confidence |
+| Honesty about uncertainty | 5 | Says what one quarter of incident counts can and cannot show; cautious case and triggers for changing course | Some uncertainty acknowledged | Promises a number ("zero Sev1", "halved by Q2") with no confidence |
 
 ## Solution
 

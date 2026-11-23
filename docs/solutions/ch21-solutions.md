@@ -29,7 +29,7 @@ six weeks on the basis of how the code looks.
 | Fact | Kind | Interest it charges | Data that would measure it |
 |---|---|---|---|
 | 17 of 24 components without a runbook | Documentation | Longer restores, more escalation to the few people who know | Time to restore for incidents on components with and without runbooks; escalation counts |
-| auth-svc deployed by scripts one person understands | Infrastructure and knowledge | Manual deploy time; risk of an unmaintainable tier 1 service if that person leaves | Hours per deploy; failed or rolled-back deploys; INC-416 shows rollback breaking |
+| auth-svc deployed by scripts one person understands | Infrastructure and knowledge | Manual deploy time; risk of an unmaintainable tier 1 service if that person leaves | Hours per deploy; failed or rolled-back deploys; INC-416 (a shared deploy-script change that broke rollback for four services) shows the risk |
 | Core main branch red 22 percent of working hours | Test (and partly infrastructure) | Blocked merges, reruns, waiting, distrust of the suite | Pipeline logs: red time, reruns, share of failures unrelated to the change (9 percent) |
 | core/scheduler shared by four teams, no owner | Architecture and knowledge | Coordination on every change; nobody on call; slow diagnosis | Changes touching the module and their review wait; incidents involving it |
 
@@ -69,7 +69,7 @@ finding and refuses the extrapolation.
 ## A1 — Responding to the core/customer redesign
 
 **In the meeting.** Agree with what is true: the module is hard to change and has no owner, and Ines
-knows it better than anyone. Then move the question from "is it bad?" to "what does it cost, and
+knows it better than anyone (she is the staff engineer for the Core domain). Then move the question from "is it bad?" to "what does it cost, and
 where?" Say plainly that you are not rejecting the proposal and that you will not fund three
 engineer-years without knowing the interest, because Northstar has a standing rule against funding a
 Core rewrite and the register ranks by cost, not conviction. Ask Ines to lead the measurement.
@@ -95,7 +95,7 @@ Then the large entries, TD-001 and TD-006, as separately funded decisions. The p
 is ranked by return, like features, and that the top items pay back within months.
 
 **The framing.** Debt work is not an extra claim on capacity. It is paid out of the 12 FTE
-prevention allocation she already agreed (Chapter 27), and the question is only how that allocation
+prevention allocation Amara Okafor (CPO) already agreed, and the question is only how that allocation
 is split. Say so first: no team loses more feature capacity than the allocation already took, and
 the renewal teams (Orders, and Payments and Integrations) stay at 10 percent.
 
@@ -143,7 +143,7 @@ was "spent".
 **Common frame.** Both cost about two engineer-years. The feature's cost of delay is $60,000 a month,
 $720,000 a year. TD-006's time interest is about 1.5 FTE, about $278,000 a year, or about $23,000 a
 month, plus benefits not priced in the chapter: comparable pipeline metrics, one place to fix rollback
-(INC-416 broke rollback for four services), and faster later work such as automated regression for
+(INC-416), and faster later work such as automated regression for
 Core.
 
 **Decision.** On these numbers, fund the feature first. Its cost of delay is roughly two and a half
@@ -181,7 +181,7 @@ registered debt.
 
 **Prevention.** Tie interest estimates to system data wherever possible; have staff engineers
 spot-check the top entries each quarter; keep removed entries visible with their before-and-after
-data; and audit trigger classification the same way Chapter 27 audits severity. Do not rank
+data; and audit trigger classification the same way Northstar's weekly review audits severity. Do not rank
 directors on the numbers; use them to decide funding.
 
 **Criteria:** few numbers; each with its gaming described; audit mechanism stated. **Weak answer:**

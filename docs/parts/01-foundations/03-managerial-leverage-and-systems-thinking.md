@@ -3,7 +3,7 @@
 Every organization keeps producing results nobody chose: the same three people paged every night, the
 same decisions waiting on the same person. This chapter teaches you to see those results as the output
 of a structure (stocks, flows, feedback loops, delays, and constraints) and to spend your hours by how
-much each one changes that structure, not by how visible it is. It owns the book's systems-thinking
+much each one changes that structure, not by how visible it is. It sets out the book's systems-thinking
 toolkit. Chapter 27 applies the toolkit to a quality decline, Chapter 16 to delivery flow, and Chapter 1
 introduces the idea of managerial output that this chapter turns into a method. The running example is
 Northstar Technologies, the fictional company in the [case study](../../case-studies/northstar/index.md).
@@ -53,6 +53,12 @@ connecting the stocks back to the flows
 amplifies whatever it is doing; a **balancing loop** pushes toward a goal. When a result keeps coming
 back after you fix it, a loop is regenerating it.
 
+!!! info "Northstar so far"
+    Before week 1. Northstar, the book's fictional order-to-cash software company, has 80 engineers in
+    six teams and a new Engineering Director about to arrive. Last quarter brought 30 serious (Sev1 and
+    Sev2) incidents; Billing had the most. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
 Northstar's Billing team has one. Three of its thirteen engineers carry most of the on-call pages
 ([Northstar overview](../../case-studies/northstar/index.md)). That is usually called a staffing
 problem. It is better described as a loop:
@@ -72,8 +78,9 @@ flowchart TD
 ```
 
 Every arrow is reasonable alone: routing a ledger page to the fastest restorer is good incident
-practice, and an expert who fixes rather than writes runbooks is doing what the business asks. Together they concentrate knowledge further each quarter, and
-the outer path (fatigue, then departure) worsens the concentration just when it is most dangerous.
+practice, and an expert who fixes rather than writes runbooks is doing what the business asks.
+Together they concentrate knowledge further each quarter. The outer path (fatigue, then departure)
+worsens the concentration just when it is most dangerous.
 
 The second idea is **leverage**. Donella Meadows ranked the places to intervene in a system, from
 changing numbers at the bottom to changing goals and paradigms at the top, and relayed Jay Forrester's
@@ -135,8 +142,8 @@ flowchart TD
 
 In the twelve months before the director arrived, eight Northstar engineers left (10 percent of 80),
 and the median time from resignation to the replacement's first day was 15 weeks (fictional; see the
-[baseline data](../../case-studies/northstar/baseline-data.md)). Eight departures at 15 weeks each is 120 seat-weeks, about 2.3
-engineer-years of empty seats, before the months each replacement needs to ramp. A manager who
+[baseline data](../../case-studies/northstar/baseline-data.md)). That is about 2.3 engineer-years of
+empty seats (8 × 15 = 120 seat-weeks), before the months each replacement needs to ramp. A manager who
 requests hires against today's workload receives them after the pressure has peaked, and the next
 planning cycle cuts them: hiring and freezing out of phase with need. The defense is to act first on the
 flows you control fastest (attrition, teaching time, ramp) and to plan hiring against a forecast.
@@ -158,13 +165,12 @@ different industries.
 
 Chapter 27 shows the trap in a quality decline. It also governs managerial time. Billing's experts fix
 pages themselves instead of pairing and writing runbooks; a director answers every escalation instead
-of writing the rules that would make most escalations unnecessary. Leslie Perlow's nine-month field
-study of a software engineering team found that the group's collective use of time kept its members
-short of time: engineers were constantly interrupted, a crisis mentality and rewards for individual
-heroics sustained the pattern, and changing how they used their time improved collective productivity
-([Perlow, 1999](../../references/bibliography.md#perlow1999time)). It is one qualitative study, read at
-abstract level, but its direction matches the trap: rewarding heroics strengthens the loop that makes
-heroics necessary.
+of writing the rules that would make most escalations unnecessary. Rewarding heroics strengthens the loop that makes heroics necessary. Leslie Perlow's nine-month field
+study of one software engineering team reports, in its abstract, that the group's collective use of
+time kept its members short of time. Engineers were constantly interrupted, a crisis mentality and
+rewards for individual heroics sustained the pattern, and changing how they used their time improved
+collective productivity ([Perlow, 1999](../../references/bibliography.md#perlow1999time)). It is one
+qualitative study, but its direction matches the trap.
 
 ### Leverage points
 
@@ -174,7 +180,7 @@ levels that most often matter in engineering organizations; the examples are thi
 
 | Level (lower to higher) | What changes | Engineering example |
 |---|---|---|
-| Parameters | Numbers in an existing structure | On-call stipend, WIP limit, allocation percentage |
+| Parameters | Numbers in an existing structure | On-call stipend, [WIP limit](../../glossary.md#work-in-progress-wip-and-wip-limit) (a cap on work in progress), allocation percentage |
 | Buffers and stocks | Size of stocks relative to flows | Hiring ahead of attrition, slack in a rotation |
 | Delays | Time between action and feedback | Weekly instead of quarterly review of on-call load |
 | Loop strength | How hard a loop pushes | Protected teaching time slows concentration |
@@ -224,19 +230,23 @@ behavioral: count the decisions in your area that require you, and whether that 
 
 ## Engineering Organization Example
 
-The following analysis is **illustrative**. Team composition and incidents come from the Northstar
-baseline; the paging figures are additions recorded for this chapter. Northstar did not track on-call
-load, so they were reconstructed afterwards from the paging tool's history.
+The following analysis is **illustrative**. Northstar did not track on-call load, so the paging
+figures were reconstructed afterwards from the paging tool's history.
 
-In the baseline quarter, Billing's rotation received 180 pages. Three engineers handled 126 of them
-(70 percent), as primary or by escalation; the other ten handled 54. Of 64 pages outside working hours,
-the three handled 54. About a third of all pages (61) needed no action. Billing had eight Sev1 and Sev2
-incidents, six of them recurrences, and from the incident file its median restoration time was 495
-minutes against 190 for the organization.
+The three ledger experts carried 70 percent of Billing's pages in the baseline quarter (the quarter
+before the director arrived), and almost all of the night pages:
 
-Each of the three received about 42 pages in the quarter, more than three a week and eighteen after
-hours; each of the other ten received about five. Billing used to have four ledger-experienced
-responders; one left about nine months before the director arrived.
+| Billing pages, baseline quarter | Three ledger experts | Other ten engineers |
+|---|---|---|
+| Pages handled, primary or by escalation (180 in all) | 126 | 54 |
+| Pages per person | about 42 | about 5 |
+| Pages outside working hours (64 in all) | 54 | 10 |
+
+About a third of all pages (61) needed no action. Billing also had eight
+[Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (Northstar's two most serious
+severity levels), six of them repeats of earlier failures. Its median time to restore service was 495
+minutes, against 190 for the organization. Billing used to have four ledger-experienced responders;
+one left about nine months before the director arrived.
 
 The ranking criteria (**this book's recommendation**) are the effect on the loop, how long the effect
 lasts without further effort, the delay before it works, and the director's own hours.
@@ -251,21 +261,20 @@ lasts without further effort, the delay before it works, and the director's own 
 | Rule: experts escalation only, with pairing | Rule | Reverses the loop | One quarter | 4 | Medium |
 | Protected runbook time for experts | Loop strength | Knowledge leaves three heads | One to two quarters | 2 | Low |
 
-The fourth row assumes the three handled no-action pages in the same 70 percent proportion as all
-pages: 70 percent of 61 is about 43, taking their load from 126 to about 83 pages a quarter within a
-month. Chapter 24 covers how to demote cause-based alerts
+The fourth row assumes the three handled no-action pages in the same 70 percent share as all pages
+(70 percent of 61 is about 43). Chapter 24 covers how to demote cause-based alerts
 ([on-call design and load](../05-engineering-quality/24-reliability-slos-and-operational-readiness.md#on-call-design-and-load)).
 
 The rule change reverses the loop and is the most resisted. Restoration will be slower for a quarter
-while others learn, on a team whose median restore is already over eight hours. The SRE Workbook's
-on-call chapter treats two incidents per twelve-hour shift as the load limit and gives eight engineers
+while others learn, on a team whose median restore is already over eight hours. Google's *Site Reliability
+Workbook* (SRE is site reliability engineering) has an on-call chapter that treats two incidents per twelve-hour shift as the load limit and gives eight engineers
 as the minimum for a single-site round-the-clock rotation
 ([Cook et al., On-Call](../../references/bibliography.md#cook2018oncall)); thirteen engineers clear that,
 so Billing's constraint is knowledge, not headcount.
 
 The two most visible interventions have the least leverage. The three with the most (alert removal,
-published load, the escalation rule) cost the director about seven hours in total. Chapter 24 owns the
-rotation design itself.
+published load, the escalation rule) cost the director about seven hours in total. Chapter 24 covers
+rotation design.
 
 ## Decision Framework
 
@@ -358,7 +367,7 @@ them in two quarters. That question would have surfaced Billing's concentration 
 people.
 
 **Staff engineers as leverage.** Northstar's three staff engineers own no components and have no
-mandate. In the baseline, Ines Carvalho spent about eight hours a week answering unscheduled questions
+mandate. In the baseline, Ines Carvalho (staff engineer, core domain) spent about eight hours a week answering unscheduled questions
 about Core (**illustrative**, consistent with the staff engineers' 20 percent unplanned share). Answering
 questions one at a time is the lowest level of work; writing the boundary rules for a Core module and
 reviewing others' decisions against them reaches every team. Chapter 29 covers the staff role.
@@ -406,9 +415,8 @@ goals, rules, the people who run the organization, and the information it steers
 
 ## Case Study
 
-This case is **fictional**. It is set in the twelve months before the director arrives at Northstar,
-using the [baseline](../../case-studies/northstar/baseline-data.md) and this chapter's additions; it adds
-nothing to [the first quarter](../../case-studies/northstar/first-quarter.md).
+This case is **fictional**. It is set in the twelve months before the director arrives at Northstar
+([baseline data](../../case-studies/northstar/baseline-data.md)).
 
 At the start of that year, Billing had four engineers trusted with ledger incidents. The rotation
 nominally covered all thirteen, but ledger and invoicing pages were escalated to the four almost by
@@ -432,11 +440,6 @@ The same structure appeared elsewhere. Ines Carvalho, with eleven years on Core,
 a week answering questions that a written module boundary would have answered once, and nobody owned
 the information flow that would have shown the cost.
 
-Two decisions recorded in the canon bear on this loop. Billing receives the largest share of the
-prevention allocation (25 percent) and two of the seven QA engineers. And core/scheduler, previously
-unowned, is assigned to Billing in week 4, widening Billing's paging surface: right for ownership, and
-also more inflow to this loop. A correct decision in one loop can load another.
-
 ## Exercises
 
 Solutions are in [chapter 3 solutions](../../solutions/ch03-solutions.md). Data files are linked from
@@ -450,7 +453,7 @@ at Northstar. Use this chapter's figures (four experts at the start of the year,
 safe responder with and without pairing. Predict the stock at the end of the next two quarters under
 both assumptions, and say which flow the director can change fastest.
 
-**F2.** Marcus Oyelaran's team proposes eight responses to its on-call load: a higher stipend, a second
+**F2.** Marcus Oyelaran's team (he manages Billing) proposes eight responses to its on-call load: a higher stipend, a second
 weekly incident review, a hiring request, a no-action-page purge, a published pages-per-person chart, an
 escalation-only rule for experts, a quarterly award for best incident response, and protected runbook
 time. Place each on the leverage table, identify any that would strengthen the concentration loop, and
@@ -483,8 +486,8 @@ stipend from becoming the whole response.
 ### Executive Decision-Making
 
 **X1.** You are Northstar's CTO. Rajiv Menon (CFO) proposes delaying all backfills by one quarter to
-hold operating expense flat. Using this chapter's attrition and backfill figures, estimate the capacity
-cost, describe which loops the delay would strengthen, and write a short recommendation to Helena Marsh
+hold operating expense flat. Using this chapter's attrition and backfill figures, and assuming $185,000
+fully loaded per engineer-year, estimate the capacity cost, describe which loops the delay would strengthen, and write a short recommendation to Helena Marsh
 (CEO) with an alternative that serves the CFO's goal.
 
 **X2.** As CTO you can sponsor one company-wide intervention this year: a rule that no engineer may be

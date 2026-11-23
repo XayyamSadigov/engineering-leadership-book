@@ -10,7 +10,7 @@ Tier 1 components at four operational minimums,components,3 of 15,8 of 15,11 of 
 Corrective-action closure,percent,32,70,78,21,27,first quarter,Baseline 31 of 96 over two quarters; quarter 1 26 of 37
 Availability on the contractual paths,percent,99.62,,99.86,,,first quarter; baseline data,Quarter 1 not recorded; synthetic checks from one region; mobile path not covered
 Service credits,US dollars,410000,,95000,,,first quarter; baseline data,Quarter 1 not recorded
-Committed roadmap items delivered,items,7 of 17,,,,,baseline data,Not recorded in the canon after the baseline quarter
+Committed roadmap items delivered,items,7 of 17,,,,,baseline data,Not recorded in the case record after the baseline quarter
 Time to restore (median),minutes,190,,,,,baseline data,Not recorded after the baseline quarter
 Time to restore (90th percentile),hours,14,,,,,baseline data,Not recorded after the baseline quarter
 Core lead time for changes (median),days,19,,,,,baseline data,Services and frontends 3 days at baseline

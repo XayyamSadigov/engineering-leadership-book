@@ -6,9 +6,6 @@ its only lever is the estimate, which becomes the argument. This chapter covers 
 with product management: a working contract, engineering's part in discovery, and converting a feature
 roadmap into an outcome roadmap, including the dates that survive the conversion. The
 running example is the fictional [Northstar Technologies](../../case-studies/northstar/index.md).
-Chapter 15 owns team planning methods, Chapter 17 forecasting and commitments, Chapter 38 quarterly
-planning and capacity allocation, Chapter 42 the cross-team portfolio and influence, and Chapter 45 the
-economics of investment decisions.
 
 ## Why This Matters
 
@@ -39,6 +36,10 @@ After this chapter you will be able to:
 - Classify each date on a roadmap by where it came from, and keep, convert, or remove it accordingly.
 - Diagnose the failure modes of outcome roadmaps, including measures that improve while customers
   do not.
+
+Related chapters: Chapter 17 (forecasts and commitments) is the one prerequisite; read it first if
+"commit from the cautious end of the forecast" is unfamiliar. Chapters 15, 38, 42, and 45 cover team
+planning, quarterly capacity, the cross-team portfolio, and investment economics.
 
 ## The Mental Model
 
@@ -76,18 +77,18 @@ option check, and instrumenting the measure. The common failure is entering only
 ### Two functions, one product
 
 In this book's terms, the product manager is accountable for **which problem the company solves next
-and whether solving it is worth the money**; the engineering manager for **how the team solves it,
-whether the result is safe to run, and whether the team stays healthy doing it**. Marty Cagan's
-work on product discovery is widely known for treating a product idea as a set of risks (whether it is
-valuable, usable, and feasible, and whether it works for the business) worked together by product,
-design, and engineering rather than in sequence
+and whether solving it is worth the money**. The engineering manager is accountable for **how the
+team solves it, whether the result is safe to run, and whether the team stays healthy doing it**.
+Marty Cagan's work on product discovery treats a product idea as a set of risks: is it valuable,
+usable, feasible, and workable for the business? Product, design, and engineering work these risks
+together rather than in sequence
 ([Cagan, 2008](../../references/bibliography.md#cagan2008inspired);
-[Cagan and Jones, 2020](../../references/bibliography.md#cagan2020empowered)) (**expert opinion**,
-idea credit).
+[Cagan and Jones, 2020](../../references/bibliography.md#cagan2020empowered)) (**expert opinion**).
 
 For a director, the useful consequence is that feasibility is not an estimate. It includes whether the
-change touches an unowned component, adds load to a tier 1 path, needs data that does not exist, or
-can be operated at all. Those answers often reframe the problem; an estimate given afterwards cannot.
+change touches an unowned component, adds load to a [tier 1](../../glossary.md#tier-1) path (one
+whose failure stops customers ordering or paying), needs data that does not exist, or can be operated at
+all. Those answers often reframe the problem; an estimate given afterwards cannot.
 
 Cagan and Jones later contrast **empowered product teams**, given a problem to solve, with **feature
 teams**, given features to ship ([Cagan and Jones, 2020](../../references/bibliography.md#cagan2020empowered)).
@@ -96,10 +97,9 @@ value created ([Perri, 2018](../../references/bibliography.md#perri2018escaping)
 Perri's warning; this chapter applies it to the roadmap. Their agreement on outcomes over outputs is
 **practitioner consensus**, not a research result.
 
-There is research on the gap these books describe. Bjarnason, Wnuk, and Regnell interviewed nine
-practitioners at one large market-driven software company and found four factors affecting how
-requirements were communicated (scale, temporal aspects, common views, and decision structures); the
-communication gaps they found led to unmet customer expectations, quality issues, and wasted effort
+Gaps between the people who decide and the people who build have measurable costs. Bjarnason, Wnuk,
+and Regnell interviewed nine practitioners at one large software company. The communication gaps they
+found led to unmet customer expectations, quality issues, and wasted effort
 ([Bjarnason et al., 2011](../../references/bibliography.md#bjarnason2011requirements))
 (**research finding**, one company, interview study). Northstar's 27 "built as specified" defects are
 an instance of the effect they describe.
@@ -107,8 +107,9 @@ an instance of the effect they describe.
 ### The working contract
 
 A working contract is a one-page agreement between the director and the head of product (or a manager
-and a product manager) on how the two functions decide together. It is not a RACI chart (Chapters 13
-and 28 own decision methods and rights) or a meeting schedule (Chapter 37). It records the few rules
+and a product manager) on how the two functions decide together. It is not a RACI chart (a grid of who
+is responsible, accountable, consulted, and informed; Chapters 13 and 28 cover decision rights) or a
+meeting schedule (Chapter 37). It records the few rules
 whose absence causes most fights (**this book's recommendation**):
 
 | Clause | What it settles | Typical rule |
@@ -117,10 +118,10 @@ whose absence causes most fights (**this book's recommendation**):
 | Feasibility and risk | Who may say "not like that" | Engineering names feasibility and operational risk before an option is chosen, in writing |
 | Discovery staffing | Who does discovery | An engineer named for each area, with time budgeted |
 | External dates | When a date may leave the building | Only after sizing, with a forecast range, and logged |
-| Quality floor | What is not traded | Tier 1 minimums, SLOs, and security service levels are not traded for dates |
+| Quality floor | What is not traded | Tier 1 minimums, [SLOs](../../glossary.md#sli-slo-and-sla) (reliability objectives), and security service levels are not traded for dates |
 | Capacity lines | What product does not schedule | Prevention, platform, and unplanned lines are set in quarterly planning, not reopened per item |
 | Measures | Who owns which number | Product owns the outcome measure; engineering owns its instrumentation and guardrails |
-| Disagreement | How it ends | The published escalation path, with a written case |
+| Disagreement | How it ends | The published [escalation path](../../glossary.md#escalation-path), with a written case |
 | Review | When the contract changes | Quarterly, with evidence of which clauses were broken |
 
 Two clauses deserve comment. **The quality floor** is engineering's only veto, so keep it narrow
@@ -156,33 +157,29 @@ delivery is worth doing at all.
 
 ### What experiments can and cannot tell you
 
-The strongest evidence that ideas need testing comes from online controlled experiments, where users
-are randomly assigned to a change or a control. Kohavi and colleagues describe controlled experiments
-as the best design for establishing a causal link between a change and user behavior, and report from
-their experience that teams learned more and earned better returns when they listened to customers
-rather than to the highest-paid person's opinion
-([Kohavi et al., 2009](../../references/bibliography.md#kohavi2009controlled)). In a later account of
-experimentation at Bing, they report that many ideas moved key metrics by about 1 percent and were not
-well estimated in advance, and that the system identified many negative features that were not
-deployed despite stakeholders' early excitement
+Confident predictions of a feature's effect are often wrong, in both directions. The strongest
+evidence comes from online controlled experiments, where users are randomly assigned to a change or a
+control. Kohavi and colleagues describe them as the best design for linking a change to user behavior
+([Kohavi et al., 2009](../../references/bibliography.md#kohavi2009controlled)). At Bing, they report,
+many ideas moved key metrics by about 1 percent and were poorly estimated in advance, and many features
+that stakeholders were excited about turned out to be negative and were not deployed
 ([Kohavi et al., 2013](../../references/bibliography.md#kohavi2013online)). These are peer-reviewed
 **documented practice** from very large consumer web properties, not controlled studies of product
-organizations. The transferable lesson is modest: confident predictions of a feature's effect are
-often wrong, in both directions.
+organizations.
 
 The method transfers less well. Northstar has about 1,900 customers, the largest 40 producing a third
 of revenue; a business-to-business product rarely has the traffic to detect small effects, and cannot
-randomize a contractual feature. Weaker tools remain: staged rollouts behind flags (Chapter 23 owns
-deploy versus release), before-and-after comparisons with a stated caveat, customer prototype
+randomize a contractual feature. Weaker tools remain: staged rollouts behind
+[feature flags](../../glossary.md#feature-flag) (Chapter 23 covers deploy versus release), before-and-after comparisons with a stated caveat, customer prototype
 sessions, and production data. Say which kind each decision rests on.
 
-Eric Ries popularized building the smallest thing that yields evidence
-([Ries, 2011](../../references/bibliography.md#ries2011lean)) (**expert opinion**). Fagerholm and
-colleagues built a model of continuous experimentation from prior work and checked it in two startups;
-its requirements include instrumented minimum viable features, managed experiment plans, and linking
-results to the product roadmap
+Evidence that does not flow back into the roadmap changes nothing. Eric Ries popularized building the
+smallest thing that yields evidence ([Ries, 2011](../../references/bibliography.md#ries2011lean))
+(**expert opinion**). Fagerholm and colleagues built a model of continuous experimentation and checked
+it in two startups. Its requirements include instrumented minimum viable features, managed experiment
+plans, and linking results to the product roadmap
 ([Fagerholm et al., 2017](../../references/bibliography.md#fagerholm2017right)) (**research finding**,
-two small companies). Evidence that does not flow back into the roadmap changes nothing.
+two small companies).
 
 ### From feature roadmap to outcome roadmap
 
@@ -193,7 +190,7 @@ conversion has five steps (**this book's recommendation**):
 1. **Group features by problem.** Ask each requester what changes for the customer if it works; the
    same answer means the same outcome.
 2. **Measure the baseline.** Without one the measure is a wish, and instrumentation is the first bet.
-3. **Pair it with guardrails:** what must not get worse (Chapter 18 owns metric gaming).
+3. **Pair it with guardrails:** what must not get worse (Chapter 18 covers metric gaming).
 4. **Find causes before choosing bets.** Here engineers in discovery pay for themselves.
 5. **Size bets against capacity and set a review date.** The commitment is the bets and the review;
    the number is a target in Chapter 17's sense.
@@ -224,17 +221,25 @@ Some dates are not negotiable, and pretending otherwise destroys trust. Classify
 | Internal guess | "Q4" on a slide | Remove. Replace with a review date and the outcome |
 
 "Where did this date come from?" is a neutral question whose answer usually settles the treatment
-without a fight. Chapter 45 adds the economic test: whether the cost of delay has a deadline shape.
+without a fight. Chapter 45 adds the economic test: whether the
+[cost of delay](../../glossary.md#cost-of-delay) (the value lost per week of waiting) has a deadline
+shape.
 
 ## Engineering Organization Example
 
-This example is **illustrative**: Northstar's ordering area in quarter 4 (weeks 40 to 52). The
-feature list and sizes are fictional additions; the corrected-order measure, the sample findings, and
-the traffic of about 600,000 order submissions per 28 days are canon.
+!!! info "Northstar so far"
+    Week 40 of the director's first year. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3)
+    incidents (the two most severe levels) fell from 30 a quarter to 14 in quarter 3, and both renewal features have shipped. In week 39 Orders sized price-list effective dates
+    at 14 engineer-weeks, and Greg Tanaka (VP Sales) then gave a customer week 46. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
+This example is **illustrative**: Northstar's ordering area in quarter 4 (weeks 40 to 52). The area
+handles about 600,000 order submissions every 28 days.
 
 **The feature list.** The quarter-4 plan gave the ordering area (Orders and Customer Experience's
-ordering screens) about 60 engineer-weeks of estimated effort for small items, outside the cross-team
-initiative slots of Chapter 42's portfolio. The candidates:
+ordering screens) about 60 [engineer-weeks](../../glossary.md#engineer-week-engineer-day-engineer-year)
+for small items. These sit outside the three cross-team initiatives that Chapter 42's portfolio limits.
+The candidates:
 
 | # | Feature | Requested by | Estimate (engineer-weeks) |
 |---|---|---|---|
@@ -243,9 +248,9 @@ initiative slots of Chapter 42's portfolio. The candidates:
 | 3 | Order template editor redesign | Product | 18 |
 | 4 | Mobile reorder from history | Product | 12 |
 | 5 | Bulk-order file preview | Product | 8 |
-| 6 | Price-list effective dates (dated, week 46) | Greg Tanaka, existing distributor | 14 |
+| 6 | Price-list effective dates (dated, week 46) | Greg Tanaka, for an existing distributor | 14 |
 
-Total: 6 + 10 + 18 + 12 + 8 + 14 = 68 engineer-weeks against about 60.
+The list totals 68 engineer-weeks against about 60.
 
 **Step 1, grouping.** Items 1, 2, and 6 answer "orders arrive wrong and must be corrected" (outcome A);
 items 3 and 4 "repeat orders take too long" (outcome B). Item 5 has no stated problem yet.
@@ -255,26 +260,24 @@ amended, or credited for an ordering error within 72 hours of submission. Last 2
 7,800, or 1.3 percent of 600,000.
 
 **Step 4, causes.** An Orders senior engineer and an Orders quality engineer reviewed a random sample
-of 400 corrections with the area's product manager, Keiko Ashworth (about 2 engineer-weeks). Sixty
-were customers changing their minds, so the error rate is about
-1.3 × 340 ÷ 400 = 1.1 percent, about 6,630 orders per 28 days. The 340 errors:
+of 400 corrections with Keiko Ashworth, the area's product manager (about 2 engineer-weeks). Sixty were
+customers changing their minds and 340 were errors. Scaling 1.3 percent by 340 of 400 gives an
+ordering-error rate of about 1.1 percent, about 6,630 orders per 28 days. The 340 errors:
 
 | Cause | Count | Share | Engineering finding |
 |---|---|---|---|
 | Price differs from what the buyer saw | 130 | 38% | 96 occurred when a price list changed between drafting and submitting; the cart showed draft-time prices |
 | Wrong unit of measure | 85 | 25% | 64 on mobile, which does not show pack size next to quantity |
-| Duplicate submission | 70 | 21% | 58 were mobile retries after a timeout; order submission has no idempotency key |
+| Duplicate submission | 70 | 21% | 58 were mobile retries after a timeout; order submission has no idempotency key (a unique token that lets the server ignore a repeated request) |
 | Wrong delivery site | 35 | 10% | No technical cause found |
 | Other | 20 | 6% | Mixed |
-
-Check: 130 + 85 + 70 + 35 + 20 = 340; shares sum to 100.
 
 The findings changed the bets. The duplicate-order warning (6 engineer-weeks) would have interrupted
 legitimate repeat orders and missed the main cause; an idempotency key on submission (about 4) removes
 the retries. The two-client unit rework (10) became a mobile pack-size display (about 3). Repricing at
-submission, showing the difference before the buyer confirms (about 5), addresses the 96 drafts but
-adds a pricing-svc call to a tier 1 path whose proposed latency objective is 99 percent within 2
-seconds, so a 1-engineer-week spike measures it first.
+submission, showing the difference before the buyer confirms (about 5), addresses the 96 drafts. But
+it adds a pricing-svc call to a tier 1 path whose proposed latency objective is 99 percent within 2
+seconds. A 1-engineer-week spike (a short, time-boxed experiment) measures the cost first.
 
 **Step 5, sizing and target.**
 
@@ -287,9 +290,16 @@ seconds, so a 1-engineer-week spike measures it first.
 | **Total** | **59** |
 | Later: bulk-order file preview, pending data on rejected files | 8 |
 
-Assume the bets work as hoped: the idempotency key removes 52 of the 58 retry duplicates, repricing 70
-percent of the 96 (67), the pack-size display 60 percent of the 64 (38). That is 157 of 340, 46
-percent, taking the error rate from about 1.1 to about 0.6 percent (1.105 × 183 ÷ 340 = 0.59).
+If every bet works as hoped, they remove 46 percent of errors and take the rate from about 1.1 to
+about 0.6 percent:
+
+| Bet | Errors it addresses | Assumed effect | Errors removed |
+|---|---|---|---|
+| Idempotency key | 58 retry duplicates | Most | 52 |
+| Repricing at submission | 96 stale prices | 70 percent | 67 |
+| Mobile pack-size display | 64 mobile unit errors | 60 percent | 38 |
+| **All three** | | | **157 of 340** |
+
 Predictions like this are often wrong, so the target is 0.8 percent by week 52, reviewed in week 46.
 Guardrails: order latency within its objective, order volume per distributor, and carts abandoned at
 the repricing prompt, since a prompt that makes buyers give up lowers corrections by losing orders.
@@ -323,7 +333,7 @@ flowchart TD
 ## Trade-offs
 
 **Discovery time against delivery capacity.** A named engineer spending a day a week per product area
-costs about 0.2 FTE; across three areas, 0.6 FTE, three-quarters of a percent of 80 engineers. The cost
+costs about 0.2 [FTE](../../glossary.md#fte) (full-time equivalent engineers); across three areas, 0.6 FTE, three-quarters of a percent of 80 engineers. The cost
 is visible and the benefit counterfactual, so it is cut first under pressure. Budget it as a line.
 
 **Outcomes against predictability.** An outcome roadmap tells customers less about what they will get
@@ -374,8 +384,8 @@ owns it. **A named discovery engineer per area**, rotated every quarter or two s
 **Outcome reviews inside the existing cadence** (Chapter 37), not a new meeting.
 
 An outcome that needs a cross-team bet competes for a portfolio slot (Chapter 42) like anything else;
-the outcome roadmap does not bypass the limit. Outcomes also make the unfunded list (Chapter 38) easier
-to defend, because each unfunded bet is attached to a problem of known size.
+the outcome roadmap does not bypass the limit. Outcomes also make the
+[unfunded list](../../glossary.md#unfunded-list) (Chapter 38) easier to defend, because each unfunded bet is attached to a problem of known size.
 
 ## CTO Perspective
 
@@ -407,20 +417,17 @@ rather than engineering's preference, which lets it survive a large deal.
 
 ## Case Study
 
-This case is **fictional**, set in quarter 4 (weeks 40 to 52). Amara Okafor, Greg Tanaka, her three
-product managers (who attended the quarter-2 product and engineering sync), her quarter-3 list, and the
-board pack's roadmap measure are canon, as are Keiko Ashworth, the corrected-order findings, the week 46
-date, the draft contract, and Amara's week-42 conditions (none with a recorded outcome). The case concerns only work outside the cross-team initiative slots and
-assumes no outcome for the week 34 portfolio forum (Chapter 42).
+This case is **fictional**, set in quarter 4 (weeks 40 to 52); none of its decisions has an outcome
+yet, and they are yours. It concerns only work outside the three cross-team initiatives.
 
-**The background.** Amara's quarter-3 list held about 62 FTE-quarters of estimated effort, 22.6 of
-them unfunded
-([Chapter 38](../08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md#engineering-organization-example));
-her quarter-4 list again exceeded capacity. Her product managers cover ordering (Keiko Ashworth),
-billing and payments, and data and customer reporting. Helena Marsh's monthly board pack still carries
-one engineering delivery number: committed roadmap items delivered.
+**The background.** The quarter-3 list of Amara Okafor, the chief product officer (CPO), held about 62
+[FTE-quarters](../../glossary.md#fte-quarter) of estimated effort, 22.6 of them unfunded
+([Chapter 38](../08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md#engineering-organization-example)).
+Her quarter-4 list again exceeded capacity. Her three product managers cover ordering (Keiko Ashworth),
+billing and payments, and data and customer reporting. The monthly board pack of Helena Marsh, the CEO,
+still carries one engineering delivery number: committed roadmap items delivered.
 
-**Weeks 40 and 41.** Sofia Alvarez forwards a complaint from one of the 40 largest distributors: its
+**Weeks 40 and 41.** Sofia Alvarez (VP Customer Success) forwards a complaint from one of the 40 largest distributors: its
 staff spend hours a week correcting orders. Keiko and the director run the conversion described in the
 Engineering Organization Example. The director also drafts a working contract from the clause table
 and sends it to Amara before her next meeting with the product managers: "Draft for us to change, not
@@ -435,8 +442,10 @@ for you to approve."
 - She objects to the ordering area's outcome target appearing in place of its items. "Helena reports
   roadmap items delivered to the board. If I replace six items with one percentage, she reports zero
   of six."
-- The billing and payments product manager asks whether customer-detected incidents, flat at 29 percent
-  in quarters 1 and 2, should become an outcome on her roadmap or remain engineering's measure.
+- The billing and payments product manager asks whether the
+  [customer-detected share](../../glossary.md#customer-detected-share) (incidents customers report
+  before Northstar notices), flat at 29 percent in quarters 1 and 2, should become an outcome on her
+  roadmap or remain engineering's measure.
 
 **The dated item.** Greg Tanaka gave the distributor week 46 for price-list effective dates after Orders
 sized it at 14 engineer-weeks in week 39. It is a deal date given after sizing, so the contract would
@@ -489,13 +498,13 @@ about this happening again without making Greg its enemy.
 
 ### Executive Decision-Making
 
-**X1.** You are Victor Lindqvist. Helena Marsh wants to keep "committed roadmap items delivered" in the
+**X1.** You are Victor Lindqvist, the CTO. Helena Marsh wants to keep "committed roadmap items delivered" in the
 board pack because the board has seen it for two years. Amara and the director propose replacing it
 with three outcomes and a list of dated commitments. Propose what the board pack should show in quarter
 4 and quarter 5, how you would explain a quarter in which two of three outcomes do not move, and what
 you would not change.
 
-**X2.** Rajiv Menon asks why engineering should fund discovery time under a flat headcount: three named
+**X2.** Rajiv Menon, the CFO, asks why engineering should fund discovery time under a flat headcount: three named
 engineers at a day a week each, about 0.6 FTE. Make the case or decline to, using only evidence you
 could collect at Northstar within two quarters, and say what result would make you stop funding it.
 
@@ -529,11 +538,11 @@ could collect at Northstar within two quarters, and say what result would make y
 ## References and Further Reading
 
 - [Cagan, 2008](../../references/bibliography.md#cagan2008inspired). *Inspired*: product discovery and
-  engineers in it (idea credit only).
+  the engineer's place in it.
 - [Cagan and Jones, 2020](../../references/bibliography.md#cagan2020empowered). *Empowered*: product
   teams versus feature teams.
 - [Perri, 2018](../../references/bibliography.md#perri2018escaping). *Escaping the Build Trap*: outputs
-  versus outcomes; its publication year has a recorded conflict.
+  versus outcomes.
 - [Ries, 2011](../../references/bibliography.md#ries2011lean). *The Lean Startup*: build-measure-learn;
   better suited to new products than mature ones.
 - [Kohavi et al., 2009](../../references/bibliography.md#kohavi2009controlled). A practical guide to

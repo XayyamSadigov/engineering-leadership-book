@@ -6,13 +6,18 @@ They work only as one system, and they fail the same way: when the people who ho
 be judged by what they say, the facts arrive late, softened, or not at all. The running example is
 Northstar Technologies, the fictional company in the [case study](../../case-studies/northstar/index.md).
 
-Neighbors own parts of this ground: Chapter 27 the content of the
-[quality review](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md#enterprise-application),
-Chapter 28 [architecture decision records](../06-technical-leadership/28-architecture-decision-making-and-governance.md#architecture-decision-records),
-Chapter 8 [calibration](../02-people-management/08-career-development-promotion-and-compensation.md#calibration-what-it-fixes-and-what-it-breaks),
-Chapter 13 [decision rights](../03-high-performing-teams/13-decision-making-in-teams.md#decision-rights-made-explicit),
-Chapter 37 (The Management Operating System) the cadences, and Chapter 38 (Scorecards, Quarterly
-Planning, and Capacity Allocation) the scorecards. This chapter owns the mechanisms that connect them.
+!!! info "Related chapters"
+    The content of the
+    [quality review](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md#enterprise-application)
+    is in Chapter 27,
+    [architecture decision records](../06-technical-leadership/28-architecture-decision-making-and-governance.md#architecture-decision-records)
+    in Chapter 28,
+    [calibration](../02-people-management/08-career-development-promotion-and-compensation.md#calibration-what-it-fixes-and-what-it-breaks)
+    in Chapter 8, and
+    [decision rights](../03-high-performing-teams/13-decision-making-in-teams.md#decision-rights-made-explicit)
+    in Chapter 13. The cadences are in [Chapter 37](37-cadences-and-leadership-meetings.md) and the
+    scorecards in [Chapter 38](38-scorecards-quarterly-planning-and-capacity-allocation.md). This
+    chapter is about the mechanisms that connect them.
 
 ## Why This Matters
 
@@ -26,9 +31,10 @@ nobody remembers who decided what. Disagreements between teams have no natural o
 unresolved or travel upward through whoever has the executive's ear.
 
 Northstar at the director's arrival shows each failure. Architecture was decided in chat threads,
-during incidents, or by Victor Lindqvist in unrecorded conversations. After INC-417 a two-day thread
-between Billing and Orders got no manager response, and Victor's handover notes say he had "let the two
-of them sort it out" ([baseline data](../../case-studies/northstar/baseline-data.md)).
+during incidents, or by Victor Lindqvist (CTO) in unrecorded conversations. After INC-417, a Sev1 in
+which payments were posted to the wrong accounting period after a release, a two-day thread between
+Billing and Orders got no manager response. Victor's handover notes say he had "let the two of them
+sort it out" ([baseline data](../../case-studies/northstar/baseline-data.md)).
 
 At executive scale, a CTO who learns of a slipping commitment from the customer has lost weeks of
 options and will discount the next green report.
@@ -67,17 +73,20 @@ flowchart TD
     L --> T
 ```
 
-The loop matters more than any node: a review without a decision is a presentation, a log nobody
-reads is an archive, and an escalation that ends in conversation will be fought again. Every arrow starts with someone choosing what to say: the system works only
-if saying the true thing early is cheaper for them than saying it late.
+The loop matters more than any node. A review without a decision is a presentation, a log nobody
+reads is an archive, and an escalation that ends in conversation will be fought again. Every arrow
+starts with someone choosing what to say, so the system works only if saying the true thing early is
+cheaper for them than saying it late.
 
 ## Deep Conceptual Explanation
 
 ### Inspection of the system, not of the people
 
-A review applies Grove's view of managerial output
-([Chapter 40](../09-engineering-directorship/40-the-directors-job.md#the-mental-model)): it inspects the output and the machinery producing it, and the manager presenting is the
-best-informed witness to that machinery, not its defendant. System questions ask what changed, what
+A review should inspect the machinery, not the person presenting. Andrew Grove's view of managerial
+output is that a manager's output is the output of the organization they lead
+([Grove, 1983](../../references/bibliography.md#grove1983high)). A review applies it: it inspects that
+output and the machinery producing it, and the manager presenting is the best-informed witness to the
+machinery, not its defendant. System questions ask what changed, what
 the data predicts, and what would reverse the trend. People questions ask whose fault it was and how
 this manager compares with that one; they feel rigorous and produce defensive preparation.
 
@@ -87,31 +96,30 @@ this manager compares with that one; they feel rigorous and produce defensive pr
 | Architecture | Are cross-team decisions made, by the right people, and kept? | Open records, fitness checks | Deciders named, records reopened | Chapter 28 |
 | Talent | Do conditions for growth and continuity exist? | Career conversations, knowledge concentration, succession | Actions by team | Chapters 8, 36 |
 
+The last column names the chapter that treats each review's content.
+
 The talent review is the hardest to keep systemic. Calibrating individuals belongs to Chapter 8; the
 organization-level review asks which teams held no career conversations, where only one person can
 change a component, and which critical roles have no successor. Its outputs act on the system:
 pairing, rotation, a ladder fix.
 
-Three rules keep any review an inspection (**this book's recommendation**): send the data before the
-meeting; let the presenter name the problems first, and treat a self-reported problem as the review
-working; end every item with a decision, an owner, and a date, or an explicit "no action".
+Three rules keep any review an inspection (**this book's recommendation**). Send the data before the
+meeting. Let the presenter name the problems first, and treat a self-reported problem as the review
+working. End every item with a decision, an owner, and a date, or an explicit "no action".
 
 ### Why bad news travels slowly
 
-Smith and
-Keil's theoretical model starts from evidence of failure that exists in the lower ranks but fails to
-travel up the hierarchy, or is distorted on the way, so that the people with authority to change
-direction do not know the true status
-([Smith and Keil, 2003](../../references/bibliography.md#smith2003reluctance)). The field calls this
-reluctance the **mum effect**. In an experiment, the impact of project failure and the level of observed
-wrongdoing explained a significant part of people's reluctance to report
-([Smith, Keil, and Depledge, 2001](../../references/bibliography.md#smith2001keeping)); in another,
-fault responsibility and time urgency both changed willingness to report
-([Park, Im, and Keil, 2008](../../references/bibliography.md#park2008mum)). These are **research
-findings**, read at abstract level, from models and laboratory experiments rather than field outcomes.
+Evidence of project failure often exists in the lower ranks but does not travel up the hierarchy, or
+is distorted on the way, so the people with authority to change direction do not know the true
+status. The field calls this reluctance to pass on bad news the **mum effect**. A theoretical model
+and laboratory experiments find it is stronger when the news is worse and when the reporter might be
+blamed ([Smith and Keil, 2003](../../references/bibliography.md#smith2003reluctance);
+[Smith, Keil, and Depledge, 2001](../../references/bibliography.md#smith2001keeping);
+[Park, Im, and Keil, 2008](../../references/bibliography.md#park2008mum)). These are **research
+findings**, as the abstracts report them, from models and experiments rather than field outcomes.
 
-Keil and colleagues summarized about fourteen of their studies for practitioners
-([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)). In the records of 56
+Status reports are often biased. Keil and colleagues summarized about fourteen of their studies for
+practitioners ([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)). In the records of 56
 experienced software project managers, they report biased status reports 60 percent of the time. They
 also report that aggressive auditing can backfire into distrust and more misreporting, that a powerful
 executive sponsor can make a team less candid, and that reported bad news is sometimes ignored,
@@ -122,19 +130,21 @@ the treatment of messengers distinguishes cultures that pass information well
 covers [silence](../03-high-performing-teams/11-high-performance-trust-safety-and-accountability.md#comfort-liking-and-silence)
 inside a team.
 
-Three consequences (**this book's recommendation**): report evidence, not assertions, so that status is
-a forecast against a commitment rather than a mood; make lateness more expensive than bad news by
-asking "when did you first know?" about every surprise; and corroborate through structure (data the
-teams do not produce, skip-levels, staff engineers' views), not through audits of the reporters.
-Chapter 40 (The Director's Job) covers building those signal sources.
+Three consequences follow (**this book's recommendation**). Report evidence, not assertions, so that
+status is a forecast against a commitment rather than a mood. Make lateness more expensive than bad
+news by asking "when did you first know?" about every surprise. And corroborate through structure
+(data the teams do not produce, [skip-levels](../../glossary.md#skip-level), staff engineers' views), not
+through audits of the reporters.
+[Chapter 40](../09-engineering-directorship/40-the-directors-job.md#building-your-own-signal-sources)
+covers building those signal sources.
 
 ### The decision log
 
-Architecture decision records preserve rationale so that successors neither accept nor reverse old
+[Architecture decision records](../../glossary.md#architecture-decision-record-adr) (ADRs) preserve rationale so that successors neither accept nor reverse old
 decisions blindly ([Nygard, 2011](../../references/bibliography.md#nygard2011adr)). An organization also
 makes decisions that belong to no repository: component ownership, capacity splits, severity
-definitions, what happens to a role, which exemption expires when. Chapter 13 recommends one shared log
-for them; this section is about running it.
+definitions, what happens to a role, which exemption expires when. Chapter 13 recommends one shared
+[decision log](../../glossary.md#decision-log) for them; this section is about running it.
 
 | Field | The question it answers |
 |---|---|
@@ -145,18 +155,18 @@ for them; this section is about running it.
 | Needed by | After what date does not deciding cost something? |
 | Review trigger | What event or date reopens it? |
 
-Peter Drucker's account of effective decisions is known for insisting that a decision is unfinished
-until action and follow-up are built into it
+Peter Drucker insists that a decision is unfinished until action and follow-up are built into it
 ([Drucker, 1967](../../references/bibliography.md#drucker1967effective)); the log makes that checkable.
-"Needed by" is the most neglected field and the most useful, because it makes avoidance visible: an
+"Needed by" is the most neglected field and the most useful, because it makes avoidance visible. An
 open decision past its date has a cost somebody is paying. Two rules keep the log alive: every
 escalation ends as an entry, and open entries past their date are reviewed weekly, with those the
 director cannot close listed in the executive report.
 
 ### Escalation paths
 
-Escalation here means moving a decision to someone with authority over the parties who disagree
-(paging a more experienced incident responder is a different mechanism, in Chapter 25). A clean
+Escalation, in this book, always means moving a decision to someone with authority over the parties
+who disagree (paging a more experienced incident responder is a different mechanism, in Chapter 25).
+The route is the [escalation path](../../glossary.md#escalation-path). A clean
 escalation (**this book's recommendation**) is **joint**: both parties write one short case with the
 options, each side's recommendation, and the cost of delay, so that reaching the boss first wins
 nothing. It goes to the **lowest common level** with authority over both parties and the consequences.
@@ -183,8 +193,8 @@ one company, but the failure it names is common.
 Escalation also moves authority without moving information. Aghion and Tirole's model separates formal
 authority, the right to decide, from real authority, which depends on who holds the relevant
 information ([Aghion and Tirole, 1997](../../references/bibliography.md#aghion1997formal)). An executive
-deciding from a hallway summary holds formal authority over a decision whose content is still below;
-the joint case carries the information up with the question. Its two common corruptions are the
+deciding from a hallway summary holds formal authority over a decision whose content is still below.
+The joint case carries the information up with the question. Its two common corruptions are the
 **backchannel decision** (an executive answers in passing, one party treats it as settled) and
 **escalation as threat** ("I'll take this to Victor"). One rule fixes both: a decision exists only when
 it is in the log.
@@ -192,21 +202,26 @@ it is in the log.
 ### The executive report
 
 An executive report lets a busy person see the state of commitments, the risks to them, and what you
-need from them, in a few minutes. Barbara Minto's pyramid principle is known for putting the main point
-first with support grouped beneath it ([Minto, 2002](../../references/bibliography.md#minto2002pyramid)).
+need from them, in a few minutes. Barbara Minto's pyramid principle puts the main point first with
+support grouped beneath it ([Minto, 2002](../../references/bibliography.md#minto2002pyramid)).
 Bezos's 2017 letter describes six-page narrative memos, read silently at the start of meetings in
 place of slides, and says a good one can take a week or more
-([Bezos, 2018](../../references/bibliography.md#bezos2017letter)): full sentences expose reasoning that
+([Bezos, 2018](../../references/bibliography.md#bezos2017letter)). Full sentences expose reasoning that
 bullets hide, and writing costs real time. Will Larson argues that
 an engineering executive solves the company's problem rather than advocating for engineering
 ([Larson, 2023](../../references/bibliography.md#larson2023balancing)); a report that reads as advocacy
 is discounted.
 
-The structure this book recommends: a **headline** of one or two sentences; **commitments**, each with
-status and change since last time; the few **measures** the executive tracks (Chapter 38), with an
-honest reading; **risks**, each with owner and the trigger at which it becomes a request; **decisions
-needed**, with options, recommendation, date, and the cost of deciding late; and what was **decided
-since last report**. Status colors need definitions, or they report the author's mood:
+The structure this book recommends:
+
+1. a **headline** of one or two sentences;
+2. **commitments**, each with status and change since last time;
+3. the few **measures** the executive tracks (Chapter 38), with an honest reading;
+4. **risks**, each with owner and the trigger at which it becomes a request;
+5. **decisions needed**, with options, recommendation, date, and the cost of deciding late;
+6. what was **decided since last report**.
+
+Status colors need definitions, or they report the author's mood:
 
 | Color | Definition for a dated commitment |
 |---|---|
@@ -218,34 +233,43 @@ The thresholds are a choice; what matters is computing them the same way every t
 
 ## Engineering Organization Example
 
-This example is **illustrative**: the cost of Northstar's review system as run, not as booked, then of
-an undated decision.
+!!! info "Northstar so far"
+    Quarter 2 of the director's first year (weeks 14 to 26). A first quarter of ownership, severity,
+    and release changes cut Sev1 and Sev2 incidents from 30 to 21. One renewal commitment (the
+    accounting integration) is due in week 19, the other (bulk ordering) in week 26. See the
+    [timeline](../../case-studies/northstar/timeline.md).
 
-| Mechanism | Assumption | Person-hours per month |
+This example is **illustrative**. It shows first what Northstar's review system costs, then what
+corroboration looks like, then what an undated decision costs.
+
+**Meeting time is cheap.** Counted as run rather than as booked, Northstar's weekly operational
+review, monthly quality reviews, and the proposed talent review and monthly report take under 1
+percent of engineering time. The expensive failure is a system that runs on schedule and carries
+distorted information, which no time budget shows.
+
+**Corroboration through structure.** In week 7 the record showed four consecutive incidents rated
+Sev3, below the level the weekly review discussed. One of them was a two-hour payment delay for nine
+customers. The director read the incident itself rather than the count, re-rated it, and added a
+weekly audit of a sample of severity ratings to the operational review. The reports had been green
+on their own terms; only a second look at the underlying event showed otherwise. The audit makes that
+second look routine, so it carries no suspicion of any one team.
+
+**The cost of a decision with no date.** In week 14 Li Na Zhou (staff engineer, data and integration)
+opened ADR-0001: how integrations should read posted ledger data. The accounting integration, due in
+week 19, needed an answer. Billing had reserved two engineers for weeks 14 to 16 to build the ledger
+export, and the option Li Na recommended, a versioned export contract (option B), needs 5 of those 6
+engineer-weeks.
+
+| When the decision is made | Reserved engineer-weeks left | Does option B fit? |
 |---|---|---|
-| Weekly operational review | Booked 30 minutes, averaged 75 (Chapter 37); 16 people (director, 6 managers, 3 staff engineers, 6 on-call leads), 4.33 weeks | 86.6 |
-| Monthly quality review | 45 minutes per team, 6 teams, 5 people each | 22.5 |
-| Quarterly talent review (proposed) | 3 hours, 7 people, spread over 3 months | 7.0 |
-| Monthly executive report (proposed) | Director 4 hours; 30 minutes from each manager | 7.0 |
-| Total | | 123.1 |
+| Middle of week 14 | 6 | Yes, with 1 to spare |
+| Start of week 15 | 4 | No: one engineer-week must come from Billing's other work |
+| Start of week 16 | 2 | No: three engineer-weeks must be borrowed |
+| After week 16 | 0 | Only on borrowed capacity, competing with week 19 |
 
-Check: 1.25 × 16 × 4.33 = 86.6; 6 × 0.75 × 5 = 22.5; 3 × 7 ÷ 3 = 7.0; 4 + 6 × 0.5 = 7. Against 87
-people at about 160 hours a month (13,920 hours), that is about 0.9 percent of the organization's time.
-The director's share is about 15 hours (5.4 + 4.5 + 1.0 + 4.0 = 14.9), roughly 9 percent of a
-month; booked at 30 minutes, the review alone would cost 34.6 person-hours, not 86.6. The
-meeting time is cheap; the expensive failure is a system that runs on schedule and carries distorted
-information, which no time budget shows.
-
-**The cost of a decision with no date.** In week 14 Li Na Zhou opened ADR-0001 on how integrations read
-posted ledger data ([Chapter 28 case study](../06-technical-leadership/28-architecture-decision-making-and-governance.md#case-study)).
-Billing had reserved weeks 14 to 16 for the ledger export: two engineers for three weeks, 6
-engineer-weeks, of which the versioned contract (option B) needs 5. Each week the reserved engineers
-wait removes 2 engineer-weeks. Decide at the start of week 15 and 4 remain: option B no longer fits the
-reservation, and its fifth engineer-week must come from Billing's other work or from the slack before
-week 19. The decision's "needed by" was the middle of week 14, almost the day ADR-0001 was opened, not
-week 19. Writing that date into the log
-chooses no option; it makes the cost of not choosing visible, including to anyone tempted to decide in
-a corridor.
+The decision's "needed by" was the middle of week 14, almost the day ADR-0001 was opened. Writing
+"needed by: week 14" in the log would have chosen no option. It would have shown the cost of not
+choosing on day one, including to anyone tempted to decide in a corridor.
 
 ## Decision Framework
 
@@ -380,45 +404,45 @@ who is exempt makes it optional.
 
 ## Case Study
 
-This case is **fictional**. Facts not in the [Northstar canon](../../case-studies/northstar/index.md)
-are recorded as additions for this chapter; earlier history comes from the
+This case is **fictional**. Earlier history comes from the
 [baseline data](../../case-studies/northstar/baseline-data.md) and
-[the director's first quarter](../../case-studies/northstar/first-quarter.md). It is set in quarter 2
-(weeks 14 to 26). Open decisions stay open.
+[the director's first year](../../case-studies/northstar/first-quarter.md). It is set in quarter 2
+(weeks 14 to 26). Decisions that are open in the case stay open.
 
-**How disputes moved before.** The canon records two routes. Most Billing–Orders disputes went
-nowhere: the thread after INC-417 got no manager response, the INC-427 review opened with blame of an
-Orders change, and Victor Lindqvist "let the two of them sort it out". Others reached Victor and were
-decided in conversation, unrecorded; in week 14 he told Elena Sokolova in passing to "read the tables
-now and clean it up later" while ADR-0001 was open (Chapter 28).
+**How disputes moved before.** Northstar's record shows two routes. Most Billing–Orders disputes went
+nowhere. The thread after INC-417 got no manager response; the review of INC-427 (credit notes applied
+twice after a release) opened with blame of an Orders change; and Victor "let the two of them sort it
+out". Other disputes reached Victor and were decided in conversation, unrecorded. In week 14 he told
+Elena Sokolova (Payments and Integrations manager) in passing to "read the tables now and clean it up
+later" while ADR-0001 was open.
 
 **The decision log.** In week 14 the director opened an organization decision log and backfilled it
-from quarter 1 (the log and its numbering are additions; every decision in it is canon):
+from quarter 1:
 
 | Id | Week | Decision | Decider | Status at week 26 |
 |---|---|---|---|---|
-| DL-01 | 3 | Severity definitions | Director, with Kwame Mensah and Sofia Alvarez | In force; audit added week 7 |
-| DL-02 | 4 | Capacity model, 12 FTE prevention | Agreed by Victor Lindqvist and Amara Okafor | In force to week 26; quarter 3 plan awaiting sign-off |
+| DL-01 | 3 | Severity definitions | Director, with Kwame Mensah (staff engineer) and Sofia Alvarez (VP Customer Success) | In force; audit added week 7 |
+| DL-02 | 4 | Capacity model, 12 [FTE](../../glossary.md#fte) prevention | Agreed by Victor Lindqvist and Amara Okafor (CPO) | In force to week 26; quarter 3 plan awaiting sign-off |
 | DL-03 | 4 | Owners for core/customer, core/scheduler, auth-svc, webhooks | Director | In force |
-| DL-04 | 5 | Tier 1 minimums; core/permissions exempt until owned | Director | Open: core/permissions owner |
+| DL-04 | 5 | [Tier 1 minimums](../../glossary.md#tier-1-operational-minimums) (owner, alerts, runbook, on-call for each critical component); core/permissions exempt until owned | Director | Open: core/permissions owner |
 | DL-05 | 9 | No ledger migration with dependent code in one release | Director | Superseded week 11 by pipeline check |
 | DL-06 | 10 | QA engineers into product teams | Director | In force |
 | DL-07 | 10 | Migration rehearsal for tier 1 data | Director | In force |
-| DL-08 | 14 | ADR-0001: reading posted ledger data | Not yet named | Open (Chapter 28) |
-| DL-09 | Q2 | tax-svc build, buy, or hybrid | Not yet named | Open (Chapter 30) |
-| DL-10 | Q2 | CI consolidation target | Not yet named | Open (Chapter 32) |
+| DL-08 | 14 | ADR-0001: reading posted ledger data | Not yet named | Open |
+| DL-09 | Q2 | tax-svc build, buy, or hybrid | Not yet named | Open |
+| DL-10 | Q2 | CI consolidation target | Not yet named | Open |
 
 Four of ten entries are open, three without a named decider. Before week 14 they were open and
 invisible.
 
-**The escalation path**, published in week 15 (an addition): five working days for the parties, then a
+**The escalation path**, published in week 15: five working days for the parties, then a
 joint written case to the director, decided within five working days and logged. The director takes a
 case to Victor only if it moves a customer commitment or exceeds the director's budget authority. The
 director also asked Victor to send questions that reach him directly back through the path; whether he
-does is not fixed here.
+does is left open for the exercises.
 
-**The week 26 report.** In week 26 the director sent the first written report since the day-90 report, proposed
-as a monthly two-page report from quarter 3. Its quarter 2 results are additions:
+**The week 26 report.** In week 26 the director sent the first written report since the day-90
+report, proposed as a monthly two-page report from quarter 3:
 
 > **Engineering report to Victor Lindqvist, end of quarter 2 (week 26)**
 >
@@ -445,24 +469,24 @@ as a monthly two-page report from quarter 3. Its quarter 2 results are additions
 > **Risks.** (1) Core change failure rate is flat. Owner: Kwame Mensah. The cheap gains are taken; the
 > next need contract tests at the remaining tier 1 boundaries. I will ask you for capacity if it has not
 > moved by week 32. (2) Ledger knowledge is concentrated in three Billing engineers. Owner: Marcus
-> Oyelaran. (3) Four log decisions are open, three without a named decider, and the core/permissions
+> Oyelaran (Billing manager). (3) Four log decisions are open, three without a named decider, and the core/permissions
 > exemption lapses at the end of quarter 3 (week 39).
 >
 > **Decisions needed.** (1) Sign-off of the quarter 3 plan before week 27; the open point is whether to
-> commit the target band. Late sign-off starts week 27 on last quarter's allocation. (2) Error budget
-> policy: stay in reporting mode (A) or enforce it with you arbitrating (B). I recommend B for order
+> commit the target band. Late sign-off starts week 27 on last quarter's allocation. (2)
+> [Error budget](../../glossary.md#error-budget-and-burn-rate) policy: stay in reporting mode (A) or enforce it with you arbitrating (B). I recommend B for order
 > submission and payments only; deciding late means another quarter of budgets with no consequence.
 >
 > **Decided this quarter.** Two Billing–Orders cases went through the escalation path, both decided
 > at my level within the clock and logged.
 
 The headline answers the first question; flat measures are shown, not left out; each request carries
-options, a recommendation, and the cost of lateness. Nothing the canon leaves open is decided.
+options, a recommendation, and the cost of lateness. The report decides nothing that is still open.
 
-**The reader's decisions:** whether the path's clock suits Billing and Orders given their history; what
-the director does the next time a team cites "Victor said"; how DL-08 to DL-10 get named deciders
-without the director deciding all three; and whether availability below contract belongs in the
-headline's first sentence.
+**The reader's decisions.** Does the path's clock suit Billing and Orders, given their history? What
+does the director do the next time a team cites "Victor said"? How do DL-08 to DL-10 get named
+deciders without the director deciding all three? Does availability below contract belong in the
+headline's first sentence?
 
 ## Exercises
 
@@ -474,8 +498,9 @@ Solutions are in [chapter 39 solutions](../../solutions/ch39-solutions.md). Nort
 
 **F1.** Route each of these Northstar items to a review, the decision log, the escalation path, or the
 executive report, and say why: a third consecutive month in which customer-detected share is flat;
-Tom Becker and Marcus Oyelaran disagreeing on who maintains the test environments that hold ledger
-data; the auth-svc pipeline exemption reaching its end-of-quarter-2 expiry; a renewal customer asking
+Tom Becker (Platform Operations manager) and Marcus Oyelaran disagreeing on who maintains the test
+environments that hold ledger data (at baseline, 4 of Billing's 7 requests to Platform Operations
+were for such environments); the auth-svc pipeline exemption reaching its end-of-quarter-2 expiry; a renewal customer asking
 for a new feature by week 30.
 
 **F2.** A manager's monthly status reads: "All green. Bulk ordering progressing well, team morale high,
@@ -484,8 +509,11 @@ list what is missing, write the questions you would send back, and rewrite the e
 fact you invent as an assumption.
 
 **F3.** Write the decision log entry for the core/permissions ownership decision as it stands at the
-start of quarter 3, using this chapter's fields. Fill in only what the canon supports, and for each
-empty field say what the director must do to fill it.
+start of quarter 3, using this chapter's fields. The facts: in the baseline quarter Orders made 17 of
+the module's 38 changes and Platform Operations none. Priya Raman (Orders manager) would accept it
+after week 26. Tom Becker sees it next to auth-svc, which his team owns, but his team cannot support
+Core Java. Exemptions last at most two quarters. Fill in only what these facts and the case support,
+and for each empty field say what the director must do to fill it.
 
 ### Applied Leadership
 
@@ -494,8 +522,9 @@ Orders adds a field. Given their history (the INC-417 thread, the INC-427 review
 dispute moves under the week 15 escalation path, write the joint case template you would give them,
 and say what you do if one of them escalates alone.
 
-**A2.** Ines Carvalho proposes to restart and chair a monthly architecture review, lapsed since 2021. In weeks 7 to 12 she rejected
-8 of 14 Core design proposals, 5 without a reason. Design the review so that it inspects decisions
+**A2.** Ines Carvalho (staff engineer, Core domain) proposes to restart and chair a monthly
+architecture review, lapsed since 2021. In weeks 7 to 12 she rejected 8 of 14 Core design proposals,
+5 without a reason. Design the review so that it inspects decisions
 rather than designers: who attends, what is sent beforehand, what the meeting may decide, and how you
 will know in two months whether it works.
 
@@ -505,7 +534,7 @@ you do with Elena, with Victor, and with the log.
 
 ### Executive Decision-Making
 
-**X1.** You are Victor Lindqvist. Helena Marsh wants the CEO's monthly board pack to show engineering
+**X1.** You are Victor Lindqvist. Helena Marsh (CEO) wants the CEO's monthly board pack to show engineering
 figures beyond committed items delivered and the Sev1 and Sev2 count. Using the director's week 26
 report, choose at most five figures for the board, say what you leave out and why, and say how you will
 stop the board pack from reshaping the directors' reports.

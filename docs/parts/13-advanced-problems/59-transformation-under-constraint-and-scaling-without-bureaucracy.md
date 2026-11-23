@@ -2,19 +2,23 @@
 
 Most transformations in this book were funded by a mandate. This chapter is about the ones that are
 not: the budget is flat or falling, nobody will add people, and the work still has to change. Under
-that constraint, every improvement is paid for by stopping something, and the cheapest things to stop
-are usually the processes, forums, rules, and management steps that once solved a problem and now
-mainly persist. The chapter covers how to fund a technical transformation from inside a fixed budget,
-how to tell process that carries load from process that only carries history, and how to remove
-management overhead without removing the work it was quietly doing. Chapter 20 owns engineering
-standards, Chapter 37 the meeting calendar, Chapter 34 spans and layers, and
-[Chapter 58](58-layoffs-reductions-and-mergers.md) reductions in force; this chapter links to them
-rather than repeating them. [Chapter 56](56-recovering-a-failing-engineering-organization.md) covers
-the different problem of an organization that is failing, not merely constrained, and
-[Chapter 57](57-crises-executive-disagreement-and-resistance.md) how to read the resistance that
-removing familiar process provokes. The running examples are Northstar
+that constraint, every improvement is paid for by stopping something. The cheapest things to stop are
+usually the processes, forums, rules, and management steps that once solved a problem and now mainly
+persist. The chapter covers how to fund a transformation from inside a fixed budget, how to tell
+process that carries load from process that only carries history, and how to remove management
+overhead without removing the work it was quietly doing. It ends the argument with growth: how to add
+process as an organization scales without letting it pile up. The running examples are Northstar
 Technologies and Halvard Systems, the fictional companies of the
 [case study](../../case-studies/northstar/index.md).
+
+!!! note "Related chapters"
+    [Chapter 20](../05-engineering-quality/20-engineering-standards-and-their-governance.md) owns
+    engineering standards, [Chapter 37](../08-management-operating-system/37-cadences-and-leadership-meetings.md)
+    the meeting calendar, [Chapter 34](../07-organization-design/34-spans-layers-and-dependency-mapping.md)
+    spans and layers, and [Chapter 58](58-layoffs-reductions-and-mergers.md) reductions in force.
+    [Chapter 56](56-recovering-a-failing-engineering-organization.md) covers an organization that is
+    failing rather than constrained; [Chapter 57](57-crises-executive-disagreement-and-resistance.md)
+    covers the resistance that removing familiar process provokes.
 
 ## Why This Matters
 
@@ -44,6 +48,8 @@ After this chapter you will be able to:
   suspend before deleting, and watch a stated signal.
 - Distinguish capacity returned from cash saved, and explain to a finance executive why the two do not
   substitute for each other.
+- Design how a growing organization adds process: a stated load and sunset for each new rule, a yearly
+  process budget, and a short list of owned policies instead of many rules.
 - Recognize the failure modes of constrained transformation, including the across-the-board cut,
   cost shifting, and the removal that takes a hidden load with it.
 
@@ -86,9 +92,8 @@ evidence by a fixed date, and default to suspension if nobody does.
 
 ### Where money comes from when the budget is fixed
 
-A flat budget is not a frozen one. Inflation, merit increases, and cloud usage growth make a flat
-nominal budget a shrinking real one, so a "flat" organization that changes nothing is already
-cutting something, usually by not backfilling and hoping. A transformation under constraint needs a
+A flat budget is not a frozen one. Inflation, merit increases, and cloud growth make it a shrinking real
+budget, so a "flat" organization that changes nothing is already cutting, usually by not backfilling. A transformation under constraint needs a
 written funding plan that names its sources. In falling order of safety, this book recommends:
 
 | Source | What it releases | Typical lag | Main risk |
@@ -106,8 +111,9 @@ weakness is lag: the first quarter of prevention is paid for by something else, 
 and the return arrives later.
 
 Two distinctions keep the plan honest. **Capacity is not cash.** Removing a weekly approval board
-returns engineer hours, but the payroll is unchanged; a finance executive asked for a 10 percent cut
-will not accept "we freed two FTE" unless a seat goes with it. Conversely, leaving seats unfilled saves
+returns engineer hours, but the payroll is unchanged. A finance executive asked for a 10 percent cut
+will not accept "we freed two [FTE](../../glossary.md#fte)" (full-time engineers) unless a seat goes
+with it. Conversely, leaving seats unfilled saves
 cash and destroys capacity, so it must be paired with work that stops. **In-year is not run-rate.** A
 seat left empty in month six saves half its annual cost this year and all of it next year. Agree with
 finance which one the target measures before building the plan;
@@ -116,7 +122,8 @@ budget mechanics.
 
 ### Spend only on the constraint
 
-Goldratt's *The Goal* is known for the argument that a system's output is set by its constraint, and
+Goldratt's *The Goal* is known for the argument that a system's output is set by its
+[constraint](../../glossary.md#constraint), and
 that improving anything else does not increase output
 ([Goldratt and Cox, 1984](../../references/bibliography.md#goldratt1984goal)). With money to spare, an
 organization can afford improvements away from the constraint. Without it, every engineer-week spent
@@ -124,46 +131,74 @@ elsewhere is an engineer-week not spent where it would show. This is practitione
 than a research finding, but it is the most useful single filter for a constrained plan: before
 funding any improvement, state which constraint it relieves.
 
-Meadows's essay on leverage points ranks places to intervene in a system and observes that most
-attention goes to parameters, which rarely change behavior, while rules and information flows rank
-far higher ([Meadows, 1999](../../references/bibliography.md#meadows1999leverage)). Applied here, in
-this book's interpretation: a budget cut handled as a parameter (each team takes 10 percent) changes
-little except morale; a cut handled by changing the rules (which approvals exist, which work is
-stopped) changes what the organization does.
+A cut handled as a parameter (each team takes 10 percent) changes little except morale; a cut that
+changes the rules (which approvals exist, which work stops) changes what the organization does. That is
+this book's reading of Meadows, who ranks rules far above parameters as places to intervene in a system
+([Meadows, 1999](../../references/bibliography.md#meadows1999leverage); **expert opinion**).
 
 ### Why process accumulates
 
 Process is added for good reasons: a failure happened, an auditor asked, a new leader needed
 visibility. It is rarely removed, for three reasons.
 
-**People search for additions.** In eight experiments, Adams and colleagues found that people
-systematically default to additive changes and overlook advantageous subtractive ones, especially
-when nothing cues them to consider subtraction and when they are under higher cognitive load
-([Adams et al., 2021](../../references/bibliography.md#adams2021subtractive)). The authors suggest this
-may be one reason people struggle with overburdened schedules and institutional red tape. That link to
-organizations is their suggestion, not a tested finding, but the experimental result is a **research
-finding**, and its practical lesson is cheap: ask explicitly "what could we remove?" at every review,
-because otherwise almost nobody will.
+**People search for additions.** People default to adding and overlook useful subtractions, especially
+when nothing prompts them to consider removing something. That is a **research finding** from eight
+experiments by Adams and colleagues
+([Adams et al., 2021](../../references/bibliography.md#adams2021subtractive)). The authors suggest it
+may help explain institutional red tape, but that link is their suggestion, not a tested finding. The
+practical lesson is cheap: ask "what could we remove?" at every review, because otherwise almost nobody
+will.
 
 **Nobody owns the total.** Each forum has an owner; nobody owns the sum of forums. Each rule has a
 reason; nobody prices the rule set. Costs that are spread thin and paid in other people's hours do not
 appear on any budget line.
 
 **Removal looks like risk; addition looks like diligence.** After an incident, adding a review step is
-visible and defensible. Removing one, if anything later goes wrong, is a career risk. Reinertsen's book
-on product development flow is widely known for arguing that development organizations ignore queues
-because they are invisible ([Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles));
-an approval step is a queue whose cost is paid in waiting, which no report shows.
+visible and defensible. Removing one is a career risk if anything later goes wrong. Meanwhile an
+approval step is a queue whose cost is paid in waiting, which no report shows; Reinertsen argues that
+such queues are ignored because they are invisible
+([Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles)).
+
+### Adding process as you grow
+
+Growth is when process piles up fastest. Every new team, site, or customer segment brings a reason to
+add a rule, and a growing budget forces nobody to remove one. The answer is not to refuse process: a
+300-engineer organization needs more shared rules than an 80-engineer one. The answer is to make each
+addition carry its own exit and its own price. The four practices below are **this book's
+recommendation**, built on the load test in the next section; no research tests them as a package.
+
+- **Write the load and the sunset in at birth.** A new mandatory rule, forum, or report states the
+  failure, decision, or information flow it serves, the signal that would show it working, and a
+  review date, normally a year out. At that date it is renewed on evidence or it lapses. Renewal is a
+  decision someone makes, not a default.
+- **Give process a budget.** Once a year, price the standing claims (forums, approvals, reports,
+  mandatory rules) in [engineer-weeks](../../glossary.md#engineer-week-engineer-day-engineer-year) and
+  set a ceiling as a share of capacity. A new claim that would break the ceiling retires an old one or
+  wins an explicit increase. The exact number matters less than having someone own the total.
+- **Limit who can make a rule mandatory.** Anyone may write guidance. Making it mandatory should take
+  a named decider (a director for an area; the CTO or a principal engineer for the whole organization)
+  and an entry in the [decision log](../../glossary.md#decision-log). A rule added the week after an
+  incident gets the same treatment, with its review at the next quarterly review.
+- **Scale through a few owned policies, not many rules.** Halvard Systems, at 500 engineers, runs on
+  six enterprise policies, each owned by a principal engineer: one owning team per production
+  component, the [tier 1 operational minimums](../../glossary.md#tier-1-operational-minimums), an
+  auditable pipeline with rollback, vulnerability remediation service levels, a tracked review for
+  every Sev1, and no customer date without an estimate and an owner. Each states an outcome and leaves
+  the mechanism to the groups. When someone wants a new company-wide rule, the first question is which
+  existing policy it serves. If none, the bar for a seventh is high.
+
+The test is the same as for removal. A year later, can each mandatory rule's owner state its load and
+show the evidence? If rules grow faster than owners who can answer, the organization is accumulating
+history again.
 
 ### Process that carries load, process that carries history
 
-Adler and Borys distinguish two kinds of formalization: **enabling** formalization helps employees
-master their tasks, while **coercive** formalization is a means by which management tries to compel
-effort and compliance; whether formalization helps or harms employees' attitudes depends on which kind
-it is ([Adler and Borys, 1996](../../references/bibliography.md#adler1996bureaucracy)). This is a
-conceptual argument from organizational research, not an empirical test, but it explains a familiar
-pattern: the same organization can have a runbook engineers rely on and a checklist engineers tick
-without reading. Sutton and Rao's *The Friction Project* is known for a related practitioner argument:
+Formal rules help or harm depending on their kind. Adler and Borys distinguish **enabling**
+formalization, which helps people master their tasks, from **coercive** formalization, which tries to
+compel effort and compliance ([Adler and Borys, 1996](../../references/bibliography.md#adler1996bureaucracy)).
+This is a conceptual argument (**expert opinion**), not an empirical test. It explains a familiar
+pattern: one organization can have a runbook engineers rely on and a checklist they tick without
+reading. Sutton and Rao's *The Friction Project* is known for a related practitioner argument:
 remove the friction that wastes effort, keep or add the friction that stops the wrong things
 ([Sutton and Rao, 2024](../../references/bibliography.md#sutton2024friction)).
 
@@ -176,46 +211,35 @@ This book turns those ideas into a load test. For each process, ask four questio
 | What would we see if it stopped? | A named signal that would move | Nothing anyone can name |
 | Is there a cheaper mechanism for the same load? | Maybe; then change the mechanism | Irrelevant; the load is gone |
 
-The evidence on one class of process is unusually direct. DORA's research found heavyweight change
-approval, by a change advisory board or a senior manager, to have a negative impact on software
-delivery performance, and found no evidence that more formal external review is associated with lower
-change failure rates; the guidance recommends peer review recorded in the development platform,
-automated testing and monitoring, and a coordinating rather than approving role for the board
+Heavyweight change approval is the class of process with the most direct evidence against it. DORA's
+research found approval by a change advisory board or senior manager associated with worse delivery
+performance, and found no evidence that formal external review lowers
+[change failure rates](../../glossary.md#change-failure-rate). It recommends peer review in the
+development platform, automated testing and monitoring, and a coordinating role for the board
 ([DORA, change approval](../../references/bibliography.md#dora-cap-change-approval)). This is
-**industry research**: survey-based and correlational. It does not prove that removing a board is safe
-in your organization, but it shifts the burden of proof onto the board.
+**industry research**, survey-based and correlational. It does not prove that removing your board is
+safe, but it shifts the burden of proof onto the board.
 
-Chapter 20 owns the triage of engineering standards, including the enforcement ladder from defaults
-down to exhortation ([Chapter 20](../05-engineering-quality/20-engineering-standards-and-their-governance.md)).
-The load test generalizes it to everything else: forums, approvals, reports, templates, and roles. A
-useful corollary from Chapter 20 applies throughout: a load-bearing process often has a cheaper
-mechanism further up the ladder, so "keep" rarely means "keep as is".
+The load test generalizes Chapter 20's triage of standards to forums, approvals, reports, templates,
+and roles. Chapter 20's corollary applies throughout: a load-bearing process often has a cheaper
+mechanism, so "keep" rarely means "keep as is".
 
 ### Management overhead is mostly time, not salaries
 
-"Management overhead" invites a headcount answer: fewer managers, fewer layers. The evidence does not
-support treating managers as pure overhead. Google's Project Oxygen began from the hypothesis, held by
-some of its engineers, that managers do not matter, and concluded that teams with highly effective
-managers achieved better results, were happier, and had lower turnover
+Managers are not pure overhead, so the safer target is the time management consumes. Google's Project
+Oxygen began from some engineers' hypothesis that managers do not matter. It concluded that teams with
+highly effective managers achieved better results, were happier, and had lower turnover
 ([re:Work, great managers](../../references/bibliography.md#rework-great-managers);
-[Garvin, 2013](../../references/bibliography.md#garvin2013google)). That is **documented practice** from
-one company, self-reported. Lee and Edmondson's review of organizations that radically decentralize
-authority describes scholarly understanding of such organizations as limited and proposes a research
-agenda rather than a verdict ([Lee and Edmondson, 2017](../../references/bibliography.md#lee2017selfmanaging)).
-Gallup reports that manager talent matters more than span of control, and that among remote and hybrid
-managers, more direct reports were associated with lower engagement
-([Harter, 2026](../../references/bibliography.md#harter2026span)); industry research, all occupations.
+[Garvin, 2013](../../references/bibliography.md#garvin2013google); **documented practice** from one
+company, self-reported). Other work on spans and flat organizations points the same way; see the
+references.
 
-So the safer target is the time management consumes rather than the managers themselves: status
-rounds, approval queues, reports compiled by hand, decisions that climb layers because boundaries are
-wrong. [Chapter 34](../07-organization-design/34-spans-layers-and-dependency-mapping.md) owns the trade
-between spans, layers, and decision hops; Larson's guideline of six to eight engineers per manager and
-four to six managers per manager of managers
-([Larson, 2018](../../references/bibliography.md#larson2018sizing)) is expert opinion, useful as a
-range to explain deviations from, not a rule. At company scale, Rajan and Wulf found that large US firms
-became flatter, with more positions reporting to the CEO and fewer levels below
-([Rajan and Wulf, 2006](../../references/bibliography.md#rajan2006flattening)); that is a research
-finding about senior hierarchies, not about engineering teams.
+Cut the time, then: status rounds, approval queues, reports compiled by hand, and decisions that climb
+layers because boundaries are wrong. [Chapter 34](../07-organization-design/34-spans-layers-and-dependency-mapping.md)
+owns the trade between spans, layers, and decision hops. Larson suggests six to eight engineers per
+manager and four to six managers per manager of managers
+([Larson, 2018](../../references/bibliography.md#larson2018sizing); **expert opinion**). Use it as a
+range to explain deviations from, not a rule.
 
 One structural trap matters under a shrinking budget. **Attrition shrinks teams, not management.** If
 an organization loses engineers by not backfilling and keeps every team and manager, spans narrow and
@@ -225,16 +249,22 @@ people decision, not a line item.
 
 ## Engineering Organization Example
 
-The figures are **illustrative**, from the Northstar canon (the
-[first quarter](../../case-studies/northstar/first-quarter.md) page). Northstar's year 1 is a
-transformation under flat headcount: 80 engineers, 87 seats in all, backfills only, no Core rewrite,
-and $250,000 of discretionary tooling. Read as a funding plan, the year shows each source in the
-table above.
+!!! info "Northstar so far"
+    The example covers the director's first year, weeks 1 to 39. By quarter 3, Sev1 and Sev2
+    incidents fell from 30 to 14 a quarter and service credits from $410,000 to $60,000, all with flat
+    headcount. See the [timeline](../../case-studies/northstar/timeline.md).
 
-**Prevention paid first, returned later.** Quarter 1 allocated 12 FTE to prevention, taken from
-roadmap capacity under the week 4 capacity model; quarter 3 allocated 8 FTE to prevention and 4.5 to
-platform work. The canon does not record quarter 2's allocation, so it is left out below. Unplanned
-work returned capacity as it fell:
+Northstar's year 1 is a transformation under flat headcount. Its rules, from the
+[five constraints](../../glossary.md#the-five-constraints): 80 engineers and 87 seats in all,
+backfills only, no Core rewrite, and $250,000 of discretionary tooling. Read as a funding plan, the year
+shows each source in the table above. The figures are **illustrative**, from Northstar's
+[first-year record](../../case-studies/northstar/first-quarter.md).
+
+**Prevention paid first, returned later.** Quarter 1 put 12 FTE into
+[prevention](../../glossary.md#prevention-allocation), taken from roadmap capacity in the capacity
+model agreed with the CTO and CPO in week 4. Quarter 3 put 8 FTE into prevention and 4.5 into platform
+work; quarter 2's allocation is not recorded. [Unplanned work](../../glossary.md#unplanned-work) fell,
+returning capacity:
 
 | Quarter | Unplanned work | FTE (of 80) | Returned against baseline |
 |---|---|---|---|
@@ -243,34 +273,40 @@ work returned capacity as it fell:
 | 2 | 28% | 22.4 | 4.8 |
 | 3 | 25% | 20.0 | 7.2 |
 
-Check: 80 × 0.34 = 27.2; 80 × 0.25 = 20.0; 27.2 − 20.0 = 7.2. By quarter 3 the returned capacity (7.2
-FTE, about $1.33M a year at $185,000) approaches the quarter 3 prevention allocation (8 FTE, $1.48M) but
-does not pass it. When returned capacity passes the allocation, a program is self-funding in capacity
-terms; at quarter 3 Northstar's is still 0.8 FTE short, so in capacity alone it is not yet self-funding,
-the same verdict [Chapter 60](../15-capstone/60-capstone-northstar.md) reaches. Payroll did not change
-either, so there is no cash saving in engineering. The money appeared elsewhere, in service credits
-avoided, which fell from $410,000 a quarter to $60,000, about $1.4M a year at the quarter 3 rate
-(($410,000 − $60,000) × 4). Credits are money, not capacity; the two answer different questions.
+Is the program self-funding? In capacity, not yet; in money, clearly. A program is self-funding in
+capacity when the capacity it returns passes the capacity it costs:
+
+| Quarter 3, annualized | FTE | Dollars a year |
+|---|---|---|
+| Capacity returned | 7.2 | about $1.33M |
+| Prevention allocation | 8.0 | about $1.48M |
+| Service credits avoided | not capacity | about $1.4M |
+
+Dollars use $185,000 per FTE-year; credits fell from $410,000 to $60,000 a quarter. Northstar's program
+is still 0.8 FTE short in capacity. Payroll did not change, so there is no cash saving in engineering.
+The money appeared elsewhere, in credits avoided. Credits are money, not capacity; the two answer
+different questions.
 
 **Work stopped.** The manual regression pass cost about 546 QA person-days a year at baseline. By day
-90 it was about 600 cases in one day, run weekly by the two quality engineers who chose it. Assuming
-both spend the full day, that is 2 × 52 = 104 person-days, releasing about 442 person-days (about 1.9
-engineer-years at 230 working days) without changing anyone's employment: the seven QA engineers moved
-into product teams, as constraint 5 required. Of the 1,900 manual cases, 450 were deleted outright.
+90 it was about 600 cases in one day, run weekly by two quality engineers who had chosen that work. That
+releases about 442 person-days a year (about 1.9 engineer-years), assuming both spend the full day. Of
+the 1,900 manual cases, 450 were deleted outright. Nobody's employment changed: the seven QA engineers
+moved into product teams. That met constraint 5, the case's rule that any plan changing QA work must
+say what the QA engineers do next.
 
 **Process removed.** Of 52 standards, 21 were retired and 17 turned into guidance, leaving 14 mandatory
-rules; with the 5 tier 1 minimums, 19 checked obligations (Chapter 20). Of 65 open corrective actions, 42 were dropped with a reason and 14 kept with
-manager owners; closure rose from 32 to 70 and then 78 percent. Removal made the remaining obligations
-believable.
+rules ([Chapter 20](../05-engineering-quality/20-engineering-standards-and-their-governance.md)). Of 65
+open corrective actions, 42 were dropped with a reason and 14 kept with manager owners. Closure rose from
+32 to 70 and then 78 percent. Removal made the remaining obligations believable.
 
-**Spend not yet consolidated.** Four CI systems cost about 1.5 FTE a year to run against about 0.5 for
-one. The CI target is still open, with a decision planned for the week 78 gate, so the 1.0 FTE is a
-future source, not a current one.
+**Spend not yet consolidated.** Four CI systems cost about 1.5 FTE a year to run, against about 0.5 for
+one. The choice of a single CI target is still open, so the 1.0 FTE is a future source, not a current
+one.
 
-**An addition that bought nothing.** Engineering Excellence Day took 64, 41, and 23 engineer-days on
-three Fridays, 128 in all (about 25.6 engineer-weeks, roughly $91,000 at $3,558 a week), and merged 71
-items, none touching the priced debt register. It relieved no constraint. The director stopped it in
-week 37 ([Chapter 43](../09-engineering-directorship/43-leading-change-and-director-failure-patterns.md)).
+**An addition that bought nothing.** Engineering Excellence Day used 128 engineer-days and touched none
+of the priced debt, so the director stopped it
+([Chapter 43](../09-engineering-directorship/43-leading-change-and-director-failure-patterns.md) tells
+it).
 
 ## Decision Framework
 
@@ -316,8 +352,7 @@ lose time per person; the research on manager quality says that time matters. Me
 has merged; do not widen spans to hit a ratio.
 
 **Central policy against local judgment.** A short list of enterprise policies saves every team from
-reinventing controls; each policy also costs every team its evidence. Keep the policy, cut the evidence
-cost, and resist adding a seventh policy as a substitute for fixing one.
+reinventing controls, but each costs every team its evidence. Keep the policy and cut the evidence cost.
 
 **Stopping work against cost shifting.** Retiring a platform tool saves its owner money and costs its
 users a migration. The organization only saves if the users' cost is smaller and is counted.
@@ -362,24 +397,25 @@ watch signal.
 An organization of 50 to 150 engineers usually has enough process to need an inventory and too few
 people to staff a process office. The platform organization of Halvard Systems, the fictional
 500-engineer company of [Chapter 35](../07-organization-design/35-designing-organizations-at-four-scales.md),
-is 70 engineers, and in the year after the planning year described in the canon it faced a budget cut.
-The facts below are **illustrative** additions to the Halvard canon.
+has 70 engineers, and in the year after the planning year described on the
+[Halvard page](../../case-studies/northstar/halvard.md) it faced a budget cut. The facts below are
+**illustrative** and belong to this chapter's example.
 
 **The setting.** Gwen Abernathy, VP of Platform, runs two directors: Developer Platform (5 managers, 38
 engineers) and Infrastructure (4 managers, 32 engineers). Arjun Mehta, the platform group's principal
-engineer, owns two of Halvard's six enterprise policies, the tier 1 operational minimums and the
-auditable pipeline with rollback; most of the cost of evidencing all six falls on the platform
+engineer, owns two of Halvard's six enterprise policies: the tier 1 operational minimums and the
+auditable pipeline with rollback. Most of the cost of evidencing all six falls on the platform
 organization, which runs the service catalog, pipelines, scanners, and paging. Under a company cost
-program, the CTO cut the platform budget by 10 percent for the year: from about $18.0M (70 engineers at
-the company average of $205,800, which is $102.9M ÷ 500, about $14.4M, plus $3.6M of internal cloud,
-licenses, and vendor support) to $16.2M, a cut of $1.8M stated in-year.
+program, the CTO cut the platform budget by 10 percent for the year, from about $18.0M to $16.2M: a cut
+of $1.8M, stated in-year. (The $18.0M is 70 engineers at Halvard's average of $205,800, about $14.4M,
+plus $3.6M of internal cloud, licenses, and vendor support.)
 
 **The inventory.** Abernathy's directors priced the platform's own processes, assuming 1,840 working
 hours per engineer-year (230 days × 8 hours):
 
 | Process | Cost a year | Load evidence | Verdict |
 |---|---|---|---|
-| Weekly infrastructure change advisory board: 12 attendees, 90 minutes, about 60 requests a week at 45 minutes of preparation each | 900 + 2,250 = 3,150 hours, about 1.7 FTE; median wait 3 working days | Of about 3,000 requests in four quarters, 41 sent back, 35 for missing form fields, 6 for clashing with another change on the same shared system; all 19 change-triggered Sev1 and Sev2 incidents in platform components had been approved | Replace approval with peer review in the pipeline; keep the clash detection as an automated change calendar |
+| Weekly infrastructure change advisory board: 12 attendees, 90 minutes, about 60 requests a week at 45 minutes of preparation each | About 3,150 hours (1.7 FTE); median wait 3 working days | Of about 3,000 requests in four quarters, 41 sent back, 35 for missing form fields, 6 for clashing with another change on the same shared system; all 19 change-triggered Sev1 and Sev2 incidents in platform components had been approved | Replace approval with peer review in the pipeline; keep the clash detection as an automated change calendar |
 | Monthly policy compliance pack, compiled by two engineers from four tools | 2 × 4 days × 12 = 96 days, about 0.4 FTE | Read by the VPs each month | Cheapen: generate from the tools |
 | Quarterly tier 1 attestation spreadsheet, 210 components | Platform 20 days; owning teams 840 hours | Duplicates catalog and paging data | Cheapen: check automatically |
 | Weekly platform leadership meeting, 13 people, 60 minutes | 13 hours a week, about 40 minutes of it status | Decisions recorded in about one meeting in three | Written status; 30 minutes of decisions |
@@ -397,10 +433,16 @@ The in-year total misses the $1.8M by $486,800; the exit run-rate exceeds it by 
 put the gap on page one and asked the CTO to measure the cut at exit run-rate. The CTO agreed, with the
 run-rate reported quarterly.
 
-The eight empty seats had to take work with them: the legacy tool's upkeep (4 engineers), the change
-board, compliance pack, and attestation compilation (about 2 FTE, mostly engineers' time), operating
-the duplicate tools (about 1.5 FTE), and one deferred roadmap item (about 0.5). Retiring the legacy tool
-also ended a standing problem: its 23 services had no automated rollback and sat under exemptions from
+The eight empty seats had to take work with them:
+
+| Work that left with the seats | FTE |
+|---|---|
+| Legacy tool upkeep | 4 |
+| Change board, compliance pack, and attestation compilation | about 2 |
+| Operating the duplicate tools | about 1.5 |
+| One deferred roadmap item | about 0.5 |
+
+Retiring the legacy tool also ended a standing problem: its 23 services had no automated rollback and sat under exemptions from
 the pipeline policy. Migrating them cost the product groups an estimated 46 engineer-weeks (2 each),
 which Abernathy listed as a cost of the plan rather than leaving it to surface in their quarters.
 Corvane's onboarding in the same year ([Chapter 58](58-layoffs-reductions-and-mergers.md)) was funded in
@@ -409,16 +451,15 @@ team's roadmap, so it does not compete with the eight empty seats.
 
 **Management overhead.** With 62 engineers and 9 managers, spans would have fallen from about 7.8 to
 6.9. When the legacy tool retired, the Deployment Tools team (a manager and 6 engineers) merged into
-the CI and CD team, taking managers to 8 (62 ÷ 8 is about 7.75), and its manager chose between the
-staff track and the next manager vacancy. Finance also asked whether one director could run all 8
-managers; that span is above Larson's four to six, and the two directors' areas share little, so
-Abernathy kept both and wrote a review trigger: revisit if either area falls below three managers.
+the CI and CD team, taking managers to 8 and spans back to about 7.75. Its manager chose between the
+staff track and the next manager vacancy. Finance asked whether one director could run all 8
+managers. That span is above Larson's four to six, and the two areas share little, so Abernathy kept
+both directors, with a review if either area falls below three managers.
 
 **What happened.** The board was suspended for quarter 2 with two watch signals: change-triggered Sev1
 and Sev2 incidents in platform components, and clashes caught by the calendar. Median wait fell from 3
-working days to under 1; incidents were 5 in quarter 2 and 4 in quarter 3 against about 4.75 a quarter
-before (19 in four quarters), a difference too small to read either way; the calendar flagged 9 clashes
-in quarter 2. The board was then deleted. One removal went wrong. The generated compliance dashboard
+working days to under 1. Incidents were 5 in quarter 2 and 4 in quarter 3, against about 4.75 a quarter
+before: too small a difference to read either way. The calendar flagged 9 clashes in quarter 2. The board was then deleted. One removal went wrong. The generated compliance dashboard
 showed vulnerability findings past their service levels, but the monthly pack had also been the only
 meeting where VPs looked at them together, and nobody looked at the dashboard: findings past their
 service level across Halvard rose from 12 to 31 in quarter 2. The policy's owner restored a monthly
@@ -428,29 +469,26 @@ document.
 ## CTO Perspective
 
 At executive scale the question changes from "which process can go" to "which claims on next year's
-budget are written into it by default". You are Victor Lindqvist in quarter 4 of Northstar's first year.
-The year-2 engineering budget draft holds personnel at 87 seats and cloud and tooling flat at $4.2M;
-Rajiv Menon will consider the continuation's $150,000 of tooling only with an offset inside that $4.2M;
-Samuel Osei will ask the board whether flat headcount can carry the roadmap. Each of those is a question
-about funding from within.
+budget are written into it by default". A CTO whose budget is flat meets the same three questions every
+year: can the roadmap fit, where does any new tooling money come from, and what does each new role
+cost. Each is a question about funding from within.
 
 Three moves belong to the CTO rather than the director:
 
 - **Make process a budget line.** Ask for the year's standing claims on capacity (forums, rules,
   approvals, reports, management roles) priced in engineer-weeks, next to the investment asks, so that
   the board's question about flat headcount gets an answer that includes subtraction.
-- **Price management in seats.** Under Northstar's 87-seat rule every new manager or VP costs an
-  engineering seat: the year-2 options run from 80 engineers with 6 managers to 77 with 9, and a VP
-  would take one more. That is the right frame for the open year-2 decisions (Chapters 35, 36, and 47);
-  this chapter only adds that each added role should name the load it carries.
+- **Price management in seats.** Where the seat count is fixed, every new manager or VP costs an
+  engineering seat. Each added role should name the load it carries
+  ([Chapter 47](../11-vp-engineering/47-the-vp-of-engineering.md) applies this to a VP).
 - **Protect the policies, not their paperwork.** At Halvard, the CTO's six enterprise policies are the
   company's encoded lessons. Under a cut, a CTO should refuse to drop a policy and insist on cutting its
   evidence cost, and should own the cross-group view that catches cost shifting, because no single VP
   sees it.
 
-The CTO also owns the tone of subtraction. If removal is only ever proposed by people under budget
-pressure, it reads as cutting corners. If the CTO asks "what will we stop?" at every planning cycle,
-including in good years, removal becomes maintenance.
+The CTO also owns the tone of subtraction. Removal proposed only under budget pressure reads as cutting
+corners. If the CTO asks "what will we stop?" every planning cycle, in good years too, removal becomes
+maintenance.
 
 ## Practical Playbook
 
@@ -477,42 +515,42 @@ including in good years, removal becomes maintenance.
 
 ## Case Study
 
-These Northstar events are **illustrative** and fictional. The canon is on the
-[first quarter](../../case-studies/northstar/first-quarter.md) page; the inventory below is set in
-weeks 50 and 51 of quarter 4, and its proposals are open.
+These Northstar events are **illustrative** and fictional, recorded in
+[the director's first year](../../case-studies/northstar/first-quarter.md#rules-and-processes-inventory).
+The inventory is set in weeks 50 and 51 of quarter 4, and its proposals are open. The
+[quarter 4 briefing](../../case-studies/northstar/quarter-4-briefing.md) gives the wider situation.
 
-**Why an inventory.** In weeks 46 to 48, Samuel Osei's question to Victor Lindqvist was whether flat
-headcount can carry the roadmap. Victor's draft three-year allocation already assumes unplanned work
-falls to 22 percent in year 2, and Rajiv Menon wants the continuation's $150,000 offset inside the
-existing $4.2M. In weeks 50 and 51 the director drafted, for Victor, an inventory of the organization's
-rules and standing processes created or inherited in year 1, with the load each carries. It covers
-rules and processes rather than the meeting calendar, whose redesign (drafted week 22, reviewed week 24,
-proposed for week 27) has no recorded outcome; Chapter 37 and Project 1 treat it.
+**Why an inventory.** Victor Lindqvist (CTO) faces three funding questions for year 2. Samuel Osei, a
+board director, asks whether flat headcount can carry the roadmap. Rajiv Menon (CFO) will fund the
+quality continuation's $150,000 of tooling only with an offset inside the existing $4.2M cloud and
+tooling budget. And Victor's own draft three-year allocation assumes unplanned work falls to 22 percent
+in year 2. In weeks 50 and 51 the director drafted, for Victor, an inventory of the rules and standing
+processes created or inherited in year 1, with the load each carries. It leaves out the meeting
+calendar, whose redesign has no recorded outcome.
 
 | Item | Origin | Load and evidence | Draft verdict |
 |---|---|---|---|
-| Tier 1 operational minimums | Quarter 1 | 3 of 15 met all four at baseline, 13 of 15 in quarter 3; the incident and availability gains rest on them | Keep |
+| [Tier 1](../../glossary.md#tier-1) operational minimums | Quarter 1 | 3 of 15 met all four at baseline, 13 of 15 in quarter 3; the incident and availability gains rest on them | Keep |
 | Severity audit in the weekly operational review | Week 7 | Re-rated an under-rated payment delay in week 7; the board's incident headline is only as good as the ratings | Keep |
 | Corrective actions with manager owners | Quarter 1 | Closure 32 percent, then 70, then 78 | Keep |
 | Pipeline check for unfinished migrations | Week 11 | Automated; added after the week 9 Sev1 | Keep; already cheap |
 | Rehearsal of tier 1 data migrations | Week 10 | Plausible load, but no record is kept of what rehearsals found | Instrument: record findings for a quarter, then decide |
 | 14 mandatory standards with owners | Week 3 triage | Chapter 20's evidence | Keep; mechanism belongs to Chapter 20 |
-| Exemption expiry at most two quarters | Quarter 1 | The core/permissions exemption lapsed in week 39 with no renewal and no consequence | Load claimed, not carried: enforce or drop |
-| Limit of three cross-team initiatives | Quarter 3, one-quarter trial | The trial's quarter has ended; the week 34 forum's outcome is open | Decide: who rules on continuing it |
+| Exemption expiry at most two quarters | Quarter 1 | An exemption for an unowned Core module lapsed in week 39 with no consequence ([Chapter 60](../15-capstone/60-capstone-northstar.md#case-study)) | Load claimed, not carried: enforce or drop |
+| Limit of three cross-team initiatives | Quarter 3, one-quarter trial | The trial's quarter has ended; the week 34 portfolio forum's outcome is open | Decide: who rules on continuing it |
 | Ten-item pull request checklist | Before arrival | Still in Core's merge request template; at baseline, 38 of 40 sampled requests had every box ticked, 11 of them falsely | History: retire, replacing the one useful item with a check |
-| Four ways to build and deploy | Inherited | About 1.5 FTE a year against about 0.5 for one | Converge; target decision at week 78 |
-| Engineering Excellence Day | Week 27 | No item touched the debt register | Already stopped, week 37 |
+| Four ways to build and deploy | Inherited | About 1.5 FTE a year against about 0.5 for one | Converge; the target decision is open |
 
 **What the inventory shows.** Most of what year 1 added carries load, which is the expected result of a
 program that added process only after failures and measured it. The items that do not are older (the
 checklist), expired (the trial), or unenforced (the expiry rule). Their direct cost is small; the
 checklist's real cost is that a ticked box no longer means anything, which weakens every other
-attestation Northstar relies on, including the customer security questionnaires Joon Park answers.
+attestation Northstar relies on, including the customer security questionnaires that Joon Park (IT security lead) answers.
 The large item is the build systems, where the decision is already scheduled.
 
 **What the inventory does not do.** It does not find the $150,000 offset, which sits in cloud and
-tooling spend that the inventory does not cover, and it does not answer Samuel Osei by itself: the
-capacity it identifies is about 1 FTE from build consolidation, not yet available. The director's draft
+tooling spend outside its scope. Nor does it answer Samuel Osei by itself: the capacity it identifies
+is about 1 FTE from build consolidation, not yet available. The director's draft
 says so in its first paragraph, which is the honest form of the answer: the main source of year-2
 capacity is still the unplanned work that prevention returns, and process removal is a supplement.
 
@@ -543,17 +581,17 @@ that the evidence did show.
 
 ### Applied Leadership
 
-**A1.** You are the Northstar director in week 51. Elena Sokolova argues that the rehearsal of tier 1
+**A1.** You are the Northstar director in week 51. Elena Sokolova (Payments and Integrations manager) argues that the rehearsal of tier 1
 data migrations must stay mandatory without any instrumentation period, because the week 9 Sev1 showed
 what an unrehearsed migration does. Write your reply: what you agree with, what you would still ask
 her team to record, and how you would decide at the end of the period.
 
 **A2.** At Halvard, the monthly compliance pack was replaced by a generated dashboard and breaches past
 their service level rose from 12 to 31 in a quarter. Write the short review of this removal that Gwen
-Abernathy should send to the other VPs: what load was missed, why the load test did not find it, and
+Abernathy (VP of Platform) should send to the other VPs: what load was missed, why the load test did not find it, and
 what she changes in her removal process.
 
-**A3.** Suppose that, in a hypothetical year 2 that is not part of the canon, Northstar's budget is cut
+**A3.** Suppose that, in a hypothetical year 2 that is not part of Northstar's record, Northstar's budget is cut
 by 5 percent instead of held flat. Using the funding sources table and Northstar's year-1 figures, draft
 the order in which you would look for the money and name the source you would refuse to use first.
 
@@ -599,17 +637,17 @@ platform organization.
 ## References and Further Reading
 
 - [Goldratt and Cox, 1984](../../references/bibliography.md#goldratt1984goal): the constraint
-  argument (idea level).
+  argument.
 - [Meadows, 1999](../../references/bibliography.md#meadows1999leverage): leverage points; why parameter
   changes rarely change behavior.
 - [Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles): invisible queues in
-  product development (idea level).
+  product development.
 - [Adams et al., 2021](../../references/bibliography.md#adams2021subtractive): experimental evidence
   that people overlook subtractive changes.
 - [Adler and Borys, 1996](../../references/bibliography.md#adler1996bureaucracy): enabling versus
   coercive formalization.
 - [Sutton and Rao, 2024](../../references/bibliography.md#sutton2024friction): removing destructive
-  friction and keeping useful friction (idea level).
+  friction and keeping useful friction.
 - [DORA, change approval](../../references/bibliography.md#dora-cap-change-approval): research on
   heavyweight change approval and what to do instead.
 - [re:Work, great managers](../../references/bibliography.md#rework-great-managers) and

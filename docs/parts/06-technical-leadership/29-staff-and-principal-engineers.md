@@ -38,7 +38,8 @@ After this chapter you will be able to:
 - Partner with a staff engineer as their manager, including how disagreements are raised and settled.
 - Detect the roaming critic and the overloaded hero early, and redesign the role rather than blame the
   person.
-- Decide when principal or distinguished roles are justified, and measure staff impact through adopted decisions and changed capability, and predict how each measure
+- Decide when principal or distinguished roles are justified.
+- Measure staff impact through adopted decisions and changed capability, and predict how each measure
   is gamed.
 
 ## The Mental Model
@@ -85,8 +86,11 @@ dynamically, a property of the team rather than a role
 ([Gren and Ralph, 2022](../../references/bibliography.md#gren2022agile)). Both support only a weak
 claim (**research finding**, correlational or qualitative): technical leadership without management
 authority is common and can go with better teams. On the hero case, an automated estimate put about 65
-percent of 133 popular open-source projects at a truck factor of two or fewer developers
-([Avelino et al., 2016](../../references/bibliography.md#avelino2016truck)); open source, not companies.
+percent of 133 popular open-source projects at a
+[truck factor](../../glossary.md#single-point-of-knowledge-failure) of two or fewer developers. The
+truck factor is how many people could leave before a project stalls (Chapter 12 teaches it)
+([Avelino et al., 2016](../../references/bibliography.md#avelino2016truck)). The projects are open
+source, not companies.
 
 Everything else here is **expert opinion** or **this book's recommendation**, drawn mainly from Will
 Larson's *Staff Engineer*, largely free online ([Larson, 2021](../../references/bibliography.md#larson2021staff)),
@@ -112,7 +116,7 @@ The archetypes are useful because each implies a different scope, sponsor, and f
 
 Reilly organizes staff work into big-picture thinking, project execution, and leveling up others, and
 calls the staff engineer a force multiplier
-([Reilly, 2022](../../references/bibliography.md#reilly2022staff); author's book page). Larson's list
+([Reilly, 2022](../../references/bibliography.md#reilly2022staff)). Larson's list
 (direction, mentorship, engineering perspective, exploration, glue, less coding) is in Chapter 4. Both
 agree on the point that matters here: the output is other people's decisions and capability.
 
@@ -129,8 +133,9 @@ A scope that works has five parts (**this book's recommendation**):
 3. **Owned decisions.** The decisions the staff engineer makes, and the ones they are only consulted on.
    Chapter 28 assigns decision rights and names the conditions (written mandate, time, accountability
    for consequences); the scope records this person's share.
-4. **Outcomes.** Two or three, for two quarters, stated as changes in the domain ("every tier 1 data
-   migration rehearsed before release"), not as activities ("advise on migrations").
+4. **Outcomes.** Two or three, for two quarters, stated as changes in the domain ("every
+   [tier 1](../../glossary.md#tier-1) data migration rehearsed before release", where tier 1 means the
+   most business-critical components), not as activities ("advise on migrations").
 5. **What stops.** The work the staff engineer no longer does: unscheduled questions, incidents outside
    their domain, reviews that others can do. A scope without a stop list adds load to the old load.
 
@@ -250,10 +255,18 @@ evidence is Chapter 8's topic.
 
 ## Engineering Organization Example
 
-The figures in this section are **illustrative**: fictional additions for this chapter, consistent with
-the [baseline](../../case-studies/northstar/baseline-data.md) and the
-[first quarter](../../case-studies/northstar/first-quarter.md). In weeks 12 and 13, the director
-sampled the three staff engineers' calendars and chat logs. Average hours per week:
+!!! info "Northstar so far"
+    Week 13, day 90 of the director's first year. [Sev1 and
+    Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
+    to 21 in quarter 1 after ownership, severity, and weekly release changes, and both renewal
+    commitments are on track. See the [timeline](../../case-studies/northstar/timeline.md).
+
+This example is a diagnosis of Northstar, the book's fictional company, using the chapter's tools. Its
+figures are **illustrative** and consistent with the
+[baseline](../../case-studies/northstar/baseline-data.md) and the
+[first quarter](../../case-studies/northstar/first-quarter.md). In weeks 12 and 13 the director sampled
+the calendars and chat logs of the three staff engineers: Ines Carvalho (Core domain), Kwame Mensah
+(infrastructure and reliability), and Li Na Zhou (data and integration). Average hours per week:
 
 | Work | Ines Carvalho | Kwame Mensah | Li Na Zhou |
 |---|---|---|---|
@@ -266,18 +279,19 @@ sampled the three staff engineers' calendars and chat logs. Average hours per we
 
 Unscheduled work is 24 of 120 hours, 20 percent: the same share as the staff engineers' unplanned load
 at baseline. The first quarter's mandates added program work but removed nothing. Ines's eight hours
-of unscheduled Core questions are unchanged from the baseline figure.
+of unscheduled questions about Core, Northstar's monolith, are unchanged from the baseline figure.
 
-**What the hours are worth.** At the average fully loaded cost of $185,000 per engineer (a floor for
-staff engineers), 24 hours a week is 0.6 of an engineer, about $111,000 a year. Worse, each answer helps
-one person once. If two written boundary rules for core/customer each removed a quarter of Ines's
-questions, she would gain about four hours a week (8 × 0.25 × 2).
+**What the hours are worth.** The unscheduled hours cost about $111,000 a year: 24 hours a week is 0.6
+of an engineer at the average [fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000
+(salary plus benefits, taxes, and equipment; a floor for staff engineers). Worse, each answer helps one
+person once. Two written boundary rules for core/customer, each removing a quarter of Ines's questions,
+would give her back about four hours a week.
 
 **Design reviews.** In weeks 7 to 12, 14 Core design proposals reached Ines: Billing 5, Customer
 Experience 4, Payments and Integrations 3, Orders 2. She rejected 8, 5 of them with no stated reason.
 Neither of the two Orders engineers who had stopped proposing designs at baseline submitted one. Orders
-makes about 45 percent of core/permissions changes (17 of 38 in the baseline quarter) and owns
-core/customer, the module Ines's funded extraction works in, yet sent the fewest proposals.
+makes about 45 percent of core/permissions changes (17 of 38 in the baseline quarter). It also owns
+core/customer, the module Ines's funded extraction works in. Yet it sent the fewest proposals.
 
 The sample shows both failure cases: Ines a critic in reviews and a hero for questions, Li Na the hero
 for integrations, Kwame still pulled into incidents. None has a scope that outlasts the quality program.
@@ -403,8 +417,8 @@ activity counts.
 
 This case is **fictional** and is set at the start of quarter 2 (week 14). It continues the
 [first quarter](../../case-studies/northstar/first-quarter.md), Chapter 4's case, and Chapter 10's
-stay interview with Ines Carvalho. Its outcomes are open: they are decisions the reader faces. New
-facts are recorded as Northstar additions for this chapter.
+stay interview with Ines Carvalho (a conversation about what would keep her). Its outcomes are open:
+they are decisions the reader faces.
 
 **Where things stand.** In the first quarter the staff engineers received transformation mandates
 (Kwame Mensah release and detection, Ines Carvalho Core module boundaries and contract tests, Li Na
@@ -419,11 +433,11 @@ The time sample shows the mandates added work without removing any.
 | Archetype target | Architect for delivery and reliability | Architect for Core | Architect for data integrity, with a capped solver share for integrations |
 | Domain | Pipelines and operational readiness of tier 1 | Core module boundaries and shared modules | Migrations, configuration, and integration contracts |
 | Owned decisions | Operational and pipeline standards; release policy | Core code standard; module boundary rules | Data, migration, and configuration standards; contract versioning rules |
-| Stop list | Incident pulls outside commander shifts | Unscheduled Core questions | First-come integration questions |
+| Stop list | Incident pulls outside his shifts as [incident commander](../../glossary.md#incident-commander) (the person who leads the response) | Unscheduled Core questions | First-come integration questions |
 | Sponsor | Director | Director | Director |
 
 Open choices for the reader: whether Ines's boundary rules apply to core/permissions before its owner
-is chosen (Chapter 13 frames that decision); whether Li Na decides ADR-0001, the open record on how integrations read ledger data (Chapter 28); whether a fourth scope is needed for the frontends, which no
+is chosen (Chapter 13 frames that ownership decision, still open); whether Li Na decides ADR-0001, the open record on how integrations read ledger data (Chapter 28); whether a fourth scope is needed for the frontends, which no
 staff engineer covers; and whether all three keep reporting to the director (nine direct reports).
 
 **Decision 2: coaching Ines out of the critic pattern.** Chapter 10 asks the reader to plan the
@@ -435,7 +449,8 @@ agreed to try a change. The director's draft coaching plan:
   which she would agree.
 - **Office hours.** Two fixed one-hour slots a week replace unscheduled questions, against the
   baseline's eight hours.
-- **Practice.** Ines co-reviews one Orders design a fortnight with Rafael Duarte, who shares
+- **Practice.** Ines co-reviews one Orders design a fortnight with Rafael Duarte, a senior engineer in
+  Orders who shares
   core/order-capture review ownership, and writes the boundary rationale in the decision record.
 - **Measures, with gaming named.** Core design proposals by team, with the share accepted; rejections
   with a stated reason, with the director reading three a month against boilerplate; unscheduled hours,
@@ -470,7 +485,7 @@ them.
 
 ### Applied Leadership
 
-**A1.** In week 16, Priya Raman tells you that Ines Carvalho has blocked an Orders change to the
+**A1.** In week 16, Priya Raman (Orders manager) tells you that Ines Carvalho has blocked an Orders change to the
 core/customer interface needed for bulk ordering, due in week 26, because it conflicts with her
 extraction plan. Ines says the change would have to be undone within a quarter. Using the disagreement
 rule in this chapter, decide who decides, what each must write, and what you do if both appeal to you.
@@ -481,18 +496,18 @@ hours fell to about five a week, and two Billing engineers say they now message 
 the progress, decide what to change in the plan, and write what you say to Ines.
 
 **A3.** At the end of quarter 2, Kwame Mensah asks to be promoted to principal engineer. He cites the
-release working group, the weekly Core release, and the fall in pipeline failures unrelated to the
-change from 9 to 4 percent. Northstar has had no principal role since its principal architect left in 2021. Decide what you answer, what a principal
+release working group, the weekly Core release, and the fall in unrelated (flaky) pipeline failures
+from 9 to 4 percent. Northstar has had no principal role since its principal architect left in 2021. Decide what you answer, what a principal
 role at Northstar would need to exist, and how you keep him engaged either way.
 
 ### Executive Decision-Making
 
-**X1.** Victor Lindqvist proposes using the next backfill to hire an external principal architect to
+**X1.** Victor Lindqvist (CTO) proposes using the next backfill to hire an external principal architect to
 "own architecture" above the three staff engineers, arguing that the board expects one. Headcount is
 flat at 80 engineers. Advise Victor: whether to do it, what the role would own that the staff engineers
 do not, what it would cost Northstar beyond salary, and what you would do instead.
 
-**X2.** Rajiv Menon asks why Northstar pays three staff engineers near the Staff band midpoint of
+**X2.** Rajiv Menon (CFO) asks why Northstar pays three staff engineers near the Staff band midpoint of
 $195,000 instead of using the same money for more Senior Engineers. Prepare your answer for the
 budget review: the evidence you would show after two quarters of standing scopes, what you would admit
 you cannot yet show, and which result would lead you to change the staff roles.
@@ -525,8 +540,7 @@ you cannot yet show, and which result would lead you to change the staff roles.
 ## References and Further Reading
 
 - [Larson, 2021](../../references/bibliography.md#larson2021staff). *Staff Engineer*: the main
-  practitioner account of the staff-plus track, mostly free at staffeng.com. Pages read for this
-  chapter: [Staff archetypes](../../references/bibliography.md#larson-staff-archetypes),
+  practitioner account of the staff-plus track, mostly free at staffeng.com. Pages used here: [Staff archetypes](../../references/bibliography.md#larson-staff-archetypes),
   [What do Staff engineers actually do?](../../references/bibliography.md#larson-staffeng-actually-do),
   [Where do Staff-plus engineers fit?](../../references/bibliography.md#larson-staffeng-reporting),
   [Staying aligned with authority](../../references/bibliography.md#larson-staffeng-authority), and

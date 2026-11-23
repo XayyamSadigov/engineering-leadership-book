@@ -41,7 +41,7 @@ Apply the two tests: written, owned, and applied to every team; and set before t
 
 **What to do with preferences:** they become priced variables in the negotiation, or proposals to the
 standard owners for the next review, not things the manager refuses in the meeting. **Criteria:** uses
-the tests rather than intuition; checks the canon's standards for the review rule. **Weak answer:**
+the tests rather than intuition; checks Northstar's written standards for the review rule. **Weak answer:**
 accepting all eight as the floor, which teaches product that engineering's "non-negotiable" means
 "preferred".
 

@@ -1,11 +1,12 @@
 # Engineering Manager performance rubric
 
-**Used in:** Chapter 4 (measuring managerial effectiveness), Chapter 41 (managing and developing
-engineering managers).
+**Used in:** [Chapter 4](../parts/01-foundations/04-the-leadership-ladder.md) (measuring managerial
+effectiveness), [Chapter 41](../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md)
+(managing and developing engineering managers).
 **Owner:** the manager's manager (usually the director); the manager writes a self-assessment
 against the same rubric first.
 **Cadence:** a two-quarter evidence window. Recheck the development plan quarterly; re-rate every
-two quarters, calibrated across all managers who report to the same leader.
+two quarters, [calibrated](../glossary.md#calibration) across all managers who report to the same leader.
 
 An engineering manager's output is a team that delivers and keeps improving without them. This
 rubric assesses that, on six dimensions, using evidence a third person could check. It replaces
@@ -31,7 +32,9 @@ renegotiated commitments and personal heroics and ignores whether the team is ge
 7. Calibrate with the other managers' assessments before sharing ratings. Do not add the ratings
    into a composite score or rank managers against each other.
 
-## The rubric
+## Template
+
+The rubric:
 
 | Dimension | Not yet | Solid | Strong |
 |---|---|---|---|
@@ -63,29 +66,27 @@ assessment:
   calibrated_with: []
 ```
 
-## Example: Elena Sokolova, Payments and Integrations
+## Example: Northstar, Elena Sokolova, Payments and Integrations
 
-**Fictional.** Window: weeks 1 to 26 (quarters 1 and 2). Ratings match Chapter 41's case study. Evidence is limited to the
-[Northstar baseline](../case-studies/northstar/baseline-data.md) and
-[first quarter](../case-studies/northstar/first-quarter.md) pages; baseline-quarter facts are
-context, not window evidence. Quarter 2 results come from the first quarter page's quarter 2 table.
+!!! info "Northstar so far"
+    Weeks 1 to 26 of the Engineering Director's first year at Northstar Technologies, a fictional company.
+    Elena Sokolova manages Payments and Integrations and has the organization's best operational
+    discipline. The director drafts this assessment in week 24 and finalizes it in week 27. See the
+    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
 
-**Context.** 12 engineers at baseline, 13 from week 10 (one quality engineer joined). Owns
-payments-gateway, bank-connectors, erp-sync, and, from week 4, the orphaned webhooks service. Owns
-the accounting-system integration due in week 19. Baseline quarter: 6 Sev1 and Sev2 incidents (three
-third-party dependency, two payments-gateway configuration changes, one webhooks deployment); 2 of
-3 committed items delivered.
+Window: weeks 1 to 26 (quarters 1 and 2). Baseline-quarter facts from the
+[baseline data](../case-studies/northstar/baseline-data.md) are context, not window evidence.
 
 | Dimension | Rating | Dated evidence | Contrary evidence |
 |---|---|---|---|
-| 1. Outcomes in context | Strong | Week 19: accounting integration live for the renewal customer with daily reconciliation (Chapter 39 report); week 6: payments-gateway flag changes move to reviewed, validated merge requests (pipeline record) | The ledger read path is unnamed and ADR-0001 is open |
+| 1. Outcomes in context | Strong | Week 19: accounting integration live for the renewal customer with daily reconciliation (director's report); week 6: payments-gateway flag changes move to reviewed, validated merge requests (pipeline record) | The ledger read path is unnamed and ADR-0001, the decision on how integrations read ledger data, is open |
 | 2. Operational ownership | Strong | Weekly 30-minute operations review, two years old at baseline and still running at the start of quarter 2 (meeting notes); week 8: a contract test catches a payments-gateway rounding change (pipeline record) | Blind spot: payments-gateway configuration edits never reached the near-miss log (17 entries at baseline), though that file produced two incidents; webhooks arrived in week 4 with signing keys never rotated |
 | 3. People growth | Solid | Rotating facilitator in the operations review gives each engineer practice leading it (meeting notes); a senior engineer acts as tech lead (self-assessment) | The acting tech lead holds no title; no promotion case yet |
 | 4. Team health | Strong | In the operations review the engineer coming off on-call presents and Elena speaks last, so bad news surfaces from the team (meeting notes); one departure in the 12 months before the window (HR record, context) | No upward feedback collected for her team in the window |
-| 5. Cross-team leverage | Strong | Week 16: facilitates Customer Experience's team health check (peer manager); start of quarter 2: Priya Raman asks to adopt the operations review and near-miss log in Orders (peer manager) | |
-| 6. Running the role | Solid | Time split 35 people, 35 delivery, 15 technical (calendar reconstruction, baseline); technical direction delegated to a senior engineer; quarter 2: lowers WIP limits for the integration (team board) | Week 14 onward: the CTO told her in passing to "read the tables now" on ADR-0001; whether she escalated the conflict is not recorded. Ask |
+| 5. Cross-team leverage | Strong | Week 16: facilitates Customer Experience's team health check (peer manager); start of quarter 2: Priya Raman (Orders manager) asks to adopt the operations review and near-miss log in Orders (peer manager) | |
+| 6. Running the role | Solid | Time split 35 people, 35 delivery, 15 technical (calendar reconstruction, baseline); technical direction delegated to a senior engineer; quarter 2: lowers WIP limits for the integration (team board) | Week 14 onward: Victor Lindqvist (CTO) told her in passing to "read the tables now" on ADR-0001; whether she escalated the conflict is not recorded. Ask |
 
-Drafted in week 24 and finalized in week 27, as in Chapter 41. There is no composite score: the six
+There is no composite score: the six
 ratings are read separately and are not used to rank Elena against the other managers.
 
 **Development goals:**
@@ -113,3 +114,19 @@ ratings are read separately and are not used to rank Elena against the other man
 3. What would the neighboring teams say about dimension 5?
 4. Which "No evidence" ratings reveal a gap in the director's own information?
 5. What should this manager stop doing to make room for the two goals?
+
+## Evidence and references
+
+The method is [Chapter 41](../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md).
+
+- [Scullen, Mount, and Goff, 2000](../references/bibliography.md#scullen2000latent): the abstract
+  reports that the rater's own tendencies accounted for over half of the variance in managers'
+  ratings (**research finding**). That is why every rating cites dated evidence and is calibrated.
+- [Hoffman and Tadelis, 2021](../references/bibliography.md#hoffman2021people): at one large high-tech
+  firm, the abstract reports that survey-measured people-management skills had a strong negative
+  relation to employee turnover (**research finding**), support for rating team health and people
+  growth alongside delivery.
+- [Google re:Work](../references/bibliography.md#rework-great-managers): Project Oxygen, Google's
+  multi-year look at whether managers matter (**industry research**).
+
+The six dimensions, the evidence rules, and the two-goal limit are **this book's recommendation**.

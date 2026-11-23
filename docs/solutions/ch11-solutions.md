@@ -56,8 +56,7 @@ would change the label.
 not a peer-reviewed study, and the re:Work guide lists five dynamics, with dependability (reliable,
 on-time quality work) second, so it does not support safety as a substitute for accountability.
 Edmondson (1999) studied 51 teams in one manufacturing company and found safety associated with
-learning behavior, which mediated its association with performance: correlational, outside software,
-read here at abstract level. Lenberg and Feldt found, in 38 software teams with self-assessed
+learning behavior, which mediated its association with performance: correlational and outside software. Lenberg and Feldt found, in 38 software teams with self-assessed
 performance, that norm clarity was a stronger predictor than safety. None of this is "proof", and
 "number one driver" is a causal claim no cited study makes.
 
@@ -141,7 +140,7 @@ The weak answer runs a safety workshop in week 1 or measures success by the chan
 
 ## X1 — Bonuses tied to incident counts
 
-**Do not support it as proposed.** At Northstar, severity is assigned by people, and the first quarter
+**Do not support it as proposed.** Helena Marsh (CEO) wants accountability; at Northstar, severity is assigned by people, and the first quarter
 already saw four consecutive incidents rated Sev3 in week 7, one of them a two-hour payment delay for
 nine customers. A bonus tied to the count rewards exactly that reclassification, and rewards teams for
 not declaring incidents at all. Under-reporting is the outcome the organization can least afford:
@@ -162,6 +161,8 @@ question is which measure survives being paid on. The weak answer accepts the bo
 safeguards" without naming the reclassification incentive.
 
 ## X2 — Mandating Elena's review everywhere
+
+Victor Lindqvist (CTO) is right that the practice works; the question is what to mandate.
 
 **Standardize the outcomes, not the ritual.** Every team, from next quarter: a near-miss record anyone
 can write in; every follow-up action and commitment with one owner and an agreed date; a weekly

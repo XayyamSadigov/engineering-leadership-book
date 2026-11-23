@@ -23,7 +23,7 @@ roadmap, next to the auth-svc ownership he already holds), combine the manager r
 technical leadership deliberately, or plan for Platform Operations to grow back through platform work
 rather than headcount.
 
-**Criteria:** each range is justified from canon facts, not from a single number; the answer notices
+**Criteria:** each range is justified from facts in the case, not from a single number; the answer notices
 that ranges differ by manager. **Weak answer:** "everyone should have eight", or treating Elena's 13 as
 fine because her team performs well today.
 
@@ -50,7 +50,7 @@ decisions.
 
 ## F3 — Recounting a data-export move
 
-**Assumptions (state them).** The canon matrix has Data and Analytics → Billing 2 and Billing → Data
+**Assumptions (state them).** The baseline matrix has Data and Analytics → Billing 2 and Billing → Data
 and Analytics 2. Assume both Billing → Data links were month-end reporting changes Billing needed, and
 one of the Data → Billing links was a ledger field the export needed; the other was unrelated.
 
@@ -129,39 +129,42 @@ seam itself; a reversal has its own transition cost.
 **Weak answer:** reversing immediately on one quarter's count, or ignoring the gap because the span
 problem was fixed.
 
-## X1 — Victor at week 44
+## X1 — Victor at week 26
 
-**One defensible decision.** Approve the recommended option of Chapter 35's proposal: it fixes the
-worst span (Customer Experience at 17) for one seat, resolves two ownership questions, and adds no
-layer. Approve it with named triggers rather than leaving the open items implicit:
+**One defensible decision.** Approve what is already done and cheap, and defer every structural move
+until after the renewals, with named triggers rather than open-ended deferral.
 
-1. **Orders.** Reopen the split (alternative C) if, two quarters after core/permissions arrives, Orders'
-   span is above 16, its on-call load or lead time rises, or Priya's one-on-ones fall below every two
-   weeks.
-2. **Web and Mobile.** Require the matrix to count them as separate teams from week 53, so their links
-   become visible; review after one quarter.
-3. **Orders and Billing.** Require evidence that the order-to-invoice contract shortened waits (lead
-   time of items crossing the pair, before and after). If not, the pair is a candidate for a shared
-   manager or a boundary move.
-4. **Layer.** No layer in year 2 unless the director's reports grow past about ten or the order-to-cash
-   group's internal disputes keep reaching the director; the 27-inside, 48-outside count says a layer
-   there would slow more links than it speeds.
+1. **Approve now.** The order-to-invoice contract stays, funded as named work rather than absorbed by
+   Billing. No team moves before bulk ordering ships and its support period ends.
+2. **Leave for the year-2 design.** The Customer Experience span (17) is the strongest case for a
+   change: two products, two sites, an informal lead asking for recognition. Ask the director to bring
+   a design with options and seat costs, and to count web and mobile links separately from now on so
+   the design can be tested.
+3. **Orders.** Reopen the split (M2) if Orders' span grows (for example, if core/permissions is
+   assigned to it), its on-call load or lead time rises, or Priya's one-on-ones fall below every two
+   weeks. Ask for a seam that keeps pricing rules with order capture to be costed.
+4. **Orders and Billing.** Require evidence that the contract shortened waits: lead time of items
+   crossing the pair, before and after. If not, the pair is a candidate for a shared manager or a
+   boundary move.
+5. **Layer.** No layer unless the director's reports grow past about ten or the order-to-cash group's
+   disputes keep reaching the director. The 27-inside, 48-outside count says a layer there would slow
+   more links than it speeds.
 
 **Evidence required.** The span table and dependency matrix rebuilt each quarter; one-on-one measures
-for Orders and the two new teams; Rajiv's seat count kept current.
+for Orders and Customer Experience; Rajiv's seat count kept current.
 
 **Criteria:** each approval names its seat cost and each open item a trigger; the layer decision rests
-on the matrix, not on the chart's look. Approving alternative B or C is defensible if the trade-offs are
-stated. **Weak answer:** approving everything at once, or deferring everything because the evidence is
-incomplete.
+on the matrix, not on the chart's look. Approving a Customer Experience split now is defensible if the
+answer shows it can wait for neither renewal. **Weak answer:** approving everything at once in the
+middle of renewal work, or deferring everything with no trigger because the evidence is incomplete.
 
 ## X2 — "Why so many managers?"
 
-**The answer.** Seven managers for 79 engineers is about 1 to 11.3, already above the range this book
-and the practitioner sources cite for engineering managers (Larson's six to eight; this book's eight to
-ten by default). Before the change, one manager had 17 people, with effects already visible
-(one-on-ones mostly status, a lead without recognition), and three others are still above range. The
-one new manager came from an engineering seat, not a new hire: headcount is still 87.
+**The answer.** Six managers for 77 engineers is about 1 to 12.8, above the range this book and the
+practitioner sources cite for engineering managers (Larson's six to eight; this book's eight to ten by
+default). One manager has 17 people, with effects already visible (one-on-ones mostly status, a lead
+without recognition), and four others are above range too. Northstar has, if anything, too few
+managers; adding one would cost an engineering seat, since headcount is fixed at 87.
 
 **What the flattening evidence says.** Rajan and Wulf found large US firms widened spans and removed
 levels at the top, between division heads and the CEO. It says nothing about first-line spans of

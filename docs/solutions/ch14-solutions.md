@@ -142,7 +142,7 @@ flat headcount and with 15-week median backfills. It does nothing for Bogotá or
 where the collaboration gaps actually are. *Closing Bogotá:* 16 engineers in Payments and Integrations,
 Customer Experience, and Data and Analytics; replacing them in Minneapolis takes quarters, during the renewal
 commitments, and loses the mobile team entirely. *Keeping Bogotá and investing in the boundary:* about
-$114,000 a year of travel plus the chapter's compensations, with Rajiv Menon's flat-opex constraint
+$114,000 a year of travel plus the chapter's compensations, with Rajiv Menon's (CFO) flat operating-expense constraint
 requiring an offset.
 
 **Recommendation.** Keep three anchor days; keep Bogotá; fund the travel as a stated bet with a break-even

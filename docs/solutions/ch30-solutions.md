@@ -103,7 +103,7 @@ tax-svc, which also avoids B's latency and availability exposure.
 **Ownership.** Marcus Oyelaran owns the vendor relationship; a named engineer plus a second person own
 the importer, which removes the one-person rate research (TR-09).
 
-**Timing.** Start after Billing's reserved weeks 1 to 3 for the ledger export; 70 engineer-days over the
+**Timing.** Start after Billing's reserved weeks 14 to 16 for the ledger export; 70 engineer-days over the
 rest of the quarter is about one engineer full time, which must come from Billing's prevention share.
 
 **Reversal evidence.** After two quarters: any tax incident traced to content; import failures needing

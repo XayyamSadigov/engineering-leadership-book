@@ -7,19 +7,19 @@ interest instead of ugliness, how to rank debt against features, and how to secu
 survives a roadmap crunch. The running example is the debt register of Northstar Technologies, the
 fictional company in the [case study](../../case-studies/northstar/index.md).
 
-Chapter 27 shows how debt work fits into a quality transformation; this chapter owns the economics
-and the register that feed it. Chapter 45 treats cost of delay in depth.
+This chapter owns the economics and the register; Chapter 27 shows how debt work fits into a wider
+quality program. Chapter 45 treats cost of delay in depth.
 
 ## Why This Matters
 
 On one team, debt is concrete: a good tech lead trades a little feature work for a fix without
-asking anyone. Across 50 to 150 engineers, that judgment stops working. The team that pays the interest is often
-not the team that took the loan: a shared module nobody owns slows four teams, and none can justify
+asking anyone. Across 50 to 150 engineers, that judgment stops working. The team that pays the
+interest is often not the team that took the loan: a shared module nobody owns slows four teams, and none can justify
 fixing it alone. Debt arguments reach the director as competing requests for "refactoring time,"
 backed by conviction rather than numbers. Product leaders, who see only that estimates keep growing,
 conclude that "tech debt" is what engineers say when they want to do interesting work.
 
-At executive level the stakes are capital allocation. A CTO who cannot say what debt costs per year,
+At executive level the stakes are capital allocation. A chief technology officer (CTO) who cannot say what debt costs per year,
 what removing the worst of it would cost, and what the business gets back will see debt work cut
 first. A CTO who can say it in money and capacity gets a standing budget. The difference is whether
 the organization records **interest** (what the debt costs, recurrently) or only **principal** (what
@@ -85,14 +85,13 @@ be brought to a standstill under that load
 Two features of the original are worth keeping: the debt is taken **deliberately**, to ship early
 and learn, and the cost that matters is the **interest**. The report gives a metaphor, not evidence.
 
-Twenty years later, the guest editors of an IEEE Software special issue noted that the metaphor had
-been introduced to explain the need for refactoring to non-technical stakeholders, and that the term
-had come to cover so many phenomena that the field needed an organizing structure
-([Kruchten, Nord, and Ozkaya, 2012](../../references/bibliography.md#kruchten2012technical)). This
-book read only the abstract of that four-page introduction.
-A systematic mapping of 94 publications from 1992 to 2013 reached a similar conclusion: "debt" was
-used in different ways by different people, which made it ambiguous, and code-level debt had received
-most of the attention ([Li, Avgeriou, and Liang, 2015](../../references/bibliography.md#li2015systematic)).
+The term then stretched. Twenty years later, the abstract of an IEEE Software special issue's
+introduction says the metaphor had been introduced to explain the need for refactoring to
+non-technical stakeholders. By then it covered so many phenomena that the field needed an organizing
+structure ([Kruchten, Nord, and Ozkaya, 2012](../../references/bibliography.md#kruchten2012technical)).
+A systematic mapping of 94 publications from 1992 to 2013 reached a similar conclusion. Different
+people used "debt" in different ways, which made it ambiguous, and code-level debt had received most
+of the attention ([Li, Avgeriou, and Liang, 2015](../../references/bibliography.md#li2015systematic)).
 That is **research** about the literature, and a decade old.
 
 ### Where the metaphor breaks down
@@ -118,14 +117,14 @@ analogy fails in ways that change decisions:
   but nobody borrowed. Treating every gap as debt turns the register into a wish list.
 
 The rule this book draws (**this book's recommendation**): use the metaphor to communicate and the
-economics to decide. With a CFO, "we are paying interest" works. In a register, the entry must say
+economics to decide. With a chief financial officer (CFO), "we are paying interest" works. In a register, the entry must say
 how much, in whose time, and with what evidence.
 
 ### Debt beyond code
 
 Because research and tooling concentrate on code, organizations look for debt with static analysis
-and find what static analysis finds. Li and colleagues classified debt into ten types; this book did
-not read their list and uses its own working categories:
+and find what static analysis finds. Li and colleagues classified debt into ten types; the table uses
+this book's own working categories:
 
 | Kind | What it looks like | How interest shows up |
 |---|---|---|
@@ -157,9 +156,9 @@ Interest has two parts, and a register should record both:
 A third part, **option cost**, is debt that slows a specific planned feature. Record it against that
 feature's cost of delay rather than estimating it in general.
 
-How large is time interest in practice? The most cited figure comes from Besker, Martini, and Bosch:
-in a longitudinal study that surveyed 43 developers, with follow-up interviews of 16, developers
-reported wasting on average 23 percent of their development time because of technical debt
+How large is time interest in practice? The most cited figure is self-reported. Besker, Martini, and
+Bosch ran a longitudinal study that surveyed 43 developers, with follow-up interviews of 16.
+Developers reported wasting on average 23 percent of their development time because of technical debt
 ([Besker, Martini, and Bosch, 2018](../../references/bibliography.md#besker2018technical)). The
 journal version adds a validation on an independent dataset, and reports that developers were often
 forced to introduce new debt and that the extra time went most often to additional testing
@@ -176,9 +175,9 @@ finding** is observational (harder problems may produce worse code and take long
 one commercial tool's code-health measure. Its value for leaders is the method: it measures interest
 where change meets the code.
 
-This book found no large peer-reviewed study that measures the organizational cost of debt across
-many companies with system data (research gap G9). Quote external figures only with their samples,
-and use them to motivate measurement, not to replace it.
+The evidence is thin: no large peer-reviewed study measures the organizational cost of debt across
+many companies with system data. Quote external figures only with their samples, and use them to
+motivate measurement, not to replace it.
 
 Two cautions. Self-reported debt time inflates once debt claims win capacity; pair it with system
 data. And unplanned work is not the same as debt interest: much of it has other causes.
@@ -193,8 +192,7 @@ widely credited to Donald Reinertsen's *The Principles of Product Development Fl
 ([Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles)); Chapter 45 develops
 it. A popular operational form is **Weighted Shortest Job First (WSJF)**, which the Scaled Agile
 Framework (SAFe) defines as relative cost of delay divided by relative job size
-([SAFe, WSJF](../../references/bibliography.md#safe-wsjf)). WSJF as a named method belongs to SAFe;
-this book verified SAFe's definition but not the method's origin in Reinertsen's book (gap G6).
+([SAFe, WSJF](../../references/bibliography.md#safe-wsjf)). WSJF as a named method belongs to SAFe.
 
 For debt, the analog is direct:
 
@@ -208,7 +206,8 @@ For debt, the analog is direct:
 
 This is the rule in the [technical debt register template](../../templates/technical-debt-register.md).
 Its value is not precision: it puts debt and features in one unit, so product leaders argue about
-inputs rather than the category's legitimacy, and it favors cheap, costly irritants over grand refactors.
+inputs rather than the category's legitimacy. And it favors cheap fixes for items that cost a lot every
+month over grand refactors.
 
 The ratio does not decide alone. Every entry has four options, cheapest effective first: **remove**
 (pay the principal), **reduce** (pay part of it to cut most of the interest), **contain** (stop it
@@ -217,10 +216,17 @@ with a review date).
 
 ## Engineering Organization Example
 
+!!! info "Northstar so far"
+    Week 3 of the director's first year. The baseline quarter had 30 Sev1 and Sev2 incidents and
+    $410,000 in service credits, and about a third of capacity went to unplanned work. In week 4 the
+    director will reserve 12 FTE for prevention, with Billing's share at 25 percent. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
 The template's Northstar register lists five entries. Here the director adds two non-code entries
-and prices the top of the register. Every number is **illustrative**: canonical figures come from the
+and prices the top of the register. Every number is **illustrative**. Northstar figures come from the
 [baseline](../../case-studies/northstar/baseline-data.md), including its extended section on technical
-debt, which supplies Core pipeline volume and CI maintenance effort.
+debt, which supplies the pipeline volume of [Core](../../glossary.md#core) (the Java monolith) and CI
+maintenance effort.
 
 Assumptions:
 
@@ -228,9 +234,12 @@ Assumptions:
 - Core's pipelines run about 1,000 times a month (baseline). At the baseline's 9 percent
   of runs failing for reasons unrelated to the change, that is about 90 spurious failures a month,
   each assumed to cost 30 minutes of an engineer's attention. The 74-minute rerun wait is ignored.
-- Running four CI systems costs about 1.5 FTE of infrastructure time a year (baseline).
-- Risk is valued conservatively: service credits averaged about $13,700 per Sev1 or Sev2 incident
-  last quarter ($410,000 ÷ 30), and the model counts half of that per incident.
+- Running four continuous integration (CI) systems costs about 1.5 [FTE](../../glossary.md#fte)
+  (full-time equivalent engineers) of infrastructure time a year (baseline).
+- Risk is valued conservatively. Service credits averaged about $13,700 per Sev1 or Sev2 incident
+  last quarter ($410,000 ÷ 30), and the model counts half of that per incident. Sev1 and Sev2 are the
+  two highest [severity](../../glossary.md#severity-sev1-sev2-sev3) ratings: an order or payment path
+  down, or wrong financial records, for Sev1; narrower failures for Sev2.
 
 | ID | Kind | Annual time interest | Annual risk value | Principal (midpoint) | Ratio | Trigger |
 |---|---|---|---|---|---|---|
@@ -240,9 +249,11 @@ Assumptions:
 | TD-006 Four CI systems | Infrastructure | 1.5 FTE ≈ $278,000 | Not counted | 2 engineer-years ≈ $370,000 | 0.75 | None known |
 | TD-007 Flaky Core tests | Test | 68 engineer-days ≈ $54,000 | Not counted | 25 engineer-days ≈ $20,000 | 2.7 | None known |
 
-TD-007: 90 failures × 0.5 hours × 12 months = 540 hours, about 68 engineer-days or $54,000 a year.
-TD-004: 3 migration-triggered incidents last quarter, about 12 a year if nothing changes, at half the
-average credit.
+How two figures are derived:
+
+- TD-007: 90 failures × 0.5 hours × 12 months = 540 hours, about 68 engineer-days or $54,000 a year.
+- TD-004: 3 migration-triggered incidents last quarter, about 12 a year if nothing changes, at half
+  the average credit.
 
 Three observations.
 
@@ -307,7 +318,8 @@ interest no team sees. Free spending risks interesting work winning over costly 
 kills ownership. Let teams choose within their share and account for it monthly; direct only
 cross-team entries.
 
-**Debt work against prevention.** Chapter 27 funds prevention aimed at defect inflow. Some debt items
+**Debt work against prevention.** Northstar's [prevention allocation](../../glossary.md#prevention-allocation)
+funds work aimed at defect inflow. Some debt items
 are prevention (TD-004); others are not (a slow but reliable build). When capacity is scarce, debt
 that reduces defect inflow comes first.
 
@@ -346,9 +358,9 @@ at the top of the register, and turn large entries into sliced plans. **The dire
 quarterly, funds entries that exceed team shares, assigns owners to shared components (an unowned
 entry cannot be scheduled), and reports upward.
 
-The size of the share is a judgment, not a research result; this book found no study that identifies
-a correct percentage. At Northstar the standing share is Chapter 27's prevention allocation, not an
-addition to it. **This book's recommendation**: start at 10 to 20 percent per team, higher where
+The size of the share is a judgment, not a research result; no study identifies a correct
+percentage. At Northstar the standing share comes out of the prevention allocation (12 FTE in quarter
+1, sized per team), not on top of it. **This book's recommendation**: start at 10 to 20 percent per team, higher where
 unplanned work and recorded interest are high, and adjust each quarter on two signals: whether the
 top entries move and whether their interest falls. A share never spent on register entries is too
 large or poorly governed; a register whose top never moves is underfunded.
@@ -359,11 +371,13 @@ product. Its spending is reported monthly against named entries, in the same rev
 date for paying it back. A share that can be borrowed silently will be.
 
 Large entries such as TD-001 and TD-006 (about two engineer-years each) are funded as projects with
-a business case, a receiving owner, and interim slices, as Chapter 27 treats the release-train work.
+a business case, a receiving owner, and interim slices, as Northstar funded the release-train work
+through a release working group with owners from the teams.
 
 ## CTO Perspective
 
-At executive level, debt is a balance-sheet idea used to make a cash-flow argument.
+At executive level, debt sounds like a balance-sheet item, something owed. The argument that wins is
+about cash flow: what the debt costs every year, and what removing it returns.
 
 **Report interest, not inventory.** "We have 140 items of technical debt" invites "so what?" "Debt
 in our release process and test suite costs about $500,000 a year in engineering time and sits behind
@@ -406,24 +420,29 @@ This case is **fictional**. It continues the Northstar story from the
 [register template](../../templates/technical-debt-register.md).
 
 In week 3, the director found Northstar's existing debt list: a wiki page of 143 items from a "tech
-debt week" eighteen months earlier, nine closed, none with an owner or a cost. The most-voted item was a redesign of the core/customer module,
-proposed by Ines Carvalho at about three engineer-years (both from the baseline's extended section
-on technical debt).
+debt week" eighteen months earlier, nine closed, none with an owner or a cost. The most-voted item
+was a redesign of the core/customer module, proposed by Ines Carvalho (staff engineer, Core domain) at
+about three engineer-years.
 
-Ines's case was strong on the code. The director asked what it cost per year and where. Nobody knew; the module had
-no owner, no alerts, and no change-level data. The director did not reject the proposal. Ownership
-came first (core/customer to Orders, as in TD-003), and Priya Raman's team tagged every change
-touching the module for a quarter, recording review wait and rework.
+Ines's case was strong on the code. The director asked what it cost per year and where. Nobody knew;
+the module had no owner, no alerts, and no change-level data. The director did not reject the
+proposal. Ownership came first (core/customer went to Orders in week 4, as in TD-003). Priya Raman's
+Orders team then tagged every change touching the module for a quarter, recording review wait and
+rework.
 
-Meanwhile the priced register put two small items on top. Li Na Zhou's migration checks (TD-004)
-took about five weeks and landed in week 11, two weeks after the Billing Sev1 they would have
-prevented (Chapter 25): a pipeline step that rejects a release when a migration and its dependent
-code are out of order, and flags migrations likely to lock large tables. The release working group
-led by Kwame Mensah, with owners from the teams, quarantined the 40 flakiest Core tests in week 4
-and 140 by the end of the quarter, each with an owning team and a fix-or-delete deadline; pipeline
-failures unrelated to the change fell from 9 to 4 percent over the quarter (first-quarter record).
+Meanwhile the priced register put two small items on top. The first was the migration checks
+(TD-004) of Li Na Zhou (staff engineer, data and integration): a pipeline step that rejects a release
+when a migration and its dependent code are out of order, and flags migrations likely to lock large
+tables. They took about five weeks and landed in week 11. That was two weeks after the week-9 Billing
+Sev1 they would have prevented, the repeat of INC-427 in which credit notes were applied twice
+([Chapter 25](25-incidents-postmortems-and-change-failure-analysis.md#case-study) tells it in full).
 
-Marcus Oyelaran objected that Billing's share was going to "other people's debt." The register
+The second was flaky-test repair (TD-007). A release working group led by Kwame Mensah (staff
+engineer, infrastructure and reliability) quarantined the flakiest Core tests from week 4, each with
+an owning team and a fix-or-delete deadline. Pipeline failures unrelated to the change fell from 9 to
+4 percent over the quarter.
+
+Marcus Oyelaran (Billing manager) objected that Billing's share was going to "other people's debt." The register
 answered him: three of the top five entries charged interest that landed on Billing, in migration
 repairs, release failures, and red-branch time.
 

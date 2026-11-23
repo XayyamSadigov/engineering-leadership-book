@@ -3,23 +3,24 @@
 This chapter treats hiring as a measurement problem. It covers the role scorecard and the structured
 loop built from it, what selection research supports (including the 2022 revision of the best-known
 validity estimates), where engineering interview practice has run ahead of the evidence, debriefs
-that resist anchoring, and tracking hiring quality after the offer. Leveling and compensation belong to Chapter 8 (Career
-Development, Promotion, and Compensation); keeping the people you hire belongs to Chapter 10
-(Motivation, Retention, and Managing Senior Engineers). The running example is a Billing backfill at
+that resist anchoring, and tracking hiring quality after the offer. Chapter 8 (Career Development, Promotion, and Compensation)
+covers career ladders and pay, and Chapter 10 (Motivation, Retention, and Managing Senior Engineers)
+covers keeping the people you hire. The running example is a Billing backfill at
 Northstar Technologies, the fictional company in the [case study](../../case-studies/northstar/index.md).
 
 ## Why This Matters
 
 At team scale, a hire is a multi-year decision made in about five hours of conversation. A
-mismatch takes months to show, consumes mentoring time, and often ends in a second search. At Northstar, the median time from a
-resignation to the replacement's first day was 15 weeks (fictional; see the
+mismatch takes months to show, consumes mentoring time, and often ends in a second search. At
+Northstar, the median time from a resignation to the replacement's first day was 15 weeks (fictional; see the
 [baseline data](../../case-studies/northstar/baseline-data.md)), and
 [Chapter 3](../01-foundations/03-managerial-leverage-and-systems-thinking.md#delays) shows that eight such
 gaps add up to about 2.3 engineer-years of empty seats a year before anyone ramps up. A loop that
 picks the wrong person restarts that clock.
 
-At organization scale, the interview loop quietly defines what the organization values. If the loop rewards speed on algorithm puzzles, the
-organization fills with people who are fast at puzzles, whatever the job needs.
+At organization scale, the interview loop quietly defines what the organization values. If the loop
+rewards speed on algorithm puzzles, the organization fills with people who are fast at puzzles,
+whatever the job needs.
 
 At executive scale, the hiring system is a policy with consequences for quality, cost, and
 fairness, and it is rarely measured: few companies can say whether their hires turned out as the
@@ -69,9 +70,10 @@ measure different things; without the last, nobody learns which questions predic
 ### What selection research measures
 
 Personnel-selection research asks how well a method used before hiring predicts performance after
-it. The usual statistic is a validity coefficient: the correlation between scores on the method and
-a later measure of job performance, most often supervisor ratings of overall performance. Zero means
-no prediction; 1 means perfect prediction. Meta-analyses pool many studies and correct for known
+it. The usual statistic is a [validity coefficient](../../glossary.md#validity-coefficient): the
+correlation between scores on the method and a later measure of job performance, most often
+supervisor ratings of overall performance. Zero means no prediction; 1 means perfect prediction.
+[Meta-analyses](../../glossary.md#meta-analysis) pool many studies and correct for known
 distortions, chiefly range restriction: a study observes only the people who were hired, who differ
 less from each other than applicants do, so the raw correlation understates how well the method
 separates the applicant pool.
@@ -93,10 +95,11 @@ In 2022, Sackett, Zhang, Berry, and Lievens argued that the range-restriction co
 earlier meta-analyses often overcorrected, so the validity of many procedures had been overestimated.
 In their revision most procedures that ranked high before still rank high, but mean estimates fall
 by roughly .10 to .20, and structured interviews come out on top
-([Sackett et al., 2022](../../references/bibliography.md#sackett2022revisiting)). That paper is
-paywalled and was read here only at abstract level. The same authors' open-access follow-up in 2023
-states the revised figures in its text (**research finding**,
-[Sackett et al., 2023](../../references/bibliography.md#sackett2023revisiting)):
+([Sackett et al., 2022](../../references/bibliography.md#sackett2022revisiting)). The same authors'
+open-access follow-up in 2023 states the revised figures (**research finding**,
+[Sackett et al., 2023](../../references/bibliography.md#sackett2023revisiting)). In the table, the
+standard deviation measures how much validity varies between settings, and the 80 percent credibility
+interval is the range within which the true validity falls in 80 percent of settings:
 
 | Predictor | What the 2023 article states |
 |---|---|
@@ -112,9 +115,7 @@ cognitive ability, long the headline predictor, now sits below structured interv
 work samples. Second, the spread is wide. A credibility interval of .18 to .66 means that
 in some settings a structured interview predicts weakly and in others strongly; the authors suggest
 reading the figure as ".42, plus or minus .24". Third, the authors say considerable uncertainty
-remains about many predictors, so the ranking should be held lightly. The precise figure that the
-2022 paper gives for structured interviews was not read for this book; research gap G10 is narrowed
-by the 2023 article, not closed.
+remains about many predictors, so the ranking should be held lightly.
 
 ### What "structure" means
 
@@ -178,8 +179,8 @@ suspicion, including claims made in this chapter.
 
 A debrief combines four or five readings into a decision. In the common format, people take turns
 giving their view, and the first strong opinion, often the most senior person's, becomes an anchor:
-later speakers adjust toward it or mention only the evidence that fits it. Lorenz and colleagues showed the mechanism in a different
-task: when people answering factual estimation questions saw others' estimates, their answers
+later speakers adjust toward it or mention only the evidence that fits it. Lorenz and colleagues
+showed the mechanism in a different task: when people answering factual estimation questions saw others' estimates, their answers
 converged, the wisdom-of-crowd effect weakened, and confidence rose (**research finding**,
 estimation tasks rather than hiring;
 [Lorenz et al., 2011](../../references/bibliography.md#lorenz2011social)). Applying this to
@@ -228,10 +229,12 @@ are stated so you can replace them with your own.
 distributed and correlated at .42, and that you hire the half of candidates who score above the
 median. Under those assumptions, the share of hires who turn out above-median performers is about
 64 percent, against 50 percent for hiring at random. At the edges of the credibility interval the
-figure is about 56 percent (validity .18) and about 73 percent (validity .66). (For two normal
-variables with correlation r, the chance that both exceed their medians is 1/4 + arcsin(r)/2π;
-divide by 1/2 for the share among hires.) A well-run structured loop moves the odds from a coin toss
-to about two in three; a badly run one may barely move them. Neither makes mistakes rare.
+figure is about 56 percent (validity .18) and about 73 percent (validity .66). A well-run structured
+loop moves the odds from a coin toss to about two in three; a badly run one may barely move them.
+Neither makes mistakes rare.
+
+*Method: for two normal variables with correlation r, the chance that both exceed their medians is
+1/4 + arcsin(r)/2π; dividing by 1/2 gives the share among hires.*
 
 **What the loop costs.** Suppose Northstar redesigns the loop for its next Billing ledger backfill,
 with this scorecard: correctness of money movement (idempotency, rounding, double-entry); safe schema
@@ -390,9 +393,13 @@ For a director or manager introducing structured hiring for one role, then sprea
 
 ## Case Study
 
-This case is **fictional**. It is set in the twelve months before the director arrives at Northstar,
-using the [baseline data](../../case-studies/northstar/baseline-data.md), where the hiring process and
-Tamsin Achterberg's hire are recorded; nothing here changes [the first quarter](../../case-studies/northstar/first-quarter.md).
+This case is **fictional** ([baseline data](../../case-studies/northstar/baseline-data.md)).
+
+!!! info "Northstar so far"
+    The twelve months before week 1, when the new Engineering Director arrives at Northstar, the book's
+    fictional order-to-cash company with 80 engineers. Eight engineers left in that year, and Billing,
+    the team with the most serious incidents, lost one of its four ledger experts. See the
+    [timeline](../../case-studies/northstar/timeline.md).
 
 **The process.** Before the director arrived, Northstar had no common hiring process. Each manager
 ran a variant of the same loop: a 30-minute recruiter call; a 60-minute live algorithm exercise from
@@ -411,23 +418,24 @@ The person hired, Tamsin Achterberg, came from a backend team at an online retai
 strongest of the four finalists on the algorithm exercise. In the team chat one of the ledger
 engineers asked about database migrations and noted afterward that she had never changed a schema
 on a live system. Nobody asked about money movement, rounding, or on-call, because nobody had
-written down that the role needed them. In the debrief Marcus Oyelaran spoke first: the strongest
+written down that the role needed them. In the debrief Marcus Oyelaran (Billing manager) spoke first: the strongest
 technical result in months, and the team could teach her the ledger. The ledger engineer's concern
 became "will need some ramp on migrations". The decision took about 25 minutes and was unanimous.
 
 By the end of the baseline quarter, about 24 weeks after her first day, Tamsin was not on the on-call
 rotation, and the three remaining ledger engineers were handling most of Billing's pages. There were
-two causes. Chapter 3 tells one: the three were rarely free to pair. This chapter owns the other: the
-loop never measured what the role needed, so the gap was invisible until after the offer, and the
-plan to close it was a debrief comment rather than a ramp plan with time allocated. Tamsin is a capable engineer hired against the wrong
-measure; treating her as the problem would teach the organization nothing.
+two causes. Chapter 3 tells one: the three were rarely free to pair. This chapter tells the other: the loop never
+measured what the role needed. The gap was invisible until after the offer, and the plan to close it
+was a debrief comment rather than a ramp plan with time allocated. Tamsin is a capable engineer hired
+against the wrong measure; treating her as the problem would teach the organization nothing.
 
-**The decision in quarter 2.** At the start of quarter 2 the director proposes (a decision for the
-reader, not a settled fact) running the next two backfills as a structured pilot: a scorecard written with the team from the leaver's actual duties, a work sample on
-realistic material, the debrief protocol with a facilitator from another team, and a six-month check.
-Marcus objects that a 90-minute work sample will scare off candidates in a tight market. Tom Becker
-worries that his infrastructure engineers will be pulled into interview panels. Victor Lindqvist asks
-how anyone will know within a year whether the pilot worked. The exercises take up each objection.
+**The decision in quarter 2.** At the start of quarter 2 (week 14) the director proposes running the
+next two backfills as a structured pilot; whether it goes ahead is not recorded. The pilot has a
+scorecard written with the team from the leaver's actual duties, a work sample on realistic material,
+the debrief protocol with a facilitator from another team, and a six-month check. Marcus objects that
+a 90-minute work sample will scare off candidates in a tight market. Tom Becker (Platform Operations
+manager) worries that his infrastructure engineers will be pulled into interview panels. Victor
+Lindqvist (CTO) asks how anyone will know within a year whether the pilot worked. The exercises take up each objection.
 
 ## Exercises
 
@@ -474,9 +482,10 @@ Victor Lindqvist have raised the three objections in the case study. Decide whet
 how to answer each objection, what you will measure, how each measure could be gamed, and what you
 will not promise Victor.
 
-**X2.** Rajiv Menon proposes that all backfills be delayed by eight weeks to hold operating expense
-flat, and that the delay be "used" to run a longer, more thorough interview process with two extra
-rounds. Using the chapter's figures and assumptions, evaluate the proposal and write your
+**X2.** Rajiv Menon (CFO) proposes that all backfills be delayed by eight weeks to hold operating
+expense flat, and that the delay be "used" to run a longer, more thorough interview process with two
+extra rounds. Assume eight backfills a year and $185,000 fully loaded per engineer-year. Using the
+chapter's figures and assumptions, evaluate the proposal and write your
 recommendation to the CTO.
 
 ## Reflection Questions
@@ -511,18 +520,18 @@ recommendation to the CTO.
 - [Sackett et al., 2023](../../references/bibliography.md#sackett2023revisiting). Open-access
   follow-up stating the revised estimates; the best single source on what the research now says.
 - [Sackett et al., 2022](../../references/bibliography.md#sackett2022revisiting). The revision that
-  lowered most validity estimates. Abstract level.
+  lowered most validity estimates.
 - [Schmidt and Hunter, 1998](../../references/bibliography.md#schmidt1998validity). The classic
-  summary, still widely quoted; read it with the revision. Abstract level.
+  summary, still widely quoted; read it with the revision.
 - [Campion, Palmer, and Campion, 1997](../../references/bibliography.md#campion1997review). The
-  components of interview structure, for content and evaluation. Abstract level.
+  components of interview structure, for content and evaluation.
 - [Dana, Dawes, and Peterson, 2013](../../references/bibliography.md#dana2013belief). Why unstructured
   interviews feel informative when they are not; short and open access.
 - [Behroozi et al., 2020](../../references/bibliography.md#behroozi2020stress). Being watched
-  distorts whiteboard performance. Abstract level.
+  distorts whiteboard performance.
 - [Lorenz et al., 2011](../../references/bibliography.md#lorenz2011social). Social influence makes a
   group converge and grow confident without becoming more accurate.
 - [Google re:Work, 2026](../../references/bibliography.md#rework-structured-interviewing). A
   documented guide to questions, rubrics, and interviewer training.
 - [Larson, 2019](../../references/bibliography.md#larson2019elegant). *An Elegant Puzzle*. Known for
-  treating hiring as a system with a funnel to instrument and improve. Bibliographic metadata only.
+  treating hiring as a system with a funnel to instrument and improve.

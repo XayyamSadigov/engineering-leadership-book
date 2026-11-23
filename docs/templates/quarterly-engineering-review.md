@@ -1,17 +1,17 @@
 # Quarterly engineering review
 
-**Used in:** Chapter 37 (the quarterly cadence), Chapter 38 (scorecards and capacity allocation),
-Chapter 39 (reviews and executive reporting).
+**Used in:** [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md)
+(the quarterly cadence), [Chapter 38](../parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md)
+(scorecards and capacity allocation), [Chapter 39](../parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md)
+(reviews and executive reporting).
 **Owner:** the engineering director; each manager supplies the team section.
 **Cadence:** once a quarter, in the last two weeks of the quarter, before next quarter's planning.
 
 The quarterly review compares what the organization said it would do with what happened, explains
 the difference by mechanism, and ends with decisions for the next quarter. It is not a status
 meeting and not a celebration. A review that produces no decision, no changed allocation, and no
-retired measure has been run as a ritual.
-
-Keep the document to about four pages. The first page is the executive summary and is the only
-page some readers will see.
+retired [scorecard](../glossary.md#scorecard) measure has been run as a ritual. Keep the document to
+about four pages; the first page is the executive summary and is the only page some readers will see.
 
 ## How to fill it in
 
@@ -80,9 +80,15 @@ Sections after page one:
 
 ## Example: Northstar, end of quarter 1
 
-**Fictional.** Figures are from the [Northstar first quarter](../case-studies/northstar/first-quarter.md)
-day-90 table and the capacity model in Chapter 27. Quarter 1 roadmap delivery by item is not part of
-the canon and is left out rather than invented.
+!!! info "Northstar so far"
+    Week 13 of the Engineering Director's first year at Northstar Technologies, a fictional company
+    with 80 engineers. In quarter 1 the director named Core's release train as the main source of
+    incidents, moved Core to weekly releases, published severity definitions, and agreed a
+    [prevention allocation](../glossary.md#prevention-allocation) of 12 FTE. See the
+    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+
+Figures come from the [day-90 results](../case-studies/northstar/first-quarter.md#day-90). Quarter 1
+roadmap delivery by item is not recorded, so it is left out rather than invented.
 
 **Mandate:** halve Sev1 and Sev2 incidents and meet the 99.9 percent commitment within twelve
 months, with no net headcount growth, keeping the two renewal commitments.
@@ -98,26 +104,26 @@ ordering due week 26); neither was due in quarter 1.
 | Sev1 and Sev2 incidents | 30 | 21 | −30 percent; the twelve-month goal is 15 or fewer |
 | of which via Core releases | 9 | 4 | The named constraint is moving |
 | Recurrences | 11 of 30 | 5 of 21 | 37 → 24 percent |
-| Customer-detected share | 47% | 29% | Severity audited weekly from week 7 |
+| [Customer-detected share](../glossary.md#customer-detected-share) | 47% | 29% | Severity audited weekly from week 7 |
 | Core releases | 2 per month | 11 in the quarter | Weekly from week 5 |
 | Core change failure rate | 31% | 22% | Paired with release frequency |
 | Core main branch red | 22% | 9% (last four weeks) | 140 flaky tests quarantined |
 | Corrective action closure | 32% | 70% (26 of 37) | Every kept action has a manager owner |
 | Tier 1 at four operational minimums | 3 of 15 | 8 of 15 | Runbooks 11 of 15 |
-| Open critical vulnerabilities | 11 (3 known-exploited) | 3, under recorded exceptions | 1 known-exploited, mitigated |
+| Open critical vulnerabilities | 11 (3 [known-exploited](../glossary.md#known-exploited-vulnerability-kev)) | 3, under recorded exceptions | 1 known-exploited, mitigated |
 | Unplanned work | 34% | 31% | Plan was 33% |
 
 **Capacity, plan against actual** (80 engineers; actual prevention assumed equal to plan, since it
 was allocated by team and not tracked separately):
 
-| | Plan | Actual |
+| FTE | Plan | Actual |
 |---|---|---|
-| Unplanned work | 33% = 26.4 FTE | 31% = 24.8 FTE |
-| Prevention | 12 FTE | 12 FTE |
-| Feature capacity | 41.6 FTE | 43.2 FTE |
+| Unplanned work | 26.4 (33%) | 24.8 (31%) |
+| Prevention | 12 | 12 |
+| Feature capacity (the remainder) | 41.6 | 43.2 |
 
-Check: 80 × 0.31 = 24.8; 80 − 24.8 − 12 = 43.2. The 1.6 FTE above plan is within the sampling error
-of a two-week ticket sample, so the review does not bank it.
+The 1.6 FTE above plan is within the sampling error of a two-week ticket sample, so the review does
+not bank it.
 
 **What we learned.** The release train was the constraint: train-triggered incidents fell from 9 to
 4 once releases were weekly and smaller. Severity definitions are read creatively under scorecard
@@ -158,3 +164,20 @@ customers.
 3. Which classified figures (severity, unplanned work, defect origin) were audited, and how?
 4. Where did capacity go that the plan did not expect?
 5. What will we stop next quarter to fund what we start?
+
+## Evidence and references
+
+The method is in [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md)
+(the quarterly cadence) and Chapter 39 (executive reporting).
+
+- [Grove, 1983](../references/bibliography.md#grove1983high): meetings as managerial work, and reviews
+  as the place where decisions are made (**expert opinion**).
+- [Stasser and Titus, 1985](../references/bibliography.md#stasser1985pooling) and
+  [Lu, Yuan, and McLeod, 2012](../references/bibliography.md#lu2012hiddenprofiles): their abstracts
+  report that groups underuse information only some members hold (**research finding**), the case for a written pre-read circulated
+  before the meeting.
+- [Campbell, 1979](../references/bibliography.md#campbell1979assessing): the source usually credited
+  for the problem of indicators that become targets, which is why classified figures are audited.
+
+The four-page limit, the order of the sections, and copying targets before reading results are
+**this book's recommendation**.

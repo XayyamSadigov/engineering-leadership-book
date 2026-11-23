@@ -1,9 +1,10 @@
 # Chapter 34 — Spans, Layers, and Dependency Mapping
 
 This chapter is about three numbers that shape an engineering organization more than most strategies
-do: how many people each manager has (span), how many levels separate an engineer from the person who
-can settle a cross-team disagreement (layers), and how often one team's work waits on another
-(dependencies). They are usually set by accident: a team grows, a manager leaves, a reorganization
+do. [Span](../../glossary.md#span-of-control) is how many people report to each manager.
+[Layers](../../glossary.md#layer) are the levels of management between an engineer and the person who
+can settle a cross-team disagreement. Dependencies measure how often one team's work waits on
+another. They are usually set by accident: a team grows, a manager leaves, a reorganization
 copies last year's chart. This chapter treats them as one design problem. Chapter 33 owns team types
 and cognitive load, Chapter 16 owns the dependency matrix and flow, and Chapter 35 applies all of it
 at four company sizes. The running example is Northstar Technologies, the fictional company in the
@@ -18,8 +19,9 @@ weeks, the span is the problem, not the meeting.
 
 At organization scale, layers and boundaries decide how long decisions take and how much is lost on the
 way. Every disagreement between two teams travels up to the lowest manager they share. When boundaries
-cut through the work, those trips happen weekly, and the flow costs Chapter 16 measured at Northstar
-(11 days median lead time with no dependency, 41 with two or more) are partly a design choice.
+cut through the work, those trips happen weekly. Chapter 16 measured the flow cost at Northstar: work
+items with no dependency on another team took a median of 11 days, items with two or more took 41.
+Part of that gap is a design choice.
 
 At executive scale, spans and layers are where headcount quietly goes. Under a flat-headcount rule,
 every manager or layer added is paid for with an engineering seat.
@@ -74,26 +76,27 @@ evidence: the count assumes every possible relationship is active, and it ignore
 subordinates do.
 
 Modern evidence offers no single right number. Rajan and Wulf, using data from over 300 large US
-firms, found that more positions came to report directly to the CEO and fewer levels separated
+firms, report that more positions came to report directly to the CEO and fewer levels separated
 division heads from the CEO ([Rajan and Wulf, 2006](../../references/bibliography.md#rajan2006flattening)).
-That is a **research finding**, read at abstract level, about the top of large companies; it says
-nothing about how many engineers a manager should have.
+That **research finding** is about the top of large companies. It says nothing about how many
+engineers a manager should have.
 
-Gallup's survey data come closest to a span study of ordinary managers. Its US panel's average span
-rose from 10.9 to 12.1 between 2024 and 2025, with a median of about six. Its conclusion is that manager
-talent matters more than span: less talented managers lose engagement as team size and their own
-hands-on work grow. Two findings matter for engineering: more reports went with lower engagement for
-remote and hybrid managers but barely mattered on-site, and managers spending more than the median 40
-percent of their time on individual work showed lower engagement, worse in larger teams ([Harter, 2026](../../references/bibliography.md#harter2026span)). This is **industry
-research**: self-reported, correlational, all occupations, not software.
+Gallup's survey data concludes that manager talent matters more than span. It comes closest to a span
+study of ordinary managers. Its US panel's average span rose from 10.9 to 12.1 between 2024 and 2025,
+with a median of about six. Less talented managers lost engagement as team size and their own hands-on
+work grew. Two findings matter for engineering. More reports went with lower engagement for remote and
+hybrid managers but barely mattered on-site. And managers spending more than the median 40 percent of
+their time on individual work showed lower engagement, worse in larger teams
+([Harter, 2026](../../references/bibliography.md#harter2026span)). This is **industry research**:
+self-reported, correlational, all occupations, not software.
 
-Software-specific evidence on span is thin; this book found none that measured outcomes (research gap
-G8). The practitioner benchmark most engineering leaders quote is Larson's: managers should support six
+Software-specific evidence on span is thin: this book found no study that measured outcomes. The
+practitioner benchmark most engineering leaders quote is Larson's: managers should support six
 to eight engineers, and managers of managers four to six managers ([Larson, 2018](../../references/bibliography.md#larson2018sizing)). This is **expert
 opinion**, from fast-growing technology companies.
 
-Chapters 1 and 4 used "about eight to ten" as this book's threshold above which people work crowds
-out the rest. This chapter keeps that as the default for a typical engineering manager and makes it
+Chapters 1 and 4 used "about eight to ten" reports as this book's threshold. Above it, people work
+crowds out the rest of a manager's job. This chapter keeps that as the default for a typical engineering manager and makes it
 conditional. **This book's recommendation** is to set a span from five factors:
 
 | Factor | Pushes span down (5–7) | Default (8–10) | Pushes span up (10–12) |
@@ -115,10 +118,16 @@ organization. Adding one has two costs that rarely appear in the proposal.
 
 **Decision latency.** A decision that crosses two teams goes up to their lowest common manager and
 back. Each hop waits for that manager's next forum (a one-on-one, a staff meeting) and for the time it
-takes to brief them. As an **illustrative** model: if each forum meets weekly, the average wait per hop
-is about half a week, two and a half working days, plus a day to brief: three and a half days per
-hop. An escalation that climbs two levels costs about seven working days before anyone decides; one
-more layer adds three or four days, every time.
+takes to brief them. As an **illustrative** model, assume each forum meets weekly:
+
+| Step | Working days |
+|---|---|
+| Average wait for the next weekly forum | 2.5 |
+| Briefing the manager | 1 |
+| One hop | 3.5 |
+| An escalation that climbs two levels | about 7 |
+
+One more layer adds three or four days to every escalation that crosses it.
 
 **Information loss.** Each summary sent up a level drops detail. Williamson's classic model treats this
 as "control loss", compounding as levels are added, and argues that larger organizations show their
@@ -129,28 +138,28 @@ conclusions about firm size. As an **illustration**: if each level passes on 80 
 matters, two levels pass 64 percent and three about 51.
 
 Against those costs, a layer buys coaching capacity. A director with twelve managers, well above
-Larson's four to six, is not developing any of them. Both costs are real; ask the layer question with
+Larson's four to six, is developing none of them. Both costs are real; ask the layer question with
 numbers.
 
 ### Boundaries decide how many decisions cross layers
 
-Conway argued that systems copy their organizations' communication structures
-([Conway, 1968](../../references/bibliography.md#conway1968committees)); Chapter 33 owns that idea and
-its evidence, including Cataldo, Herbsleb, and Carley's finding that work is resolved faster when
+Boundaries that cut through the work's dependencies are a cost to measure (**this book's
+recommendation**). The research points that way without giving a size. Systems tend to copy their
+organizations' communication structures
+([Conway's law](../../glossary.md#conways-law-and-the-reverse-conway-maneuver), taught in Chapter 33;
+[Conway, 1968](../../references/bibliography.md#conway1968committees)). Work is resolved faster when
 coordination matches technical dependencies
-([Cataldo et al., 2008](../../references/bibliography.md#cataldo2008congruence)), and Chapter 35 adds
-the Windows Vista study of organizational structure and failure. Sosa, Eppinger, and Rowles found the
-same mismatch outside software, mapping an aircraft engine's design interfaces against which teams
-actually talked ([Sosa et al., 2004](../../references/bibliography.md#sosa2004misalignment);
-**research finding**, abstract level).
-From these, **this book's recommendation** follows: treat boundaries that cut through the work's
-dependencies as a cost to measure, since the size of the effect in your organization is unknown.
+([Cataldo et al., 2008](../../references/bibliography.md#cataldo2008congruence)). Sosa, Eppinger, and
+Rowles found the same mismatch outside software, mapping an aircraft engine's design interfaces against
+which teams actually talked ([Sosa et al., 2004](../../references/bibliography.md#sosa2004misalignment);
+**research finding**). How large the effect is in your organization is unknown until you measure it.
 
 ### From dependency map to boundary design
 
-Chapter 16 teaches how to build a dependency matrix (requesting team by providing team, one quarter,
-items of a week or more) and the three responses to a recurring link: remove, loosen, or coordinate.
-This chapter adds three design steps.
+Chapter 16 teaches how to build a dependency matrix. Rows are requesting teams, columns are providing
+teams, and each cell counts **dependency links** for one quarter: work items of a week or more in which
+the requesting team needed the providing team to do something. Chapter 16 also gives three responses
+to a recurring link: remove, loosen, or coordinate. This chapter adds three design steps.
 
 1. **Classify the heaviest links by what changed.** A count of nine says a pair is busy; a list of
    nine says why. Group each link by the component and the reason.
@@ -160,40 +169,62 @@ This chapter adds three design steps.
 3. **Check spans and layers against the new teams.** A move that cuts links but pushes a manager to
    eighteen reports has traded one problem for another. *Team Topologies* is known for designing teams
    for fast flow with few deliberate interactions
-   ([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team)); a team that absorbs
-   every dependency also absorbs its cognitive load (Chapter 33).
+   ([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team)). But a team that
+   absorbs every dependency also absorbs its [cognitive load](../../glossary.md#cognitive-load), the
+   mental effort its work demands (Chapter 33).
 
 The recount is the step most redesigns skip. Every boundary cuts something; the question is how often
 the work it cuts changes together.
 
 ## Engineering Organization Example
 
-All figures are **illustrative**, from Northstar's
-[baseline data](../../case-studies/northstar/baseline-data.md) and
-[first quarter](../../case-studies/northstar/first-quarter.md).
+!!! info "Northstar so far"
+    Week 14, the start of quarter 2 of the director's first year. [Sev1 and
+    Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
+    to 21 in quarter 1, and the seven QA engineers joined product teams in week 10. Both renewal
+    commitments are on track (weeks 19 and 26). See the [timeline](../../case-studies/northstar/timeline.md).
 
-**Spans today.** Since week 10, when the seven QA engineers moved into product teams, the spans are: Priya Raman (Orders) 16, Marcus
-Oyelaran (Billing) 15, Elena Sokolova (Payments and Integrations) 13, Daniel Cho (Customer Experience)
-17, Farah Haddad (Data and Analytics) 11, Tom Becker (Platform Operations) 5, for 77 engineers. The director has nine direct reports: six managers and three staff engineers.
+This example diagnoses Northstar, the book's fictional company, with the chapter's tools. All figures
+are **illustrative**, from Northstar's [baseline data](../../case-studies/northstar/baseline-data.md)
+and [first quarter](../../case-studies/northstar/first-quarter.md).
+
+**Spans today.** Since week 10, when the seven QA engineers moved into product teams, the six managers'
+spans are:
+
+| Manager (team) | Engineers |
+|---|---|
+| Priya Raman (Orders) | 16 |
+| Marcus Oyelaran (Billing) | 15 |
+| Elena Sokolova (Payments and Integrations) | 13 |
+| Daniel Cho (Customer Experience) | 17 |
+| Farah Haddad (Data and Analytics) | 11 |
+| Tom Becker (Platform Operations, infrastructure only) | 5 |
+| Engineers under the six managers | 77 |
+
+The headcount reconciles as follows. The 77 engineers under managers plus 3 staff engineers make
+Northstar's 80 engineers. Add 6 managers and the director, and the organization has 87 seats. The
+director has nine direct reports: six managers and three staff engineers.
 
 Apply the five factors. Priya caps her hands-on work at 8 hours a week and is in her first year as a
-manager: her span should sit at the low end, and it is the second highest. Daniel's team spans two
-sites with all six mobile engineers in Bogotá: his span should also be low, and it is the highest. Tom,
-at the floor of five, barely has enough people work to fill a manager's job. Farah, at 11, still acts as her
-team's data architect and leads engineers in two sites; Elena, at 13, is above twelve. By these factors
-every one of the six spans is outside the range this chapter would set: five too large, one too small.
+manager. Her span should sit at the low end, and it is the second highest. Daniel's team spans two
+sites, with all six mobile engineers in Bogotá. His span should also be low, and it is the highest.
+Tom, at the floor of five, barely has enough people work to fill a manager's job. Farah, at 11, still
+acts as her team's data architect and leads engineers in two sites. Elena, at 13, is above twelve. By
+these factors every one of the six spans is outside the range this chapter would set: five too large,
+one too small.
 
-**What fixing spans would cost.** Bringing every manager to ten or fewer means about eight managers
-for 77 people. Under the flat-headcount rule (87 people; a new manager is allowed only if the
-promoted engineer's seat is not backfilled), each extra manager costs one engineering seat: two new
-managers move about $370,000 a year of capacity (at $185,000 each) from building to managing. And
-every new manager reports to the director, so the layer question follows directly from the span fix.
+**What fixing spans would cost.** Bringing every manager to ten or fewer means about eight managers for
+77 engineers. Under the flat-headcount rule, a new manager is allowed only if the promoted engineer's
+seat is not backfilled. Each extra manager therefore costs one engineering seat. Two new managers move
+about $370,000 a year of capacity from building to managing, at Northstar's
+[fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000 per engineer. And every new
+manager reports to the director, so the layer question follows directly from the span fix.
 
-**Where the links are.** Chapter 16's matrix counts 86 links in the baseline quarter. The four
-heaviest single directions are Orders to Billing (9), Orders to Platform Operations (8), Customer
+**Where the links are.** Chapter 16's matrix counts 86 dependency links in the baseline quarter. The
+four heaviest single directions are Orders to Billing (9), Orders to Platform Operations (8), Customer
 Experience to Orders (8), and Billing to Platform Operations (7). As a pair, Orders and Billing
-exchanged 15 links (9 plus 6), the most of any pair. For this chapter, the managers classified those
-links (a **fictional** addition to the canon):
+exchanged 15 links (9 plus 6), the most of any pair. At the start of quarter 2 the managers classified
+those links:
 
 | Link | Count | What the work was |
 |---|---|---|
@@ -203,7 +234,7 @@ links (a **fictional** addition to the canon):
 | Orders → Platform Operations | 8 | 5 test environments; 3 release train or pipeline |
 | Billing → Platform Operations | 7 | 4 test environments with ledger data; 3 migration or pipeline |
 
-The 15 links to Platform Operations are requests for environments and pipeline changes: a
+The 15 links to Platform Operations are requests for environments and pipeline changes. That is a
 self-service problem, already addressed by Chapter 16's interrupt rotation and self-service
 environments. The other 23 are about where order logic ends and invoicing or screens begin: a boundary
 problem. Three candidate moves, recounted on the baseline quarter:
@@ -211,14 +242,21 @@ problem. Three candidate moves, recounted on the baseline quarter:
 | Candidate move | Links removed | Links created | Net | Span effect |
 |---|---|---|---|---|
 | M1: web order-entry screens and 2 web engineers move from Customer Experience to Orders | 4 (web order API links) | 0 counted; shared web shell work now crosses | −4 | Orders 18, Customer Experience 15 |
-| M2: split Orders into order capture, and catalog and pricing | 0 | 4 (baseline items that touched both order capture and pricing); and about 58 co-changing merge requests a quarter cross owners (Chapter 31) | +4 | Two teams, about 9 and 6 |
+| M2: split Orders into order capture, and catalog and pricing | 0 | 4 (baseline items that touched both) | +4 | Two teams, about 9 and 6 |
 | M3: order-to-invoice mapping moves from Billing to Orders | 6 | 2 (mapping changes Billing made for its own reasons) | −4 | None |
 
-M1 removes links but makes Orders bigger; M2 fixes the span but creates links; together they net zero
-links, fix one span, and reduce another. M3 removes the most links but puts invoice correctness, the source of the week
-9 Sev1, into the team that did not build it. The obvious alternative to M3 is to loosen the link with an
-order-to-invoice contract owned by Billing and tested on both sides, the pattern Li Na Zhou proposed for
-the ledger export in Chapter 16: it removes no links from the count, but removes the waiting from each.
+M2's count understates its cost. Below the matrix's one-week threshold, about 58 merge requests a
+quarter changed both order capture and pricing rules (Chapter 31). Each would cross owners after the
+split.
+
+M1 removes links but makes Orders bigger. M2 fixes the span but creates links. Together they net zero
+links, fix one span, and reduce another. M3 removes the most links, but it puts invoice correctness
+into the team that did not build it. Invoice correctness was the source of the week 9 Sev1, when credit
+notes were applied twice and the rollback failed. The obvious alternative to M3 is to loosen the link:
+an order-to-invoice contract owned by Billing, with [contract tests](../../glossary.md#contract-test)
+on both sides (automated checks that the provider still returns what each consumer relies on). Li Na
+Zhou (staff engineer, data and integration) proposed the same pattern for the ledger export in Chapter
+16. It removes no links from the count, but removes the waiting from each.
 
 ## Decision Framework
 
@@ -312,9 +350,9 @@ weekly has an argument for a layer over those teams, not over everyone.
 ## CTO Perspective
 
 At executive scale, spans and layers become a budget line and a speed limit. A rough count: with spans
-of eight at the first level and six above, 500 engineers need about 63 first-line managers and about 11 directors under a few VPs (Chapter 35's
-Halvard works it through). Each level adds a hop to every decision
-that crosses its boundary. Chapter 35 works through the scales.
+of eight at the first level and six above, 500 engineers need about 63 first-line managers and about
+11 directors under a few VPs. Each level adds a hop to every decision that crosses its boundary.
+Chapter 35 works through the scales.
 
 The CTO's job is to keep layers no higher than the boundaries require, by asking three questions.
 Which decisions reach me that belong two levels down, and which boundary sent them? Which spans are
@@ -343,68 +381,65 @@ decide alone; otherwise it moves their arguments up to a busier person.
 
 ## Case Study
 
-This case is **fictional**. It is set at the start of Northstar's quarter 2 (week 14), after
-[the director's first quarter](../../case-studies/northstar/first-quarter.md), and ends with the
-analysis feeding the year-2 organization proposal in Chapter 35. Outcomes are open.
+This case is **fictional**. It is set at Northstar in quarter 2 (weeks 14 to 26), after
+[the director's first quarter](../../case-studies/northstar/first-quarter.md). It ends with an option
+set, not a decision.
 
-**The situation.** Priya Raman has 16 reports in her first year as a manager; Daniel Cho has 17, his
-one-on-ones are under review (Chapter 5), and Mateo Arango Ríos has told the director he has done a
-lead's job for over a year. Orders and Billing exchanged 15 links in the baseline quarter, and their
-friction (the release-channel thread after INC-417, the INC-427 review that opened with blame) has
-only ever been handled above both managers. The accounting-system integration is due in week 19,
-bulk ordering in week 26: no team can be reorganized before then without risking a renewal.
+**The situation.** Priya Raman (Orders manager) has 16 reports in her first year as a manager. Daniel
+Cho (Customer Experience manager) has 17, and his one-on-ones are under review (Chapter 5). In week 17
+Mateo Arango Ríos, the team's informal mobile lead in Bogotá, tells the director he has done a lead's
+job for over a year. Orders and Billing exchanged 15 links in the baseline quarter. Their friction has
+only ever been handled above both managers. Two incidents show it: [INC-417](../../glossary.md#inc-numbers),
+payments posted to the wrong accounting period after a release of
+[Core](../../glossary.md#core), Northstar's monolith, started a thread about release
+channels; the review of INC-427, credit notes applied twice after a release, opened with blame. The
+accounting-system integration is due in week 19 and bulk ordering in week 26. No team can be
+reorganized before then without risking a renewal.
 
 **What the director does in quarter 2.** Two things. First, the analysis in this chapter: the span
 table, the classification of the heaviest links, and the recount of candidate moves M1 to M3. Second,
-the one boundary change cheap enough to make mid-commitment: Billing takes ownership of an
+the one boundary change cheap enough to make mid-commitment. Billing takes ownership of an
 order-to-invoice contract with contract tests on both sides, the alternative to M3. It moves no people
-and no manager, and leaves invoice correctness with the team that answers for it. Everything else
+and no manager, and it leaves invoice correctness with the team that answers for it. Everything else
 becomes an option set for later.
 
-**The option set.** The analysis goes into the year-2 proposal the director drafts in week 44
-(Chapter 35). Read with this chapter's tools, that proposal's recommended option (Customer Experience
-split into Web, 11 under Daniel, and Mobile, 5 under Mateo with his seat not backfilled; core/permissions
-to Orders; search-svc to Data and Analytics; Platform Operations renamed Developer Platform; 79
-engineers, 7 managers, the director at 10 direct reports) does three things and leaves three open.
+**The option set.** The director records each candidate with what the recount says:
 
-| This chapter's test | What the recommended option does |
-|---|---|
-| Spans in range | Fixes the worst one (Customer Experience, 17); leaves Orders 16, Billing 15, Payments and Integrations 13 above range; Data and Analytics stays at 11 while gaining search-svc; Developer Platform stays at 5, the floor |
-| Heaviest links | Leaves Orders and Billing (15) to the quarter-2 contract; moving search-svc turns some Customer Experience to Orders links into links to Data and Analytics |
-| Links it may create | Web and Mobile links, unmeasured because the matrix counted Customer Experience as one team; core/permissions reviews, since 21 of its 38 baseline merge requests came from Customer Experience, Billing, and Payments and Integrations |
-| Seats | One engineering seat |
-| Layer | None; director at 10 |
-
-Splitting Orders (M2) survives as Chapter 35's alternative C, at the cost the recount shows (about 4
-new links a quarter, and about 58 co-changing merge requests that would cross owners) and one more
-seat. A different seam, with pricing-rules staying with Order Capture, would keep that pair together. M1 is not in the proposal.
+| Option | What the recount says | Status |
+|---|---|---|
+| Order-to-invoice contract | Removes waiting, not links, on the heaviest pair | Done in quarter 2 |
+| M1: web order-entry screens to Orders | −4 links; Orders grows to 18 | Not pursued: worsens the second-worst span |
+| M2: split Orders | +4 links and about 58 cross-owner merge requests a quarter; fixes Orders' span for one seat | Kept as an option; a seam with pricing rules staying in order capture would keep that pair together |
+| M3: mapping to Orders | −4 links; moves invoice correctness away from Billing | Rejected in favor of the contract |
+| Customer Experience span (17) | The matrix counts the team as one, so web and mobile links are unmeasured | Open; Chapter 14 sets out the options |
 
 ```mermaid
 flowchart TD
-    DIR["Director: 10"] --> G1["New layer?"]
-    DIR --> OT["4 other teams"]
+    DIR["Director: 9"] --> G1["New layer?"]
+    DIR --> OT["3 other teams"]
     DIR --> ST["Staff: 3"]
     G1 --> OR["Orders: 16"]
     G1 --> BI["Billing: 15"]
     G1 --> PA["Payments: 13"]
 ```
 
-**The layer question.** Chapter 35's alternative D adds managers of managers. The dependency matrix
-gives the director a test for it. Orders, Billing, and Payments and Integrations exchanged 27 links
-among themselves (Orders and Billing 15, Billing and Payments 9, Orders and Payments 3) and 48 with the
-other three teams. A senior manager over the three would settle the Orders and Billing friction one
-level below the director and add a hop to 48 links; promoted from within, the role also costs a seat
+**The layer question.** The dependency matrix gives the director a test for a manager of managers.
+Orders, Billing, and Payments and Integrations exchanged 27 links among themselves: Orders and Billing
+15, Billing and Payments 9, Orders and Payments 3. They exchanged 48 with the other three teams. A
+senior manager over the three would settle the Orders and Billing friction one level below the
+director. The same layer would add a hop to 48 links. Promoted from within, the role also costs a seat
 and puts a peer over peers.
 
 | Option | For | Against |
 |---|---|---|
-| No layer, director at 10 | No new hop; staff engineers have mandates and need less coaching | A first-year manager at 16 and two managers above range; the director's time is the queue |
+| No layer, director at 9 | No new hop; no seat spent | A first-year manager at 16 and four more managers above range; the director's time is the queue |
 | Senior manager over order-to-cash | Disputes settled one level down; 27 links inside | 48 links gain a hop; a seat; a peer promoted over peers |
 | Second director, hired | Two directors of about 40 engineers | Breaks flat headcount; little for two directors to do |
 
-The director's question for week 44 is not which chart looks best but which open item the proposal
-must name a trigger for: Orders' span after core/permissions arrives, the unmeasured Web and Mobile
-links, and the Orders and Billing pair if the contract does not shorten its waits.
+The director's question is not which chart looks best. It is which open item a later design must name
+a trigger for: Orders' span, especially if core/permissions (an unowned Core module) arrives; the
+unmeasured web and mobile links; and the Orders and Billing pair if the contract does not shorten its
+waits. Chapter 35 takes this option set into the year-2 design the director drafts in week 44.
 
 ## Exercises
 
@@ -414,20 +449,21 @@ study.
 
 ### Foundational
 
-**F1.** Score Northstar's six managers on the five span factors as of week 14, using what the canon
-says about each (first year as manager, sites, informal leads, hands-on work, recent changes). For
-each, give a target range and say whether the current span is inside it. Identify the one manager
-whose span is too small rather than too large, and say what you would do about it.
+**F1.** Score Northstar's six managers on the five span factors as of week 14, using what the case pages
+and this chapter say about each (first year as manager, sites, informal leads, hands-on work, recent
+changes). For each, give a target range and say whether the current span is inside it. Identify the one
+manager whose span is too small rather than too large, and say what you would do about it.
 
 **F2.** A director proposes to cut decision latency by removing the senior-manager layer from a
 120-engineer organization: 14 managers would report directly to her. Using the illustrative latency
 and information-loss arithmetic in the chapter, estimate what she gains and what she loses, and state
 which facts about the teams' dependencies would change your answer.
 
-**F3.** In the case study's matrix, recount the links for a fourth candidate move: data export work for
-month-end reporting moves from Data and Analytics to Billing. Make and state your own assumptions about
-which of the Data and Analytics links it affects. Say whether the move is worth making on links alone
-and what else you would want to know.
+**F3.** Recount the links for a fourth candidate move: data export work for month-end reporting moves
+from Data and Analytics to Billing. The baseline matrix records 2 links from Data and Analytics to
+Billing and 2 from Billing to Data and Analytics; Data and Analytics received 4 links in all. Make and
+state your own assumptions about which of these links the move affects. Say whether the move is worth
+making on links alone and what else you would want to know.
 
 ### Applied Leadership
 
@@ -436,25 +472,28 @@ to see the director before anyone else is told. She has sixteen people who trust
 in week 26, and no decision has been made. Plan the conversation: what you share, what you ask her, and
 what you will not promise.
 
-**A2.** Marcus Oyelaran objects to the order-to-invoice contract: Billing will end up writing and
-maintaining contract tests for Orders' changes, while his team carries 41 percent unplanned work. Decide how to respond, and whether his objection should change
-the choice between moving the mapping and loosening it.
+**A2.** Marcus Oyelaran (Billing manager) objects to the order-to-invoice contract: Billing will end up
+writing and maintaining contract tests for Orders' changes, while his team carries 41 percent unplanned
+work. Decide how to respond, and whether his objection should change the choice between moving the
+mapping and loosening it.
 
-**A3.** Three months after Orders is split as in Chapter 35's alternative C, the recounted matrix shows
-the two new teams exchanging 11 links in the quarter, not the 4 projected. Diagnose the
-likely causes, say what data you would look at first, and decide whether to reverse, adjust, or wait.
+**A3.** Three months after Orders is split into order capture and catalog and pricing (move M2), the
+recounted matrix shows the two new teams exchanging 11 links in the quarter, not the 4 projected.
+Diagnose the likely causes, say what data you would look at first, and decide whether to reverse,
+adjust, or wait.
 
 ### Executive Decision-Making
 
-**X1.** You are Victor Lindqvist in week 44. The director brings the year-2 proposal (Chapter 35) with
-this chapter's assessment: Orders still at 16, unmeasured Web and Mobile links, and the layer options.
-Rajiv Menon reminds you that every promotion is a lost engineering seat. Decide what to approve, what
-triggers would reopen the Orders split or a layer, and what evidence you require.
+**X1.** You are Victor Lindqvist (CTO) in week 26. Bulk ordering is about to ship. The director brings
+this chapter's analysis: every span out of range, the M1 to M3 recount, the contract already in place,
+and the three layer options. Rajiv Menon (CFO) reminds you that every promotion to manager is a lost
+engineering seat. Decide what to approve now, what to leave for the year-2 design, what triggers would
+reopen the Orders split or a layer, and what evidence you require.
 
-**X2.** The CEO asks why engineering has "so many managers" after reading that large firms are
-flattening. Under the year-2 proposal Northstar would have 7 managers for 79 engineers. Prepare your answer, including what the
-flattening evidence does and does not say and what you would accept as a sign that Northstar has too
-many managers.
+**X2.** Helena Marsh (CEO) asks why engineering has "so many managers" after reading that large firms
+are flattening. Northstar has 6 managers over 77 engineers, plus 3 staff engineers reporting to the
+director. Prepare your answer, including what the flattening evidence does and does not say and what
+you would accept as a sign that Northstar has too many managers.
 
 ## Reflection Questions
 

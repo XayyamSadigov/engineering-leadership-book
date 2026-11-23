@@ -86,13 +86,13 @@ manager with the worst numbers in the first month.
 1. **Week 2, Marcus Oyelaran with the three engineers:** take them off first response for low-value
    pages. The paging tool's history, pulled this week (Chapter 3 records that on-call load was not
    tracked and had to be reconstructed), shows that of Billing's 180 pages, 61 needed no action; silencing or rerouting those is a few
-   engineer-days of alert tuning, owned by Billing with Kwame Mensah's help.
+   engineer-days of alert tuning, owned by Billing with the help of Kwame Mensah (staff engineer, reliability).
 2. **Week 2, the director:** a 30-minute conversation with each of the three, separately, to ask what
-   would make them stay and what they would stop doing. This is the stay interview the canon holds
-   until weeks 14 and 15, moved to week 2.
-3. **Weeks 2 to 4, Marcus:** pair Tamsin Achterberg and one other Billing engineer with the ledger
+   would make them stay and what they would stop doing. This is the stay interview that Northstar held
+   in weeks 14 and 15, moved to week 2.
+3. **Weeks 2 to 4, Marcus:** pair Tamsin Achterberg (the ledger backfill) and one other Billing engineer with the ledger
    engineers on currency and rounding first (one person can respond alone and one can change it
-   safely) and then on period close (one person can change it safely): the canon's single points of
+   safely) and then on period close (one person can change it safely): the ledger's single points of
    failure. Credit notes, where Tamsin can already respond, is where her after-hours shadowing starts.
    Cost: about 1 engineer-week a week across the four people, from Billing's
    prevention share.

@@ -1,6 +1,8 @@
 # Stakeholder map
 
-**Used in:** Chapter 42 (cross-functional dependencies, portfolio, and influence), Chapter 46
+**Used in:** [Chapter 42](../parts/09-engineering-directorship/42-cross-functional-dependencies-portfolio-and-influence.md)
+(cross-functional dependencies, portfolio, and influence),
+[Chapter 46](../parts/10-business-leadership/46-stakeholder-management-and-negotiation.md)
 (stakeholder management and negotiation).
 **Owner:** the leader driving the decision; it is a private working document, not a circulated one.
 **Cadence:** one map per contested decision, built before the proposal is final; every stance is
@@ -13,15 +15,10 @@ it records their power and interest in this decision, what they want and what th
 where they stand and on what evidence, what they will do if there is no agreement, and how you will
 engage them.
 
-The two-by-two of power against interest, with its four groups (players, subjects, context setters,
-and crowd), follows Eden and Ackermann, who also warn that what a team writes about stakeholders is
-a set of informed guesses, not facts ([Eden and Ackermann, 2021](../references/bibliography.md#eden2021modelling)).
-Working on interests rather than stated demands is the advice principled negotiation is known for
-([Fisher and Ury, 1981](../references/bibliography.md#fisher1981getting)). Both are **expert
-opinion**. How to influence each person once mapped is Chapter 42's subject.
-
-Keep the map private. "Skeptic" next to a colleague's name is preparation; circulated, it becomes a
-grievance. What you share is the decision document the map helped you write.
+The map sorts people on a two-by-two of power against interest into four groups: players (high
+power, high interest), subjects (high interest, little power), context setters (high power, little
+interest), and the crowd. Keep the map private. "Skeptic" next to a colleague's name is preparation;
+circulated, it becomes a grievance. What you share is the decision document the map helped you write.
 
 ## How to fill it in
 
@@ -97,25 +94,30 @@ after_decision:
 
 ## Example: Northstar, year-2 organization proposal (quarter 4)
 
-**Fictional.** The decision, its dates, the proposal's contents, and each executive's stated wants
-come from the [Northstar overview](../case-studies/northstar/index.md) and the
-[first quarter](../case-studies/northstar/first-quarter.md) page. Every placement, interest, stance,
-alternative, and engagement plan is an illustrative assessment written for this template, not canon;
-the canon leaves the CTO's decision open.
+!!! info "Northstar so far"
+    Week 44 of the Engineering Director's first year at Northstar Technologies, a fictional company with
+    80 engineers in six teams and a flat headcount of 87. The director has drafted a year-2 organization
+    for Victor Lindqvist (CTO) to decide in week 46; his decision is not recorded. See the
+    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+
+The decision, its dates, the proposal, and each executive's stated wants come from the
+[year-2 organization proposal](../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44)
+and the [Northstar overview](../case-studies/northstar/index.md). Every placement, stance, alternative,
+and engagement plan is an illustrative assessment.
 
 **Decision this map is for:** whether Victor Lindqvist approves, in week 46, the year-2 organization
-proposal drafted in week 44 (Customer Experience split into Web and Mobile with Mateo Arango Ríos as
-Mobile's manager, his seat not backfilled; core/permissions to Orders; search-svc to Data and
-Analytics; Platform Operations renamed Developer Platform; about 21 engineer-weeks of transition
-cost), for announcement in week 51 and effect in week 53.
+proposal drafted in week 44, for announcement in week 51 and effect in week 53. The proposal splits
+Customer Experience into Web and Mobile, with Mateo Arango Ríos as Mobile's manager and his seat not
+backfilled. It moves core/permissions to Orders and search-svc to Data and Analytics, and renames
+Platform Operations as Developer Platform. Transition cost is about 21 engineer-weeks.
 
 | Stakeholder | Position | Interest: wants / avoids | Stance, evidence, checked | Alternative if no agreement | Stance needed | Engagement |
 |---|---|---|---|---|---|---|
 | Victor Lindqvist, CTO (decides) | Player | A structure he can defend / asking the board for headcount | Unknown; no comment on the draft yet; week 44 | Chooses option B (keep Customer Experience whole) | Supporter | One-to-one with the four priced options; director |
-| Daniel Cho, Customer Experience | Subject | A coherent team and standing / losing face over the split | Unknown; not yet told; week 44 | Opposes in the leadership meeting, or quietly disengages | Neutral | Private briefing before week 46; director |
+| Daniel Cho, manager of Customer Experience | Subject | A coherent team and standing / losing face over the split | Unknown; not yet told; week 44 | Opposes in the leadership meeting, or quietly disengages | Neutral | Private briefing before week 46; director |
 | Mateo Arango Ríos, mobile lead | Subject | Recognition for lead work done over a year / a title without support | Supporter; raised it himself in week 17; week 44 | Waits, or leaves for a lead role elsewhere | Supporter | One-to-one plus a development plan; director |
-| Priya Raman, Orders | Subject | core/permissions on her terms / overload after bulk ordering | Supporter; set "after week 26" as her condition; week 44 | Accepts under protest | Supporter | Handoff date in writing; director |
-| Farah Haddad, Data and Analytics | Subject | A settled search-svc question / new load without capacity | Unknown; week 44 | Asks to defer the handoff | Neutral | Handoff plan with on-call readiness; director |
+| Priya Raman, manager of Orders | Subject | core/permissions on her terms / overload after bulk ordering | Supporter; set "after week 26" as her condition; week 44 | Accepts under protest | Supporter | Handoff date in writing; director |
+| Farah Haddad, manager of Data and Analytics | Subject | A settled search-svc question / new load without capacity | Unknown; week 44 | Asks to defer the handoff | Neutral | Handoff plan with on-call readiness; director |
 | Amara Okafor, CPO | Context setter | Committed dates kept / surprise slips from transition work | Unknown; week 44 | Asks Victor to delay the change | Neutral | Short briefing on the 21 engineer-weeks in the quarter 5 plan; director |
 | Rajiv Menon, CFO | Context setter | Flat operating expense / hidden headcount growth | Unknown; week 44 | Questions the manager count in budget review | Neutral | One-page totals: 79 engineers, 7 managers, the director; director |
 | Sofia Alvarez, VP Customer Success | Crowd | Fewer escalations / mobile incidents with no owner | Unknown; week 44 | None | Informed | Announcement plus Mobile's on-call rotation; Daniel Cho |
@@ -144,3 +146,19 @@ last, not by rank.
 2. Which stance has no evidence, or evidence older than a quarter?
 3. For each player, what do they want to avoid, and does the proposal trigger it?
 4. Who will hear about this proposal first from someone other than you?
+
+## Evidence and references
+
+How to influence each person once mapped is the subject of
+[Chapter 42](../parts/09-engineering-directorship/42-cross-functional-dependencies-portfolio-and-influence.md);
+negotiation is Chapter 46.
+
+- [Eden and Ackermann, 2021](../references/bibliography.md#eden2021modelling): the power-interest grid
+  and its four groups, with the warning that what a team writes about stakeholders is a set of informed
+  guesses, not facts (**expert opinion**).
+- [Fisher and Ury, 1981](../references/bibliography.md#fisher1981getting): working on interests rather
+  than stated demands, the advice principled negotiation is known for (**expert opinion**). It is why
+  the template asks what each person wants and wants to avoid.
+
+The fields, the dating of every stance, and the rule that a map is private are **this book's
+recommendation**.

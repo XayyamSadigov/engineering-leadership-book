@@ -3,15 +3,21 @@
 It is week 22, late in quarter 2 of your first year as Engineering Director at Northstar Technologies,
 the fictional company of the [case study](../case-studies/northstar/index.md). Quarter 3 starts in week
 27. Your calendar has filled the way calendars do: one review, one sync, one check-in at a time, each
-added for a good reason and none removed. Your job in this project is to design the operating system
-you will run in quarter 3: the forums, the written artifacts, the horizons, and the routing rules
-between them, with its cost, its transition, and the evidence that will tell you in six weeks whether
-it works. The six managers review your draft in week 24.
+added for a good reason and none removed. Your job is to design the management operating system you
+will run in quarter 3: the forums, the written artifacts, the horizons, and the routing rules between
+them. The design comes with its cost, its transition, and the evidence that will tell you in six weeks
+whether it works. The six engineering managers review your draft in week 24.
 
 The project applies [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md),
 with [Chapter 38](../parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md)
 for the quarterly cycle and [Chapter 39](../parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md)
-for reviews, the decision log, escalation, and executive reporting. It takes about 12 to 16 hours.
+for reviews, the decision log, escalation, and executive reporting. After that reading, the full
+project takes about 20 to 25 hours.
+
+!!! note "Core version (about 8 to 10 hours)"
+    Do deliverables 1, 2, and 5 only: the diagnosis of the quarter 2 system, the quarter 3 design, and
+    its cost. Apply acceptance criteria 1 to 5 and 7, and score the rubric rows Diagnosis, Loop
+    coverage and forum design, and Cost and arithmetic (50 of the 100 points; rescale to 100).
 
 ## Problem Statement
 
@@ -22,28 +28,31 @@ cost about 16.3 hours a week (at the rate from week 16, when skip-levels began),
 the notes record 38 agenda items and 5 decisions, two of them reopened later in the product sync; the
 status round took about 42 of the 60 minutes. The operational review, booked for 30 minutes, has
 averaged 75 since severity audit and error budgets were added to it, and 16 people sit in it, most of
-them on-call leads, who are engineers.
+them on-call leads, who are engineers. (The [operational review](../glossary.md#operational-review-and-operating-review)
+is the director's weekly forum on incidents and reliability; [error budgets](../glossary.md#error-budget-and-burn-rate)
+are the downtime a service may spend before reliability work takes priority.)
 
-Worse, some jobs have no home at all. Cross-team decisions (ADR-0001, the core/permissions owner)
-appeared in three forums and were resolved in none. Platform requests appeared in three and were
+Worse, some jobs have no home at all. Cross-team decisions appeared in three forums and were resolved
+in none: [ADR-0001](../glossary.md#adr-0001) (how integrations read posted ledger data) and the owner
+of core/permissions (a shared module of Core, the monolith, that has no owner). Platform requests appeared in three and were
 resolved in none. The technology risk register appeared nowhere. The calibrated promotion cycle due
 at the start of quarter 3 had been discussed only in one-on-ones.
 
-Your task is to design the quarter 3 operating system so that every loop the organization needs has
-exactly one home, every forum has one job, decisions are made where they are recorded, and the cost
-to the director, the managers, and the engineers is known.
+Your task is to design the quarter 3 operating system. Every loop the organization needs has exactly
+one home, and every forum has one job. Decisions are made where they are recorded. And the cost to the
+director, the managers, and the engineers is known.
 
 [Chapter 37](../parts/08-management-operating-system/37-cadences-and-leadership-meetings.md#case-study)
-tells one version: the director's week-22 redesign (a hard 45-minute operational review, a 75-minute
-weekly leadership team meeting replacing the managers' meeting and the product sync, a monthly business
-review, a quarterly talent review), at about 14.0 recurring hours a week, with three objections from
-managers. That redesign is one worked answer, not the answer. You may arrive at it, improve it, or
+tells one version: the director's week-22 redesign, at about 14.0 recurring hours a week. It has a
+hard 45-minute operational review, a 75-minute weekly leadership team meeting replacing the managers'
+meeting and the product sync, a monthly business review, and a quarterly talent review. Three managers
+object to it. That redesign is one worked answer, not the answer. You may arrive at it, improve it, or
 reject it. Whatever you propose, you must evaluate it honestly, including the three objections.
 
 ## Scenario and Constraints
 
 **Your position.** Engineering Director, with nine direct reports: six engineering managers and three
-staff engineers. You design the operating system and own the forums you chair. Victor Lindqvist (CTO)
+staff engineers (the [cast](../case-studies/northstar/cast.md) lists them). You design the operating system and own the forums you chair. Victor Lindqvist (CTO)
 decides anything that changes what he receives or attends. Amara Okafor (CPO) must agree to any change
 in how product and engineering trade roadmap decisions. Each manager owns their team's own rhythm
 (planning, retrospectives, operations reviews).
@@ -51,9 +60,15 @@ in how product and engineering trade roadmap decisions. Each manager owns their 
 **Timing.** You draft in week 22, the managers review in week 24, the system starts in week 27, and you
 review it after six weeks (week 33) and at the quarterly reset.
 
-**The time rule.** Use only facts dated week 22 or earlier. The quarter 2 results reported in week 26,
-the outcome of bulk ordering (due at the end of week 26), and everything that happens in quarter 3 are
-off limits.
+**The time rule.** Use only facts dated week 22 or earlier: the
+[Northstar overview](../case-studies/northstar/index.md), the [baseline data](../case-studies/northstar/baseline-data.md),
+[quarter 1](../case-studies/northstar/first-quarter.md#timeline-of-quarter-1) and
+[day 90](../case-studies/northstar/first-quarter.md#day-90), and the quarter 2 entries up to week 22 in
+[starting points for quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2)
+and [the renewals and the operating system in quarter 2](../case-studies/northstar/first-quarter.md#the-renewals-and-the-operating-system-in-quarter-2).
+The [timeline](../case-studies/northstar/timeline.md) shows what falls before week 22. Off limits: the
+quarter 2 results reported in week 26, the outcome of bulk ordering (due at the end of week 26), and
+everything in quarter 3.
 
 **Constraints.** These are binding.
 
@@ -62,7 +77,7 @@ off limits.
 2. **No growth by accretion.** Every new recurring forum names the forum it replaces or the agenda it
    joins.
 3. **One-on-ones stay.** Weekly one-on-ones with the six managers continue (their length may change).
-   Skip-levels continue at no less than their quarter 2 rate.
+   [Skip-levels](../glossary.md#skip-level) continue at no less than their quarter 2 rate.
 4. **Open decisions stay open.** ADR-0001, the core/permissions owner, the tax-svc decision, the CI
    consolidation target, and the error budget policy are not decided by your design. It gives each a
    forum, a decider's slot, and a "needed by" date.
@@ -84,8 +99,8 @@ Use these sources:
 
 **Project data: the quarter 2 forum inventory.** [`p1-quarter2-forums.csv`](data/p1-quarter2-forums.csv)
 lists each recurring forum with its cadence, booked and actual length, attendees, the director's hours
-per week, and the job it claims. It is **derived from the canon**, not new: Chapter 37's table, with
-attendee counts for the quality reviews from Chapter 39. Check: the director's column sums to 16.31,
+per week, and the job it claims. It **comes from the case**, not new: Chapter 37's table, with
+attendee counts for the quality reviews from Chapter 39. The director's column sums to 16.31 hours,
 which Chapter 37 rounds to 16.3.
 
 **Facts your submission must use.**
@@ -93,14 +108,14 @@ which Chapter 37 rounds to 16.3.
 | Area | Facts |
 |---|---|
 | Cost | 16.3 recurring hours a week from week 16; about 25 of a 47-hour week in meetings, including 9.5 hours of unscheduled meetings and incident reviews; operational review at 1.25 × 16 = 20 person-hours a week |
-| Managers' load | A typical manager attends about 4.1 recurring hours of leadership forums a week; Priya Raman about 5.4, Marcus Oyelaran about 4.6 |
-| Decisions | 38 items and 5 decisions in six managers' meetings, two reopened; organization decision log opened week 14 with DL-01 to DL-10, four open and three of those without a named decider; escalation path published week 15 (five working days for the parties, then a joint written case decided by the director within five working days) |
+| Managers' load | A typical manager attends about 4.1 recurring hours of leadership forums a week; Priya Raman (Orders) about 5.4, Marcus Oyelaran (Billing) about 4.6 |
+| Decisions | 38 items and 5 decisions in six managers' meetings, two reopened; organization [decision log](../glossary.md#decision-log) opened week 14 with DL-01 to DL-10, four open and three of those without a named decider; escalation path published week 15 (five working days for the parties, then a joint written case decided by the director within five working days) |
 | Topic matrix | Renewal status in six forums, resolved in the renewal check-in; incident follow-ups in four, resolved in the operational review; platform requests in three, resolved nowhere; cross-team decisions in three, resolved nowhere; technology risk register in none; promotion calibration in one-on-ones only |
-| Signal | Firsthand time 4.7 percent of the director's hours in weeks 14 and 15; individual skip-levels four a week from week 16; no group skip-levels yet; Mateo Arango Ríos's week-17 conversation was the director's first with a mobile engineer |
+| Signal | Firsthand time 4.7 percent of the director's hours in weeks 14 and 15; individual skip-levels four a week from week 16; no group skip-levels yet; Mateo Arango Ríos's (informal mobile lead, Bogotá) week-17 conversation was the director's first with a mobile engineer |
 | Commitments | Accounting integration live since week 19; bulk ordering due at the end of week 26; quarterly planning for quarter 3 in weeks 25 and 26 (Chapter 38) |
 | People | All executives, managers, and staff engineers in Minneapolis; anchor days Tuesday to Thursday; Bogotá is zero or one hour from Minneapolis |
 | Platform | Two-person interrupt rotation; other teams' requests down from 20 to 14 points of Platform Operations' capacity and environment waits from about 6 days to 2 by week 18 |
-| Reporting | No written report to Victor Lindqvist since the day-90 report; error budgets in reporting mode, with Victor as arbiter |
+| Reporting | No written report to Victor Lindqvist since the day-90 report (week 13); error budgets in reporting mode, with Victor as arbiter |
 | Coming in quarter 3 | The first calibrated promotion cycle at the start of quarter 3; the core/permissions exemption, recorded in quarter 1, reaches its two-quarter maximum at the end of quarter 3 (week 39) |
 
 **Facts you do not have.** Whether bulk ordering ships on time; whether the managers will accept a
@@ -130,8 +145,9 @@ One design document of no more than about 10 pages, plus a spreadsheet.
 6. **Transition and evaluation.** What stops in week 27 and how it is announced; the measures you will
    read in week 33 (decisions per meeting, reopened decisions, recurring hours, loops resolved), how
    each could mislead, and the trigger for changing the design.
-7. **Evaluation of Chapter 37's redesign** as a submission, including a written answer to Elena
-   Sokolova's, Tom Becker's, and Daniel Cho's objections.
+7. **Evaluation of Chapter 37's redesign** as a submission, including a written answer to the
+   objections of Elena Sokolova (Payments and Integrations), Tom Becker (Platform Operations), and
+   Daniel Cho (Customer Experience).
 8. **Two short notes:** one page to the managers for the week-24 review, and half a page to Victor
    Lindqvist proposing any change to what he receives.
 
@@ -210,7 +226,7 @@ A submission is accepted only if all of these hold.
 8. The design states how Bogotá and remote participants take part in every forum they attend, and how
    decisions reach engineers who attend none.
 9. The week-33 measures are named, each with how it could mislead.
-10. No fact is invented about the canon; assumptions are labeled as assumptions.
+10. No fact about Northstar is invented; assumptions are labeled as assumptions.
 
 ## Evaluation Rubric
 

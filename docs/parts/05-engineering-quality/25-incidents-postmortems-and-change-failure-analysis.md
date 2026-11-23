@@ -14,13 +14,15 @@ produces that data and acts on it.
 
 At team scale, the leadership work is to make incident pressure produce learning rather than fear.
 
-At organization scale, incidents become a data stream. Thirty incidents a quarter, each rated and
-reviewed differently, cannot be compared. Severity was assigned
-by the on-call engineer with no written definition. Of 96 corrective actions recorded over two
+At organization scale, incidents become a data stream, and an inconsistent stream cannot be compared.
+At Northstar, the running example, the baseline quarter had 30 Sev1 and Sev2 incidents, each rated and
+reviewed differently. (Sev1 and Sev2 are the two highest
+[severity](../../glossary.md#severity-sev1-sev2-sev3) ratings; Sev3 is a lower level, not counted in the headline figure.) The on-call
+engineer assigned severity with no written definition. Of 96 corrective actions recorded over two
 quarters, 31 closed (32 percent), and none had an owner above the engineer who wrote it. Eleven of the
-quarter's 30 incidents (37 percent) repeated a known failure mode, and those 11 took 4,920 of the
-quarter's 9,558 minutes of restoration time. Just over half the time spent restoring service went
-into failures Northstar had already met.
+30 incidents (37 percent) repeated a known failure mode, and those 11 took just over half the quarter's
+restoration time (4,920 of 9,558 minutes). Northstar spent most of its recovery effort on failures it
+had already met.
 
 At executive scale, the question is "how exposed are we, are we improving, and can I believe the
 numbers". An incident system whose severity labels move under pressure, whose reviews name people, or
@@ -47,8 +49,8 @@ After this chapter you will be able to:
 
 Two ideas organize the chapter. First, **incidents are produced by systems and reported by people**.
 Richard Cook's short treatise on complex systems argues that an overt failure needs several small
-faults to combine, that complex systems always carry latent faults, and that hindsight makes earlier
-signals look more obvious than they were ([Cook, 1998](../../references/bibliography.md#cook1998complex)).
+faults to combine. Complex systems always carry latent faults, and hindsight makes earlier signals look
+more obvious than they were ([Cook, 1998](../../references/bibliography.md#cook1998complex)).
 If so, the people nearest a failure are its best witnesses, and an organization that punishes its
 witnesses loses its evidence.
 
@@ -60,7 +62,7 @@ flowchart TD
     S["Signal"] --> Q{"Meets incident criteria?"}
     Q -->|No| W["Log and watch"]
     Q -->|Yes| D["Declare; set severity"]
-    D --> R["IC assigns roles"]
+    D --> R["Commander assigns roles"]
     R --> M["Mitigate and restore"]
     M --> V["Blameless review"]
     V --> A["Owned actions"]
@@ -86,8 +88,8 @@ unsolved after about an hour ([Stribblehill, Managing Incidents](../../reference
 This is **documented practice** from one organization, not outcome evidence; the logic is that one
 person cannot debug and coordinate at once.
 
-So on a Sev1 the commander does not debug; commanders come from a trained rotation, not from seniority
-alone; and declaring early is cheap. At Northstar, median time to detect was 6 minutes
+So on a Sev1 the [incident commander](../../glossary.md#incident-commander) does not debug.
+Commanders come from a trained rotation, not from seniority alone. And declaring early is cheap. At Northstar, median time to detect was 6 minutes
 when monitoring caught an incident and 108 minutes when a customer reported it, so criteria that wait
 for certainty widen the gap.
 
@@ -95,7 +97,8 @@ for certainty widen the gap.
 
 Severity sets the response during an incident and becomes a measure afterwards. Once the measure is
 watched, the person assigning it, usually from the team that will be counted, feels pressure to lower
-it. Chapter 27 shows this happening in Northstar's transformation quarter.
+it. At Northstar it happened within weeks. In week 7, four consecutive incidents were rated Sev3, one
+of them a two-hour payment delay for nine customers, until the director re-rated it.
 
 Northstar's data shows what happens without definitions. INC-409 (duplicate invoices after a release)
 was Sev1; INC-427 (credit notes applied twice, manual data repair, about 18 hours to restore) was Sev2.
@@ -119,13 +122,14 @@ Definitions that resist reclassification have four properties (this book's recom
 **Responders** need state, hypothesis, and assignments; the live document serves them.
 **Customer-facing staff and executives** need impact, what is being done, what is unknown, and the next
 update time, but not the hypothesis of the moment: a retracted explanation costs credibility.
-Northstar's VP of Customer Success, Sofia Alvarez, wants honest status during incidents. In practice that means a fixed cadence on a Sev1 (for
-example every 30 minutes, even with no news) and a list of affected accounts among the largest 40
-customers, so her team calls them before they call in. **Customers** need to know the provider knows,
+Northstar's VP of Customer Success, Sofia Alvarez, wants honest status during incidents. In practice
+that means a fixed cadence on a Sev1 (for example every 30 minutes, even with no news). It also means
+a list of affected accounts among the largest 40 customers, so her team calls them before they call
+in. **Customers** need to know the provider knows,
 what they can and cannot do, and when they will hear next.
 
-Two rules carry most of the weight (this book's recommendation): the first customer notice for a Sev1
-goes out within a fixed time of declaration from a prepared template, without waiting for a cause; and
+Two rules carry most of the weight (this book's recommendation). The first customer notice for a Sev1
+goes out within a fixed time of declaration from a prepared template, without waiting for a cause. And
 no cause is stated publicly until the review confirms it. At Northstar customers found 14 of 30
 incidents first, so in those cases any message could only arrive after the customer already knew.
 Routine executive updates should use the customer success format, so nobody holds a different version
@@ -149,22 +153,22 @@ situations cloud reviews and have to be actively worked against.
 The usual objection is that blameless becomes accountability-free. The essay answers that engineers
 are not off the hook; they are expected to help make the organization safer. This book makes that
 concrete: accountability attaches to **telling the truth in the review** and to **follow-through on
-the actions**, which Chapter 27 calls accountability for the system. Write the
+the actions**: accountability for the system, not for the person nearest the failure. Write the
 boundary down in advance and keep it narrow: sabotage, dishonesty in the review, or repeated refusal of
 an agreed safety practice are management matters. Drawn after an incident, around the person involved,
 it reads as blame with extra steps.
 
 ### Why "root cause" misleads
 
-Cook argues that complex-system failures have several contributors, each insufficient alone, that a
-search for the single cause reflects a social need to blame more than a technical understanding, and
-that remedies aimed at the last step before failure rarely prevent the next accident
+Cook argues that complex-system failures have several contributors, each insufficient alone. A search
+for the single cause reflects a social need to blame more than a technical understanding, and remedies
+aimed at the last step before failure rarely prevent the next accident
 ([Cook, 1998](../../references/bibliography.md#cook1998complex)). Read this as **expert opinion** from
-safety science, written mainly about healthcare, not an empirical result about software. Courtney Nash's 2022
-talk on the VOID, an open database of public software incident reports, argues from the software side
-that root cause analysis can make people less likely to admit mistakes and that mean time to repair
-can be an unreliable metric ([Nash, 2022](../../references/bibliography.md#nash2022void)); that is
-**industry research** known here only from the talk's abstract.
+safety science, written mainly about healthcare, not an empirical result about software. From the
+software side, the abstract of Courtney Nash's 2022 talk on the VOID, an open database of public
+software incident reports, argues that root cause analysis can make people less likely to admit
+mistakes. It adds that mean time to repair (MTTR) can be an unreliable metric
+([Nash, 2022](../../references/bibliography.md#nash2022void)). That is **industry research**.
 
 The single-cause habit survives because it yields one clear action, but analysis stops at the first
 satisfying answer, usually a person or a step. Instead:
@@ -178,10 +182,10 @@ satisfying answer, usually a person or a step. Instead:
   (no ordering check, unknown migration duration at production volume, no ledger invariant alert, a
   batch of about 170 changes) where a single-cause review would list one.
 
-### The evidence on blameless review (disputed claim D6)
+### The evidence on blameless review
 
-This book found no peer-reviewed study measuring the effect of blameless review on incident outcomes in
-software. The software research is qualitative and descriptive. Sillito and Kutomi analysed 30
+The evidence here is thin and contested: no peer-reviewed study measures the effect of blameless review
+on incident outcomes in software. The software research is qualitative and descriptive. Sillito and Kutomi analysed 30
 incidents from interviews and published postmortems
 ([Sillito and Kutomi, 2020](../../references/bibliography.md#sillito2020failures)). An interview study
 at a national space research center found failure learning informal and ad hoc, with recurring failures
@@ -189,15 +193,17 @@ persisting where no structured process existed
 ([Anandayuvaraj et al., 2026](../../references/bibliography.md#anandayuvaraj2026learning)). Neither
 compares blameless with blaming reviews.
 
-The transferable evidence comes from healthcare, where just culture began, and it is thin. A 2023
+The transferable evidence comes from healthcare, where **just culture** began, and it is thin. Just
+culture separates honest error, which is not punished, from reckless conduct, which is. A 2023
 integrative review called the evidence on implementing just culture scant, noted that most of the
 literature is theoretical, and called for research on patient safety outcomes
 ([Murray et al., 2023](../../references/bibliography.md#murray2023just)). A 2022 systematic review found
 that a focus on safety rather than individual blame enhanced trust in error reporting, and that less
 experienced staff reported more fear of blame
 ([van Marum et al., 2022](../../references/bibliography.md#vanmarum2022barriers)). Edmondson's study of
-51 teams in one manufacturing company associated psychological safety with learning behavior, which in
-turn was associated with performance
+51 teams in one manufacturing company associated [psychological safety](../../glossary.md#psychological-safety)
+(a shared belief that the team is safe for interpersonal risk-taking; Chapter 11 covers it) with
+learning behavior, which in turn was associated with performance
 ([Edmondson, 1999](../../references/bibliography.md#edmondson1999psychological)). These support the
 **mechanism** (fear suppresses reporting) rather than the **outcome** (fewer or shorter incidents).
 
@@ -221,8 +227,9 @@ This loop simplifies the cycle Allspaw describes: one blaming review degrades ev
 Northstar's 32 percent closure has structural causes. Cross-team actions (a pipeline check, a
 monitoring standard) were owned by engineers who control no capacity. Actions outside the team's plan
 lost to work inside it. Reviews produced too many small actions; the template caps them at five, each
-tied to a contributing factor. And nothing checked recurrence: INC-427's recurrence check found that
-the INC-406 review had recommended migration checks and the action was never scheduled.
+tied to a contributing factor. And nothing checked recurrence. When INC-427 was reviewed, a recurrence
+check found that the review of INC-406 (a ledger index migration that locked a table) had recommended
+migration checks, and the action was never scheduled.
 
 Both measures are gamed predictably: closure rises when actions are trivial or quietly closed as
 "won't do"; recurrence falls when failure modes are described too narrowly to match. Pair
@@ -254,10 +261,16 @@ The first question is first on purpose: a failure mode already reviewed is a fol
 and more tests will not fix the process that let the earlier action lapse. Three rules keep the
 classification honest (this book's recommendation): classify from the review, not the ticket title;
 have two people classify a quarterly sample independently and discuss disagreements; and weigh each
-category by cost (restoration time, customers affected) as well as count. Chapter 27 classifies
+category by cost (restoration time, customers affected) as well as count. Chapter 19 classifies
 Northstar's escaped defects by detection point; the example below does the same for incidents.
 
 ## Engineering Organization Example
+
+!!! info "Northstar so far"
+    Week 3 of the director's first year. The director has classified the baseline quarter's incidents
+    with Kwame Mensah (staff engineer, infrastructure and reliability) and is publishing severity
+    definitions. In week 4 the director reserves 12 FTE (full-time equivalent engineers) for
+    prevention work. See the [timeline](../../case-studies/northstar/timeline.md).
 
 This classification is **illustrative**. It assigns each of Northstar's 19 change-induced incidents to
 a control point from the one-line summaries in `incidents-last-quarter.csv`, using the diagram's later
@@ -274,16 +287,35 @@ so recurrences get their own column. Several rows could reasonably go another wa
 | Testing pipeline changes | 416 | 1 | 120 | 0 | 0 |
 | **Total** | | **19** | **6,223** | **10** | **9** |
 
-Check: 6,223 is the 9,558 restore minutes for all 30 incidents minus 3,335 for the other 11.
+??? note "The 19 incidents in the table"
+    - INC-401: invoice totals rounded wrongly for multi-currency orders after a release.
+    - INC-403: order submission failed for customers with legacy price lists.
+    - INC-404: token lifetime changed in production config; mobile sessions dropped.
+    - INC-405: mobile-bff deployed against an older pricing-svc contract; cart totals blank.
+    - INC-406: a ledger index migration locked a table during business hours.
+    - INC-409: duplicate invoices from a retried batch job after a release.
+    - INC-410: a feature flag enabled for all tenants instead of one.
+    - INC-411: catalog import rejected valid unit-of-measure values.
+    - INC-412: an email template variable renamed; order confirmations sent blank.
+    - INC-415: a memory regression in order validation; pods restarted under load.
+    - INC-416: a shared deploy-script change broke rollback for four services.
+    - INC-417: payments posted to the wrong accounting period after a release.
+    - INC-418: webhook signature format changed without versioning.
+    - INC-419: a pricing-rule migration ran before the code that expected it.
+    - INC-421: bulk order upload dropped lines beyond row 500.
+    - INC-422: PDF invoices missing the tax breakdown for one region.
+    - INC-424: a long migration exceeded replication lag; replicas served stale balances.
+    - INC-427: credit notes applied twice after a release; manual data repair.
+    - INC-430: a rate limit lowered tenfold by a mistyped value.
 
 Four observations change what a count alone suggests. **Configuration guards** would prevent three
 cheap incidents (113 minutes, all caught by monitoring): worth doing, not first. **Migration safety** is
 the most expensive per incident, almost 500 minutes each; three of the four were in Billing's ledger and
 invoicing, and three (INC-406, INC-424, INC-427) were recurrences. **Contract failures** were all found
-by customers; no alert caught the blank emails or the rejected webhooks. And **all
-seven logic-test failures** shipped on the Core release train, six found by customers: tests would
-have prevented some, smaller releases would have made the rest faster to diagnose (Chapter 27's constraint
-argument).
+by customers; no alert caught the blank emails or the rejected webhooks. And **all seven logic-test
+failures** shipped on the release train of [Core](../../glossary.md#core), the Java monolith, and
+customers found six. Tests would have prevented some; smaller releases would have made the rest faster
+to diagnose (Chapter 23 makes the batch-size argument).
 
 The last column changes the reading most. Nine of the 11 recurrences were change-induced, including 5
 of the 7 "test gaps", so much of what looks like missing tests may be missing follow-through. Recurrences
@@ -293,18 +325,19 @@ in follow-through on existing migration and release-train actions, before new pr
 ## Decision Framework
 
 How much process an event needs (thresholds are this book's recommendation for an organization of
-Northstar's size):
+Northstar's size). A tier 1 path is one through a [tier 1](../../glossary.md#tier-1) component: at
+Northstar, the order and payment paths.
 
 | Situation | Roles | Customer communication | Review | Action owner |
 |---|---|---|---|---|
-| Sev1, or wrong financial data visible to customers | IC, operations, communications, scribe | Fixed time to first notice; fixed cadence | Full, within five working days, neutral facilitator | Manager; director if cross-team |
-| Sev2 on a tier 1 path | IC and operations; communications if customers are told | If customers are affected | Full | Manager |
+| Sev1, or wrong financial data visible to customers | Commander, operations, communications, scribe | Fixed time to first notice; fixed cadence | Full, within five working days, neutral facilitator | Manager; director if cross-team |
+| Sev2 on a tier 1 path | Commander and operations; communications if customers are told | If customers are affected | Full | Manager |
 | Sev2 elsewhere | One person may hold several roles | Usually none | Short written review | Team |
 | High-potential near miss | None | None | Short, if new or recurring | Team |
 | Recurrence of a reviewed failure mode | As severity requires | As severity requires | Start with the earlier actions | One level above the earlier owner |
 
-**Who facilitates?** A neutral facilitator from another team
-gets more candid accounts and spreads learning; the owning manager knows the system and owns
+**Who facilitates?** A neutral facilitator from another team gets more candid accounts and spreads
+learning; the owning manager knows the system and owns
 follow-through. Split it: the outsider runs the meeting, the manager owns the document and actions.
 **What gets reviewed?** Define triggers in advance, and include recurrences and high-potential near
 misses regardless of severity.
@@ -334,16 +367,16 @@ team's plan.
 Countermeasure: asymmetric definitions, weekly audit, paired measures.
 
 **Hero response.** A few engineers carry most of the response (in Northstar's Billing team, three
-people carry most pages), and they burn out. Signal: the same names in most timelines. Countermeasure: commander rotation,
-runbooks, pairing newer engineers into response.
+people carry most pages), and they burn out. Signal: the same names in most timelines.
+Countermeasure: commander rotation, runbooks, pairing newer engineers into response.
 
 **The ceremonial review.** Templates are filled and nothing changes. Signal: closure below half and a
 flat recurrence rate. Countermeasure: capped actions, manager owners, monthly review, recurrence checks.
 
 **Blame by other means.** Nobody says "fault", but "human error" appears as a cause or the CEO's first
-question is "who". Signal: reviews getting shorter and
-fewer volunteers to lead them. Countermeasure: the facilitator checklist, and executives briefed in
-advance.
+question is "who". Signal: reviews getting shorter and fewer volunteers to lead them.
+Countermeasure: the facilitator checklist in the [incident review template](../../templates/incident-review.md),
+and executives briefed in advance.
 
 **Root cause tunnel vision.** One cause is fixed and the condition that produces the next incident
 through a different trigger survives. Signal: recurrences with different triggers. Countermeasure:
@@ -367,7 +400,8 @@ success owns** the account list and the calls to the largest customers, using th
 lead's updates.
 
 Three standards carry most of the value: one severity definition, one review template, and one action
-tracker with recurrence links. Teams may extend them, not replace them. The weekly operational review in Chapter 27 is where this system meets the
+tracker with recurrence links. Teams may extend them, not replace them. At Northstar, the weekly
+operational review (director, managers, staff engineers, on-call leads) is where this system meets the
 management system: last week's incidents, the severity audit, actions due, and any recurrence, in 30
 minutes.
 
@@ -413,34 +447,42 @@ work" is defensible to a skeptical board member; "research proves blameless revi
 
 ## Case Study
 
-This case is **fictional**. It continues the [baseline](../../case-studies/northstar/baseline-data.md)
-and Chapter 27 through the director's first quarter. Facts not in the baseline are recorded as
-Northstar additions for this chapter.
+This case is **fictional**. It follows Northstar's incident system from the
+[baseline](../../case-studies/northstar/baseline-data.md) through the director's first quarter, and
+tells in full the week-9 Sev1 that other chapters refer to.
 
 In week 3 the director published severity definitions written with Kwame Mensah and Sofia Alvarez:
 Sev1 covered the order or payment path unavailable for any customer, and any wrong financial record
 visible to customers. Applied to the baseline quarter, they moved INC-401 and INC-427 to Sev1 and left
-three incidents (INC-414, INC-422, INC-424) as judgment calls the wording then had to settle. The
-director published the re-rating, which made the numbers worse: seven Sev1 incidents became nine (the
-baseline page keeps the original ratings). To objecting managers, the director said a flattering
+three incidents as judgment calls: INC-414 (a missing tax rate), INC-422 (invoices missing a tax
+breakdown), and INC-424 (stale balances on replicas). These were cases the wording then had to settle. The
+director published the re-rating, which made the numbers worse: seven Sev1 incidents became nine.
+(Elsewhere the book quotes the original ratings; the total of 30 is the same.) To objecting managers, the director said a flattering
 baseline would make every later improvement unbelievable.
 
 In weeks 4 and 5, twelve people (the six managers, three staff engineers, and three senior engineers)
-trained as incident commanders. Marcus Oyelaran asked to be left out because Billing was overloaded;
+trained as incident commanders. Marcus Oyelaran (Billing manager) asked to be left out because Billing was overloaded;
 the director kept him in and took him off two roadmap reviews instead.
 
 Of the 96 recorded actions, 65 were open. The director and staff engineers kept 14, after merging 9
 duplicates into them, and dropped 42 explicitly, each author getting a one-line reason. Every kept
-action got a manager owner. Among them was INC-427's pipeline check blocking code that depends on an
-unfinished migration, owned by Li Na Zhou with Billing and due in week 7.
+action got a manager owner. Among them was the action from INC-427: a pipeline check blocking code that
+depends on an unfinished migration. Li Na Zhou (staff engineer, data and integration) owned it with
+Billing, due in week 7.
 
-It slipped: the check had to go into the Jenkins pipeline the release working group was changing. The
-week 8 action review accepted a new date and put no interim control in place. In week 9 came the Sev1
-Chapter 27 describes: credit notes applied twice, through a migration and dependent code shipped in the
-same train. The review's first contributing factor was that the organization had known this failure
-mode since INC-406, reviewed it twice, and let the action slip without a substitute. An interim control
-(no release may contain a ledger migration and code that depends on it) was agreed in a day; the
-pipeline check landed in week 11.
+It slipped: the check had to go into the Jenkins pipeline that the release working group was changing.
+The week 8 action review accepted a new date and put no interim control in place.
+
+In week 9 came the repeat of INC-427, a Sev1 in Billing. Credit notes were applied twice, because a
+ledger migration and code that depended on it shipped in the same weekly train. Rolling the train back
+failed, because the migration had already changed the schema the previous version read, so service
+was restored by a forward fix. Helena Marsh (CEO) called the director to ask who had made the change.
+The director answered with the mechanism: two changes that should have been ordered had shipped
+together, and the check promised after INC-427 had slipped. The engineer involved led the review. Its
+first contributing factor was that the organization had known this failure mode since INC-406,
+reviewed it twice, and let the action slip without a substitute. An interim control (no release may
+contain a ledger migration and code that depends on it) was agreed in a day. The pipeline check landed
+in week 11.
 
 At day 90, 5 of the quarter's 21 incidents were recurrences (24 percent, against 37 percent). Of the 14
 retained actions and the 23 raised by the quarter's reviews, 26 had closed (70 percent). Both rest on
@@ -477,7 +519,7 @@ posted "who shipped this?" in the incident channel; Sofia Alvarez wants updates 
 three named customers. Describe your first twenty minutes, in order, and what you say to each of the
 three.
 
-**A2.** After the action triage, Elena Sokolova points out that 6 of the 42 dropped actions came from her
+**A2.** After the action triage, Elena Sokolova (Payments and Integrations manager) points out that 6 of the 42 dropped actions came from her
 team's reviews, and her engineers now ask whether writing actions is worth the effort. Billing's actions
 dominate the kept list. Prepare your response to her and her engineers, and decide whether to change
 the triage.
@@ -495,8 +537,8 @@ responsible. The contract requires an incident report within five business days 
 its content. As CTO, decide what you send and when, and how you protect both the renewal and the
 internal review. Outline the customer document.
 
-**X2.** Victor Lindqvist proposes tying 20 percent of each engineering manager's bonus to two numbers:
-action closure above 80 percent and zero recurrences. Helena Marsh supports it as a sign of seriousness.
+**X2.** Victor Lindqvist (CTO) proposes tying 20 percent of each engineering manager's bonus to two
+numbers: action closure above 80 percent and zero recurrences. Helena Marsh supports it as a sign of seriousness.
 Decide whether to support, modify, or oppose it. Predict how each number would be gamed, and propose an
 alternative that keeps executive accountability for follow-through.
 

@@ -1,7 +1,7 @@
 # Chapter 22 — Testing Strategy and Test Architecture
 
-Most engineering leaders inherit a test suite rather than design one. This chapter treats the suite as a portfolio: investments that each buy early warning about one
-kind of defect, at a price in feedback time and maintenance. It covers how to choose that portfolio
+Most engineering leaders inherit a test suite rather than design one. This chapter treats the suite
+as a portfolio: investments that each buy early warning about one kind of defect, at a price in feedback time and maintenance. It covers how to choose that portfolio
 from where defects actually escape, how to run flaky tests as a reliability problem, what coverage and
 mutation testing can tell you, and how to take a manual regression gate out of the release path. The
 running example is Northstar Technologies, the fictional company in the
@@ -15,12 +15,14 @@ five minutes and is believed gets used on every change. One that answers in an h
 in ten gets worked around: changes are batched and failures rerun unread.
 
 For an organization of 50 to 150 engineers, the suite is a commons. Every team adds tests; no team owns
-the whole. At Northstar the Core main branch is red for 22 percent of working hours, and 9 percent of
+the whole. At Northstar the main branch of [Core](../../glossary.md#core), the Java monolith, is red for 22
+percent of working hours, and 9 percent of
 pipeline runs fail for reasons unrelated to the change.
 
 At executive scale, testing is money. Northstar spends about 2.4 engineer-years a year (about $440,000)
-on a three-day manual regression pass, has about 11,400 automated tests, and still had 212 confirmed
-customer-reported defects last quarter, 81 of them regressions. Asked what that buys, a director who
+on a three-day manual regression pass, has about 11,400 automated tests, and still had 212
+[escaped defects](../../glossary.md#escaped-defect) last quarter (customer-reported bugs confirmed as
+defects), 81 of them regressions. Asked what that buys, a director who
 answers with coverage percentages cannot defend or redirect the spend; one who answers with which
 defects are caught where, how fast, and at what cost can do both.
 
@@ -46,12 +48,13 @@ Two quantities organize the rest.
 
 **Risk by detection point.** Every defect has an earliest point at which a reasonable check would have
 caught it: a unit test, a check at a component boundary, an end-to-end flow, a migration rehearsal, or
-a conversation about requirements. Northstar's escapes split 27 percent unit-level, 23 percent
-integration or contract, 19 percent end-to-end, 18 percent migration and configuration, and 13 percent
-misunderstood requirements. That profile tells you where the portfolio is thin.
+a conversation about requirements. Chapter 19 classifies Northstar's escaped defects this way, and
+this chapter's example sets the split beside Core's tests. That profile tells you where the portfolio
+is thin.
 
 **Feedback time and trust.** A check that runs in minutes on every change shapes every engineer's work.
-One that runs three days before a release shapes almost nothing. One that fails at random is worse than slow; it teaches people to ignore failures.
+One that runs three days before a release shapes almost nothing. One that fails at random is worse
+than slow: it teaches people to ignore failures.
 
 ```mermaid
 flowchart TD
@@ -88,24 +91,23 @@ guideline is closer to the pyramid: roughly 80 percent unit, 15 percent integrat
 end-to-end by count, with the "ice cream cone" (mostly end-to-end) and the "hourglass" (thin middle) as
 antipatterns ([Bender, 2020](../../references/bibliography.md#bender2020testing)).
 
-Read these as **expert opinion and documented practice** from particular kinds of system; this book
-found no research showing that one distribution yields fewer escapes. What transfers is the reasoning: check where it is fastest and most
-reliable for the defects your system produces, in proportions set by your own data.
+Read these as **expert opinion and documented practice** from particular kinds of system; no research
+shows that one distribution yields fewer escapes. What transfers is the reasoning: check where it is
+fastest and most reliable for the defects your system produces, in proportions set by your own data.
 
 ### Size, scope, and hermeticity
 
 *Software Engineering at Google* separates two properties most teams blur
-([Bender, 2020](../../references/bibliography.md#bender2020testing); summarized, as the book is licensed
-for non-derivative use). **Size** is the resources a test may use: small tests stay in one process with
+([Bender, 2020](../../references/bibliography.md#bender2020testing)). **Size** is the resources a test may use: small tests stay in one process with
 no sleeping, blocking, disk, or network; medium tests stay on one machine; large tests span machines.
 **Scope** is how much code a test is meant to validate. A narrow-scope test can still be large, for
 example a "unit" test that reaches a shared database. The same chapter asks that all tests be
 **hermetic**: they set up and tear down what they need and do not depend on shared state or test order.
 
 Size, not scope, predicts speed and flakiness, because every resource touched adds nondeterminism.
-About 1,350 of Core's 11,400 tests run against one shared test database (Northstar's extended
-[baseline](../../case-studies/northstar/baseline-data.md)). Written as unit tests, they behave like large ones: slow, interfering, failing when
-another run leaves data behind.
+About 1,350 of the 11,400 tests in Core run
+against one shared test database. Written as unit tests, they behave like large ones: slow,
+interfering, failing when another run leaves data behind.
 
 ### Contracts at boundaries
 
@@ -116,14 +118,14 @@ unclear about whose change broke what.
 **Consumer-driven contracts** are the alternative. In Ian Robinson's description, each consumer states,
 as executable expectations, the parts of a provider's interface it depends on; the provider runs all
 consumers' expectations in its own build and so learns which change would break which consumer
-([Robinson, 2006](../../references/bibliography.md#robinson2006cdc)). The provider learns of a breaking change in its own pipeline, in minutes, with the consumer named,
-instead of from an incident.
+([Robinson, 2006](../../references/bibliography.md#robinson2006cdc)). The provider learns of a
+breaking change in its own pipeline, in minutes, with the consumer named, instead of from an incident.
 
 The idea works inside a monolith too. Core's three unowned modules (customer, permissions, scheduler)
 are changed by four teams, and a tested module contract is one of the few safety nets available before
-ownership is settled. The risk is real: in a study of continuous testing at Google, Memon and colleagues
-report that very few tests ever fail, that failing tests sit close to the code they test, and that code
-recently modified by more than three developers breaks more often
+ownership is settled. The risk is real. In a study of continuous testing at Google, Memon and
+colleagues report that very few tests ever fail and that failing tests sit close to the code they
+test. Code recently modified by more than three developers breaks more often
 ([Memon et al., 2017](../../references/bibliography.md#memon2017taming)). That is **industry research**
 from one company, and an association rather than a cause.
 
@@ -139,21 +141,21 @@ makes the essential point: flakiness undermines any practice that assumes a test
 on the code it covers ([Parry et al., 2022](../../references/bibliography.md#parry2022flaky)). Every
 merge gate assumes that.
 
-Google's 2016 account describes the cost: about 1.5 percent of test runs flaky,
-almost 16 percent of tests showing some flakiness, and about 84 percent of observed pass-to-fail
-transitions in post-submit testing involving a flaky test. New flakiness arrived about as fast as it was
-fixed, and engineers sometimes dismissed real failures as flakes
+Flakiness is common even where testing is mature. Google's 2016 account reports about 1.5 percent of
+test runs flaky and almost 16 percent of tests showing some flakiness. New flakiness arrived about as
+fast as it was fixed, and engineers sometimes dismissed real failures as flakes
 ([Micco, 2016](../../references/bibliography.md#micco2016flaky)). *Software Engineering at Google*
-later reports a rate around 0.15 percent, apparently measured differently, and that tests lose value as
-flakiness approaches 1 percent ([Bender, 2020](../../references/bibliography.md#bender2020testing)).
-These are **documented practice** at one company, not benchmarks. The mechanism is general: when alarms
-are often false, people stop responding to alarms.
+later adds that tests lose value as flakiness approaches 1 percent
+([Bender, 2020](../../references/bibliography.md#bender2020testing)). These are **documented
+practice** at one company, not benchmarks. The mechanism is general: when alarms are often false,
+people stop responding to alarms.
 
 Three consequences follow. First, flakiness is a **reliability problem** with a rate, a cost, and an
-inflow; it needs an owner and a budget with a consequence, borrowing the error-budget idea from
-Chapter 24. Second, cheap mitigations hide it. Retries and "fail only after three consecutive failures" turn the gate green while
-delaying detection of real breakage; quarantine protects everyone's flow but, as Google's account
-notes, can mask a real bug. Third, flakiness has a **creation rate**. Prevention sits where tests are
+inflow. It needs an owner and a budget with a consequence, borrowing the
+[error budget](../../glossary.md#error-budget-and-burn-rate) idea (an agreed allowance of failure)
+from Chapter 24. Second, cheap mitigations hide it. Retries and "fail only after three consecutive
+failures" turn the gate green while delaying detection of real breakage. Quarantine protects
+everyone's flow but, as Google's account notes, can mask a real bug. Third, flakiness has a **creation rate**. Prevention sits where tests are
 written: hermetic fixtures by default, new tests run many times before they join the gate, and review
 that asks how a test could fail without the code being wrong.
 
@@ -179,9 +181,7 @@ advised against using coverage as a quality target
 **research finding** from open-source Java systems with generated suites; other studies report
 different strengths of relationship.
 
-Use coverage to find code no test executes; a gap is informative, a covered line is not. The
-[quality transformation chapter](27-quality-transformation-at-enterprise-scale.md) names the coverage
-mandate as a failure mode.
+Use coverage to find code no test executes; a gap is informative, a covered line is not.
 
 ### Mutation testing as a check
 
@@ -189,14 +189,14 @@ mandate as a failure mode.
 small deliberate changes (flipping a comparison, removing a call) and reruns the tests. A change no test
 detects is a surviving mutant, pointing at behavior nobody checks.
 
-Do mutants stand in for real faults? Just and colleagues studied 357 real faults
-in five open-source applications and found a statistically significant correlation between mutant
+Do mutants stand in for real faults? Just and colleagues studied 357 real faults in five open-source
+applications and found a statistically significant correlation between mutant
 detection and real-fault detection, independent of coverage, while noting the technique's limits
 ([Just et al., 2014](../../references/bibliography.md#just2014mutants)). That is a **research finding**
 with a narrow population and the best available evidence that mutation scores mean something.
 
 The objection is cost. Google's published answer mutates only changed code during code review, filters
-mutants developers find uninteresting, and caps mutants per line and per review; the authors report use
+mutants developers find uninteresting, and caps mutants per line and per review. The authors report use
 by more than 24,000 developers with orders of magnitude fewer mutants
 ([Petrović et al., 2022](../../references/bibliography.md#petrovic2021mutation)). That shows
 practicality, not defect reduction. The transferable lesson is scope: changed lines in high-risk modules,
@@ -205,24 +205,25 @@ results shown to reviewers, and never a mutation-score target.
 ### Manual testing and moving gates out of the release path
 
 Automated checks confirm known behavior; they miss what nobody specified, such as a confusing flow or
-two features failing together. That is the job of **exploratory testing**, in which a skilled person works to a
-time-boxed charter ("explore bulk order upload with malformed files for 90 minutes"), learning and
-designing tests as they go. This is **practitioner consensus**; the book found no controlled industrial
-study comparing it with scripted testing.
+two features failing together. That is the job of **exploratory testing**, in which a skilled person
+works to a time-boxed charter ("explore bulk order upload with malformed files for 90 minutes"), learning and
+designing tests as they go. This is **practitioner consensus**; no controlled industrial study
+compares it with scripted testing.
 
 Separate **manual regression**, which repeats a script, from **manual exploration**. Regression is the
 most automatable work in the organization, and as a gate it lengthens every release and enlarges every
 batch. Exploration finds what automation cannot, and it need not be a gate. *Continuous Delivery* makes
 the general case for an automated pipeline that runs fast checks on every change and keeps software
-releasable ([Humble and Farley, 2010](../../references/bibliography.md#humble2010continuous)); Chapter
-27 shows how Northstar's manual pass made the release train its constraint, and Chapter 23 covers
-release mechanics.
+releasable ([Humble and Farley, 2010](../../references/bibliography.md#humble2010continuous)). At
+Northstar, the three-day manual pass is one reason Core ships only every two weeks, in large batches
+that cause many of its incidents. Chapter 23 covers release mechanics.
 
 Moving a gate out of the path means relocating each check, not dropping it. Scripted cases that guard
 stable, high-value flows become automated tests on every change. Cases needing judgment become
 exploration charters on the change, run before or after it ships behind a flag. Duplicates and cases
-for unused features are deleted. For a period the organization pays for both, and the people running the pass know customers' use of
-the product best; Chapter 19 covers keeping that knowledge in the teams.
+for unused features are deleted. For a period the organization pays for both. And the people running
+the pass know customers' use of the product best; Chapter 19 covers keeping that knowledge in the
+teams.
 
 ### Test data and migration testing
 
@@ -239,6 +240,13 @@ possible. **Configuration as code**: version configuration, validate it against 
 pipeline, and test risky changes like code.
 
 ## Engineering Organization Example
+
+!!! info "Northstar so far"
+    Week 3 of the director's first year. The baseline quarter had 30 Sev1 and Sev2 incidents, the two
+    highest [severity](../../glossary.md#severity-sev1-sev2-sev3) ratings. Core ships on a two-week
+    train after a three-day manual pass run by seven QA engineers. In week 4 the director reserves 12
+    FTE (full-time equivalent engineers) for prevention. See the
+    [timeline](../../case-studies/northstar/timeline.md).
 
 This example is **illustrative**. It uses Northstar's
 [baseline](../../case-studies/northstar/baseline-data.md), including the extended baseline's split of
@@ -261,12 +269,15 @@ sampling, and no contract checks, although boundaries produce 23 percent of esca
 lets through 57 defects a quarter; 41 percent coverage cannot say how many were in code tests run but do
 not check, and a mutation run on invoicing and ledger would.
 
-Core merges about 85 changes a week, each running the full pipeline (extended baseline), or about
-17 runs per working day. At 9 percent non-change failures that is about 1.5 spurious red runs a day,
-about 350 a year over 230 working days. At an assumed 1.5 engineer-hours each, the direct cost is about
-530 hours, under a third of an engineer-year, about $53,000 at $185,000 per engineer-year. That is small. The larger costs are indirect: merges waiting while main is red (22
-percent of working hours), and the habit of rerunning failures unread, which is how real regressions get
-through.
+The direct cost of spurious red runs is small: about $53,000 a year, under a third of an
+engineer-year. The larger costs are indirect: merges waiting while main is red (22 percent of working
+hours), and the habit of rerunning failures unread, which is how real regressions get through.
+
+??? note "How the $53,000 is estimated"
+    Core merges about 85 changes a week, each running the full pipeline: about 17 runs per working
+    day. At 9 percent non-change failures, that is about 1.5 spurious red runs a day, or about 350 a
+    year over 230 working days. At an assumed 1.5 engineer-hours each, that is about 530 hours, priced
+    at $185,000 per engineer-year.
 
 The director's draft reallocation, **this book's recommendation** for Northstar:
 
@@ -313,8 +324,9 @@ the real world and are slow and noisy. The escape data says which way to lean.
 blocked; where ownership is disputed, that negotiation is the hard part.
 
 **Quarantine against hidden bugs.** Quarantine protects flow and risks hiding a real defect. The
-mitigation is the two-part rule below (a capped list; a per-test owner and fix-or-delete deadline),
-with list size and age reviewed weekly.
+mitigation is a two-part rule. First, cap the list: when it is full, a new quarantine needs a fix or a
+deletion first. Second, give each quarantined test an owner and a fix-or-delete deadline. Review list
+size and age weekly.
 
 **Rescue against replace.** A week spent making old tests hermetic is a week not spent on contracts. A
 slow, flaky test that duplicates a unit test is not worth rescuing.
@@ -336,9 +348,8 @@ per system from escape classification.
 reported flakiness falling. Countermeasure: count retried passes as failures; give retries an expiry date.
 
 **The quarantine graveyard.** Tests enter quarantine and never return, and coverage quietly vanishes.
-Signal: quarantine size and median age rising. Countermeasure: the two-part rule, a cap on the list
-(when it is full, a new quarantine needs a fix or a deletion first) and an owner and fix-or-delete
-deadline per test; past the deadline, fix or delete by decision.
+Signal: quarantine size and median age rising. Countermeasure: the two-part rule from Trade-offs (a
+capped list, and a per-test owner and deadline); past the deadline, fix or delete by decision.
 
 **The shared-environment tar pit.** One integration environment, always partly broken, owned by nobody.
 Signal: daily "is it just me?" messages. Countermeasure: contracts and hermetic service tests.
@@ -348,18 +359,20 @@ moved without a plan. Signal: escapes in new features rise. Countermeasure: the 
 19, announced early, with exploration charters on significant changes.
 
 **Migrations tested on empty databases.** Migrations pass the pipeline and fail in production. Signal:
-"unexpected data" in incident reviews. Countermeasure: mandatory rehearsal for tier 1 data.
+"unexpected data" in incident reviews. Countermeasure: mandatory rehearsal for
+[tier 1](../../glossary.md#tier-1) data, the data of components on the order or payment path.
 
 ## Enterprise Application
 
 At 50 to 150 engineers the test suite is a platform needing platform ownership.
 
 **The director owns** a short testing strategy (escape classification, investment priorities,
-flakiness budget, coverage policy, manual-testing plan), reviewed quarterly in Chapter 27's cadence.
+flakiness budget, coverage policy, manual-testing plan), reviewed quarterly with the managers.
 **Each team owns** its tests' speed and flakiness; flaky tests consume a shared budget, and the monthly
 review says so with numbers. **A platform team owns** test infrastructure (hermetic fixtures, flakiness
-detection, quarantine tooling); at Northstar, Platform Operations with Kwame Mensah. **Staff engineers
-own** cross-team standards: Chapter 27 assigns Ines Carvalho contract tests and Li Na Zhou migration and
+detection, quarantine tooling); at Northstar, Platform Operations with Kwame Mensah (staff engineer,
+infrastructure and reliability). **Staff engineers own** cross-team standards. At Northstar, Ines
+Carvalho (Core domain) leads contract tests and Li Na Zhou (data and integration) migration and
 configuration safety.
 
 Two policies work well at this scale: a **flakiness budget** per suite (for example, non-change failures
@@ -408,10 +421,9 @@ documented exploratory process, not a manual gate the clause does not require.
 
 ## Case Study
 
-This case is **fictional**: the testing workstream in the quarter
-[Chapter 27](27-quality-transformation-at-enterprise-scale.md) describes, from the
-[baseline](../../case-studies/northstar/baseline-data.md) and the
-[first-quarter record](../../case-studies/northstar/first-quarter.md).
+This case is **fictional**: the testing workstream of the director's first quarter, weeks 3 to 13, from
+the [baseline](../../case-studies/northstar/baseline-data.md) and the
+[record of the director's first year](../../case-studies/northstar/first-quarter.md).
 
 In week 3, Kwame Mensah pulled a month of Core pipeline history. About 140 tests accounted for most
 non-change failures, almost all using the shared test database. Kwame proposed retries; the director
@@ -419,21 +431,20 @@ allowed them for two weeks only. The release working group he led, with owners f
 quarantined the 40 worst in week 4 and all 140 by day 90, each with an owner and a fix-or-delete
 deadline.
 
-Marcus Oyelaran's Billing team owned 38 of the 140 and said it had no capacity. The director pointed to
-the budget rule (past the deadline, fix or delete by decision) and to Billing's 25 percent prevention
-allocation from Chapter 27. Billing deleted 15 tests that duplicated unit tests and rewrote 23 against
+The Billing team of Marcus Oyelaran (Billing manager) owned 38 of the 140 and said it had no capacity.
+The director pointed to the budget rule (past the deadline, fix or delete by decision). The director also pointed
+to the 25 percent of Billing's capacity reserved for prevention since week 4. Billing deleted 15 tests that duplicated unit tests and rewrote 23 against
 containerized databases.
 
 Ines Carvalho started contracts on order capture to the pricing service, both owned by Orders. The
-second, invoicing to the payments gateway,
-required Elena Sokolova's team to accept being blocked by Billing's expectations. Elena agreed on
+second, invoicing to the payments gateway, required the team of Elena Sokolova (Payments and
+Integrations manager) to accept being blocked by Billing's expectations. Elena agreed on
 condition that Billing reviewed every expectation for meaning, not just shape. In week 8 that contract
 caught a gateway change that would have rounded multi-currency amounts differently.
 
-Migration safety came too late for one incident. The week 9 Billing Sev1 in Chapter 27 (credit notes
-applied twice) came from a migration and a code change shipped together with no ordering check. Li Na
-Zhou's rehearsal, still a pilot, became mandatory for tier 1 data in week 10; the ordering check promised
-after INC-427 had slipped and landed in week 11.
+Migration safety came too late for one incident: the week-9 Billing Sev1, a repeat of INC-427 in which
+credit notes were applied twice ([Chapter 25](25-incidents-postmortems-and-change-failure-analysis.md#case-study) tells it). Li Na Zhou's rehearsal, still a pilot, became
+mandatory for tier 1 data in week 10, and the ordering check landed in week 11.
 
 All seven QA engineers triaged the manual suite with the teams, and five also automated cases; two
 chose to run the weekly regression subset. By day 90 they had classified about
@@ -470,7 +481,7 @@ rate. A team lead proposes automatic retries of up to three attempts on every fa
 halve red-main time within a week. Estimate what retries would do to the measured numbers and to the
 real problem, and propose an alternative with a measurable target.
 
-**F3.** The CFO reads that Core's line coverage is 41 percent and asks why it should not reach 80 percent
+**F3.** The chief financial officer (CFO) reads that Core's line coverage is 41 percent and asks why it should not reach 80 percent
 by year end, reported monthly. Reply briefly: what coverage measures and does not, what you would report
 instead, and what coverage commitment you would accept.
 
@@ -482,7 +493,8 @@ and does not understand. Marcus Oyelaran says Billing has no capacity to write e
 first contract: who writes what, who fixes a failing contract, how disputes are resolved, and what you
 trade for agreement.
 
-**A2.** Design the triage of the 1,900 manual regression cases with Tom Becker and the seven QA
+**A2.** Design the triage of the 1,900 manual regression cases with Tom Becker (Platform Operations
+manager) and the seven QA
 engineers. Specify the categories and criteria, who decides contested cases, how releases stay safe
 while the pass shrinks, and how you will know whether the exploration charters find anything.
 
@@ -493,8 +505,9 @@ flaky tests and is behind on a renewal commitment, and show how the policy handl
 ### Executive Decision-Making
 
 **X1.** One of the two customers in the $9M renewal asks for a clause requiring "full manual regression
-testing before every production release." Sofia Alvarez wants to accept it to close the renewal. As CTO, decide how to respond, what you offer
-instead, and how you explain it to the CEO.
+testing before every production release." Sofia Alvarez (VP Customer Success) wants to accept it to
+close the renewal. As CTO, decide how to respond, what you offer instead, and how you explain it to the
+CEO.
 
 **X2.** For two quarters you can fund one investment of about four engineers. Option A: make Core's 1,350
 shared-database tests hermetic, cutting an estimated 25 pipeline minutes and most flakiness. Option B:

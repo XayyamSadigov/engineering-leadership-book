@@ -7,7 +7,12 @@ stewards, the quality block by reference) but that four of its seven other entri
 already inside the block, two entries break its own steward rule, and it has no row for the SLOs,
 invoice correctness, or security exposure. The scorecard below is this solution's recommendation, one
 defensible answer among several. All Northstar facts are fictional; estimates marked as this
-solution's are assumptions, not canon.
+solution's are assumptions, not facts from the case.
+
+People named: Victor Lindqvist (CTO), Rajiv Menon (CFO), Amara Okafor (CPO), Sofia Alvarez (VP Customer
+Success), Marcus Oyelaran, Tom Becker, and Elena Sokolova (managers of Billing, Platform Operations, and
+Payments and Integrations), Kwame Mensah and Li Na Zhou (staff engineers), and Joon Park (IT security
+lead). The [cast](../../case-studies/northstar/cast.md) has the details.
 
 ## 1. Decisions first
 
@@ -29,9 +34,9 @@ Every entry below names one of these. A candidate that informed none was dropped
 ## 2. Readings, recomputed twice
 
 From [`p5-quarterly-readings.csv`](../data/p5-quarterly-readings.csv). The first column is computed from
-counts; the second is the canon's reported figure.
+counts; the second is the figure Northstar's record reports.
 
-| Measure | Quarter 2 from counts | Canon reports | 95% interval (this solution's) |
+| Measure | Quarter 2 from counts | Record reports | 95% interval (this solution's) |
 |---|---|---|---|
 | Sev1 and Sev2 incidents | 17 (3 + 14) | 17 | Poisson 9.9 to 27.2 |
 | Customer-detected share | 5 ÷ 17 = 29.4% | 29% | Wilson 13% to 53% |
@@ -86,12 +91,12 @@ printed next to the number.
 | Order submission | 99.9% | 600,000 × 0.001 = 600 failed submissions | 0.001 × 40,320 minutes = 40 minutes |
 | Order latency | 99% within 2 seconds | 6,000 slow submissions | about 403 minutes |
 | Payment final within 60 seconds | 99.9% | 240,000 × 0.001 = 240 attempts | 40 minutes |
-| Invoice correctness | 99.99% once reconciliation exists | Unknown: the canon gives no invoice volume | 4 minutes |
+| Invoice correctness | 99.99% once reconciliation exists | Unknown: the case gives no invoice volume | 4 minutes |
 
 **How the contract and the SLOs relate.** A 13-week quarter holds 91 ÷ 28 = 3.25 SLO windows; 3.25 ×
 40.3 minutes is about 131 minutes, the contract's allowance for the quarter. In time terms, an order or payment journey that stays
 within budget in every 28-day window also meets the quarterly contract, if the probe and the SLI agree.
-They do not always: the probe runs from one region, misses the mobile path, and in INC-403 would have
+They do not always: the probe runs from one region, misses the mobile path, and in INC-403 (order submission failed for customers with legacy price lists) would have
 seen nothing, while the order SLI counts failures on both web and mobile. The scorecard therefore keeps
 contractual availability as the target the contract sets, and budget consumption as the leading
 measure that explains it.
@@ -133,7 +138,7 @@ Ten entries; the quality block counts as one.
 | # | Measure and definition | Source and status | Q2 reading | Direction or target | Pair | Row owner | Data steward | Decision |
 |---|---|---|---|---|---|---|---|---|
 | 1 | Contractual availability: successful synthetic checks ÷ checks, order and payment paths, per quarter | Synthetic monitoring; system, one region | 99.86% ($95,000 credits) | Target 99.9%, set by contract | 2, and customer-detected share | Director | Kwame Mensah | Renewals, credits forecast, reports to Victor |
-| 2 | SLO budget consumed per journey (order, latency, payment): bad events ÷ budget, 28-day rolling | Load balancer, mobile-bff, payments-gateway; system | Weekly readings exist; no quarter summary in the canon | Within budget | Release frequency (5) | Elena Sokolova | Kwame Mensah | Error budget policy; reviews; holds under B |
+| 2 | SLO budget consumed per journey (order, latency, payment): bad events ÷ budget, 28-day rolling | Load balancer, mobile-bff, payments-gateway; system | Weekly readings exist; no quarter summary recorded | Within budget | Release frequency (5) | Elena Sokolova | Kwame Mensah | Error budget policy; reviews; holds under B |
 | 3 | Invoice correctness: invoices and postings passing reconciliation ÷ all, 28-day | Nightly reconciliation job; status unknown | None | Toward 99.99% once measured | Confirmed correctness defects from support | Marcus Oyelaran | Li Na Zhou | Billing's prevention priorities |
 | 4 | Quality block (template rows listed below) | Incident tracker, review records, ownership inventory | As listed | Per row | Within the block | Per template | Kwame Mensah | Monthly quality reviews; prevention step-down |
 | 5 | Delivery by component: deployment frequency, change failure rate (72-hour rule and DORA side by side to quarter 4), lead time for changes; Core as its own line | Hand-joined CI logs until the event store runs | Core 13 releases, 3 of 13 failed | Frequency up, failure down, lead time down | Each other | Kwame Mensah | Li Na Zhou | Week-32 contract-test capacity |

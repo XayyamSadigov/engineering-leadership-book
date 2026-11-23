@@ -16,7 +16,7 @@ percent for years.
 What replaces it is not a different coverage number. A defensible replacement is a **should** in the
 guidance page, with intent stated: "New and changed code on tier 1 paths should have tests that would
 fail if the behavior changed." Verification is a sampled review of new tests for meaningful assertions,
-tied to the escaped-defect classification (Chapter 27 shows that 27 percent of escaped defects were
+tied to the escaped-defect classification (Chapter 19 shows that 27 percent of escaped defects were
 catchable at unit level and 23 percent at integration boundaries).
 
 An answer that keeps the rule is also defensible if it rewrites it fully: intent (reduce regressions on
@@ -40,7 +40,7 @@ scanners are not perfectly precise, so the answer must include a fast, recorded 
 That is the exception to "gate only on what is never wrong", and it should be stated as one. The weak
 answer puts everything in code review.
 
-## F3 — What the pull request sample shows
+## F3 — What the merge request sample shows
 
 **What it shows.** Completion is near universal (38 of 40) and does not depend on the content of the
 change: 11 of the 38 ticked "tests added or updated" without any test change. The checkbox measures
@@ -54,14 +54,14 @@ explanation is that the checklist has become a ritual, which is the decoupling t
 **The manager's argument** confuses completion with effect. A measure that is almost always satisfied
 and unrelated to what it claims to measure carries no information.
 
-**Replacement.** Remove the box and let the pipeline report, on each pull request, whether test files
+**Replacement.** Remove the box and let the pipeline report, on each merge request, whether test files
 changed alongside production code. Reviewers see the fact rather than an attestation. Where a change
 needs no tests, the author says why in one line. Then sample a few requests per month to see whether
 reviews engage with that report. The weak answer adds a second checkbox or makes the reviewer co-sign.
 
 ## A1 — The mobile exemption request
 
-**Do not grant a permanent exemption; do take the request seriously.** Daniel is right that app store
+**Do not grant a permanent exemption; do take the request seriously.** Daniel Cho (Customer Experience manager) is right that app store
 releases cannot be rolled back like a service deployment. He is asking for an exemption from the
 **tool-level wording** of the standard, which is a sign that the standard was written about a mechanism
 (automated rollback) rather than its intent (a bad change can be contained quickly and every production
@@ -101,9 +101,9 @@ changes. The weak answer either accepts the board or dismisses the concern.
 
 ## A3 — The tier change request
 
-**Who decides:** not Priya, and not the director alone on opinion. Tier is assigned by a business
+**Who decides:** not Priya Raman (Orders manager), and not the director alone on opinion. Tier is assigned by a business
 criterion stated in advance, at Northstar "on the order or payment path", and confirmed by someone
-outside the owning team (the standard owner, Kwame, with the director as escalation).
+outside the owning team (the standard owner, Kwame Mensah, with the director as escalation).
 
 **Apply the criterion.** Pricing rules determine what an order costs. If a bad pricing rule change
 can stop orders or misprice them, the component is on the order path regardless of whether it is
@@ -113,7 +113,7 @@ tier 1.
 
 **Handle it well.** Acknowledge the real issue under the request: Orders now owns obligations
 (runbook, complete alerts) it lacks capacity for. Offer to count that work against Orders' prevention
-allocation (10 percent in Chapter 27's plan, protected for the renewal commitment), and if needed agree
+allocation (10 percent of Orders' capacity in quarter 1, protected for the renewal commitment), and if needed agree
 a short exemption with an expiry for the runbook while alerts come first.
 
 **Watch for tier deflation** across the organization in the following month: count tier change

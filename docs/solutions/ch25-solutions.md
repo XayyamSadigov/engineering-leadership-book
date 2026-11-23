@@ -81,7 +81,7 @@ exercise in labels and never asks what decision it informs.
 **In order.**
 
 1. **Declare Sev1** (wrong financial records) and say so in the channel, with a time stamp.
-2. **Assign roles.** Marcus knows the ledger; make him operations lead formally, and say you are
+2. **Assign roles.** Marcus Oyelaran (Billing manager) knows the ledger; make him operations lead formally, and say you are
    incident commander. Name a communications lead and a scribe.
 3. **Stop the damage before diagnosing.** Ask operations whether posting can be paused or the release
    rolled back. Every minute adds wrong postings to repair later.
@@ -89,7 +89,7 @@ exercise in labels and never asks what decision it informs.
 
 **To the CEO**, privately: "Sev1 declared at 10:4x. Payments are posting to the wrong period. We are
 stopping further postings now. Next update at 11:15. The review will show what the system allowed; naming
-someone now slows the fix." **To Sofia:** the three customers get an account-level answer as soon as
+someone now slows the fix." **To Sofia Alvarez (VP Customer Success):** the three customers get an account-level answer as soon as
 impact is known, then the 30-minute cadence; ten-minute updates would pull the commander away from the
 incident. **To Marcus:** he is the right person to lead the fix, and you will handle everyone else.
 
@@ -98,7 +98,7 @@ answer has the commander debugging, or answers "who shipped this?" with a name.
 
 ## A2 — Responding to Elena Sokolova
 
-**What you tell Elena.** The triage kept actions on recurring or expensive failure modes. Payments and
+**What you tell Elena (Payments and Integrations manager).** The triage kept actions on recurring or expensive failure modes. Payments and
 Integrations had 1 of the 11 recurrences; Billing had 6. Fewer kept actions reflects her team's
 discipline, not a judgment that its reviews were worse. Dropping an action from the central list does
 not forbid the work: her team can still schedule it in its own plan.
@@ -158,7 +158,7 @@ renewal).
 **How each number is gamed.** Closure above 80 percent: managers write fewer and smaller actions, close
 actions as done before they are verified, or close them as "won't do" quietly. Zero recurrences: failure
 modes are described too narrowly to match, severities drift down so fewer events are reviewed, and
-incidents go undeclared. The second number is an absolute, like the "zero Sev1" goal in Chapter 27, and
+incidents go undeclared. The second number is an absolute, like a board's "zero Sev1 incidents" goal, and
 it attacks the honesty of the data the whole system depends on.
 
 **Alternative.** Keep executive accountability for follow-through without paying for the numbers:
@@ -168,8 +168,8 @@ it attacks the honesty of the data the whole system depends on.
   sample.
 - Organization-level recurrence trend and closure of top-priority actions go to the CTO and board, with
   definitions and paired measures.
-- If Victor wants a compensation link, attach it at director level to the organization-wide trend, where
+- If Victor Lindqvist (CTO) wants a compensation link, attach it at director level to the organization-wide trend, where
   one manager cannot move it by relabeling.
 
-A good answer predicts the gaming concretely and offers Helena a visible sign of seriousness. The weak
+A good answer predicts the gaming concretely and offers Helena Marsh (CEO) a visible sign of seriousness. The weak
 answer either accepts the proposal or rejects it without an alternative.

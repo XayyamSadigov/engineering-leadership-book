@@ -2,24 +2,28 @@
 
 You are Victor Lindqvist, CTO of Northstar Technologies, the fictional company of the
 [case study](../case-studies/northstar/index.md), and it is week 47 of the Engineering Director's first
-year. The board meets in week 50, where Helena Marsh (CEO) presents the year-2 operating plan and budget
-envelope for approval; decisions inside the envelope stay with management, and your own agenda item is
-your three-year technology strategy, for discussion. The executive team meets in week 49. On your desk: the
-director's two-year continuation of the quality program (6 FTE of prevention in quarters 5 and 6, 5 FTE in
-quarters 7 and 8, $150,000 of tooling, and $100,000 more if a CI target is chosen); a technology risk
-register whose two highest items have been open since week 14; Rajiv Menon's (CFO) condition that any new
-cash be offset inside the $4.2M cloud and tooling budget; Helena Marsh's (CEO) question whether reliability
-will hold through six renewals of top-40 customers; and Greg Tanaka's (VP Sales) argument that the
-prevention engineers belong on deal features. Your job in this project is to build the technology
-investment proposal you would take to the executive team in week 49: a portfolio of candidate investments,
-priced in capacity and cash, valued with scenarios, sequenced by cost of delay, fitted to the envelope,
-with a recommended package, a one-page engineering input to the operating plan Helena Marsh presents, and
-the gates that would stop the spending.
+year. The executive team meets in week 49. The board meets in week 50, where Helena Marsh (CEO) presents
+the year-2 operating plan and budget envelope for approval. Decisions inside the envelope stay with
+management; your own agenda item is your three-year technology strategy, for discussion.
+
+On your desk are four things. The director's two-year [continuation](../glossary.md#the-continuation)
+of the quality program asks for 6 [FTE](../glossary.md#fte) of prevention in quarters 5 and 6, 5 FTE in
+quarters 7 and 8, $150,000 of tooling, and $100,000 more if a CI target is chosen. A technology
+[risk register](../glossary.md#risk-register) has had its two highest items open since week 14. Rajiv
+Menon (CFO) will accept new cash only if it is offset inside the $4.2M cloud and tooling budget. And
+Helena Marsh asks whether reliability will hold through six renewals of top-40 customers, while Greg
+Tanaka (VP Sales) argues that the prevention engineers belong on deal features.
+
+Your job is to build the technology investment proposal you would take to the executive team in week
+49. It is a portfolio of candidate investments, priced in capacity and cash, valued with scenarios,
+sequenced by [cost of delay](../glossary.md#cost-of-delay), and fitted to the envelope. It ends with a
+recommended package, a one-page engineering input to the operating plan, and the gates that would stop
+the spending.
 
 The project applies [Chapter 52](../parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md), which covers financial statements, budgeting, capitalized and expensed
 software, and investment cases with scenarios. It uses
 [Chapter 45](../parts/10-business-leadership/45-business-models-and-engineering-economics.md) for value
-channels, cost of delay, and NPV, the
+channels, cost of delay, and [NPV](../glossary.md#net-present-value-npv) (net present value), the
 [technology investment business case](../templates/technology-investment-business-case.md) template for
 each candidate,
 [Chapter 49](../parts/11-vp-engineering/49-multi-year-transformation-communication-and-politics.md) for
@@ -27,16 +31,24 @@ staged funding, [Chapter 46](../parts/10-business-leadership/46-stakeholder-mana
 for the negotiation, [Chapter 48](../parts/11-vp-engineering/48-capacity-strategy-workforce-planning-and-governance.md)
 for the envelope, [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md)
 for the risk register, and [Chapter 38](../parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md)
-for capacity. It takes about 14 to 20 hours.
+for capacity. After that reading, the full project takes about 28 to 35 hours.
+
+!!! note "Core version (about 10 to 12 hours)"
+    Do deliverables 2, 3, 5, and 9 only: the priced register, the valuation, the package, and the ask.
+    Apply acceptance criteria 2, 3, 4, 5, 7, 9, and 10, and score the rubric rows Pricing and options,
+    Valuation and scenarios, Portfolio and envelope, and Decisive inputs and staging (65 of the 100
+    points; rescale to 100).
 
 ## Problem Statement
 
 Northstar's technology spending has been decided one request at a time. Year 1 funded prevention because
 the case was obvious: $410,000 of credits a quarter, 30 serious incidents, $9M of renewals at risk. By
 quarter 3 credits were $60,000 a quarter and incidents 14, so the obvious case is gone. What remains is
-harder to price: renewal protection for about $7.0M of ARR, capacity returned from unplanned work, risks
-that have not yet produced an incident (an unsupported Core framework, a single partner bank route), and
-measurement the company does not have (invoice correctness). Against them stands work with a sponsor and a
+harder to price. It includes renewal protection for about $7.0M of annual recurring revenue
+([ARR](../glossary.md#arr)) and capacity returned from unplanned work. It includes risks that have not
+yet produced an incident: an unsupported framework under [Core](../glossary.md#core), the monolith, and
+a single partner bank route. And it includes measurement the company does not have (invoice
+correctness). Against them stands work with a sponsor and a
 revenue story.
 
 The board will see the engineering content of one envelope. It will approve an envelope, not a list, and it will remember whether the
@@ -45,11 +57,11 @@ accuracy rather than precision applies here ([Arnold and Yüce, 2013](../referen
 what the board needs is the right order of magnitude, the assumptions that carry it, and what would change
 the answer.
 
-Your task is to build the proposal: a priced register of the candidates, a valuation of each with base,
-downside, and upside cases, a recommended package that fits the capacity and cash envelope, the decisive
-inputs and their break-even values, how the funded work would be booked under Northstar's policy, a page
-of engineering input to the operating plan,
-the ask with gates, and replies to Greg Tanaka's alternative and Rajiv Menon's offset condition.
+Your task is to build the proposal. It holds a priced register of the candidates and a valuation of
+each with base, downside, and upside cases. It recommends a package that fits the capacity and cash
+envelope, and names the decisive inputs and their break-even values. It says how the funded work would
+be booked under Northstar's policy, gives a page of engineering input to the operating plan, and ends
+with the ask, its gates, and replies to Greg Tanaka's alternative and Rajiv Menon's offset condition.
 
 ## Scenario and Constraints
 
@@ -57,11 +69,19 @@ the ask with gates, and replies to Greg Tanaka's alternative and Rajiv Menon's o
 technical direction and the board's technology questions. The director wrote the continuation proposal;
 the staff engineers and managers own the estimates. Rajiv Menon checks the arithmetic.
 
-**The time rule.** Use facts dated week 47 or earlier, including the executives' positions from weeks 46
+**The time rule.** Use facts dated week 47 or earlier. They are in
+[quarter 3 results](../case-studies/northstar/first-quarter.md#quarter-3-results), the weeks 40 to 47
+entries of the [quarter 4 calendar](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4),
+[finances](../case-studies/northstar/first-quarter.md#finances-chapter-52),
+[three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51),
+and [risk, security, and compliance](../case-studies/northstar/first-quarter.md#risk-security-and-compliance-chapter-53);
+the [timeline](../case-studies/northstar/timeline.md), [cast](../case-studies/northstar/cast.md), and
+[quarter 4 briefing](../case-studies/northstar/quarter-4-briefing.md) help you find them (the briefing
+also mentions later weeks, which stay off limits). They include the executives' positions from weeks 46
 and 47, Finance's week 46 latest estimate for fiscal year 1 and the capitalization policy, Helena Marsh's
 week 46 confirmation of the business choices, and your own week 47 three-year strategy draft
-([Chapter 51](../parts/12-cto-leadership/51-enterprise-technology-strategy.md)). Quarter 4 results do not exist. The canon records no outcome for the week 46 organization decision
-or any later decision; the proposal must hold at 80 engineers, at 79 (the main organization proposal),
+([Chapter 51](../parts/12-cto-leadership/51-enterprise-technology-strategy.md)). Quarter 4 results do not
+exist. No outcome is recorded for the week 46 organization decision or any later decision; the proposal must hold at 80 engineers, at 79 (the main organization proposal),
 and at 78 (if a VP takes a seat).
 
 **Constraints.** These are binding.
@@ -80,21 +100,23 @@ and at 78 (if a VP takes a seat).
    not priced; you may state what they would have to be worth (a break-even).
 6. **Options for every candidate,** including doing nothing and a partial or cheaper option.
 7. **Use Finance's figures and policy.** Use the fiscal year 1 latest estimate and the capitalization policy
-   in the canon ([the first quarter](../case-studies/northstar/first-quarter.md), "Finances (Chapter 52)").
-   Present the case on a cash and capacity basis and show the accounting effect separately; do not invent
-   statement figures the canon does not give.
+   in [finances](../case-studies/northstar/first-quarter.md#finances-chapter-52). Present the case on a
+   cash and capacity basis and show the accounting effect separately; do not invent statement figures the
+   case does not give.
 
 ## Starting Dataset
 
 Use these sources:
 
-- [Northstar overview](../case-studies/northstar/index.md), including "Executive and board context (Part
-  XII)"; [baseline data](../case-studies/northstar/baseline-data.md), especially "Money", reliability,
+- [Northstar overview](../case-studies/northstar/index.md), including
+  [executive and board context](../case-studies/northstar/index.md#executive-and-board-context); [baseline data](../case-studies/northstar/baseline-data.md), especially "Money", reliability,
   security, and the architecture and estate tables; [the first quarter](../case-studies/northstar/first-quarter.md),
-  especially "Quarter 3 results", "Quarter 4", and "Part XII facts (quarter 4)" (Finance's fiscal year 1
-  statements, the capitalization policy, the TR-01 cost scenarios, and your week 47 strategy draft); and
-  [`incidents-last-quarter.csv`](../case-studies/northstar/data/incidents-last-quarter.csv) for INC-409 and
-  INC-413.
+  especially "Quarter 3 results", "Quarter 4", and
+  [executive and company facts in quarter 4](../case-studies/northstar/first-quarter.md#executive-and-company-facts-in-quarter-4)
+  (Finance's fiscal year 1 statements, the capitalization policy, the TR-01 cost scenarios, and your week 47 strategy draft); and
+  [`incidents-last-quarter.csv`](../case-studies/northstar/data/incidents-last-quarter.csv) for INC-409
+  (duplicate invoices from a retried batch job) and INC-413 (a partner bank outage with no fallback
+  route).
 - The risk register in [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md),
   the CI consolidation example in the [business case template](../templates/technology-investment-business-case.md#example-northstar-ci-consolidation),
   the continuation proposal and executive positions in [Chapter 49](../parts/11-vp-engineering/49-multi-year-transformation-communication-and-politics.md#case-study),
@@ -103,11 +125,11 @@ Use these sources:
   which prices TR-01 against extended support.
 
 **Project data.** [`p8-investment-candidates.csv`](data/p8-investment-candidates.csv) lists eight candidate
-rows (C1a to C6) with effort ranges, cash, run cost, and evidence. Each row says whether it is **canon**,
-**derived from canon**, or **invented for this project**. TR-01 uses Finance's canon scenarios and the $60,000 a year
+rows (C1a to C6) with effort ranges, cash, run cost, and evidence. Each row says whether it comes
+**from the case**, is **derived from the case**, or is **invented for this project**. TR-01, the Core framework migration, uses Finance's scenarios and the $60,000 a year
 extended-support assumption of Chapters 30 and 52, so that the same item has the same price throughout the
 book. The invented figures (the bank route's effort and fee, outage frequency and credits, the reconciliation job's effort) exist only
-so that every learner prices the same thing; they are not Northstar canon.
+so that every learner prices the same thing; they are not part of Northstar's record.
 [`p8-cash-offsets.csv`](data/p8-cash-offsets.csv) lists three possible offsets, all invented for this
 project, with a confidence for each.
 
@@ -227,7 +249,7 @@ A submission is accepted only if all of these hold.
 8. Uncounted benefits are named; any that decide the recommendation are expressed as break-evens, not
    prices.
 9. The ask has a decider, a date, checkpoints with stop conditions, and a review date.
-10. No fact is invented about the canon; invented project figures are used as given and labeled.
+10. No fact about Northstar is invented; invented project figures are used as given and labeled.
 
 ## Evaluation Rubric
 

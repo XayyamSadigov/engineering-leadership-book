@@ -15,21 +15,13 @@ describes evidence someone else could check (a decision record, a board paper, a
 succession table, a changed behavior in a direct report). A competency without evidence is rated
 "No evidence", never filled with impression.
 
-The CTO title covers different jobs. Larson defines the engineering executive as the person responsible
-for all of engineering, whatever the title, and notes that companies use CTO, VP Engineering, and Head of
-Engineering inconsistently ([Larson, 2023a](../references/bibliography.md#larson2023executive-job)).
-Werner Vogels' widely shared post summarizes Tom Berray and Raj Sampath's four CTO models: infrastructure
-manager, technology visionary and operations manager, external-facing technologist, and big thinker, and
-says the role differs with the company and with the part technology plays in it
-([Vogels, 2007](../references/bibliography.md#vogels2007ctoroles)). That is **expert opinion**, not a
-study. This template turns it into a weighting step: the same nine competencies apply to every CTO, but
-the archetype the company needs decides which ones the assessment weighs most. The competency list
-itself is **this book's recommendation**, built on Larson's writing on engineering executives
-([Larson, 2024](../references/bibliography.md#larson2024primer); idea level), his argument that the
-executive's job is the company's problem rather than engineering's advocacy
-([Larson, 2023b](../references/bibliography.md#larson2023balancing)), and the governance emphasis of
-NIST's Cybersecurity Framework 2.0 ([NIST, 2024](../references/bibliography.md#nist2024csf)). No study
-validates any CTO competency model, this one included.
+The CTO title covers different jobs, so the matrix has a weighting step: the same nine competencies
+apply to every CTO, but the kind of CTO the company needs decides which ones count most.
+
+!!! tip "Minimum version"
+    Write the two-sentence archetype statement, weight the nine rows, and rate only the High-weight
+    rows, each with one piece of evidence and one piece of contrary evidence. Add the rest at the
+    formal annual assessment.
 
 ## How to fill it in
 
@@ -55,7 +47,9 @@ validates any CTO competency model, this one included.
 7. **Share the self-assessment with the CEO before their assessment,** and discuss the gaps between
    the two, starting with the weights.
 
-## The matrix
+## Template
+
+The matrix:
 
 | Competency | Not yet | Solid | Strong |
 |---|---|---|---|
@@ -99,57 +93,50 @@ assessment:
       check_date: ""
 ```
 
-## Example: Northstar CTO, self-assessment in week 48
+## Example: Northstar, CTO self-assessment in week 48
 
-**Fictional.** You are Victor Lindqvist in week 48, filling in the matrix for the director's first
-year. The evidence is limited to the canon: the [Northstar overview](../case-studies/northstar/index.md)
-(including the executive and board context), the [baseline data](../case-studies/northstar/baseline-data.md),
-and the [first year](../case-studies/northstar/first-quarter.md) record: measured results through quarter
-3, and the quarter 4 drafts and measurements up to week 48 recorded under its Part XII facts. Quarter 4
-work whose outcome is not recorded (the three-year strategy draft, the enterprise risk register, the
-year-2 organization, the VP question, the quality continuation, the workforce plan, ADR-0001, the week 50
-board) appears as **Pending (not rated)**: under the template's rule a draft is not evidence of
-competency until it has been decided and acted on.
-The ratings and the weights are this example's judgment, not canon, and whether Victor completes such
-an assessment is not recorded.
+!!! info "Northstar so far"
+    Week 48 of the Engineering Director's first year at Northstar Technologies, a fictional company.
+    Victor Lindqvist (CTO) has one direct report, the director, and reports to Helena Marsh (CEO). Sev1
+    and Sev2 incidents fell from 30 a quarter to 14 in quarter 3; most quarter 4 decisions are drafts.
+    See the [timeline](../case-studies/northstar/timeline.md), the [cast](../case-studies/northstar/cast.md),
+    and the [quarter 4 briefing](../case-studies/northstar/quarter-4-briefing.md).
+
+You are Victor, filling in the matrix for the year. Work whose outcome is not recorded (the three-year
+strategy draft, the enterprise risk register, the year-2 organization, ADR-0001, the week 50 board)
+appears as **Pending (not rated)**: a draft is not evidence until it has been decided and acted on.
+The ratings and weights are illustrative.
 
 **Archetype statement.** Northstar needs a CTO who sets technical direction for an 11-year-old
 order-to-cash platform whose reliability is written into contracts, and who carries the technical
 relationship with the largest customers. Corporate IT and the two-person security function report to
-the CFO, so the infrastructure-manager model does not apply; the open structural question is who is
-accountable for security, which this assessment flags and does not answer ([Chapter 53](../parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md)).
+Rajiv Menon (CFO), so the infrastructure-manager model does not apply. Who is accountable for security
+is an open question this assessment flags and does not answer.
 
 | Competency | Weight | Rating | Evidence | Contrary evidence |
 |---|---|---|---|---|
-| 1. Company outcomes | High | Solid | Week 1 mandate stated as outcomes (halve Sev1 and Sev2, 99.9 percent, flat headcount, both renewal commitments kept); Sev1 and Sev2 30 → 21 → 17 → 14, at the mandate's 15 in quarter 3; service credits $410,000 (baseline), $95,000 (quarter 2), $60,000 (quarter 3) | 99.9 percent not yet met in any quarter (99.89 percent in quarter 3, about 144 unavailable minutes against about 131 allowed); the results were produced by the director's organization, and the CTO's part is the mandate and the funding, not the mechanism |
-| 2. Strategy and direction | High | Not yet | A technical strategy draft with three policies exists, written at director level in quarter 2 ([Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md)). Pending (not rated): Victor's three-year technology strategy draft, weeks 46–48 (business choices confirmed with Helena Marsh in week 46, four groups and four policies in week 47, a premortem in week 48), his discussion item for the week 50 board ([Chapter 51](../parts/12-cto-leadership/51-enterprise-technology-strategy.md)) | No company-level technology strategy adopted in year 1; uninterrupted strategy time about 2.0 of 48 hours a week in weeks 44–46; the Core framework is past free community support with no extended support bought; the CI target is still open |
-| 3. Capital allocation | Medium | Solid | Capacity model agreed in week 4 with the director and Amara Okafor; mandate delivered without headcount growth; supports staging the quality continuation (weeks 46–47) | The baseline roadmap was chosen by four executives, the CTO among them, distributing 100 points with no value estimates; Rajiv Menon's request to offset the continuation's $150,000 inside the $4.2M cloud and tooling budget is open |
-| 4. Risk, security, compliance | High | Not yet | Owns the board's technology questions; took Margaret Lin's week 43 request for an audit committee technology risk session and commissioned an enterprise technology risk register from the director, Marta Kowalczyk, and Joon Park. Pending (not rated): in week 48 he keeps the nine draft risks (ER-01 to ER-09) and three appetite lines, and commits to signing the auth-svc exception before week 50 or restricting auth-svc further; outcomes open | Estate risks (Core framework, one Jenkins controller with no standby, a configuration server two major versions behind) were found by the director's work, not by a register the CTO owns; a renewal customer asked for an SBOM and SSDF evidence in week 3 and 34 questionnaires arrived over the trailing four quarters, addressed to the CTO and answered from IT's records with engineering evidence supplied ad hoc; no SOC 2 report or other attestation; technology is one unchanged amber line on Finance's corporate register; no CISO and no named owner of security accountability across IT and engineering |
-| 5. Decision governance | High | Not yet | The week 15 escalation path sends the CTO only customer commitments and the director's budget authority; the year-2 organization reaches the CTO as a written proposal with alternatives and a decision date (week 46). Pending (not rated): the week 47 strategy draft's policy "money data moves by contract or events, never tables", a stated reversal of the week 14 remark, proposing that ADR-0001 be decided by week 60 | Before the director arrived, decisions and disputes were settled in unrecorded conversations; in week 14 a remark to Elena Sokolova ("read the tables now and clean it up later") landed as an instruction while ADR-0001 was open with no decider; 3.5 hours a week of unrecorded technical rulings in weeks 44–46 |
-| 6. Leadership bench | Medium | Not yet | One direct report, the director, given a one-sentence mandate in week 1; the director's role has a written definition (purpose, people, delivery, technical, not doing) | Week 44 succession table: 10 critical roles, none with a ready-now successor, 4 with no cover; no successor named for the director; promotions approved case by case without calibration before the director arrived; the VP question is pending (recommendation due week 48) |
-| 7. Executive team and board | High | No evidence (the week 50 board is the first test in the period) | Attends the board for one agenda item a quarter; the CEO's monthly pack carries the engineering figures; gathered each director's concerns in calls in weeks 46–48 ([Chapter 55](../parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md)) | Proposed the year-2 headline "Sev1 and Sev2 incidents below 10 per quarter" in week 41 with flat headcount; the director's week 42 counter (a draft) adds a rolling four-quarter total, the severity audit, and funded prevention, which the headline lacked; the week 48 draft engineering page carries both headlines side by side, choice open |
-| 8. Customers and market | High | Solid | Owns the largest customers' technical relationships; accounting integration live for the renewal customer from week 19; bulk ordering's 44 items complete and in final acceptance at week 26 | Availability below the contractual 99.9 percent in quarters 2 and 3; six of the 40 largest customers renew in quarters 5 to 8 |
-| 9. Signals and rhythm | Medium | Not yet | Signals independent of the director in weeks 44–46 ([Chapter 50](../parts/12-cto-leadership/50-what-a-cto-actually-does.md)): largest customers' technical relationships 5.0 hours a week, Sev1 bridges and customer incident calls 2.0, customer security reviews 2.0, engineering forums 1.5; weekly error budget publication with the CTO as arbiter | Strategy time about 2.0 of 48 hours a week; 11 informal technical requests in three weeks, 8 of them belonging under the director's escalation path or to standard owners; the week 26 report was the first written report since day 90; baseline handover notes say the Billing and Orders friction was left to "sort it out" |
+| 1. Company outcomes | High | Solid | Week 1 mandate stated as outcomes; Sev1 and Sev2 30 → 21 → 17 → 14; service credits $410,000 → $60,000 a quarter | 99.9 percent not met in any quarter (99.89 in quarter 3); the results came from the director's organization, and Victor's part is the mandate and the funding |
+| 2. Strategy and direction | High | Not yet | A director-level technical strategy from quarter 2. Pending: Victor's three-year strategy draft, weeks 46–48 | No company-level technology strategy adopted in year 1; about 2 of 48 hours a week on strategy; the CI target still open |
+| 3. Capital allocation | Medium | Solid | Capacity model agreed in week 4; mandate delivered without headcount growth | Baseline roadmap chosen by points with no value estimates; Rajiv Menon's request to offset the continuation's $150,000 is open |
+| 4. Risk, security, compliance | High | Not yet | Commissioned an enterprise risk register after the audit committee chair's week 43 request. Pending: its nine risks and three appetite lines | Estate risks found by the director, not by a register Victor owns; 34 security questionnaires answered ad hoc; no SOC 2 report; no named owner of security across IT and engineering |
+| 5. Decision governance | High | Not yet | Week 15 escalation path; the year-2 organization reaches him as a written proposal with a decision date. Pending: reversing his week 14 "read the tables" remark | The week 14 remark landed as an instruction while ADR-0001, the open decision on how integrations read ledger data, had no decider; 3.5 hours a week of unrecorded technical rulings |
+| 6. Leadership bench | Medium | Not yet | The director's role has a written definition | Week 44 succession table: 10 critical roles, none with a ready-now successor; no successor for the director |
+| 7. Executive team and board | High | No evidence | The week 50 board is the first test in the period | Proposed a "below 10 per quarter" incident headline in week 41 with flat headcount; the draft board page carries his headline and the director's counter side by side |
+| 8. Customers and market | High | Solid | Owns the largest customers' technical relationships; both renewal features delivered | Availability below the contractual 99.9 percent; six of the 40 largest customers renew in quarters 5 to 8 |
+| 9. Signals and rhythm | Medium | Not yet | Customer relationships, Sev1 bridges, and security reviews about 9 hours a week | 11 informal technical requests in three weeks, 8 of them delegable; the week 26 report was the first written report since day 90 |
 
-Weighted reading: four of the six High-weight competencies are Not yet or No evidence. The two Solid
-High-weight rows (outcomes and customers) rest mostly on the director's organization, which is
-competency 6's problem in another form: the CTO's results run through one person with no successor.
-The pending items are where the next assessment can move: an adopted strategy with funded decision
-points would lift competency 2; an owned register with treatment decisions and a decided security
-reporting line would lift competency 4; ADR-0001 decided on the record by week 60, and fewer unrecorded
-rulings, would lift competency 5; the week 50 board turns competency 7 from No evidence into a rating.
-Competency 9's signals exist; the contrary evidence says the calendar spends them on delegable work.
+What to notice: four of the six High-weight competencies are Not yet or No evidence, and the two Solid
+High-weight rows rest mostly on the director's organization. That is competency 6's problem in another
+form: Victor's results run through one person with no successor.
 
 **Development goals for quarters 5 and 6:**
 
-1. *Decision governance:* every CTO-level decision in the year-2 cycle (the organization, the VP
-   question, the quality continuation, the workforce plan) recorded with decider, options rejected,
-   and a review trigger, and any instruction to a team given through the record, not in passing.
-   Check, week 56: the organization decision log holds a record for each, and no team reports acting
-   on an unrecorded CTO instruction.
-2. *Risk, security, compliance:* the enterprise technology risk register owned at CTO level, with
-   the security reporting question put to the CEO and CFO as a decision. Check, week 65: each of
-   ER-01 to ER-09 has an owner and a recorded treatment decision, and the reporting option is decided.
+1. *Decision governance:* every CTO-level decision in the year-2 cycle recorded with decider, options
+   rejected, and a review trigger. Check, week 56: the decision log holds a record for each, and no
+   team reports acting on an unrecorded instruction.
+2. *Risk, security, compliance:* the enterprise risk register owned at CTO level, with the security
+   reporting question put to the CEO and CFO as a decision. Check, week 65: each risk has an owner and a
+   recorded treatment, and the reporting option is decided.
 
 ## Common mistakes
 
@@ -173,3 +160,25 @@ Competency 9's signals exist; the contrary evidence says the calendar spends the
 3. Does the CEO weigh the competencies as the CTO does? If not, which job is the CTO actually doing?
 4. Which risk would the board learn about from someone other than the CTO?
 5. What will the CTO stop doing to make room for the two development goals?
+
+## Evidence and references
+
+The CTO archetypes and the CTO, CIO, and VP Engineering splits are
+[Chapter 50's](../parts/12-cto-leadership/50-what-a-cto-actually-does.md#archetypes-what-the-company-needs-at-the-top).
+
+- [Larson, 2023a](../references/bibliography.md#larson2023executive-job): defines the engineering
+  executive as the person responsible for all of engineering, whatever the title, and notes that
+  companies use the titles inconsistently.
+- [Vogels, 2007](../references/bibliography.md#vogels2007ctoroles): summarizes Tom Berray and Raj
+  Sampath's four CTO models (infrastructure manager, technology visionary and operations manager,
+  external-facing technologist, and big thinker) and says the role differs with the company. That is
+  **expert opinion**, not a study; the weighting step comes from it.
+- [Larson, 2024](../references/bibliography.md#larson2024primer): Larson's writing on engineering
+  executives, credited here for the general idea behind the competency list.
+- [Larson, 2023b](../references/bibliography.md#larson2023balancing): the argument that the
+  executive's job is the company's problem rather than engineering's advocacy.
+- [NIST, 2024](../references/bibliography.md#nist2024csf): the Cybersecurity Framework 2.0's emphasis
+  on governance, behind competency 4 (**standard**).
+
+The competency list is **this book's recommendation**. No study validates any CTO competency model,
+this one included.

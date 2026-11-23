@@ -90,8 +90,9 @@ something.
 
 Because the timescales differ, a busy manager drifts toward the job with the fastest feedback, which
 is delivery. Over a year the drift shows in a calendar before it shows in attrition or in an
-architecture nobody chose. This is the book's reasoning, not a research finding; the calendar audit
-below is designed to catch it.
+architecture nobody chose. This is **this book's recommendation**, not a research finding (the
+[evidence labels](../../references/evidence-labels.md) page explains each label the book uses). The
+calendar audit below is designed to catch the drift.
 
 The jobs also compete for one scarce resource, the manager's week. A manager with fifteen direct
 reports who holds a weekly 30-minute one-on-one with each spends seven and a half hours on that alone,
@@ -172,7 +173,7 @@ leaders into management for influence, and lose technical direction. A staff tra
 
 ### Where staff-plus engineers sit
 
-Staff-plus engineers (staff, principal, and above) are senior individual contributors whose job is
+[Staff-plus engineers](../../glossary.md#staff-plus-engineer) (staff, principal, and above) are senior individual contributors whose job is
 technical leadership beyond their own work. Larson describes four common archetypes: the **tech
 lead**, who guides the approach and delivery of one team or a few; the **architect**, who owns the
 direction of a central technical area; the **solver**, who works through hard, high-priority problems
@@ -201,7 +202,7 @@ flowchart TD
 
 This is a common default, not a rule. Read each arrow as a question about your organization: is there
 a named person, and do they know it? Who decides architecture when managers and staff engineers
-disagree is contested (the book records it as disputed claim D7; Chapter 28 takes a position).
+disagree is contested; Chapter 28 takes a position.
 
 ### What the job is not
 
@@ -217,20 +218,20 @@ only latency.
 
 ### Do managers matter? The evidence
 
-Engineers often argue that managers are overhead. The evidence that managers affect outcomes is real, but each study has a specific population, and none studied software
-teams specifically.
+Engineers often argue that managers are overhead. The evidence that managers affect outcomes is
+real. But each study has a specific population, and none studied software teams.
 
 - **Productivity.** Using one company's data on technology-based service workers, Lazear, Shaw, and
-  Stanton report that replacing a supervisor in the bottom 10 percent of quality with one in the top
+  Stanton's abstract reports that replacing a supervisor in the bottom 10 percent of quality with one in the top
   10 percent raised a team's output by more than adding a worker to a nine-person team would, and
   that workers with better supervisors were less likely to leave
   ([Lazear, Shaw, and Stanton, 2015](../../references/bibliography.md#lazear2015value)). **Research
-  finding**; one firm; read at abstract level.
+  finding**; one firm.
 - **Attrition.** Using personnel data and employee surveys at a large high-tech firm, Hoffman and
-  Tadelis report that survey-measured people management skills have a strong negative relation to
+  Tadelis's working-paper abstract reports that survey-measured people management skills have a strong negative relation to
   turnover, with designs that support a causal reading, but that those skills did not consistently
   improve other outcomes ([Hoffman and Tadelis, 2021](../../references/bibliography.md#hoffman2021people)).
-  **Research finding**; one firm; read at the level of the working paper's abstract.
+  **Research finding**; one firm.
 - **Technical competence.** Using US and British survey data, Artz, Goodall, and Oswald report that a
   boss's technical competence was the strongest predictor of workers' job satisfaction, and that a rise
   in a supervisor's competence was associated with higher well-being for workers who stayed in the
@@ -255,7 +256,7 @@ recommendation.
 
 This example is **illustrative**: an invented manager in an invented company of about 40 engineers.
 
-Jo manages a payments team of eight and owns people and delivery; a senior engineer, Sam, is the
+Jo manages a payments team of eight and owns people and delivery; a senior engineer, Ari, is the
 named tech lead. Jo's two-week calendar, reconstructed from calendar and chat history, holds 80
 working hours:
 
@@ -266,21 +267,27 @@ working hours:
 | Planning and prioritization with product | 6 | Delivery | Leveraged |
 | Cross-team dependency meetings | 8 | Delivery | Necessary |
 | Incident calls as an extra responder | 8 | Delivery | Substitutable |
-| Design reviews | 12 | Technical | Substitutable: Sam's job |
+| Design reviews | 12 | Technical | Substitutable: Ari's job |
 | Writing code on a refund flow | 14 | Technical | Substitutable |
 | Three weekly status meetings | 6 | Other | Substitutable: nothing decided in four of six |
 | Email and administration | 12 | Other | Partly necessary |
 
-The split: people 14 hours (17.5 percent), delivery 22 (27.5), technical 26 (32.5), other 18
-(22.5). The role says technical direction is Sam's, yet a third of Jo's time is technical,
-much of it coding and duplicating Sam's reviews. Meanwhile nobody on the team has had a career
+By job, the 80 hours split as people 14, delivery 22, technical 26, and other 18. The role says
+technical direction is Ari's, yet a third of Jo's time is technical, much of it coding and duplicating
+Ari's reviews. Meanwhile nobody on the team has had a career
 conversation in two quarters, and the open role has been open for eleven weeks.
 
-A reallocation, with its assumptions: Jo attends one design review a week of Sam's choosing (saving
-about 9 hours a fortnight), hands the refund-flow code to an engineer (14), leaves incidents to the
-rotation unless they cross teams (6), and replaces two status meetings with a written update (4).
-That frees about 33 hours a fortnight; Jo puts 10 into hiring, 8 into career conversations and
-feedback, and keeps the rest as slack for cross-team work.
+A reallocation frees about 33 hours a fortnight. Its assumptions:
+
+| Change | Hours freed per fortnight |
+|---|---|
+| Attend one design review a week, of Ari's choosing | 9 |
+| Hand the refund-flow code to an engineer | 14 |
+| Leave incidents to the rotation unless they cross teams | 6 |
+| Replace two status meetings with a written update | 4 |
+
+Jo puts 10 of the freed hours into hiring and 8 into career conversations and feedback, and keeps the
+rest as slack for cross-team work.
 
 The cost: Jo loses the satisfaction of shipping code, and Sam gains a decision area Jo used to share.
 Whether the trade pays shows only in the team's output over the next two quarters.
@@ -296,14 +303,14 @@ template:
 | An engineer ready to own technical direction? | Name them tech lead, in writing, with a decision scope | Manager holds it temporarily, with a plan to grow or hire a tech lead |
 | Delivery depends heavily on other teams? | Add program support or a director-level dependency process | Manager owns delivery |
 | The area needs cross-team technical direction? | A staff-plus engineer with a written mandate | Team tech leads suffice |
-| More than about eight to ten direct reports? | People work will crowd out the rest; plan a split (Chapter 34 covers spans, Chapter 33 team design) | Proceed |
+| More than about eight to ten direct reports? | People work will crowd out the rest; plan a split (Chapter 34 covers [span of control](../../glossary.md#span-of-control), Chapter 33 team design) | Proceed |
 
 Two criteria apply whatever the answers. Every job has exactly one named owner per team, and the
 owner has time in their calendar to do it. A role definition that assigns technical direction to a
 tech lead who spends 90 percent of their time on features has assigned it to nobody.
 
 The direct-report thresholds are this book's recommendation; the span-of-control research we found
-does not cover software teams (research gap G8).
+does not cover software teams, so the evidence here is thin.
 
 ## Trade-offs
 
@@ -404,11 +411,29 @@ to reappear as attrition or slower delivery, and should estimate where.
 
 ## Case Study
 
-This case is **fictional**. Northstar's people and numbers are on the
-[Northstar overview](../../case-studies/northstar/index.md) and
-[baseline data](../../case-studies/northstar/baseline-data.md) pages. The calendar figures were added
-for this chapter; they describe the baseline quarter, before the director arrives, from a two-week
-sample (about 80 working hours) each manager reconstructed from calendar and chat history.
+This case is **fictional**; Northstar's people and numbers are on the
+[Northstar overview](../../case-studies/northstar/index.md).
+
+!!! info "Northstar so far"
+    Before week 1. You are about to join Northstar, a 620-person order-to-cash software company, as
+    Engineering Director over six teams (80 engineers). Last quarter brought 30 Sev1 and Sev2 incidents
+    and $410,000 in service credits. See the [timeline](../../case-studies/northstar/timeline.md).
+
+!!! note "Northstar in one paragraph"
+    Northstar sells software that lets wholesale distributors take orders, invoice, and get paid, with
+    $140M of annual recurring revenue. Most code lives in [Core](../../glossary.md#core), a Java
+    monolith that ships on a two-week [release train](../../glossary.md#release-train): one
+    scheduled release, preceded by three days of manual testing. Fourteen smaller services deploy on
+    their own. Contracts promise 99.9 percent availability and pay
+    [service credits](../../glossary.md#service-credits) (refunds) when it is missed. Two renewals
+    worth $9M a year depend on reliability. Incidents are rated by
+    [severity](../../glossary.md#severity-sev1-sev2-sev3): Sev1 is the most serious, and the headline
+    count is Sev1 plus Sev2. An engineer costs about $185,000 a year
+    [fully loaded](../../glossary.md#fully-loaded-cost) (salary plus benefits and overhead). Weeks are
+    counted from the director's first day.
+
+The calendar figures describe the baseline quarter, the one before the director arrives. Each manager
+reconstructed a two-week sample (about 80 working hours) from calendar and chat history.
 
 Northstar's six managers share a job description written years earlier, "lead a team of engineers to
 deliver high-quality software", and do six different jobs:
@@ -422,18 +447,20 @@ deliver high-quality software", and do six different jobs:
 | Data and Analytics | Farah Haddad | 11 | 25% | 20% | 45% | 10% | Farah, as data architect |
 | Platform Operations | Tom Becker | 12 | 25% | 50% | 10% | 15% | Tom and the release process |
 
-Priya, promoted eight months earlier, spends about 36 of her 80 hours writing and reviewing code (45
-percent); with fourteen reports, her one-on-ones are nominally weekly and mostly cancelled. About 20 of Marcus's hours went to incident calls
-as an additional responder, the fourth-responder failure mode, in the team with the most incidents and
-three engineers carrying most pages; nothing in his calendar addresses why three people carry them.
+Priya, promoted from inside Orders eight months earlier, spends about 36 of her 80 hours writing and
+reviewing code. With fourteen reports, her one-on-ones are nominally weekly and mostly cancelled.
+About 20 of Marcus's hours went to incident calls as an additional responder: the fourth-responder
+failure mode. Billing had the most incidents (8 of the 30), and three engineers carry most pages;
+nothing in Marcus's calendar addresses why three people carry them.
 Elena's calendar is the most balanced, and her team has the best operational discipline; the data
 cannot say whether one causes the other. Daniel's fifteen weekly one-on-ones take 15 hours a
 fortnight, and nobody has named who directs web and mobile. Tom's delivery time is mostly release-train
-coordination.
+coordination; his team includes the seven QA engineers who run the manual regression pass.
 
-The three staff engineers own no components and act as solvers by default: Ines Carvalho is consulted on most Core changes without owning any
-decision, Kwame Mensah is pulled into the largest incidents, and Li Na Zhou answers integration
-questions for whichever team asks first.
+The three staff engineers own no components and act as solvers by default. Ines Carvalho (staff
+engineer, core domain) is consulted on most Core changes without owning any decision. Kwame Mensah
+(staff engineer, infrastructure and reliability) is pulled into the largest incidents. Li Na Zhou
+(staff engineer, data and integration) answers integration questions for whichever team asks first.
 
 Before starting, the director drafted a one-page role definition:
 
@@ -446,10 +473,11 @@ Before starting, the director drafted a one-page role definition:
 | Not doing | Running a team's planning, joining incidents as a responder, writing production code |
 
 What happened next is on [the director's first quarter](../../case-studies/northstar/first-quarter.md)
-page: the staff engineers received mandates as part of the quality transformation (Kwame Mensah
-release and detection, Ines Carvalho Core module boundaries and contract tests, Li Na Zhou migration
-and configuration safety), and the six managers were trained as incident commanders, a role different
-from an extra responder. This chapter's question comes earlier: before any transformation, would you
+page. In the first quarter the staff engineers received mandates (Kwame Mensah release and detection,
+Ines Carvalho Core module boundaries and contract tests, Li Na Zhou migration and configuration
+safety). The six managers were trained as
+[incident commanders](../../glossary.md#incident-commander), who coordinate a response rather than
+join it as an extra responder. This chapter's question comes earlier: before any transformation, would you
 change how the six managers split their jobs, and in what order?
 
 ## Exercises
@@ -497,11 +525,13 @@ choice to be a real one.
 
 **X1.** Victor Lindqvist, the CTO, proposes the tech lead manager model across engineering: every
 manager owns all three jobs, and the staff engineer role is retired, saving the cost of three senior
-individual contributors. Write your response, including the conditions under which the proposal would
+individual contributors. Assume $185,000 fully loaded per engineer-year; set the saving against last
+quarter's $410,000 in service credits and the $9M of renewals at risk. Write your response, including the conditions under which the proposal would
 work, the teams for which it would fail, and an alternative.
 
 **X2.** Rajiv Menon, the CFO, asks whether Northstar could run its 80 engineers with four managers
-instead of six, merging teams, to hold operating expense flat. Prepare the analysis you would take to
+instead of six, merging teams, to hold operating expense flat. Assume a manager costs about the
+$185,000 engineer average, against an engineering personnel budget of about $16.1M a year. Prepare the analysis you would take to
 the CTO: what the change does to each manager's span and calendar, what the manager-effect evidence
 suggests and does not, where the cost of the saving would show up, and what you recommend.
 

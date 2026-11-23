@@ -37,7 +37,7 @@ One defensible set of choices, with the reasoning that matters more than the exa
   me your design before you publish it" keeps a checkpoint without taking the decision.
 - **Same engineer, production migration rewriting pricing-rules: level 2 (recommend).** Same person,
   different area: a migration on a production table is hard to reverse, and Northstar's baseline
-  shows migrations caused 3 of 30 incidents, including INC-419 in this very module. The engineer writes
+  shows migrations caused 3 of 30 incidents, including INC-419 in this very module (a pricing-rules migration that ran before the code deploy). The engineer writes
   the plan; the manager (or the data standard owner) approves it. This is still delegation, not
   withholding.
 - **Staff engineer choosing the team's test framework: level 4 or 5.** Proven competence; the choice is

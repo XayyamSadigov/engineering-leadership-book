@@ -92,7 +92,7 @@ after David Marquet's idea of moving decisions to the people with the informatio
 ### Reversibility and stakes
 
 Jeff Bezos's 2016 shareholder letter describes reversible decisions as "two-way doors" that deserve a
-lightweight process because being wrong is cheap to undo, and argues that most decisions should
+lightweight process, because being wrong is cheap to undo. It argues that most decisions should
 probably be made with about 70 percent of the information one would like
 ([Bezos, 2017](../../references/bibliography.md#bezos2016letter)). This is **documented practice**,
 one chief executive describing his company's habits, valuable mainly for its vocabulary.
@@ -121,9 +121,9 @@ Role models assign named roles to each important decision. Three are common:
 Atlassian's playbook for DACI insists on one Driver and one Approver, gives Contributors a voice but no
 vote, and records the outcome in a shared document
 ([Atlassian, DACI](../../references/bibliography.md#atlassian-daci)). Bain's description of RAPID says
-the Agree role, for mandatory requirements such as legal ones, should be assigned sparingly, and that
-ideally each decision has a single decider
-([Bain, RAPID](../../references/bibliography.md#bain-rapid)); Rogers and Blenko's article introducing
+the Agree role, for mandatory requirements such as legal ones, should be assigned sparingly. Ideally
+each decision has a single decider
+([Bain, RAPID](../../references/bibliography.md#bain-rapid)). Rogers and Blenko's article introducing
 the approach argues that performance depends on making the right decisions quickly and executing them
 consistently ([Rogers and Blenko, 2006](../../references/bibliography.md#rogers2006whohasd)). These are
 **documented practice** from a software vendor and a consulting firm. Neither source offers evidence that
@@ -135,11 +135,15 @@ draw one only for decisions that cross teams, recur, or have already gone wrong.
 
 ### The decision service level
 
-Northstar's staff engineers run a decision rule that Chapter 20 describes as part of standards
-governance: each standards domain has one owner (Kwame Mensah for operational minimums and pipelines,
-Ines Carvalho for Core code, Li Na Zhou for data, migration, and configuration), every request gets a
-decision within ten working days, and every exemption is recorded with an expiry of at most two
-quarters ([Chapter 20](../05-engineering-quality/20-engineering-standards-and-their-governance.md)).
+A decision service level turns recurring requests into a queue with a promise. Each domain (for
+example, operational rules or code standards) has one owner. Every request gets a decision within a
+fixed time, such as ten working days. Every exemption (permission to miss a rule for now) is recorded
+with an expiry date, so that it comes back for review.
+
+Northstar adopted such a rule in the director's first quarter: its three staff engineers each own a
+standards domain, decide within ten working days, and record exemptions for at most two quarters.
+[Chapter 20](../05-engineering-quality/20-engineering-standards-and-their-governance.md) covers the
+standards side.
 
 ```mermaid
 flowchart TD
@@ -160,12 +164,12 @@ queue, and an exemption can turn it into a decision nobody is waiting for.
 ### Recording decisions
 
 Michael Nygard's 2011 post proposed architecture decision records: one or two pages per decision, with
-context, decision, status, and consequences (including the negative ones), kept in the repository and
-numbered, so that a reversed decision is marked superseded rather than deleted. His stated motivation
+context, decision, status, and consequences (including the negative ones). They are kept in the
+repository and numbered, so that a reversed decision is marked superseded rather than deleted. His stated motivation
 is that without the rationale, newcomers can only accept old decisions blindly or reverse them blindly
 ([Nygard, 2011](../../references/bibliography.md#nygard2011adr)). Chapter 28 (Architecture
-Decision-Making and Governance) covers architecture decision records in depth; the format works just as well for organizational decisions such as ownership,
-on-call policy, or a team's working agreement.
+Decision-Making and Governance) covers them in depth. The format works just as well for organizational
+decisions such as ownership, on-call policy, or a team's working agreement.
 
 A record survives personnel change only if it answers the questions a successor will ask (**this book's
 recommendation**):
@@ -183,19 +187,19 @@ test to run.
 
 ### What group research says
 
-Groups are often assumed to decide better than individuals because they hold more information. The
-research on **hidden profiles** shows why that advantage is frequently lost. In Stasser and Titus's
-founding study, members of simulated groups each held partial information that, pooled, pointed to the
-best option; discussion dwelt on information members already shared and on information that supported
-their existing preferences, and groups tended to pick the option with initial plurality support
-([Stasser and Titus, 1985](../../references/bibliography.md#stasser1985pooling)). A meta-analysis of 65
-hidden-profile studies found the same pattern across the literature: groups mentioned common
-information far more than unique information, groups that had to pool unique information were much
-less likely to reach the correct answer than groups given everything, and communication medium made no
-difference ([Lu, Yuan, and McLeod, 2012](../../references/bibliography.md#lu2012hiddenprofiles)).
+Groups often lose the information advantage they are assumed to have. The research on **hidden
+profiles** shows how. In Stasser and Titus's founding study, members of simulated groups each held
+partial information that, pooled, pointed to the best option. Discussion dwelt on information members
+already shared and on information that supported their existing preferences. Groups tended to pick the
+option with initial plurality support
+([Stasser and Titus, 1985](../../references/bibliography.md#stasser1985pooling)). A meta-analysis (a
+pooled analysis) of 65 hidden-profile studies found the same pattern: groups mentioned common
+information far more than unique information, and groups that had to pool unique information were much
+less likely to reach the correct answer. Communication medium made no difference
+([Lu, Yuan, and McLeod, 2012](../../references/bibliography.md#lu2012hiddenprofiles)).
 
-This is a **research finding** from laboratory tasks with a demonstrably correct answer, read here at
-abstract level; for engineering decisions it transfers as a warning, not a measurement. The fact only
+This is a **research finding** from laboratory tasks with a demonstrably correct answer. For
+engineering decisions it transfers as a warning, not a measurement. The fact only
 one person knows is the thing a meeting is least likely to hear. The countermeasures are structural:
 written input before discussion, asking each person what they know that others may not, and hearing
 the people closest to the work first and the most senior person last.
@@ -204,9 +208,9 @@ Whether people volunteer what they know also depends on psychological safety, wh
 study links to team learning ([Edmondson, 1999](../../references/bibliography.md#edmondson1999psychological);
 Chapter 11).
 
-**Groupthink**, Irving Janis's term for cohesive groups suppressing dissent, is famous but less
-securely supported as a complete model. This book could not verify the review literature beyond
-metadata, so it uses only the narrow point: dissent that is not asked for is often not offered. Jerry
+**Groupthink**, Irving Janis's term for cohesive groups suppressing dissent, is famous, but its support
+as a complete model is contested. The book uses only the narrow point: dissent that is not asked for is
+often not offered. Jerry
 Harvey's essay on the **Abilene paradox** is known for a related pattern: a group agrees on a course
 each member privately rejects, because each believes the others want it
 ([Harvey, 1974](../../references/bibliography.md#harvey1974abilene)).
@@ -214,12 +218,16 @@ each member privately rejects, because each believes the others want it
 ### Reviewing a recommendation
 
 Kahneman, Lovallo, and Sibony argued that awareness of cognitive biases has done little to improve
-business decisions, and that executives making big bets typically rely on a team's proposal; their
+business decisions, and that executives making big bets typically rely on a team's proposal. Their
 article is known for a checklist a decision maker applies to such a recommendation
-([Kahneman, Lovallo, and Sibony, 2011](../../references/bibliography.md#kahneman2011bigdecision)).
-The book read only the summary and does not reproduce the checklist. The idea it borrows: review the
-process behind a recommendation, not only its conclusion. Were alternatives seriously considered, was
-dissent heard, and does the team have an interest in the outcome?
+([Kahneman, Lovallo, and Sibony, 2011](../../references/bibliography.md#kahneman2011bigdecision)). The
+idea the book borrows: review the process behind a recommendation, not only its conclusion. Were
+alternatives seriously considered, was dissent heard, and does the team have an interest in the
+outcome?
+
+The same test applies after the fact (**this book's recommendation**). A good decision can have a bad
+outcome, and a bad one can get lucky. Judge a decision by its owner, method, information, and record at
+the time, and judge the follow-through separately.
 
 ## Engineering Organization Example
 
@@ -241,7 +249,8 @@ First, 18 of the 28 decisions routed to the manager (64 percent) did not need th
 them were reversible and inside the team. At a median wait of 1.5 days, those twelve cost about 18
 person-days of waiting in four weeks if each blocked one engineer. Waiting is not lost work, because
 engineers switch tasks, but every switch adds work in progress. Naming owners for the reversible
-classes (delegation at level 4 in Chapter 2's scale) removes most of that queue.
+classes removes most of that queue. In Chapter 2's five-level delegation scale this is level 4 or 5:
+the engineer decides, and the manager hears about it afterward or not at all.
 
 Second, the cross-team decisions waited longest (median 8 days) and every one needed someone at the
 manager's level or above. This is the expected shape: cross-team decisions are fewer, slower, and the
@@ -273,7 +282,7 @@ recurred, or it has stalled for longer than the decision service level. If none 
 decider in a sentence and move on.
 
 Who decides architecture specifically is contested (managers, staff engineers, or teams within
-guardrails); the book records it as an open dispute owned by Chapter 28. This chapter's frame applies
+guardrails), and Chapter 28 discusses the options. This chapter's frame applies
 either way: whoever holds the right, it should be one named person, with a deadline and a record.
 
 ## Trade-offs
@@ -355,9 +364,9 @@ authority written down and narrowed.
 
 At executive scale, the CTO's decisions are few, and most are about decision rights themselves: which
 decisions belong to teams, to staff engineers, to directors, and to the executive team, and how
-conflicts between them escalate. The Bezos letter's advice to escalate fundamental misalignment early,
-rather than let debate run until the side with more stamina wins
-([Bezos, 2017](../../references/bibliography.md#bezos2016letter)), applies directly: the cost of a stalled
+conflicts between them escalate. The Bezos letter advises escalating fundamental misalignment early, rather
+than letting debate run until the side with more stamina wins
+([Bezos, 2017](../../references/bibliography.md#bezos2016letter)). That applies directly: the cost of a stalled
 cross-team decision is paid by the teams below it, not by the people debating it.
 
 The CTO should also watch their own effect: a senior person who speaks first anchors the discussion,
@@ -386,55 +395,61 @@ For an engineering manager or director setting up decision-making for a team or 
 
 ## Case Study
 
-This case is **fictional**. It analyzes a fact in the canonical record of the director's
+This case is **fictional**. It analyzes a decision left open in the director's
 [first quarter](../../case-studies/northstar/first-quarter.md) and then sets a decision for the reader
 at the start of quarter 2. The outcome is deliberately not fixed.
 
-**What the canon records.** At baseline, Core's permissions module was changed by four teams and owned
-by none, and had no runbook, no alerts, and no on-call rotation (see the
-[baseline data](../../case-studies/northstar/baseline-data.md)). In week 4 the director assigned two of
-the three unowned Core modules: core/customer to Orders and core/scheduler to Billing. auth-svc went to
-Platform Operations. core/permissions stayed tier 1, with its owner, Orders or Platform Operations,
-still undecided at day 90. Because a tier 1 component without an owner cannot have an on-call rotation,
-an exemption was recorded under the standards process. Its compensating control was that Platform
-Operations would page an incident lead assigned by the director's office, and it was recorded as
-expiring with the decision, within the two-quarter maximum.
+!!! info "Northstar so far"
+    Week 14, the start of quarter 2. In quarter 1 the director set minimum obligations for
+    [tier 1](../../glossary.md#tier-1) components (those on the order or payment path), assigned owners
+    to most unowned components, and cut Sev1 and Sev2 incidents (the two highest severity levels) from
+    30 to 21. See the [timeline](../../case-studies/northstar/timeline.md).
 
-**Reading the canon as decision avoidance.** The canon does not say why the decision stayed open, and
-this case does not invent a story for the quarter. Every element of the avoidance loop is present.
-Component ownership is assigned by the director, so no staff engineer's ten-day queue contains it. The
-exemption reduced the risk, and with it the urgency. Its expiry is tied to the decision, so the
-workaround cannot force the decision that ends it. The ten-working-day rule worked as designed, on the
-exemption; the decision that needed a service level was the ownership itself. One outside limit
-remains: exemptions last at most two quarters, so this one lapses before the end of quarter 3.
+!!! note "What you need to know for this case"
+    - **The module.** core/permissions, part of the Core monolith. At baseline four teams changed it,
+      none owned it, and it had no runbook, no alerts, and no on-call rotation. It is tier 1.
+    - **The candidates.** Orders (manager Priya Raman) or Platform Operations (manager Tom Becker).
+    - **The workaround.** A tier 1 component without an owner cannot have an on-call rotation, so the
+      standards process recorded an exemption. Its compensating control (a substitute safeguard while
+      the rule is not met): Platform Operations pages an incident lead whom the director's office
+      assigns.
+    - **The deadline.** The exemption expires with the decision, and exemptions last at most two
+      quarters, so it lapses by the end of quarter 3 (week 39).
 
-**The decision at the start of quarter 2.** The following facts are recorded on the baseline
-and first quarter pages.
+**What happened in quarter 1.** In week 4 the director assigned two of the three unowned Core
+modules: core/customer to Orders and core/scheduler to Billing. core/permissions stayed undecided at
+day 90, covered by the exemption above.
+
+**Reading it as decision avoidance.** The record does not say why the decision stayed open, and this
+case does not invent a story. But every element of the avoidance loop is present. Component ownership
+is assigned by the director, so no staff engineer's ten-day queue contains it. The exemption reduced
+the risk, and with it the urgency. Its expiry is tied to the decision, so the workaround cannot force
+the decision that ends it. The ten-working-day rule worked as designed, on the exemption; the decision
+that needed a service level was the ownership itself. Only the two-quarter limit remains as an outside
+deadline.
+
+**The decision at the start of quarter 2.** The facts on the table:
 
 - In the baseline quarter, 38 merge requests touched core/permissions: Orders 17, Customer Experience
   9, Billing 8, Payments and Integrations 4. Platform Operations made none.
 - Platform Operations in quarter 2 has five infrastructure engineers, since all seven QA engineers
-  moved into product teams (canon). None of the five has changed Core code.
+  moved into product teams in week 10. None of the five has changed Core code.
 - Priya Raman's position: Orders makes most of the changes and already owns core/customer, but it also
-  carries bulk ordering, due in week 26, and takes notification-svc from quarter 2; she would accept
+  carries bulk ordering, due in week 26, and takes notification-svc from quarter 2. She would accept
   core/permissions after week 26.
-- Tom Becker's position: permissions belongs with identity next to auth-svc, but his team cannot
-  support Core Java code and would need Orders engineers for every change.
+- Tom Becker's position: permissions belongs with identity, next to auth-svc, which his team owns. But
+  his team cannot support Core Java code and would need Orders engineers for every change.
+- A permissions extraction from core/customer is funded for quarter 2, led by Ines Carvalho (staff
+  engineer for Core code standards). New work will land in or next to the unowned module.
 
-Two more canon facts raise the stakes. Chapter 21's case funds a permissions extraction from
-core/customer for quarter 2, led by Ines Carvalho, so new work will land in or next to an unowned
-module. And Ines Carvalho is the staff engineer for Core code standards, so she is the natural
-contributor on the module's interface, whichever team owns it.
+Even Orders, the largest contributor, made fewer than half the changes (17 of 38). Whichever team owns
+the module, most changes will come from other teams and the owner must review them. That argues for an
+owner with Core review capacity and a clear interface, and it belongs in the decision record.
 
-The arithmetic: Orders made 17 of 38 changes (45 percent), Platform Operations none, and the other
-three teams 21 (55 percent). Whichever team owns the module, most changes will come from other teams
-and the owner must review them, an argument for an owner with Core review capacity and a clear
-interface, and a fact that belongs in the decision record.
-
-In DACI terms: the director is Approver; a Driver keeps the date (Ines Carvalho is one candidate,
-though she has an interest in the extraction); Priya Raman, Tom Becker, and Kwame Mensah (owner of the
-on-call minimum) are Contributors. The reader's decision is what to decide, by when, and what to
-record. Whose call the module's interface is touches the dispute Chapter 28 owns.
+In DACI terms: the director is Approver. A Driver keeps the date; Ines Carvalho is one candidate,
+though she has an interest in the extraction. Priya Raman, Tom Becker, and Kwame Mensah (staff
+engineer who owns the on-call minimum) are Contributors. The reader's decision is what to decide, by
+when, and what to record.
 
 ## Exercises
 
@@ -471,14 +486,14 @@ assuming you decided in favor of one option of your choice. Make the assumptions
 trigger specific enough that someone joining Northstar a year later could tell whether the decision
 still holds.
 
-**A3.** Kwame Mensah tells you that his ten-working-day queue for operational standards decisions is
+**A3.** Kwame Mensah, the staff engineer who owns Northstar's operational standards, tells you that his ten-working-day queue for operational standards decisions is
 being met, but that three teams now route ownership questions to him "because he answers quickly."
 Advise him on what to do with those requests, and design the change to decision rights that would
 stop them arriving.
 
 ### Executive Decision-Making
 
-**X1.** As Northstar's CTO, Victor Lindqvist asks you to propose how cross-team technical decisions
+**X1.** Victor Lindqvist, Northstar's CTO, asks you to propose how cross-team technical decisions
 should be made across the six teams and three staff engineers, within flat headcount. Propose a
 decision-rights design, the service levels, and how you would report on it to him. Say how the design
 could be gamed, what it will cost in the first quarter, and which decisions you will deliberately leave
@@ -486,7 +501,7 @@ undefined.
 
 **X2.** Twelve months from now, a Sev1 involving core/permissions is traced to a change that two teams
 each believed the other had reviewed. The decision record shows the ownership decision was made, with
-a review trigger that nobody checked. Helena Marsh asks whether the decision process failed. Decide
+a review trigger that nobody checked. Helena Marsh (CEO) asks whether the decision process failed. Decide
 what evidence you would gather, how you would answer her, and what you would change.
 
 ## Reflection Questions

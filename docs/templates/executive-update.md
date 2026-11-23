@@ -1,6 +1,8 @@
 # Executive update
 
-**Used in:** Chapter 39 (reviews, decision logs, escalation, and executive reporting), Chapter 49
+**Used in:** [Chapter 39](../parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md)
+(reviews, decision logs, escalation, and executive reporting),
+[Chapter 49](../parts/11-vp-engineering/49-multi-year-transformation-communication-and-politics.md)
 (the CTO and the executive team).
 **Owner:** the engineering director (to the CTO) or the CTO (to the CEO and executive team); managers
 supply facts, the author writes the headline.
@@ -9,11 +11,7 @@ commitment changes color. The quarterly version is the [Quarterly engineering re
 which is longer and ends a planning cycle; this one is for the months in between.
 
 An executive update tells a busy reader, in the first three lines, what changed, what is at risk, and
-what decision is needed from them. Everything after the headline supports it. Stating the governing
-point first and grouping the support beneath it is the idea Minto's pyramid principle is known for
-([Minto, 2002](../references/bibliography.md#minto2002pyramid); **expert opinion**).
-
-The update is not a status report of activity. A reader should be able to act on it without a
+what decision is needed from them. Everything after the headline supports it. The update is not a status report of activity. A reader should be able to act on it without a
 meeting, and should never learn something important about engineering from someone else first.
 
 ## How to fill it in
@@ -81,17 +79,19 @@ decided_since_last:
 
 ## Example: Northstar, end of quarter 3 (sent week 40)
 
-**Fictional.** Quarter 1, quarter 2, and quarter 3 facts come from the
-[first quarter](../case-studies/northstar/first-quarter.md) page and Chapters
-[38](../parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md),
-[39](../parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md),
-[42](../parts/09-engineering-directorship/42-cross-functional-dependencies-portfolio-and-influence.md),
-and [43](../parts/09-engineering-directorship/43-leading-change-and-director-failure-patterns.md).
-Quarter 3 results are canon ("Quarter 3 results" on the first quarter page). The canon does not
-record the delivery of the three cross-team initiatives; they are written as **not recorded**, which
-is how a real update should show a figure not yet in hand. The wording, the risks' triggers, and the ask
-about core/permissions are illustrative. Outcomes the canon leaves open, such as the week 34 forum,
-are not decided here.
+!!! info "Northstar so far"
+    Week 40 of the Engineering Director's first year at Northstar Technologies, a fictional company.
+    Quarter 3 is the first quarter at the CTO's incident target; the renewal features shipped in
+    quarter 2. The director writes to Victor Lindqvist (CTO). See the
+    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+
+Figures come from [quarter 3 results](../case-studies/northstar/first-quarter.md#quarter-3-results).
+Delivery of the cross-team initiatives is not recorded, so the update says **not recorded**, which is
+how a real update should show a figure not yet in hand. The wording, the risks' triggers, and the ask
+are illustrative. People named: Greg Tanaka (VP Sales), Sofia Alvarez (VP Customer Success), Rajiv
+Menon (CFO), Amara Okafor (CPO), Marcus Oyelaran and Priya Raman (Billing and Orders managers).
+The core/permissions module is a [tier 1](../glossary.md#tier-1) part of Core, the monolith, that four
+teams change; its temporary exemption from having an owner has lapsed.
 
 > **Engineering update to Victor Lindqvist, end of quarter 3 (week 40)**
 >
@@ -109,7 +109,7 @@ are not decided here.
 > | Customer incident status notifications (Sofia Alvarez) | Forecast week 33 | not recorded | |
 > | Automated service-credit statements (Rajiv Menon) | Start about week 33 | not recorded | Depends on the week 34 forum outcome |
 >
-> | Measure | Q1 | Q2 | Q3 plan | Q3 |
+> | Measure | Quarter 1 | Quarter 2 | Quarter 3 plan | Quarter 3 |
 > |---|---|---|---|---|
 > | Sev1 and Sev2 incidents | 21 | 17 | | 14 (2 Sev1) |
 > | Unplanned work | 31% | 28% | 22% (cautious 28%) | 25%, inside the band |
@@ -158,3 +158,14 @@ arrive.
 2. Which measure would you be tempted to leave out this month, and is it in?
 3. Does every decision needed say what happens if it is decided late?
 4. Is there anything in this update the reader has already heard from someone else?
+
+## Evidence and references
+
+The method is [Chapter 39](../parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md).
+
+- [Minto, 2002](../references/bibliography.md#minto2002pyramid): the pyramid principle, known for
+  stating the governing point first and grouping the support beneath it (**expert opinion**). It is
+  the reason the headline comes first.
+
+The color definitions, the fixed measure set, and the "decided since last time" line are **this
+book's recommendation**.

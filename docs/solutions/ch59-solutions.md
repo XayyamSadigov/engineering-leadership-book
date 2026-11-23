@@ -134,13 +134,13 @@ pack, which brings back 0.4 FTE of manual work to recover a 20-minute meeting.
 
 ## A3 — A hypothetical 5 percent cut at Northstar
 
-This is a scenario for the reader, not canon. Five percent of the FY2 personnel draft of $16.73M is
+This is a scenario for the reader, not part of Northstar's record. Five percent of the FY2 personnel draft of $16.73M is
 about $0.84M; of the whole $20.93M (personnel plus $4.2M cloud and tooling), about $1.05M. Agree first
 which base and whether it is in-year or run-rate.
 
 A defensible order:
 
-1. **Cloud and tooling waste** inside the $4.2M: cash, fast, and the same place Rajiv Menon already
+1. **Cloud and tooling waste** inside the $4.2M: cash, fast, and the same place Rajiv Menon (CFO) already
    wants the $150,000 offset. Requires an analysis Northstar has not done.
 2. **Spend consolidation**: the four CI systems. The running-cost saving is capacity (about 1.0 FTE),
    but consolidating also retires licenses and hosts; the cash part depends on the target chosen at week
@@ -178,7 +178,7 @@ authority and Victor's own arbitration role, so rule on them or name a decider w
 checklist, the rehearsal instrumentation, and the standards mechanism to the director and the standard
 owners; they are inside the director's authority.
 
-**To Samuel Osei.** "Flat headcount carries the roadmap if unplanned work keeps falling. It fell from 34
+**To Samuel Osei (board director).** "Flat headcount carries the roadmap if unplanned work keeps falling. It fell from 34
 to 25 percent this year; each point is 0.8 engineers. We also identified what we will stop, so that the
 board sees subtraction as part of the plan, not only additions." This avoids promising the
 quarter 4 result, which is not yet measured.

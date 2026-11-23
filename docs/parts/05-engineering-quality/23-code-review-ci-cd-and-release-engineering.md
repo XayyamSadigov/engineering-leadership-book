@@ -4,25 +4,50 @@ This chapter is about the path a change travels from a branch to a customer: rev
 pipeline, deployment, and release. Few leaders design that path on purpose. It accretes: a review
 rule after one incident, a manual gate after another, a deploy script written by someone who has
 since left. Yet the path decides how large each change is, how long it waits, how it fails, and how
-fast it can be undone. Chapter 27 decided that Northstar's Core monolith should move from a two-week
-train to weekly and then more frequent releases; this chapter works out how. Test strategy belongs to
-Chapter 22, and the DORA metrics in depth to Chapter 18.
+fast it can be undone. At Northstar, the running example, the director has found that the Core
+monolith's two-week release train is the main source of incidents, and has decided to move it to weekly
+and then more frequent releases; this chapter works out how. Test strategy belongs to Chapter 22, and
+the metrics from DORA (DevOps Research and Assessment) to Chapter 18.
 
 ## Why This Matters
 
 For a team, the delivery path is a daily irritation: a slow pipeline, a red build, a review that
 waits. Each cost looks small.
 
-For an organization of 50 to 150 engineers, the same path sets batch size for everyone. Northstar's
-Core ships every two weeks, so each release carries about 170 merge requests from four teams (a
-fictional figure, like all Northstar data). When a release fails, nobody knows which change caused
-it, and rollback removes everyone's work. Nine of the quarter's 30 Sev1 and Sev2 incidents came
-through that train. Five were configuration changes, including two flag or setting mistakes in one
-service and a deploy-script change that broke rollback for four services. With three migrations and
-two service deployments, 19 of the 30 incidents entered production through the delivery path.
+For an organization of 50 to 150 engineers, the same path sets batch size for everyone.
+[Core](../../glossary.md#core), Northstar's Java monolith, ships every two weeks, so each release
+carries about 170 merge requests from four teams (a fictional figure, like all Northstar data). When a
+release fails, nobody knows which change caused it, and rollback removes everyone's work. In the
+baseline quarter, 19 of Northstar's 30 Sev1 and Sev2 incidents entered production through the delivery
+path. (Sev1 and Sev2 are the two highest [severity](../../glossary.md#severity-sev1-sev2-sev3)
+ratings: an order or payment path down or a wrong financial record for Sev1, narrower failures for
+Sev2.)
+
+| Route into production | Incidents |
+|---|---|
+| Core release train | 9 |
+| Configuration changes | 5 |
+| Database migrations | 3 |
+| Service deployments | 2 |
+
+The chapter uses ten of these incidents. Their numbers come from Northstar's incident log
+(`incidents-last-quarter.csv`, linked from the [baseline page](../../case-studies/northstar/baseline-data.md)):
+
+| Incident | What happened | Team |
+|---|---|---|
+| INC-404 | auth-svc token lifetime changed in production config; mobile sessions dropped | Platform Operations |
+| INC-405 | mobile-bff deployed against an older pricing-svc contract; cart totals blank | Customer Experience |
+| INC-410 | payments-gateway flag enabled for all tenants instead of one | Payments and Integrations |
+| INC-412 | Email template variable renamed; order confirmations sent blank | Customer Experience |
+| INC-416 | Shared deploy-script change broke rollback for four services | Platform Operations |
+| INC-419 | Pricing-rule migration ran before the code that expected it | Orders |
+| INC-426 | Mobile offline sync corrupted drafts; the fix waited for app store review | Customer Experience |
+| INC-427 | Credit notes applied twice after a Core release; manual data repair | Billing |
+| INC-428 | Every Jenkins-based deploy failed; cause never found | Platform Operations |
+| INC-430 | payments-gateway rate limit lowered tenfold by a mistyped value | Payments and Integrations |
 
 At executive scale the delivery path is an undesigned risk control. Asked how changes reach
-production, a CTO who can answer "reviewed, built once, deployed progressively, reversible in
+production, a chief technology officer (CTO) who can answer "reviewed, built once, deployed progressively, reversible in
 minutes" has a different conversation from one who says "the release manager checks".
 
 ## Learning Objectives
@@ -86,20 +111,20 @@ alternative solutions. Understanding the change was the central difficulty
 
 Comparing review at Google, Microsoft, AMD, and in open source, Rigby and Bird found that review
 increased the number of distinct files a developer knew about by 66 to 150 percent, depending on the
-project ([Rigby and Bird, 2013](../../references/bibliography.md#rigby2013convergent)). McIntosh and
-colleagues found, in three open-source systems, that review coverage (the share of changes reviewed)
-and participation (how involved reviewers were) were significantly linked with quality; low coverage
-or participation was estimated to add up to two and five post-release defects per component
+project ([Rigby and Bird, 2013](../../references/bibliography.md#rigby2013convergent)). In three
+open-source systems, McIntosh and colleagues linked review coverage (the share of changes reviewed)
+and participation (how involved reviewers were) with quality. Low coverage or participation was
+estimated to add up to two and five post-release defects per component
 respectively ([McIntosh et al., 2014](../../references/bibliography.md#mcintosh2014impact)). All three
-are observational **research findings**, read at abstract level. Sadowski and colleagues' study of
+are observational **research findings**. Sadowski and colleagues' study of
 review at Google, drawing on logs of about 9 million reviewed changes, is best read as **documented
 practice** ([Sadowski et al., 2018](../../references/bibliography.md#sadowski2018modern)).
 
-For policy this means: review every change, mainly for knowledge and design; do not rely on review
-as a defect gate, because a reviewer reading a diff will not reliably catch an integration failure, a
-data-dependent bug, or a configuration mistake; and make changes easy to understand. Practitioners
-widely believe smaller changes get better reviews, but this book did not verify a study of change size
-and review effectiveness, so treat that as **practitioner consensus**.
+For policy this means three things. Review every change, mainly for knowledge and design. Do not rely
+on review as a defect gate, because a reviewer reading a diff will not reliably catch an integration
+failure, a data-dependent bug, or a configuration mistake. And make changes easy to understand.
+Practitioners widely believe smaller changes get better reviews; treat that as **practitioner
+consensus**, not a research finding.
 
 ### What review costs
 
@@ -108,9 +133,9 @@ review, and any one engineer's approval suffices. Waiting changes are unintegrat
 branches live longer. DORA lists multi-approval review and asynchronous review queues among the
 pitfalls of trunk-based development
 ([DORA, trunk-based development](../../references/bibliography.md#dora-cap-trunk-based)). Adding an
-approver after an incident doubles the queue. Better
-levers are turnaround, smaller changes, and owner-based reviewers; at Northstar the last needs owners
-for the three unowned Core modules (customer, permissions, scheduler) first.
+approver after an incident doubles the queue. Better levers are turnaround, smaller changes, and
+owner-based reviewers; at Northstar the last needs owners for the three unowned Core modules
+(customer, permissions, scheduler) first.
 
 ### A trustworthy pipeline and a healthy main branch
 
@@ -127,9 +152,10 @@ failures too. This book's working definition has six properties:
 | Observable | Every deploy emits an event | Four shell-script services log nothing |
 | Reversible | Rollback automated and exercised | INC-416: a script change broke rollback for four services |
 
-DORA's continuous integration guidance supplies the ten-minute figure (it cites research pointing to
-about ten minutes as an upper limit for test feedback), defines CI as merging to trunk at least daily
-with automated build and tests on every change, and treats a broken build as the top priority
+DORA's continuous integration guidance supplies the ten-minute figure; it cites research pointing to
+about ten minutes as an upper limit for test feedback. It defines CI as merging to the main branch at
+least daily with automated build and tests on every change, and treats a broken build as the top
+priority
 ([DORA, continuous integration](../../references/bibliography.md#dora-cap-continuous-integration)).
 That is **industry research**. Peer-reviewed evidence is observational: in open-source projects CI
 appears to help projects release more often
@@ -138,9 +164,13 @@ integrating more contributions without an observable loss of quality
 ([Vasilescu et al., 2015](../../references/bibliography.md#vasilescu2015quality)).
 
 Core's main branch is red for 22 percent of working hours, about 9 hours a week. An **illustrative**
-calculation: the full pipeline runs on every merge, about 85 a week; at 9 percent unrelated failures
-that is about 8 false reds, and at one 74-minute rerun each, up to about 10 hours. Reds overlap, so
-this is an upper bound, but it suggests the 22 percent may be mostly a pipeline problem.
+estimate puts up to about 10 hours a week of that on unrelated failures alone, so the 22 percent may
+be mostly a pipeline problem.
+
+??? note "How the 10 hours are estimated"
+    The full pipeline runs on every merge, about 85 a week. At 9 percent unrelated failures that is
+    about 8 false reds, and at one 74-minute rerun each, up to about 10 hours. Reds overlap, so this is
+    an upper bound.
 
 ```mermaid
 flowchart TD
@@ -163,25 +193,27 @@ pairs a capped quarantine list with a per-test owner and fix-or-delete deadline.
 
 ### Trunk-based development or long-lived branches
 
-One practitioner position builds features on branches and merges them when complete; the other merges
-small changes daily and hides unfinished work behind flags. DORA reports that its 2016 and 2017
+One practitioner position builds features on branches and merges them when complete. The other merges
+small changes daily to the main branch (the "trunk") and hides unfinished work behind flags. DORA reports that its 2016 and 2017
 survey data showed higher delivery and operational performance among teams with three or fewer active
 branches, daily merges to trunk, and no code freezes
 ([DORA, trunk-based development](../../references/bibliography.md#dora-cap-trunk-based)), which is
 **industry research**, correlational. This book recommends trunk-based development for services and
-Core, with two exceptions: software shipped on someone else's schedule (the mobile app, as INC-426
-showed) needs release branches, and a team cannot give up branches until it can hide unfinished work.
+Core, with two exceptions. Software shipped on someone else's schedule needs release branches: in
+INC-426 the mobile fix waited for app store review. And a team cannot give up branches until it can
+hide unfinished work.
 Core has 11 feature branches older than 30 days precisely because it has no flags.
 
 ### Flags: separating deploy from release
 
-A feature flag is a runtime switch between code paths. Pete Hodgson's widely used article separates
-short-lived release toggles for unfinished work from experiment, ops, and permissioning toggles, some
-of which live for years; it treats flags as inventory with a carrying cost that needs expiry dates
-and removal work, and advises testing the production configuration and the fallback rather than
-every combination ([Hodgson, 2017](../../references/bibliography.md#hodgson2017featuretoggles)).
-A **research** study agrees: across 39 Chrome releases, Rahman and colleagues found that toggles reconcile rapid
-releases with long-term feature work, and also add technical debt and maintenance
+A [feature flag](../../glossary.md#feature-flag) is a runtime switch between code paths. Pete
+Hodgson's widely used article separates short-lived release toggles for unfinished work from
+experiment, ops, and permissioning toggles, some of which live for years. It treats flags as inventory
+with a carrying cost that needs expiry dates and removal work. And it advises testing the production
+configuration and the fallback rather than every combination
+([Hodgson, 2017](../../references/bibliography.md#hodgson2017featuretoggles)). A **research** study
+agrees: across 39 Chrome releases, Rahman and colleagues found that toggles reconcile rapid releases
+with long-term feature work, and also add technical debt and maintenance
 ([Rahman et al., 2016](../../references/bibliography.md#rahman2016feature)).
 
 The leadership point is that **a flag change is a production change**. In INC-410 a flag meant for
@@ -189,9 +221,9 @@ one tenant was enabled for all; in INC-430 a rate limit was lowered tenfold by a
 to a configuration file on the payments-gateway server, outside review and outside the pipeline.
 
 The costliest public example is in a regulator's findings. The U.S. Securities and Exchange
-Commission's 2013 order against Knight Capital describes new code that reused a flag formerly used by
-long-retired code, a staged deployment in which one of eight servers never received the new code, and
-no second-person review of the deployment. Orders carrying the reused flag ran the old code on that
+Commission's 2013 order against Knight Capital describes three failures. New code reused a flag
+formerly used by long-retired code. In a staged deployment, one of eight servers never received the
+new code. And nobody reviewed the deployment. Orders carrying the reused flag ran the old code on that
 server, and in about 45 minutes the firm took positions that cost it about $460 million. Removing the
 new code from the seven correct servers made things worse, because the flag then activated the old
 code there too ([SEC, 2013](../../references/bibliography.md#sec2013knight)). This book's lessons:
@@ -202,11 +234,10 @@ a rollback will do.
 
 Progressive delivery exposes a change to a growing share of traffic and stops when it misbehaves.
 A **canary** sends a small subset of traffic to the new version and compares it with the rest.
-Google's SRE workbook chapter treats this as an experiment between canary and control, warns that
-metrics must be split by population because an aggregate can hide a serious problem in a small
-canary. It also notes that a
-single **blue-green** cutover is a before-and-after comparison that is hard to evaluate, unless
-traffic is split gradually
+Google's site reliability engineering (SRE) workbook chapter treats this as an experiment between
+canary and control. It warns that metrics must be split by population, because an aggregate can hide
+a serious problem in a small canary. It also notes that a single **blue-green** cutover is a
+before-and-after comparison that is hard to evaluate, unless traffic is split gradually
 ([Warner and Davidovič, 2018](../../references/bibliography.md#warner2018canarying)), which is
 **documented practice** from one company. A **rolling** deploy compares nothing and stops only if a
 health check fails. A **flag rollout** grows exposure by tenant after the deploy.
@@ -220,18 +251,30 @@ later release. INC-419, a migration that ran before the code expecting it, is th
 
 DORA reports finding that heavyweight external change approval hurts delivery performance, with no
 evidence that it lowers change fail rates, and explains this by batch size
-([DORA, change approval](../../references/bibliography.md#dora-cap-change-approval)); it keeps
-recorded peer review as the approval that satisfies segregation of duties. The pipeline's outcomes
-are DORA's **throughput** and **instability** measures
-([DORA, metrics guide](../../references/bibliography.md#dora-metrics-guide)), which Chapter 18 owns.
-Two points belong here: a pipeline that emits no deploy events cannot be measured, and Northstar's
-72-hour failure definition differs from DORA's change fail rate, so compare Northstar with itself
-over time, not with published benchmarks.
+([DORA, change approval](../../references/bibliography.md#dora-cap-change-approval)). It keeps
+recorded peer review as the approval that satisfies **segregation of duties**, the audit rule that no
+one person can both write and deploy a change unchecked. The pipeline's outcomes are DORA's
+**throughput** measures (how fast changes flow, such as lead time and deployment frequency) and
+**instability** measures (how often they fail, such as change fail rate)
+([DORA, metrics guide](../../references/bibliography.md#dora-metrics-guide)). Chapter 18 owns them.
+
+Two points belong here. A pipeline that emits no deploy events cannot be measured. And Northstar's
+[change failure rate](../../glossary.md#change-failure-rate) counts a release as failed if a hotfix,
+rollback, or linked incident follows within 72 hours. That local definition differs from DORA's change
+fail rate, so compare Northstar with itself over time, not with published benchmarks.
 
 ## Engineering Organization Example
 
-This example is **illustrative**. It decomposes Core's 19-day median lead time to show what changing
-cadence will and will not fix. Assumptions: merges arrive evenly; regression plus release takes about
+!!! info "Northstar so far"
+    Week 4 of the director's first year. Core ships every two weeks after a three-day manual regression
+    pass, and 31 percent of its releases are followed by a hotfix, rollback, or incident. This week a
+    release working group led by Kwame Mensah (staff engineer, infrastructure and reliability) takes on
+    the train; the first weekly release runs in week 5. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
+This example is **illustrative**. It decomposes Core's 19-day median
+[change lead time](../../glossary.md#lead-time) (first commit to running in production) to show what
+changing cadence will and will not fix. Assumptions: merges arrive evenly; regression plus release takes about
 four calendar days; a change spends about five days from first commit to merge (a 21-hour review wait,
 rework, a second review); the remainder is changes that miss a train because they were pulled or
 blocked by a red main.
@@ -247,18 +290,19 @@ blocked by a red main.
 
 First, cadence is the largest single lever: a weekly train removes about seven days and halves batch
 size. Second, a one-day regression pass is the precondition; three days of regression in a five-day
-week leaves no room to fix what it finds. The QA engineers ran about 1,900 cases in 21 person-days, about
-90 per person-day, so one day of seven people covers about 630. The weekly train needs a risk-based
-subset of roughly 600 cases, chosen from where escaped defects and train incidents came from, while
-the rest is automated or retired.
+week leaves no room to fix what it finds. The weekly train needs a risk-based subset of roughly 600
+cases, chosen from where escaped defects and train incidents came from, while the rest is automated or
+retired. That is about what the seven QA engineers can run in one day at their baseline pace of about
+90 cases per person-day.
 
 Third, once cadence improves, review becomes the bottleneck: at daily deployment, five of six days
 are spent before merge.
 
 ## Decision Framework
 
-Choose the release strategy by the component's risk and the type of change. Northstar's tiers (tier 1
-is the order or payment path) are a usable start.
+Choose the release strategy by the component's risk and the type of change. Northstar's tiers are a
+usable start: a [tier 1](../../glossary.md#tier-1) component is on the order or payment path, and tiers
+2 and 3 carry lighter obligations.
 
 ```mermaid
 flowchart TD
@@ -289,8 +333,9 @@ build on different CI systems, and nothing checked the contract between them.
 ## Trade-offs
 
 **Review depth against flow.** More reviewers catch a little more and cost waiting on every change.
-One knowledgeable, fast reviewer usually beats two in a queue. The exception is code where one mistake is catastrophic and hard to detect automatically,
-such as permissions logic, where a specialist second reviewer is worth the wait.
+One knowledgeable, fast reviewer usually beats two in a queue. The exception is code where one
+mistake is catastrophic and hard to detect automatically, such as permissions logic. There a
+specialist second reviewer is worth the wait.
 
 **Flags against complexity.** Flags buy the separation of deploy from release. Each also adds a code
 path to test and later remove. Flags without expiry dates trade today's release risk for next year's
@@ -357,8 +402,7 @@ automated, logged deployment.
 At CTO level, release engineering is a risk control and a cost, and both need business terms.
 
 **Blast radius is the board-level concept**: how much of the customer base one bad change can affect,
-and for how long. Canarying, per-tenant
-flags, and fast rollback all shrink it, and the CTO can report it: the share of tier 1 changes
+and for how long. Canarying, per-tenant flags, and fast rollback all shrink it, and the CTO can report it: the share of tier 1 changes
 released progressively, and median time from detection to rollback.
 
 **Resist the freeze reflex.** After a visible outage, executives often ask for a freeze or a change
@@ -410,31 +454,28 @@ from every pipeline.
 
 ## Case Study
 
-This case is **fictional**. It continues the story in
-[chapter 27](27-quality-transformation-at-enterprise-scale.md) from the
-[baseline](../../case-studies/northstar/baseline-data.md).
+This case is **fictional**. It follows the release workstream of the director's first quarter, weeks
+4 to 13, from the [baseline](../../case-studies/northstar/baseline-data.md).
 
 The release working group, led by Kwame Mensah with owners from the teams, began by measuring: most
 red periods began with a test that passed on rerun. The group split the pipeline into a 15-minute
-commit stage and a 38-minute extended stage in parallel shards, and quarantined the 40 worst flaky
-tests in week 4 and 140 by day 90 (about 1.2 percent of the suite), each with an owner and a
-fix-or-delete deadline. Teams adopted revert-first. Red time fell below
+commit stage and a 38-minute extended stage in parallel shards. From week 4 it quarantined the worst
+flaky tests under Chapter 22's rule, each with an owner and a fix-or-delete deadline. Teams adopted
+revert-first. Red time fell below
 10 percent in week 4 and averaged 9 percent over the last four weeks of the quarter.
 
 The first weekly train ran in week 5. Two QA engineers chose about 600 regression cases, weighted
 toward invoicing, ledger, and order capture; all seven triaged the manual suite with the teams, and
-five also automated cases. Core made
-eleven releases in the quarter instead of six or seven. In week 6, after reviewing INC-410 and INC-430
+five also automated cases. Core made eleven releases in the quarter instead of six or seven. In week 6, after reviewing INC-410 and INC-430
 together, Payments and Integrations moved its flags and settings into version control with schema and
 bounds checks and per-tenant rollout. Its deployment frequency did not fall.
 
-One thing went badly: the week 9 Sev1 that Chapter 27 describes, credit notes applied twice after a
-migration and a code change shipped in the same train. Release engineering made it longer. Rolling
-the train back failed, because the migration had already changed the schema the previous version
-read, so service was restored by a forward fix. Expand and contract had been a written rule that nothing
-enforced. The pipeline check promised after INC-427 had slipped; the review added an interim rule (no
-release may contain a ledger migration and code that depends on it) until the check landed in week 11
-(Chapter 25).
+One thing went badly: the week-9 Billing Sev1, a repeat of INC-427, in which credit notes were applied
+twice after a migration and dependent code shipped in the same train ([Chapter 25](25-incidents-postmortems-and-change-failure-analysis.md#case-study) tells it in full).
+Release engineering made it longer. Rolling the train back failed, because the migration had already
+changed the schema the previous version read, so service was restored by a forward fix. Expand and
+contract had been a written rule that nothing enforced. An interim rule followed (no release may
+contain a ledger migration and code that depends on it) until a pipeline check landed in week 11.
 
 At the quarterly reset the group proposed stage 2, and the director added one condition: Core's flag
 mechanism would be a paved road with expiry dates required from the first flag, so that Core would
@@ -447,14 +488,16 @@ Solutions are in [chapter 23 solutions](../../solutions/ch23-solutions.md). Nort
 
 ### Foundational
 
-**F1.** After INC-427 (credit notes applied twice after a Core release), Marcus Oyelaran proposes that
+**F1.** After INC-427 (credit notes applied twice after a Core release), Marcus Oyelaran (Billing
+manager) proposes that
 every Core merge request require two approvals, one of them from a senior engineer, "so that defects
 like this are caught in review". Using what the research says code review does and does not achieve,
 evaluate the proposal. Say what you would change in Core's review practice instead, and what you would
 expect each change to do to lead time.
 
 **F2.** Northstar's quarter had five configuration-change incidents: INC-404, INC-410, INC-412,
-INC-416, and INC-430. For each, identify which property of a trustworthy delivery path was missing
+INC-416, and INC-430. The incident table in Why This Matters describes each, and
+`incidents-last-quarter.csv` has detection and restore times. For each, identify which property of a trustworthy delivery path was missing
 and which single control would most likely have prevented the incident or limited its impact. Then
 say which of your controls would also have helped in the Knight Capital deployment.
 
@@ -466,13 +509,14 @@ actually fell.
 ### Applied Leadership
 
 **A1.** Priya Raman (Orders) and Marcus Oyelaran (Billing) complain that Core main is red so often
-that their engineers have stopped trusting the pipeline and rerun failures by habit. Tom Becker says
+that their engineers have stopped trusting the pipeline and rerun failures by habit. Tom Becker
+(Platform Operations) says
 his infrastructure engineers own the Jenkins servers, not the tests. Design the main-branch policy
 for Core, decide who owns which part of it, and plan the conversation in which you introduce
 revert-first to engineers who see it as an accusation.
 
 **A2.** After INC-410 and INC-430, the payments-gateway's 64 flags and settings will move into version
-control with review. Elena Sokolova worries that this will slow her team, which deploys 22 times a
+control with review. Elena Sokolova (Payments and Integrations manager) worries that this will slow her team, which deploys 22 times a
 month and often changes rate limits during partner-bank incidents. Design the change process so that
 routine changes are safe and emergency changes are still fast, and say how you will know if it works.
 

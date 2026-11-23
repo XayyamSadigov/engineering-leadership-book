@@ -71,8 +71,8 @@ small, specifiable component is the case where rewriting can be right.
 **Response.** The director should take the problem seriously (running four systems costs about 1.5 FTE
 a year and keeps the script path one engineer understands) and decline the tool mandate as asked.
 
-**What to mandate:** the outcome. The fifth tier 1 minimum, deployment through an auditable pipeline
-with automated rollback, is already a standard (Chapter 20). Set a date for tier 1 services to meet it,
+**What to mandate:** the outcome. Deployment of tier 1 services through an auditable pipeline
+with automated rollback is already a standard (Chapter 20). Set a date for tier 1 services to meet it,
 by any compliant path. Also mandate that the shell-script path is switched off by a date, because it is a
 known risk, not a preference.
 
@@ -89,7 +89,7 @@ still have not moved by then, a deadline becomes defensible.
 
 ## A2 — export-svc stays on the scripts
 
-**Weigh the reasons.** Data and Analytics' objection is legitimate: 12 points of its capacity already go
+**Weigh the reasons.** Data and Analytics' objection is legitimate: 12 percent of its capacity already goes
 to other teams, and export-svc is tier 3 and rarely changes. But the cost of its staying is not borne by
 Data and Analytics. While export-svc uses the shared script, the script path, its secrets on the build
 host, and the knowledge concentrated in one Platform Operations engineer all remain.

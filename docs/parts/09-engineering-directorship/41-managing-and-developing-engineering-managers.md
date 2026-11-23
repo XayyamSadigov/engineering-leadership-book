@@ -1,10 +1,10 @@
 # Chapter 41 — Managing and Developing Engineering Managers
 
 A director's main product is the managers. This chapter covers assessing an engineering manager
-against a rubric with observable evidence, coaching managers through skip-levels, manager artifact reviews, and
-delegated decisions, and building a bench for every management seat. Chapter 4 owns measuring
-managerial effectiveness in general and Chapter 5 owns coaching an individual; here the individual is a
-manager and the coach is the director. The running example is the end of quarter 2 at Northstar
+against a rubric with observable evidence. It covers coaching managers through skip-levels, reviews of
+managers' work artifacts, and delegated decisions, and building a bench for every management seat.
+Measuring managerial effectiveness in general is in Chapter 4, and coaching an individual in Chapter
+5; here the individual is a manager and the coach is the director. The running example is the end of quarter 2 at Northstar
 Technologies, the fictional company in the [case study](../../case-studies/northstar/index.md), where
 the director assesses the six managers for the first time.
 
@@ -13,14 +13,16 @@ the director assesses the six managers for the first time.
 At team scale, a manager decides most of what an engineer experiences: what they work on, whether they
 grow, whether their concerns travel anywhere. A director who cannot tell a strong manager from a busy
 one rewards the busy one. At Northstar's baseline, managers were reviewed once a year on roadmap
-delivery only, against a one-line job description. On that basis Daniel Cho, whose team deployed most,
+delivery only, against a one-line job description. On that basis Daniel Cho (Customer Experience
+manager), whose team deployed most,
 looked strongest, and nothing measured showed that his mobile engineers felt like pawns.
 
 At organization scale, the managers are the director's leverage. The director's product is the system
 (Chapter 40), and a director reaches that system almost entirely through six or eight people.
 
 At executive scale, the question is whether managers are ready when needed. At Northstar each of the six
-managers is a single point of failure, and under the flat-headcount rule a new manager can come only from
+managers is a [single point of failure](../../glossary.md#single-point-of-knowledge-failure), and under the
+flat-headcount rule a new manager can come only from
 an engineering seat that is not backfilled. The bench is built from current engineers or not at all.
 
 ## Learning Objectives
@@ -55,8 +57,8 @@ flowchart TD
     C --> G["Gaps feed the bench"]
 ```
 
-The loop starts with written expectations because a rating against an unstated expectation says more
-about the director than the manager, and ends with a recheck because an unchecked plan becomes a
+The loop starts with written expectations, because a rating against an unstated expectation says more
+about the director than the manager. It ends with a recheck, because an unchecked plan becomes a
 document. The second idea: developing managers and building the bench are the same work. A manager
 strong on people growth has people who could take more of the job; a seat with no such person is both a
 development gap and a succession gap.
@@ -75,7 +77,7 @@ Part XIV uses the same dimensions and levels.
 | Dimension | Observable evidence | Not evidence |
 |---|---|---|
 | 1. Outcomes in context | Commitments as made and as delivered; reliability trend; the manager's account of causes, checked | Activity counts; renegotiated targets |
-| 2. Operational ownership | On-call load by person; corrective actions closed; tier 1 minimums on owned components | "A quiet quarter" |
+| 2. Operational ownership | On-call load by person; corrective actions closed; [tier 1 minimums](../../glossary.md#tier-1-operational-minimums) (owner, alerts, runbook, on-call) on owned components | "A quiet quarter" |
 | 3. People growth | Work delegated with a named level; career conversations; gaps addressed; a named successor | One-on-ones held |
 | 4. Team health | Regretted attrition; skip-level themes; health checks; concentration of pages and knowledge | Survey scores without comments |
 | 5. Cross-team leverage | Dependencies resolved; ownership clarified; help to peers, confirmed by them | Self-reported heroics |
@@ -83,85 +85,95 @@ Part XIV uses the same dimensions and levels.
 
 Each dimension gets **Not yet**, **Solid**, **Strong**, or **No evidence**. The fourth matters most: a
 director who has not seen a dimension tends to rate it "Solid", turning ignorance into judgment. "No
-evidence" is a finding about the director's information, and it sets an action: go and look.
+evidence" is a finding about the director's information, and it sets an action: go and look. ("Not
+yet" here is a rating on one dimension, not the declined-promotion plan of Chapter 8.)
 
-Three rules (**this book's recommendation**). Every rating cites a dated evidence item and its source.
-Rate Not yet only against an expectation the manager knew before the behavior rated; facts from before
-the window are context. Where none was stated, the gap is the director's too, and it may inform development but not pay this cycle. And there is no composite: ratings
-are not averaged and managers are not ranked, because their teams sit in different parts of the system.
+Three rules (**this book's recommendation**):
+
+1. Every rating cites a dated evidence item and its source.
+2. Rate Not yet only against an expectation the manager knew before the behavior rated, using
+   evidence from the rating window; older facts are context. Where no expectation was stated, the
+   cell reads **Expectation not set** and carries no rating. That gap is the director's too. It may
+   shape the development plan, but it must not affect this cycle's pay or performance rating.
+3. There is no composite. Ratings are not averaged and managers are not ranked, because their teams
+   sit in different parts of the system.
 
 ### Why the evidence rule exists
 
-In two large samples of managers rated by seven raters each, idiosyncratic rater effects explained more
-than half the rating variance (62 and 53 percent), more than twice the effect of the managers'
-performance ([Scullen, Mount, and Goff, 2000](../../references/bibliography.md#scullen2000latent)). That
-**research finding** concerns developmental ratings (Chapter 9 treats rating error); its consequence is
-that a rating should be traceable to something another person could check.
+Ratings say more about the rater than the rated. In two large samples of managers rated by seven
+raters each, the raters' individual quirks explained more than half of the spread in ratings (62 and
+53 percent), more than twice the effect of the managers' actual performance
+([Scullen, Mount, and Goff, 2000](../../references/bibliography.md#scullen2000latent)). That
+**research finding** concerns developmental ratings (Chapter 9 treats rating error). Its consequence:
+a rating should be traceable to something another person could check.
 
-Feedback alone changes managers little. A meta-analysis of 24 longitudinal studies found improvement
-after multisource feedback generally small; the authors' review suggests it is likelier when the feedback
-shows change is needed, the recipient believes change is feasible, sets goals, and acts
+Feedback alone changes managers little. A [meta-analysis](../../glossary.md#meta-analysis) (a study pooling
+many studies) of 24 longitudinal studies found that improvement after multisource feedback (ratings
+from the manager's boss, peers, and reports) was generally small. The authors suggest it is likelier
+when the feedback shows change is needed, the recipient believes change is feasible, sets goals, and
+acts
 ([Smither, London, and Reilly, 2005](../../references/bibliography.md#smither2005multisource)). Hence the
 loop does not stop at the rating: one focus, a goal, a real decision to practice on.
 
-Retention has the strongest evidence. At one large technology firm, survey-measured people management
-skills had a strong negative relation to turnover, with designs supporting a causal reading, but did not
-consistently improve other outcomes ([Hoffman and Tadelis, 2021](../../references/bibliography.md#hoffman2021people));
-Google reports a similar pattern (**documented practice**, one company, method not published)
+Retention has the strongest evidence. At one large technology firm, managers with better
+survey-measured people skills had markedly lower turnover on their teams, with designs supporting a
+causal reading, but did not consistently improve other outcomes
+([Hoffman and Tadelis, 2021](../../references/bibliography.md#hoffman2021people)). Google reports a
+similar pattern (**documented practice**, one company, method not published)
 ([Google re:Work](../../references/bibliography.md#rework-great-managers)). Team health carries real
 weight; outcomes need context before they carry any.
 
 ### Coaching managers through three channels
 
-**Skip-levels.** The director's conversations with engineers two levels down check what the manager's
-channel carries; they must not replace it. Chapter 40 owns the design and the rule
-([Chapter 40](40-the-directors-job.md#building-your-own-signal-sources)): everyone once a quarter in
-groups of three, themes always back to the manager, quotes never, a confidential individual
-conversation for anyone who asks, and no decisions in the room. A skip-level that yields a director's
-decision has bypassed the manager. For coaching, four questions travel well: Which decision did you
+**[Skip-levels](../../glossary.md#skip-level).** The director's conversations with engineers two levels
+down check what the manager's channel carries; they must not replace it. They follow the skip-level
+rule in [Chapter 40](40-the-directors-job.md#building-your-own-signal-sources); its core is that themes
+go back to the manager, quotes never. A skip-level that yields a director's decision has bypassed the
+manager. For coaching, four questions travel well: Which decision did you
 wait on longest, and who made it? What would you tell your manager if you were sure it was safe? What
 can you do now that you could not two quarters ago? What should the director stop doing? The second
 probes safety toward the manager (Chapter 11); the third is evidence for people growth.
 
-**Manager artifact reviews.** In the director's weekly meeting with the managers, one slot goes to one manager
-presenting one artifact (a quarter plan, an incident review, a promotion packet) for peers to question.
-Chapter 37 owns the cadence. Peers see each
-other's work, and the artifact becomes rubric evidence. Keep the question "what would you change?", not "who got it wrong?".
+**Manager artifact reviews.** In the weekly leadership team meeting (Chapter 37), one slot goes to one
+manager presenting one artifact (a quarter plan, an incident review, a promotion packet) for peers to
+question. Peers see each other's work, and the artifact becomes rubric evidence. Keep the question
+"what would you change?", not "who got it wrong?".
 
 **Delegated decisions.** The strongest tool is a real decision handed over at an explicit level of
-control; Chapter 2's five levels work for managers too. David Marquet is known for moving decisions to the
-people with the information ([Marquet, 2012](../../references/bibliography.md#marquet2013turn)), and Liz
-Wiseman for the idea that some leaders amplify others' capability while others diminish it
-([Wiseman, 2010](../../references/bibliography.md#wiseman2010multipliers)); both are **expert opinion**.
-Research is sobering: managers say they delegate to develop people, yet many hold back important
-decisions from those they see as inexperienced ([Yukl and Fu, 1999](../../references/bibliography.md#yukl1999determinants)).
+control; Chapter 2's five levels (from "I decide, you carry out" to "you decide, no need to tell
+me") work for managers too. David Marquet argues for moving decisions to the people with the
+information ([Marquet, 2012](../../references/bibliography.md#marquet2013turn)). Liz Wiseman argues
+that some leaders amplify others' capability while others diminish it
+([Wiseman, 2010](../../references/bibliography.md#wiseman2010multipliers)). Both are **expert
+opinion**. Research is sobering: managers say they delegate to develop people, yet many hold back
+important decisions from those they see as inexperienced ([Yukl and Fu, 1999](../../references/bibliography.md#yukl1999determinants)).
 So hand over a decision that matters at level 2 or 3, not a trivial one at level 5.
 
 ### What the research on manager development says
 
-A meta-analysis of 335 samples found leadership training substantially more effective than earlier
-estimates, improving reactions, learning, transfer to the job, and results (effect sizes of about 0.63,
-0.73, 0.82, and 0.72), and more effective with needs analysis, feedback, several methods (especially
-practice), spaced sessions, on-site location, and face-to-face delivery
+Leadership training works better than once thought, when it is designed well. A meta-analysis of 335
+samples found moderate to large improvements in reactions, learning, on-the-job behavior, and
+results, largest in on-the-job behavior. Training worked better with a needs analysis, feedback,
+several methods (especially practice), spaced sessions, on-site location, and face-to-face delivery
 ([Lacerenza et al., 2017](../../references/bibliography.md#lacerenza2017leadership)). That **research
-finding**, read at abstract level, concerns formal programs, not a director's coaching. It still argues
-against one off-site course from a catalog: the rubric is the needs analysis, real decisions are the
-practice, quarterly rechecks are the spacing.
+finding**, as the abstract reports it, concerns formal programs, not a director's coaching. It still
+argues against one off-site course from a catalog. The rubric is the needs analysis, real decisions
+are the practice, quarterly rechecks are the spacing.
 
-A review of 25 years of leader development research notes that the field's systematic study is fairly
-young and stresses multisource feedback and longitudinal studies
-([Day et al., 2014](../../references/bibliography.md#day2014advances)). Linda Hill's study of nineteen new
-managers is described by its publisher as showing the transition is learned mainly from experience and
-that many do not make it ([Hill, 2019](../../references/bibliography.md#hill2019becoming)). Practitioner
-guides by Camille Fournier, known for walking the management path level by level
-([Fournier, 2017](../../references/bibliography.md#fournier2017manager)), and Julie Zhuo
-([Zhuo, 2019](../../references/bibliography.md#zhuo2019making)) also treat management as learned on the
-job. None of this says which manager will grow, so recheck every quarter.
+Management is learned mostly on the job, and the research on how is young. A review of 25 years of
+leader development research says so
+([Day et al., 2014](../../references/bibliography.md#day2014advances)). Linda Hill's study of nineteen
+new managers is described by its publisher as showing that the transition is learned mainly from
+experience and that many do not make it ([Hill, 2019](../../references/bibliography.md#hill2019becoming)).
+Practitioner guides by Camille Fournier
+([Fournier, 2017](../../references/bibliography.md#fournier2017manager)) and Julie Zhuo
+([Zhuo, 2019](../../references/bibliography.md#zhuo2019making)) agree. None of this says which manager
+will grow, so recheck every quarter.
 
 ### Building the bench
 
-Chapter 36 owns the succession table, readiness scale, and coverage rule
-([Chapter 36](../07-organization-design/36-reorganizations-evolution-and-succession.md#succession-coverage));
+The succession table, readiness scale, and coverage rule are in
+[Chapter 36](../07-organization-design/36-reorganizations-evolution-and-succession.md#succession-coverage);
 this chapter adds how to grow the names in it. Select on evidence of managerial work, not engineering
 excellence: firms tend to promote on current performance even when other traits predict managerial
 success better ([Benson, Li, and Shue, 2019](../../references/bibliography.md#benson2019promotions)).
@@ -181,19 +193,20 @@ after week 10 (77 engineers in teams; the staff engineers are managed separately
 |---|---|---|
 | One-on-ones with managers | 6 × 45 minutes × 13 weeks | 58.5 |
 | Skip-levels | Chapter 40's rotation: two groups of three a week, 45 minutes, 13 weeks | 19.5 |
-| Rubric assessment | 6 managers × 4 hours every two quarters = 24 | 12 |
+| Rubric assessment | 4 hours per manager every two quarters, spread over both | 12 |
 | **Total** | | **90** |
 
-Recomputed: 58.5 + 19.5 + 12 = 90 hours, about 6.9 hours a week, about 15 percent of a 47-hour week.
-The artifact-review slot is not counted: it sits inside the weekly managers' meeting, already in
-Chapter 37's load. Chapter 34's span analysis applies to the director too.
+That is about 7 hours a week, about 15 percent of the director's 47-hour week. The artifact-review
+slot is not counted: it sits inside the weekly leadership team meeting.
 
 What it can buy: at baseline eight engineers left in a year, with a median 15 weeks to a replacement's
-first day. Catching one avoidable departure a year saves about 15 engineer-weeks, roughly $53,000
-(15 ÷ 52 × $185,000 = $53,365), before ramp-up. A plausibility check, not a forecast.
+first day. Catching one avoidable departure a year saves about 15 engineer-weeks, roughly $53,000 at
+Northstar's [fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000 per engineer-year, before
+ramp-up. It is a plausibility check, not a forecast.
 
-The more telling number: in the first Northstar rubric (Case Study), drafted before any group skip-level, 5 of 36 cells are "No evidence".
-Rating all 36 from impression would have produced a tidy table and no idea where to look.
+The more telling number: in the first Northstar rubric (Case Study), drafted before any group
+skip-level, 5 of 36 cells are "No evidence". Rating all 36 from impression would have produced a tidy
+table and no idea where to look.
 
 ## Decision Framework
 
@@ -217,6 +230,7 @@ flowchart TD
 | "Not yet" caused by the system (release train, span, ownership) | The director's problem | Fix the system; rate the manager's response |
 | "Not yet" on several dimensions for two quarters despite a plan | Possible role fit | Chapter 9's expectations process, including a return to engineering |
 | "No evidence" anywhere | Information gap | Go and look; do not rate |
+| "Expectation not set" | The director's gap | State the expectation; rate next cycle |
 | "Strong" on people growth and leverage | Ready for more scope | Stretch decision at level 3 or 4; bench for a larger role |
 | "Strong" everywhere, team runs without them | Ready now, or about to leave | Career conversation this month |
 
@@ -274,9 +288,9 @@ Detection: ask the named person.
 With 50 to 150 engineers there are usually six to fifteen managers and often two directors. Three things
 change. **Calibrate manager ratings** across directors twice a year on evidence items, as Chapter 8 does
 for engineers; with several raters the rater-effect research applies directly. **Run a cohort, not a
-catalog:** with ten or more managers, an internal program of a few spaced, face-to-face sessions built on
-practice (a difficult conversation, an incident review chaired, a plan defended), each followed by a
-real decision on the job; the training moderators are the design brief. **Keep the bench
+catalog:** with ten or more managers, run an internal program of a few spaced, face-to-face sessions
+built on practice (a difficult conversation, an incident review chaired, a plan defended). Follow
+each with a real decision on the job; the training research's conditions are the design brief. **Keep the bench
 organization-wide:** the best candidate for one team's seat may sit in another, and trial assignments can
 cross teams. New managers get the rubric on day one, so expectations are stated before they are judged.
 
@@ -310,97 +324,100 @@ hours buys the visible half of manager development.
 
 ## Case Study
 
+!!! info "Northstar so far"
+    Week 24 of the director's first year, late in quarter 2. Sev1 and Sev2 incidents fell from 30 to
+    21 in quarter 1. The accounting integration has been live since week 19; bulk ordering is due in
+    week 26. Individual skip-levels started in week 16. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
 This case is **fictional**. The director drafts the assessment in week 24, holds the conversations in
-weeks 25 and 26, and finalizes it in week 27, the first week of quarter 3. It uses evidence from the
-[baseline page](../../case-studies/northstar/baseline-data.md), [the first quarter](../../case-studies/northstar/first-quarter.md)
-page, and earlier chapters (including Chapter 39's end-of-quarter-2 report), plus Priya Raman's monthly
-time checks, a new fact recorded for the canon. The ratings are fictional judgments; the quarter 3 outcomes are open.
+weeks 25 and 26, and finalizes it in week 27, the first week of quarter 3. The rating window is
+quarter 2 (weeks 14 to 26); earlier facts are context. The ratings are fictional judgments; the
+quarter 3 outcomes are open.
 
 **Where the director started.** Expectations existed only in pieces: prevention allocations, tier 1
-minimums, incident commander training, manager ownership of corrective actions. Nobody had set Daniel Cho
-expectations for leading across sites (Chapter 14) or told Farah Haddad which of her two roles came
-first. In week 22 the director wrote the six dimensions into a one-page expectation.
+minimums, incident commander training, manager ownership of corrective actions. Nobody had set Daniel
+expectations for leading across sites, or told Farah Haddad (Data and Analytics manager) which of her
+two roles, manager or data architect, came first. In week 22 the director wrote the six dimensions
+into a one-page expectation.
 
 **The thin channel.** The director held no skip-levels in weeks 1 to 15. From week 16 there were
-individual skip-level conversations, four a week for 30 minutes (Chapter 37), 36 by week 24;
-Mateo Arango Ríos's in week 17 was the director's first with a mobile engineer. They inform the ratings
-below, but one person at a time is not a team's view, and no group skip-level had yet been held. The
-"No evidence" cells are partly that gap. Systematic group skip-levels start with Chapter 40's quarter 3
-rotation, covering all 77 team engineers; its groups are where the checks below get their evidence.
+individual skip-level conversations, four a week for 30 minutes, 36 by week 24. They inform the
+ratings below, but one person at a time is not a team's view. The "No evidence" cells are partly that
+gap. Group skip-levels covering all 77 team engineers start in quarter 3, and the checks below get
+their evidence there.
 
 **The draft ratings, week 24.**
 
 | Manager | Outcomes | Operational | People growth | Team health | Leverage | Running the role |
 |---|---|---|---|---|---|---|
-| Priya Raman | No evidence (bulk ordering due week 26) | Solid | Solid | No evidence | Solid | Not yet |
-| Marcus Oyelaran | Solid | Not yet | No evidence | Not yet | Solid | Not yet |
-| Elena Sokolova | Strong | Strong | Solid | Strong | Strong | Solid |
-| Daniel Cho | Solid | Not yet | Not yet | Not yet (unset) | No evidence | Solid |
-| Farah Haddad | Solid | Solid | Not yet | No evidence | Solid | Not yet (unset) |
-| Tom Becker | Solid | Solid | Not yet | Not yet | Solid | Solid |
+| Priya Raman (Orders) | No evidence (bulk ordering due week 26) | Solid | Solid | No evidence | Solid | Not yet |
+| Marcus Oyelaran (Billing) | Solid | Not yet | No evidence | Not yet | Solid | Not yet |
+| Elena Sokolova (Payments and Integrations) | Strong | Strong | Solid | Strong | Strong | Solid |
+| Daniel Cho (Customer Experience) | Solid | Not yet* | Not yet | Expectation not set | No evidence | Solid |
+| Farah Haddad (Data and Analytics) | Solid | Solid | Not yet | No evidence | Solid | Expectation not set |
+| Tom Becker (Platform Operations) | Solid | Solid | Not yet* | Not yet* | Solid | Solid |
 
-Counted both ways: 16 Solid, 11 Not yet (two against unset expectations), 5 No evidence,
-4 Strong; 36 cells. Priya's outcomes cell waits for bulk ordering, due in week 26. Three Not yet cells
-(Daniel's operational ownership, Tom's people growth and team health) still rest on baseline-quarter
-facts; the director must re-source them from the window before week 27.
+Of 36 cells: 16 Solid, 4 Strong, 9 Not yet, 5 No evidence, and 2 Expectation not set. The three
+starred cells rest only on facts from before the window, which the rule treats as context. Before
+week 27 the director must find quarter 2 evidence for each or change it to No evidence.
 
-**The evidence.**
+**Two managers in full.** Marcus and Daniel show how each rating traces to a dated item.
 
-*Priya Raman.* Delegation held where written down: Aisha Bello leads bulk ordering, and Rafael Duarte and
-Aisha own order-capture reviews (Chapter 2); Orders tagged every core/customer change for a quarter
-(Chapter 21). Rafael's career question is still open (Chapter 4). The "Not yet": her monthly checks show
-hands-on time of 8, 10, and 12 hours a week in weeks 16, 20, and 24 against the agreed cap of 8, rising
-as the renewal date nears. Team health is "No evidence": nobody has asked how candid Orders is with
-Priya, the question Chapter 11 left open.
+*Marcus Oyelaran, Billing.*
 
-*Marcus Oyelaran.* Seven of Billing's eight baseline incidents came through Core releases or migrations
-(Chapter 27), so outcomes are read in that context. Billing reserved weeks 1 to 3 for the ledger export
-(Chapter 16), reviewed contract expectations for meaning (Chapter 22), and Marcus raised the tax-svc risk
-himself (Chapter 30): leverage is Solid. Against that: three engineers handled 126 of 180 pages at
-baseline; his earlier responses were a stipend, alerts, and "document as you go"; he asked to skip
-incident commander training; "no capacity" was Billing's first answer on testing, flaky tests, and
-runbooks (Chapters 19, 20, 22). The ledger knowledge map is a
-good first artifact, but nothing yet shows anyone new able to respond alone, so people growth is "No
-evidence". Team health is "Not yet": the after-hours load the stay interviews named, and Tomasz
-Wierzbicki's offer, whose handling is open (Chapter 10).
+| Dimension | Dated evidence | Source | Rating |
+|---|---|---|---|
+| Outcomes | Seven of Billing's eight baseline incidents came through Core releases or migrations, so results are read against the release train (context). In quarter 2 Billing reserved weeks 14 to 16 for the ledger export the accounting integration needed | Incident records; quarter 2 plan | Solid |
+| Operational ownership | Three engineers handled 126 of 180 pages at baseline; his responses had been a higher stipend, an alert after each serious incident, and "document as you go" with no time (context). He asked to skip incident commander training | Page data; training records | Not yet |
+| People growth | A ledger knowledge map exists, but nobody new can yet respond alone to ledger incidents | Knowledge map | No evidence |
+| Team health | The ledger engineers' stay interviews (weeks 14 and 15) named after-hours load; in week 20 Tomasz Wierzbicki, a ledger expert, reported an outside offer 20 percent above base | Stay interviews; one-on-one notes | Not yet |
+| Leverage | Reviewed contract tests on a shared boundary for meaning, not form; raised the tax-svc risk himself | Review records; strategy draft | Solid |
+| Running the role | "No capacity" was Billing's first answer on testing ownership, flaky tests, and runbooks. Once prevention capacity was budgeted, Billing did act, deleting 15 and rewriting 23 of its 38 quarantined tests | Standards and testing threads | Not yet |
 
-*Elena Sokolova.* Outcomes are Strong on what she controlled: the accounting integration has been live
-for the renewal customer since week 19, with daily reconciliation running (Chapter 39). The record still
-has to say how integrations read posted
-ledger data, which the report does not name and ADR-0001 leaves open (Chapter 28). Her controllable
-evidence: the payment SLI in two weeks (Chapter 24); contract tests accepted on a condition that
-caught a rounding change (Chapter 22); a three-week webhook key rotation (Chapter 26); WIP limits lowered
-and defended (Chapter 16); the Customer Experience health check facilitated (Chapter 14). The blind spot
-stays visible: payments-gateway configuration edits never reached her near-miss log (Chapter 11). People
-growth is Solid, not Strong, because her informal tech lead is the only cover for her seat.
+*Daniel Cho, Customer Experience.* Nine web and six mobile engineers, the mobile ones in Bogotá.
 
-*Daniel Cho.* Delivery measures look healthy (Chapter 14). People growth is "Not yet": 55 of 84
-one-on-ones mainly status, 9 of 15 engineers without a career conversation in six weeks, and Mateo Arango
-Ríos doing a lead's job unrecognized for over a year (Chapter 5). Operational ownership is "Not yet" on
-mobile: two of four baseline Sev2 incidents at the mobile boundary, INC-426 restored after 1,310 minutes.
-Team health is "Not yet (unset)": mobile rated four areas red, but nobody had set expectations for
-leading across sites. In his favor, he drafted the one-on-one changes himself. The structure stays open.
+| Dimension | Dated evidence | Source | Rating |
+|---|---|---|---|
+| Outcomes | Delivery measures look healthy; the team deploys most often | Deployment data | Solid |
+| Operational ownership | Two of the team's four baseline Sev2 incidents were at the mobile boundary; INC-426 (offline sync corrupted drafts) took 1,310 minutes to restore. No quarter 2 item yet | Incident records | Not yet* |
+| People growth | Weeks 14 to 19: 84 of 90 one-on-ones held, 55 mainly status; 9 of 15 engineers had no career conversation in six weeks. Mateo Arango Ríos, the informal mobile lead, said in week 17 he had done a lead's job for over a year unrecognized | One-on-one review; skip-level | Not yet |
+| Team health | Week 16 health check: mobile rated four areas red. No expectation for leading across sites had been set | Health check | Expectation not set |
+| Leverage | Nothing observed yet | None | No evidence |
+| Running the role | About 45 percent of his time on people (baseline, context); after the one-on-one review he drafted the changes himself | Calendar; his draft | Solid |
 
-*Farah Haddad.* Her charter answers INC-423 with a maintenance notice and gives other teams one queue
-(Chapter 12): leverage and operational ownership are Solid. People growth is "Not yet": one promotion to
-Senior in two years and a team holding Senior to a staff standard (Chapter 8). Running the role is "Not
-yet (unset)": 45 percent of her time is technical, and technical direction lives with her.
+The other four, in one line each:
 
-*Tom Becker.* By week 18 environment waits fell from about 6 days to 2 and other teams' requests from 20
-to 14 points (Chapter 16); he drafted the platform roadmap with Kwame Mensah (Chapter 32). People growth
-and team health are "Not yet" on one pattern: for nine months he moved 31 of Bram Verhoeven's 74 tickets
-without saying why, wrote "meets expectations", and left two colleagues covering (Chapter 9). His quarter
-2 proposal for Bram is recorded as a strong response; the decision on it remains open.
+- *Priya Raman.* Delegation held where written down (Aisha Bello leads bulk ordering). The Not yet on
+  running the role: hands-on time of 8, 10, and 12 hours a week at the week 16, 20, and 24 checks,
+  against the cap of 8 she agreed in week 2. Team health is No evidence: nobody has asked how candid
+  Orders is with her.
+- *Elena Sokolova.* The accounting integration has been live since week 19 with daily
+  reconciliation. She built the payment [SLI](../../glossary.md#sli-slo-and-sla) (the measured success
+  rate of payments) in two weeks and has run a weekly operations review for two years, with a
+  near-miss log of 17 entries in the baseline quarter. Its blind spot: payments-gateway configuration
+  edits never reached the log. People growth is Solid, not Strong, because her informal tech lead is
+  the only cover for her seat.
+- *Farah Haddad.* Her team charter answered INC-423 (a warehouse maintenance window that broke
+  customer exports) with a maintenance notice and gave other teams one queue. People growth is Not
+  yet: one promotion to Senior in two years. About 45 percent of her time is technical, and technical
+  direction lives with her; which role comes first was never set.
+- *Tom Becker.* By week 18 environment waits fell from about 6 days to 2. People growth and team health
+  are starred Not yet on one baseline pattern: for nine months he moved 31 of Bram Verhoeven's 74
+  tickets to others without saying why, wrote "meets expectations", and left two colleagues covering.
+  His quarter 2 plan for Bram is a strong response; the decision on it is open.
+
+The fuller record behind these lines is in Chapters 2, 5, 9, 12, 14, 16, 19, 20, 22, and 24.
 
 **Quarter 3 plans (proposed, outcomes open).**
 
 | Manager | Focus | Delegated decision | Bench action | Check |
 |---|---|---|---|---|
 | Priya | Running the role | Aisha Bello runs Orders' quarter 3 planning at level 3 | Aisha as named interim cover | Hands-on hours at or below 8 in weeks 32 and 38 |
-| Marcus | Operational ownership | Teodora Vasquez-Lund leads the TR-07 pairing plan (Chapter 30) at level 3; Marcus joins ledger incidents only as commander | A senior engineer takes one named piece of his job | Knowledge map recount, week 38 |
+| Marcus | Operational ownership | Teodora Vasquez-Lund, a senior ledger engineer, leads the pairing plan that spreads ledger currency and rounding knowledge (risk TR-07 on the technology risk register) at level 3; Marcus joins ledger incidents only as commander | A senior engineer takes one named piece of his job | Knowledge map recount, week 38 |
 | Elena | Organization-wide leverage | Chairs a monthly artifact-review slot on operational readiness, level 3 | Informal tech lead represents the team in cross-team planning | Peer managers asked, week 38 |
-| Daniel | People growth | A career conversation with every engineer; a sponsorship action each for Hannah Lindgren and Mateo | Hannah and Mateo as half-team covers | One-on-one recode, weeks 32 to 37 |
-| Farah | Running the role | Sunil Varghese leads one warehouse design decision at level 3 | Sunil on the architecture half | Technical share in the week 38 calendar |
+| Daniel | People growth | A career conversation with every engineer; a sponsorship action each for Hannah Lindgren (informal web lead) and Mateo | Hannah and Mateo as half-team covers | One-on-one recode, weeks 32 to 37 |
+| Farah | Running the role | Sunil Varghese, the senior engineer who designed the warehouse pipelines, leads one warehouse design decision at level 3 | Sunil on the architecture half | Technical share in the week 38 calendar |
 | Tom | People growth | Raises any performance gap with the person within two weeks | None yet | Quarter 3 skip-level group: is work moved silently? |
 
 The director's own line: written expectations for every manager by week 27, answering or explicitly
@@ -416,7 +433,7 @@ Solutions are in [chapter 41 solutions](../../solutions/ch41-solutions.md). Nort
 
 **F1.** A director's draft assessment says: "Marcus is defensive about capacity", "Elena is the best
 manager we have", "Daniel really cares about his people", and "Farah is too technical". Rewrite each into
-dated, observable evidence from the Northstar record, name the dimension it bears on, and say which
+dated, observable evidence from this chapter's case, name the dimension it bears on, and say which
 statement you could not rewrite without new evidence and what you would collect.
 
 **F2.** Priya Raman's monthly checks show hands-on time of 8, 10, and 12 hours a week as the bulk-ordering
@@ -446,7 +463,7 @@ record the evidence, and what Tom needs to show by week 38.
 
 ### Executive Decision-Making
 
-**X1.** Victor Lindqvist asks you for a single ranking of the six managers for year-end pay, and
+**X1.** Victor Lindqvist (CTO) asks you for a single ranking of the six managers for year-end pay, and
 separately asks who would run Payments and Integrations if Elena Sokolova were promoted. Respond to both
 using the rubric's rules and the bench evidence, and say what you would refuse to produce.
 
@@ -469,8 +486,8 @@ you would know in two quarters whether it worked.
 
 - Rate managers on six dimensions with a dated, observable evidence item behind every rating.
 - Treat "No evidence" as a finding about your information, and go and look before rating.
-- Rate Not yet only against an expectation the manager knew before the behavior rated; facts from
-  before the window are context. Otherwise the gap is yours too.
+- Rate Not yet only against an expectation the manager knew, on evidence from the rating window.
+  Where none was stated, write "Expectation not set": the gap is yours, and it does not touch pay.
 - Never average the dimensions or rank managers whose teams sit in different parts of the system.
 - Separate what the manager controls from what the system does, and rate the manager's response.
 - Use skip-levels to check the manager's channel; themes always go back to the manager, quotes never.

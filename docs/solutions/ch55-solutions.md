@@ -3,7 +3,16 @@
 Worked solutions for the [chapter 55 exercises](../parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md#exercises).
 Most of these exercises have more than one defensible answer. Each solution gives one worked answer,
 the criteria a good answer meets, and the weak answer to watch for. All Northstar and Halvard data is
-fictional, and the scenarios marked hypothetical in the exercises are not part of the canon.
+fictional, and the scenarios marked hypothetical in the exercises are not part of Northstar's record.
+
+## The headline table: how the probabilities are computed
+
+The chapter's table treats quarterly Sev1 and Sev2 counts as Poisson, that is, varying randomly around a
+fixed true average. With a true quarterly mean of 9, the chance a quarter has 9 or fewer is about 0.587,
+so "below 10" fails in a single quarter about 41 percent of the time, and holds in all four quarters with
+probability 0.587⁴, about 0.119. For the annual total, the yearly mean is four times the quarterly one:
+with a yearly mean of 36, the chance of 40 or fewer is about 0.777; with 40, about 0.542; with 48, about
+0.138. These are the 78, 54, and 14 percent in the last column.
 
 ## F1 — From dashboard to board page
 
@@ -48,7 +57,7 @@ nothing.
 | Decision | Decider | Cheap to reverse? | What the board sees |
 |---|---|---|---|
 | Year-2 operating plan and envelope | Board, on Helena Marsh's proposal | No (a year's commitment) | It decides, in week 50 |
-| Year-2 organization proposal | Victor Lindqvist (canon: the CTO decides) | Partly; reorganizations are costly to reverse (about 21 engineer-weeks of transition) | Informed, as part of how the plan will be delivered |
+| Year-2 organization proposal | Victor Lindqvist (the CTO decides) | Partly; reorganizations are costly to reverse (about 21 engineer-weeks of transition) | Informed, as part of how the plan will be delivered |
 | $150,000 of stage 2 tooling | Within the envelope: Rajiv Menon's approval, offset or not | Yes, mostly (tooling contracts aside) | Nothing separately; it sits inside the envelope |
 | Workforce option C (exception to the 87-seat rule) | The executive team; if the envelope assumes 87 seats, it may need the board | No (hires are hard to reverse) | Only if it changes the envelope the board approved |
 | CI consolidation target | Delegated technical decision (Chapter 32), owned under the CTO | Expensive to reverse once migrated | Not involved |

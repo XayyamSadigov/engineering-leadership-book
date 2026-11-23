@@ -1,16 +1,22 @@
 # Chapter 37 — The Management Operating System: Cadences and Leadership Meetings
 
 This chapter is about the recurring meetings and written rhythms through which a leader runs an
-organization. It covers designing weekly, monthly, and quarterly cadences in which each meeting has one
-job, running a leadership team meeting that actually decides things, and auditing the whole system
-for duplicated work and for loops that nobody closes. Earlier chapters put pieces of this system in
-place and deferred its overall design here: the weekly operational review, the monthly quality review,
-and the quarterly reset of [Chapter 27](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md),
-the forecast refresh of [Chapter 17](../04-execution/17-predictability-and-managing-uncertainty.md),
-and the open-decisions list of [Chapter 13](../03-high-performing-teams/13-decision-making-in-teams.md).
-Chapter 38 owns scorecards and quarterly planning, and Chapter 39 owns reviews, decision logs,
-escalation, and executive reporting. The running example is the Engineering Director's calendar at
-Northstar Technologies, the fictional company of the [case study](../../case-studies/northstar/index.md).
+organization. It shows how to design weekly, monthly, and quarterly cadences in which each meeting
+has one job. It shows how to run a leadership team meeting that actually decides things, and how to
+audit the whole system for duplicated work and for loops that nobody closes. The running example is
+the Engineering Director's calendar at Northstar Technologies, the fictional company of the
+[case study](../../case-studies/northstar/index.md).
+
+!!! info "Related chapters"
+    Earlier chapters set up parts of this system: the weekly operational review, the monthly quality
+    review, and the quarterly reset
+    ([Chapter 27](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)), the
+    forecast refresh ([Chapter 17](../04-execution/17-predictability-and-managing-uncertainty.md)), and
+    the open-decisions list ([Chapter 13](../03-high-performing-teams/13-decision-making-in-teams.md)).
+    Scorecards and quarterly planning are in
+    [Chapter 38](38-scorecards-quarterly-planning-and-capacity-allocation.md); reviews, decision logs,
+    escalation, and executive reporting are in
+    [Chapter 39](39-reviews-decision-logs-escalation-and-executive-reporting.md).
 
 ## Why This Matters
 
@@ -75,18 +81,17 @@ incident calls, where it is done without the right people or information.
 
 ### What the system is made of
 
-Andrew Grove's account of managing at Intel is known for treating meetings as the medium of
-managerial work rather than an interruption of it, and for separating process-oriented meetings that
-recur on a schedule (one-on-ones, staff meetings, operation reviews) from mission-oriented meetings
-called to make a specific decision ([Grove, 1983](../../references/bibliography.md#grove1983high)).
-Patrick Lencioni's book on organizational health is known for a similar idea at the leadership team:
-different meeting types for different horizons, from short tactical meetings to less frequent
-strategic and off-site ones, rather than one meeting that tries to cover everything
-([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage)). Peter Drucker's book on
-executive effectiveness is known for the argument that time is the executive's scarcest resource,
-that it should be recorded before it is managed, and that a large number of meetings is a symptom of
-poor organization ([Drucker, 1967](../../references/bibliography.md#drucker1967effective)). All three are
-practitioner books, credited only for these ideas.
+Three practitioner classics treat meetings as the medium of management work, not an interruption of
+it (**expert opinion**). Andrew Grove's account of managing at Intel separates process-oriented
+meetings that recur on a schedule (one-on-ones, staff meetings, operation reviews) from
+mission-oriented meetings called to make one decision
+([Grove, 1983](../../references/bibliography.md#grove1983high)). Patrick Lencioni argues for different
+meeting types for different horizons, from short tactical meetings to rarer strategic and off-site
+ones, rather than one meeting that covers everything
+([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage)). Peter Drucker argues that
+time is the executive's scarcest resource, that it should be recorded before it is managed, and that
+many meetings are a symptom of poor organization
+([Drucker, 1967](../../references/bibliography.md#drucker1967effective)).
 
 This book's synthesis is that an operating system has four components: **forums** (meetings),
 **artifacts** (the written inputs and outputs: scorecards, pre-reads, decision logs), **horizons**
@@ -118,35 +123,31 @@ job, its inputs, its outputs, and who would notice within two weeks if it stoppe
 The science of meetings is younger and thinner than its importance suggests, and almost none of it
 studies engineering leadership teams.
 
-- In two internet surveys of employees working 35 hours or more a week (676 and 304 people), the relationship between the
-  time demanded by meetings and job attitudes and well-being depended on task interdependence, on the
-  quality of the meeting experience, and on how strongly people strove to get their own work done;
-  perceived meeting effectiveness had a strong direct relationship with job attitudes and well-being
-  ([Rogelberg et al., 2006](../../references/bibliography.md#rogelberg2006not)). **Research finding**:
-  how good meetings are matters at least as much as how many there are.
-- A two-wave survey of 319 working adults found that when managers made workgroup meetings relevant,
-  allowed employee voice, and managed time, employees reported higher engagement, through the
-  psychological conditions for engagement
+- **Quality matters at least as much as quantity.** Two surveys of full-time employees (676 and 304
+  people) found that the link between meeting time and well-being depended on the quality of the
+  meetings and on the work. Perceived meeting effectiveness had a strong direct link with job
+  attitudes and well-being
+  ([Rogelberg et al., 2006](../../references/bibliography.md#rogelberg2006not)). **Research finding.**
+- **The manager can make meetings matter.** In a two-wave survey of 319 working adults, employees
+  reported higher engagement when managers kept meetings relevant, let people speak, and managed time
   ([Allen and Rogelberg, 2013](../../references/bibliography.md#allen2013manager)). **Research
   finding**, self-reported and correlational.
-- A study that videotaped and coded 92 regular team meetings found that functional interaction, such
-  as problem solving and action planning, went with higher meeting satisfaction and team productivity,
-  and with organizational success two and a half years later; dysfunctional communication such as
-  criticizing or complaining had negative relationships that were stronger than the positive ones
+- **Complaining hurts more than problem solving helps.** A study coded 92 videotaped team meetings.
+  Problem solving and action planning went with satisfaction, productivity, and organizational
+  success two and a half years later; criticizing and complaining had stronger negative links
   ([Kauffeld and Lehmann-Willenbrock, 2012](../../references/bibliography.md#kauffeld2012meetings)).
-  **Research finding**, read at abstract level.
-- A review of the field organizes the evidence around what happens before, during, and after a
-  meeting, and ends with practical recommendations
-  ([Mroz et al., 2018](../../references/bibliography.md#mroz2018meetings)). Read at abstract level;
-  its specific checklist is not reported here.
-- The summary of a Harvard Business Review article reports that executives spend nearly 23 hours a
-  week in meetings, up from under 10 in the 1960s, based on the authors' interviews and earlier
-  research ([Perlow, Hadley, and Eun, 2017](../../references/bibliography.md#perlow2017stop)).
-  **Expert opinion** for the trend; the method behind the figure is not visible in the summary.
+  **Research finding**, as the abstract reports it.
+- **Design what happens before, during, and after.** A review of the field organizes the evidence
+  around those three phases and ends with practical recommendations
+  ([Mroz et al., 2018](../../references/bibliography.md#mroz2018meetings)).
+- **Executive meeting time has grown.** The summary of a Harvard Business Review article reports that
+  executives spend nearly 23 hours a week in meetings, up from under 10 in the 1960s
+  ([Perlow, Hadley, and Eun, 2017](../../references/bibliography.md#perlow2017stop)). **Expert
+  opinion**; the summary does not show the method behind the figure.
 
 Two older findings bear on design. A field study of a software team found that constant
-interruptions made individual work difficult and that changing the group's collective use of time
-improved its productivity ([Perlow, 1999](../../references/bibliography.md#perlow1999time)): a
+interruptions made individual work difficult, and that changing the group's collective use of time
+improved its productivity ([Perlow, 1999](../../references/bibliography.md#perlow1999time)). A
 cadence that scatters meetings across every day of every manager costs the engineers who wait for
 those managers. And among IT professionals working from home in the pandemic, meeting and coordination
 time rose while uninterrupted time fell
@@ -166,13 +167,14 @@ recommendation**).
 1. **Status moves to writing.** Each member posts a short update by a fixed time before the meeting.
    The meeting opens with questions on the updates, not their recital.
 2. **Decision items arrive framed.** Each item names the question, the options, the recommendation,
-   who decides, and by when. [Chapter 13](../03-high-performing-teams/13-decision-making-in-teams.md)
-   owns decision methods and decision rights; this meeting is where cross-team decisions that have a
-   decider but no forum get made.
-3. **The pre-read carries unshared information.** Groups discussing a decision tend to dwell on what
-   everyone already knows; a meta-analysis of 65 hidden-profile studies found that groups mentioned
-   shared information far more than unique information, and were much less likely to reach the
-   correct answer when unique information had to be pooled in discussion
+   who decides, and by when. Decision methods and decision rights are in
+   [Chapter 13](../03-high-performing-teams/13-decision-making-in-teams.md). This meeting is where
+   cross-team decisions that have a decider but no forum get made.
+3. **The pre-read carries unshared information.** Groups discussing a decision dwell on what everyone
+   already knows. A [meta-analysis](../../glossary.md#meta-analysis) (a study that pools many studies)
+   of 65 hidden-profile experiments found that groups mentioned shared information far more than
+   unique information. They were much less likely to reach the correct answer when unique facts had
+   to be pooled in discussion
    ([Lu, Yuan, and McLeod, 2012](../../references/bibliography.md#lu2012hiddenprofiles); the effect
    was first described by [Stasser and Titus, 1985](../../references/bibliography.md#stasser1985pooling)).
    A written pre-read that states each team's specific facts puts them on the table before the
@@ -185,7 +187,7 @@ recommendation**).
    to their team after it.
 5. **It ends with commitments.** The last five minutes restate each decision, its owner, and what
    each member will tell their team, so that the decision cascades the same way from every manager.
-   Decisions go into the decision log that Chapter 39 describes.
+   Decisions go into the [decision log](../../glossary.md#decision-log) that Chapter 39 describes.
 
 ### Auditing for redundancy and missing loops
 
@@ -198,58 +200,52 @@ columns is redundancy; a row with no "resolved" mark is a missing loop.
 
 ## Engineering Organization Example
 
-The figures in this section are **illustrative**, invented for Northstar (fictional) and recorded as
-additions to the canon. In quarter 1, the director replaced the six teams' separate weekly status
-meetings with the weekly operational review (canon, from the 90-day quality plan). By week 20, midway
-through quarter 2, the calendar had grown again. The director reconstructed it from weeks 14 to 19.
+!!! info "Northstar so far"
+    Week 20 of the director's first year, midway through quarter 2. A first quarter of ownership,
+    severity, and release changes cut Sev1 and Sev2 incidents from 30 to 21. One renewal commitment
+    (the accounting integration) went live in week 19; the other (bulk ordering) is due in week 26.
+    See the [timeline](../../case-studies/northstar/timeline.md).
 
-Assumptions: a month counts as four weeks; a quarter as 13 weeks; one-on-ones with the six managers
-are weekly for 45 minutes, with the three staff engineers weekly for 30, and with Victor Lindqvist
-weekly for 30.
-
-| Forum | Cadence and length | Attendees | Director hours per week, from week 16 |
-|---|---|---|---|
-| Weekly operational review | Booked 30 minutes; averaged 75 | 16: director, managers, staff engineers, six on-call leads | 1.25 |
-| Managers' meeting (inherited) | Weekly, 60 | 7 | 1.0 |
-| Renewal check-in | Weekly, 45 | 6: director, Priya Raman, Elena Sokolova, Amara Okafor, two product managers | 0.75 |
-| Product and engineering sync | Weekly, 60 | 5: director, Amara Okafor, three product managers | 1.0 |
-| Billing and Orders sync | Weekly, 30 (from week 14) | 3 | 0.5 |
-| Release working group | Weekly, 45 | 8 | 0.75 |
-| Staff group | Every two weeks, 60 | 4 | 0.5 |
-| One-on-ones | Weekly | Managers, staff engineers, CTO | 6.5 |
-| Skip-level conversations | Four a week, 30 each, from week 16 | | 2.0 |
-| Monthly quality reviews | Six of 45 minutes | Director, each manager, staff engineers | 1.125 |
-| Monthly delivery review | 90 | 13 | 0.375 |
-| Engineering all-hands | Monthly, 60 | Everyone | 0.25 |
-| Quarterly reset | Half a day (4 hours) | Director, managers, CTO, CPO | 0.31 |
-| **Total recurring** | | | **16.3** |
-
-The one-on-one line is 4.5 hours for managers (6 × 0.75), 1.5 for staff engineers (3 × 0.5), and 0.5
-for the CTO. Skip-levels started in week 16, so over weeks 14 to 19 they averaged 1.33 hours (4 of 6
-weeks) and the recurring total averaged 15.6; the comparison with quarter 3 uses the rate from week
-16 (none in weeks 1 to 15). With 9.5
-hours a week of unscheduled meetings and incident reviews, about 25 hours of a 47-hour week were in
-meetings.
-
-Hours were not the main finding. The topic-by-forum matrix for weeks 14 to 19 was:
+The figures in this section are **illustrative** (Northstar is fictional). In quarter 1 the director
+replaced the six teams' separate weekly status meetings with one weekly
+[operational review](../../glossary.md#operational-review-and-operating-review) on incidents,
+follow-ups, and error budgets. By week 20 the calendar had grown again. The director reconstructed
+weeks 14 to 19 and built the topic-by-forum matrix first, because where topics went mattered more than
+the hours.
 
 | Topic | Forums where it appeared | Where it was resolved |
 |---|---|---|
 | Renewal status (accounting integration, bulk ordering) | Managers' meeting, renewal check-in, product sync, operational review, two one-on-ones | Renewal check-in |
 | Incident follow-ups due | Operational review, managers' meeting, release working group, quality reviews | Operational review |
 | Platform requests and environment waits | Managers' meeting, product sync, delivery review | Nowhere |
-| Cross-team decisions (ADR-0001, the core/permissions owner) | Managers' meeting, staff group, Billing and Orders sync | Nowhere |
-| Technology risk register (TR-01 to TR-09) | None | Nowhere |
+| Cross-team decisions: ADR-0001 and the core/permissions owner | Managers' meeting, staff group, Billing and Orders sync | Nowhere |
+| The technology risk register (nine entries, TR-01 to TR-09) | None | Nowhere |
 | The calibrated promotion cycle due at the start of quarter 3 | One-on-ones only | Nowhere |
 
-In the six managers' meetings, the director's notes record 38 agenda items and 5 decisions, two of
-which were reopened in the product sync. The round of status took about 42 of the 60 minutes. The
-operational review had overrun its booking in every week since items were added to it (the severity
-audit in week 7, the error budgets in quarter 2), and its 16 attendees spent about 20 person-hours a
-week in it (1.25 × 16), most of them on-call leads, who are engineers.
+ADR-0001 is Northstar's first [architecture decision record](../../glossary.md#architecture-decision-record-adr):
+how integrations should read posted ledger data. core/permissions is a shared tier 1 module whose
+owning team was never chosen. Both decisions are still open. The point is that no forum had the job
+of deciding them, so each appearance ended without a decider.
 
-The two cross-team decisions stay open (the canon leaves both open); the point is that no forum had
-the job of deciding them, so each appearance ended without a decider.
+The forums that did meet were mostly informing. In the six managers' meetings, the director's notes
+record 38 agenda items and 5 decisions, two of which were reopened in the product sync. The round of
+status took about 42 of the 60 minutes. The operational review had overrun its booking every week
+since items were added to it (the severity audit in week 7, the error budgets in quarter 2). Its 16
+attendees spent about 20 person-hours a week in it, most of them on-call leads, who are engineers.
+
+The calendar itself, at the rate from week 16, when skip-levels started:
+
+| Group | What it contains | Director hours a week |
+|---|---|---|
+| Weekly operational review | Booked 30 minutes, averaging 75; 16 attendees: director, six managers, three staff engineers, six on-call leads | 1.25 |
+| Other weekly forums | Managers' meeting, 60 minutes, 7 people; renewal check-in, 45 minutes, with Priya Raman (Orders manager), Elena Sokolova (Payments and Integrations manager), Amara Okafor (CPO), and two product managers; product and engineering sync with Amara and three product managers, 60; Billing and Orders sync, 30, from week 14; release working group, 45; staff group, 60 every two weeks | 4.5 |
+| One-on-ones and [skip-levels](../../glossary.md#skip-level) | Six managers at 45 minutes each; the three staff engineers and Victor Lindqvist (CTO) at 30 each; four 30-minute skip-levels a week from week 16 | 8.5 |
+| Monthly forums | Six team quality reviews of 45 minutes; a 90-minute delivery review (13 people); a 60-minute all-hands | 1.75 |
+| Quarterly reset | Half a day: director, managers, CTO, CPO | 0.3 |
+| **Total recurring** | | **16.3** |
+
+A month counts as four weeks and a quarter as 13. With about 9.5 hours a week of unscheduled meetings
+and incident reviews on top, about 25 hours of a 47-hour week were in meetings.
 
 ## Decision Framework
 
@@ -325,8 +321,8 @@ flowchart TD
 It is a reinforcing loop. Countermeasure: a rule that a new recurring forum names the one it replaces
 or the agenda it joins.
 
-**Corridor decisions** (Chapter 39 names the failure mode). Decisions are made in one-on-ones or hallways and announced, or relitigated, in
-the leadership meeting. Signal: decisions reopened in a second forum. Countermeasure: decisions count
+**Corridor decisions** (also treated in Chapter 39). Decisions are made in one-on-ones or hallways
+and announced, or relitigated, in the leadership meeting. Signal: decisions reopened in a second forum. Countermeasure: decisions count
 only when recorded in the log, with the decider named.
 
 **The preparation cascade.** A senior forum asks for data that each layer prepares in its own
@@ -349,11 +345,15 @@ them. The director designs the first and the routing, and leaves each team's rhy
 with one constraint: team forums produce the inputs the director's forums consume, in a common format,
 so that nobody prepares the same facts twice.
 
-A workable default for a director with six to ten reports (**this book's recommendation**): a weekly
-operational review of 30 to 45 minutes; a weekly leadership team meeting of 60 to 90 minutes with a
-written pre-read; monthly reviews of each team's system (Chapter 27) and one monthly business review;
-a quarterly reset and a quarterly talent review; one-on-ones on the cadence Chapter 5 recommends;
-and a protected block of meeting-free time for managers on the days most engineers are in the office.
+A workable default for a director with six to ten reports (**this book's recommendation**):
+
+- weekly: an operational review of 30 to 45 minutes and a leadership team meeting of 60 to 90 minutes
+  with a written pre-read;
+- monthly: a review of each team's system (Chapter 27) and one business review;
+- quarterly: a reset and a talent review;
+- one-on-ones on the cadence Chapter 5 recommends;
+- a protected block of meeting-free time for managers on the days most engineers are in the office.
+
 About 12 to 16 recurring hours a week leaves the director room for unplanned work. In hybrid and
 multi-site organizations, every forum works for remote attendees by default.
 
@@ -394,38 +394,35 @@ teaches every director below to do the same.
 
 ## Case Study
 
-This case is **fictional**. It is set in quarter 2 and at the start of quarter 3 at Northstar, after
-the events on [the first quarter](../../case-studies/northstar/first-quarter.md) page; the facts it
-adds are recorded as additions to the canon. The question at the end is a decision the reader faces.
+This case is **fictional**. It is set in quarter 2 and at the start of quarter 3 at Northstar,
+continuing the example above (the full record is on
+[the director's first year](../../case-studies/northstar/first-quarter.md) page). The question at the
+end is a decision the reader faces.
 
 In week 22, the director drafted a redesign of the operating system for quarter 3 (weeks 27 to 39),
 for the managers to review in week 24.
 
 | Forum, quarter 2 | Proposal for quarter 3 | Director hours per week |
 |---|---|---|
-| Operational review, 75 minutes, 16 people | Hard 45 minutes; fixed agenda (incidents, error budgets, follow-ups due, severity audit); status removed; 14 people, with Ines Carvalho and Li Na Zhou optional | 0.75 |
+| Operational review, 75 minutes, 16 people | Hard 45 minutes; fixed agenda (incidents, error budgets, follow-ups due, severity audit); status removed; 14 people, with staff engineers Ines Carvalho and Li Na Zhou optional | 0.75 |
 | Managers' meeting and weekly product sync | Merged into a weekly leadership team meeting, 75 minutes: director, six managers, three staff engineers, Amara Okafor or a product manager she names; written pre-read by the previous working day; open-decisions list | 1.25 |
-| Product sync remainder | Director and Amara Okafor every two weeks, 45 minutes, on roadmap trades | 0.375 |
+| Product sync remainder | Director and Amara Okafor every two weeks, 45 minutes, on roadmap trades | about 0.4 |
 | Renewal check-in | Ends at week 26, when bulk ordering is due | 0 |
-| Billing and Orders sync | Monthly, 30 minutes, reviewed at week 39 | 0.125 |
-| Release working group | Director stops attending; Kwame Mensah reports exceptions in the operational review | 0 |
+| Billing and Orders sync | Monthly, 30 minutes, reviewed at week 39 | about 0.1 |
+| Release working group | Director stops attending; Kwame Mensah, the staff engineer who leads it, reports exceptions in the operational review | 0 |
 | Monthly delivery review | Becomes a 120-minute monthly business review: delivery and flow, forecast calibration, debt spending, the technology risk register | 0.5 |
-| (none) | Quarterly talent review, 3 hours, first in week 27 alongside the calibrated promotion cycle | 0.23 |
-| Quarterly reset | Adds 30 minutes auditing the operating system | 0.35 |
-| Unchanged | One-on-ones 6.5, skip-levels 2.0, staff group 0.5, quality reviews 1.125, all-hands 0.25 | 10.375 |
+| (none) | Quarterly talent review, 3 hours, first in week 27 alongside the calibrated promotion cycle | about 0.25 |
+| Quarterly reset | Adds 30 minutes auditing the operating system | about 0.35 |
+| Unchanged | One-on-ones 6.5, skip-levels 2.0, staff group 0.5, quality reviews about 1.1, all-hands 0.25 | about 10.4 |
 | **Total recurring** | | **14.0** |
 
 The director's recurring load falls from 16.3 to about 14.0 hours a week. The larger saving is in the
-operational review, from about 20 to 10.5 person-hours a week (0.75 × 14), mostly engineers' time.
+operational review: from about 20 to about 10.5 person-hours a week, mostly engineers' time.
 
-The managers' own load does not fall. A typical manager attended about 4.1 recurring hours of
-leadership forums a week in quarter 2 (operational review 1.25, managers' meeting 1.0, one-on-one
-0.75, their quality review 0.19, delivery review 0.375, all-hands 0.25, reset 0.31). Under the
-proposal it is about 4.6 (0.75, 1.25, 0.75, 0.19, 0.5, 0.25, 0.35, the talent review 0.23, and 0.33
-hours writing the pre-read). Priya Raman falls from about 5.4 to 4.7, because the renewal check-in
-ends and the Billing and Orders sync becomes monthly; Marcus Oyelaran rises from about 4.6 to 4.7. The
-redesign moves managers' hours from listening to status toward deciding and writing; it does not
-give hours back.
+The managers' own load does not fall. A typical manager's forum hours rise slightly, from about 4.1
+to 4.6 a week, including about 20 minutes writing the pre-read. The redesign changes what managers
+spend that time on, from listening to status toward deciding and writing; it does not give hours
+back.
 
 The proposal gives every loop in the matrix one home: renewal status in the pre-read, cross-team
 decisions in the leadership meeting, platform requests and the risk register in the business review,
@@ -434,9 +431,9 @@ owner; it only gives them a forum and a decider's slot. Victor Lindqvist's recur
 one-on-one and the quarterly reset.
 
 Three objections arrived before week 24. Elena Sokolova argued that losing the renewal check-in while
-the bulk-ordering date is still at risk would be premature if the feature slips. Tom Becker asked why
-Platform Operations' requests should wait for a monthly forum. Daniel Cho asked whether Bogotá
-engineers would be served by a leadership meeting held in a Minneapolis room. What the managers
+the bulk-ordering date is still at risk would be premature if the feature slips. Tom Becker (Platform Operations
+manager) asked why his team's requests should wait for a monthly forum. Daniel Cho (Customer
+Experience manager, whose mobile engineers are in Bogotá) asked whether Bogotá engineers would be served by a leadership meeting held in a Minneapolis room. What the managers
 decided in week 24, and how the system performed in quarter 3, is left open for the exercises.
 
 ## Exercises
@@ -456,9 +453,9 @@ and how fast you can act: the error budget for order submission; a request to mo
 teams; the share of capacity spent on technical debt entries; calibrating forecast accuracy across
 teams; a Sev1 follow-up due next Tuesday; deciding which team owns a disputed shared module.
 
-**F3.** Recompute the director's quarter 2 recurring hours at Northstar (at the rate from week 16) under a different assumption:
-the operational review has been brought back to its 30-minute booking, the staff group meets weekly,
-and the manager one-on-ones drop to 30 minutes every week. State each changed line, the new total,
+**F3.** Recompute the director's quarter 2 recurring hours at Northstar (the calendar table, at the
+rate from week 16) under three changes. The operational review is brought back to its 30-minute
+booking, the staff group meets weekly, and the manager one-on-ones drop to 30 minutes every week. State each changed line, the new total,
 and what the change would cost in signal.
 
 ### Applied Leadership
@@ -481,7 +478,7 @@ and say how you would know in six weeks whether it worked.
 ### Executive Decision-Making
 
 **X1.** As CTO, Victor Lindqvist sees the director's redesign and proposes a monthly engineering
-business review with himself, the director, Amara Okafor, and Rajiv Menon, plus a weekly written note
+business review with himself, the director, Amara Okafor, and Rajiv Menon (CFO), plus a weekly written note
 from the director. Assess what this adds to the director's and managers' preparation load, which
 existing forums it should replace or feed, and how you would prevent a preparation cascade. Decide
 what you would recommend he ask for.
@@ -534,7 +531,7 @@ using could mislead you.
 - [Mroz et al., 2018](../../references/bibliography.md#mroz2018meetings). A short review of meeting
   science.
 - [Perlow, Hadley, and Eun, 2017](../../references/bibliography.md#perlow2017stop). "Stop the Meeting
-  Madness": the growth of executive meeting time. Read at summary level only.
+  Madness": the growth of executive meeting time.
 - [Mankins, 2014](../../references/bibliography.md#mankins2014weekly). The hidden cost of one weekly
   executive meeting; read for the preparation cascade.
 - [Lu, Yuan, and McLeod, 2012](../../references/bibliography.md#lu2012hiddenprofiles) and

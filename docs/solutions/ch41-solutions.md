@@ -22,7 +22,7 @@ mainly status; 9 of 15 engineers had no career conversation." Care is real (45 p
 people); the evidence says the channel carries status.
 
 **"Farah is too technical."** Rewrite: "45 percent of her time is technical as data architect (baseline);
-skip-levels say warehouse design decisions wait for her." This one needs a judgment about the role, not
+technical direction lives with her." The case rates it "Expectation not set". This one needs a judgment about the role, not
 the person: nobody told her which role comes first, so it is an unset expectation.
 
 A strong answer notices that every rewrite names a source and date, and that the weak answer simply
@@ -73,7 +73,7 @@ director says so and says when it will be decided. The weak answer runs one mixe
 
 ## A1 — Rating outcomes when the integration is late
 
-The canon result is on time (week 19, Chapter 39); this solution works the counterfactual and then compares.
+The recorded result is on time (week 19, Chapter 39); this solution works the counterfactual and then compares.
 
 **Elena.** The rubric rates outcomes in context and asks what the manager did about what she controls.
 On the supposition, the slip came from the ledger export, which Billing provided. Elena's controllable

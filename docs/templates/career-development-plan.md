@@ -1,30 +1,28 @@
 # Career development plan
 
-**Used in:** Chapter 8 (career development, promotion, and compensation), Chapter 5 (growth and
-sponsorship in one-on-ones), Chapter 10 (retention, where a missing career conversation shows up in
-exit data), Chapter 4 (choosing between the management and individual-contributor tracks), Chapter 41
+**Used in:** [Chapter 8](../parts/02-people-management/08-career-development-promotion-and-compensation.md)
+(career development, promotion, and compensation),
+[Chapter 5](../parts/02-people-management/05-one-on-ones-coaching-and-mentorship.md) (growth and
+sponsorship in one-on-ones), [Chapter 10](../parts/02-people-management/10-motivation-retention-and-senior-engineers.md)
+(retention, where a missing career conversation shows up in exit data),
+[Chapter 4](../parts/01-foundations/04-the-leadership-ladder.md) (choosing between the management and
+individual-contributor tracks), [Chapter 41](../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md)
 (development goals for managers and the leadership bench).
 **Owner:** the engineer owns the goal and the evidence; the manager owns the commitments to create the
 opportunities the evidence needs.
 **Cadence:** written after every promotion decision ("promoted" or "not yet") and at least twice a year
 otherwise; progress checked monthly in the one-on-one; a mid-point check halfway to the review date.
 
-A career development plan turns a ladder into a next step for one person. It names the target, the
+A career development plan turns a [career ladder](../glossary.md#career-ladder) into a next step for
+one person. It names the target, the
 ladder dimension where the gap is, the evidence that would close it, the situation in which that
 evidence can be produced, and who creates that situation. The last field is the one most plans omit.
 If the gap is cross-team influence and the person's role offers no cross-team work, the gap is partly
 the manager's, and the plan says so.
 
-Chapter 8 owns the ladder, calibration, the five parts of a usable "not yet", and pay
-([Chapter 8](../parts/02-people-management/08-career-development-promotion-and-compensation.md)). This
-template is the written form of those five parts, extended to people who were not nominated. Pairing
-care for the person with a direct statement of the gap is the idea Kim Scott's *Radical Candor* is
-known for ([Scott, 2017](../references/bibliography.md#scott2017radical)), **expert opinion**. The
-distinction between advice and sponsorship, in which a senior person uses their influence on someone's
-behalf, comes from survey research on high-potential graduates, which found that a person can be well
-mentored and still not sponsored ([Ibarra, Carter, and Silva, 2010](../references/bibliography.md#ibarra2010promotions));
-that is **industry research** about MBA graduates, not engineers. The fields are **this book's
-recommendation**.
+It is also the written form of a usable ["not yet"](../glossary.md#not-yet), the promotion decision
+that says what is missing and how to close it. Sponsorship, a senior person using their influence on
+someone's behalf, is different from advice; a person can be well mentored and still not sponsored.
 
 A development plan is not a performance plan. If the question is whether someone meets their current
 level, use Chapter 9's process, not this one
@@ -108,11 +106,14 @@ review_log:
 
 ## Example: Northstar, Yusuf Demir after a "not yet" (quarter 3)
 
-**Fictional.** The facts come from the [baseline data](../case-studies/northstar/baseline-data.md),
-the [first quarter](../case-studies/northstar/first-quarter.md) page, and Chapter 8's case study, where
-the "not yet" and its five parts are given. The layout, the dependency and fallback analysis, and the
-wording of the fields are illustrative and written for this template. The check results are not
-recorded in the canon.
+!!! info "Northstar so far"
+    Week 27 of the Engineering Director's first year at Northstar Technologies, a fictional company.
+    Sev1 and Sev2 incidents fell from 30 a quarter to 17 in quarter 2, and the first calibrated promotion
+    cycle has just run on a ladder rewritten in quarter 2. See the [timeline](../case-studies/northstar/timeline.md)
+    and the [cast](../case-studies/northstar/cast.md).
+
+The layout, the dependency and fallback analysis, and the wording of the fields are illustrative. The
+check results are not recorded.
 
 **Context.** At the start of quarter 3, in Northstar's first calibrated cycle, managers nominated nine
 engineers for Senior; five were promoted and four received "not yet". Yusuf Demir, a data engineer in
@@ -130,21 +131,17 @@ Haddad, his manager, gave the decision with all five parts.
 | Evidence that would close it | Lead the design of the ledger-export contract Li Na Zhou proposed, through review by Billing, and bring one Billing engineer up to speed on it |
 | Opportunity and who creates it | Farah Haddad assigns him the design |
 | Mode of help and helper | Sponsorship: Farah asks Li Na Zhou, staff engineer for data and integration, to sponsor the design |
-| Dependencies and fallback | The contract is one of three options in ADR-0001 (read the tables, a versioned export contract, ledger posting events), open since week 14 with nobody's decision rights mapped. The design and its Billing review are evidence of cross-team influence whichever option is chosen, but if the decision goes elsewhere the plan needs a second cross-team design to lead. Fallback: name it at the mid-point check |
+| Dependencies and fallback | The contract is one of three options in ADR-0001, the open architecture decision on how integrations read ledger data (read the tables, a versioned export contract, ledger posting events), open since week 14 with nobody's decision rights mapped. The design and its Billing review are evidence of cross-team influence whichever option is chosen, but if the decision goes elsewhere the plan needs a second cross-team design to lead. Fallback: name it at the mid-point check |
 | Manager's commitments | Assign the design; ask Li Na Zhou to sponsor it |
 | Mid-point check, review date | Check at three months (about week 40); review at the next calibrated cycle |
 | Not promised | Completing the design does not decide the level; calibration does |
-| Review log | Not recorded in the canon |
+| Review log | Not recorded |
 
 What to notice: the gap is tied to one ladder dimension, the evidence is something a Billing engineer
-could confirm, and the commitment belongs to the manager, not the engineer. Chapter 8 records that
-Yusuf said it was the first time anyone had told him what Senior meant, which is the plan's first
-effect. The dependency row is the one a reader would most likely skip. The evidence sits inside an
-architecture decision nobody has made (in week 47, Victor Lindqvist's strategy draft still only
-proposes deciding ADR-0001 by week 60), so a plan that names a fallback in advance protects his next
-cycle from someone else's open decision. Scope availability matters too: Data and Analytics
-received 4 of Northstar's 86 cross-team dependency links at baseline, so cross-team influence there has
-to be created; it will not arrive by itself.
+could confirm, and the commitment belongs to the manager, not the engineer. Yusuf said it was the first
+time anyone had told him what Senior meant, which is the plan's first effect. The dependency row matters
+most: the evidence sits inside an architecture decision nobody has made, so naming a fallback in advance
+protects his next cycle from someone else's open decision.
 
 ## Common mistakes
 
@@ -170,3 +167,18 @@ to be created; it will not arrive by itself.
 4. Does the engineer describe the target in the same words as the plan?
 5. If this person resigned next month, would the exit interview say they had a career conversation in
    the last six months?
+
+## Evidence and references
+
+The ladder, calibration, the five parts of a usable "not yet", and pay are
+[Chapter 8's](../parts/02-people-management/08-career-development-promotion-and-compensation.md)
+subject; this template is the written form of those five parts, extended to people who were not
+nominated.
+
+- [Scott, 2017](../references/bibliography.md#scott2017radical): *Radical Candor*, known for pairing
+  care for the person with a direct statement of the gap (**expert opinion**).
+- [Ibarra, Carter, and Silva, 2010](../references/bibliography.md#ibarra2010promotions): survey research
+  on high-potential graduates found that a person can be well mentored and still not sponsored
+  (**industry research** about MBA graduates, not engineers).
+
+The fields are **this book's recommendation**.

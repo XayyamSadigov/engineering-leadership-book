@@ -69,7 +69,7 @@ mid-sprint changes come from: incidents (Billing had 8 Sev1 and Sev2 incidents a
 unplanned work), Core train regressions, or product changing its mind?
 
 **Data to bring.** Six of six sprints changed mid-sprint, one Sprint Goal met in six, 41 percent
-unplanned work, and the canon fact that Core now releases weekly, so the two-week train that set the
+unplanned work, and the fact that Core now releases weekly, so the two-week train that set the
 sprint length no longer exists.
 
 **Options.** (1) Keep two-week sprints but plan only about 55 percent of capacity, with an interrupt

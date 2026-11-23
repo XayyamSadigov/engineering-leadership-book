@@ -2,13 +2,15 @@
 
 A director changes the organization mostly through other people: six managers, three staff engineers,
 and peers who own the product roadmap and the budget. This chapter is about planning such a change so
-that it survives contact with those people, about the failure patterns directors fall into (and how to
-see them in yourself before your managers do), and about recovering credibility when an initiative
-fails anyway. Chapter 36 owns the mechanics of reorganization, Chapter 27 owns the quality
-transformation, and Chapter 57 will cover resistance at executive level; this chapter covers the
-director's general method. The running example is a director-led initiative at Northstar Technologies,
+that it survives contact with those people. It covers the failure patterns directors fall into, and
+how to see them in yourself before your managers do. And it covers recovering credibility when an
+initiative fails anyway. The running example is a director-led initiative at Northstar Technologies,
 the fictional company in the [case study](../../case-studies/northstar/index.md), that partly fails in
 quarter 3.
+
+!!! info "Related chapters"
+    The mechanics of reorganization are in Chapter 36, the quality transformation in Chapter 27, and
+    resistance at executive level in Chapter 57. This chapter covers the director's general method.
 
 ## Why This Matters
 
@@ -29,7 +31,7 @@ failure cannot start the next.
 
 After this chapter you will be able to:
 
-- Plan a change with a written diagnosis, a coalition of the people who must carry it, early evidence
+- Plan a change with a written diagnosis, the agreement of the people who must carry it, early evidence
   from a small pilot, and reinforcement in the organization's routines.
 - Recognize the common director failure patterns in your own record, using evidence rather than
   self-image.
@@ -45,13 +47,14 @@ After this chapter you will be able to:
 > initiative is recovered by how it is ended, not by how it is defended.
 
 Two consequences follow. Every change needs a stated way of failing: a measure, a date, and a
-threshold at which you stop; a change you cannot stop becomes a commitment you defend with your
-reputation. And the people who carry the change are its co-authors, not its audience: announcing it
-makes managers messengers, designing it with them makes them owners who report problems early.
+threshold at which you stop. A change you cannot stop becomes a commitment you defend with your
+reputation. And the people who carry the change, here called the carriers, are its co-authors, not its
+audience. Announcing it makes managers messengers; designing it with them makes them owners who report
+problems early.
 
 ```mermaid
 flowchart TD
-    D["Written diagnosis"] --> C["Coalition of carriers"]
+    D["Written diagnosis"] --> C["Designed with carriers"]
     C --> P["Pilot with one team"]
     P --> E{"Evidence meets bar?"}
     E -->|yes| S["Scale in steps"]
@@ -71,7 +74,7 @@ at the boxes it skipped.
 
 Much of the advice on organizational change comes from practitioners. The most cited is John Kotter's
 1995 article, which draws on his observation of more than 100 companies attempting large
-transformations ([Kotter, 1995](../../references/bibliography.md#kotter1995leading)). It is known for a
+transformations ([Kotter, 1995](../../references/bibliography.md#kotter1995leading)). It names a
 sequence of errors that sink such efforts: too little urgency, no powerful guiding coalition, no
 planned short-term wins, declaring victory too soon, and failing to anchor the change in the culture.
 That is **expert opinion** from long observation, not a study with a stated method; treat it as a
@@ -79,24 +82,23 @@ checklist of what to think about, not as a law with a known effect.
 
 The statistic that often accompanies such advice, that 70 percent of change programs fail, does not
 survive inspection. Mark Hughes reviewed five published sources of the figure and found no valid and
-reliable empirical evidence behind any of them, and argued that a single failure rate is hard even to
+reliable empirical evidence behind any of them. He argued that a single failure rate is hard even to
 define, since change is ambiguous, context-dependent, perceived differently, and measured at different
 times ([Hughes, 2011](../../references/bibliography.md#hughes2011seventy)). That is a **research
-finding** about the evidence, read at abstract level. Do not quote the figure, and define in advance
+finding** about the evidence, as the abstract reports it. Do not quote the figure, and define in advance
 what "failed" will mean for your own change.
 
-What the research does support is narrower. A review of 79 quantitative studies of how people react
-to organizational change sorts the causes of those reactions into conditions before the change (who
-the recipients are and the context they work in) and features of the change itself: the process, the
-perceived benefit or harm, and the content
-([Oreg, Vakola, and Armenakis, 2011](../../references/bibliography.md#oreg2011recipients)). Only the
-abstract was read, so this chapter takes one point from it: how a change is run is a lever separate
-from what the change is. A good idea run badly gets a bad reaction. Chapter 36 applies the same review
+What the research does support is narrower: how a change is run is a lever separate from what the
+change is. A review of 79 quantitative studies of how people react to organizational change sorts the
+causes into conditions before the change (who the recipients are and their context) and features of
+the change itself: the process, the perceived benefit or harm, and the content
+([Oreg, Vakola, and Armenakis, 2011](../../references/bibliography.md#oreg2011recipients)). This
+chapter takes only that one point from its abstract. A good idea run badly gets a bad reaction. Chapter 36 applies the same review
 to reorganizations.
 
 A book on digital transformation makes a related argument: the hard
 part of such change is people, culture, and organization, not the technology
-([Kane et al., 2019](../../references/bibliography.md#kane2019technology); credited for the idea only).
+([Kane et al., 2019](../../references/bibliography.md#kane2019technology); **expert opinion**).
 For a director, a new pipeline or planning format is the easy half; the managers' routines and
 incentives decide whether it lasts.
 
@@ -104,7 +106,7 @@ incentives decide whether it lasts.
 
 Richard Rumelt's account of strategy starts with a diagnosis: a judgment about what is actually
 going on and which part of the situation is critical, followed by a guiding policy and coherent
-actions ([Rumelt, 2011](../../references/bibliography.md#rumelt2011good); idea level). Most failed
+actions ([Rumelt, 2011](../../references/bibliography.md#rumelt2011good); **expert opinion**). Most failed
 director initiatives skip the first step. They begin with a solution the director has seen work
 elsewhere ("fix-it days", "design review for everything", "a single sprint cadence") and back-fill a
 reason.
@@ -122,33 +124,34 @@ Directors go wrong most often on the second question. Capacity is the easiest me
 in, because the director controls it, but many quality problems are ownership problems: the work needs
 one person to hold it for weeks, which free hours do not supply.
 
-### The coalition: who has to carry it
+### The carriers: who has to carry it
 
-Kotter's guiding coalition is, at director level, concrete: the managers whose teams will do the work,
-the staff engineer whose domain it touches, and the peer whose plans it changes (usually the product
+Kotter calls the group that drives a change the "guiding coalition". At director level the group is
+concrete, and this chapter calls them the carriers: the managers whose teams will do the work, the
+staff engineer whose domain it touches, and the peer whose plans it changes (usually the product
 leader). Chapter 42 covers influence with peers; this section is about the managers.
 
-A coalition is not consent obtained in a meeting. It is the managers having changed the design. The
+Carrying a change is not consent obtained in a meeting. It is the managers having changed the design. The
 test: can you name one thing in the plan that is there because a manager objected? If not, you have an
 audience, and an audience reports compliance and lets the workarounds speak.
 
 Patrick Lencioni's argument that organizational health rests on a cohesive leadership team that
 creates clarity, communicates it repeatedly, and reinforces it through the organization's human
-systems ([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage); idea level) points
-the same way. For a director that team meets in the leadership team meeting (Chapter 37), and a change
+systems ([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage); **expert opinion**)
+points the same way. For a director that team meets in the leadership team meeting (Chapter 37), and a change
 that was not decided there will be explained differently by six managers to six teams.
 
 ### Early evidence: pilots and small wins
 
 Karl Weick argued that large problems become tractable when recast as a series of small, concrete,
 completed outcomes, each of which changes what seems possible next
-([Weick, 1984](../../references/bibliography.md#weick1984small); idea level). Michael Watkins makes the
-leader's version of the point: early wins build the credibility a new leader needs for larger changes
-([Watkins, 2003](../../references/bibliography.md#watkins2003first); idea level).
+([Weick, 1984](../../references/bibliography.md#weick1984small)). Michael Watkins makes the leader's
+version of the point: early wins build the credibility a new leader needs for larger changes
+([Watkins, 2003](../../references/bibliography.md#watkins2003first)). Both are **expert opinion**.
 
 The practical form is a pilot: one team, a defined period, a measure chosen before the start, and a
 threshold for scaling, adjusting, or stopping. A pilot finds the collisions with real calendars
-(period close, release dates, on-call), costs one team's time instead of everyone's, and can be stopped
+(period close, finance's month-end books deadline; release dates; on-call), costs one team's time instead of everyone's, and can be stopped
 without a public reversal. Its measure should be an outcome the diagnosis predicts ("register entries
 closed"), not activity ("engineers who took part").
 
@@ -174,12 +177,14 @@ show several. The point is to look for them in your own record.
 | Level slip | Doing a manager's or staff engineer's job | Decisions you made that sat in someone else's scope |
 | Decision vacuum | Cross-team decisions with no named decider | Disputes that waited more than two weeks |
 | Promise inflation | Commitments made faster than they are kept | Your commitments list: kept, slipped, dropped silently |
-| Escalation | Defending a failing initiative because it is yours | Measures redefined after launch; exemptions granted quietly |
+| Escalating commitment | Defending a failing initiative because it is yours | Measures redefined after launch; exemptions granted quietly |
 | Signal isolation | Learning about problems from summaries only | Problems you heard about first from a peer or customer |
 
-Escalation deserves its own note. Barry Staw's work introduced escalation of commitment, the tendency
-to commit more to a failing course of action one chose oneself
-([Staw, 1976](../../references/bibliography.md#staw1976knee); idea level). A director's initiatives are
+Escalating commitment deserves its own note. The name is deliberate: elsewhere in this book, bare
+"escalation" means moving a decision upward to someone with authority (Chapter 39), which is healthy.
+This pattern is different. Barry Staw's work introduced the idea of escalation of commitment, the
+tendency to commit more to a failing course of action one chose oneself
+([Staw, 1976](../../references/bibliography.md#staw1976knee)). A director's initiatives are
 public and personal. The defense is a stopping rule set before launch, and someone else charged with
 saying when it is met.
 
@@ -194,7 +199,7 @@ flowchart TD
     S -->|yes| X["Stop and account"]
 ```
 
-The loop on the left is escalation: each miss raises the director's personal stake, the push makes
+The loop on the left is escalating commitment: each miss raises the director's personal stake, the push makes
 teams route around harder, and the next miss follows. A stopping rule written before launch is the
 exit.
 
@@ -203,8 +208,8 @@ exit.
 Credibility with managers is built from kept promises and spent by broken ones, and a failed
 initiative spends a lot of it at once. Research on trust repair offers one finding a director can use.
 In two experimental studies, trust was repaired better when the party apologized for a violation
-about competence, and denied culpability for a violation about integrity; and apology worked better
-when later evidence showed guilt, denial when it showed innocence
+about competence, and denied culpability for a violation about integrity. Apology also worked better
+when later evidence showed guilt, and denial when it showed innocence
 ([Kim et al., 2004](../../references/bibliography.md#kim2004removing)). The studies concern an alleged
 violation, not a manager's failed project, so the transfer is this book's inference.
 
@@ -230,10 +235,10 @@ under 9 managers lists the organization-wide changes in flight at the start of a
 | Career ladder rewrite | 12 | 1.0 each | Director and HR |
 | On-call compensation change | 6 | 0.5 each | HR |
 
-Assumptions: a 45-hour manager week about 85 percent committed to people, delivery, and technical
-work, leaving about 7 hours of slack. A manager touched by all five carries 1.0 + 1.5 + 1.0 + 1.0 +
-0.5 = 5.0 hours a week, 71 percent of the slack (5.0 / 7). A sixth change at 1.5 hours makes it 6.5
-hours, 93 percent, leaving almost nothing for an incident or a resignation.
+Assumption: a 45-hour manager week is about 85 percent committed to people, delivery, and technical
+work, leaving about 7 hours of slack. A manager touched by all five changes carries 5 hours a week of
+them, about 70 percent of that slack. A sixth change at 1.5 hours takes it past 90 percent, leaving
+almost nothing for an incident or a resignation.
 
 Each initiative looks small on the list, so the load is invisible until summed. Sum it per manager
 before adding a change, and ask the managers to rank the initiatives: one ranked last by most is badly
@@ -266,11 +271,11 @@ flowchart TD
 ```
 
 "Continue unchanged" is deliberately missing: if an honestly set measure was missed, something must
-change, and continuing unchanged is how escalation looks from the inside.
+change, and continuing unchanged is how escalating commitment looks from the inside.
 
 ## Trade-offs
 
-**Coalition versus speed.** Designing with managers takes weeks; announcing takes a meeting. The
+**Carriers versus speed.** Designing with managers takes weeks; announcing takes a meeting. The
 weeks are usually cheaper than a quarter of workarounds, but not always. A safety or security change
 with a deadline (Chapter 26's remediation service levels, for instance) may be imposed and explained
 afterwards. Reserve imposition for changes where the cost of delay is real and stated.
@@ -302,7 +307,8 @@ dissolves the change. Early sign: participation falls while no manager has raise
 **The activity measure.** Attendance or items started stand in for outcomes, and engineers satisfy
 them with the easiest work. Early sign: output skews toward items under a day.
 
-**The redefined target.** After a miss, success is redefined; escalation's commonest disguise. Early
+**The redefined target.** After a miss, success is redefined, the commonest disguise of escalating
+commitment. Early
 sign: the review deck's measures differ from the launch deck's.
 
 **The silent end.** The initiative is never formally ended, and engineers learn that director
@@ -337,7 +343,7 @@ initiative is failing, so the CTO needs stopping rules and independent signals t
 A CTO also judges directors by how they handle failure. A director who stops a failing initiative with
 a clear account shows judgment needed at the next level; a director with no failures is either taking
 no risks or not reporting them. The useful CTO questions after a failure are about the diagnosis and
-the stopping rule, not blame. Chapter 57 will cover executive-level resistance.
+the stopping rule, not blame. Executive-level resistance is in Chapter 57.
 
 ## Practical Playbook
 
@@ -360,19 +366,25 @@ the stopping rule, not blame. Chapter 57 will cover executive-level resistance.
 
 ## Case Study
 
-The Northstar quarter 3 events below are **illustrative** and fictional; the facts not already in the
-canon are recorded as proposed additions for this chapter. Quarter 3 starts in week 27.
+!!! info "Northstar so far"
+    Week 27, the start of quarter 3. Sev1 and Sev2 incidents fell from 30 at baseline to 21 in quarter
+    1 and 17 in quarter 2, and both renewal commitments were delivered by week 26. The quarter 3 plan
+    lowers prevention from 12 to 8 FTE. See the [timeline](../../case-studies/northstar/timeline.md).
 
-**The launch.** Chapter 27's projection lowers the prevention allocation from 12 FTE to 8 FTE in
-quarter 3. In week 27 the director, worried that debt and test-health work would stall, announced
-"Engineering Excellence Day" at the engineering all-hands: one Friday every four weeks (weeks 28, 32,
-and 36), all 80 engineers stop roadmap work and choose an item from their team's debt list, the
-flaky-test owner list, or the standing Core build warnings; no meetings; results posted on the Monday;
-on-call engineers exempt. The director had discussed it with Kwame Mensah. The six managers and Amara
-Okafor heard it at the all-hands. No success measure was stated.
+The Northstar quarter 3 events below are **illustrative** and fictional. Quarter 3 starts in week 27.
 
-Planned cost: 3 days × 80 engineers = 240 engineer-days, or 48 engineer-weeks, about 3.7 FTE over the
-13-week quarter (48 / 13), on top of the 8 FTE allocation.
+**The launch.** Chapter 27's projection lowers the prevention allocation (capacity reserved for
+work that prevents failures) from 12 [FTE](../../glossary.md#fte) to 8 FTE in quarter 3. In week 27 the
+director, worried that debt and test-health work would stall, announced "Engineering Excellence Day"
+at the engineering all-hands. One Friday every four weeks (weeks 28, 32, and 36), all 80 engineers
+would stop roadmap work and choose an item from their team's debt list, the flaky-test owner list, or
+the standing Core build warnings. There would be no meetings, results would be posted on the Monday,
+and on-call engineers were exempt. The director had discussed it with Kwame Mensah (staff engineer,
+reliability). The six managers and Amara Okafor (CPO) heard it at the all-hands. No success measure
+was stated.
+
+Planned cost: 240 engineer-days (3 days × 80 engineers), or 48 engineer-weeks, about 3.7 FTE over the
+13-week quarter, on top of the 8 FTE allocation.
 
 **What happened.**
 
@@ -383,8 +395,7 @@ Planned cost: 3 days × 80 engineers = 240 engineer-days, or 48 engineer-weeks, 
 | 3 | 36 | 23 | 20 | 10 |
 | Total | | 128 engineer-days | 118 | 71 |
 
-Check: 64 + 41 + 23 = 128 engineer-days, 25.6 engineer-weeks, about half the planned 48. Items: 62 + 36
-+ 20 = 118 started, 39 + 22 + 10 = 71 merged.
+The 128 engineer-days are about 25.6 engineer-weeks, half the planned 48.
 
 Of the 71 merged items, 52 took under a day (build warnings, documentation, small refactors), 9 were
 flaky-test fixes, and 10 added tests. No item touched an entry of the priced debt register from
@@ -394,55 +405,62 @@ by about three hours, with no wrong records; it was rated Sev3, and the weekly s
 Managers cited it in week 29.
 
 Day 2 fell on Billing's period-close support and Data and Analytics' month-end reporting. Marcus
-Oyelaran and Farah Haddad exempted their teams (15 + 11 = 26 engineers) two days before. Of the other
+Oyelaran (Billing manager) and Farah Haddad (Data and Analytics manager) exempted their teams, 26
+engineers, two days before. Of the other
 54, about 5 were on call and 8 finished sprint work at a product manager's request, leaving 41. By day
 3 there were no formal exemptions; product managers asked teams to protect sprint goals and managers
 did not push back. A three-question anonymous pulse in week 37 drew 52 responses: keep as is 11, let
 teams choose their own time 29, stop 12.
 
 **Diagnosis of the failure.** Against the loop: the diagnosis was capacity, but register entries
-needed owners for weeks, which a day every four weeks cannot supply. There was no coalition, so the
-managers' objections took the form of exemptions. There was no pilot, so two whole teams found the
+needed owners for weeks, which a day every four weeks cannot supply. The managers were not carriers, so
+their objections took the form of exemptions. There was no pilot, so two whole teams found the
 period-close collision. There was no measure, so engineers chose the easiest work. The initiative
 partly failed: 71 small improvements and 9 flaky-test fixes, and a lesson that a director's mandate
 could be exempted away.
 
-**The recovery.** In week 37 the director took a one-page note to the managers' weekly forum (the managers'
-meeting, or the leadership team meeting proposed to replace it) first,
+**The recovery.** In week 37 the director took a one-page note to the managers' weekly meeting first,
 then posted it to engineering. It stated what was intended, the numbers above, and four errors in the
 director's own name: a capacity diagnosis for what was mostly an ownership problem, a launch without
 the managers, a date chosen without checking period close, and no success measure at all. It ended the
 organization-wide day, allowed teams to schedule their own fix-it time inside their prevention
 allocation (the option 29 of 52 respondents chose), and made two commitments: the next
-organization-wide practice change would be agreed in that managers' weekly forum and piloted with one
+organization-wide practice change would be agreed in that weekly meeting and piloted with one
 team first, and one manager each quarter would review the director's commitments list. Whether
 register entries get dedicated owners in quarter 4 planning is left open.
 
 **The director's self-assessment.** The note prompted the director to look at quarters 1 and 2 against
-the failure patterns, using only the canon record in [the first quarter](../../case-studies/northstar/first-quarter.md).
+the failure patterns, using only Northstar's record in
+[the director's first year](../../case-studies/northstar/first-quarter.md).
 
 | Pattern | Evidence from quarters 1 and 2 | Reading |
 |---|---|---|
-| Initiative overload | The canon lists 19 standing decisions from quarter 1 and 20 open situations at the start of quarter 2; the QA transition (week 10) raised Priya Raman to 16 reports and Daniel Cho to 17 | Present. Many were necessary, but nobody summed the load per manager |
-| Promise inflation | The migration check promised after INC-427 was due in week 7, slipped, and landed in week 11; the week 9 Sev1 happened in the gap | Present once, with a visible cost |
-| Decision vacuum | ADR-0001 opened in week 14 with nobody's decision rights mapped; core/permissions has no owner at day 90, under a recorded exemption | At risk; both are open decisions |
+| Initiative overload | The record lists 19 standing decisions from quarter 1 and 20 open situations at the start of quarter 2; the QA transition (week 10) raised Priya Raman to 16 reports and Daniel Cho to 17 | Present. Many were necessary, but nobody summed the load per manager |
+| Promise inflation | The migration check promised after INC-427 (credit notes applied twice after a release) was due in week 7, slipped, and landed in week 11; the week 9 Sev1 happened in the gap | Present once, with a visible cost |
+| Decision vacuum | ADR-0001, the open [architecture decision record](../../glossary.md#architecture-decision-record-adr) on how integrations read ledger data, opened in week 14 with nobody's decision rights mapped; core/permissions has no owner at day 90, under a recorded exemption | At risk; both are open decisions |
 | Change by announcement | Quarter 3: Excellence Day | Present |
 | Level slip | The role definition excludes incident response and production code; in week 7 the director re-rated an incident and added a severity audit to the weekly review | Guarded. The re-rating was a signal source the director owns, not a team's job taken over |
 | Signal isolation | The severity audit and the day-90 measures are the director's own signals | Not seen |
-| Escalation | The director ended Excellence Day after one pulse rather than redefining its measure | Not seen this time |
+| Escalating commitment | The director ended Excellence Day after one pulse rather than redefining its measure | Not seen this time |
 
 The readings are the director's judgment, and the same person chose the evidence and the verdict; the
 manager's review of the commitments list is the check.
 
 ## Exercises
 
-Worked solutions are in [the chapter 43 solutions](../../solutions/ch43-solutions.md).
+Worked solutions are in [the chapter 43 solutions](../../solutions/ch43-solutions.md). Northstar data
+is on the [baseline page](../../case-studies/northstar/baseline-data.md) and
+[the first quarter](../../case-studies/northstar/first-quarter.md) page.
 
 ### Foundational
 
 **F1.** A director proposes a single two-week sprint cadence for all six Northstar teams, "so that
 planning and reporting are consistent". Payments and Integrations runs Kanban with WIP limits, Data and
-Analytics has no named method, and Platform Operations runs an interrupt rotation. Write the half-page
+Analytics has no named method, Platform Operations runs an interrupt rotation, and Orders and Billing
+already run two-week Scrum aligned to the release train. At baseline, 8 of the 10 missed roadmap
+items were cross-team; median lead time was 11 days for work items with no dependency and 41 with two
+or more; and one engineer spent about two days a month assembling delivery numbers by hand (baseline
+page, "Planning and delivery"). Write the half-page
 diagnosis the proposal lacks: the outcome with a number, a candidate mechanism, the evidence that would
 disprove it, and who already sees the problem. Then say whether the diagnosis supports the proposal.
 
@@ -458,7 +476,7 @@ evidence would settle it. Do not use adjectives about character.
 ### Applied Leadership
 
 **A1.** It is week 38. Re-plan the Excellence Day intent as a change that follows this chapter's loop:
-a diagnosis of why priced register entries are not moving, the coalition you would build and with whom,
+a diagnosis of why priced register entries are not moving, the carriers you would design it with,
 a pilot with a measure and thresholds, and how the change would be reinforced if the pilot succeeds.
 Keep within the 8 FTE prevention allocation.
 
@@ -473,7 +491,7 @@ changes, and what evidence would show that credibility is returning.
 
 ### Executive Decision-Making
 
-**X1.** Victor Lindqvist asks you for a short written account of Excellence Day for his staff meeting
+**X1.** Victor Lindqvist (CTO) asks you for a short written account of Excellence Day for his staff meeting
 with the other executives, where Amara Okafor has already called it "a lost week of roadmap". Write the
 account's structure and its key sentences. Decide what you concede, what you defend with numbers, and
 what you ask of Amara for the next change.
@@ -495,7 +513,7 @@ making directors afraid to report it.
 ## Key Takeaways
 
 - Write the diagnosis before the solution, with a mechanism and the evidence that would disprove it.
-- Treat managers as co-authors: a coalition exists only if a manager changed the design.
+- Treat managers as co-authors: they carry a change only if a manager changed the design.
 - Pilot with one team, with an outcome measure and stopping thresholds set before the start.
 - Sum the change load per manager before adding a change; managers' attention is the scarce resource.
 - Measure outcomes, not participation; activity measures attract the easiest work.

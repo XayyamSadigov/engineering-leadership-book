@@ -5,9 +5,9 @@ separates the three meanings of quality that leaders mix up (external, internal,
 quality) and turns each into a few measurable properties of a specific product. It compares four ways
 of owning quality (central QA, embedded quality engineers, team ownership, and platform-enabled
 ownership) and says when each fits. And it shows how to choose a few quality measures, with an
-honest account of how each misleads. The running
-example is Northstar Technologies, the fictional company in the
-[case study](../../case-studies/northstar/index.md). Chapter 27 builds on the choices made here.
+honest account of how each misleads. The running example is Northstar Technologies, the fictional
+company in the [case study](../../case-studies/northstar/index.md). Chapter 27 combines these choices
+into a full transformation program.
 
 ## Why This Matters
 
@@ -17,10 +17,13 @@ fewer incidents, fewer complaints, each a different property. The loudest view w
 At organization scale, the cost is ownership. If quality is "what QA checks", it belongs to the
 people who run the checks, and the teams that write the code learn about their defects late,
 second-hand, and in a batch. Northstar's managers describe quality as the job of the QA group and the
-release train, and 14 of last quarter's 30 Sev1 and Sev2 incidents were first reported by a customer.
-A definition that lives in a test plan cannot catch what the plan never described.
+release train. Yet 14 of last quarter's 30 Sev1 and Sev2 incidents were first reported by a customer.
+(Sev1 and Sev2 are the two highest [severity](../../glossary.md#severity-sev1-sev2-sev3) ratings. At
+Northstar, Sev1 means an order or payment path is down for any customer, or a customer can see a wrong
+financial record. Sev2 is a narrower or partial failure.) A definition that lives in a test plan cannot
+catch what the plan never described.
 
-At executive scale, the cost is credibility. A CTO who reports that quality is improving because bug
+At executive scale, the cost is credibility. A chief technology officer (CTO) who reports that quality is improving because bug
 counts fell, while customers report more outages, has used the wrong meaning of the word. Executives
 need a definition tied to what customers and contracts care about, and measures that cannot be
 improved by reclassification.
@@ -34,7 +37,8 @@ After this chapter you will be able to:
 - Compare the four ownership models (central QA, embedded quality engineers, team-owned quality, and
   platform-enabled quality) and choose a mix that fits your product's risks and your teams'
   capabilities.
-- Use an escaped-defect detection-point breakdown to decide who should own which kind of check.
+- Classify escaped defects by detection point and use the result to decide who should own which
+  kind of check.
 - Select a small set of quality measures, pair each with one that exposes its distortion, and
   explain how each can mislead.
 - Recognize the failure modes of quality ownership early enough to correct them.
@@ -66,21 +70,23 @@ flowchart TD
 ```
 
 Poor internal quality makes changes risky, failures generate interrupts, and interrupts consume
-the time that would have improved the code. Chapter 27 treats this loop as the engine of decline.
+the time that would have improved the code. This is a reinforcing loop
+([Chapter 3](../01-foundations/03-managerial-leverage-and-systems-thinking.md) introduces the idea):
+it makes quality decline without anyone deciding to lower standards.
 
 The second half is about ownership. A property should be owned by whoever makes the decisions that
 change it. The authoring team decides how much of its logic is tested; a platform team decides
 whether contract tests are cheap to write; product and engineering together decide whether a
-requirement was understood. Assigning all of these to one QA group puts ownership where the
-information arrives last.
+requirement was understood. Assigning all of these to one quality assurance (QA) group puts ownership
+where the information arrives last.
 
 ## Deep Conceptual Explanation
 
 ### Why quality resists definition
 
 The difficulty is not specific to software. David Garvin's 1984 article identified five approaches
-to defining product quality, drawn from philosophy, economics, marketing, and operations management:
-transcendent (excellence you recognize but cannot define), product-based (the amount of a desirable
+to defining product quality, drawn from philosophy, economics, marketing, and operations management.
+They are transcendent (excellence you recognize but cannot define), product-based (the amount of a desirable
 attribute), user-based (fitness for the user's purpose), manufacturing-based (conformance to
 specification), and value-based (performance relative to price). He then proposed eight dimensions
 of quality, among them performance, reliability, conformance, and serviceability
@@ -92,14 +98,16 @@ incomplete, and an organization that does not choose measures whatever is easies
 conformance.
 
 Conformance is a dangerous default for software because the specification is part of what can be
-wrong. At Northstar, 27 of 212 escaped defects last quarter (13 percent) were built exactly as
-specified and still failed the customer. No conformance test finds those.
+wrong. At Northstar, 27 of 212 [escaped defects](../../glossary.md#escaped-defect) last quarter (13
+percent) were built exactly as specified and still failed the customer. An escaped defect is a
+customer-reported bug confirmed as a defect: one that got past every check before release. No
+conformance test finds those 27.
 
 ### Making quality operational
 
 A definition becomes operational when it names the properties that matter for this product and
 states each as something observable. ISO/IEC 25010, the product quality model in the SQuaRE family
-of standards, defines nine quality characteristics divided into subcharacteristics, and presents them
+of standards, defines nine quality characteristics divided into subcharacteristics. It presents them
 as a reference model for specifying, measuring, and evaluating product quality, including eliciting
 requirements and setting test objectives
 ([ISO/IEC 25010:2023](../../references/bibliography.md#iso25010-2023)). Treat it as a **standard**: a
@@ -114,7 +122,7 @@ is a property a team can own.
 Three rules keep the list honest:
 
 1. **Tie each attribute to a path and a consequence.** Northstar's contracts make availability of
-   the order and payment paths a commercial term, so availability is on the list for those paths and
+   the order and payment paths a commercial term. So availability is on the list for those paths and
    not, at the same weight, for the reporting API.
 2. **Include at least one attribute that conformance testing cannot verify**, such as "a customer can
    complete a bulk order without calling support". This keeps the user's view in the definition.
@@ -158,14 +166,13 @@ automated deployment pipeline rather than inspected in at the end
 
 ### What the evidence says about the models
 
-The book found **no study that directly
-compares** central, embedded, and team-owned QA on outcomes such as escaped defects (research gap
-G4). What exists is indirect.
+The evidence is thin. No study **directly compares** central, embedded, and team-owned QA on outcomes
+such as escaped defects. What exists is indirect.
 
 A case study of three software product companies examined who actually tested and how many defects
 each group found. Two organized testing as a team effort; one had a specialized testing group.
-Testing was not done only by specialists; testing by people with customer contact and domain
-expertise was an important form of validation; and defects found by developers had the highest fix
+Testing was not done only by specialists, and testing by people with customer contact and domain
+expertise was an important form of validation. Defects found by developers had the highest fix
 rates, those reported by specialized testers the lowest
 ([Mäntylä, Itkonen, and Iivonen, 2012](../../references/bibliography.md#mantyla2012who)). This is a
 **research finding** from three companies. Fix rate is not detection effectiveness, and the study
@@ -173,25 +180,27 @@ does not say which model let fewer defects escape. It does support two mechanism
 is a testing asset wherever it sits, and defects raised inside the team are more likely to be acted
 on.
 
-A study of Mozilla Firefox's mostly manual system testing from 2006 to 2012 found that after the move
-to rapid releases, testing narrowed to the features and regressions with the highest risk, and that
-the faster cadence made a large testing community harder to sustain, so Mozilla added contractors
+A study of Mozilla Firefox's mostly manual system testing from 2006 to 2012 found that rapid releases
+narrowed testing to the features and regressions with the highest risk. The faster cadence also made
+a large testing community harder to sustain, so Mozilla added contractors
 ([Mäntylä et al., 2013](../../references/bibliography.md#mantyla2013rapid)). It is one open-source
 project: evidence that a central manual testing function changes shape when release cadence rises,
 not a verdict on the function.
 
 The case for central independence is real in specific contexts: regulated products that require an
 independent check, safety-critical systems, and specialized testing (performance, accessibility,
-security) that no single team does often enough to do well. The book's position on disputed claim D4
-is **this book's recommendation**, not a research finding: teams own the quality outcomes of their
-changes; quality engineers are embedded where risk or domain complexity justifies them; a platform
-makes testing cheap; central QA is kept for specialized or independently mandated testing.
+security) that no single team does often enough to do well. The question is contested, so the
+position here is **this book's recommendation**, not a research finding. Teams own the quality
+outcomes of their changes. Quality engineers are embedded where risk or domain complexity justifies
+them. A platform makes testing cheap. Central QA is kept for specialized or independently mandated
+testing.
 
 ### Detection points tell you who should own a check
 
 The most useful input to an ownership decision is a classification of escaped defects by the earliest
 point at which a reasonable check would have caught them. Each detection point has a natural owner
-(the Engineering Organization Example tabulates Northstar's 212 escaped defects this way). Unit logic belongs to the team that wrote it.
+(the Engineering Organization Example tabulates Northstar's 212 escaped defects this way). Unit logic
+belongs to the team that wrote it.
 Contract defects need the teams on both sides and tooling that makes contract tests cheap.
 End-to-end flow defects are where testers with domain knowledge add most. Migration and configuration
 defects are caught by pipeline checks a platform builds and teams use. Misunderstood requirements are
@@ -213,25 +222,34 @@ table covers measures specific to quality.
 | Regression share of escaped defects | Internal | Falls if new features get buggier | Escaped defect count |
 
 **Line coverage** is a poor target (Chapter 22 summarizes the evidence); keep it a team diagnostic.
-Northstar's managers quote 41 percent Core coverage; the number says how much code runs under test,
+Northstar's managers quote 41 percent coverage for Core, the main monolith; the number says how much code runs under test,
 not whether the tests would notice a fault.
 
 **Defect counts per team** mislead through exposure: a team with a large customer-facing surface
-receives more reports than a team whose code customers rarely touch. For change failure rate, use
-the current definitions in DORA's guide, which also warns that setting its metrics as goals invites
-gaming and that they apply to a service or application rather than to ranking teams
+receives more reports than a team whose code customers rarely touch. For
+[change failure rate](../../glossary.md#change-failure-rate), the share of releases that fail, use the
+current definitions in the guide from DORA (DevOps Research and Assessment). The guide also warns that
+setting its metrics as goals invites gaming, and that they describe a service or application rather
+than rank teams
 ([DORA, metrics guide](../../references/bibliography.md#dora-metrics-guide); see also
 [Forsgren, Humble, and Kim, 2018](../../references/bibliography.md#forsgren2018accelerate)).
 
 ## Engineering Organization Example
 
+!!! info "Northstar so far"
+    Weeks 1 to 3 of the director's first year. The baseline quarter has just closed: 30 Sev1 and Sev2
+    incidents, 99.62 percent availability against a 99.9 percent commitment, and $410,000 in service
+    credits. Nothing has changed yet. See the [timeline](../../case-studies/northstar/timeline.md).
+
 This analysis is **illustrative**: the figures are Northstar's fictional baseline, and the proposals
 are the director's.
 
-**Who finds the problems today.** Seven QA engineers run about 1,900 manual regression cases before
-each Core release, at about $440,000 a year in QA time. Yet 212
-defects escaped last quarter, 81 of them (38 percent) regressions, which is exactly what a regression
-pass exists to catch. The pass is a late sample of known workflows against a large batch.
+**Who finds the problems today.** [Core](../../glossary.md#core), Northstar's Java monolith, ships
+on a two-week [release train](../../glossary.md#release-train). Before each release, seven QA
+engineers in Platform Operations run about 1,900 manual regression cases over three days, at about
+$440,000 a year in QA time. Yet 212 defects escaped last quarter, and 81 of them (38 percent) were
+regressions, exactly what a regression pass exists to catch. The pass is a late sample of known
+workflows against a large batch.
 
 **Who should own detection.**
 
@@ -248,31 +266,50 @@ automated tests are the cheapest check. Only the end-to-end group (41) is the ki
 function is best placed to find, and the asset that finds it is domain knowledge. The data do not
 support "quality belongs to QA". They support a mix.
 
-**Normalizing defect counts, and how it misleads.** Per engineer: Billing 4.5 (58/13), Orders 3.6
-(51/14), Customer Experience 2.9 (44/15), Payments and Integrations 2.6 (31/12), Data and Analytics
-1.7 (19/11), Platform Operations 0.75 (9/12). Per deployment in the quarter (monthly deployments
-times three): Billing 2.4 (58/24), Orders 1.5 (51/33), Data and Analytics 0.58 (19/33), Customer
-Experience 0.56 (44/78), Payments and Integrations 0.47 (31/66), Platform Operations 0.21 (9/42).
+**Normalizing defect counts, and how it misleads.** Dividing each team's escaped defects by its size,
+or by its deployments, looks fair. It is not.
+
+| Team | Escaped defects | Engineers | Per engineer | Deployments in the quarter | Per deployment |
+|---|---|---|---|---|---|
+| Billing | 58 | 13 | 4.5 | 24 | 2.4 |
+| Orders | 51 | 14 | 3.6 | 33 | 1.5 |
+| Customer Experience | 44 | 15 | 2.9 | 78 | 0.56 |
+| Payments and Integrations | 31 | 12 | 2.6 | 66 | 0.47 |
+| Data and Analytics | 19 | 11 | 1.7 | 33 | 0.58 |
+| Platform Operations | 9 | 12 | 0.75 | 42 | 0.21 |
+
+Deployments in the quarter are three times the baseline monthly figure.
 
 Both views put Billing and Orders on top, for a reason neither shows: those teams ship most changes
 through the Core release train, so each release carries two weeks of several teams' work. And
 Platform Operations' low count reflects how few of its changes reach customers directly. Ranking
 managers on either table would rank their positions in the architecture.
 
-**A measure set.** Six measures from data Northstar already has: escaped defects by detection point,
-with a sampled triage audit; customer-detected share of Sev1 and Sev2 incidents (47 percent); an
-invoice correctness rate on the payment path; change failure rate paired with deployment frequency;
-regression share of escaped defects (38 percent); and the share of tier 1 components meeting the four
-operational minimums of owning team, complete user-facing alerts, runbook, and on-call (3 of 15 tier 1
-components meet all four minimums; 6 of 15 have a runbook). Coverage stays a
-team diagnostic.
+**A measure set.** Six measures come from data Northstar already has:
 
-**An ownership mix.** One defensible allocation of the seven QA engineers: two each to Orders and
-Billing (the highest escaped-defect counts and the Core modules with the most complex rules), two to
-Customer Experience (end-to-end and mobile flows), and one to Payments and Integrations (bank and
-accounting integrations). Data and Analytics stays team-owned. Platform Operations' five
-infrastructure engineers become the platform-enabled part: test environments, contract tooling, and
-pipeline checks for migrations and configuration. Chapter 27 covers how to make the change humanely.
+1. escaped defects by detection point, with a sampled triage audit;
+2. customer-detected share of Sev1 and Sev2 incidents (47 percent);
+3. an invoice correctness rate on the payment path;
+4. change failure rate paired with deployment frequency;
+5. regression share of escaped defects (38 percent);
+6. the share of [tier 1](../../glossary.md#tier-1) components (the 15 on the order or payment path)
+   that meet the four [operational minimums](../../glossary.md#tier-1-operational-minimums): an owning
+   team, complete user-facing alerts, a runbook, and on-call. Today 3 of 15 meet all four, and 6 of 15
+   have a runbook.
+
+Coverage stays a team diagnostic.
+
+**An ownership mix.** One defensible allocation of the seven QA engineers:
+
+- two each to Orders and Billing, which have the highest escaped-defect counts and the Core modules
+  with the most complex rules;
+- two to Customer Experience, for end-to-end and mobile flows;
+- one to Payments and Integrations, for bank and accounting integrations.
+
+Data and Analytics stays team-owned. Platform Operations' five infrastructure engineers become the
+platform-enabled part: test environments, contract tooling, and pipeline checks for migrations and
+configuration. This is the mix Northstar later adopted. Chapter 27 describes how the move was
+announced and what the delay cost.
 
 ## Decision Framework
 
@@ -352,8 +389,8 @@ In an organization of 50 to 150 engineers, the director owns three one-page arti
 profile (named attributes per critical path), the measure set with its pairs, and the ownership map
 (who owns which detection point, per area). All three are reviewed at least quarterly.
 
-Engineering managers own their teams' external and delivery measures. A manager who cannot explain last month's escaped defects by detection point has
-not yet taken ownership. Staff engineers own cross-cutting internal attributes: testability of shared
+Engineering managers own their teams' external and delivery measures. A manager who cannot explain
+last month's escaped defects by detection point has not yet taken ownership. Staff engineers own cross-cutting internal attributes: testability of shared
 modules, contract boundaries, the test architecture (Chapter 22). A remaining quality lead changes
 the question from "did this release pass?" to "where are our checks missing, and who should add
 them?"
@@ -366,14 +403,16 @@ Product teams should own outcomes and the platform capabilities, visibly in the 
 
 ## CTO Perspective
 
-At CTO level the quality definition is a business instrument. With the CEO and CPO, the CTO decides
+At CTO level the quality definition is a business instrument. With the chief executive (CEO) and
+chief product officer (CPO), the CTO decides
 which properties of which products are commercial commitments (Northstar's 99.9 percent availability
 on the order and payment paths is one), which are internal standards, and which may vary. That
 tiering decision should be explicit.
 
 The CTO also sets the ownership philosophy, which shapes hiring and careers. A remaining QA career
-track needs a defined senior role (strategy, tooling, specialized testing). If the company moves to team ownership, fund the platform and enabling work that
-makes it practical, or the change is a cost cut presented as a quality improvement.
+track needs a defined senior role (strategy, tooling, specialized testing). If the company moves to
+team ownership, fund the platform and enabling work that makes it practical. Otherwise the change is
+a cost cut presented as a quality improvement.
 
 Report upward in business terms: availability against commitment, customer-detected share,
 correctness on paid-for paths, and the trend. The board does not need coverage or bug counts. Refuse
@@ -399,14 +438,15 @@ confidence.
 
 ## Case Study
 
-This case is **fictional**. It takes place in the director's first month at Northstar, alongside the
-diagnosis in [Chapter 27](27-quality-transformation-at-enterprise-scale.md), and uses only the
+This case is **fictional**. It takes place in the director's first month at Northstar, while the
+director was also classifying the baseline quarter's incidents, and uses only the
 [baseline data](../../case-studies/northstar/baseline-data.md).
 
 In the first one-to-ones, the director asked each manager: "Who is responsible for the quality of
-what your team ships?" Four answers named the QA group or the release train; Tom Becker said his QA
-engineers caught problems "before the train leaves". Elena Sokolova (Payments and Integrations) said
-her team was, and could name its last three escaped defects. Her team deploys 22 times a month, and
+what your team ships?" Four answers named the QA group or the release train. Tom Becker (Platform
+Operations), who manages the QA engineers, said they caught problems "before the train leaves".
+Elena Sokolova (Payments and Integrations) said her team was, and could name its last three escaped
+defects. Her team deploys 22 times a month, and
 its change failure rate (21 percent) is well below the 29 and 34 percent of the two teams that ship
 through the Core train.
 
@@ -426,7 +466,8 @@ no capacity to take on testing it had never owned. The director recorded the con
 cost, not a reason to keep the old model. The session ended with a draft quality profile for the
 order and payment paths, the six measures, and an ownership map with two open disputes. No role
 changes were announced. That was right for the analysis and hard on the QA engineers, who left
-knowing their roles would change without knowing how; Chapter 27 records the cost of that delay.
+knowing their roles would change without knowing how. The new roles were announced only in week 10,
+after two QA engineers had asked whether they were being automated out of a job.
 
 ## Exercises
 
@@ -436,8 +477,8 @@ Solutions are in [chapter 19 solutions](../../solutions/ch19-solutions.md). Data
 ### Foundational
 
 **F1.** Northstar's head of customer success says quality is "fewer angry customers", the QA lead
-says it is "the regression suite passing", and Ines Carvalho says it is "code we can change without
-fear". Identify which of the three meanings of quality (and which of Garvin's approaches) each person
+says it is "the regression suite passing", and Ines Carvalho (staff engineer, Core domain) says it is
+"code we can change without fear". Identify which of the three meanings of quality (and which of Garvin's approaches) each person
 holds, explain why each is incomplete on its own, and propose one measure for each that the others
 would accept as legitimate.
 
@@ -447,8 +488,8 @@ one sentence per attribute naming its owner. Say what you left out and why, and 
 threshold as illustrative.
 
 **F3.** A manager proposes ranking Northstar's six teams by escaped defects per engineer and
-rewarding the best. Using the baseline numbers, compute the ranking, then explain at least two
-reasons it would mislead, and propose a way to use the same data that would not.
+rewarding the best. Using the team table in this chapter, state the ranking, then explain at least
+two reasons it would mislead, and propose a way to use the same data that would not.
 
 ### Applied Leadership
 
@@ -468,7 +509,7 @@ defects owned without undermining the team's existing ownership.
 
 ### Executive Decision-Making
 
-**X1.** Victor Lindqvist asks you to justify keeping any quality specialists at all, since several
+**X1.** Victor Lindqvist (CTO) asks you to justify keeping any quality specialists at all, since several
 companies he admires have "no QA". You have seven QA engineers, a $440,000-a-year manual regression
 pass, and a 99.9 percent contractual commitment. Write the recommendation you would give him, with the
 evidence and its limits, and say what would change your mind.

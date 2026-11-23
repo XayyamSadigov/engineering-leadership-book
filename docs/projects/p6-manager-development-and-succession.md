@@ -5,23 +5,30 @@ Technologies, the fictional company of the [case study](../case-studies/northsta
 first time, you are going to assess the six engineering managers who report to you, agree a
 development plan with each, and write down who could step into each critical role if its holder left
 next week. You draft in week 24, hold the conversations in weeks 25 and 26, and finalize in week 27,
-the first week of quarter 3. Your job in this project is to produce those documents: an evidence-based
-assessment of each manager, six one-quarter development plans, and a succession table for the
-organization's critical roles, with the actions that would close its gaps.
+the first week of quarter 3. Your job is to produce those documents: an evidence-based assessment of
+each manager, six one-quarter development plans, and a [succession](../glossary.md#succession-coverage)
+table for the organization's critical roles, with the actions that would close its gaps.
 
 The project applies [Chapter 41](../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md)
 and the [Engineering Manager performance rubric](../templates/engineering-manager-rubric.md), with
 [Chapter 36](../parts/07-organization-design/36-reorganizations-evolution-and-succession.md#succession-coverage)
 for the succession table, readiness scale, and coverage rule, and
 [Chapter 40](../parts/09-engineering-directorship/40-the-directors-job.md#building-your-own-signal-sources)
-for skip-levels. It takes about 12 to 18 hours.
+for [skip-levels](../glossary.md#skip-level). After that reading, the full project takes about 24 to
+30 hours.
+
+!!! note "Core version (about 10 to 12 hours)"
+    Do deliverables 2, 3, and 6 only: the evidence file per manager, the rating matrix, and the
+    succession table at week 26. Apply acceptance criteria 1, 2, 5, and 9, and score the rubric rows
+    Evidence quality, Rating judgment, and Succession and bench (55 of the 100 points; rescale to
+    100).
 
 ## Problem Statement
 
 At baseline Northstar's managers were reviewed once a year on their teams' roadmap delivery alone,
 against a one-line job description: "lead a team of engineers to deliver high-quality software". On
-that basis the manager whose team deployed most looked strongest, and nothing measured showed that his
-mobile engineers felt unheard. The director has since stated expectations in pieces (a time cap for
+that basis the manager whose team deployed most (Daniel Cho, Customer Experience) looked strongest, and
+nothing measured showed that his mobile engineers felt unheard. The director has since stated expectations in pieces (a time cap for
 one manager, tier 1 minimums, incident commander training, manager ownership of corrective actions)
 and, in week 22, wrote a one-page expectation on the rubric's six dimensions.
 
@@ -29,14 +36,15 @@ The director's signal is thin. There were no skip-levels in weeks 1 to 15; indiv
 started in week 16, four a week, and no group skip-level has been held. The director's firsthand time
 was measured at 4.7 percent of their hours in weeks 14 and 15.
 
-Succession is thinner. Every one of the six managers is a single point of failure, and under the
+Succession is thinner. Every one of the six managers is a
+[single point of failure](../glossary.md#single-point-of-knowledge-failure), and under the
 flat-headcount rule a new manager can only come from an engineering seat that is not backfilled. The
 bench is built from current engineers or not at all. Several people who might cover a role already
 hold another critical role, or would cover several.
 
-Your task is to assess each manager on the six dimensions with dated, observable evidence, write a
-one-quarter development plan for each, and build the succession table for the ten critical roles (six
-managers, three staff engineers, the director) at week 26, with the bench actions that follow.
+Your task has three parts. Assess each manager on the six dimensions with dated, observable evidence.
+Write a one-quarter development plan for each. And build the succession table at week 26 for the ten
+critical roles (six managers, three staff engineers, the director), with the bench actions that follow.
 
 Chapter 41's case study tells one version: draft ratings in week 24 (16 Solid, 11 Not yet, 5 No
 evidence, 4 Strong) and a quarter 3 plan for each manager. Chapter 36 builds a succession table with
@@ -53,9 +61,15 @@ assessments. Each manager writes a self-assessment against the rubric before the
 **Window.** Weeks 1 to 26 (quarters 1 and 2). Baseline-quarter facts are context, not window evidence,
 as in the template's example.
 
-**The time rule.** Use only facts dated week 26 or earlier. Everything after week 26 is off limits,
-including any quarter 3 outcome and the week-44 succession ratings in Chapter 36 (use Chapter 36 for the
-method, not as evidence). Whether bulk ordering ships at the end of week 26 is not known when you
+**The time rule.** Use only facts dated week 26 or earlier: the
+[Northstar overview](../case-studies/northstar/index.md), the
+[baseline data](../case-studies/northstar/baseline-data.md), the first-year record through
+[quarter 2 results](../case-studies/northstar/first-quarter.md#quarter-2-results) and
+[the renewals and the operating system in quarter 2](../case-studies/northstar/first-quarter.md#the-renewals-and-the-operating-system-in-quarter-2),
+the [timeline](../case-studies/northstar/timeline.md) to week 26, and the
+[cast](../case-studies/northstar/cast.md). Everything after week 26 is off limits, including any
+quarter 3 outcome and the week-44 succession ratings in Chapter 36 (use Chapter 36 for the method, not
+as evidence). Whether bulk ordering ships at the end of week 26 is not known when you
 draft; treat it as a branch.
 
 **Constraints.** These are binding.
@@ -72,9 +86,11 @@ draft; treat it as a branch.
    seat that is not backfilled. Pay and level changes go only through the calibrated cycle at the start
    of quarter 3.
 5. **Skip-level rule.** Themes go back to the manager, quotes never; no decisions in a skip-level.
-6. **Open decisions stay open.** Rafael Duarte's choice between management and the staff track,
-   Tomasz Wierzbicki's outside offer (week 20), Tom Becker's expectations plan for Bram Verhoeven, the
-   structure of Customer Experience, and ADR-0001 are not decided by your plans; your plans must work
+6. **Open decisions stay open.** These are not decided by your plans: the choice of Rafael Duarte
+   (Orders senior engineer) between management and the staff track; the outside offer to Tomasz
+   Wierzbicki, a Billing ledger engineer (week 20); the expectations plan of Tom Becker (Platform
+   Operations manager) for Bram Verhoeven, a senior infrastructure engineer; the structure of Customer
+   Experience; and [ADR-0001](../glossary.md#adr-0001), on how integrations read ledger data. Your plans must work
    with each outcome.
 7. **Director's time.** State the hours per quarter your design costs the director and show that it
    fits next to one-on-ones (4.5 hours a week with managers) and skip-levels (2 hours a week).
@@ -83,8 +99,10 @@ draft; treat it as a branch.
 
 Use these sources:
 
-- [Baseline data](../case-studies/northstar/baseline-data.md), especially "Management and roles",
-  "People, hiring, levels, and pay", and "Locations and working arrangements", and
+- [Baseline data](../case-studies/northstar/baseline-data.md), especially
+  [people and management](../case-studies/northstar/baseline-data.md#people-and-management),
+  [levels, reviews, promotions, pay, and attrition](../case-studies/northstar/baseline-data.md#levels-reviews-promotions-pay-and-attrition),
+  and [locations and working arrangements](../case-studies/northstar/baseline-data.md#locations-and-working-arrangements), and
   [the first quarter](../case-studies/northstar/first-quarter.md), including the timeline, the starting
   points for quarter 2, and the quarter 2 facts.
 - [`teams.csv`](../case-studies/northstar/data/teams.csv) for the baseline teams; team sizes from week
@@ -94,8 +112,8 @@ Use these sources:
 - Chapter 41's evidence notes and Chapter 36's readiness scale and coverage rule.
 
 **Project data: the evidence index.** [`p6-manager-evidence.csv`](data/p6-manager-evidence.csv) lists
-dated items about the six managers from the canon and the chapters' recorded additions, one row each,
-with its source. It is **derived from the canon**, not new, and it is an index, not an assessment: it
+dated items about the six managers from Northstar's record, one row each, with its source. It **comes
+from the case**, not new, and it is an index, not an assessment: it
 does not say which dimension an item bears on, whether it is evidence or context, or whether it helps
 or hurts. Deciding that is the project.
 
@@ -118,7 +136,7 @@ Teodora Vasquez-Lund, Hannah Lindgren, Mateo Arango Ríos, Aisha Bello, or Sunil
 management role; what any manager will say in their self-assessment. Each is an input with a branch, or
 a question your plan asks.
 
-**A test your plan must pass (a hypothetical for this project, not a canon event).** Suppose that in
+**A test your plan must pass (a hypothetical invented for this project only).** Suppose that in
 week 27 Victor Lindqvist asks for a single ranking of the six managers for year-end pay, and asks who
 would run Payments and Integrations if Elena Sokolova were promoted. Your documents must let you answer
 both without breaking constraint 3.
@@ -160,8 +178,10 @@ One document of no more than about 12 pages, plus a spreadsheet of evidence item
    its own evidence.
 5. **Run each Not yet** through the decision flow. A Not yet caused mainly by the system is the
    director's problem; rate the manager's response to it.
-6. **Choose one focus per manager** and a real decision to delegate at level 2 or 3 (Chapter 2's levels),
-   not a trivial one at level 5.
+6. **Choose one focus per manager** and a real decision to delegate at level 2 or 3, not a trivial one
+   at level 5. Chapter 2's five levels of control run from 1 (the manager decides) through 2 (the
+   delegate recommends, the manager decides) and 3 (the delegate decides after telling the manager) to
+   5 (the delegate owns the area).
 7. **Build the succession table** for all ten roles. For each candidate, ask whether they hold another
    critical role or are primary cover for one.
 8. **Count it twice:** by row and by column.
@@ -211,11 +231,11 @@ A submission is accepted only if all of these hold.
    bench action, and a dated check.
 5. The succession table covers all ten critical roles, is counted twice, applies Chapter 36's coverage
    rule, and lists every person named more than once.
-6. No plan decides an open canon decision; each plan states what happens under the outcomes of the ones
+6. No plan decides a decision the case leaves open; each plan states what happens under the outcomes of the ones
    it depends on.
 7. No new manager seat, external hire, or pay change outside the calibrated cycle appears in any plan.
 8. The director's hours for the quarter are computed.
-9. No fact is invented about the canon; assumptions are labeled as assumptions.
+9. No fact about Northstar is invented; assumptions are labeled as assumptions.
 
 ## Evaluation Rubric
 

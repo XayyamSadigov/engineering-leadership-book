@@ -87,7 +87,7 @@ matters for the conversation.
    revert-or-quarantine call.
 4. Red time and quarantine count on the weekly operational review.
 
-**Ownership.** Infrastructure (Tom Becker) owns the pipeline's speed and reliability, including the
+**Ownership.** Infrastructure (Tom Becker, Platform Operations manager) owns the pipeline's speed and reliability, including the
 split into commit and extended stages. Module owners own their tests, including quarantined ones.
 The three unowned Core modules need owners, or their tests will rot in quarantine.
 
@@ -137,8 +137,8 @@ removes an impossible burden from the QA engineer.
 coverage of rarely changed paths. Then share the evidence: the three-day pass caught none of the nine
 train-triggered incidents, and its length is part of why each train carried about 170 changes. Ask
 the engineer to lead the selection for their area, and agree a review after four weekly trains,
-comparing escaped defects and train incidents with the baseline. Connect this to the role change
-Chapter 27 describes (quality engineers in product teams).
+comparing escaped defects and train incidents with the baseline. Connect this to the coming role change
+(the QA engineers join product teams as quality engineers; Chapter 27 describes it).
 
 The weak answer overrules the engineer with the data alone, or keeps the full pass and abandons the
 weekly train.

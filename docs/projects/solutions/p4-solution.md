@@ -5,7 +5,16 @@ director's week-44 proposal in [Chapter 35](../../parts/07-organization-design/3
 as a submission to be tested, not as the answer. The conclusion is that the proposal is the right
 shape, fails one acceptance criterion as written, and needs five amendments. Alternatives B, C, and D
 are evaluated with their strongest case. All Northstar facts are fictional; estimates marked as this
-solution's are assumptions, not canon.
+solution's are assumptions, not facts from the case.
+
+People named, with roles (see the [cast](../../case-studies/northstar/cast.md)): Victor Lindqvist (CTO);
+the engineering managers Priya Raman (Orders), Marcus Oyelaran (Billing), Elena Sokolova (Payments and
+Integrations), Daniel Cho (Customer Experience), Farah Haddad (Data and Analytics), and Tom Becker
+(Platform Operations); the staff engineers Ines Carvalho, Kwame Mensah, and Li Na Zhou; and the
+engineers Mateo Arango Ríos (informal mobile lead), Hannah Lindgren (informal web lead), Aisha Bello and
+Rafael Duarte (Orders), Sunil Varghese (Data and Analytics), and Teodora Vasquez-Lund and Tomasz
+Wierzbicki (Billing ledger engineers). INC-407, named below, was a search cluster node loss with nobody
+on call for the service.
 
 ## 1. Starting state, checked twice
 
@@ -38,7 +47,7 @@ Customer Experience, Data, and Platform: 1 + 6 + 3 + 1 = 11. Between the two gro
 |---|---|---|---|
 | Customer Experience is two products on two sites under one manager | Span 17; one board and sprint for web and mobile; mobile red on 4 of 10 health indicators in week 16; 6 of the last 8 retrospective actions about web; two of four baseline Sev2 at the mobile-bff and mobile boundary; Mateo doing lead work unrecognized for over a year | Subteams with Mateo and Hannah as tech leads (alternative B) | Not enough on its own: it fixes the board and recognition, not a 17-person span across sites, and leaves Bogotá's six mobile engineers with a Minneapolis manager whose one-on-ones were mostly status (55 of 84) |
 | core/permissions has no owner | Tier 1; 38 merge requests from four teams in the baseline quarter; exemption recorded in quarter 1 | Exemption renewal | Fails the standard: exemptions expire after at most two quarters. This one reached the maximum at week 39 and lapsed without renewal |
-| document-store has no owner | Orphaned since baseline; one open critical vulnerability at baseline; two callers, invoice-render (Billing) and core/order-capture (Orders) | None tried in the canon | Needs an owner; ownership, not structure |
+| document-store has no owner | Orphaned since baseline; one open critical vulnerability at baseline; two callers, invoice-render (Billing) and core/order-capture (Orders) | None tried so far | Needs an owner; ownership, not structure |
 | search-svc ownership is nominal | Owned by Orders, written by engineers in Data and Analytics; 0 Orders engineers can change it safely (week 14); INC-407 with nobody on call | Fund Orders' learning | Learning is unfunded in Orders (about 2.6 engineers left in quarter 2); move it to its authors |
 | Orders is overloaded | Span 16 for a first-year manager; seven components across six domains | Tech leads inside Orders; moving search-svc out | Partly enough for year 2; the split stays as a triggered option |
 | Platform is still a queue | Five engineers, two on rotation; requests down from 20 to 14 points | Self-service and a product statement | Enough for now: rename and a product, no growth until consolidation proves adoption |

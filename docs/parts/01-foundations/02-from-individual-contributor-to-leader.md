@@ -19,10 +19,12 @@ At organization scale, first-line managers are the layer where most engineers ex
 so a weak transition is felt by every engineer on the team. Chapter 1 summarizes the evidence that
 managers matter; it is a useful corrective to the engineer's belief that management is overhead.
 
-At executive scale, the question is how the organization picks and prepares its managers. An economic
-study of sales workers at 131 firms found that firms weight current job performance heavily in
-promotion decisions even though other characteristics better predict success as a manager, and that
-promoting people with lower managerial potential is costly
+At executive scale, the question is how the organization picks and prepares its managers. The risk
+has a name, the **Peter Principle**: people are promoted for doing their current job well until they
+reach a job they do poorly. An economic study of sales workers at 131 firms, titled after the
+principle, found that firms weight current job performance heavily in promotion decisions. Other
+characteristics better predicted success as a manager, and promoting people with lower managerial
+potential was costly
 ([Benson, Li, and Shue, 2019](../../references/bibliography.md#benson2019promotions)). Sales is not
 engineering, but the pattern is familiar: the strongest engineer is promoted, given no preparation,
 and judged on whether the work still gets done.
@@ -86,7 +88,7 @@ describes the transition as a profound psychological adjustment, learned mainly 
 which balancing delegation and control and reframing one's understanding of the role are central
 challenges, and notes that many people do not complete it
 ([Hill, 2019](../../references/bibliography.md#hill2019becoming)). It is a small qualitative study
-outside software, read here at summary level, but its point matches practitioner experience: the
+outside software, but its point matches practitioner experience: the
 hard part is letting go of the old source of competence and status.
 
 Herminia Ibarra's study of professionals moving into more senior roles offers a mechanism. People do
@@ -111,8 +113,7 @@ Three properties of the manager's feedback loop cause most of the trouble:
 Delay means a new manager can do the wrong thing for a quarter before seeing the cost. Attribution
 means a strong team can carry a weak manager for a while, and bad luck can hide good management.
 Filtering means the signals that matter most, such as a senior engineer considering leaving, are the
-least likely to reach the manager unprompted. The remedy is to build leading indicators the manager can observe
-directly: how many decisions waited for the manager this week, whether one-on-ones surface news or
+least likely to reach the manager unprompted. The remedy is to build leading indicators the manager can observe directly: how many decisions waited for the manager this week, whether one-on-ones surface news or
 only status, which work only one person can do. Chapter 5 covers one-on-ones as an information
 channel; Chapter 4 covers measuring managerial effectiveness.
 
@@ -131,11 +132,11 @@ Delegating a task ("implement this endpoint") keeps the manager as designer and 
 Delegating an outcome ("uploads of up to 5,000 lines succeed or fail cleanly, by the March release")
 transfers the design too, and is how a team's judgment grows. It fails when the level of control is
 implicit: the delegate thinks they own the decision, the manager thinks they are being consulted, and
-the first disagreement feels like a betrayal. David Marquet's account of commanding a submarine is known for the idea of moving
-decisions to the people with the information, and of having them state what they intend to do
-rather than ask permission, so that control moves gradually while the leader can still intervene
+the first disagreement feels like a betrayal. David Marquet's account of commanding a submarine is
+known for moving decisions to the people with the information. They state what they intend to do
+rather than ask permission, so control moves gradually while the leader can still intervene
 ([Marquet, 2012](../../references/bibliography.md#marquet2013turn)). The scale below is **this book's
-synthesis** in that spirit, not a validated instrument.
+recommendation** in that spirit, not a validated instrument.
 
 | Level | Who decides | The delegate says | Use when |
 |---|---|---|---|
@@ -196,17 +197,24 @@ recurring problem finally owned. The Practical Playbook turns this into a plan.
 
 ## Engineering Organization Example
 
-The following figures are **illustrative**, invented for Northstar (fictional). They describe Priya
-Raman's calendar in the two weeks before the new director arrived, eight months after her promotion,
-and the budget she agreed with the director in week 2.
+!!! info "Northstar so far"
+    Weeks 1 and 2 of the director's first year at Northstar, the book's fictional company. The CTO's
+    mandate is to halve serious incidents within twelve months with flat headcount, while two renewal
+    features ship on time. Bulk ordering, one of them, belongs to Priya Raman's Orders team. See the
+    [timeline](../../case-studies/northstar/timeline.md).
 
-Assumptions: a 40-hour working week; Orders has 14 engineers; Priya reviewed about 15 of the roughly
-25 Core merge requests Orders produced each week.
+The following figures are **illustrative**. They describe the calendar of Priya Raman (Orders
+manager) in the two weeks before the new director arrived, eight months after her promotion, and the
+budget she agreed with the director in week 2.
+
+Assumptions: a 40-hour working week; Orders has 14 engineers. Most Orders code lives in
+[Core](../../glossary.md#core), Northstar's shared Java monolith, and Priya reviewed about 15 of the
+roughly 25 Core merge requests (proposed code changes) Orders produced each week.
 
 | Activity, hours per week | Before (measured from her calendar and review history) | Agreed budget |
 |---|---|---|
 | Coding and code review | 18 | 8 |
-| Product, release train, cross-team | 5 | 5 |
+| Product, [release train](../../glossary.md#release-train) (the scheduled Core release), cross-team | 5 | 5 |
 | Incidents and escalations | 6 | 5 |
 | Team planning and rituals | 3 | 3 |
 | One-on-ones | 2 (nominally weekly; about one in three took place) | 4 (30 minutes every two weeks for all 14 is 3.5 hours a week, plus preparation) |
@@ -372,7 +380,8 @@ For a newly promoted engineering manager, with the help of their own manager:
 4. Hold a first one-on-one with every report: what they want, what gets in their way, what you
    should not change.
 5. Map single-person areas, including yourself.
-6. Read the last quarter's incidents and escaped defects for your components; note recurrences.
+6. Read the last quarter's incidents and [escaped defects](../../glossary.md#escaped-defect) (bugs
+   found after release) for your components; note recurrences.
 7. Choose a peer manager as a role model and ask for an hour a month.
 
 **Days 30 to 60: delegate.**
@@ -390,8 +399,8 @@ For a newly promoted engineering manager, with the help of their own manager:
 ## Case Study
 
 This case is **fictional**. It is set before and at the start of the director's first quarter at
-Northstar; the canonical record of that quarter is on [the first quarter](../../case-studies/northstar/first-quarter.md)
-page, and the facts used here are on the [baseline page](../../case-studies/northstar/baseline-data.md).
+Northstar; the full record is on [the first quarter](../../case-studies/northstar/first-quarter.md)
+page.
 
 Priya Raman joined Northstar as an engineer seven years before the director arrived and became the
 person who knew order capture best. She wrote much of the bulk order upload path. When the previous
@@ -401,13 +410,17 @@ training, and her check-ins with her own manager were mostly about delivery date
 
 In her first month as manager, a bulk upload failure reached customers. Priya fixed it herself over a
 weekend and wrote the follow-up action, a test for uploads beyond 500 rows, assigned to herself. It
-was never done. Two quarters later the same failure mode returned as INC-421, a Sev1 that a customer
-reported first. It was one of three recurrences among Orders' seven Sev1 and Sev2 incidents in the
-baseline quarter (INC-411, INC-421, and INC-429).
+was never done. Two quarters later the same failure mode returned as INC-421: a bulk upload dropped
+every line beyond row 500. It was a [Sev1](../../glossary.md#severity-sev1-sev2-sev3), Northstar's
+most serious severity, and a customer reported it first. It was one of three
+[recurrences](../../glossary.md#recurrence) (repeats of an earlier failure) among Orders' seven Sev1
+and Sev2 incidents in the baseline quarter, the quarter before the director arrived. The other two
+were INC-411, a catalog import that rejected valid units of measure, and INC-429, orders rejected
+for next-year delivery dates.
 
 By the time the director arrived, the team trusted Priya's judgment and liked that she understood
-their work. Two senior engineers, Rafael Duarte
-and Aisha Bello, described the same frustration in their first conversations with the director:
+their work. Two senior engineers on Orders,
+Rafael Duarte and Aisha Bello, described the same frustration in their first conversations with the director:
 decisions on order capture waited for Priya, and she had kept the design and the hardest code of the
 bulk-ordering feature, one of the two renewal commitments, for herself. One-on-ones were often
 cancelled. Rafael had applied for the manager role too and had said nothing since about his own
@@ -415,8 +428,8 @@ career.
 
 In week 1, the director's first one-on-one with Priya started with the renewal date; Priya was
 confident about the code and worried about everything else. In week 2 they went through her calendar
-and review history together and found
-the numbers in the Engineering Organization Example: 18 hours a week of coding and review, 15 of
+and review history together and found the numbers in the
+Engineering Organization Example: 18 hours a week of coding and review, 15 of
 about 25 weekly Core merge requests reviewed by her, and about a third of scheduled one-on-ones held.
 
 They agreed four changes, each with a level of control:
@@ -429,14 +442,15 @@ They agreed four changes, each with a level of control:
 | Priya's time budget | Priya, checked with the director monthly | Hands-on capped at 8 hours a week |
 
 Priya objected to the first change. Handing over the renewal feature, due at the end of quarter 2,
-felt to her like taking a risk with the company's largest customers. The director's answer was that
-the long runway made this the cheapest moment to hand it over, and that keeping it was also a risk: the feature depended on a person who spent 15
-percent of her week on incidents and whose calendar the quarter was about to fill further with
-incident commander training, ownership decisions, and a capacity model. Priya kept the design authority, and the
-weekly checkpoint was her safeguard.
+felt to her like taking a risk with the company's largest customers. The director's answer was that the long runway made this the cheapest moment to hand it over. Keeping
+it was also a risk: the feature depended on a person who spent 15 percent of her week on incidents.
+The director's plan for the quarter would fill her calendar further, with incident commander training
+(learning to coordinate incident response), decisions on who owns which code, and a capacity model.
+Priya kept the design authority, and the weekly checkpoint was her safeguard.
 
-The case leaves Priya at the end of week 2, before the decisions of week 4 gave Orders core/customer
-and before the quarter's results. Whether the plan worked is a question for the exercises.
+The case leaves Priya at the end of week 2. In week 4 Orders also took ownership of core/customer, one
+of three Core modules that no team owned, and the quarter's results came later (see the
+[timeline](../../case-studies/northstar/timeline.md)). Whether the plan worked is a question for the exercises.
 
 ## Exercises
 
@@ -483,7 +497,7 @@ small budget, including a respectable path back to engineering. Say what you wil
 measure could be gamed, and what you will not promise the CEO.
 
 **X2.** Two quarters from now, Priya's hands-on time has crept back to 35 percent and Orders' results
-are good. One senior engineer has resigned, citing lack of growth. Victor Lindqvist asks whether
+are good. One senior engineer has resigned, citing lack of growth. Victor Lindqvist (CTO) asks whether
 Priya is a strong manager. Decide what evidence you would gather, what conclusion would follow from
 each plausible finding, and what you would recommend.
 
@@ -515,7 +529,7 @@ each plausible finding, and what you would recommend.
 ## References and Further Reading
 
 - [Hill, 2019](../../references/bibliography.md#hill2019becoming). *Becoming a Manager*. A year with
-  nineteen new managers; the classic study of the transition. Read only at summary level here.
+  nineteen new managers; the classic study of the transition, cited here from its publisher's summary.
 - [Ibarra, 1999](../../references/bibliography.md#ibarra1999provisional). How professionals adapt to
   senior roles by trying provisional identities; the mechanism behind "experiment, then choose".
 - [Benson, Li, and Shue, 2019](../../references/bibliography.md#benson2019promotions). Economic

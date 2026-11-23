@@ -1,8 +1,8 @@
 # Chapter 12 — Team Charters, Working Agreements, and Knowledge Sharing
 
-This chapter is about three written or unwritten agreements every team runs on: what the team is for
-and where it stops (the charter), how its members work with each other (working agreements), and who
-knows what (the knowledge distribution), and how to make them explicit without producing documents
+This chapter is about three agreements every team runs on, written or not: what the team is for and
+where it stops (the charter), how its members work with each other (working agreements), and who knows
+what (the knowledge distribution). It shows how to make them explicit without producing documents
 nobody opens. The examples come from Northstar Technologies, the fictional company in the
 [case study](../../case-studies/northstar/index.md): Billing's ledger knowledge, the shell-script
 deploys one person understands, and a charter for the Data and Analytics team.
@@ -20,7 +20,8 @@ At organization scale, charters are how a director sees the shape of the whole. 
 charter.
 
 At executive scale, knowledge concentration is a balance-sheet risk that never appears on a balance
-sheet. Northstar's tier 1 ledger depended on three people; four production services deployed through a
+sheet. Northstar's [tier 1](../../glossary.md#tier-1) ledger (tier 1 is its highest business-impact
+class) depended on three people; four production services deployed through a
 script one person understood. A CTO who cannot name such points cannot judge what a resignation, an
 acquisition, or a reorganization will break.
 
@@ -75,19 +76,20 @@ A team charter is a short document the team writes and owns that answers four qu
 exists (mission), what it owns and does not own (boundaries), how others work with it (interfaces),
 and which decisions it makes alone, shares, or escalates (decision rights).
 
-One of the few empirical studies of charters followed 32 teams of MBA students through a business
-simulation. Teams with high-quality performance strategies outperformed the rest, and charter quality interacted with strategy quality: the highest sustained
-performance came from teams high on both
+Charters help alongside a good plan, not instead of one. One of the few empirical studies of charters
+followed 32 teams of MBA students through a business simulation. Teams with high-quality performance
+strategies outperformed the rest. Charter quality interacted with strategy quality: the highest
+sustained performance came from teams high on both, the abstract reports
 ([Mathieu and Rapp, 2009](../../references/bibliography.md#mathieu2009charters)). This is a **research
-finding** in a narrow setting, read at abstract level. It supports a modest claim: agreeing how to work
+finding** in a narrow setting. It supports a modest claim: agreeing how to work
 together pays off alongside a good plan for the work, not instead of one.
 
 Google's Project Aristotle points the same way. Its guide lists structure and clarity (clear roles,
 plans, and goals) among five dynamics of effective teams, after psychological safety and dependability
 ([Google re:Work](../../references/bibliography.md#rework-team-effectiveness)): **documented practice**,
 one company's self-report. Patrick Lencioni is known for the argument that leaders must create clarity
-about a few basic questions (why we exist, how we behave, what we do, what matters most now, who does
-what) and repeat it until it is believed
+about a few basic questions and repeat it until it is believed. His questions are why we exist, how we
+behave, what we do, what matters most now, and who does what
 ([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage)), **expert opinion** that maps
 closely onto a charter's four questions.
 
@@ -101,7 +103,7 @@ The interface section says how other teams get things from this one: where reque
 response time, what is self-service, and what the team needs from others. Skelton and Pais are known
 for the idea that a team should present a deliberate "team API" and choose an interaction mode with each
 neighbor, rather than letting every interaction default to ad hoc requests
-([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team)). Chapter 33 owns team types
+([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team)). Chapter 33 covers team types
 and interaction modes. The narrower point here: once the interface is written, a request that bypasses
 it is visibly an exception, and the cost of requests becomes visible.
 
@@ -141,7 +143,7 @@ Avelino and colleagues estimated truck factors from authorship in version histor
 open-source projects on GitHub. About 65 percent had a truck factor of 2 or less, and developers
 surveyed from 67 projects mostly agreed the method had found the main authors
 ([Avelino et al., 2016](../../references/bibliography.md#avelino2016truck)). This is a **research
-finding** about open source, read at abstract level.
+finding** about open source.
 
 Rigby and colleagues measured files abandoned when knowledgeable developers left Chrome and a project at
 Avaya. Projects were exposed to losses several times larger than the expected loss; simple truck-factor
@@ -160,18 +162,18 @@ book's recommendation**):
 1. **Remove the need.** Replace a hand-maintained deploy script with the standard pipeline, or automate
    a manual reconciliation. Knowledge no longer needed cannot be lost.
 2. **Spread it through doing.** Pair with the learner driving, and route the next change or page to a
-   learner with the expert as backup. Rigby and Bird found that code review increased the number of
-   distinct files a developer knew about by 66 to 150 percent, depending on the project
-   ([Rigby and Bird, 2013](../../references/bibliography.md#rigby2013convergent)), so routing reviews of
-   an expert's area to non-experts is a cheap spreading mechanism.
+   learner with the expert as backup. Routing reviews of an expert's area to non-experts is a cheap
+   spreading mechanism: Rigby and Bird found that code review increased the number of distinct files a
+   developer knew about by 66 to 150 percent, depending on the project
+   ([Rigby and Bird, 2013](../../references/bibliography.md#rigby2013convergent)).
 3. **Write it down at the moment of use.** A runbook written by the learner after a paired page and
    corrected by the expert has a known reader (the next person paged) and a test (whether it worked).
 
 The order follows from the mental model's loop: documents spread knowledge only to people who read
 them, and people read documents they trust. The knowledge-sharing chapter of *Software Engineering at
-Google* treats one-to-one and written knowledge as complements (precise but unscalable, scalable but
-needing upkeep), lists single points of failure among the main obstacles to learning, and notes that
-doing a task for someone is faster today and keeps the knowledge in one head
+Google* treats one-to-one and written knowledge as complements: one is precise but unscalable, the
+other scalable but needing upkeep. It lists single points of failure among the main obstacles to
+learning, and notes that doing a task for someone is faster today and keeps the knowledge in one head
 ([Chen and Barolak, 2020](../../references/bibliography.md#chen2020knowledge)): **documented practice**
 at one very large company.
 
@@ -196,25 +198,32 @@ kind; Chapters 20 and 21 cover what happened to them.
 
 ## Engineering Organization Example
 
-The following figures are **illustrative**, invented for Northstar (fictional) and recorded on the
-baseline page. At the start of quarter 2, Marcus Oyelaran and the three ledger engineers mapped
-ledger knowledge as it stood at the end of the baseline quarter. They split the ledger and invoicing
+!!! info "Northstar so far"
+    Week 14, the start of quarter 2. The director's first quarter cut Sev1 and Sev2 incidents (the two
+    highest severity levels) from 30 to 21. Billing still has the highest incident count, and three
+    ledger engineers carry most of its on-call pages. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
+The figures are **illustrative** (Northstar is fictional). Billing had four ledger experts until one
+left before the director arrived; a backfill, Tamsin Achterberg, joined about 24 weeks before the
+director. At the start of quarter 2, Marcus Oyelaran (Billing's engineering manager) and the three
+remaining ledger engineers mapped ledger knowledge as it stood at the end of the baseline quarter. They split the ledger and invoicing
 work into five areas and counted, for each, how many of Billing's 13 engineers could respond to a page
 alone and how many could change the area safely with ordinary review.
 
 | Ledger area | Respond alone | Change safely | Changes last two quarters |
 |---|---|---|---|
 | Posting and journal rules | 3 | 3 | 14 |
-| Credit notes and adjustments | 4 | 2 | 9 |
+| Credit notes and adjustments | 4* | 2 | 9 |
 | Period close and month-end | 2 | 1 | 4 |
 | Ledger schema migrations | 2 | 2 | 6 |
 | Currency and rounding | 1 | 1 | 3 |
 
-Assumptions: "respond alone" means restoring service without escalating in a typical incident in that
-area; "change safely" means a change the person would merge with one reviewer. Every count is made up
-of the three experts, with one exception: the backfill, hired after the fourth expert resigned, could
-respond alone on credit notes but was not yet on the rotation. No other Billing engineer could do
-either in any area.
+\* The three experts plus the backfill, who was not yet on the on-call rotation. Every other count is
+made up of the three experts only; no other Billing engineer could do either in any area.
+
+"Respond alone" means restoring service without escalating in a typical incident in that area. "Change
+safely" means a change the person would merge with one reviewer.
 
 Three things follow.
 
@@ -228,12 +237,11 @@ That is why they concentrated: there were too few occasions to learn. Pairing wa
 occasion; for rarely changed areas the team has to create one, for example a scheduled rehearsal of
 month-end close in a test environment.
 
-Third, the cost of spreading is measurable. If each of the three experts spends four hours a week
-pairing with a learner, that is 12 hours a week, about 156 hours over a 13-week quarter, or roughly 0.3
-of an engineer's time (assuming 40-hour weeks). Against it, the three handled 126 of Billing's 180 pages
-in the baseline quarter, 54 of them after hours;
-[Chapter 3](../01-foundations/03-managerial-leverage-and-systems-thinking.md) owns that loop and the
-routing rule that reverses it. The area map tells the routing rule where to send learners first.
+Third, the cost of spreading is measurable. Four hours a week of pairing from each of the three experts
+is about 0.3 [FTE](../../glossary.md#fte) (full-time equivalent engineers), assuming 40-hour weeks.
+Against it, the three handled 126 of Billing's 180 pages in the baseline quarter, 54 of them after
+hours. [Chapter 3](../01-foundations/03-managerial-leverage-and-systems-thinking.md) covers that loop
+and the routing rule that reverses it. The area map tells the routing rule where to send learners first.
 
 The shell-script deploys are a different shape: one script, understood by one person, deploys
 auth-svc, webhooks, document-store, and export-svc. That is a truck factor of 1 for four services, and
@@ -292,7 +300,7 @@ it. Write for named moments only, and prefer removal where it can be funded.
 
 **The shelf charter.** Written at an offsite, filed, never consulted. Signal: requests that the charter
 says go elsewhere are accepted without anyone noticing. Countermeasure: use the charter in the
-twice-weekly intake triage, and review it quarterly against the requests actually received.
+intake triage, and review it quarterly against the requests actually received.
 
 **Agreements enforced only downward.** The manager reminds engineers of the review agreement; nobody
 reminds the manager. Signal: agreements are cited only by the manager. Countermeasure: the manager asks
@@ -315,9 +323,9 @@ In an organization of 50 to 150 engineers, charters and knowledge maps are how a
 organization's shape without attending every team's meetings.
 
 **Charters as a set.** Side by side, the six charters should cover every component, with none in two
-"owns" lists. Overlaps and gaps are the director's to resolve; Northstar's week 4 ownership decisions
-([first quarter](../../case-studies/northstar/first-quarter.md)) were this exercise done without
-charters. One page per team, in one place, with a quarterly review date, is enough.
+"owns" lists. Overlaps and gaps are the director's to resolve. Northstar did this exercise without charters in week
+4, when the director gave owners to two unowned Core modules, core/customer and core/scheduler
+([first quarter](../../case-studies/northstar/first-quarter.md)). One page per team, in one place, with a quarterly review date, is enough.
 
 **A knowledge-risk register.** Each manager maps knowledge for their tier 1 areas and brings the
 single-person areas to a quarterly review. The director keeps the short organization-level list, each
@@ -325,9 +333,9 @@ entry with a remedy (retire, spread, or accept) and a date. It feeds backfill pr
 for retiring special tooling.
 
 **Staff engineers as spreaders.** Staff engineers are often single points of knowledge themselves. In
-the baseline, Ines Carvalho answered about eight hours a week of unscheduled questions about Core
+the baseline, Ines Carvalho (staff engineer for the Core domain) answered about eight hours a week of unscheduled questions about Core
 ([baseline](../../case-studies/northstar/baseline-data.md)). The leverage move, covered in Chapter 3 and
-Chapter 29, is to turn repeated answers into canonical, owned documents and reviews by others, not to
+Chapter 29, is to turn repeated answers into owned documents and reviews by others, not to
 answer faster.
 
 ## CTO Perspective
@@ -339,9 +347,10 @@ risk feel like a strength.
 Three things change at this level. Organizational changes are knowledge events: moving a component,
 merging teams, or a voluntary-departure program redistributes knowledge, and the plan should say where
 each tier 1 area's knowledge goes. Retiring special tooling, such as Northstar's script deploys, removes
-knowledge risk, and its business case should say so. And incentives decide the supply: if promotions
-reward the engineer who rescues every ledger incident rather than the one who made three others able to,
-single points of failure keep forming (Chapter 3's hero loop).
+knowledge risk, and its business case should say so. And incentives decide the supply. If promotions
+reward the engineer who rescues every ledger incident, not the one who made three others able to,
+single points of failure keep forming (Chapter 3's hero loop: rescues earn praise, so the rescuer
+stays the only one who can rescue).
 
 What the CTO should not do is ask for a company-wide truck-factor number. The research treats it as a
 rough screen ([Rigby et al., 2016](../../references/bibliography.md#rigby2016turnover)), and a target
@@ -368,15 +377,16 @@ For a manager writing a charter and agreements and reducing knowledge risk over 
 ## Case Study
 
 This case is **fictional**. It is set at the start of quarter 2, after the director's first 90 days
-([first quarter](../../case-studies/northstar/first-quarter.md)); it describes a draft and the decisions
-it raises, and does not fix their outcome. The charter draft is recorded on the first quarter page.
+([first quarter](../../case-studies/northstar/first-quarter.md)). It describes a draft and the decisions
+it raises, and does not fix their outcome.
 
-Data and Analytics, managed by Farah Haddad, had eleven engineers (eight data, three software), the
-lowest change failure rate in the organization (12 percent), two Sev1 or Sev2 incidents, and little
+Data and Analytics, managed by Farah Haddad, had eleven engineers (eight data, three software). It had
+the lowest [change failure rate](../../glossary.md#change-failure-rate) (share of releases that fail) in
+the organization, 12 percent, two [Sev1 or Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents, and little
 contact with other teams ([baseline](../../case-studies/northstar/baseline-data.md)). It looked like the
 team least in need of attention. Two facts said otherwise. Requests from other teams took 12 points of
-its capacity, half its unplanned work and more than in any other product team (only Platform Operations
-had more). And its two incidents were a month-end report that timed out at new data volume and was
+its capacity: half its [unplanned work](../../glossary.md#unplanned-work), and more than in any other
+product team (only Platform Operations had more). And its two incidents were a month-end report that timed out at new data volume and was
 reported by a customer after eight hours (INC-408), and a warehouse maintenance window that overlapped
 scheduled customer exports (INC-423). Reviewing INC-423, the team found nobody had written down who
 announces warehouse maintenance or who must be told.
@@ -391,10 +401,10 @@ quarter's requests.
 | Does not own | Source data correctness in Core (Orders and Billing own it); the export deploy script (Platform Operations, until retired) |
 | Disputed | search-svc: nominal owner Orders, written mostly by engineers now in this team; proposal to the director |
 | Interfaces | Requests through one queue, triaged Tuesday and Thursday; first response within two working days. Maintenance windows on the warehouse announced to Payments and Integrations and Customer Experience five working days ahead |
-| Decision rights | Warehouse schema: team decides, Li Na Zhou consulted as standard owner for data and migration. Accepting work over a week from another team: Farah. Breaking a reporting-api contract: director informed, consumers consulted |
+| Decision rights | Warehouse schema: team decides, Li Na Zhou (staff engineer) consulted as standard owner for data and migration. Accepting work over a week from another team: Farah. Breaking a reporting-api contract: director informed, consumers consulted |
 
 Of the six working agreements, two show the team's shape. Its members are in Minneapolis (four), Bogotá
-(five), and remote (two), as the baseline page records, so decisions made in a call are written in the team
+(five), and remote (two), so decisions made in a call are written in the team
 channel the same day, and any warehouse change touching customer exports gets a second reviewer from a
 different location.
 
@@ -406,7 +416,7 @@ run it, but only one person had changed it.
 
 The draft raised three decisions for the director. Whether to give search-svc to Data and Analytics,
 which would add an on-call surface to a team with little operational practice. Whether to fund the
-retirement of the script for export-svc ahead of the other three script services, since it is tier 3.
+retirement of the script for export-svc ahead of the other three script services, since it is tier 3 (the lowest business-impact class).
 And whether the five-day maintenance notice is a team agreement or should become an organization
 standard. The exercises take them up.
 
@@ -434,7 +444,7 @@ cost.
 
 ### Applied Leadership
 
-**A1.** You are Marcus Oyelaran at the start of quarter 2. Using the knowledge map, design a one-quarter
+**A1.** You are Marcus Oyelaran, Billing's engineering manager, at the start of quarter 2. Using the knowledge map, design a one-quarter
 plan to make every ledger area two-deep for responding and at least two-deep for changing in the tier 1
 areas. Say which mechanism you use in each area, how many hours it costs whom, what you expect restoration
 times to do during the quarter, and what evidence at quarter end would show the plan worked.
@@ -445,19 +455,22 @@ to do in the six weeks, what to accept as risk during the leave, and how you wou
 documentation exercise that produces a long, untested page.
 
 **A3.** Farah Haddad's draft charter says requests go through one queue with a two-working-day first
-response. Two weeks later, Greg Tanaka's sales engineer sends a data request by direct message to a
+response. Two weeks later, a sales engineer working for Greg Tanaka (VP Sales) sends a data request by direct message to a
 Data and Analytics engineer, marked urgent for a deal. Advise Farah on how the team should respond, what
 the charter's exception process should say, and how to tell whether the interface is working after a
 quarter.
 
 ### Executive Decision-Making
 
-**X1.** As director, decide whether search-svc should move to Data and Analytics. Consider the knowledge
+**X1.** As director, decide whether search-svc should move to Data and Analytics. search-svc is tier 2,
+with no runbook, partial alerts, and no on-call rotation; INC-407, a search cluster node loss in the
+baseline quarter, found nobody on call. Data and Analytics' own export-svc has no runbook, no alerts,
+and no rotation either. Consider the knowledge
 already in the team, the on-call surface, the team's current operational practice, the effect on Orders,
 and what the charter would have to say in each case. State what you would need to believe for each
 answer, and the transition cost of moving it.
 
-**X2.** Victor Lindqvist proposes that every team publish a truck-factor number quarterly, with a target
+**X2.** Victor Lindqvist (CTO) proposes that every team publish a truck-factor number quarterly, with a target
 of at least 2 for every tier 1 component, reported in the operational review. Advise him: what the
 number would and would not tell him, how it would be gamed, what you would report instead, and what
 decision he should expect it to inform.
@@ -489,7 +502,7 @@ decision he should expect it to inform.
 ## References and Further Reading
 
 - [Mathieu and Rapp, 2009](../../references/bibliography.md#mathieu2009charters). Charters and
-  performance strategies in 32 student teams; read at abstract level.
+  performance strategies in 32 student teams.
 - [Google re:Work](../../references/bibliography.md#rework-team-effectiveness). Project Aristotle's
   five team dynamics, including structure and clarity.
 - [Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage). *The Advantage*. Clarity as

@@ -71,16 +71,18 @@ different level. The manager controls only the description and the timing.
 
 ### What the feedback research shows
 
-The best-known synthesis is Kluger and DeNisi's meta-analysis of feedback interventions, meaning
-deliberate actions that tell people something about their performance. Across 607 effect sizes and
-23,663 observations, feedback improved performance on average (an effect size of d = .41, a moderate
-effect), but more than a third of the interventions decreased performance
-([Kluger and DeNisi, 1996](../../references/bibliography.md#kluger1996effects)). The authors report
-that this could not be explained by sampling error or by whether the feedback was positive or
+Feedback improves performance on average, but more than a third of the time it makes performance
+worse. That is the result of the best-known synthesis, Kluger and DeNisi's
+[meta-analysis](../../glossary.md#meta-analysis) (a study pooling many studies) of feedback
+interventions: deliberate actions that tell people something about their performance. Across 607
+results and 23,663 observations, the average improvement was a moderate
+[effect size](../../glossary.md#effect-size-d-g), yet more than a third of the interventions decreased
+performance ([Kluger and DeNisi, 1996](../../references/bibliography.md#kluger1996effects)). The
+authors report that this could not be explained by sampling error or by whether the feedback was positive or
 negative. Their proposed explanation, feedback intervention theory, is that feedback shifts attention
 among three levels (the details of the task, motivation toward the task, and the self) and that
 effectiveness falls as attention moves toward the self and away from the task. They also note that
-task characteristics moderate the effect in ways that were still poorly understood.
+the kind of task changes the effect in ways that were still poorly understood.
 
 That is a **research finding**, with limits: the meta-analysis pools many settings and predates modern
 engineering teams. What transfers is the direction, not a number: feedback is not reliably good, and
@@ -115,7 +117,7 @@ challenge (which Scott calls ruinous empathy) is the most common failure of new 
 the manager likes the person, withholds the criticism, and the person learns about the problem from a
 low rating or a layoff list. Neither, out of self-protection, becomes insincerity.
 
-This is **expert opinion**, credited at the level of its central idea. Its known failure is the label
+This is **expert opinion**. Its known failure is the label
 used to excuse bluntness. The test is the receiver's experience: if they do not believe you are on
 their side, the challenge is heard as an attack.
 
@@ -126,7 +128,7 @@ scales, one of which is how negative feedback is delivered: directly and plainly
 softened ([Meyer, 2014](../../references/bibliography.md#meyer2014culture)). A related idea from the
 same work is that people from direct cultures tend to use strengthening words and people from indirect
 cultures softening words, so the same criticism can sound mild to one listener and devastating to
-another. This is **expert opinion**, credited at idea level only.
+another. This is **expert opinion**.
 
 Three cautions keep it useful. National culture is a starting hypothesis about a person, not a
 description of them. Adapting delivery means changing the wrapping (private or public, the amount of
@@ -150,23 +152,23 @@ Conflict researchers distinguish types that behave differently.
   ([Bendersky and Hays, 2012](../../references/bibliography.md#bendersky2012status)).
 - **Values conflict**: disagreement about what matters, such as whether shipping a known defect to meet
   a customer date is acceptable. This is this book's working category for practice; the research
-  read for this chapter does not measure it separately, so treat it as a practitioner distinction.
+  cited here does not measure it separately, so treat it as a practitioner distinction.
 
-Whether task conflict helps is **contested**. A long-standing idea held that disagreement about the
-work improves decisions while personal conflict damages them. De Dreu and Weingart's meta-analysis challenged it: they found strong negative
-correlations between relationship conflict and both team performance and member satisfaction, as
-expected, but also strong negative correlations for task conflict; conflict in general was more harmful in
-complex tasks such as decision making and projects. Task conflict was less damaging when it was only weakly correlated with
-relationship conflict ([De Dreu and Weingart, 2003](../../references/bibliography.md#dedreu2003task)).
-A later meta-analysis of 116 studies and 8,880 groups by de Wit, Greer, and Jehn found stable
-negative relationships between both relationship and process conflict and group outcomes, but no
-strong negative association between task conflict and group performance. Task conflict was more
-positively related to performance where it was weakly linked to relationship conflict, in top
-management teams, and where performance was measured as decision quality or financial results
-([de Wit, Greer, and Jehn, 2012](../../references/bibliography.md#dewit2012paradox)).
+Whether task conflict helps is **contested**, but the two largest syntheses agree on the operational
+point: task conflict is tolerable, sometimes useful, only while it stays separate from relationship
+conflict. A long-standing idea held that disagreement about the work improves decisions while personal
+conflict damages them.
 
-Both agree on the operational point: task conflict is tolerable, sometimes useful, only while it stays
-separate from relationship conflict. Process conflict, which engineering organizations generate
+- De Dreu and Weingart's meta-analysis challenged it. Both relationship and task conflict correlated
+  strongly and negatively with team performance and member satisfaction, more so in complex tasks.
+  Task conflict was less damaging when only weakly linked to relationship conflict
+  ([De Dreu and Weingart, 2003](../../references/bibliography.md#dedreu2003task)).
+- A later meta-analysis of 116 studies and 8,880 groups found stable negative links between
+  relationship and process conflict and group outcomes, but no strong negative link for task conflict.
+  Task conflict related more positively to performance where it was weakly linked to relationship
+  conflict, in top management teams, and where performance meant decision quality or financial results
+  ([de Wit, Greer, and Jehn, 2012](../../references/bibliography.md#dewit2012paradox)).
+ Process conflict, which engineering organizations generate
 constantly, was consistently negative. These are **research findings** about correlations across many
 kinds of teams, none specifically in software, and they do not show causation.
 
@@ -202,7 +204,7 @@ conversation is really three: a dispute about what happened, a set of feelings, 
 person's sense of who they are ([Stone, Patton, and Heen, 1999](../../references/bibliography.md#stone1999difficult)).
 It also argues for moving from delivering a message to learning what the other person sees. That maps
 onto the Kluger and DeNisi mechanism: the identity layer is exactly where attention goes when feedback
-backfires. This is **expert opinion**, credited at idea level.
+backfires. This is **expert opinion**.
 
 In practice, preparation has five parts (**this book's recommendation**):
 
@@ -245,7 +247,7 @@ Chapter 9's process starts from a record rather than from memory.
 Team psychological safety, a shared sense that speaking up will not be punished, is associated with
 team learning ([Edmondson, 1999](../../references/bibliography.md#edmondson1999psychological));
 [Chapter 11](../03-high-performing-teams/11-high-performance-trust-safety-and-accountability.md)
-owns the topic. The link here is direct: a manager who punishes the messenger once teaches the team
+covers it. The link here is direct: a manager who punishes the messenger once teaches the team
 to keep task conflict underground, where it tends to become relationship conflict. Blameless incident review
 ([Chapter 25](../05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md))
 applies the same principle to failures.
@@ -268,7 +270,8 @@ asks for examples that are now two months old.
 module were about 900 lines each and took three days to get reviewed. The team's median is one day.
 The second one blocked Ana's work for two of those days. What's making them come out that size?" Sam
 explains that the pricing module has no seams for small changes. The manager learns something (a
-design problem, not a habit) and the two agree to try splitting the next change behind a feature flag.
+design problem, not a habit) and the two agree to try splitting the next change behind a
+[feature flag](../../glossary.md#feature-flag) (a switch that ships code turned off).
 
 The cost of the conversation is 15 minutes. The cost of the delay is about 40 days of
 waiting plus a weaker conversation at the end of it. Even if the early conversation only halves the
@@ -342,7 +345,8 @@ who stops speaking in that manager's meetings.
 
 ## Enterprise Application
 
-In an organization of 50 to 150 engineers, the managers give most of the feedback, not the director. The director's work is to make it routine and to catch the cases that are stuck.
+In an organization of 50 to 150 engineers, the managers give most of the feedback, not the director.
+The director's work is to make it routine and to catch the cases that are stuck.
 
 Mechanisms: ask each manager which feedback conversation they are postponing; check written reviews for
 content the person sees for the first time; in skip-levels, ask engineers when they last heard
@@ -394,16 +398,22 @@ opposite.
 
 ## Case Study
 
-This case is **fictional**. It is set in the baseline quarter, before the director arrived (see the
-[baseline page](../../case-studies/northstar/baseline-data.md)), and ends with a decision the reader
-faces at arrival. Teodora Vasquez-Lund and the ledger on-call
-load are recorded on the baseline page; the conversations below are fictional.
+This case is **fictional**. It ends with a decision the reader faces on arrival as director.
 
-Billing had eight Sev1 and Sev2 incidents in the baseline quarter, the most of any team. Seven came
-through Core releases or database migrations, and six were recurrences. Three ledger engineers had
-handled 126 of Billing's 180 pages first, and 54 of the 64 after-hours pages. Orders depended on
-Billing more than on any other team (9 dependency links), and Billing on Orders 6 times. Both teams shipped through the same two-week Core release train, and the three-day
-manual regression pass had caught none of the nine train-triggered incidents.
+!!! info "Northstar so far"
+    Before week 1: the baseline quarter, before the new Engineering Director arrives at Northstar, the
+    book's fictional order-to-cash company. It had 30 serious incidents and $410,000 in service credits
+    (refunds for missed availability). Billing had the most incidents. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
+Billing had eight [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (Northstar's two
+most serious levels) in the baseline quarter, the most of any team. Seven came through Core releases or
+database migrations, and six were repeats of earlier failures. Three ledger engineers had handled 126
+of Billing's 180 pages first, and 54 of the 64 after-hours pages. Orders depended on Billing more than
+on any other team (9 work items that needed Billing), and Billing on Orders 6 times. Both teams shipped
+through [Core](../../glossary.md#core), the shared Java monolith, on the same two-week
+[release train](../../glossary.md#release-train). A three-day manual regression pass before each
+release had caught none of the nine incidents the train's releases triggered.
 
 After INC-417 (payments posted to the wrong accounting period after release 24.23), Teodora
 Vasquez-Lund, a senior Billing engineer and one of the three ledger engineers, wrote in the shared
@@ -411,13 +421,13 @@ release channel that Orders' changes "keep breaking the ledger". An Orders engin
 Billing should test its own code. The thread ran for two days. Neither manager responded in it.
 
 After INC-427 (credit notes applied twice after release 24.26), the incident review began with
-Teodora stating that an Orders change had caused it. The contributing factors recorded for INC-427 in the book's
-incident review template (Chapter 25) point elsewhere: no ordering check for migrations, unknown
+Teodora stating that an Orders change had caused it. The contributing factors recorded for INC-427
+in the incident review (Chapter 25 shows the template) point elsewhere: no ordering check for migrations, unknown
 migration duration at production volume, no ledger invariant alert, and a release batch of about 170
 changes. Nobody had recorded which team's change
 triggered any of the baseline quarter's release incidents; the review process did not ask.
 
-Marcus Oyelaran's view, as Victor Lindqvist summarized it in his handover notes for the incoming
+The view of Marcus Oyelaran (Billing manager), as Victor Lindqvist (CTO) summarized it in his handover notes for the incoming
 director, was that Orders shipped into shared Core code without understanding the ledger. Orders' view
 was that Billing blamed others for its own fragile code. Victor wrote that he had "let the two of them
 sort it out" and that it had not worked.
@@ -425,16 +435,16 @@ sort it out" and that it had not worked.
 **Diagnosis.** On the surface this is a relationship and status conflict: public blame, defensive
 replies, questions about who understands the ledger. Underneath, it is a process conflict. Two teams
 ship through one train, in batches as large as 170 changes, with nothing that attributes a failure to
-a change. Each incident was evidence for whichever story
-each side already held, because the system produced no evidence that could settle it. The oldest layer
+a change. Each incident was evidence for whichever story each side
+already held, because the system produced no evidence that could settle it. The oldest layer
 is the release process; the newest is the dislike.
 
-The first-quarter record shows what happened to the process: weekly Core releases from week 5,
-a release working group, and train-triggered incidents falling from nine to four
+Looking ahead, the first-quarter record shows what happened to the process: weekly Core releases
+from week 5, a release working group, and train-triggered incidents falling from nine to four
 ([first quarter](../../case-studies/northstar/first-quarter.md)). It does not record what happened
-between the teams, or what Marcus said to Teodora. That is your decision at arrival: a process fix alone may
-leave the behavior unaddressed, and a behavioral intervention alone asks Teodora to stop being angry
-about a system that keeps paging her at night.
+between the teams, or what Marcus said to Teodora. That is your decision at arrival. A process fix
+alone may leave the behavior unaddressed. A behavioral intervention alone asks Teodora to stop being
+angry about a system that keeps paging her at night.
 
 ## Exercises
 
@@ -478,7 +488,7 @@ feedback about their feedback, and what you would accept as evidence that it cha
 
 ### Executive Decision-Making
 
-**X1.** Two quarters after the director's arrival, Amara Okafor and Victor Lindqvist disagree in the
+**X1.** Two quarters after the director's arrival, Amara Okafor (CPO) and Victor Lindqvist (CTO) disagree in the
 executive meeting about whether to delay a customer feature by three weeks to finish ledger
 reconciliation work. Both ask you, as director, for a recommendation in writing. Diagnose the conflict
 type, write the structure of your recommendation, and say what you would do if the CEO splits the
@@ -517,13 +527,13 @@ directors, and say what you would not do.
 ## References and Further Reading
 
 - [Kluger and DeNisi, 1996](../../references/bibliography.md#kluger1996effects). The meta-analysis
-  showing that feedback often lowers performance, and the theory of why. Read at abstract level here.
+  showing that feedback often lowers performance, and the theory of why.
 - [De Dreu and Weingart, 2003](../../references/bibliography.md#dedreu2003task). Meta-analysis
-  challenging the idea that task conflict helps teams. Read at abstract level.
+  challenging the idea that task conflict helps teams.
 - [de Wit, Greer, and Jehn, 2012](../../references/bibliography.md#dewit2012paradox). A larger, later
-  meta-analysis that complicates the 2003 result and adds process conflict. Read at abstract level.
+  meta-analysis that complicates the 2003 result and adds process conflict.
 - [Bendersky and Hays, 2012](../../references/bibliography.md#bendersky2012status). Introduces status
-  conflict as a distinct type and its effect on information sharing. Read at abstract level.
+  conflict as a distinct type and its effect on information sharing.
 - [Edmondson, 1999](../../references/bibliography.md#edmondson1999psychological). The founding study
   of team psychological safety; Chapter 11 develops it.
 - [Scott, 2017](../../references/bibliography.md#scott2017radical). *Radical Candor*. A practitioner's

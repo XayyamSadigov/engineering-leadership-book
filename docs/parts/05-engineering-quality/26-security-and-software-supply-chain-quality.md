@@ -19,7 +19,9 @@ and when will it be fixed?" takes days to answer without an inventory and hours 
 difference is a property of the engineering system, not of the security team.
 
 Northstar shows the shape. None of its 30 Sev1 and Sev2 incidents last quarter was a breach, yet three
-were security mechanisms failing as availability incidents. INC-404 dropped mobile sessions when
+were security mechanisms failing as availability incidents. (Sev1 and Sev2 are the two highest
+[severity](../../glossary.md#severity-sev1-sev2-sev3) ratings: an order or payment path down or a
+wrong financial record for Sev1, narrower failures for Sev2.) INC-404 dropped mobile sessions when
 someone changed the token lifetime in auth-svc's production configuration. INC-418 broke customer
 integrations when the webhook signature format changed without versioning. INC-425, a Sev1, stopped
 card payments when the certificate for the card processor endpoint expired. Tokens, signatures, and
@@ -37,10 +39,10 @@ After this chapter you will be able to:
 
 - Treat security as a quality attribute with named owners, an explicit share of capacity, and
   measures of exposure rather than activity.
-- Map engineering practice to NIST CSF 2.0 and the SSDF as a gap analysis that produces a funded plan,
-  not a checklist.
-- Assess supply-chain integrity with the SLSA Build and Source tracks and raise it one level at a
-  time, starting with tier 1 components.
+- Map engineering practice to the NIST Cybersecurity Framework (CSF) 2.0 and the Secure Software
+  Development Framework (SSDF) as a gap analysis that produces a funded plan, not a checklist.
+- Assess supply-chain integrity with the Build and Source tracks of SLSA (Supply-chain Levels for
+  Software Artifacts) and raise it one level at a time, starting with tier 1 components.
 - Design a vulnerability remediation policy with service levels, prioritization inputs, and a visible
   exception process.
 - Choose between security champions, a central application security function, or a mix, for your
@@ -57,7 +59,9 @@ certificates, and tiers. **How did it get there?** The path from reviewed source
 running artifact. **Who answers for it?** A named team that fixes, rotates, and accepts residual risk
 explicitly. Security without ownership becomes a queue of findings in someone else's tool.
 
-Chapter 27's stock-and-flow view applies. Known, unfixed vulnerabilities are a stock. Disclosures in
+It helps to think in stocks and flows
+([Chapter 3](../01-foundations/03-managerial-leverage-and-systems-thinking.md) introduces them). Known,
+unfixed vulnerabilities are a stock. Disclosures in
 dependencies and flaws in your own code flow in; fixes that reach production flow out.
 
 ```mermaid
@@ -81,46 +85,46 @@ is why a quality transformation and a security program usually need the same fir
 Treating security as a quality attribute means giving it an owner, a budget, and a measure.
 
 The **owner** is the team that owns the component. A central team can find problems and set policy;
-only the owning team can change the code and will be there for the next upgrade. AWS's
-Well-Architected Framework, which is vendor guidance, places security as one of six pillars beside
+only the owning team can change the code and will be there for the next upgrade. The Well-Architected
+Framework of Amazon Web Services (AWS), which is vendor guidance, places security as one of six pillars beside
 reliability and cost, and describes its reviews as conversations about design rather than audits
 ([AWS, Well-Architected Framework](../../references/bibliography.md#aws-well-architected)). The
 framing transfers: security is a property of the design, reviewed with its owners.
 
 The **budget** is capacity. Upgrades, rotation, and remediation compete with features. This book
-recommends funding routine security work from the standing prevention allocation in Chapter 27's
-capacity model, with a visible earmark, rather than as a separate initiative that can be cut alone.
+recommends funding routine security work from the standing
+[prevention allocation](../../glossary.md#prevention-allocation), the capacity reserved per team for
+work that removes sources of incidents. Give it a visible earmark, rather than making it a separate
+initiative that can be cut alone.
 
 The **measure** describes exposure, not activity; the measurement section below explains why.
 
 ### Frameworks as maps, not checklists
 
-**NIST CSF 2.0** organizes cybersecurity outcomes under six functions: Govern, Identify, Protect,
-Detect, Respond, and Recover. Govern sits at the center because it informs the others, and version
-2.0 adds emphasis on governance and supply chains, including a supply chain risk management category
-(GV.SC). The document states that its outcomes are not a checklist of actions and that the order of
+**The [CSF](../../glossary.md#nist-csf) 2.0**, from NIST (the US National Institute of Standards and
+Technology), organizes cybersecurity outcomes under six functions: Govern, Identify, Protect, Detect,
+Respond, and Recover. Govern sits at the center because it informs the others, and version 2.0 adds
+emphasis on governance and supply chains. The document states that its outcomes are not a checklist of actions and that the order of
 functions implies neither sequence nor importance. It proposes a Current Profile (outcomes achieved
 today), a Target Profile (outcomes chosen as priorities), and a gap analysis that yields a prioritized
 action plan ([NIST, 2024](../../references/bibliography.md#nist2024csf)). Treat it as a **standard**:
 shared vocabulary and a sensible process, not evidence that any control reduces risk.
 
-**The SSDF** (NIST SP 800-218, version 1.1) describes high-level secure development practices to be
-integrated into whatever life cycle an organization already uses, aiming to reduce vulnerabilities in
-released software, limit the impact of the rest, and address root causes
+**The [SSDF](../../glossary.md#ssdf)** (NIST SP 800-218) describes high-level secure development
+practices to be integrated into whatever life cycle an organization already uses. It aims to reduce
+vulnerabilities in released software, limit the impact of the rest, and address root causes
 ([Souppaya, Scarfone, and Dodson, 2022](../../references/bibliography.md#nist2022ssdf)). Its four
 practice groups are Prepare the Organization, Protect the Software, Produce Well-Secured Software, and
 Respond to Vulnerabilities ([NIST, SSDF project](../../references/bibliography.md#nist-ssdf-project)).
-Version 1.2 (SP 800-218 Rev. 1) was released as an initial public draft in December 2025; at the time
-of writing no final version had appeared
-([NIST, 2025](../../references/bibliography.md#nist2025ssdf-draft)).
 
 The difference between using these frameworks and performing them is the direction of reasoning.
 **Checklist theater** starts from the framework: every row gets an answer written to look complete,
-and nothing in engineering changes. **Gap analysis** starts from the system: which outcomes matter for
-tier 1 paths, which do we achieve today with evidence, and which three gaps would reduce the most
-exposure this quarter. The CSF's own profile process describes the second; the failure lies in how
-organizations use it. A short mapping, which is this book's and not NIST's, lets a leader answer
-framework questions from systems that already exist:
+and nothing in engineering changes. **Gap analysis** starts from the system. Which outcomes matter for
+[tier 1](../../glossary.md#tier-1) paths (at Northstar, the order and payment paths)? Which do we
+achieve today with evidence? Which three gaps would reduce the most exposure this quarter? The CSF's
+own profile process describes the second; the failure lies in how organizations use it. A short
+mapping, which is this book's and not NIST's, lets a leader answer framework questions from systems
+that already exist:
 
 | Engineering practice | CSF 2.0 function | SSDF group |
 |---|---|---|
@@ -139,18 +143,25 @@ repository, dependencies, build platform, artifact store, deployment. The leader
 the organization could prove, for any running artifact, which reviewed source and which build produced
 it.
 
-SLSA (Supply-chain Levels for Software Artifacts) version 1.2 gives that question levels on two tracks
-([SLSA, v1.2](../../references/bibliography.md#slsa-spec)). The **Build track** runs from L0 (no
-guarantees) through L1 (provenance shows how the package was built) and L2 (signed provenance from a
-hosted build platform) to L3 (a hardened platform that isolates builds and keeps signing secrets away
-from user-defined steps). The **Source track** runs from L1 (version controlled) through L2 (retained
-history and provenance) and L3 (technical controls enforced on protected branches) to L4 (two-party
-review). Older articles describe a single ladder of levels 1 to 4; that structure was replaced.
+[SLSA](../../glossary.md#slsa) gives that question levels on two tracks
+([SLSA, v1.2](../../references/bibliography.md#slsa-spec)). Older articles describe a single ladder of
+levels 1 to 4; that structure was replaced.
+
+| Track | Level | What it guarantees |
+|---|---|---|
+| Build | L0 | Nothing |
+| Build | L1 | Provenance shows how the package was built |
+| Build | L2 | Signed provenance from a hosted build platform |
+| Build | L3 | A hardened platform isolates builds and keeps signing secrets away from user-defined steps |
+| Source | L1 | The source is version controlled |
+| Source | L2 | History and provenance are retained |
+| Source | L3 | Technical controls are enforced on protected branches |
+| Source | L4 | Every change has two-party review |
 
 Two features make SLSA useful to leaders. Levels attach to artifacts, so tier 1 and tier 3 can have
-different targets. And the lower levels are mostly a side effect of a decent pipeline: a component
-built by hosted CI that emits provenance is near Build L1, while one built on a shared host by a script
-is at L0 and may not even show which revision it came from. The fastest supply-chain gain is often
+different targets. And the lower levels are mostly a side effect of a decent pipeline. A component
+built by hosted CI that emits provenance is near Build L1. One built on a shared host by a script is at
+L0 and may not even show which revision it came from. The fastest supply-chain gain is often
 pipeline consolidation.
 
 ```mermaid
@@ -165,13 +176,13 @@ flowchart TD
 
 ### Software bills of materials
 
-A software bill of materials (SBOM) is a machine-readable list of a product's components and their
-relationships. The 2021 NTIA minimum elements cover three areas: data fields (supplier, component
-name, version, other unique identifiers, dependency relationship, author of the SBOM data, and
-timestamp), automation support (formats such as SPDX and CycloneDX), and practices and processes
-(frequency, depth, known unknowns, distribution)
-([NTIA, 2021](../../references/bibliography.md#ntia2021sbom)). CISA published updated minimum
-elements as a draft for comment in August 2025
+A software bill of materials ([SBOM](../../glossary.md#sbom)) is a machine-readable list of a
+product's components and their relationships. The 2021 minimum elements from NTIA (the US National
+Telecommunications and Information Administration) cover three areas. Data fields identify each
+component, its supplier, version, and dependencies. Automation support means standard formats such as
+SPDX and CycloneDX. And practices set frequency, depth, and distribution
+([NTIA, 2021](../../references/bibliography.md#ntia2021sbom)). The US Cybersecurity and Infrastructure
+Security Agency (CISA) has since drafted an update
 ([CISA, 2025](../../references/bibliography.md#cisa2025sbom-draft)).
 
 The SBOM's main value is internal. Generated at build time for every artifact, it answers "are we
@@ -183,16 +194,16 @@ Most code in a modern service is someone else's, including transitive dependenci
 Decan, Mens, and Constantinou studied nearly 400 npm security reports over six years, asking when
 vulnerabilities were found and fixed and how far they reached dependent packages given those
 packages' version constraints ([Decan, Mens, and Constantinou, 2018](../../references/bibliography.md#decan2018impact)).
-Read here at abstract level, it supports a mechanism rather than a number: an upstream fix protects you
-only when your constraints and upgrade habits let it in.
+The abstract supports a mechanism rather than a number: an upstream fix protects you only when your
+constraints and upgrade habits let it in.
 
 A remediation policy has four parts:
 
 1. **Service levels by severity.** This book's suggested starting point: known-exploited, or critical
    on internet-facing tier 1, 7 days; other critical, 30 days; high, 90 days; medium and low through
    routine upgrades.
-2. **Prioritization beyond scores.** CISA states that organizations should use its Known Exploited
-   Vulnerabilities (KEV) catalog as an input to vulnerability prioritization
+2. **Prioritization beyond scores.** CISA states that organizations should use its
+   [Known Exploited Vulnerabilities](../../glossary.md#known-exploited-vulnerability-kev) (KEV) catalog as an input to vulnerability prioritization
    ([CISA, KEV catalog](../../references/bibliography.md#cisa-kev)). Exploitation, exposure, and
    whether the vulnerable code is reachable matter more than the base score.
 3. **Visible exceptions.** When a fix cannot meet its service level, the owning manager records the
@@ -230,14 +241,14 @@ one question ("what breaks for verifiers if the signature format changes?") woul
 Practitioners argue for **security champions** (engineers in product teams with a part-time security
 role) or for a **central application security team** that sets policy, runs tools, and reviews
 high-risk designs. The research is thin but pointed. A case study of five teams in a large e-commerce
-company found adoption of secure practices varied widely after champions were appointed, champions
-felt unsupported by security experts and management, and the authors concluded that appointing
-champions is not enough without organizational commitment
+company found that adoption of secure practices varied widely after champions were appointed.
+Champions felt unsupported by security experts and management, and the authors concluded that
+appointing champions is not enough without organizational commitment
 ([Gutfleisch et al., 2023](../../references/bibliography.md#gutfleisch2023champions)). A survey of 73
 champions at a Norwegian software company found voluntary and assigned champions differed in
 motivation and tasks, with problems in onboarding and training
 ([Nguyen-Duc et al., 2023](../../references/bibliography.md#nguyenduc2023champions)). Both are
-single-organization **research findings**, read at abstract level. Together they suggest a champion is
+single-organization **research findings**. Together they suggest a champion is
 a channel, not a program.
 
 ### Measuring security without vanity counts
@@ -254,17 +265,23 @@ who classify findings are often the people measured on them. Prefer exposure and
 | Secrets and certificates with owner and expiry alert | Inventory omits hard cases | Expiry and leaked-credential incidents |
 
 Counts rise when scanning becomes honest, so a falling count in a program's first quarter more likely
-means narrow scanning than good security. And this book found no peer-reviewed outcome evidence that
-SBOMs, SLSA levels, or remediation service levels reduce breach rates. These measures show shrinking
+means narrow scanning than good security. And no peer-reviewed outcome evidence shows that SBOMs, SLSA
+levels, or remediation service levels reduce breach rates. These measures show shrinking
 exposure and faster answers; they cannot prove an attack was prevented.
 
 ## Engineering Organization Example
+
+!!! info "Northstar so far"
+    Week 2 of the director's first year. The baseline quarter had 30 Sev1 and Sev2 incidents and
+    $410,000 in service credits, and the director is classifying them. Northstar has no chief
+    information security officer; security is a two-person function inside corporate IT. See the
+    [timeline](../../case-studies/northstar/timeline.md).
 
 The following is **fictional**. The security facts come from the extended baseline (Security section
 of the [baseline data](../../case-studies/northstar/baseline-data.md)); the capacity estimates are
 illustrative.
 
-In week 2, the director asks Kwame Mensah to run one open-source dependency scanner across all 24
+In week 2, the director asks Kwame Mensah (staff engineer, infrastructure and reliability) to run one open-source dependency scanner across all 24
 components, and Joon Park, Northstar's IT security lead, to share what the security function knows:
 
 | Fact | Value |
@@ -279,13 +296,20 @@ components, and Joon Park, Northstar's IT security lead, to share what the secur
 | Certificates and keys found after INC-425 | 34; 7 with no owner; none with expiry alerting |
 | Security function | 2 people in IT, outside engineering |
 
-The director converts this into capacity, assuming 4 engineer-days per critical except two Core items
-that need a framework upgrade (30 days together): 9 × 4 + 30 = 66 days. Rotating secrets and moving
-four services to a secrets manager: 25 days. Adding scanning to the Jenkins builds and a weekly
-scheduled scan for script-deployed services: 15 days. A certificate inventory with alerting: 10 days.
-Total 116 engineer-days, about 1.8 FTE over a 65-day quarter. The director earmarks 2 FTE of Chapter
-27's 12 FTE quarter 1 prevention allocation, spread across owning teams. The 58 highs follow under the
-90-day service level.
+The director converts this into capacity:
+
+| Work | Engineer-days |
+|---|---|
+| Nine criticals at about 4 days each | 36 |
+| Two criticals in Core (the Java monolith) that need a framework upgrade | 30 |
+| Rotate secrets; move four services to a secrets manager | 25 |
+| Scanning in the Jenkins builds; weekly scan for script-deployed services | 15 |
+| Certificate inventory with alerting | 10 |
+| **Total** | **116, about 1.8 FTE over a 65-working-day quarter** |
+
+FTE means full-time equivalent engineers. The director earmarks 2 FTE of the 12 FTE prevention
+allocation agreed in week 4, spread across owning teams. The 58 highs follow under the 90-day service
+level.
 
 The estimates are rough on purpose. Once inventoried, remediation is a quantity that can be planned
 inside a quality program rather than competing with it.
@@ -315,7 +339,7 @@ The second decision is how to organize:
 | Under about 30 engineers, no security staff | Director-owned policy, one part-time security lead, external testing |
 | 50 to 150 engineers, weak ownership | Small central function plus champions with protected time |
 | 50 to 150 engineers, strong pipelines | Controls built into the standard pipeline, champions, central design review for high risk |
-| Regulated or high-value target | Dedicated AppSec team with review authority, plus champions |
+| Regulated or high-value target | Dedicated application security (AppSec) team with review authority, plus champions |
 
 The third is SLSA targets by tier. A reasonable default: tier 1 to Build L2 and Source L3 within a
 year, tier 2 to Build L1, tier 3 to whatever the standard pipeline gives. Source L4 suits code where
@@ -395,7 +419,7 @@ level with exception count, and secrets and certificates with owner and alerting
 Chapter 53 owns enterprise security strategy, regulation, and board-level risk. This section notes
 only how the engineering view shifts on the way up.
 
-**From exposure to assurance.** A director manages exposure. A CTO must also provide evidence that
+**From exposure to assurance.** A director manages exposure. A chief technology officer (CTO) must also provide evidence that
 customers, auditors, and the board can rely on. The same systems serve both if they produce evidence
 as a side effect; assurance assembled by hand does not scale.
 
@@ -458,7 +482,7 @@ migration to a real pipeline, still under way at day 90.
 **The webhook keys.** Versioning the signature format after INC-418 revealed that webhook signing keys
 had never been rotated, and one was among the live production credentials in git history. Payments and
 Integrations ran a dual-key rotation with every customer integration. It took three weeks, not three
-days. Afterward Elena Sokolova's team asked to own webhooks formally, with time to migrate it off
+days. Afterward the team of Elena Sokolova (Payments and Integrations manager) asked to own webhooks formally, with time to migrate it off
 scripts.
 
 **Severity pressure.** In week 8, open criticals had fallen from 11 to 4. Joon Park's sample audit
@@ -506,7 +530,7 @@ assumptions, and say which single change would raise the most tier 1 components 
 
 ### Applied Leadership
 
-**A1.** Marcus Oyelaran's Billing team owns two Core criticals that need a framework upgrade estimated
+**A1.** The Billing team of Marcus Oyelaran (Billing manager) owns two Core criticals that need a framework upgrade estimated
 at 30 engineer-days. He argues that the vulnerable paths are internal-only, that his team already
 carries the largest prevention allocation, and that the upgrade risks another ledger incident. Decide
 what you approve (fix, exception, or compensating control), what evidence you need first, and how you
@@ -522,13 +546,13 @@ what you will claim, what you will describe as in progress, and what you will de
 
 ### Executive Decision-Making
 
-**X1.** The CFO proposes buying a commercial application security platform for $180,000 a year, most
+**X1.** The chief financial officer (CFO) proposes buying a commercial application security platform for $180,000 a year, most
 of the remaining discretionary tooling budget, arguing it would "solve the questionnaire problem". The
 alternative is to spend the quarter on pipeline consolidation and SBOM generation with existing tools.
 As director, recommend one in a memo to the CTO, with what you give up and what would change your mind.
 
 **X2.** After reading about a supply-chain attack at another company, a board member asks Victor
-Lindqvist to commit that "all Northstar software will be SLSA Level 4 by year end". Write the CTO's
+Lindqvist (CTO) to commit that "all Northstar software will be SLSA Level 4 by year end". Write the CTO's
 response in the meeting (no more than 150 words) and a follow-up note proposing what the board should
 track instead.
 
@@ -562,12 +586,12 @@ track instead.
   statement that the Core is not a checklist.
 - [Souppaya, Scarfone, and Dodson, 2022](../../references/bibliography.md#nist2022ssdf),
   [NIST, SSDF project](../../references/bibliography.md#nist-ssdf-project), and
-  [NIST, 2025](../../references/bibliography.md#nist2025ssdf-draft). The SSDF, its practice groups,
-  and the 1.2 draft.
+  [NIST, 2025](../../references/bibliography.md#nist2025ssdf-draft). The SSDF (version 1.1), its
+  practice groups, and the version 1.2 revision, released as an initial public draft in December 2025.
 - [SLSA, v1.2](../../references/bibliography.md#slsa-spec). Build and Source tracks.
 - [NTIA, 2021](../../references/bibliography.md#ntia2021sbom) and
-  [CISA, 2025](../../references/bibliography.md#cisa2025sbom-draft). SBOM minimum elements and the
-  draft update.
+  [CISA, 2025](../../references/bibliography.md#cisa2025sbom-draft). SBOM minimum elements, and
+  CISA's updated minimum elements, a draft for comment published in August 2025.
 - [CISA, KEV catalog](../../references/bibliography.md#cisa-kev). Exploitation evidence for
   prioritization.
 - [Braiterman et al., 2020](../../references/bibliography.md#threatmodeling-manifesto2020). Threat

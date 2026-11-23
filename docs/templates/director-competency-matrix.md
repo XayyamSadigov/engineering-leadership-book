@@ -1,11 +1,13 @@
 # Director competency matrix
 
-**Used in:** Chapter 4 (the leadership ladder), Chapter 40 (the director's job).
+**Used in:** [Chapter 4](../parts/01-foundations/04-the-leadership-ladder.md) (the leadership ladder),
+[Chapter 40](../parts/09-engineering-directorship/40-the-directors-job.md) (the director's job).
 **Owner:** the director (self-assessment) and the director's manager (assessment); the two are
 compared, not averaged.
 **Cadence:** self-assessment every two quarters; formal assessment once a year.
 
-A director leads 50 to 150 engineers through managers. Their output is an organization whose
+A director leads 50 to 150 engineers through managers. This matrix rates eight competencies on
+evidence, for a self-assessment and the manager's assessment. Their output is an organization whose
 system produces the outcome, so the matrix assesses that system and the director's part in it,
 not the director's personal heroics. Each cell describes evidence someone else could check: a
 document, a decision record, a measure, a changed behavior in a manager. A competency without
@@ -24,7 +26,9 @@ evidence is rated "No evidence", never filled with impression.
 5. Share the self-assessment with your manager before their assessment, and discuss the gaps
    between the two, not the average.
 
-## The matrix
+## Template
+
+The matrix:
 
 | Competency | Not yet | Solid | Strong |
 |---|---|---|---|
@@ -33,7 +37,7 @@ evidence is rated "No evidence", never filled with impression.
 | **3. Developing managers** | Fixes managers' problems for them; no written expectations | Each manager has written expectations, feedback on evidence, and a development goal | Managers handle problems that used to escalate; a successor is identified for each critical role |
 | **4. Talent system** | Promotions and pay decided case by case; attrition read from HR dropdowns | Calibrated levels and promotions; structured hiring; attrition analyzed by cause | Regretted attrition and pay gaps fall; hiring outcomes are tracked and improve |
 | **5. Organization design and ownership** | Ownership gaps and spans unknown or tolerated | Every tier 1 component owned; spans and dependencies measured; changes carry a transition plan | Structure changes ahead of strain, with triggers stated in advance |
-| **6. Capacity and portfolio** | Commitments made without a capacity model; slips explained afterwards | One capacity model agreed with product and the CTO, updated monthly, with a pessimistic case | Allocation shifts by evidence during the quarter without renegotiating trust |
+| **6. Capacity and portfolio** | Commitments made without a capacity model; slips explained afterwards | One capacity model agreed with product and the CTO, updated monthly, with a cautious case | Allocation shifts by evidence during the quarter without renegotiating trust |
 | **7. Technical decision governance** | Cross-team decisions made in chat or by whoever builds first | Decision owners and rights defined; decisions recorded; standards have owners and deadlines | Decisions hold; reversals are deliberate and cheap |
 | **8. Executive and cross-functional partnership** | Advocates for engineering; surprises peers with bad news | Brings trade-offs early, in the peers' terms; answers incidents with mechanism, not names | Peers bring problems to the director before deciding |
 
@@ -55,10 +59,18 @@ assessment:
       check_date: ""
 ```
 
-## Example: Northstar director, self-assessment at the end of quarter 2
+## Example: Northstar, director self-assessment at the end of quarter 2
 
-**Fictional.** Evidence is limited to the [Northstar first quarter](../case-studies/northstar/first-quarter.md)
-record, including its quarter 2 results table (weeks 14–26).
+!!! info "Northstar so far"
+    Week 26 of the Engineering Director's first year at Northstar Technologies, a fictional company with
+    80 engineers under six managers. Quarter 1 changed ownership, severity definitions, and the release
+    train; quarter 2 delivered the renewal features. The director reports to Victor Lindqvist (CTO). See
+    the [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+
+Evidence comes from [Northstar's first-year record](../case-studies/northstar/first-quarter.md) up to
+the [quarter 2 results](../case-studies/northstar/first-quarter.md#quarter-2-results). People named:
+Daniel Cho, Priya Raman, Elena Sokolova, and Tom Becker are engineering managers; Bram Verhoeven and
+Tomasz Wierzbicki are engineers; Amara Okafor is the CPO.
 
 | Competency | Rating | Evidence | Contrary evidence |
 |---|---|---|---|
@@ -67,8 +79,8 @@ record, including its quarter 2 results table (weeks 14–26).
 | 3. Developing managers | Solid | Time budget with Priya Raman in week 2 (hands-on capped at 8 hours); six managers trained as incident commanders; every kept corrective action has a manager owner; Elena Sokolova facilitating another team's health check | Tom Becker's plan for Bram Verhoeven was drafted from a reconstruction, after a year of "meets expectations"; succession not yet mapped |
 | 4. Talent system | No evidence (first calibrated cycle due in quarter 3) | Ladder rewrite drafted; first calibrated cycle set for the start of quarter 3; six underpaid US Senior Engineers identified; structured hiring pilot proposed | Tomasz Wierzbicki reported an outside offer 20 percent above base in week 20, before any pay correction landed |
 | 5. Design and ownership | Solid | Week 4 ownership decisions (core/customer, core/scheduler, auth-svc, webhooks); span and dependency analysis; Billing-owned order-to-invoice contract instead of moving people | core/permissions still under an exemption; document-store orphaned; Orders left with about 2.6 engineers of free capacity |
-| 6. Capacity and portfolio | Strong | Capacity model agreed in week 4 with Victor Lindqvist and Amara Okafor, with a pessimistic case; both renewal commitments on track at day 90; accounting integration live week 19; bulk ordering in final acceptance at week 26 | Prevention spend by team was allocated, not tracked |
-| 7. Decision governance | Not yet | Standard owners with a 10-working-day decision rule | Migration check slipped from week 7 to week 11 and a Sev1 came first; ADR-0001 opened with nobody's decision rights mapped, while the CTO gave a contrary instruction in passing |
+| 6. Capacity and portfolio | Strong | Capacity model agreed in week 4 with Victor Lindqvist and Amara Okafor, with a cautious case; both renewal commitments on track at day 90; accounting integration live week 19; bulk ordering in final acceptance at week 26 | Prevention spend by team was allocated, not tracked |
+| 7. Decision governance | Not yet | Standard owners with a 10-working-day decision rule | Migration check slipped from week 7 to week 11 and a Sev1 came first; ADR-0001 (how integrations read ledger data) opened with nobody's decision rights mapped, while the CTO gave a contrary instruction in passing |
 | 8. Executive partnership | Solid | Quarter 1 dip agreed with the CPO in advance; answered the CEO's week 9 "who made the change" with the mechanism | QA transition announced in week 10, after anxiety had spread; the CFO's output-per-engineer request still open |
 
 **Development goals for quarters 3 and 4:**
@@ -94,3 +106,19 @@ record, including its quarter 2 results table (weeks 14–26).
 2. Where did the director act personally when a manager should have?
 3. Which competency, if it stayed at its current rating for a year, would most endanger the mandate?
 4. What will the director stop doing to make room for the two development goals?
+
+## Evidence and references
+
+The director's job is [Chapter 40](../parts/09-engineering-directorship/40-the-directors-job.md); the
+ladder of roles is Chapter 4. The CTO version is the [CTO competency matrix](cto-competency-matrix.md).
+
+- [Grove, 1983](../references/bibliography.md#grove1983high): a manager's output is the output of the
+  organization they influence (**expert opinion**), which is why the matrix rates the system, not
+  heroics.
+- [Larson, 2019](../references/bibliography.md#larson2019elegant): management as system design
+  (**expert opinion**).
+- [Williamson, 1967](../references/bibliography.md#williamson1967hierarchical): the classic model of
+  information lost across layers, behind competency 2 (own signal sources).
+
+The competencies and level descriptions are **this book's recommendation**; no study validates a
+director competency model.

@@ -2,17 +2,19 @@
 
 Sooner or later someone senior asks how productive engineering is, and wants one number. This chapter
 explains what the best-known measurement frameworks measure, how their evidence was produced, how every
-metric gets gamed, and why the book refuses to score individual engineers with delivery metrics. It owns
-DORA, SPACE, developer experience, and metric gaming in general. Chapter 16 owns flow and lead time from
-commitment to customer, [Chapter 19](../05-engineering-quality/19-defining-measuring-and-owning-quality.md)
-the quality measures, [Chapter 27](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)
-the quality scorecard, Chapter 38 scorecards in the operating system, Chapter 9 individual performance,
-and Chapter 54 claims about AI and productivity.
+metric gets gamed, and why the book refuses to score individual engineers with delivery metrics. Related
+topics have their own chapters. They are flow and lead time from commitment to customer (Chapter 16), quality
+measures ([Chapter 19](../05-engineering-quality/19-defining-measuring-and-owning-quality.md)), the
+quality scorecard ([Chapter 27](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)),
+scorecards in the operating system (Chapter 38), individual performance (Chapter 9), and claims about AI
+and productivity (Chapter 54).
 
 ## Why This Matters
 
-**For a team**, measurement is a feedback loop: a team that sees its lead time and change fail rate can
-tell whether last month's pipeline work helped.
+**For a team**, measurement is a feedback loop. A team that sees its
+[change lead time](../../glossary.md#lead-time) (commit to running in production) and its
+[change failure rate](../../glossary.md#change-failure-rate) (share of deployments that fail) can tell
+whether last month's pipeline work helped.
 
 **For an organization of 50 to 150 engineers**, measurement is how a director sees work they no longer
 touch. It is also where damage starts: numbers useful as feedback get copied into slides, compared across
@@ -52,8 +54,8 @@ quickly changes reach users, not whether the changes were worth making.
 The second idea is the **gaming loop**. Donald Campbell is usually credited with the observation that an
 indicator relied on for decisions comes under pressure that bends both the number and the activity it
 was meant to track ([Campbell, 1979](../../references/bibliography.md#campbell1979assessing)). The popular
-version, "when a measure becomes a target", is called Goodhart's law. The book credits both for the idea
-only; the exact wording of neither has been verified against a primary text (research gap G7).
+version, "when a measure becomes a target", is called Goodhart's law. The book credits both for the idea,
+not for any exact wording.
 
 ```mermaid
 flowchart TD
@@ -76,8 +78,8 @@ the other, and keep learning measures apart from judging ones.
 ### What the DORA metrics measure
 
 DORA (DevOps Research and Assessment, now part of Google Cloud) publishes the most widely used delivery
-metrics. Its current guide, last updated January 5, 2026 and re-checked for this chapter, lists **five**
-metrics in two groups, not the "four keys" many dashboards still show
+metrics, the [DORA metrics](../../glossary.md#dora-metrics). Its current guide (January 2026) lists
+**five** metrics in two groups, not the "four keys" many dashboards still show
 ([DORA, metrics guide](../../references/bibliography.md#dora-metrics-guide)):
 
 | Group | Metric | What it measures |
@@ -85,7 +87,7 @@ metrics in two groups, not the "four keys" many dashboards still show
 | Throughput | Change lead time | Time from commit to version control to deployment in production |
 | Throughput | Deployment frequency | Deployments over a period, or time between them |
 | Throughput | Failed deployment recovery time | Time to recover from a deployment that needs immediate intervention |
-| Instability | Change fail rate | Share of deployments needing immediate intervention, such as a rollback or hotfix |
+| Instability | Change fail rate (DORA's term; this book says change failure rate) | Share of deployments needing immediate intervention, such as a rollback or hotfix |
 | Instability | Deployment rework rate | Share of deployments that are unplanned and caused by a production incident |
 
 Three properties matter. The metrics describe **a delivery system**: the guide applies them to one
@@ -124,20 +126,30 @@ So when the guide states that speed and stability are not trade-offs, read it as
 self-selected organizations, those reporting fast delivery also tend to report stable delivery. That is
 good evidence that the trade-off is not a law. It is not evidence that deploying more often will reduce
 *your* failures; the mechanism (smaller batches are easier to test, diagnose, and roll back) is plausible
-and has to be tested in your own data. Disputed claim D2 records the book's position.
+and has to be tested in your own data. The evidence on this is contested, and that is the book's
+position.
 
 ### SPACE: a checklist of dimensions
 
-The SPACE article, by Nicole Forsgren, Margaret-Anne Storey, and colleagues at GitHub and Microsoft
-Research, argues in its abstract that developer productivity is more than an individual's activity or the
-efficiency of engineering systems, and cannot be captured by one metric or dimension
-([Forsgren et al., 2021](../../references/bibliography.md#forsgren2021space)). Its full text could not be
-fetched for this book, so the dimension names come from two secondary pages: a post by Forsgren naming
-Satisfaction, Performance, Activity, Communication, and Efficiency
-([Forsgren, 2023](../../references/bibliography.md#forsgren2023navigating)), and a GitHub summary giving
-the long forms (satisfaction and well-being, performance, activity, communication and collaboration,
-efficiency and flow), which also advises using at least three dimensions and calls activity the
-most common and most misused measure ([Alwell, 2021](../../references/bibliography.md#alwell2021measuring)).
+[SPACE](../../glossary.md#space) says developer productivity has several dimensions and cannot be
+captured by one metric. The article, by Nicole Forsgren, Margaret-Anne Storey, and colleagues at GitHub
+and Microsoft Research, argues in its abstract that productivity is more than an individual's activity
+or the efficiency of engineering systems
+([Forsgren et al., 2021](../../references/bibliography.md#forsgren2021space)). A post by Forsgren names
+the five dimensions ([Forsgren, 2023](../../references/bibliography.md#forsgren2023navigating)). A GitHub
+summary gives their long forms, advises using at least three, and calls activity the most common and most
+misused measure ([Alwell, 2021](../../references/bibliography.md#alwell2021measuring)).
+
+The table makes each dimension usable. The measures and questions are **this book's illustration**, not
+part of SPACE:
+
+| Dimension | What it asks | One system measure | One survey question | How it is gamed |
+|---|---|---|---|---|
+| Satisfaction and well-being | Are people fulfilled, healthy, and likely to stay? | After-hours pages per person; attrition | "How likely are you to be working here in a year?" | Managers lobbying for answers |
+| Performance | Did the work achieve its outcome? | Change failure rate; customer-reported defects | "How often does work you ship do what it was meant to?" | Redefining the outcome after the fact |
+| Activity | How much work was done? | Deployments or merged pull requests, team level only | Rarely worth asking | Splitting work into trivial pieces |
+| Communication and collaboration | How well do information and work move between people and teams? | Review wait; wait on other teams | "How easy is it to get help from another team?" | Rubber-stamp reviews to cut the wait |
+| Efficiency and flow | Can people make progress without interruption and delay? | Change lead time; pipeline duration; unplanned work share | "How often are you interrupted during focus time?" | Starting the clock late; relabeling interrupts |
 
 Read SPACE as a **checklist against blind spots**. A set that is all activity (commits, pull requests,
 tickets) misses burnout and whether work reaches anyone; a set that is all satisfaction misses whether
@@ -146,11 +158,11 @@ improving one dimension at another's expense becomes visible.
 
 ### Developer experience (DevEx)
 
-A 2023 article by Abi Noda, Margaret-Anne Storey, Nicole Forsgren, and Michaela Greiler frames developer
-experience as how developers experience their daily work and its friction, and proposes measuring it by
-combining developer feedback with engineering-system data
-([Noda et al., 2023](../../references/bibliography.md#noda2023devex), abstract). Its full text was not
-readable either; the first author's company names the three dimensions as **feedback loops** (how quickly
+A 2023 article by Abi Noda, Margaret-Anne Storey, Nicole Forsgren, and Michaela Greiler frames
+[developer experience](../../glossary.md#developer-experience-devex) as how developers experience their
+daily work and its friction. It proposes measuring it by combining developer feedback with
+engineering-system data ([Noda et al., 2023](../../references/bibliography.md#noda2023devex)). The first
+author's company names the three dimensions as **feedback loops** (how quickly
 and well tools and people respond), **cognitive load** (the mental effort to complete tasks and navigate
 systems), and **flow state** (focus without interruption)
 ([DX, DevEx report](../../references/bibliography.md#dx-devex-report)). That company sells this kind of
@@ -165,8 +177,7 @@ logs, and the system data keeps the survey from becoming a popularity poll.
 ### The 2023 dispute about measuring individuals
 
 In August 2023 McKinsey published "Yes, you can measure software developer productivity"
-([Gnanasambandam et al., 2023](../../references/bibliography.md#mckinsey2023productivity)), read for this
-book from an archived copy of the original page. It proposes building on DORA and SPACE with
+([Gnanasambandam et al., 2023](../../references/bibliography.md#mckinsey2023productivity)). It proposes building on DORA and SPACE with
 "opportunity-focused" measures: time in the inner loop (coding, building, unit testing) versus the outer
 loop (integration, release, deployment), a benchmark survey, a talent capability score, and **contribution
 analysis**, which assesses individuals' contributions to a team's backlog from tools such as Jira,
@@ -183,8 +194,8 @@ score, used in performance reviews, and rolled up to managers, after which press
 the company knowing less than before. They also concede the executive's point: leaders who refuse to
 answer will have someone else's answer imposed.
 
-Neither side offers controlled evidence; the book labels both **expert opinion**. Disputed claim D1
-records the position taken below.
+Neither side offers controlled evidence; the book labels both **expert opinion**. The question is
+contested, and the next section states the book's position.
 
 ### How each metric is gamed, and its pair
 
@@ -192,23 +203,24 @@ Gaming is rarely fraud; it is mostly reclassification, splitting, timing, and se
 
 | Metric | How it is gamed | Pair it with |
 |---|---|---|
-| Deployment frequency | Splitting changes into trivial deploys; deploying empty or configuration-only changes | Lead time per change; change fail rate |
+| Deployment frequency | Splitting changes into trivial deploys; deploying empty or configuration-only changes | Lead time per change; change failure rate |
 | Change lead time | Starting the clock late (squashing commits before merge); doing easy work first | Commitment-to-delivery lead time (Chapter 16); age of oldest open work |
-| Change fail rate | Not linking failures; calling them "configuration issues"; deploying less | Deployment frequency; audited incidents with no linked deployment |
+| Change failure rate | Not linking failures; calling them "configuration issues"; deploying less | Deployment frequency; audited incidents with no linked deployment |
 | Failed deployment recovery time | Closing the incident when a workaround starts; opening a new one for the rest | Customer-reported duration; reopened incidents |
 | Deployment rework rate | Labeling an incident fix as planned work | Incidents followed by a deployment within a day |
 | Pull requests or commits per person | Splitting work; avoiding review, pairing, and incident work | Do not use for individuals |
 | Survey scores | Managers lobbying for answers; strategic answering once scores matter | Response rate; system data on the same friction |
 | Incident counts by severity | Rating incidents below the tracked level | Customer-detected share; [severity audit](../05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#severity-definitions-that-resist-reclassification) |
 
-These are the general rules for delivery measurement; Chapter 27 applies them to quality in its
-[scorecard rules](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md#scorecard-design-rules): prefer system data to human classification and audit what
+These are the general rules for delivery measurement, and Chapter 27 applies them to quality in its
+[scorecard rules](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md#scorecard-design-rules).
+Prefer system data to human classification and audit what
 remains; report distributions, not only medians; prefer measures built from many events; and publish the
 definition, its weaknesses, and its owner next to the number.
 
 ### Why the book refuses individual productivity scoring
 
-The book's position (disputed claim D1): **measure delivery and developer experience at team and system
+The book's position on a contested question: **measure delivery and developer experience at team and system
 level, for improvement; do not score individual engineers with delivery or activity metrics.** This is
 **this book's recommendation**, for five reasons:
 
@@ -228,6 +240,12 @@ behavior (Chapter 9); delivery data can open a conversation, not deliver the ver
 
 ## Engineering Organization Example
 
+!!! info "Northstar so far"
+    This example uses the baseline quarter, before the director arrived: 30 Sev1 and Sev2 incidents (the
+    two highest severity levels), 34 percent of capacity on unplanned work, and Core shipping on a
+    two-week release train. The case study below moves to the start of quarter 2 (week 14). See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
 This example is **illustrative**. It uses Northstar's fictional baseline to show what a "deployments per
 engineer" league table would say. Deployments per month are from `teams.csv`; quarterly figures assume
 three equal months.
@@ -244,8 +262,9 @@ three equal months.
 The intervals are Wilson score intervals, a standard way to state the uncertainty of a proportion from a
 small count. Four readings:
 
-**The ranking measures architecture.** Orders and Billing ship most changes through the Core train, which
-leaves twice a month. Their low counts describe the train; ranking their engineers lower would blame them
+**The ranking measures architecture.** Orders and Billing ship most changes through the Core
+[release train](../../glossary.md#release-train), a release that left on a fixed schedule twice a month
+carrying every ready change. Their low counts describe the train; ranking their engineers lower would blame them
 for a system they did not choose.
 
 **The denominator is wrong.** Seven of Platform Operations' 12 people are QA engineers who do not deploy.
@@ -386,18 +405,18 @@ and every later productivity claim, including the AI tool claims of Chapter 54, 
 ## Case Study
 
 This case is **fictional**. It describes how Northstar measures delivery at baseline and a decision the
-reader faces at the start of the director's second quarter. The canonical record is in the
-[baseline data](../../case-studies/northstar/baseline-data.md) and
-[the director's first quarter](../../case-studies/northstar/first-quarter.md).
+reader faces at the start of the director's second quarter. Quarter 1 cut Sev1 and Sev2 incidents from
+30 to 21 and moved Core to weekly releases
+([the director's first quarter](../../case-studies/northstar/first-quarter.md)).
 
 **How delivery is measured today.** Deployment counts and lead times come from pipeline logs in four CI
 systems, joined by hand; the four shell-script services log nothing, so their numbers are estimates from
 chat history. Change failure rate links releases to hotfixes, rollbacks, and incidents within 72 hours,
 manually, so unlinked failures are missed. Unplanned work comes from a two-week sample of ticket types.
-Added by this chapter: one Platform Operations infrastructure engineer spends about two days a month
-assembling these numbers in a spreadsheet; before the director arrived, the only engineering figures in
-the CEO's monthly board pack were committed roadmap items delivered and the Sev1 and Sev2 count; and no
-developer survey had been run in the previous two years.
+One Platform Operations infrastructure engineer spends about two days a month assembling these numbers in
+a spreadsheet. Before the director arrived, the only engineering figures in the CEO's monthly board pack
+were committed roadmap items delivered and the Sev1 and Sev2 count. No developer survey had been run in
+the previous two years.
 
 The first quarter's headline delivery figures (Core change failure rate from 31 to 22 percent) came from
 the same hand-joined data, and were reported with that caveat.
@@ -418,10 +437,10 @@ and offers:
 | Quality | Chapter 27's scorecard pairs | Organization, team | Already running |
 | Friction | Review wait (21 working hours at baseline), Core pipeline duration (74 minutes), main-branch red time, failures unrelated to the change | Repository | Code host and CI |
 | Experience | Twice-yearly survey: feedback loops, cognitive load, flow, satisfaction | Team, at least five respondents | New; first run in quarter 2 |
-| Investment | Capacity by category: features, prevention (12 FTE), unplanned work | Organization | Planning tool, time sampling |
+| Investment | Capacity by category: features, [prevention](../../glossary.md#prevention-allocation) (12 [FTE](../../glossary.md#fte), full-time equivalent engineers), unplanned work | Organization | Planning tool, time sampling |
 | Excluded | Per-engineer counts; story points across teams; survey scores in reviews | | Written into the access rules |
 
-The director estimates (another addition) about six engineer-weeks of Platform Operations time, paid from
+The director estimates about six engineer-weeks of Platform Operations time, paid from
 the prevention allocation, to build the shared deployment-event store, which retires the monthly hand join.
 
 Refusing alone does not win the conversation. The director must show that the investment view answers
@@ -445,13 +464,13 @@ of daily deployments for every team." Using what you know about how the DORA res
 what the evidence does and does not support, and propose how your organization could test the claim in its
 own data.
 
-**F3.** Northstar wants to report change fail rate by team every quarter. Using the team table in this
+**F3.** Northstar wants to report change failure rate by team every quarter. Using the team table in this
 chapter, explain which comparisons between teams one quarter of data can support and which it cannot. Then
 propose how the report should present the numbers so that readers do not over-interpret them.
 
 ### Applied Leadership
 
-**A1.** Daniel Cho (Customer Experience) proposes adding "pull requests merged per engineer per week" to his
+**A1.** Daniel Cho (Customer Experience's engineering manager) proposes adding "pull requests merged per engineer per week" to his
 team's dashboard "just for visibility, not for evaluation." Two of his senior engineers spend much of their
 time reviewing and coordinating mobile releases. Decide whether to allow it, and write what you would say to
 Daniel, including what you would offer instead.
@@ -468,10 +487,10 @@ what you would change in the measurement design.
 
 ### Executive Decision-Making
 
-**X1.** You are the director. Write the reply to Rajiv Menon's request for an output-per-engineer figure by
+**X1.** You are the director. Write the reply to the request from Rajiv Menon (CFO) for an output-per-engineer figure by
 team (no more than one page). It must answer the board's underlying question, explain in business terms why
 you will not provide a per-engineer number, propose what you will provide and when, and state what you need
-from him. Assume Helena Marsh has already said she supports his request.
+from him. Assume Helena Marsh (CEO) has already said she supports his request.
 
 **X2.** A vendor offers Northstar an engineering-analytics platform for $90,000 a year that would connect to
 all four CI systems, the code hosts, and the planning tool within a month, replacing the planned six

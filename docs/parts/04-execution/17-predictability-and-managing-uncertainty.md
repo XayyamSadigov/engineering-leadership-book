@@ -7,8 +7,8 @@ unknowns are resolved first. The running example is Northstar Technologies, the 
 the [case study](../../case-studies/northstar/index.md), whose committed roadmap delivered 7 of 17
 items in the promised quarter.
 
-Chapter 15 owns planning methods and prioritization, Chapter 16 owns flow (lead time, work in
-progress, dependencies, unplanned work), and Chapter 46 owns negotiating with stakeholders. This
+Planning methods and prioritization are in Chapter 15, flow (lead time, work in progress,
+dependencies, unplanned work) in Chapter 16, and negotiating with stakeholders in Chapter 46. This
 chapter asks what you can promise from a prioritized backlog and a measured delivery system.
 
 ## Why This Matters
@@ -111,9 +111,9 @@ place the new project in that distribution
 causes of forecast error that need different remedies: **optimism bias**, an honest cognitive error,
 and **strategic misrepresentation**, deliberately low numbers made to win approval.
 
-Its example is the UK Department for Transport, which from 2004 added "optimism bias uplifts" to
-project budgets from the overruns of past projects of the same type, larger as tolerance for overrun
-shrinks: for roads, 15 percent for a 50 percent chance of staying within budget, 45 percent for a 90
+Its example is the UK Department for Transport. From 2004 it added "optimism bias uplifts" to project
+budgets, based on the overruns of past projects of the same type and larger as tolerance for overrun
+shrinks. For roads, the uplift was 15 percent for a 50 percent chance of staying within budget, 45 percent for a 90
 percent chance. This **research finding** comes from public infrastructure; the method transfers to
 software, the numbers do not.
 
@@ -127,8 +127,8 @@ features grow after kickoff?" are outside-view questions.
 Throughput history is the most useful reference class a manager has, because it already contains
 everything that slowed the team: interrupts, absences, review queues, failed releases.
 
-A **Monte Carlo simulation**, meaning a random experiment repeated many times to see the spread of
-results, turns that history into a forecast for a backlog of N items:
+A **[Monte Carlo simulation](../../glossary.md#percentile-forecast-and-monte-carlo-simulation)**,
+meaning a random experiment repeated many times to see the spread of results, turns that history into a forecast for a backlog of N items:
 
 ```mermaid
 flowchart TD
@@ -145,9 +145,26 @@ flowchart TD
 
 Each trial treats the future as a random reshuffle of past weeks. Thousands of trials give a
 distribution: the 50th percentile is the date hit half the time, the 85th the date hit 85 times in
-100. The same history answers the reverse question: how many items will be done by a fixed date. Vacanti's practitioner guide to
-flow forecasting covers this method and warns against forecasting from averages
-([Vacanti, 2018](../../references/bibliography.md#vacanti2018when)).
+100. The same history answers the reverse question: how many items will be done by a fixed date.
+Vacanti's practitioner guide to flow forecasting covers this method and warns against forecasting from
+averages ([Vacanti, 2018](../../references/bibliography.md#vacanti2018when)).
+
+!!! tip "Running a Monte Carlo forecast in a spreadsheet"
+    1. Put the weekly throughput history in one column, say `A1:A26`.
+    2. In a new sheet, make row 1 one trial. In `B1` enter
+       `=INDEX(History!$A$1:$A$26, RANDBETWEEN(1, 26))`, the items finished in a randomly drawn
+       past week. In `C1` enter `=B1 + INDEX(History!$A$1:$A$26, RANDBETWEEN(1, 26))`, a running
+       total, and fill it right for 40 or more columns (one per future week).
+    3. In column `A` of the trial row, count the weeks taken to reach the backlog size N:
+       `=COUNTIF(B1:AO1, "<" & N) + 1`.
+    4. Fill the row down for 1,000 to 10,000 trials. Each recalculation draws new weeks.
+    5. Read the forecast: `=PERCENTILE(A1:A10000, 0.85)` is the 85th percentile in weeks; repeat for
+       0.5 and 0.95.
+
+    For "how many by week W", read each trial's running total for week W and take a low percentile
+    (the 5th for 95 percent confidence, the 15th for 85). Free templates and tools that do the same exist; the logic is all here.
+    Throughput counts make sense only if items are sliced to a broadly similar size; agree a slicing
+    rule (for example, nothing over a week of work) before you collect the history.
 
 A plan built on average throughput lands near the median, so it is late about half the time: the
 arithmetic behind the loop in the mental model. The method needs no size estimate per item, only a
@@ -163,7 +180,7 @@ similar size mix to the past. State its assumptions with every forecast:
 
 McConnell separates an **estimate** (a prediction), a **target** (a business objective, possibly
 unachievable), and a **commitment** (a promise of defined functionality at a stated quality by a
-date), and notes that executives asking for an estimate often want a commitment or a plan to meet a
+date). He notes that executives asking for an estimate often want a commitment or a plan to meet a
 target ([McConnell, 2006](../../references/bibliography.md#mcconnell2006software)). Jørgensen's review
 makes the research-side point: bid, planned effort, and most-likely effort serve conflicting goals
 and are often not kept apart ([Jørgensen, 2004](../../references/bibliography.md#jorgensen2004review)).
@@ -205,10 +222,9 @@ as wide at the halfway point as at the start, the hard questions were deferred.
 
 When a dated item falls behind, the usual proposed remedy is more people. **Brooks's law**, as it is
 commonly stated, holds that adding people to a late software project makes it later
-([Brooks, 1995](../../references/bibliography.md#brooks1995mythical)). Its wording and Brooks's
-qualifications were verified for this book only through a secondary source, which reports that Brooks
-called it an oversimplification and explained it by ramp-up time, communication overhead growing with
-team size, and tasks that cannot be divided.
+([Brooks, 1995](../../references/bibliography.md#brooks1995mythical)). A secondary account reports
+that Brooks called it an oversimplification and explained it by ramp-up time, communication overhead
+growing with team size, and tasks that cannot be divided.
 
 Treat it as **expert opinion** that names mechanisms. Adding people helps when the work divides
 cleanly, the newcomers know the code, and enough time remains for ramp-up to pay back. It hurts late,
@@ -217,10 +233,15 @@ is usually faster than moving people in.
 
 ## Engineering Organization Example
 
-This example is **illustrative**: the throughput and scope numbers are chapter additions, and the
-canon records only that the renewal features were on track at day 90
-([first quarter](../../case-studies/northstar/first-quarter.md)). It is the calculation a director
-could run on arrival, with data that existed on day one.
+!!! info "Northstar so far"
+    Week 1, the director's first day. In the baseline quarter Northstar delivered 7 of its 17 committed
+    roadmap items on time. Two renewal features, on which $9M of annual recurring revenue depends, are due in quarter 2:
+    the accounting integration in week 19 and bulk ordering in week 26. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
+This example is **illustrative**: the throughput and scope numbers are invented for it. It is the
+calculation a director could run on arrival, with data that existed on day one. (Northstar's record
+shows only that both renewal features were on track at day 90.)
 
 Bulk ordering, owned by Orders, is committed to a renewal customer for the end of quarter 2 (week 26
 from the director's first day) and broken into 44 backlog items. Orders' recent history:
@@ -236,7 +257,8 @@ Assumptions, stated:
 
 - Bulk ordering is staffed by five Orders engineers and two Customer Experience web engineers, half
   of Orders' headcount, so it gets about half of Orders' historical planned throughput.
-- Orders' canonical 10 percent prevention allocation, assumed to continue into quarter 2, scales
+- Orders' 10 percent [prevention allocation](../../glossary.md#prevention-allocation) (capacity
+  reserved for removing the causes of incidents), assumed to continue into quarter 2, scales
   throughput by 0.9. The combined factor is 0.45, about 2.3 items a week.
 - Unplanned work is excluded from the counts; its effect is already in how few planned items got done.
 - Orders' last four features grew 15 to 35 percent in item count after starting; 25 percent growth
@@ -252,17 +274,20 @@ Monte Carlo simulation with 10,000 trials, each week drawn at random from the 26
 | Weeks to finish 55 items | 24 | 27 | 28 |
 | Items finished by week 26 (at least) | 60 | 55 | 52 |
 
-Three readings matter. First, the single-point plan sits within a week of the simulation's
-median, as it should; the simulation adds what the median means, a 50 percent chance. Second, the 44 items are
+Read the last row as confidence of finishing at least that many: a 95 percent chance of at least 52
+items, but only a 50 percent chance of 60.
+
+Three readings matter. First, the single-point plan sits within a week of the simulation's median, as
+it should; the simulation adds what the median means, a 50 percent chance. Second, the 44 items are
 very likely done by week 26, but the 55-item version that history says to expect is done in only
 about five trials in six: the risk to the renewal is scope growth, not throughput. Third, the
 simulation is narrower than reality. It assumes independent weeks and an unchanged team, yet two
 quality engineers join Orders during the quarter, and bulk upload has a known recurring failure
-(INC-421 dropped lines beyond row 500). Read the range as a minimum.
+(INC-421, a bulk-upload failure that dropped lines beyond row 500). Read the range as a minimum.
 
 What the director can do: agree the 44 items in writing as the contractual scope with Amara Okafor
-and the customer; label growth a target; publish the forecast weekly; and put the riskiest work
-first, a one-week spike on pricing large orders and a walking skeleton from upload through
+and the customer; label growth a target; and publish the forecast weekly. Then put the riskiest work
+first: a one-week spike on pricing large orders, and a walking skeleton from upload through
 order-capture, pricing-svc, and invoicing, so a surprise surfaces in week 2 rather than week 22.
 
 ## Decision Framework
@@ -353,10 +378,10 @@ plan with the organization's reference class, and decides which items become ext
 At Northstar about four in ten committed items landed in quarter; committing seventeen again bets
 that this quarter is unlike the last four.
 
-**Multi-team initiatives** need care, because dependencies compound. If two teams each have an
-85 percent chance of finishing their part by a date and both parts are needed, the initiative is on
+**Multi-team initiatives** need care, because dependencies compound. Suppose two teams each have an
+85 percent chance of finishing their part by a date, and both parts are needed. The initiative is on
 time with about 72 percent probability if the two are independent, and less if one waits for the
-other. Chapter 16 owns dependencies; for forecasting, cross-team commitments need a larger margin
+other. Chapter 16 covers dependencies; for forecasting, cross-team commitments need a larger margin
 or fewer dependencies.
 
 **The cadence** (Chapter 37 places it in the management operating system): a weekly forecast refresh
@@ -412,7 +437,7 @@ chosen; this chapter adds the forecasting record.
 Chapter 15 describes the sizing, which showed ample slack on paper. Nobody checked it against
 history, although the three previous quarters had delivered 6 of 15, 8 of 18,
 and 7 of 16 committed items. With the baseline's 7 of 17, the four-quarter record is 28 of 66, or 42
-percent. All 17 items went to sales and customer success as committed, and Greg Tanaka, VP Sales,
+percent. All 17 items went to sales and customer success as committed, and Greg Tanaka (VP Sales)
 used several dates in open deals.
 
 The quarter-end roadmap review sorted the 10 misses by main cause: four grew in scope after work
@@ -446,19 +471,19 @@ carries, what the 85th percentile looks like, and which assumptions of the simul
 likely to be wrong for Orders in the coming quarter.
 
 **F2.** Classify each statement as a forecast, a target, or a commitment, and say what is wrong with
-any that is presented as something it is not: Amara Okafor tells the board "bulk ordering ships by the
-end of quarter 2"; Greg Tanaka tells a prospect "we expect the export feature in quarter 3"; Priya
-Raman tells her team "let's aim to finish the upload rework in four weeks"; an engineer says "probably
+any that is presented as something it is not: Amara Okafor (CPO) tells the board "bulk ordering ships by the
+end of quarter 2"; Greg Tanaka (VP Sales) tells a prospect "we expect the export feature in quarter 3"; Priya
+Raman (Orders' manager) tells her team "let's aim to finish the upload rework in four weeks"; an engineer says "probably
 two weeks, if the pricing service holds up."
 
-**F3.** In week 16, bulk ordering's forecast slips. Greg Tanaka proposes moving four engineers from
+**F3.** In week 16, bulk ordering's forecast slips. Greg Tanaka (VP Sales) proposes moving four engineers from
 Data and Analytics into Orders for the rest of the quarter. Assess the proposal against Brooks's
 law's mechanisms and Northstar's situation, and propose what you would do instead or in addition.
 
 ### Applied Leadership
 
 **A1.** Payments and Integrations owns the accounting-system integration, committed to the second
-renewal customer for the end of week 6 of quarter 2 (week 19). The team has never integrated with this
+renewal customer for the end of week 19. The team has never integrated with this
 customer's accounting system, and erp-sync has no contract tests. Design the first three weeks of the
 work to retire risk: which spikes, which walking skeleton, which experiment with the customer, and what
 decision each one feeds. State when you would be ready to tell Amara Okafor how confident you are.
@@ -479,7 +504,7 @@ recommend. Assume she has been burned by engineering dates before.
 twelve items "that engineering commits to." Respond: what you will present, how you will express
 confidence, and how you will meet the board's wish for certainty without losing its trust.
 
-**X2.** After the renewals close, Greg Tanaka wants authority to promise delivery dates to prospects
+**X2.** After the renewals close, Greg Tanaka (VP Sales) wants authority to promise delivery dates to prospects
 for roadmap items, because deals are stalling without them. Propose a policy for external date
 commitments at Northstar: who can commit, on what evidence, at what confidence, what happens when a
 forecast crosses a committed date, and how you will know whether the policy is working after two

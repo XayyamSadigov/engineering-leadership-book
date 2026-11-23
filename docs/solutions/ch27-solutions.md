@@ -80,7 +80,7 @@ number entirely.
 
 ## A1 — The Billing conversation
 
-**Learn first.** Marcus may be right about something you cannot see in the data: which two roadmap
+**Learn first.** Marcus Oyelaran (Billing manager) may be right about something you cannot see in the data: which two roadmap
 items are behind and why, how burned out the three people carrying on-call are, and whether he
 believes the incidents are his team's to fix. Ask what his team spends its unplanned time on and
 what he would do with a quarter of capacity if the choice were his.
@@ -122,17 +122,17 @@ A workable design:
    Orders, two to Billing (highest defect load), two to Customer Experience, and one to Payments and
    Integrations. Platform Operations and Data and Analytics receive none, which is acceptable
    because the regression pass Platform Operations ran is being retired and the data team's risks
-   sit mostly in migrations, which Li Na Zhou's work covers.
+   sit mostly in migrations, which the work of Li Na Zhou (staff engineer, data and integration) covers.
 4. **Skills.** Pair each with a developer for automation work; fund a short training budget; set
    expectations that automation skill develops over two quarters, not two weeks.
-5. **Reporting.** Each moves to the team's engineering manager, with a quality guild led by Tom Becker
+5. **Reporting.** Each moves to the team's engineering manager, with a quality guild led by Tom Becker (Platform Operations manager)
    for practice-sharing and career growth.
 6. **People who do not want the role.** Offer an internal move (support engineering or product
    operations are common fits), with a decision window of about a month. Be honest that the manual
    regression role itself will not exist in two quarters.
 7. **Announcement.** Before the automation work starts, not after. The director announces it to the
-   QA group in person first, then to the managers, then to engineering. The case study shows the cost
-   of announcing late.
+   QA group in person first, then to the managers, then to engineering. The chapter's section on
+   changing roles shows the cost of announcing late.
 
 A good answer protects knowledge, gives each person a credible path, is honest about what ends, and
 gets the timing right. The weak answer either keeps the manual pass to protect jobs or automates it

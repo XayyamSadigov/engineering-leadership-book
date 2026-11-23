@@ -2,12 +2,15 @@
 
 It is weeks 1 to 3 of your first year as Engineering Director at Northstar Technologies, the fictional
 company of the [case study](../case-studies/northstar/index.md). Every number you have looked at points
-to the same team. Billing, 13 engineers under Marcus Oyelaran, had the most Sev1 and Sev2 incidents last
-quarter, the highest change failure rate, the most escaped defects, the highest unplanned share among
-the product teams, and delivered none of its three committed roadmap items. Victor Lindqvist (CTO)
+to the same team. Billing, 13 engineers under Marcus Oyelaran (Billing manager), had the most
+[Sev1 and Sev2](../glossary.md#severity-sev1-sev2-sev3) incidents last quarter, the highest
+[change failure rate](../glossary.md#change-failure-rate), the most
+[escaped defects](../glossary.md#escaped-defect), and the highest share of
+[unplanned work](../glossary.md#unplanned-work) among the product teams. It delivered none of its three
+committed roadmap items. Victor Lindqvist (CTO)
 asks you, at the end of week 3, what is wrong with Billing and what you are going to do about it. Your
-job in this project is to answer him with a diagnosis you can defend: what is causing the low
-performance, how sure you are, what you will do first, and what you will not conclude yet.
+job is to answer him with a diagnosis you can defend: what is causing the low performance, how sure
+you are, what you will do first, and what you will not conclude yet.
 
 The project applies [Chapter 56](../parts/13-advanced-problems/56-recovering-a-failing-engineering-organization.md)
 (triage and the keep, coach, move, or replace decision), with
@@ -15,42 +18,49 @@ The project applies [Chapter 56](../parts/13-advanced-problems/56-recovering-a-f
 causes of low performance, [Chapter 16](../parts/04-execution/16-flow-lead-time-dependencies-and-unplanned-work.md)
 for unplanned work and dependencies, [Chapter 25](../parts/05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md)
 for reading incident data, and [Chapter 40](../parts/09-engineering-directorship/40-the-directors-job.md)
-for gathering signal as a director. It takes about 10 to 15 hours.
+for gathering signal as a director. After that reading, the full project takes about 18 to 24 hours.
+
+!!! note "Core version (about 8 to 10 hours)"
+    Do deliverables 1, 3, 5, and 6 only: the evidence inventory, the competing explanations, the
+    one-page diagnosis, and the triage. Apply acceptance criteria 1, 3, 5, and 7, and score the rubric
+    rows Evidence handling, Mechanisms, Competing hypotheses, and Triage (65 of the 100 points;
+    rescale to 100).
 
 ## Problem Statement
 
 "Low-performing" is a conclusion people reach from a table. Billing's row in that table is bad on every
 column, and three explanations are available to anyone who looks at it. The team is weak. The manager
 is weak. Or the team is working inside a system that would produce these numbers whoever was in it.
-Each explanation leads to a different action, and acting on the wrong one makes things worse: replacing
+Each explanation leads to a different action, and acting on the wrong one makes things worse. Replacing
 a manager whose team is failing because of the release train removes the person who knows the ledger's
-history, while fixing the release train under a manager who cannot lead leaves the team without
-direction.
+history. Fixing the release train under a manager who cannot lead leaves the team without direction.
 
-Your task is to diagnose Billing's low performance from the baseline evidence and a set of interviews,
-separating symptoms from causes and the system from the people; to test competing explanations against
-evidence that could disconfirm them; to sort what you find into what must happen this week, what goes
-into the quarter's plan, and what waits; and to make a provisional, evidence-based reading of the
-manager with the evidence you will collect before you decide.
+Your task has four parts. Diagnose Billing's low performance from the baseline evidence and a set of
+interviews, separating symptoms from causes and the system from the people. Test competing
+explanations against evidence that could disconfirm them. Sort what you find into what must happen
+this week, what goes into the quarter's plan, and what waits. And make a provisional reading of the
+manager, with the evidence you will collect before you decide.
 
 ## Scenario and Constraints
 
-**Your position.** Engineering Director. Marcus Oyelaran reports to you. You report to Victor Lindqvist.
+**Your position.** Engineering Director. Marcus Oyelaran reports to you. You report to Victor Lindqvist
+(CTO).
 Kwame Mensah (staff engineer, infrastructure and reliability) is helping you classify incidents. You
-have not yet set the quarter's capacity model; it is agreed with Victor and Amara Okafor in week 4.
+have not yet set the quarter's capacity model; it is agreed with Victor and Amara Okafor (CPO) in
+week 4. The [cast](../case-studies/northstar/cast.md) lists everyone named here.
 
-**The time rule.** Use facts dated week 3 or earlier. You may use every fact on the
-[baseline data](../case-studies/northstar/baseline-data.md) page, including the ones the director
-reconstructed later in the year (the paging-tool reconstruction, the ledger knowledge map, the recoded
-exit data, the classification of dependency links by cause), on the assumption that you could obtain
-them from the same sources in weeks 1 to 3. Those facts were reconstructed after week 3 in the canon:
-[Chapter 3](../parts/01-foundations/03-managerial-leverage-and-systems-thinking.md) records that
-Northstar did not track on-call load, so the paging counts were rebuilt afterwards from the paging
-tool's history. Obtaining them in weeks 1 to 3 is this project's assumption, not a canon event; at
-arrival the canon gives only the qualitative signal that three people carry most of Billing's pages.
-You may not use anything that happens in week 4 or later:
-the capacity model, the prevention allocation, the week 4 ownership changes, the QA transition, the
-week 9 incident, or any later result.
+**The time rule.** Use facts dated week 3 or earlier: the
+[Northstar overview](../case-studies/northstar/index.md), the
+[baseline data](../case-studies/northstar/baseline-data.md), and weeks 1 to 3 of the
+[timeline](../case-studies/northstar/timeline.md). You may use every fact on the baseline page,
+including the ones the director reconstructed later in the year: the paging-tool reconstruction, the
+[ledger knowledge map](../case-studies/northstar/baseline-data.md#billing-on-call-and-ledger-knowledge),
+the recoded exit data, and the classification of dependency links by cause. Northstar did not track
+on-call load, so the paging counts were rebuilt afterwards from the paging tool's history; at arrival
+the director knew only that three people carry most of Billing's pages. This project assumes you could
+obtain those numbers from the same sources in weeks 1 to 3. You may not use anything that happens in
+week 4 or later: the capacity model, the prevention allocation, the week 4 ownership changes, the QA
+transition, the week 9 incident, or any later result.
 
 **Constraints.** These are binding.
 
@@ -61,12 +71,13 @@ week 9 incident, or any later result.
    to be staffed from Billing in a way that delays them.
 3. **No rewrite of Core.** Proposals that depend on rebuilding invoicing or the ledger are out.
 4. **No per-engineer judgments.** Diagnose the team, the system, and the manager. Do not rate or rank
-   individual engineers. You may name the ledger engineers and Tamsin Achterberg where the canon does,
-   for knowledge and load, not for performance.
+   individual engineers. You may name the ledger engineers and Tamsin Achterberg (the ledger backfill,
+   who joined about 24 weeks before you) where the case does, for knowledge and load, not for
+   performance.
 5. **Provisional on people.** Any conclusion about Marcus Oyelaran is a reading with the evidence you
    will collect, not a decision. Chapter 56's rule applies: no replacement in the first 30 days except
    for integrity or harm.
-6. **No new canon.** Do not invent Northstar facts. The project-only data below is marked as such; any
+6. **No new facts.** Do not invent Northstar facts. The project-only data below is marked as such; any
    other assumption must be labeled as an assumption.
 
 ## Starting Dataset
@@ -80,17 +91,16 @@ Use these sources:
 - [`teams.csv`](../case-studies/northstar/data/teams.csv),
   [`components.csv`](../case-studies/northstar/data/components.csv), and
   [`incidents-last-quarter.csv`](../case-studies/northstar/data/incidents-last-quarter.csv).
-- **Billing evidence file** (derived from canon): [`p2-billing-evidence.csv`](data/p2-billing-evidence.csv)
-  gathers every Billing fact the canon records, with how each number was produced and its known
-  weakness. It is **derived from the canon**, not new.
+- **Billing evidence file** (from the case): [`p2-billing-evidence.csv`](data/p2-billing-evidence.csv)
+  gathers every Billing fact Northstar's record holds, with how each number was produced and its known
+  weakness. It **comes from the case**, not new.
 - **Billing sprint record** (mostly project-only): [`p2-billing-sprints.csv`](data/p2-billing-sprints.csv)
-  gives the last six sprints. The incidents are canon, and the canon fixes the goal-met total (1 of 6)
-  and scope changes in all 6; which sprint met its goal, and the item counts, are **project-only
-  data**, invented for this exercise and not part of the canon.
+  gives the last six sprints. The incidents, the goal-met total (1 of 6), and scope changes in all 6
+  come from the case; which sprint met its goal, and the item counts, are **project-only data**,
+  invented for this exercise.
 
 **Project-only data: interview notes, weeks 2 and 3.** These notes are invented for this project. They
-are consistent with the canon but are not canon; no other chapter relies on them. Engineers are
-identified by role only.
+are consistent with the case, but no chapter relies on them. Engineers are identified by role only.
 
 | Interviewee | Note |
 |---|---|
@@ -110,13 +120,13 @@ identified by role only.
 |---|---|
 | Stability | 8 Sev1 and Sev2 incidents (2 Sev1); 5 via the Core release train, 2 via database migrations, 1 latent defect; 5 first detected by customers; 6 recurrences of the organization's 11; 4,480 of the organization's 9,558 restoration minutes |
 | Delivery | 8 deployments a month, 21-day median lead time, 34 percent change failure rate, all mainly through the fortnightly Core train; 0 of 3 committed items delivered; Sprint Goal met in 1 of 6, scope changed in all 6 |
-| Capacity | Unplanned work 41 percent: failure recovery 24, requests from other teams 7, toolchain and environments 6, expedited 4 points; tax-svc upkeep about 0.6 FTE by one engineer |
+| Capacity | Unplanned work 41 percent: failure recovery 24, requests from other teams 7, toolchain and environments 6, expedited 4 points; tax-svc upkeep about 0.6 [FTE](../glossary.md#fte) by one engineer |
 | People and knowledge | 180 pages, 126 first handled by three ledger engineers, 54 of 64 after-hours pages by them, 61 needing no action; ledger knowledge by area; 2 departures in 12 months; the ledger engineer who left; Tamsin Achterberg's coverage |
 | Management | Marcus's time: people 15, delivery 55, technical 15, other 15 percent; technical direction "decided during incidents"; annual reviews on roadmap delivery only |
-| System | One shared Core schema; migrations tested against an empty schema; no reconciliation; core/scheduler unowned and co-changed with invoicing; no record of which team's change triggered a Core release incident |
+| System | One shared schema for [Core](../glossary.md#core), the monolith; migrations tested against an empty schema; no reconciliation; core/scheduler unowned and co-changed with invoicing; no record of which team's change triggered a Core release incident |
 | Comparison | Orders, also on the Core train: 29 percent change failure rate, 7 incidents, 36 percent unplanned, 1 of 4 committed items delivered. Payments and Integrations, off the train: 21 percent, 6 incidents, 33 percent unplanned |
 
-**Facts you do not have.** Billing's escaped defects by earliest point of detection (the canon gives
+**Facts you do not have.** Billing's escaped defects by earliest point of detection (the case gives
 that table only for the organization); the content of Billing's last incident reviews beyond the
 incident file's summaries; any engineering survey (none in the two years before arrival); Marcus
 Oyelaran's own view of his development needs beyond the interview note; whether the ledger engineers
@@ -163,7 +173,7 @@ One diagnostic report of no more than about 8 pages, plus your spreadsheet.
 7. **Triage.** Apply Chapter 56's questions: irreversible harm, the constraint, cheap and visible, or
    defer.
 8. **Write the diagnosis, then cut it to one page.**
-9. **Check every number twice,** from counts and from the canon's reported figures.
+9. **Check every number twice,** from counts and from the reported figures on the baseline page.
 
 ```mermaid
 flowchart TD
@@ -190,15 +200,15 @@ The diagram is the order of reasoning. The peer comparison comes before any conc
 | Protecting the ledger engineers against delivery | Taking them off first response or pairing them costs Billing capacity when it already delivered nothing last quarter |
 | Fixing Billing against fixing the train | Billing's worst failures arrive through the Core train and the shared schema, which Billing does not own; fixing Billing alone treats the symptom |
 | Candor with Marcus against his standing with the team | Telling him the reading is provisional is fair; telling the team before him is not |
-| Billing against Orders | Some of Billing's incidents start with Orders' changes; a diagnosis that blames Orders deepens the friction the canon records |
+| Billing against Orders | Some of Billing's incidents start with Orders' changes; a diagnosis that blames Orders deepens the friction already on record |
 
 ## Acceptance Criteria
 
 A submission is accepted only if all of these hold.
 
-1. Every Billing number used is traced to the canon or to the marked project-only data, with its
+1. Every Billing number used is traced to the case or to the marked project-only data, with its
    production method and weakness stated.
-2. Billing's incident facts are recomputed from the incident file and match the canon.
+2. Billing's incident facts are recomputed from the incident file and match the baseline page.
 3. At least three competing hypotheses are stated, each with disconfirming evidence and a way to get it.
 4. Orders and Payments and Integrations are used as comparisons, and the conclusions say which findings
    the comparison attributes to the system.
@@ -206,7 +216,7 @@ A submission is accepted only if all of these hold.
    justified by Chapter 56's questions.
 6. The reading of Marcus Oyelaran is provisional, uses the four causes, names evidence to collect by day
    90, and states what would change it.
-7. No individual engineer is rated or ranked, and no fact about the canon is invented.
+7. No individual engineer is rated or ranked, and no fact about Northstar is invented.
 8. The measures for the quarter are no more than six, each defined, each with its gaming risk.
 
 ## Evaluation Rubric

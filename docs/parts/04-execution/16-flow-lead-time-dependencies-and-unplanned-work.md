@@ -7,9 +7,10 @@ size govern it, how to make unplanned work visible and sort it by cause, and how
 dependencies as a design problem. The running example is Northstar Technologies, the fictional
 company in the [case study](../../case-studies/northstar/index.md).
 
-Chapter 23 decomposed the lead time of Northstar's Core release train; this chapter follows a feature
-along its whole path. Chapter 27 owns the capacity model for quality-driven unplanned work, Chapter 3
-systems-thinking basics, and Chapters 33 and 34 team design and dependency mapping for org design.
+Chapter 23 will look inside one step, Northstar's Core [release train](../../glossary.md#release-train)
+(a release that leaves on a fixed schedule carrying every ready change). This chapter follows a feature
+along its whole path. The capacity model for quality-driven unplanned work is in Chapter 27,
+systems-thinking basics in Chapter 3, and team design in Chapters 33 and 34.
 
 ## Why This Matters
 
@@ -64,22 +65,30 @@ director needs: improving a step that is not the constraint does not shorten the
 ### Where lead time accumulates
 
 Lead time here means elapsed time from when the organization commits to a piece of work to when
-customers can use it. That is longer than DORA's "lead time for changes", which starts at commit
-(Chapter 18 owns those definitions), and the commit-to-production slice is often the smallest part.
+customers can use it. The book uses two senses of the term, and this chapter uses the second
+([glossary](../../glossary.md#lead-time)):
+
+| Term | Starts | Ends | Northstar figures that use it |
+|---|---|---|---|
+| Change lead time (DORA's "lead time for changes") | Commit | Running in production | The baseline team table: Core 19 days, Payments and Integrations 4, Customer Experience 6 (Chapters 14, 15, 18) |
+| Lead time, commitment to customer | The organization commits to the work | Customers can use it | This chapter: the 76-day standing-orders feature; medians of 11, 24, and 41 days by number of dependencies |
+
+The commit-to-production slice is often the smallest part of the second. That is how a team with a
+four-day change lead time can take months to deliver a feature.
 
 A **value stream map** follows one item through every step and records, for each step, how long the
-item spent there and how much of that time someone actively worked on it. DORA's guide to work
-visibility describes the technique: people from every part of the stream map a manageable number of
-process blocks, recording each block's lead time, process time, and the share of work arriving
-complete and accurate, so rework shows up
+item spent there and how much of that time someone actively worked on it. The guide to work
+visibility from DORA (DevOps Research and Assessment, an industry research program) describes the
+technique. People from every part of the stream map a manageable number of process blocks. For each
+block they record lead time, process time, and the share of work arriving complete and accurate, so
+rework shows up
 ([DORA, work visibility](../../references/bibliography.md#dora-cap-work-visibility)). The guide
 insists on recording the process as it actually runs and warns that mapping only part of the stream
 produces local optimization. This is **industry research** guidance; the technique itself is
 documented practice.
 
 **Flow efficiency** is work time divided by lead time. Do not treat any published "typical" figure as
-a benchmark: it depends on how generously "work" is counted, and this book found no peer-reviewed
-software estimate it could verify. Use it to compare your own stream over time. The real output of
+a benchmark: it depends on how generously "work" is counted. Use it to compare your own stream over time. The real output of
 the map is the location of the waits, which in cross-team work cluster at intake, at handoffs between
 teams, and at release.
 
@@ -89,8 +98,8 @@ John Little proved in 1961 that, for a queueing system in a steady state, the av
 in the system equals the average arrival rate times the average time an item spends there: L = λW
 ([Little, 1961](../../references/bibliography.md#little1961proof)). In his fiftieth-anniversary
 review, Little notes that operations management writes it as work in process equals throughput times
-cycle time, and that over a finite window in which the system starts and ends empty it holds exactly
-for the measured data ([Little, 2011](../../references/bibliography.md#little2011law)). This is a
+cycle time. Over a finite window in which the system starts and ends empty, it holds exactly for the
+measured data ([Little, 2011](../../references/bibliography.md#little2011law)). This is a
 **research finding** in the strongest form available: a theorem, not a correlation.
 
 For a delivery team: **average lead time = average work in progress ÷ average throughput**. A team
@@ -150,8 +159,8 @@ depend on and limits on what is started, not more status meetings.
 A batch is the work that moves through a step together: a release, a large pull request, a quarter's
 requirements handed to another team. Larger batches wait for their slowest part, fail in ways that are
 harder to diagnose, and delay feedback. *Continuous Delivery* made the case for small, frequent,
-automated releases ([Humble and Farley, 2010](../../references/bibliography.md#humble2010continuous)),
-and DORA's guide recommends pieces that can be finished and checked in hours or a few days, treating
+automated releases ([Humble and Farley, 2010](../../references/bibliography.md#humble2010continuous)).
+DORA's guide recommends pieces that can be finished and checked in hours or a few days, treating
 anything over a week as too big
 ([DORA, small batches](../../references/bibliography.md#dora-cap-small-batches)). Chapter 23 applies
 this at release. The same logic applies to handoffs: one large specification per quarter to another
@@ -170,8 +179,8 @@ for a director is that unplanned work must be recorded as a type before it can b
 2. **Classify by source**, with one scheme across teams. This book uses four categories: *failure
    recovery* (incidents, hotfixes, escaped defects), *requests from other teams*, *toolchain and
    environment breakage*, and *expedited business requests* that jump the queue.
-3. **Give each category an owner.** Failure recovery belongs to the quality program (Chapter 27 owns
-   its capacity model). Requests from other teams fall through self-service and dependency redesign;
+3. **Give each category an owner.** Failure recovery belongs to the quality program (Chapter 27 sizes
+   it). Requests from other teams fall through self-service and dependency redesign;
    toolchain breakage through platform investment; expedites through an agreed policy.
 
 A director who sees only "34 percent unplanned" will hand it all to the quality program. If half is
@@ -188,13 +197,11 @@ A cross-team dependency exists when an item cannot finish until another team act
 two teams, same kind of change, every month. A recurring dependency is a property of how
 responsibilities are divided, and coordinating it item by item pays its cost forever.
 
-Herbsleb and Mockus analyzed change-management data and surveys in globally distributed development
-and found that work items spanning sites took about two and a half times as long as similar
-single-site items, with the number of people involved strongly related to calendar time; a
-replication in a second organization confirmed the main findings
-([Herbsleb and Mockus, 2003](../../references/bibliography.md#herbsleb2003empirical)). This is a
-**research finding**, read at abstract level, about geographic distribution; transferring it to team
-boundaries within one site is plausible, not demonstrated.
+Each boundary adds calendar time. Herbsleb and Mockus found that work items spanning sites took about
+two and a half times as long as similar single-site items (Chapter 14 describes the study;
+[Herbsleb and Mockus, 2003](../../references/bibliography.md#herbsleb2003empirical)). That **research
+finding** is about geographic distribution; transferring it to team boundaries within one site is
+plausible, not demonstrated.
 
 **Dependency mapping** makes the structure visible: for one quarter, count every item that needed
 another team, by requesting and providing team. Rows with high totals are teams that cannot finish
@@ -204,7 +211,7 @@ preference for recurring dependencies:
 - **Remove it**: move ownership to the team that needs the change, or provide self-service. *Team
   Topologies* is known for arguing that teams should be designed for fast flow with few deliberate
   interactions ([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team)); Chapter
-  33 owns team types and cognitive load.
+  33 covers team types and cognitive load.
 - **Loosen it**: replace a synchronous dependency with a stable contract (versioned API, contract
   test, feature flag) so each team ships on its own schedule.
 - **Coordinate it**: plan jointly, reserve capacity on the providing team, track it on a shared board.
@@ -212,8 +219,12 @@ preference for recurring dependencies:
 
 ## Engineering Organization Example
 
-This example is **illustrative**. It maps a feature Northstar shipped in the baseline quarter, before
-the director arrived: *standing orders*, which let a distributor's customer schedule a repeating
+!!! info "Northstar so far"
+    This example is set in the baseline quarter, before the director arrived. Northstar delivered 7 of
+    17 committed roadmap items on time, 34 percent of capacity went to unplanned work, and Core shipped
+    on a two-week release train. See the [timeline](../../case-studies/northstar/timeline.md).
+
+This example is **illustrative**. It maps a feature Northstar shipped in the baseline quarter: *standing orders*, which let a distributor's customer schedule a repeating
 order. It touched Orders (order capture, and core/scheduler, then unowned), Billing (invoicing),
 Customer Experience (web and mobile screens), and Platform Operations (a test environment and the
 release train). It was reconstructed from tickets, merge requests, and release notes. Assumptions:
@@ -228,8 +239,8 @@ flowchart TD
     D -->|"wait 14d"| E["Billing change 4d"]
     E -->|"wait 5d"| F["Web screens 5d"]
     F -->|"wait 6d"| G["Test env 1d"]
-    G -->|"wait 9d"| H["Regression 3d"]
-    H -->|"wait 4d"| I["Live 1d"]
+    G -->|"wait 9d"| H["Train regression 3d"]
+    H -->|"wait 4d"| I["Mobile release 1d"]
 ```
 
 | Step | Team | Wait (days) | Work (days) | Cause of the wait |
@@ -239,24 +250,24 @@ flowchart TD
 | Invoicing change | Billing | 14 | 4 | Not in Billing's plan |
 | Web screens | Customer Experience | 5 | 5 | Waited for the Orders API |
 | Test environment | Platform Operations | 6 | 1 | Interrupt queue |
-| Release train | Platform Operations | 9 | 3 | Missed one train |
+| Train regression | Platform Operations | 9 | 3 | Missed one train; three-day manual regression |
 | Mobile release | Customer Experience | 4 | 1 | Separate app cycle |
 | **Total** | | **53** | **23** | **Lead time 76 days** |
 
-Flow efficiency is 23 ÷ 76, about 30 percent, generous given how work was counted. The waiting
-breaks down as: queues at other teams 25 days (47 percent: Billing 14, test environment 6, web 5);
-release train and mobile release 13 (25 percent); intake 12 (23 percent); review 3 (6 percent).
-Shares are rounded.
+Flow efficiency is 23 ÷ 76, about 30 percent, generous given how work was counted. Almost half the
+waiting (25 of 53 days) sat in queues at other teams. Release waits took about a quarter, intake
+another quarter, and review the rest.
 
-Now predict. Chapter 23 shows that a weekly train roughly halves the average wait for a release cut.
-Here the 9-day train wait might become 4 or 5: lead time falls from 76 to about 71 days, roughly 6
-percent. Had Billing planned the invoicing change in the same cycle as Orders, its 14-day wait could
+Now predict. A weekly train roughly halves the average wait for a release cut (Chapter 23 will show
+why). Here the 9-day train wait might become 4 or 5, so lead time falls from 76 to about 71 days,
+roughly 6 percent. Had Billing planned the invoicing change in the same cycle as Orders, its 14-day wait could
 have been 2 or 3 days; a self-service test environment turns 6 days into under 1. Together those
 remove about 16 days, three times the train change, and nobody works faster.
 
 Little's law gives the team view. Suppose (these numbers are **hypothetical**, not Northstar baseline)
 Orders finishes about 9 items a week and carries about 45 in progress, many blocked on other teams.
-Average lead time is 5 weeks. Capping work in progress at 27 and swarming on blocked items would move
+Average lead time is 5 weeks. Capping work in progress at 27 and swarming on blocked items (several people working together to
+unblock them) would move
 the average toward 3 weeks if throughput holds. Measure throughput four weeks before and after.
 
 ## Decision Framework
@@ -349,7 +360,7 @@ coordinate, with an owner. Structural changes go through Chapter 34's org-design
 **Protect the critical teams**: those in the most matrix columns and with the highest unplanned
 shares. Give them rotations, intake with response times, and a self-service roadmap.
 
-Review flow measures monthly and dependency structure quarterly; Chapter 37 owns the cadence.
+Review flow measures monthly and dependency structure quarterly; Chapter 37 covers the cadence.
 
 ## CTO Perspective
 
@@ -388,35 +399,32 @@ dependencies rather than effort. Chapter 17 turns flow data into forecasts; Chap
 
 ## Case Study
 
-This case is **fictional**. It is set at the start of Northstar's second quarter under the new
-director, after [the director's first quarter](../../case-studies/northstar/first-quarter.md); Core
-has shipped weekly since week 5 of quarter 1. Dependency pairs and
-unplanned work by category are in the
-[baseline data](../../case-studies/northstar/baseline-data.md).
+This case is **fictional**. It is set at the start of quarter 2 (week 14), after
+[the director's first quarter](../../case-studies/northstar/first-quarter.md). Quarter 1 cut Sev1 and
+Sev2 incidents from 30 to 21, and Core has shipped weekly since week 5.
 
 Amara Okafor (CPO) asked why the accounting-system integration, a renewal commitment due at the end
-of week 6 of quarter 2 (week 19), still looked tight although Core now shipped weekly. Four Payments and Integrations
+of week 19 (the sixth week of quarter 2), still looked tight although Core now shipped weekly. Four Payments and Integrations
 engineers were building a new erp-sync connector with daily reconciliation of posted invoices. It
 needed Billing (posted-invoice data) and Platform Operations (test environments mimicking customers'
 accounting systems). The director brought the standing-orders map (most waiting sat in other teams'
 queues) and two more pieces of evidence.
 
-**The dependency matrix.** Li Na Zhou and the managers counted the baseline quarter's work items of a
-week or more: 164 items, 61 needing at least one other team, 86 dependency links.
+**The dependency count.** Li Na Zhou (staff engineer for data and integration) and the managers
+counted the baseline quarter's work items of a week or more: 164 items, 61 needing at least one other
+team, 86 dependency links. The full team-by-team matrix is on the
+[baseline page](../../case-studies/northstar/baseline-data.md#cross-team-dependencies); the pairs that
+matter most:
 
-| Requesting team | Orders | Billing | Payments and Integrations | Customer Experience | Data and Analytics | Platform Operations | Total |
-|---|---|---|---|---|---|---|---|
-| Orders | | 9 | 2 | 3 | 1 | 8 | 23 |
-| Billing | 6 | | 5 | 1 | 2 | 7 | 21 |
-| Payments and Integrations | 1 | 4 | | 1 | 0 | 5 | 11 |
-| Customer Experience | 8 | 3 | 2 | | 1 | 6 | 20 |
-| Data and Analytics | 2 | 2 | 1 | 0 | | 3 | 8 |
-| Platform Operations | 1 | 1 | 0 | 1 | 0 | | 3 |
-| **Received** | **18** | **19** | **10** | **6** | **4** | **29** | **86** |
+| Pair | Links, by direction | Total |
+|---|---|---|
+| All teams to Platform Operations | Orders 8, Billing 7, Customer Experience 6, Payments and Integrations 5, Data and Analytics 3 | 29 |
+| Orders and Billing | Orders to Billing 9, Billing to Orders 6 | 15 |
+| Customer Experience and Orders | Customer Experience to Orders 8, Orders to Customer Experience 3 | 11 |
+| Payments and Integrations and Billing | Billing to Payments and Integrations 5, the reverse 4 | 9 |
 
-Median lead time was 11 days for the 103 items with no dependency, 24 for the 42 with one, and 41 for
-the 19 with two or more. Platform Operations received 29 of 86 links (34 percent); Payments and
-Integrations and Billing exchanged 9.
+Median lead time (commitment to customer) was 11 days for the 103 items with no dependency, 24 for the
+42 with one, and 41 for the 19 with two or more. Platform Operations received 34 percent of all links.
 
 **The unplanned work breakdown.** The baseline's two-week sample was re-coded with one shared
 definition. Figures are percentage points of each team's capacity; rows sum to the baseline shares.
@@ -431,14 +439,13 @@ definition. Figures are percentage points of each team's capacity; rows sum to t
 | Platform Operations | 14 | 20 | 10 | 2 | 46 |
 | Staff engineers | 8 | 10 | 2 | 0 | 20 |
 
-In engineers, that is about 27.3 FTE (slightly above the baseline's 27.2 because team shares are
-rounded): failure recovery 11.8 (43 percent), other teams' requests 8.0 (29 percent), toolchain 4.2
-(15 percent), expedites 3.3 (12 percent). The quality program targets the first category; the other 57
-percent are flow and design problems. Platform Operations was the clearest interrupt sink: 20 of its
+In engineers, that is about 27 [FTE](../../glossary.md#fte) (full-time equivalent engineers). Failure
+recovery is 43 percent of it, other teams' requests 29, toolchain 15, and expedites 12. The quality
+program targets the first category; the other 57 percent are flow and design problems. Platform Operations was the clearest interrupt sink: 20 of its
 46 points were other teams' requests, mostly test environments, access, and pipeline changes across
 four build systems.
 
-The director proposed four decisions, and Amara and Victor Lindqvist agreed:
+The director proposed four decisions, and Amara and Victor Lindqvist (CTO) agreed:
 
 1. **Book the Billing dependency.** Billing reserved capacity in weeks 1 to 3 for the posted-invoice
    export the reconciliation reads, with a Billing engineer reviewing the integration side.
@@ -447,15 +454,16 @@ The director proposed four decisions, and Amara and Victor Lindqvist agreed:
    integrations needed. Li Na Zhou was asked to propose a ledger-export contract with contract tests.
 3. **Protect Platform Operations.** Two infrastructure engineers rotate weekly as the interrupt role;
    one intake with a two-working-day response target; self-service test environments first.
-4. **Tighten work in progress on Payments and Integrations.** Elena Sokolova lowered her Kanban
+4. **Tighten work in progress on Payments and Integrations.** Elena Sokolova, its manager, lowered her Kanban
    board's stage limits so the four integration engineers were not pulled onto new items; anyone at a
    limit helps unblock existing work first.
 
 The decisions cost something. Throughput on the team's other work dipped while started items
-drained, and Elena defended the limits against a sales request for a new integration. Tom Becker said
-the rotation fragmented the two engineers' weeks. By week 5 of quarter 2 (week 18), a re-sample showed
-Platform Operations' median wait for environment requests down from about 6 days to 2, and other teams' requests down from 20 to
-14 points of its capacity. The director called both encouraging but unproven: one two-week sample, self-service half built.
+drained, and Elena defended the limits against a sales request for a new integration. Tom Becker
+(Platform Operations' manager) said the rotation fragmented the two engineers' weeks. By week 18, a
+re-sample showed Platform Operations' median wait for environment requests down from about 6 days to
+2, and other teams' requests down from 20 to 14 points of its capacity. The director called both
+encouraging but unproven: one two-week sample, self-service half built.
 
 ## Exercises
 
@@ -481,23 +489,25 @@ customer-reported invoice error; a pipeline change forced by a build tool upgrad
 
 ### Applied Leadership
 
-**A1.** Tom Becker says Platform Operations cannot build self-service test environments because it is
+**A1.** Tom Becker, Platform Operations' manager, says Platform Operations cannot build self-service test environments because it is
 already at 46 percent unplanned and behind on planned projects. Prepare the conversation: what you
 want to learn from him, what data you bring, what you offer, and what you will not accept.
 
-**A2.** Elena Sokolova's team has been at its new WIP limit for three weeks. A sales director escalates
+**A2.** The team of Elena Sokolova (Payments and Integrations' manager) has been at its new WIP limit for three weeks. A sales director escalates
 to you because an integration promised to a prospect has not been started. Decide your response, what
 you say to the sales director and to Elena, and what this reveals about the expedite policy.
 
 **A3.** The director wants to act on two team pairs from the case study's dependency matrix this
-quarter, and has capacity for only two structural changes. Choose the two pairs. For each, decide
+quarter, and has capacity for only two structural changes. Choose the two pairs (the full matrix is
+on the baseline page). For each, decide
 remove, loosen, or coordinate, justify the choice from the data, and name the transition cost and who
 bears it.
 
 ### Executive Decision-Making
 
-**X1.** The CEO offers Victor Lindqvist budget for six more engineers in Payments and Integrations to
-make the accounting-system integration "go faster", despite the flat-headcount constraint. You are advising Victor. Using Little's law, the
+**X1.** The CEO offers Victor Lindqvist (CTO) budget for six more engineers in Payments and Integrations to
+make the accounting-system integration "go faster", despite the flat-headcount constraint. You are
+advising Victor. Using Little's law, the
 dependency data, and the standing-orders map, say what six engineers would and would not change, and
 what you would ask for instead.
 

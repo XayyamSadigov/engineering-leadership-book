@@ -58,7 +58,7 @@ Report instead, by team:
 
 | Measure | Pair |
 |---|---|
-| Median lead time for changes | Change failure rate (Core counted per the canon rule) |
+| Median lead time for changes | Change failure rate (Core reported separately from the other services) |
 | Median wait for first review on Core merge requests | Escaped defects confirmed per quarter |
 
 Optionally add a developer experience survey across several dimensions, reported as such and never as a
@@ -132,7 +132,7 @@ escaped-defect count in the AI arm and at least two of three pairs show shorter 
 Stop or redesign if two pairs show worse stability. Decision date week 68.
 
 **Detectable effect.** Three pairs over seven weeks can detect only a large effect, roughly a change
-comparable to the quarter-to-quarter swings in the canon (for example a Core failure rate moving from about
+comparable to the quarter-to-quarter swings in Northstar's record (for example a Core failure rate moving from about
 a quarter of releases to well under or well over), not a 5 percent gain. Say so in the proposal, so nobody
 reads "no significant difference" as "no effect". A good answer handles the reorganization, writes the
 rules first, and states the detection limit. The weak answer randomizes individuals within teams, which
@@ -190,7 +190,7 @@ experience, never as productivity.
 
 **The vendor contract.** Tell the VP that acceptance rate and surveys measure perceived productivity, and
 that the evidence includes a setting where experienced developers believed they were faster while being
-slower. Ending one of the two contracts (about 30 engineers if the two are equal in size, an assumption the canon does not fix) on that basis would remove capacity that cannot
+slower. Ending one of the two contracts (about 30 engineers if the two are equal in size, an assumption Halvard's record does not fix) on that basis would remove capacity that cannot
 be restored quickly. Offer a path: the contract's next renewal decision uses the measured result for that
 group over two quarters, and the contract can be resized rather than ended.
 

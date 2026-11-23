@@ -8,30 +8,18 @@ any automated check; the domain's staff engineer keeps the log in order.
 **Cadence:** one record per architecturally significant decision, opened before building starts;
 the log is reviewed quarterly for fired review triggers and for cross-team changes that have no record.
 
-An architecture decision record (ADR) is a short document, kept in the repository next to the code,
-that says what was decided, by whom, why, what else was considered, and when to reopen it. Nygard's
-original proposal holds a title, context, decision, status, and consequences (including the negative
-ones), numbered, with reversed decisions marked superseded rather than deleted, so that successors need
-not accept or reverse old decisions blindly ([Nygard, 2011](../references/bibliography.md#nygard2011adr)).
-The ADR community site calls the collection of a project's records its decision log and points to
-several templates ([adr.github.io](../references/bibliography.md#adr-github-io)); MADR (Markdown
-Architectural Decision Records), for example, adds decision drivers, considered options with
-pros and cons, and a "Confirmation" section on how compliance with the decision will be checked
-([MADR](../references/bibliography.md#madr-template)). Keeping records in source control rather than a
-wiki is **practitioner consensus**
-([Thoughtworks, Lightweight ADRs](../references/bibliography.md#thoughtworks-radar-lightweight-adr)),
-not evidence of effect.
+An [architecture decision record (ADR)](../glossary.md#architecture-decision-record-adr) is a
+short document, kept in the repository next to the code, that records one significant technical
+decision: what was decided, by whom, why, what else was considered, and when to reopen it. Its job is
+to let a successor judge an old decision instead of accepting or reversing it blindly. Write one before
+building starts on any decision that would need another team's work, a data migration, or a
+coordinated release to reverse. The project's records together form its
+[decision log](../glossary.md#decision-log).
 
-Chapter 28 owns the practice: which decisions need a record, who decides, comment windows, and how a
-log stays alive ([Chapter 28](../parts/06-technical-leadership/28-architecture-decision-making-and-governance.md#architecture-decision-records)).
-Chapter 13 owns the fields a successor needs ([Chapter 13](../parts/03-high-performing-teams/13-decision-making-in-teams.md#recording-decisions)).
-This template combines them: Nygard's fields, Chapter 13's successor fields (decider and method,
-options rejected, assumptions, review trigger), and Chapter 28's governance fields (agreement rights,
-comment window, automated check). The additions are **this book's recommendation**. Mining open source
-repositories, Buchgeher and colleagues found ADR adoption low and many logs holding only a handful of
-records ([Buchgeher et al., 2023](../references/bibliography.md#buchgeher2023adr); **research finding**
-at abstract level, open source only, no outcome measure). The template cannot fix a log nobody
-maintains; the trigger in Chapter 28's practice does that.
+!!! tip "Minimum version"
+    On day one, fill five fields: the title (as a question), the decider, the context with a "needed
+    by" date, at least two options including the status quo, and the consequences of each. Add
+    assumptions, the review trigger, and the check before the record moves to Accepted.
 
 ## How to fill it in
 
@@ -121,17 +109,17 @@ adr:
   recorded_input: []         # [{who: "", date: "", input: ""}]
 ```
 
-## Example: Northstar ADR-0001, still Proposed
+## Example: Northstar, ADR-0001 (still Proposed)
 
-**Fictional.** This is ADR-0001 written out in the template, as the record stands in quarter 4. The
-facts come from the canon ([first year](../case-studies/northstar/first-quarter.md),
-[baseline data](../case-studies/northstar/baseline-data.md)) and from the estimates in
-[Chapter 28's case study](../parts/06-technical-leadership/28-architecture-decision-making-and-governance.md#case-study)
-and the week 47 input from [Chapter 51](../parts/12-cto-leadership/51-enterprise-technology-strategy.md),
-with its status in the organization decision log taken from
-[Chapter 39](../parts/08-management-operating-system/39-reviews-decision-logs-escalation-and-executive-reporting.md).
-ADR-0001 is open in the canon, and this example keeps it open: the Decision field is blank and no
-option is chosen. The assumptions are the example's wording of the proposer's case.
+!!! info "Northstar so far"
+    Quarter 4 of the director's first year, after week 47. Li Na Zhou (staff engineer, data and
+    integration) opened ADR-0001 in week 14; it is still Proposed. Marcus Oyelaran manages Billing,
+    Elena Sokolova manages Payments and Integrations, and Victor Lindqvist is the CTO. See the
+    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+
+[ADR-0001](../glossary.md#adr-0001) asks how integrations read posted ledger data. The record is open
+in the case, and this example keeps it open: the Decision field is blank. DL-08 is its line in the
+organization decision log.
 
 ```markdown
 # ADR-0001: How integrations read posted ledger data
@@ -206,13 +194,8 @@ consequence of A.
 What to notice: the hardest field is the decider, and leaving it blank honestly is better than
 writing "the team". The record also shows the worst state an ADR can reach: the work it governs
 shipped in week 19 while the record stayed Proposed, so the system holds a decision the log does not.
-Whoever is eventually named decider must first find out which read path the connector actually uses,
-then either accept that option on the record, with its consequences, or supersede it with a plan. The
-CTO's remark is in the record as dated input, which keeps his concern about the date visible without
-letting a hallway sentence become the decision (Chapter 28's executive overrule failure). His week 47
-written position reverses the remark, and it does so for the team only because it is in the record:
-a later executive view replaces an earlier one when both are dated in the same place, not when the
-second is said in a different meeting.
+The CTO's week 14 remark and his week 47 reversal are both dated input in the same place, which is
+the only reason the team can tell which view is current.
 
 ## Common mistakes
 
@@ -235,3 +218,27 @@ second is said in a different meeting.
 3. What change to the code could silently undo this decision, and what would catch it?
 4. If the "needed by" date passes without a decision, who notices, and what happens to the work?
 5. Did anyone senior to the decider give an instruction on this question outside the record?
+
+## Evidence and references
+
+- [Nygard, 2011](../references/bibliography.md#nygard2011adr) proposed the original record: title,
+  context, decision, status, and consequences (including the negative ones), numbered, with reversed
+  decisions marked superseded rather than deleted.
+- [adr.github.io](../references/bibliography.md#adr-github-io) calls the collection a decision log
+  and points to several templates. [MADR](../references/bibliography.md#madr-template) adds decision
+  drivers, options with pros and cons, and a "Confirmation" section on how compliance is checked, the
+  origin of this template's Check field.
+- Keeping records in source control rather than a wiki is **practitioner consensus**
+  ([Thoughtworks, Lightweight ADRs](../references/bibliography.md#thoughtworks-radar-lightweight-adr)),
+  not evidence of effect.
+- Mining open source repositories, [Buchgeher et al., 2023](../references/bibliography.md#buchgeher2023adr)
+  report low ADR adoption and many logs holding only a handful of records (**research finding**, as
+  the abstract reports; open source only, no outcome measure). A template cannot keep a log alive;
+  a review practice does.
+- The successor fields (decider and method, options rejected, assumptions, review trigger) and the
+  governance fields (agreement rights, comment window, check) are **this book's recommendation**.
+
+The practice (which decisions need a record, who decides, comment windows, keeping the log alive) is in
+[Chapter 28](../parts/06-technical-leadership/28-architecture-decision-making-and-governance.md#architecture-decision-records);
+the fields a successor needs are in
+[Chapter 13](../parts/03-high-performing-teams/13-decision-making-in-teams.md#recording-decisions).

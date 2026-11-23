@@ -3,8 +3,8 @@
 This chapter is about the three decisions that tell engineers what the organization actually values:
 what each level means, who moves up, and who is paid what. It covers repairing a career ladder,
 running promotions with calibration, saying "not yet" in a way the person can use, and making pay
-decisions you can defend, with the basics of pay equity. Chapter 4 owns the map of roles and the
-choice between management and staff tracks; Chapter 9 owns performance management. The running
+decisions you can defend, with the basics of pay equity. Chapter 4 covers the map of roles and the
+choice between management and staff tracks; Chapter 9 covers performance management. The running
 example is Northstar Technologies, the fictional company in the
 [case study](../../case-studies/northstar/index.md), whose only ladder is one wiki page.
 
@@ -71,7 +71,7 @@ patterns does.
 
 ### What a ladder is for
 
-A career ladder (also called a leveling guide) states, for each level, the scope and impact expected
+A [career ladder](../../glossary.md#career-ladder) (also called a leveling guide) states, for each level, the scope and impact expected
 and the behaviors that produce them. It serves the engineer planning growth, the manager giving
 feedback, the promotion committee, and whoever sets pay ranges.
 
@@ -79,8 +79,7 @@ Practitioner books treat the ladder as organizational infrastructure. Camille Fo
 the management path is known for discussing career ladders as part of making a growing organization's
 expectations explicit ([Fournier, 2017](../../references/bibliography.md#fournier2017manager)), and
 Will Larson's book on engineering management is known for treating leveling and performance processes
-as systems to design ([Larson, 2019](../../references/bibliography.md#larson2019elegant)). Both are
-credited here for the idea only.
+as systems to design ([Larson, 2019](../../references/bibliography.md#larson2019elegant)).
 
 **This book's recommendation**: four to six dimensions, each described at every level.
 
@@ -103,60 +102,59 @@ the stack and rewards narrow depth over judgment. Keep years out entirely; if a 
 put them in an appendix that can change without changing levels.
 
 Check **scope availability** too. If Senior requires cross-team influence, some teams offer far more
-chances than others. Of Northstar's 86 cross-team dependency links at baseline, Data and Analytics
+chances than others. At Northstar, the book's fictional company, 86 cross-team dependency links (work items that needed
+another team) were recorded at baseline. Of those, Data and Analytics
 received 4 and Platform Operations 29 ([baseline data](../../case-studies/northstar/baseline-data.md)).
 Such a ladder promotes whoever sits where the dependencies are, unless managers create opportunities.
 
 ### Separate tracks, comparable levels
 
-Chapter 4 owns the choice of track. For the ladder, each track needs its own criteria, and levels need
+Chapter 4 covers the choice of track. For the ladder, each track needs its own criteria, and levels need
 explicit equivalence across tracks (same level, same band), or engineers conclude that management is the
 real way up. Larson's book on staff-plus work is known for arguing that reaching staff level usually
 takes sponsorship and visible work ([Larson, 2021](../../references/bibliography.md#larson2021staff)),
 and his archetypes show how differently staff roles are shaped
 ([Larson, Staff archetypes](../../references/bibliography.md#larson-staff-archetypes)). A staff level
-written for one archetype rejects the others. Chapter 29 owns staff roles.
+written for one archetype rejects the others. Chapter 29 covers staff roles.
 
 ### Why one manager's judgment is not enough
 
 Rater effects are the first reason: in developmental ratings of managers, the individual rater's
-tendencies explained more of the variance than the ratee's performance
+tendencies explained more of the differences between ratings than the ratee's performance did
 ([Scullen, Mount, and Goff, 2000](../../references/bibliography.md#scullen2000latent); a **research
 finding**, detailed in Chapter 9).
 
-Bias is the second reason. In one large service organization's personnel data, women and minorities
-received less salary growth than white men with the same performance scores
-([Castilla, 2008](../../references/bibliography.md#castilla2008gender)). In three experiments with 445
-people with managerial experience, presenting an organization as explicitly meritocratic increased the
-reward gap in favor of men with equal profiles
-([Castilla and Benard, 2010](../../references/bibliography.md#castilla2010paradox)). Declaring a process
-fair does not make it fair; it can lower people's guard.
+Bias is the second reason, and declaring a process fair does not remove it; structure does. The
+**research findings**, none about software engineers:
 
-A third finding concerns "potential", which many promotion forms invite. Among 29,809 management-track
-employees of a retail chain, women received lower potential ratings despite higher performance ratings;
-the potential gap explained about half of the gender promotion gap, and women later outperformed, so
-the ratings were poor forecasts
-([Benson, Li, and Shue, 2026](../../references/bibliography.md#benson2026potential)). The same authors'
-study of promotion and the Peter Principle is summarized in Chapter 2
-([Benson, Li, and Shue, 2019](../../references/bibliography.md#benson2019promotions)). Together they
-argue for promoting on **demonstrated scope at the next level**, not on a forecast.
+- In one large service organization, women and minorities received less salary growth than white men
+  with the same performance scores ([Castilla, 2008](../../references/bibliography.md#castilla2008gender)).
+- In three experiments with 445 people with managerial experience, presenting an organization as
+  explicitly meritocratic increased the reward gap in favor of men with equal profiles
+  ([Castilla and Benard, 2010](../../references/bibliography.md#castilla2010paradox)).
+- Among 29,809 management-track employees of a retail chain, women received lower "potential" ratings
+  despite higher performance ratings. The potential gap explained about half of the gender promotion
+  gap, and women later outperformed, so the ratings were poor forecasts
+  ([Benson, Li, and Shue, 2026](../../references/bibliography.md#benson2026potential)).
+- In a field study of almost 9,000 employees, a reward gap between groups with equal performance
+  scores shrank after the company made reward decisions accountable and transparent
+  ([Castilla, 2015](../../references/bibliography.md#castilla2015accounting)).
+- Whether university teaching was rated on a 6-point or a 10-point scale changed the gender gap in the
+  most male-dominated fields ([Rivera and Tilcsik, 2019](../../references/bibliography.md#rivera2019scaling)).
 
-What helps? In a field study of almost 9,000 employees, a reward gap between groups with equal
-performance scores was reduced after a company introduced accountability and transparency into its
-reward decisions ([Castilla, 2015](../../references/bibliography.md#castilla2015accounting)). Instrument
-design matters as well: whether university teaching was rated on a 6-point or a 10-point scale
-changed the gender gap in the most male-dominated fields
-([Rivera and Tilcsik, 2019](../../references/bibliography.md#rivera2019scaling)). None of these studies
-is about software engineers. Their structural lesson, which **this book recommends**: written criteria,
-evidence per criterion, someone other than the nominating manager accountable for consistency, and
-outcomes monitored by group.
+Two lessons follow, which **this book recommends**. Promote on **demonstrated scope at the next
+level**, not on a forecast of potential. And use structure: written criteria, evidence per criterion,
+someone other than the nominating manager accountable for consistency, and outcomes monitored by
+group. The same authors' study of the Peter Principle is summarized in Chapter 2
+([Benson, Li, and Shue, 2019](../../references/bibliography.md#benson2019promotions)).
 
 ### Calibration: what it fixes and what it breaks
 
-Calibration is a meeting in which managers review promotion cases together against the same criteria,
-so that "Senior" means the same in every team. No study verified for this book measures whether
-calibration meetings as engineering organizations run them improve fairness; the practice below is
-**practitioner consensus** plus this book's synthesis.
+[Calibration](../../glossary.md#calibration) is a meeting in which managers review promotion cases
+together against the same criteria, so that "Senior" means the same in every team. We found no study
+that measures whether calibration meetings as engineering organizations run them improve fairness, so
+the evidence is thin. The practice below is **practitioner consensus** plus this book's
+recommendation.
 
 Calibration fails predictably: the most articulate manager wins, absent managers' cases lose,
 late cases get less attention, and quotas turn it into a negotiation. Countermeasures (**this book's
@@ -174,8 +172,8 @@ recommendation**):
 
 ### A "not yet" that can be used
 
-What a person hears after a declined case decides whether "not yet" becomes a plan or a
-resignation. A usable "not yet" has five parts:
+What a person hears after a declined case decides whether
+["not yet"](../../glossary.md#not-yet) becomes a plan or a resignation. A usable "not yet" has five parts:
 
 1. **The decision, plainly**, first.
 2. **The gap, tied to the ladder**: which dimension, what the next level requires, what was seen.
@@ -204,7 +202,9 @@ below. A pay decision is defensible when it rests on grounds you can name:
 
 Differences within a band are legitimate when they follow from documented, job-related reasons:
 sustained performance, time at level, scarce skills the job requires. Negotiation skill, pay history,
-and who the manager is are not such reasons. The commonest equity failure in growing companies is
+and who the manager is are not such reasons. A raise that corrects a gap with no such reason is a
+**pay equity adjustment** (a salary change, not a stock grant). It is different from a **merit
+increase**, the regular raise tied to performance, which is paid from an annual **merit budget**. The commonest equity failure in growing companies is
 **compression**: new hires come in at market while existing pay rises a few percent a year, until the
 newcomer earns more than the person who trained them.
 
@@ -230,8 +230,12 @@ pay and remove room for one-off deals: good for equity, hard on the manager who 
 
 ## Engineering Organization Example
 
-The figures are **illustrative**, invented for Northstar (fictional), and recorded on the baseline
-page.
+!!! info "Northstar so far"
+    Before week 1. Northstar, a fictional order-to-cash software company, has 80 engineers in six teams
+    and a new Engineering Director about to arrive. Eight engineers left in the past year, and the only
+    career ladder is one wiki page. See the [timeline](../../case-studies/northstar/timeline.md).
+
+The figures are **illustrative**.
 
 **Promotion history.** Each manager decided promotions, and Victor Lindqvist, the CTO, approved them one
 case at a time, with no comparison across teams and no written evidence. In the two years before the
@@ -249,8 +253,8 @@ director arrived there were 15 promotions to Senior Engineer and none to Staff E
 
 With the three staff engineers, Northstar has 44 Engineers, 33 Senior Engineers, and 3 Staff Engineers.
 Customer Experience promoted at more than four times the rate of Billing or Data and Analytics. That
-alone proves nothing. But asked what "Senior" required, Daniel Cho said "owns features end to end and
-ships them", and Farah Haddad said "could stand in for me as the team's data architect": two levels
+alone proves nothing. But asked what "Senior" required, Daniel Cho (Customer Experience manager) said "owns
+features end to end and ships them", and Farah Haddad (Data and Analytics manager) said "could stand in for me as the team's data architect": two levels
 under one word.
 
 **Pay.** US bands (Minneapolis and remote US), base salary, fictional and rounded. Bogotá engineers are
@@ -294,7 +298,7 @@ flowchart TD
 ```
 
 A competing offer is not a job reason; it is market evidence. If it shows the band is wrong, move the
-band for everyone at that level, not only for the person holding the offer. Chapter 10 owns the
+band for everyone at that level, not only for the person holding the offer. Chapter 10 covers the
 counter-offer decision itself.
 
 | Situation | Usual response | When to do otherwise |
@@ -419,10 +423,9 @@ scheduled, findings tracked to closure, results reported to the executive team.
 
 ## Case Study
 
-This case is **fictional**. Baseline facts are on the
-[baseline page](../../case-studies/northstar/baseline-data.md); the promotion history, bands, and Data
-and Analytics pay are recorded there too. It is set in quarter 3, after the director's
-first two quarters; [the first quarter](../../case-studies/northstar/first-quarter.md) is unchanged.
+This case is **fictional**. It runs from quarter 2 to week 27, the start of quarter 3. By then serious
+incidents had fallen from 30 a quarter to 17, and the two renewal features the CTO's mandate protected
+were delivered (see the [timeline](../../case-studies/northstar/timeline.md)).
 
 **Where it starts.** The ladder is the "Engineering levels" wiki page described in Chapter 4: three
 short paragraphs, the staff one describing a "recognized technical expert" with no scope, and no
@@ -437,21 +440,21 @@ operational responsibility dimension placed several Billing engineers above thei
 carrying the ledger pages had never been credited for it.
 
 **The first calibrated cycle.** At the start of quarter 3, managers nominated nine engineers for Senior.
-Two managers from other teams read each packet, with Ines Carvalho, Kwame Mensah, and Li Na Zhou
-reading technical evidence. Five were promoted, including two Billing ledger engineers and a Bogotá
+Two managers from other teams read each packet, with the three staff engineers (Ines Carvalho, Kwame
+Mensah, and Li Na Zhou) reading technical evidence. Five were promoted, including two Billing ledger engineers and a Bogotá
 data engineer. Two of Customer Experience's three nominations received "not yet", with the same gap:
 features shipped well, but no design decision others had built on.
 
 **A "not yet" in Data and Analytics.** Yusuf Demir, a data engineer in Minneapolis with three years at
 Northstar, also received a "not yet". Farah gave all five parts. The gap was influence beyond the team:
 excellent pipelines that only his team used. The evidence: lead the design of the ledger-export
-contract Li Na Zhou had proposed, through review by Billing, and bring one Billing engineer up to speed
+contract Li Na Zhou (staff engineer, data and integration) had proposed, through review by Billing, and bring one Billing engineer up to speed
 on it. Farah's commitment: assign him the design and ask Li Na Zhou to sponsor it. Review next cycle,
 check at three months. Yusuf said it was the first time anyone had told him what Senior meant.
 
 **The pay question.** The equity review flagged Sunil Varghese ($24,000 below the outside hire at the
 same level and scope) and five more US Senior Engineers below 0.92 compa-ratio, all promoted internally.
-Rajiv Menon said the year's merit budget was set. How to fund and sequence the adjustments is exercise X1.
+Rajiv Menon (CFO) said the year's merit budget was set. How to fund and sequence the adjustments is exercise X1.
 
 ## Exercises
 
@@ -476,7 +479,7 @@ commitment. Then name two things that would make the same message useless to the
 ### Applied Leadership
 
 **A1.** You facilitate Northstar's first calibration. Daniel Cho presents his own three cases with
-energy; two Billing cases have thin packets because Marcus Oyelaran spent the week in an incident
+energy; two Billing cases have thin packets because Marcus Oyelaran (Billing manager) spent the week in an incident
 review. Halfway through, the room is tired and leaning toward Daniel's cases. Decide what you do in the
 meeting, what you change for the next cycle, and how you would check afterwards whether it was fair.
 
@@ -497,7 +500,7 @@ including Sunil Varghese. Bringing all six to 0.95 would cost about $52,000 a ye
 Menon says the merit budget is fixed. Decide how you fund and sequence the adjustments, what you tell
 the six and their peers, what risk you accept by waiting, and when you involve HR or legal counsel.
 
-**X2.** Victor Lindqvist asks whether Northstar should publish its pay bands to all employees within a
+**X2.** Victor Lindqvist (CTO) asks whether Northstar should publish its pay bands to all employees within a
 year. Northstar employs engineers in the United States and in Colombia. Recommend a decision and a
 sequence, state what must be true before publication, what you expect to change (including possible
 pay compression), and what you will not claim to the executive team.

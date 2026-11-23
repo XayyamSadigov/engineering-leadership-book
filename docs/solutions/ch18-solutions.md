@@ -43,14 +43,14 @@ with frequent deployment. A target of daily deployments for every team ignores t
 goals invite gaming; the cheapest way to hit it is splitting or empty deploys.
 
 **How to test it locally.** Pick a component where batch size can actually shrink, record a baseline
-quarter of deployments, changes per deployment, and change fail rate with event counts, then change the
+quarter of deployments, changes per deployment, and change failure rate with event counts, then change the
 cadence and compare, alongside a component that did not change. Northstar's Core move to weekly releases
 (change failure rate 31 to 22 percent) is consistent with the claim but confounded: contract tests and
 flaky-test quarantine arrived in the same quarter.
 
 **Weak answer.** Either accepting "proved", or dismissing DORA entirely because it is a survey.
 
-## F3 — Reporting change fail rate by team
+## F3 — Reporting change failure rate by team
 
 **What one quarter supports.** Very little between individual teams. With 24 to 78 deployments per team
 in a quarter, the 95 percent intervals in the chapter's table are wide (Billing 18 to 53 percent, Data and

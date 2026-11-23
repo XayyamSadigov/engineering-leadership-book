@@ -2,17 +2,18 @@
 
 It is weeks 46 to 48, late in quarter 4 of your first year as Engineering Director at Northstar
 Technologies, the fictional company of the [case study](../case-studies/northstar/index.md). The
-twelve-month mandate ends with this quarter. Quarter 3, the latest measured quarter, came in at 14 Sev1
-and Sev2 incidents (the first quarter at or below the mandate's 15), 99.89 percent availability on the
+twelve-month mandate ends with this quarter. Quarter 3 is the latest measured quarter. It came in at 14
+[Sev1 and Sev2](../glossary.md#severity-sev1-sev2-sev3) incidents (the first quarter at or below the mandate's 15), 99.89 percent availability on the
 contractual paths (about 13 minutes short of the 99.9 percent commitment), $60,000 of service credits,
-and unplanned work at 25 percent. Year 2 (quarters 5 to 8, weeks 53 to 104) is being decided one document
-at a time: the year-2 organization proposal, the engineering page of the board plan, the VP question, the
-quality continuation, the workforce plan. Above them, Victor Lindqvist (CTO) is drafting a three-year
-technology strategy: in week 47 he sorts technology into excellent, adequate, buy, and not doing, sets four
-policies, and asks you for its year-2 inputs. Each of these is a reasonable document. None of them says what
-engineering will do in year 2 under Victor's direction, or why the year-2 pieces add up. Your job in this
-project is to write that document for him: a 12-month engineering strategy, the year-2 layer beneath his
-draft, that the other year-2 decisions can be tested against.
+and [unplanned work](../glossary.md#unplanned-work) at 25 percent. Year 2 (quarters 5 to 8, weeks 53
+to 104) is being decided one document at a time: the year-2 organization proposal, the engineering page
+of the board plan, the VP question, the quality [continuation](../glossary.md#the-continuation), and the
+workforce plan. Above them, Victor Lindqvist (CTO) is drafting a three-year technology strategy. In week
+47 he sorts technology into excellent, adequate, buy, and not doing, sets four policies, and asks you
+for its year-2 inputs. Each of these is a reasonable document. None of them says what engineering will
+do in year 2 under Victor's direction, or why the year-2 pieces add up. Your job is to write that
+document for him: a 12-month engineering strategy, the year-2 layer beneath his draft, that the other
+year-2 decisions can be tested against.
 
 The project applies [Chapter 51](../parts/12-cto-leadership/51-enterprise-technology-strategy.md), which shows how a CTO derives technology strategy from business
 strategy and lays out a multi-year roadmap; this project is the 12-month engineering layer beneath it. It also
@@ -27,17 +28,25 @@ economics, negotiation, the VP question, workforce and governance, and staged tr
 templates are the [engineering strategy](../templates/engineering-strategy.md), the
 [capacity planning model](../templates/capacity-planning-model.md), the
 [quarterly engineering review](../templates/quarterly-engineering-review.md), and the
-[executive update](../templates/executive-update.md). It takes about 14 to 20 hours.
+[executive update](../templates/executive-update.md). After that reading, the full project takes about
+22 to 28 hours.
+
+!!! note "Core version (about 8 to 10 hours)"
+    Do deliverables 2, 3, 4, and 10 only: the diagnosis, the strategic choices, the guiding policies,
+    and the one-page summary. Apply acceptance criteria 1, 2, 3, and 10, and score the rubric rows
+    Diagnosis, Choices and policies, and Evaluation and communication (50 of the 100 points; rescale
+    to 100).
 
 ## Problem Statement
 
 Northstar has had a written technical strategy since week 14. The draft in
 [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md) and the
 [template example](../templates/engineering-strategy.md#example-northstar-week-14-draft) diagnosed three
-problems (change is unsafe, the estate ages unwatched, knowledge is concentrated) and set three guiding
-policies, each tested against a decision waiting in the decision log: the CI consolidation target (DL-10),
-the tax-svc build, buy, or hybrid choice (DL-09), and the Core framework migration (TR-01). By week 47 the
-canon records none of the three as decided. The diagnosis was sound; the policies decided nothing.
+problems: change is unsafe, the estate ages unwatched, and knowledge is concentrated. It set three
+guiding policies, each tested against a decision waiting in the [decision log](../glossary.md#decision-log): the
+CI consolidation target (DL-10), the tax-svc build, buy, or hybrid choice (DL-09), and the migration of
+[Core](../glossary.md#core)'s framework (TR-01 on the technology risk register). By week 47 none of the
+three is recorded as decided. The diagnosis was sound; the policies decided nothing.
 
 The situation has also moved. Incidents have more than halved, so the argument that funded prevention in
 year 1 (outages and credits) is weaker, and Greg Tanaka (VP Sales) argues that the prevention engineers
@@ -54,26 +63,36 @@ business, applied here to an engineering organization; **expert opinion**). It m
 that decide the open questions the same way every time. And it must fund its actions inside flat
 headcount, holding whatever Victor Lindqvist and the executive team decide on the items still open.
 
-Your task is to write the strategy: a diagnosis of no more than three findings, two to four guiding
-policies, coherent actions by quarter with owners and dates, a capacity envelope, what engineering will
-not do, review triggers, and a short scorecard; plus a one-page summary for Victor and an evaluation of
-the week-14 draft against what happened to it.
+Your task is to write the strategy. It has a diagnosis of no more than three findings, two to four
+guiding policies, coherent actions by quarter with owners and dates, a capacity envelope, what
+engineering will not do, review triggers, and a short scorecard. Add a one-page summary for Victor and an
+evaluation of the week-14 draft against what happened to it.
 
 ## Scenario and Constraints
 
 **Your position.** Engineering Director, drafting CTO-level work for Victor Lindqvist, who approves it.
-The three staff engineers (Ines Carvalho, Kwame Mensah, Li Na Zhou) are co-authors. The managers, Amara
+The three staff engineers (Ines Carvalho, Kwame Mensah, Li Na Zhou) are co-authors. The
+[cast](../case-studies/northstar/cast.md) lists everyone named here; Helena Marsh is the CEO and Sofia
+Alvarez the VP Customer Success. The managers, Amara
 Okafor (CPO), and Rajiv Menon (CFO) read it before Victor does. The executive team meets in week 49 and
 the board in week 50.
 
-**The time rule.** Use facts dated week 47 or earlier: the quarter 3 results, the week-40 corrected-order
-analysis, the week-42 draft counter for the board page, the week-44 organization proposal, the week-45
+**The time rule.** Use facts dated week 47 or earlier. They are in
+[quarter 3 results](../case-studies/northstar/first-quarter.md#quarter-3-results), the weeks 40 to 47
+entries of the [quarter 4 calendar](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4),
+[the year-2 organization proposal](../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44),
+[three-year technology strategy](../case-studies/northstar/first-quarter.md#three-year-technology-strategy-chapter-51),
+and [finances](../case-studies/northstar/first-quarter.md#finances-chapter-52); the
+[timeline](../case-studies/northstar/timeline.md) and the
+[quarter 4 briefing](../case-studies/northstar/quarter-4-briefing.md) help you find them (the briefing
+also mentions later weeks, which stay off limits). Specifically: the quarter 3 results, the week-40
+corrected-order analysis, the week-42 draft counter for the board page, the week-44 organization proposal, the week-45
 continuation proposal, the executives' positions from weeks 46 and 47, Helena Marsh's week 46 confirmation
 of the business choices, Victor Lindqvist's week 47 three-year strategy draft
 ([Chapter 51's case study](../parts/12-cto-leadership/51-enterprise-technology-strategy.md#case-study)), and Finance's week 46 latest estimate for fiscal year 1
 ([Chapter 52](../parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md)).
 Quarter 4 results do not exist yet. Victor's week 48 premortem and the week 49 executive meeting are after
-the time rule. The canon records no outcome for any decision due in weeks 46 to 51; treat each as open.
+the time rule. No outcome is recorded for any decision due in weeks 46 to 51; treat each as open.
 
 **Constraints.** These are binding.
 
@@ -99,11 +118,13 @@ the time rule. The canon records no outcome for any decision due in weeks 46 to 
 
 Use these sources:
 
-- [Northstar overview](../case-studies/northstar/index.md), including "Executive and board context (Part
-  XII)"; [baseline data](../case-studies/northstar/baseline-data.md), especially the extended baseline on
+- [Northstar overview](../case-studies/northstar/index.md), including
+  [executive and board context](../case-studies/northstar/index.md#executive-and-board-context);
+  [baseline data](../case-studies/northstar/baseline-data.md), especially the extended baseline on
   architecture, estate, and people; and [the first quarter](../case-studies/northstar/first-quarter.md),
-  especially the year 2 proposal, "Quarter 3 results", "Quarter 4", and "Part XII facts (quarter 4)" for
-  Victor's week 47 draft (four groups, four policies, draft allocation, options and decision weeks) and
+  especially the year 2 proposal, "Quarter 3 results", "Quarter 4", and
+  [executive and company facts in quarter 4](../case-studies/northstar/first-quarter.md#executive-and-company-facts-in-quarter-4)
+  for Victor's week 47 draft (four groups, four policies, draft allocation, options and decision weeks) and
   Finance's fiscal year 1 figures.
 - The week-14 strategy draft and the technology risk register TR-01 to TR-09 in
   [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md), and the
@@ -116,11 +137,11 @@ Use these sources:
   for workforce and governance; [Chapter 49](../parts/11-vp-engineering/49-multi-year-transformation-communication-and-politics.md#case-study)
   for the continuation and the executives' positions.
 
-**Project data.** Two files, both **derived from the canon**, not new:
-[`p7-year1-readings.csv`](data/p7-year1-readings.csv) gathers the measures the canon reports for the
-baseline quarter and quarters 1 to 3, and [`p7-open-decisions.csv`](data/p7-open-decisions.csv) lists the
-open decisions with their decider, due date, and the options the canon records. Blank cells mean the canon
-does not record the value; do not fill them with estimates presented as readings.
+**Project data.** Two files, both **from the case**, not new:
+[`p7-year1-readings.csv`](data/p7-year1-readings.csv) gathers the measures Northstar's record reports
+for the baseline quarter and quarters 1 to 3, and [`p7-open-decisions.csv`](data/p7-open-decisions.csv)
+lists the open decisions with their decider, due date, and the recorded options. Blank cells mean the
+value is not recorded; do not fill them with estimates presented as readings.
 
 **Facts your submission must use.**
 
@@ -149,7 +170,7 @@ One strategy document of no more than about six pages, a one-page summary, and y
 1. **Evaluation of the week-14 draft.** For each of its three policies: the decision it was tested against,
    what happened to that decision by week 47, and whether the policy should be kept, rewritten, or
    dropped. Say why the draft decided so little.
-2. **Diagnosis.** No more than three findings, each with numbers from the canon and the business
+2. **Diagnosis.** No more than three findings, each with numbers from the case and the business
    consequence, written for year 2 rather than copied from week 14.
 3. **Strategic choices.** Where engineering will be excellent in year 2, where adequate is enough, and what
    waits for year 3, mapped to the four groups in Victor's week 47 draft, with any departure from it stated
@@ -229,7 +250,7 @@ every policy would have settled a real year-1 decision.
 
 A submission is accepted only if all of these hold.
 
-1. The diagnosis has no more than three findings, each with at least one number traceable to the canon.
+1. The diagnosis has no more than three findings, each with at least one number traceable to the case.
 2. There are two to four guiding policies, each with a cost, an owner other than the director (at most one
    owned by the director), an exception time, and the finding it answers.
 3. Each policy is tested against a real year-1 decision and settles at least one decision open in week 47.
@@ -240,7 +261,7 @@ A submission is accepted only if all of these hold.
 7. Every open decision in the time window has a branch, and no outcome after week 47 is recorded as fact.
 8. The scorecard has five to seven paired measures and is consistent with the board page or explains why not.
 9. The evaluation of the week-14 draft says what happened to each of its test decisions.
-10. No fact is invented about the canon; estimates and assumptions are labeled as yours.
+10. No fact about Northstar is invented; estimates and assumptions are labeled as yours.
 
 ## Evaluation Rubric
 

@@ -139,7 +139,7 @@ dependency meeting for all pairs.
 
 ## X1 — Six more engineers for Payments and Integrations
 
-**What six engineers would change.** With the integration due at the end of week 6 of quarter 2 and
+**What six engineers would change.** With the integration due at the end of week 19 and
 four engineers already on it, almost nothing before the date. Later, possibly the team's throughput on work it can do alone, after a
 ramp-up of a quarter or more, during which existing engineers spend time onboarding them. It would also
 break the flat-headcount constraint.

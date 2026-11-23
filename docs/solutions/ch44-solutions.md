@@ -91,8 +91,8 @@ entirely, or ships it and asks for an SLO exemption.
 ## A2 — Customer-detected share as a product outcome
 
 **Where it belongs.** Both, with different owners. The customer-detected share (29 percent in quarters 1
-and 2, 5 of 17 in quarter 2; quarter 3's share is not recorded) is on the director's scorecard as the pair of contractual availability, so
-engineering owns the measure and its definition. But some of the bets that would move it are product
+and 2, 5 of 17 in quarter 2; quarter 3's share is not recorded) is on the director's scorecard, paired
+with contractual availability. Engineering therefore owns the measure and its definition. But some of the bets that would move it are product
 work: incident status notifications for distributors, in-product error reporting, and alerting on
 correctness failures that customers see first (8 of 14 customer-detected baseline incidents were wrong
 amounts or data).
@@ -159,8 +159,8 @@ without changing what "committed" means.
 
 **Evidence from quarter 4 alone.** In the ordering area, 2 engineer-weeks of discovery turned 16
 engineer-weeks of requested features (the 6-week warning and the 10-week unit rework) into 13 of bets
-aimed at the measured causes (16 − 13 − 2 = a 1 engineer-week net saving after the discovery cost,
-about $3,600), and the 13 are expected to address about 46 percent of ordering errors where the
+aimed at the measured causes. Net of the discovery cost that saves 1 engineer-week (16 − 13 − 2), about
+$3,600. More important, the 13 are expected to address about 46 percent of ordering errors, where the
 original list addressed the symptom of one cause. The case is effectiveness, not capacity saved. One
 quarter in one area is not proof; it is enough to justify a two-quarter trial.
 

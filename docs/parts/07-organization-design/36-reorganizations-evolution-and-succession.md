@@ -88,16 +88,16 @@ downsizings, larger than redrawing team boundaries, and the outcome is well-bein
 A review of 79 quantitative studies of reactions to organizational change sorts their antecedents into
 the people and context before the change and features of the change itself: its process, perceived
 benefit or harm, and content ([Oreg, Vakola, and Armenakis, 2011](../../references/bibliography.md#oreg2011recipients)).
-Only the abstract was read; the point taken is that how a change is run is a lever separate from
-what it is.
+The abstract supports a narrower point: how a change is run is a lever separate from what it is.
 
 In software, one study of a large project found proximity to an organizational change significantly
 associated with a higher probability of customer-reported defects, and recent departures associated
 with more of them ([Mockus, 2010](../../references/bibliography.md#mockus2010volatility)). It is one
 observational project, but it names the risk to plan for: quality drops where knowledge moved.
 
-Consulting-firm surveys claiming most reorganizations fail were not read; their authors sell
-reorganization advice and define failure variously (research gap G12).
+This book does not rely on consulting-firm surveys claiming most reorganizations fail. Their authors
+sell reorganization advice and define failure in different ways, so the evidence on failure rates is
+thin.
 
 ### Is a reorganization the right tool?
 
@@ -106,25 +106,26 @@ the process (cadences, decision rights, interfaces), and the priorities. This bo
 is to reorganize only when three tests pass:
 
 1. **The problem is structural.** The evidence points at boundaries: work that repeatedly needs two or
-   more teams, components with no owner or several, spans far out of range (Chapter 34), or cognitive
-   load beyond what a team can carry (Chapter 33). Friction between managers or a missed roadmap is
+   more teams, components with no owner or several, spans far out of range (Chapter 34), or
+   [cognitive load](../../glossary.md#cognitive-load) beyond what a team can carry (Chapter 33). Friction between managers or a missed roadmap is
    not structural evidence by itself.
 2. **A smaller change will not do.** Moving one component, person, or interface would leave most of
    the misfit in place.
 3. **The benefit outlasts the transition.** The expected gain over the next year exceeds the
    transition cost, with the cost estimated honestly and the gain treated as a forecast.
 
-Will Larson's writing is the best-known practitioner treatment: reorganizations are expensive and
-belong to structural problems, not to people or process problems
-([Larson, 2019](../../references/bibliography.md#larson2019elegant); credited at idea level). Two
+Will Larson's writing is the best-known practitioner treatment. He argues that reorganizations are
+expensive and belong to structural problems, not to people or process problems
+([Larson, 2019](../../references/bibliography.md#larson2019elegant); **expert opinion**). Two
 reasons that fail the tests are common: reorganizing around a person (a team created as a promotion,
 or dissolved to avoid a performance conversation), and reorganizing so a new leader's organization
 feels different.
 
 ### Pricing the transition
 
-The transition cost is the capacity lost while people rebuild context, relationships, rotations,
-and planning rhythm.
+The [transition cost](../../glossary.md#transition-cost) is the capacity lost while people rebuild
+context, relationships, rotations, and planning rhythm. This chapter measures it in engineer-weeks (one
+engineer's working week).
 
 | Cost | Who bears it | How to estimate |
 |---|---|---|
@@ -136,7 +137,8 @@ and planning rhythm.
 No research gives reliable ramp-up figures for engineers who change teams; the figures in this chapter
 are this book's assumptions, to be replaced with an organization's own onboarding data. The risk line
 is the one most often left out. The Mockus finding argues for planning it explicitly: freeze
-nonessential changes on tier 1 components while their ownership moves, and require the operational
+nonessential changes on [tier 1](../../glossary.md#tier-1) components (the most business-critical
+tier) while their ownership moves, and require the operational
 readiness check of [Chapter 24](../05-engineering-quality/24-reliability-slos-and-operational-readiness.md)
 before an on-call rotation changes hands.
 
@@ -168,14 +170,14 @@ flowchart TD
     G --> H["Review at 90 days"]
 ```
 
-Patrick Lencioni's case for organizational health stresses that leaders agree on a few answers and
-repeat them far more often than feels necessary
-([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage); credited at idea level).
+Patrick Lencioni argues that leaders should agree on a few answers and repeat them far more often
+than feels necessary ([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage);
+**expert opinion**).
 Here: why the structure changes, what does not, where each person sits, and when uncertainty ends.
 
-A manager who inherits a team is in a new role. Michael Watkins treats the first months in a new role as a period that needs its own plan: diagnose,
-secure early wins, build key relationships deliberately
-([Watkins, 2003](../../references/bibliography.md#watkins2003first); credited at idea level). Each
+A manager who inherits a team is in a new role. Michael Watkins treats the first months in a new role
+as a period that needs its own plan: diagnose, secure early wins, build key relationships deliberately
+([Watkins, 2003](../../references/bibliography.md#watkins2003first); **expert opinion**). Each
 changed manager therefore gets a short transition plan, reviewed by the director, as
 [Chapter 2](../01-foundations/02-from-individual-contributor-to-leader.md) recommends for a first
 management role.
@@ -202,13 +204,15 @@ can do the job, not a plan filed once.
 
 A **critical role** is one whose sudden vacancy would stop a team, a system, or a class of decisions:
 every manager, every staff engineer, the director, and the holders of concentrated knowledge on tier
-1 systems. Knowledge concentration and the truck factor are taught in
+1 systems. Knowledge concentration and the
+[truck factor](../../glossary.md#single-point-of-knowledge-failure) (how many people could leave
+before a project stalls) are taught in
 [Chapter 12](../03-high-performing-teams/12-team-charters-working-agreements-and-knowledge-sharing.md)
-([Avelino et al., 2016](../../references/bibliography.md#avelino2016truck)); the finding that matters
-here is that in Chrome and a project at Avaya, designated successors reduced expected loss from
-turnover by as much as 15 percent ([Rigby et al., 2016](../../references/bibliography.md#rigby2016turnover)).
-These are research findings
-about code; that prepared successors also reduce the cost of losing a manager is this book's inference.
+([Avelino et al., 2016](../../references/bibliography.md#avelino2016truck)). One finding matters here.
+In Chrome and a project at Avaya, designated successors reduced expected loss from turnover by as much
+as 15 percent ([Rigby et al., 2016](../../references/bibliography.md#rigby2016turnover)). These are
+research findings about code. That prepared successors also reduce the cost of losing a manager is
+this book's inference.
 
 | Readiness | Meaning |
 |---|---|
@@ -217,9 +221,14 @@ about code; that prepared successors also reduce the cost of losing a manager is
 | Interim only | Could keep it running for a few weeks while a decision is made |
 | None | Nobody identified |
 
-Coverage is adequate (this book's rule) when a role has at least one person ready now or interim and
-at least one in development, and the cover neither holds another critical role nor is primary cover
-for one. A person covering two roles is coverage on paper only.
+[Succession coverage](../../glossary.md#succession-coverage) is adequate (this book's rule) when all
+three hold:
+
+1. Someone can step in now: at least one person is ready now or interim.
+2. Someone is being developed: at least one person is ready with development.
+3. Neither of them already holds another critical role or is the main cover for one.
+
+A person covering two roles is coverage on paper only.
 
 ## Engineering Organization Example
 
@@ -230,25 +239,31 @@ the assumptions are this book's.
 
 | Part | Assumption | Engineer-weeks |
 |---|---|---|
-| Ramp-up | 14 engineers at 50 percent output for 4 weeks, then 75 percent for 4: 2 + 1 = 3 each | 42 |
+| Ramp-up | 14 engineers at 50 percent output for 4 weeks, then 75 percent for 4: 3 each | 42 |
 | Handoff | 30 engineers on four affected teams at 10 percent for 6 weeks: 0.6 each | 18 |
 | Management | 4 managers at 20 percent for 12 weeks: 2.4 each | 9.6 |
 | Total | | about 70 |
 
-Capacity is 60 × 13 = 780 engineer-weeks a quarter, so the transition costs about 9 percent of one
-quarter, before the risk line: on the Mockus finding, expect more customer-reported defects at the
-redrawn boundaries for some weeks.
+Share of a quarter: about 70 of 780 engineer-weeks (60 engineers × 13 weeks), about 9 percent.
+
+The transition costs about 9 percent of one quarter, before the risk line. On the Mockus finding,
+expect more customer-reported defects at the redrawn boundaries for some weeks.
 
 **Benefit.** Assume each cross-team item costs about 2 engineer-weeks more than single-team work.
-Converting 12 items saves 24 engineer-weeks a quarter; payback is 70 / 24 ≈ 2.9 quarters. The benefit
-is a forecast; the cost is nearly certain.
+Converting 12 items saves 24 engineer-weeks a quarter. The benefit is a forecast; the cost is nearly
+certain.
 
-**The smaller alternative.** Eight of the 12 items touch one component that two teams change. Giving
-it a single owner moves two engineers: 2 × 3 = 6 engineer-weeks of ramp-up plus 6 of handoff (10
-engineers at 0.6), 12 in all. It saves 8 × 2 = 16 engineer-weeks a quarter; payback 12 / 16 = 0.75
-quarters. The full reorganization captures four more items for 70 − 12 = 58 more engineer-weeks,
-saving 8 more a quarter: about 7 quarters of payback on the increment. A proposal without this
-comparison is not ready for a decision.
+**The smaller alternative.** Eight of the 12 items touch one component that two teams change. Giving it
+a single owner moves two engineers. The comparison:
+
+| Option | Cost (engineer-weeks) | Saving per quarter | Payback |
+|---|---|---|---|
+| Single owner for the component | 12 (6 ramp-up for 2 engineers, 6 handoff for 10) | 16 (8 items × 2) | about 0.75 quarters |
+| Full reorganization | 70 | 24 (12 items × 2) | about 2.9 quarters |
+| Increment of the full reorganization over the smaller option | 58 | 8 | about 7 quarters |
+
+The full reorganization captures four more items, and its extra cost takes about seven quarters to
+repay. A proposal without this comparison is not ready for a decision.
 
 ## Decision Framework
 
@@ -300,8 +315,8 @@ and the exposure remains.
 
 ## Failure Modes
 
-**The perpetual reorganization.** A new chart every two or three quarters. Detection: count managers
-per engineer over two years; three or more means transition costs never end.
+**The perpetual reorganization.** A new chart every two or three quarters. Detection: count how many
+managers a typical engineer has had in two years; three or more means transition costs never end.
 
 **The leaked reorganization.** Rumors run for weeks. Detection: questions about "the reorg" in
 one-on-ones before anything is said.
@@ -370,27 +385,34 @@ to name possible successors for each director and show them already doing parts 
 
 ## Case Study
 
-This case is **fictional**. It is set at Northstar in quarter 4 of the director's first year, and it
-is a plan, not a result: whether Victor Lindqvist approves the reorganization, and how it goes, is
-left open. The starting state is in the [baseline data](../../case-studies/northstar/baseline-data.md)
-and [the first quarter](../../case-studies/northstar/first-quarter.md); new facts are recorded for the
-canon.
+!!! info "Northstar so far"
+    Week 44, in quarter 4 (weeks 40 to 52) of the director's first year. Quarter 3 had 14 [Sev1 and
+    Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents against 30 at baseline, and both renewal
+    commitments are delivered. The director has just drafted a year-2 organization for the CTO. See the
+    [timeline](../../case-studies/northstar/timeline.md).
 
-**The proposal.** In week 44 the director drafts a year-2 proposal, effective in week 53, the first
-week of year 2 (design and alternatives in Chapter 35). Customer Experience
-splits into Web (Daniel Cho: 9 web engineers and the 2 quality engineers, 11 in all) and Mobile (the
-Bogotá mobile engineers, with Mateo Arango Ríos as manager; his engineering seat is not backfilled, so
-Mobile has 5 engineers, and Victor Lindqvist decides). core/permissions moves to Orders, whose
-condition (after week 26) has passed. search-svc moves from Orders to Data and Analytics. Platform
-Operations becomes a Developer Platform team, the same five infrastructure engineers under Tom Becker,
-run as an internal product. Result: 79 engineers, seven managers.
+This case is **fictional**. It is set at Northstar in week 44, and it is a plan, not a result: whether
+Victor Lindqvist (CTO) approves the reorganization, and how it goes, is left open. The starting state is
+in the [baseline data](../../case-studies/northstar/baseline-data.md) and
+[the director's first year](../../case-studies/northstar/first-quarter.md).
 
-Against the three tests: the evidence is structural (Daniel has 17 reports; mobile and web share one
-board and cadence; two Sev2 incidents sat at the mobile-bff and mobile boundary; core/permissions has
-been tier 1 without an owner since before the director arrived), and each part is close to the smallest change that answers
-its problem: six people change manager (Mateo and his five engineers), two components change owner.
+**The proposal in brief.** Chapter 35 describes the design and its alternatives in full. In short,
+effective in week 53 (the first week of year 2):
 
-**Transition cost (fictional estimate, this chapter's assumptions).**
+- Customer Experience splits into Web (Daniel Cho, its current manager, with 11 engineers) and Mobile
+  (5 engineers in Bogotá under Mateo Arango Ríos, their informal lead, whose seat is not backfilled).
+- core/permissions, an unowned tier 1 module of Core, moves to Orders (Priya Raman's team); search-svc
+  moves from Orders to Data and Analytics (Farah Haddad's team).
+- Platform Operations becomes Developer Platform under Tom Becker. The result is 79 engineers and seven
+  managers.
+
+Against the three tests, the evidence is structural. Daniel has 17 reports. Mobile and web share one
+board and cadence. Two Sev2 incidents sat at the mobile-bff and mobile boundary. core/permissions has
+been tier 1 without an owner since before the director arrived. Each part is also close to the
+smallest change that answers its problem: six people change manager (Mateo and his five engineers),
+and two components change owner.
+
+**Transition cost (this chapter's assumptions).**
 
 | Part | Assumption | Engineer-weeks |
 |---|---|---|
@@ -401,11 +423,13 @@ its problem: six people change manager (Mateo and his five engineers), two compo
 | Management | Daniel 20 percent for 8 weeks (1.6); Priya 10 percent for 8 weeks (0.8); Farah 5 percent for 4 weeks (0.2); director 20 percent for 6 weeks (1.2) | 3.8 |
 | Total | | about 21 |
 
-Against 80 × 13 = 1,040 engineer-weeks a quarter, that is about 2 percent. Outside the total are Mateo's
-seat (about 13 engineer-weeks a quarter; Chapter 35 counts it as one seat) and concentrated risk: core/permissions is a tier 1 module that gets
-an owner, a runbook, and an on-call rotation for the first time, and mobile-app and mobile-bff move
-with Mobile to a rotation of six people in one city (the plan names backup cover), exactly where
-the Mockus finding says to expect trouble.
+Share of a quarter: about 21 of 1,040 engineer-weeks (80 engineers × 13 weeks), about 2 percent.
+
+Two costs sit outside the total. The first is Mateo's seat, about 13 engineer-weeks a quarter, which
+Chapter 35 counts as one seat. The second is concentrated risk. core/permissions is a tier 1 module that
+gets an owner, a runbook, and an on-call rotation for the first time. mobile-app and mobile-bff move with
+Mobile to a rotation of six people in one city (the plan names backup cover). That is exactly where the
+Mockus finding says to expect trouble.
 
 **The transition plan the director attaches** (fictional; it applies only if the proposal is approved):
 
@@ -414,7 +438,7 @@ the Mockus finding says to expect trouble.
 | 45 | Victor Lindqvist reviews proposal and plan; no announcement |
 | 46 | Victor decides on Mateo's unbackfilled seat; the director and Daniel confirm with Mateo that he wants the role |
 | 47–49 | Ownership table, rotations, and dates complete; Priya and the director agree the core/permissions readiness criteria; Mobile's board and cadence designed with Mateo |
-| 51 | Announcement day (a Tuesday): the director and Daniel in Bogotá; one-to-ones with Mateo's five engineers there, then Hannah Lindgren and the web engineers in Minneapolis by video, then managers and staff engineers, then an all-engineering call with everyone on their own screen, then the written rationale and FAQ |
+| 51 | Announcement day (a Tuesday): the director and Daniel in Bogotá; one-to-ones with Mateo's five engineers there, then Hannah Lindgren (the informal web lead) and the web engineers in Minneapolis by video, then managers and staff engineers, then an all-engineering call with everyone on their own screen, then the written rationale and FAQ |
 | 53 | Reporting lines effective; Web and Mobile start separate boards |
 | 54 | search-svc ownership moves to Data and Analytics |
 | 53–56 | core/permissions: runbook and user-facing alerts, Orders engineers shadow incidents, readiness check (Chapter 24), then Orders' on-call starts; nonessential changes frozen in the handover week |
@@ -428,23 +452,30 @@ team's membership. The plan also names that Mateo becomes the first manager base
 the new chart left, who would step in? In week 44 the director rated cover for the ten critical roles
 (six managers, three staff engineers, the director). The ratings are fictional judgments.
 
+The table names people who have not appeared yet in this chapter: Aisha Bello and Rafael Duarte,
+senior engineers in Orders; Teodora Vasquez-Lund, Billing's senior ledger expert; Sunil Varghese, a
+senior engineer in Data and Analytics who designed the warehouse pipelines; Bram Verhoeven, a senior
+infrastructure engineer who built Core's Jenkins pipeline; and Payments and Integrations' informal tech
+lead, who is not named. The staff engineers are Ines Carvalho (Core domain), Kwame Mensah
+(infrastructure and reliability), and Li Na Zhou (data and integration).
+
 | Critical role | Ready now or interim | In development | Gap |
 |---|---|---|---|
-| Orders (Priya Raman) | Aisha Bello, interim | Aisha Bello; Rafael Duarte if he chooses management (Chapter 4) | Nobody ready now |
-| Billing (Marcus Oyelaran) | None | None | Teodora Vasquez-Lund covers ledger knowledge, not management |
-| Payments and Integrations (Elena Sokolova) | Informal tech lead, interim | Same person | One person, also listed below |
+| Orders (Priya Raman) | Aisha Bello, interim | Aisha Bello; Rafael Duarte if he chooses management | Nobody ready now |
+| Billing (Marcus Oyelaran) | None | None | Teodora covers ledger knowledge, not management |
+| Payments and Integrations (Elena Sokolova) | Informal tech lead, interim | Same person | One person in both columns |
 | Customer Experience (Daniel Cho) | Hannah Lindgren, interim | Mateo Arango Ríos | Each covers half the team |
-| Data and Analytics (Farah Haddad) | None | Sunil Varghese, architecture half only | Farah holds two roles |
-| Platform Operations (Tom Becker) | Kwame Mensah, interim | None | Kwame holds a critical role |
-| Staff, core domain (Ines Carvalho) | None | Aisha Bello, Rafael Duarte (order capture); Teodora Vasquez-Lund (ledger) | Nobody covers the whole domain |
-| Staff, infrastructure (Kwame Mensah) | Bram Verhoeven, Core Jenkins only | None | Bram's expectations plan is open (Chapter 9) |
-| Staff, data and integration (Li Na Zhou) | None | Sunil Varghese (warehouse); Payments informal tech lead (integration) | Split cover |
-| Director | Elena Sokolova, interim | Elena Sokolova | If Elena acts, Payments falls to its informal tech lead |
+| Data and Analytics (Farah Haddad) | None | Sunil, architecture half only | Farah holds two roles |
+| Platform Operations (Tom Becker) | Kwame, interim | None | Kwame holds a critical role |
+| Staff, Core domain (Ines) | None | Aisha, Rafael (order capture); Teodora (ledger) | Nobody covers the whole domain |
+| Staff, infrastructure (Kwame) | Bram, Core Jenkins only | None | Bram's expectations plan is open (Chapter 9) |
+| Staff, data and integration (Li Na) | None | Sunil (warehouse); Payments' informal tech lead (integration) | Split cover |
+| Director | Elena, interim | Elena | If Elena acts, Payments falls to its informal tech lead |
 
-Counted twice: none of the 10 roles has a ready-now cover, 6 have an interim cover, and 4 have none
-(Billing, Data and Analytics, and the core-domain and data-and-integration staff roles). Kwame and
-Elena already hold critical roles. By the coverage rule only Orders, Payments and Integrations, and
-Customer Experience are covered, two of them by one person in both columns.
+In total: none of the 10 roles has a ready-now cover, 6 have an interim cover, and 4 have none (Billing,
+Data and Analytics, and the Core-domain and data-and-integration staff roles). Kwame and Elena already
+hold critical roles. By the coverage rule only Orders, Payments and Integrations, and Customer
+Experience are covered, two of them by one person in both columns.
 
 The table also changes the reorganization. Promoting Mateo Arango Ríos, Customer Experience's
 development candidate, leaves the new Mobile manager role with no cover, in a site where nobody else
@@ -464,7 +495,7 @@ Worked solutions are in the [chapter 36 solutions](../../solutions/ch36-solution
 ### Foundational
 
 **F1.** Four complaints reach Northstar's director in one month: Billing and Orders blame each other
-after a Core release incident; core/permissions still has no owner; Daniel Cho has 17 reports; Data
+after an incident caused by a release of Core, the monolith; core/permissions still has no owner; Daniel Cho has 17 reports; Data
 and Analytics has little contact with other teams. For each, decide whether the evidence points at
 structure, name the smallest change you would try first, and say what data would change your mind.
 
@@ -484,7 +515,7 @@ Bogotá, two web engineers are remote, Hannah Lindgren has led web informally, a
 had told Daniel they also wanted to lead. Write the day's
 schedule, who speaks to whom in what order, and the five questions the FAQ must answer.
 
-**A2.** Marcus Oyelaran's role has no cover. Teodora Vasquez-Lund, the only candidate the director
+**A2.** The role of Marcus Oyelaran (Billing manager) has no cover. Teodora Vasquez-Lund, the only candidate the director
 sees, enjoys ledger work and has never mentioned management, and Billing still depends on its three
 ledger engineers for most pages. Design two quarters of succession work for Billing without pulling a
 ledger expert off the rotation or creating an heir apparent.
@@ -497,15 +528,16 @@ what Hannah, Daniel, and the director say, and whether the plan's dates should c
 
 ### Executive Decision-Making
 
-**X1.** Victor Lindqvist approves the design but asks to delay the announcement a quarter, so as not
+**X1.** Victor Lindqvist (CTO) approves the design but asks to delay the announcement a quarter, so as not
 to unsettle teams while reliability is still recovering and the largest customers are watching. Rajiv
-Menon wants to start now so that year 2's budget reflects the new teams. Decide the timing and argue
+Menon (CFO) wants to start now so that year 2's budget reflects the new teams. Decide the timing and argue
 it to both, using the transition cost, the Mockus finding, and the cost of an unfinished change.
 
 **X2.** Victor asks who would run engineering if the director left tomorrow. The honest answer is
-Elena Sokolova, whose team would then fall to an informal tech lead, with Victor above. Propose how
-Northstar should build director-level succession over the next year under flat headcount, and say
-whether that changes your view of Chapter 35's option with two group leads.
+Elena Sokolova (Payments and Integrations manager), whose team would then fall to an informal tech
+lead, with Victor above. Propose how Northstar should build director-level succession over the next
+year under flat headcount, and say whether that changes your view of Chapter 35's alternative D (two
+managers of managers above the teams).
 
 ## Reflection Questions
 

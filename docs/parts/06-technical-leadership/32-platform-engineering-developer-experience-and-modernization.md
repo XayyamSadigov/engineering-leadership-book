@@ -21,8 +21,9 @@ system elsewhere, so the usual signal of a failing supplier (customers leave) is
 substitute signal, a platform team can be busy and useless, or useful and unable to show it.
 
 At executive scale, the legacy system is usually the largest technical asset and the largest source
-of drag, and it attracts recurring proposals to replace it outright. Northstar's Core is 1.4 million
-lines of Java, eleven years old, and the company has decided not to fund a rewrite (constraint 3).
+of drag, and it attracts recurring proposals to replace it outright. Northstar's
+[Core](../../glossary.md#core) is 1.4 million lines of Java, eleven years old, and the company has
+decided not to fund a rewrite ([constraint 3](../../glossary.md#the-five-constraints) of the case).
 That decision holds only if leaders can show Core getting cheaper to change each quarter.
 
 ## Learning Objectives
@@ -48,9 +49,9 @@ Two ideas organize the chapter.
 
 First, **adoption is the market signal a platform lacks**. If teams could keep the old path and
 choose the platform anyway, it is cheaper for them. If they use it because they were told to, nobody
-learns whether it is any good. The rule this book recommends: mandate outcomes (every tier 1 service deploys
-through an auditable pipeline with automated rollback), not tools, and let the platform win by being
-the cheapest way to meet the outcome.
+learns whether it is any good. The rule this book recommends: mandate outcomes, not tools. For example,
+every [tier 1](../../glossary.md#tier-1) service (the most business-critical tier) deploys through an
+auditable pipeline with automated rollback. Then let the platform win by being the cheapest way to meet the outcome.
 
 Second, **modernization is a stream, not a project**. A rewrite pays nothing until the end.
 Incremental replacement pays something at each step, teaches the team about the old system, and can
@@ -85,11 +86,12 @@ a page of links to standard procedures
 ([CNCF TAG App Delivery, n.d.](../../references/bibliography.md#cncf-platforms-whitepaper);
 practitioner consensus).
 
-*Team Topologies* supplied the vocabulary: a platform team exists to reduce the cognitive load of the
-teams delivering to customers, and the best platform is the thinnest one that does that
-([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team); idea-level). Chapter 33
-owns team types and cognitive load as a design tool. Here **cognitive load** means only what a team
-must know and hold in mind, beyond its own domain, to get a change into production safely.
+*Team Topologies* is known for the idea that a platform team exists to reduce the
+[cognitive load](../../glossary.md#cognitive-load) of the teams delivering to customers, and that the
+best platform is the thinnest one that does that
+([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team)). Chapter 33 teaches
+cognitive load as a design tool. Here it means only what a team must know and hold in mind, beyond its
+own domain, to get a change into production safely.
 
 | Property | Product-run platform | Infrastructure queue |
 |---|---|---|
@@ -102,7 +104,8 @@ must know and hold in mind, beyond its own domain, to get a change into producti
 The best available evidence is industry research, and it is mixed in an instructive way. In DORA's
 2024 survey, respondents using an internal developer platform reported 8 percent higher individual
 productivity and 10 percent higher team performance, and organizational performance was 6 percent
-higher. Throughput was 8 percent lower and change stability 14 percent lower among platform users,
+higher. Throughput was 8 percent lower and change stability (how rarely changes fail in production) 14 percent
+lower among platform users,
 which the authors call surprising and explain only with hypotheses: more handoffs, platforms letting
 bad changes through, or troubled organizations being the ones that build platforms
 ([DORA, 2024](../../references/bibliography.md#dora2024accelerate), pp. 49–54; industry research).
@@ -145,7 +148,7 @@ selection rule this book recommends:
 DORA's capability page reports that its 2025 data identified clear feedback on the outcome of a
 developer's own tasks as the platform capability most associated with a positive user experience
 ([DORA platform engineering capability](../../references/bibliography.md#dora-cap-platform-engineering);
-industry research, summary level), which fits the rule.
+industry research, as DORA summarizes it), which fits the rule.
 
 ### Adoption metrics, and how they are gamed
 
@@ -185,8 +188,8 @@ expert opinion, argued from a handful of cases).
 The empirical literature is thin. Khadka and colleagues interviewed 26 practitioners and surveyed 198;
 the abstract reports that practitioners value their legacy systems highly and that modernization
 challenges are business and organizational as well as technical
-([Khadka et al., 2014](../../references/bibliography.md#khadka2014legacy); research finding, abstract
-level). So a purely technical modernization plan is incomplete. This book found no controlled or
+([Khadka et al., 2014](../../references/bibliography.md#khadka2014legacy); research finding). So a
+purely technical modernization plan is incomplete. This book found no controlled or
 large-sample evidence comparing rewrites with incremental replacement; the preference here rests on
 expert opinion and reasoning.
 
@@ -194,7 +197,7 @@ Two ideas keep incremental modernization honest. Fowler cautions that many monol
 entangled to split cleanly ([Fowler, 2015](../../references/bibliography.md#fowler2015monolithfirst)),
 so first steps are often inside the monolith: creating seams, not services. And automated checks that
 guard an architectural property on every build (the fitness functions associated with
-[Ford et al., 2017](../../references/bibliography.md#ford2017building); idea-level) act as a ratchet so
+[Ford et al., 2017](../../references/bibliography.md#ford2017building)) act as a ratchet so
 the old shape does not grow back.
 
 ```mermaid
@@ -215,27 +218,33 @@ rarely do.
 
 ## Engineering Organization Example
 
-This example uses Northstar's canon figures plus assumptions marked **(addition)**, recorded in the
-chapter's additions file. It ranks the work Platform Operations could take on at the start of
-quarter 2.
+!!! info "Northstar so far"
+    Week 14, the start of quarter 2 of the director's first year. [Sev1 and
+    Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
+    to 21 in quarter 1. In week 10 the seven QA engineers left Platform Operations for product teams,
+    leaving it five infrastructure engineers. See the [timeline](../../case-studies/northstar/timeline.md).
+
+This example ranks the work Platform Operations could take on at the start of quarter 2 at Northstar,
+the book's fictional company. The figures come from Northstar's record; the environment request
+frequency is an **illustrative** assumption.
 
 | Loop | Latency | Frequency | Owner |
 |---|---|---|---|
 | Core pipeline on merge | 74 minutes (shared-database tests 38 of them) | about 1,000 runs a month | Platform Operations |
 | Rerun after an unrelated failure | another 74 minutes | 4 percent of runs at day 90, about 40 a month | Platform Operations |
 | First review on a Core merge request | 21 working hours (median) | about 85 a week | Product teams |
-| Test environment request | about 6 days (median, baseline) | about 25 a month **(addition)** | Platform Operations |
+| Test environment request | about 6 days (median, baseline) | about 25 a month (assumed) | Platform Operations |
 
 All four force a context switch. Reading them with the selection rule:
 
-- **Environment requests** are the longest loop the platform owns: about 25 a month at 6 days is about
-  150 request-days of waiting a month. They block testing, which pushes teams toward bigger batches,
-  and self-service removes a ticket, which is what DORA's developer-independence finding points at.
-  They rank first.
+- **Environment requests** are the longest loop the platform owns: about 150 request-days of waiting a
+  month. They block testing, which pushes teams toward bigger batches, and self-service removes a
+  ticket, which is what DORA's developer-independence finding points at. They rank first.
 - **The Core pipeline** runs about 1,000 times a month. Its largest stage is the shared-database tests,
   which [Chapter 22](../05-engineering-quality/22-testing-strategy-and-test-architecture.md) proposes to
-  make hermetic. The platform's lever is disposable test databases, the same capability as self-service
-  environments: a second use of the first investment.
+  make hermetic: each test run gets its own isolated database instead of sharing one. The platform's
+  lever is disposable test databases, the same capability as self-service environments: a second use
+  of the first investment.
 - **Review wait** belongs to the product teams and Chapter 23; listing it stops the platform claiming it.
 
 Cognitive load makes the case for CI consolidation. From
@@ -245,13 +254,12 @@ services on shell scripts. Once notification-svc moves to Orders in quarter 2, t
 team must know are: Orders 2, Billing 1, Payments and Integrations 2, Customer Experience 2, Data and
 Analytics 2, and Platform Operations all 4.
 
-The run-cost case is weaker, and leaders should say so. Four CI systems cost about 1.5 FTE a year.
-Assume one costs about 0.5 FTE **(addition)**. The saving is about 1 FTE, about $185,000 a year, against
-a principal of about two engineer-years, about $370,000: a two-year payback on run cost alone.
-[Chapter 21](../05-engineering-quality/21-technical-debt.md)'s 0.75 for TD-006 already counts all 1.5 FTE;
-on the 1 FTE actually saved it is 0.5. The case
-rests on what that ratio does not price: the auditable pipeline with rollback that tier 1 services
-need, comparable delivery data, lower cognitive load, and less dependence on one person.
+The run-cost case is weaker, and leaders should say so. Four CI systems cost about 1.5
+[FTE](../../glossary.md#fte) (full-time equivalent engineers) a year, and one would cost about 0.5. The
+saving is about $185,000 a year against about $370,000 of work (two engineer-years): a two-year
+payback, meaning the saving takes two years to repay the cost. The case rests on what run cost does not
+price: the auditable pipeline with automated rollback that tier 1 services need, comparable delivery
+data, lower cognitive load, and less dependence on one person.
 
 ## Decision Framework
 
@@ -377,28 +385,30 @@ internal work, or fails it: will teams use it unforced, and which loop does it s
 ## Case Study
 
 This case is **fictional**. Platform Operations' composition, the interrupt rotation, the
-deployment-event store, Bram Verhoeven's situation, and Core's constraints are canon on the
+deployment-event store, Bram Verhoeven's situation, and Core's constraints come from the
 [baseline](../../case-studies/northstar/baseline-data.md) and
-[first quarter](../../case-studies/northstar/first-quarter.md) pages. The roadmap draft, its estimates,
-and the proposed consolidation target are additions for this chapter. The case is set in week 14, the
-first week of quarter 2; the decisions are the reader's.
+[first quarter](../../case-studies/northstar/first-quarter.md) pages; the roadmap draft and its
+estimates are **illustrative**. The case is set in week 14, the first week of quarter 2; the decisions
+are the reader's.
 
-**The team.** Since the QA engineers moved into product teams in week 10, Platform Operations is Tom
-Becker and five infrastructure engineers, three in Minneapolis and two remote. Two rotate weekly as the
+**The team.** Since the QA engineers moved into product teams in week 10, Platform Operations is its
+manager, Tom Becker, and five infrastructure engineers, three in Minneapolis and two remote. Two rotate weekly as the
 interrupt role behind a single intake. Bram Verhoeven, who built Core's Jenkins pipeline and once
 proposed consolidating the build systems, is one of the five; Tom's proposed expectations agreement for
 him ([Chapter 9](../02-people-management/09-performance-management-and-underperformance.md)) awaits the
-director's decision. The team's baseline unplanned share was 46 percent, the highest anywhere.
+director's decision. The team's baseline share of [unplanned work](../../glossary.md#unplanned-work) was 46 percent, the
+highest anywhere.
 
-**The draft roadmap.** Tom Becker and Kwame Mensah, who owns the pipeline standards, bring the
+**The draft roadmap.** Tom Becker and Kwame Mensah, the staff engineer who owns the pipeline
+standards, bring the
 director a roadmap. Three engineers off rotation for 13 weeks give 39 engineer-weeks; they assume about
 a quarter is lost to toolchain breakage, leave, and meetings, leaving about 29.
 
 | Item | Changes | Estimate, quarter 2 |
 |---|---|---|
 | Finish self-service test environments, with disposable test databases | Environment wait, about 6 days at baseline | about 8 engineer-weeks remaining |
-| Deployment-event store (Chapter 18) | Retires the monthly hand join of four CI systems' logs | about 6 engineer-weeks, from the prevention allocation |
-| CI consolidation phase 1: pipeline template with automated rollback, then the four shell-script services | Removes the script path; auth-svc gains the fifth tier 1 minimum | about 12 engineer-weeks (template 4, scripts 8, matching TD-002's principal) |
+| Deployment-event store (Chapter 18) | Retires the monthly hand join of four CI systems' logs | about 6 engineer-weeks, from the [prevention allocation](../../glossary.md#prevention-allocation) (capacity reserved for removing the sources of incidents) |
+| CI consolidation phase 1: pipeline template with automated rollback, then the four shell-script services | Removes the script path; auth-svc gets the automated rollback every tier 1 service needs | about 12 engineer-weeks (template 4, scripts 8, the debt register's estimate) |
 | **Total** | | **about 26 of 29** |
 
 The draft proposes GitLab CI as the target, since six services already use it and licenses exist.
@@ -419,14 +429,14 @@ target. The revised set:
 | Measure | Baseline | Paired outcome |
 |---|---|---|
 | Units migrated to the template since week 14 (of the 11 not on GitLab CI) | 0 | Change failure rate of migrated units |
-| Environment requests completed without a ticket | none | Median environment wait; other teams' requests (20 points of capacity at baseline) |
+| Environment requests completed without a ticket | none | Median environment wait; other teams' requests (20 percent of Platform Operations' capacity at baseline) |
 | Product teams using self-service environments two months running | 0 of 5 | Feedback-loop and cognitive-load items in Chapter 18's survey, first run in quarter 2 |
 | Build systems each team must know | 1 to 2 per product team; 4 for Platform Operations | Toolchain run cost, about 1.5 FTE a year |
 
-**Core under constraint 3.** The draft's last page, written with Ines Carvalho, proposes no rewrite.
+**Core under constraint 3 (no funded rewrite).** The draft's last page, written with Ines Carvalho, proposes no rewrite.
 Quarter 2 modernization is three things: the funded permissions extraction from core/customer that Ines
 leads, treated as the first strangler slice with a removal date for its transitional code; disposable
-test databases, which unblock Chapter 22's hermetic shared-database tests; and a build check that fails
+test databases, which unblock Chapter 22's move to isolated test databases; and a build check that fails
 Core if new code outside core/permissions reads its tables directly. In the baseline quarter four teams
 made 38 merge requests to core/permissions; success is how many changes still need to touch it after the
 extraction. core/permissions still has no owner. The core/customer redesign (about three engineer-years)
@@ -438,7 +448,7 @@ close. Tom says 26 of 29 engineer-weeks leaves little slack, and Customer Experi
 frontends are not first.
 
 The reader decides: whether to approve the roadmap and target as drafted, whether to require migration
-by a date or rely on adoption, how to report progress to Victor Lindqvist, and how the consolidation
+by a date or rely on adoption, how to report progress to Victor Lindqvist (CTO), and how the consolidation
 should and should not interact with Bram's agreement.
 
 ## Exercises
@@ -470,12 +480,12 @@ pipeline template by the end of quarter 4, because "voluntary adoption will take
 run four systems for two more years". Write the director's response: what you would mandate, what you
 would not, and what you would offer Tom instead of the announcement.
 
-**A2.** Data and Analytics declines to migrate export-svc (tier 3, shell scripts) in quarter 2: 12 points
-of its capacity go to other teams' requests and the service rarely changes. The script path cannot be
+**A2.** Data and Analytics declines to migrate export-svc (tier 3, shell scripts) in quarter 2: 12
+percent of its capacity goes to other teams' requests and the service rarely changes. The script path cannot be
 retired while export-svc uses it. Decide what to do, weighing the team's reasons, the cost of keeping
 the script path, and how other teams will read the decision.
 
-**A3.** After bulk ordering ships in week 26, Priya Raman proposes that Orders spend 30 percent of its
+**A3.** After bulk ordering ships in week 26, Priya Raman (Orders manager) proposes that Orders spend 30 percent of its
 capacity for two quarters "re-platforming" core/order-capture as a new service, because it has the most
 incidents. Evaluate the proposal against constraint 3 and this chapter's framework, and state the
 conditions under which you would approve a version of it.
@@ -488,7 +498,7 @@ dashboards. The discretionary tooling budget is $250,000 for the year. Decide wh
 decline, and state the adoption evidence you would require before renewing.
 
 **X2.** Two years from now, a competitor has launched on a modern cloud-native stack, a board member
-asks whether Core should finally be replaced, and Helena Marsh wants your position in writing. Prepare
+asks whether Core should finally be replaced, and Helena Marsh (CEO) wants your position in writing. Prepare
 it: what you say about a rewrite, what modernization evidence you show, and what would change your mind.
 
 ## Reflection Questions

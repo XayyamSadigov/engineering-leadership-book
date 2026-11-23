@@ -4,28 +4,30 @@ Some leaders inherit an organization that works and needs tuning. Others inherit
 its promises: outages written into contracts, a roadmap that ships less than half of what it commits,
 experts leaving, and executives who no longer believe the dates. This chapter is about the second
 case. It covers three things that standard practice does not: triaging a failing organization in the
-first 30 days, reversing quality decline while rebuilding stakeholder trust at the same time, and
-deciding which of the inherited leaders to keep, coach, or replace. Other chapters own the pieces this
-one assembles: the first 90 days in a new role ([Chapter 2](../01-foundations/02-from-individual-contributor-to-leader.md)
-and [Chapter 40](../09-engineering-directorship/40-the-directors-job.md)), the quality transformation
-itself ([Chapter 27](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)),
-underperformance ([Chapter 9](../02-people-management/09-performance-management-and-underperformance.md)),
-managing managers ([Chapter 41](../09-engineering-directorship/41-managing-and-developing-engineering-managers.md)),
-and leading change ([Chapter 43](../09-engineering-directorship/43-leading-change-and-director-failure-patterns.md)).
-The running examples are Northstar Technologies at the director's arrival, read as a failing
-organization, and the Payroll group at Halvard Systems, a 90-engineer group under a new vice
-president. Both companies are fictional; see the [case study](../../case-studies/northstar/index.md)
-and [Halvard](../../case-studies/northstar/halvard.md).
+first 30 days, reversing quality decline while rebuilding stakeholder trust, and deciding which
+inherited leaders to keep, coach, move, or replace. The running examples are the Payroll group at
+Halvard Systems, a 90-engineer group under a new vice president, and Northstar Technologies at the
+director's arrival, read as a failing organization. Both companies are fictional; see
+[Halvard](../../case-studies/northstar/halvard.md) and the
+[case study](../../case-studies/northstar/index.md).
+
+!!! note "Related chapters"
+    The first 90 days in a new role are in [Chapter 2](../01-foundations/02-from-individual-contributor-to-leader.md)
+    and [Chapter 40](../09-engineering-directorship/40-the-directors-job.md); the quality
+    transformation in [Chapter 27](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md);
+    underperformance in [Chapter 9](../02-people-management/09-performance-management-and-underperformance.md);
+    managing managers in [Chapter 41](../09-engineering-directorship/41-managing-and-developing-engineering-managers.md);
+    leading change in [Chapter 43](../09-engineering-directorship/43-leading-change-and-director-failure-patterns.md);
+    crisis communication and trust repair in [Chapter 57](57-crises-executive-disagreement-and-resistance.md).
 
 ## Why This Matters
 
 At team scale, a failing team is visible to its manager every day, and one person can change most of
 what matters: the backlog, the on-call rotation, the way the team talks about mistakes.
 
-At organization scale, failure is distributed. No single team is the cause, the numbers that describe
-it are unreliable, and the managers who would have to carry a recovery are the same people who were
-running the organization while it failed. The new leader has to diagnose through them, decide quickly
-which of them can lead the recovery, and do it without the knowledge of the history that they have.
+At organization scale, failure is distributed. No single team is the cause, the numbers are unreliable,
+and the managers who must carry a recovery ran the organization while it failed. The new leader has to
+diagnose through them and decide quickly which of them can lead the recovery.
 
 At executive scale, a failing engineering organization is a commercial and a governance problem.
 Customers renew or leave on it, the CFO pays its service credits, and the board asks whether the
@@ -70,8 +72,8 @@ flowchart TD
 ```
 
 The diagram shows three loops sharing one node, failure. The **capability loop** (firefighting, cut
-improvement, eroded capability) is the one Repenning and Sterman describe for manufacturing and
-service improvement programs. The **trust loop** runs through stakeholders: after enough misses, they
+improvement, eroded capability) is the [capability trap](../../glossary.md#capability-trap) described
+below. The **trust loop** runs through stakeholders: after enough misses, they
 stop asking for estimates and start dictating dates, which guarantees more misses. The **people loop**
 runs through the on-call rotation: the few people who can fix the system carry the pages, and the
 organization loses exactly the knowledge it most needs. Each loop is self-sustaining, so pushing on
@@ -82,88 +84,68 @@ strongest here and which one is closest to doing irreversible damage.
 
 ### What "failing" means, and why it matters which kind
 
-"Failing" is used loosely. This book uses a narrow definition (**this book's recommendation**): an
-engineering organization is failing when it is breaking commitments that someone outside engineering
-relies on (contractual availability, data correctness, customer dates, regulatory obligations) and its
-own trajectory will not close the gap without a change in how it is run. That is different from
+"Failing" is used loosely. This book uses a narrow definition (**this book's recommendation**). An engineering organization is failing
+when it breaks commitments that someone outside engineering relies on: contractual availability, data
+correctness, customer dates, regulatory obligations. And its own trajectory will not close the gap
+without a change in how it is run. That is different from
 **declining** (getting worse, perhaps still within commitments) and from **underperforming** (worse
 than it could be, by some benchmark, without broken promises). The distinction decides the approach.
 
-Michael Watkins's work on leadership transitions is known for classifying the situation a new leader
-enters, and for arguing that the right strategy depends on the situation
-([Watkins, 2003](../../references/bibliography.md#watkins2003first); idea level). In an IMD article,
-Watkins and colleagues place turnaround on the downward slope after realignment, say that the crisis
-mode of a turnaround "invites an action-oriented and often more directive approach", and recommend
-engaging people in fixing the problem, rather than telling them what is wrong, for a realignment
-([Watkins et al., 2014](../../references/bibliography.md#watkins2014hit)). They also note that people
-often disagree about what stage the business is in, and that not every leader handles every stage
-equally well. That is **expert opinion**, and it matches what engineering leaders report: a
-directive style that rescues a breaking system alienates an organization that only needed
-realignment, and a consultative style that suits realignment is too slow when customers are leaving.
+The two situations need different leadership. Watkins argues that the right strategy for a new leader
+depends on the situation entered ([Watkins, 2003](../../references/bibliography.md#watkins2003first)).
+In a later article, Watkins and colleagues say a turnaround's crisis mode "invites an action-oriented
+and often more directive approach", while a realignment calls for engaging people in fixing the problem
+([Watkins et al., 2014](../../references/bibliography.md#watkins2014hit); **expert opinion**). They add
+that people often disagree about which stage they are in. Engineering leaders report the same thing: a
+directive style that rescues a breaking system alienates an organization that only needed realignment,
+and a consultative style is too slow when customers are leaving.
 
 Real organizations are often mixed. One part is in turnaround (a contractual breach, a correctness
 failure) while another part needs only realignment (a delivery process that is mediocre but stable).
 Diagnosing each part separately is the first piece of triage.
 
-### What turnaround research says, and what it cannot say
+**What realignment looks like in practice.** In a realignment area the leader does not hand down the
+diagnosis; the area's own managers produce it. Give them the data and one question ("what would have
+to be true for our dates to hold?"), and a short deadline. Then ask them to choose two changes and own
+the reporting on them. The leader's job is to keep the question narrow, protect the time, and refuse to
+let the work drift into a reorganization. This is **this book's recommendation**. It costs a few weeks
+more than directing, and it buys a diagnosis that the people who must carry it believe.
 
-Most of the research on organizational decline and turnaround studies whole firms, measured by
-financial performance. Trahms, Ndofor, and Sirmon reviewed twenty years of it and describe a field that
-is "empirically and theoretically fragmented"; they report that recent work has added managerial
-cognition, strategic leadership, and stakeholder management, and has identified simultaneous and
-complex resource-based actions beyond the older two-stage model of retrenchment followed by recovery
-([Trahms et al., 2013](../../references/bibliography.md#trahms2013decline)). That is a **research
-finding** about the state of the literature, and it carries two lessons for engineering leaders. First,
-the clean sequence "cut, then grow" is no longer the field's only model: the review reports research
-identifying simultaneous and complex actions, which is consistent with running quality and trust in
-parallel below. Second, stakeholders and leadership cognition are part of the recovery, not background to it.
+### What turnaround research can and cannot say
 
-The research cannot tell you what to do in an 80-engineer organization. It studies firms, not
-engineering groups, and its outcomes are financial. Anything this chapter says about the inside of a
-turnaround is **practitioner consensus** or **this book's recommendation**, and is labeled as such.
+The research on decline and turnaround studies whole firms by their financial results, and a review of
+twenty years of it calls the field fragmented
+([Trahms et al., 2013](../../references/bibliography.md#trahms2013decline); **research finding** about
+the literature). Two lessons carry over: recovery actions often run in parallel rather than "cut, then
+grow", and stakeholders and leadership are part of the recovery. Beyond that, the research cannot guide
+an 80-engineer organization. What this chapter says about the inside of a turnaround is
+**practitioner consensus** or **this book's recommendation**, labeled as such.
 
 ### Why failing organizations stay failing
 
-**The capability trap.** Repenning and Sterman, from more than a dozen case studies and system dynamics models,
-describe two ways to close a performance gap: work harder (more time on production) or work smarter
-(more time on improvement, which pays off only after a delay and makes things worse first). Cutting
-improvement time to meet today's targets erodes capability and forces still more reliance on working
-harder ([Repenning and Sterman, 2001](../../references/bibliography.md#repenning2001nobody)). They also
-argue that because the link between skipped improvement and later failure is long and hard to see,
-managers tend to blame the workers and respond with more pressure. **Research finding** (case studies
-and models). In engineering, the trap shows as a rising share of unplanned work and a debt list that
-nobody funds.
+**The capability trap.** Cutting improvement time to meet today's targets erodes capability and forces
+still more firefighting. Because the link between skipped improvement and later failure is slow and
+hard to see, managers tend to blame the workers and add pressure
+([Repenning and Sterman, 2001](../../references/bibliography.md#repenning2001nobody); **research
+finding**, from case studies and models). In engineering, the trap shows as a rising share of
+[unplanned work](../../glossary.md#unplanned-work) and a debt list that nobody funds.
 
-**Threat rigidity.** Staw, Sandelands, and Dutton summarized evidence at the individual, group, and
-organizational levels for a general threat-rigidity effect: under threat, information processing
-narrows and control is constricted toward the top
-([Staw et al., 1981](../../references/bibliography.md#staw1981threat)). **Research finding**, from a
-multilevel review. A failing engineering organization is under threat, and you can see the effect: the
-most senior engineer runs every severe incident personally, decisions wait for one person, and status
-reports carry less information as the situation gets worse. The new leader is exposed to the same
-effect and has to resist it deliberately, because centralizing everything feels like control and
-removes the managers' chance to show what they can do.
+**Threat rigidity.** Under threat, people and organizations narrow what information they take in and
+pull control toward the top ([Staw et al., 1981](../../references/bibliography.md#staw1981threat);
+**research finding**, from a review across individual, group, and organizational levels). In a failing
+engineering organization you can see it: the most senior engineer runs every severe incident, decisions
+wait for one person, and status reports say less as things get worse. The new leader feels the same pull
+and must resist it. Centralizing everything feels like control, and it removes the managers' chance to
+show what they can do.
 
-**Bad news that does not travel.** Smith and Keil argue that losses on troubled software projects grow
-because people are reluctant to pass negative status up the hierarchy, so the decision makers who could
-change course do not know the true state
-([Smith and Keil, 2003](../../references/bibliography.md#smith2003reluctance)). Interviews by Milliken
-and colleagues found that most employees had stayed silent about a concern, most often for fear of being
-labeled negatively ([Milliken et al., 2003](../../references/bibliography.md#milliken2003silence)).
-DORA's description of Westrum's typology distinguishes cultures by how they treat messengers, punished,
-neglected, or trained, and states that high-trust cultures that promote information flow predict
-delivery and organizational performance
-([DORA, generative culture](../../references/bibliography.md#dora-cap-generative-culture)); **industry
-research**. A failing organization has usually been punishing or neglecting messengers for a while, so
-the leader's early numbers are optimistic and the early interviews guarded.
-
-The novels that most engineering leaders have read on this subject make the same points as fiction.
-*The Goal* is known for teaching that improvement anywhere except the constraint is wasted
-([Goldratt and Cox, 1984](../../references/bibliography.md#goldratt1984goal)), and *The Phoenix
-Project* for dramatizing an IT organization in crisis that recovers by finding its constraint,
-limiting work in progress, and protecting improvement time
-([Kim, Behr, and Spafford, 2013](../../references/bibliography.md#kim2013phoenix)). Both are credited
-here at idea level; they are illustrations, not evidence.
+**Bad news that does not travel.** Losses on troubled software projects grow because people are
+reluctant to pass negative status upward, so decision makers do not know the true state
+([Smith and Keil, 2003](../../references/bibliography.md#smith2003reluctance)). Employee silence has the
+same root, as [Chapter 57](57-crises-executive-disagreement-and-resistance.md) explains. Cultures that
+train messengers rather than punish or neglect them predict better delivery performance
+([DORA, generative culture](../../references/bibliography.md#dora-cap-generative-culture); **industry
+research**). A failing organization has usually punished or neglected messengers for a while, so the
+leader's early numbers are optimistic and the early interviews guarded.
 
 ### The 30-day triage
 
@@ -184,114 +166,78 @@ a key person about to leave with knowledge nobody else holds, and a contractual 
 that triggers termination rights. Everything else, including most of the technical debt and most of
 the process, can wait a quarter while you learn.
 
-**How to gather evidence in 30 days.** Three sources, used against each other. Data first, with its
-production method checked (which numbers are counted by a system, which are joined by hand, which are
-sampled). Interviews second: every manager, the staff engineers, a sample of engineers chosen by you
-rather than by their managers, and every executive stakeholder. Firsthand observation third: attend
-incidents as an observer, read the last twenty incident reviews, sit in one planning session per team.
-[Chapter 40](../09-engineering-directorship/40-the-directors-job.md) owns how a director builds signal
-sources; the triage version is shorter and biased toward the places where interviews and data
-disagree.
+**How to gather evidence in 30 days.** Use three sources against each other. Data first, checking how
+each number is produced (system-counted, hand-joined, or sampled). Interviews second: every manager, the
+staff engineers, engineers you choose rather than their managers, and every executive stakeholder.
+Firsthand observation third: attend incidents, read the last twenty incident reviews, sit in one
+planning session per team. Look hardest where interviews and data disagree.
 
-**What triage is not.** It is not a reorganization: [Chapter 36](../07-organization-design/36-reorganizations-evolution-and-succession.md)
-treats a reorganization as a large, irreversible batch, and in the first month it would ship on the
-least information you will ever have. It is not a set of new rules for everyone. It is not a speech about culture. Each of those may
-come later, after the diagnosis has been tested.
+**What triage is not.** It is not a reorganization, which is a large, irreversible batch
+([Chapter 36](../07-organization-design/36-reorganizations-evolution-and-succession.md)) and in the first
+month would ship on the least information you will ever have. It is not new rules for everyone, or a
+speech about culture.
 
 ### Quality and trust: two tracks, two clocks
 
 Quality recovers on a slow clock. [Chapter 27](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)
 treats quality as a stock changed by flows: you can shut off the inflow of new defects within weeks,
 but draining the stock of fragile components, missing tests, and unowned systems takes quarters.
-Stakeholder trust moves on a faster clock. Executives and customers decide within weeks whether the new
-leader is different from the last one, and they decide on evidence they can see: what you say, whether
-it turns out true, and whether you told them before they found out.
+Stakeholder trust moves on a faster clock. Executives and customers decide within weeks whether the new leader is different from the last one.
+They decide on evidence they can see: what you say, whether it turns out true, and whether you told them
+first.
 
-Running the tracks in sequence fails both ways. Fixing quality first and communicating later leaves
-stakeholders to fill the silence with the old story, and they keep imposing dates, which feeds the
-trust loop. Rebuilding trust first with promises about outcomes spends credibility the quality track
-has not yet earned. The answer is to run both from the first week, with different kinds of promises
-on each.
+Running the tracks in sequence fails both ways. Fixing quality first leaves stakeholders to fill the
+silence with the old story, and they keep imposing dates. Rebuilding trust first with outcome promises
+spends credibility the quality track has not earned. Run both from the first week, with different
+kinds of promises on each.
 
-**What trust is made of.** Mayer, Davis, and Schoorman's integrative model of organizational trust is
-known for distinguishing three factors of trustworthiness: ability, benevolence, and integrity
-([Mayer et al., 1995](../../references/bibliography.md#mayer1995integrative); idea level). The split is
-useful in a recovery because each stakeholder has usually lost confidence in a different factor. The
+**What trust is made of.** Mayer, Davis, and Schoorman's model of trust distinguishes three factors:
+ability, benevolence, and integrity
+([Mayer et al., 1995](../../references/bibliography.md#mayer1995integrative); **expert opinion**). The
+split is useful because each stakeholder has usually lost confidence in a different factor. The
 CFO doubts ability (can engineering stop the credits?), the sales leader doubts benevolence (does
 engineering care about my deals?), customer success doubts integrity (will engineering tell me the
 truth during an incident?). Each needs different evidence.
 
-**How trust is repaired.** Kim and colleagues found in two studies that trust was repaired more
-successfully when the mistrusted party apologized for a violation concerning competence but denied
-culpability for one concerning integrity
-([Kim et al., 2004](../../references/bibliography.md#kim2004removing)); **research finding**, from
-experiments, not from engineering organizations. For a new leader the practical point is narrower:
-acknowledge the organization's competence failures plainly ("we caused 19 of 30 incidents with our own
-changes"), because acknowledgment of a competence failure is what repair needs, and do not let an
-integrity question (did we hide incidents from customers?) be answered by a vague apology. Investigate
-it and answer with facts.
+**How trust is repaired.** Acknowledge competence failures plainly ("we caused 19 of 30 incidents with
+our own changes"); answer integrity questions (did we hide incidents from customers?) with facts, not a
+vague apology. That follows the experimental evidence on apology and denial covered in
+[Chapter 57](57-crises-executive-disagreement-and-resistance.md#deep-conceptual-explanation)
+([Kim et al., 2004](../../references/bibliography.md#kim2004removing)).
 
-Dirks and Ferrin's meta-analysis of four decades of research on trust in leadership (k = 106) reports
-that direct leaders, such as supervisors, appear to be a particularly important referent of trust
-([Dirks and Ferrin, 2002](../../references/bibliography.md#dirks2002trust)); **research finding**. Inside
-the organization, the engineers' trust in recovery runs mostly through their own managers, not through
-the new leader's all-hands. That is one more reason to decide quickly about those managers, and to
-equip the ones you keep.
+Inside the organization, engineers' trust runs mostly through their own managers. A meta-analysis of
+106 studies of trust in leadership found direct supervisors a particularly important focus of trust
+([Dirks and Ferrin, 2002](../../references/bibliography.md#dirks2002trust); **research finding**). The
+new leader's all-hands matters less than the managers. That is one more reason to decide quickly about
+them, and to equip the ones you keep.
 
 **Promises on each track.** On the quality track, promise process and direction, not outcomes: "every
 Sev1 gets a tracked review within ten working days", "we will publish the incident count weekly with
 the severity audit". On the trust track, promise behavior that is fully in your control: "you will
 hear about a customer-visible incident from us before a customer tells you", "no date leaves
-engineering without an estimate and an owner". Weick's essay on small wins is known for arguing that
-recasting a large problem as a series of small, concrete, completed outcomes makes it tractable and
-builds momentum ([Weick, 1984](../../references/bibliography.md#weick1984small); idea level). In a
-recovery, the small wins are kept promises, counted.
+engineering without an estimate and an owner". Weick argues that recasting a large problem as small,
+completed outcomes makes it tractable ([Weick, 1984](../../references/bibliography.md#weick1984small);
+**expert opinion**). In a recovery, the small wins are kept promises, counted.
 
 ### Keep, coach, move, or replace
 
-The leaders you inherit ran the organization while it failed. Some of them caused part of the failure;
-most were caught in the same loops as everyone else. Getting this decision wrong in either direction is
-expensive.
+The rule (**this book's recommendation**): **do not replace a leader in the first 30 days, except for
+integrity or harm to people.** Use the first 30 days to separate the system from the person, with
+Chapter 9's four causes (system, skill, will, role fit) applied to the leader. Decide by day 60 to 90,
+on evidence the leader knew you were collecting.
 
-**Leaders matter, and measurably.** Lazear, Shaw, and Stanton, using one company's productivity data,
-estimate that replacing a supervisor in the bottom 10 percent of quality with one in the top 10 percent
-raises a team's output by more than adding a tenth worker to a nine-person team
-([Lazear et al., 2015](../../references/bibliography.md#lazear2015value)). Hoffman and Tadelis, at a
-large high-tech firm, found that managers' people-management skills have a strong negative relation to
-employee turnover, with designs that support a causal reading
-([Hoffman and Tadelis, 2021](../../references/bibliography.md#hoffman2021people)). Both are **research
-findings** from single firms. In a failing organization where attrition is part of the problem, the
-manager is one of the few levers that acts on it.
+The leaders you inherit ran the organization while it failed. Some caused part of the failure; most were
+caught in the same loops as everyone else. Getting the decision wrong in either direction is expensive,
+and the evidence explains why:
 
-**Coaching works, on average.** Theeboom and colleagues' meta-analysis found positive effects of
-coaching on performance and skills, well-being, coping, work attitudes, and goal-directed
-self-regulation, with effect sizes from g = 0.43 to g = 0.74
-([Theeboom et al., 2014](../../references/bibliography.md#theeboom2014coaching)); Jones and colleagues
-found an overall positive effect on organizational outcomes (delta = 0.36) for coaching by internal or
-external coaches, excluding coaching by a person's own manager
-([Jones et al., 2016](../../references/bibliography.md#jones2016coaching)). **Research findings**, with
-two caveats: studies measure people who entered coaching, usually willingly, and the time horizons are
-months, which may be longer than a recovery can wait.
+| Finding | Source and strength | What it means for the decision |
+|---|---|---|
+| Managers matter measurably: a top supervisor raises output, and good people managers lower turnover | [Lazear et al., 2015](../../references/bibliography.md#lazear2015value); [Hoffman and Tadelis, 2021](../../references/bibliography.md#hoffman2021people); research findings, single firms | Where attrition is part of the failure, the manager is one of the few levers on it |
+| Coaching has moderate positive effects on average | [Theeboom et al., 2014](../../references/bibliography.md#theeboom2014coaching); [Jones et al., 2016](../../references/bibliography.md#jones2016coaching); research findings, mostly willing participants, over months | Coaching can work, but may take longer than the recovery can wait |
+| Organizational change and departures go with more customer-reported defects | [Mockus, 2010](../../references/bibliography.md#mockus2010volatility); research finding, one project | Replacing a manager mid-crisis is itself a change, and the knowledge leaves |
+| One persistently negative member can erode a group's trust and cooperation | [Felps et al., 2006](../../references/bibliography.md#felps2006bad); review and model | A manager who belittles people in public does that harm with authority |
 
-**Replacing has a cost too.** Mockus found in one large software project that proximity to an
-organizational change was associated with a higher probability of customer-reported defects, and that
-recent departures were associated with more defects as well
-([Mockus, 2010](../../references/bibliography.md#mockus2010volatility)); **research finding**, one
-project. Replacing a manager in the middle of a quality crisis is itself an organizational change, and
-the new manager arrives without the knowledge the old one had.
-
-**One person can harm a group.** Felps and colleagues review how a single persistently negative group
-member, one who withholds effort, expresses negative affect, or violates important interpersonal norms,
-can reduce teammates' trust and cooperation
-([Felps et al., 2006](../../references/bibliography.md#felps2006bad)); a review and model, not a single
-study. A manager who belittles people in public is that member with authority, and the harm runs through
-everyone below them.
-
-From this evidence the book draws a rule (**this book's recommendation**): **do not replace a leader in
-the first 30 days, except for integrity or harm to people.** Use the first 30 days to separate the
-system from the person, using Chapter 9's four causes (system, skill, will, role fit) applied to the
-leader. Decide by day 60 to 90, on evidence the leader knew you were collecting. Four outcomes are
-possible:
+Four outcomes are possible:
 
 | Decision | When it fits | What it requires |
 |---|---|---|
@@ -306,9 +252,8 @@ show that something is changing.
 
 ## Engineering Organization Example
 
-The figures are **illustrative**: Halvard Systems is fictional. Halvard's Payroll group (its
-fourth product group: payroll and time-tracking software for customers' hourly workforces)
-has 90 engineers, 11 first-line manager seats of which two are vacant, and two directors: Rhys Gallagher
+The figures are **illustrative**: Halvard Systems is fictional. Halvard's Payroll group builds payroll and time-tracking software for customers' hourly workforces.
+It has 90 engineers, 11 first-line manager seats (two vacant), and two directors: Rhys Gallagher
 (Pay Calculation, 6 manager seats, 50 engineers) and Beatriz Quintero (Time and Attendance,
 5 manager seats, 40 engineers). Its principal engineer is Hiroshi Takeda. Ngozi Adeyemi joins from
 outside as vice president, after her predecessor left. Weeks count from her first day.
@@ -317,7 +262,7 @@ What she finds, from the group's records for the last three quarters:
 
 | Measure | Value | Arithmetic or note |
 |---|---|---|
-| Sev1 and Sev2 incidents per quarter | 9, 16, 23 | Rising for three quarters; last quarter 15 in Pay Calculation, 8 in Time and Attendance |
+| [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents per quarter | 9, 16, 23 | Rising for three quarters; last quarter 15 in Pay Calculation, 8 in Time and Attendance |
 | Of the last quarter's 23 | 14 change-induced, 11 customer-detected (48%), 7 Sev1 | 11 ÷ 23 = 47.8% |
 | Availability, pay-run path | 99.71% against 99.9% by contract | 0.29% of 131,040 minutes = 380 minutes unavailable, against about 131 allowed |
 | Largest 10 customers in formal escalation | 3 | One, worth $4.2M in annual recurring revenue, renews in week 30 and has opened a review |
@@ -335,7 +280,7 @@ him. That is threat rigidity in one person.
 
 **Stop the bleeding (weeks 1 to 4).** Ngozi's actions, each defensible even if her diagnosis is wrong:
 
-1. An incident commander rotation of eight people trained in weeks 2 and 3, so that Rhys stops being
+1. An [incident commander](../../glossary.md#incident-commander) rotation of eight people trained in weeks 2 and 3, so that Rhys stops being
    the only one; Rhys trains them.
 2. Every Sev1 reviewed within ten working days with a manager-owned corrective action, as the
    enterprise policy already requires; Hiroshi Takeda owns the review standard.
@@ -351,13 +296,10 @@ target. Her "not yet" list: no reorganization of the two directorates, no rewrit
 engine, no new process for the whole group.
 
 **What happened by day 90.** Sev1 and Sev2 incidents fell from 23 to 15 in her first quarter,
-customer-detected incidents from 11 to 6, and open escalations from 3 to 1; two engineers left in the
-quarter. Read the incident count with care: conditional on 38 incidents across the two quarters, an
-even split would be 19 each with a standard deviation of about 3.1 (the square root of 38 × 0.25), so
-15 is about 1.3 standard deviations below even. If nothing had changed, a drop at least this large would
-happen about one time in eight, and a split at least this uneven in either direction about one time in
-four (exact binomial: 0.13 one-sided, 0.26 two-sided). The count alone does not prove recovery; the mechanism measures
-(Sev1 reviews done on time, the commander rotation, customer-detected share) carry the argument.
+customer-detected incidents from 11 to 6, and open escalations from 3 to 1. Two engineers left in the
+quarter. Read the incident count with care. If nothing had changed, a drop this large would still happen
+about one quarter in eight. The count alone does not prove recovery; the mechanism measures (Sev1
+reviews on time, the commander rotation, customer-detected share) carry the argument.
 
 ## Decision Framework
 
@@ -412,21 +354,20 @@ organization to own the diagnosis. Directing a realignment area breeds resentmen
 turnaround area lets the bleeding continue. Mixed organizations need both, applied to different parts,
 and the leader has to explain why.
 
-**Visible change against stability.** Executives want to see that something is different. Every visible
-change (a new forum, a replaced manager, a new tool) is also an organizational change with its own
-quality cost. The cheapest visible change is honest communication.
+**Visible change against stability.** Every visible change (a new forum, a replaced manager, a new
+tool) has its own quality cost. The cheapest visible change is honest communication.
 
 **Protecting improvement time against stakeholder demands.** Breaking the capability loop means taking
 capacity from the roadmap while the roadmap is already late. The trade only holds if stakeholders can
 see what the capacity buys, which is why the trust track has to start in week 1.
 
 **Keeping leaders against replacing them.** Keeping a leader who cannot carry the recovery costs
-quarters; replacing one who could have costs the knowledge, the team's trust, and the quality hit of
-another change. A dated checkpoint limits the first cost; the 30-day rule limits the second.
+quarters; replacing one who could have costs knowledge and trust. A dated checkpoint limits the first
+cost; the 30-day rule limits the second.
 
-**Owning the past against blaming it.** A new leader who blames the predecessor gains a quarter of
-patience and loses the managers who served under them. One who owns the organization's failures from
-day 1 gets less patience and more cooperation.
+**Owning the past against blaming it.** Blaming the predecessor buys a quarter of patience and loses
+the managers who served under them. Owning the failures from day 1 gets less patience and more
+cooperation.
 
 ## Failure Modes
 
@@ -435,28 +376,25 @@ decision. Results improve briefly and then stall, because nobody else learned an
 has become the new single point of failure. Early sign: your calendar has more incident bridges than
 one-on-ones.
 
-**The purge.** Several leaders are replaced in the first month to show decisiveness. The organization
-learns that the safest move is to hide problems, which is the opposite of what a recovery needs.
-Early sign: the replacements are announced before anyone could state what each person was expected to
-do differently.
+**The purge.** Several leaders are replaced in the first month to show decisiveness, and the
+organization learns to hide problems. Early sign: replacements announced before anyone could say what
+each person was expected to do differently.
 
 **Diagnosis paralysis.** The leader collects data for a quarter while the escalated customer leaves.
 Early sign: day 30 arrives with no stop-the-bleeding action taken.
 
-**The promise binge.** To buy patience, the leader promises outcomes ("incidents halved by next
-quarter") that the quality track cannot deliver on that clock. The miss arrives when trust is lowest.
-Early sign: a promise with a number in it that depends on rare events.
+**The promise binge.** Outcome promises ("incidents halved by next quarter") the quality clock cannot
+meet. Early sign: a promise with a number that depends on rare events.
 
-**Quality without trust.** The engineering work is right and nobody outside engineering knows about it.
-Stakeholders keep imposing dates, and the capacity for prevention is taken back in the next planning
-cycle. Early sign: executives describe the organization in the same words as before you arrived.
+**Quality without trust.** The work is right and nobody outside engineering knows, so prevention
+capacity is taken back at the next planning cycle. Early sign: executives describe the organization in
+the same words as before you arrived.
 
-**Trust without quality.** Excellent communication about a recovery that is not happening. It holds for
-one or two quarters. Early sign: the status notes improve faster than any measure.
+**Trust without quality.** Excellent communication about a recovery that is not happening. Early sign:
+the status notes improve faster than any measure.
 
-**Quiet coaching.** A leader is "being coached" with no written expectation, no checkpoint, and no
-consequence. Months later the organization concludes that nothing will ever change at that level.
-Early sign: you cannot state the coaching goal in one sentence or its checkpoint date.
+**Quiet coaching.** A leader is "being coached" with no written expectation, checkpoint, or
+consequence. Early sign: you cannot state the coaching goal in one sentence, or its checkpoint date.
 
 **Declaring victory on small counts.** Incidents fall from 23 to 15 and the recovery is announced. The
 next quarter brings 20 and the credibility goes with it. Early sign: a headline built on one quarter of
@@ -468,26 +406,22 @@ In an organization of 50 to 150 engineers, the failing organization is usually o
 remit or one group within a VP's. The leader can still know every manager and most senior engineers by
 name, which makes the 30-day triage feasible in person. A practical shape:
 
-- **A 30-day plan with four outputs** (diagnosis, stop-the-bleeding actions, "not yet" list, one
-  promise), agreed with your manager in week 1 so that the absence of a transformation plan at day 30
-  is expected, not a surprise.
-- **Two status lines from week 1**: an internal weekly operational review with the incident count,
-  the severity audit, and corrective actions, and an external note for the stakeholders who lost
-  confidence. The [executive update template](../../templates/executive-update.md) fits the second.
+- **A 30-day plan with four outputs**, agreed with your manager in week 1, so the absence of a
+  transformation plan at day 30 is expected.
+- **Two status lines from week 1**: an internal weekly operational review, and an external note for
+  the stakeholders who lost confidence ([executive update template](../../templates/executive-update.md)).
 - **A stakeholder map** that records, for each executive, which trust factor they doubt (ability,
   benevolence, integrity) and the evidence that would move them
   ([stakeholder map template](../../templates/stakeholder-map.md)).
 - **A leader assessment for each manager by day 30** against Chapter 9's four causes, written for
   yourself, with a dated decision point no later than day 90. The
   [engineering manager rubric](../../templates/engineering-manager-rubric.md) gives the dimensions.
-- **A quality plan from day 30**, built with the
-  [90-day quality transformation plan template](../../templates/ninety-day-quality-plan.md) once the
-  constraint is known, not before.
-- **A management team that argues in the room.** Lencioni's fable is known for placing trust and
-  willingness to engage in conflict at the base of a working leadership team
-  ([Lencioni, 2002](../../references/bibliography.md#lencioni2002five); idea level, **expert opinion**).
-  A failing organization's managers have often stopped disagreeing openly and started blaming each
-  other's teams; the leader's weekly meeting with them is where that is repaired or not.
+- **A quality plan from day 30**, once the constraint is known
+  ([90-day quality plan template](../../templates/ninety-day-quality-plan.md)).
+- **A management team that argues in the room.** Lencioni puts trust and open conflict at the base of a
+  working leadership team ([Lencioni, 2002](../../references/bibliography.md#lencioni2002five);
+  **expert opinion**). A failing organization's managers have often stopped disagreeing openly and
+  started blaming each other's teams. The leader's weekly meeting with them is where that is repaired.
 - **A promise ledger**: every external commitment you make, with its date and whether it was kept,
   reviewed monthly. In a recovery, this is the measure stakeholders are actually running on you.
 
@@ -496,16 +430,15 @@ name, which makes the 30-day triage feasible in person. A practical shape:
 The CTO usually does not run the recovery; the CTO decides that one is needed, picks who runs it, and
 protects it. Three decisions are the CTO's.
 
-**Recognizing failure early.** Failing organizations are rarely declared; they are tolerated. The
-signals that a CTO sees first are commercial: service credits, escalations by large customers, sales
-asking for exceptions to engineering's process. A CTO who waits for the engineering numbers to confirm
-it waits too long, because those numbers are produced by the organization under threat.
+**Recognizing failure early.** Failing organizations are rarely declared; they are tolerated. A CTO
+sees commercial signals first: service credits, escalations by large customers, sales asking for
+exceptions. Waiting for engineering numbers to confirm it is too slow, because the organization under
+threat produces them.
 
 **Choosing the leader for the stage.** The leader who built a group may not be the one to rescue it,
-and the rescuer may not be the one to run it afterwards. Watkins and colleagues' point that leaders do
-not handle every stage equally well ([Watkins et al., 2014](../../references/bibliography.md#watkins2014hit))
-is the CTO's problem: at Halvard, appointing an outside vice president to Payroll was a decision
-that the group's own directors could not carry a turnaround while also running their areas.
+and the rescuer may not be the one to run it afterwards. At Halvard, appointing an outside vice
+president to Payroll was a judgment that the group's own directors could not carry a turnaround while
+also running their areas.
 
 **Holding the board and the executive team to a realistic clock.** The board will want a date for "fixed".
 The CTO's job is to translate the recovery into a sequence of verifiable steps (stop the bleeding,
@@ -514,9 +447,8 @@ on one good quarter. [Chapter 55](../12-cto-leadership/55-boards-due-diligence-a
 covers board communication; in a recovery, the most valuable thing the CTO can bring to the board is a
 record of promises kept.
 
-The CTO also owns the question of whether the recovery leader is being set up to fail: a mandate with
-outcome targets but no capacity, or a constraint on headcount combined with a contractual deadline. If
-the mandate cannot be met, the CTO should say so before the recovery starts, not after it misses.
+The CTO also owns whether the recovery leader is set up to fail, for example with outcome targets but
+no capacity. If the mandate cannot be met, the CTO should say so before the recovery starts.
 
 ## Practical Playbook
 
@@ -524,8 +456,7 @@ the mandate cannot be met, the CTO should say so before the recovery starts, not
    promise at day 30.
 2. **Check how every number is produced** before you believe it: system-counted, hand-joined, sampled,
    or self-reported.
-3. **Interview widely and against the grain:** every manager, every staff engineer, engineers you pick,
-   every executive stakeholder, and at least one large customer through customer success.
+3. **Interview widely and against the grain,** including engineers you pick and one large customer.
 4. **Classify each part of the organization** as turnaround or realignment, and say so in the diagnosis.
 5. **Name the strongest loop** (capability, trust, people) in each turnaround area.
 6. **Act this week on irreversible harm only:** data correctness, exploitable security exposure, key
@@ -542,80 +473,66 @@ the mandate cannot be met, the CTO should say so before the recovery starts, not
 
 ## Case Study
 
-The Northstar facts below are **illustrative** and fictional, from the [baseline
-data](../../case-studies/northstar/baseline-data.md) and [the first
-quarter](../../case-studies/northstar/first-quarter.md). This case reads the organization the director
-inherited as a failing organization and compares the canon's first four weeks with the triage this
-chapter recommends. The keep, coach, or replace reading is this chapter's analysis; it records no
-event.
+!!! info "Northstar so far"
+    Week 1 of the director's first year. You join Northstar as Engineering Director, reporting to Victor
+    Lindqvist (CTO), with a mandate to halve Sev1 and Sev2 incidents and meet 99.9 percent availability
+    within a year, with flat headcount. The case follows results to quarter 3 (week 39). See the
+    [timeline](../../case-studies/northstar/timeline.md).
 
-**Was Northstar failing?** By this chapter's definition, the reliability side was: availability on the
-contractual paths was 99.62 percent against a 99.9 percent commitment (about 8.2 hours unavailable in a
-90-day quarter against about 2.2 allowed), service credits were $410,000 in the quarter ($1.64M a year
-at that rate), and two renewals worth $9M of annual recurring revenue named reliability as their
-concern. Of 30 Sev1 and Sev2 incidents, 19 were caused by Northstar's own changes, 14 were first detected
-by customers, and 11 were recurrences.
+The Northstar facts below are **illustrative** and fictional, from the
+[baseline data](../../case-studies/northstar/baseline-data.md) and
+[the director's first year](../../case-studies/northstar/first-quarter.md). This case reads the
+organization the director inherited as a failing one. The keep, coach, or replace reading is this
+chapter's analysis, not a recorded event.
 
-The delivery side was stable rather than declining, but it broke promises too: 5 of the 17 committed
-items had dates given to customers before sizing, and only 7 of 17 shipped. Committed roadmap items
-delivered ran 6 of 15, 8 of 18, 7 of 16, then 7 of 17 (40, 44, 44, and 41 percent) over four quarters.
-That is stable and poor, a realignment problem inside a failing organization: the trend is flat, so the
-remedy is shared diagnosis, not crisis direction. The canon records no incident trend before the baseline quarter, so "declining"
-cannot be shown for reliability either; the case for turnaround rests on broken commitments, not on a
-trend. The company itself was healthy (annual recurring revenue of $140M); the engineering organization
-was failing the company's promises.
+**Was Northstar failing?** By this chapter's definition, the reliability side was. Availability on the
+contractual paths was 99.62 percent against a 99.9 percent commitment: about 8.2 hours down in the
+quarter against about 2.2 allowed. Service credits were $410,000 in the quarter. Two renewals worth $9M
+of annual recurring revenue named reliability as their concern. Of 30 Sev1 and Sev2 incidents, 19 were
+caused by Northstar's own changes, 14 were first detected by customers, and 11 were recurrences.
 
-**The loops at arrival.**
+The delivery side was stable and poor. Committed roadmap items delivered ran 40, 44, 44, and 41 percent
+over four quarters, and 5 of the latest 17 had dates given to customers before sizing. That is a
+realignment problem inside a failing organization: the trend is flat, so the remedy is shared
+diagnosis, not crisis direction. The company itself was healthy ($140M of annual recurring revenue); the
+engineering organization was failing the company's promises.
 
-| Loop | Northstar evidence |
-|---|---|
-| Capability | Unplanned work 34 percent of capacity (27.2 engineer-years, about $5.0M); 96 corrective actions recorded over two quarters, 31 closed; a 143-item debt list with 9 closed |
-| Trust | Committed items chosen by four executives distributing points with no value estimates; 5 of 17 dates given to customers before sizing; Victor Lindqvist's handover notes say he "let the two of them sort it out" about the Billing and Orders friction |
-| People | Billing's 180 pages in the quarter (reconstructed later from the paging tool; at arrival the team table said only that three people carry most pages), 126 handled first by three ledger engineers, 54 of the 64 after-hours pages by the same three; one ledger engineer had resigned after three consecutive weekends of pages; currency and rounding known by one person |
+**The first four weeks, read as triage.** Northstar's weeks 1 to 4 map closely onto the triage outputs.
+In week 2 a one-off security scan of all 24 components covered the irreversible-harm item (it found 11
+open criticals, 3 known-exploited). In week 3, severity definitions written with Kwame Mensah (staff
+engineer, reliability) and Sofia Alvarez (VP Customer Success) started the trust track. In week 4 the
+capacity model agreed with Victor and Amara Okafor (CPO) funded prevention at 12 FTE and protected the
+two renewal commitments: the one promise.
 
-**The first four weeks, read as triage.** The canon's weeks 1 to 4 map closely onto the triage outputs.
-
-| Triage output | What the canon records (weeks 1–4) |
-|---|---|
-| Irreversible harm | Week 2: a one-off security scan of all 24 components (11 open criticals, 3 known-exploited, 9 live credentials found at baseline) |
-| Diagnosis | Week 2: incident classification with Kwame Mensah |
-| Trust track | Week 3: severity definitions written with Kwame Mensah and Sofia Alvarez, who had asked for honest status during incidents |
-| Constraint | The Core release train identified as the constraint (Chapter 27; the canon does not date the call); week 4: Core main below 10 percent red time and the first 40 flaky tests quarantined |
-| Ownership | Week 4: core/customer and core/scheduler given owners |
-| One promise | Week 4: the capacity model agreed with Victor Lindqvist and Amara Okafor, with prevention funded at 12 FTE and the two renewal commitments protected |
-| Leader coaching | Week 2: Priya Raman agrees a time budget (hands-on work capped at 8 hours a week) and delegates bulk-ordering leadership and reviews |
-
-**What the triage missed.** The people loop in Billing was the closest to irreversible harm: the
-ledger knowledge held by three engineers, one already gone, paged most weekends. The canon's director
-had the qualitative signal at arrival (the team table says three people carry most of Billing's on-call
-pages); the exact counts were reconstructed later from the paging tool, as [Chapter 3](../01-foundations/03-managerial-leverage-and-systems-thinking.md) records. The canon records no
-action on their load in the first 30 days. Billing received the largest prevention share (25 percent)
-from week 4, but the stay interviews with the three ledger engineers came in weeks 14 and 15, and in
-week 20 Tomasz Wierzbicki reported an outside offer 20 percent above his base. Under this chapter's
-triage rule, a key person about to leave with knowledge nobody else holds is a week-1 item.
+**What the triage missed.** The people loop in Billing was the closest to irreversible harm. Three
+ledger engineers held the ledger knowledge and handled 54 of the quarter's 64 after-hours pages; one
+colleague had already resigned after three consecutive weekends of pages. The director had the
+qualitative signal at arrival: the team table says three people carry most of Billing's pages. No action
+on their load is recorded in the first 30 days. Billing got the largest prevention share (25 percent)
+from week 4, but the stay interviews came in weeks 14 and 15. In week 20 Tomasz Wierzbicki, one of the
+three, reported an outside offer 20 percent above his base. Under this chapter's triage rule, a key
+person about to leave with knowledge nobody else holds is a week-1 item.
 
 **Keep, coach, or replace at day 30 (analysis).** Read from the baseline evidence against Chapter 9's
 four causes:
 
 | Manager | Evidence at arrival | Reading |
 |---|---|---|
-| Priya Raman (Orders) | Promoted eight months earlier without training; 18 hours of a 40-hour week coding and reviewing | Coach: a skill and habit gap with a willing manager. Her hands-on hours at the quarter 2 checks (8, 10, 12 against a cap of 8) show why the checkpoint has to be dated: it caught the drift that an undated coaching goal would have missed, and Chapter 41 acts on it |
-| Marcus Oyelaran (Billing) | Worst team numbers; 55 percent of his time on delivery; technical direction "decided during incidents" | Keep and fix the system first: most of Billing's failures came through the release train and shared schema. Reserve judgment until the system fixes land; the week 44 succession table still shows no cover for his role |
+| Priya Raman (Orders) | Promoted eight months earlier without training; 18 hours of a 40-hour week coding and reviewing | Coach: a skill and habit gap with a willing manager. Her hands-on hours at later checks (8, 10, 12 against a cap of 8) show why the checkpoint must be dated |
+| Marcus Oyelaran (Billing) | Worst team numbers; 55 percent of his time on delivery; technical direction "decided during incidents" | Keep and fix the system first: most of Billing's failures came through the release train and shared schema |
 | Elena Sokolova (Payments and Integrations) | Weekly operations review for two years; near-miss log | Keep, and use her practice as the model |
-| Daniel Cho (Customer Experience) | One-on-ones held but mostly status; 6 of 8 retrospective actions about web; Mateo Arango Ríos unrecognized | Coach, on one focus: the mobile engineers |
+| Daniel Cho (Customer Experience) | One-on-ones held but mostly status; 6 of 8 retrospective actions about web; the informal mobile lead unrecognized | Coach, on one focus: the mobile engineers |
 | Farah Haddad (Data and Analytics) | Low incident rate; little contact with other teams | Keep |
-| Tom Becker (Platform Operations) | Quietly reassigned 31 of Bram Verhoeven's 74 tickets while Bram's last review said "meets expectations" | Coach on performance management (Chapter 9's case) |
+| Tom Becker (Platform Operations) | Quietly reassigned 31 of one senior engineer's 74 tickets while his last review said "meets expectations" | Coach on performance management (Chapter 9's case) |
 
 Nobody falls into "replace" at day 30, and that is the right answer on this evidence: no integrity or
 harm finding, and the worst numbers sit where the system is worst. Replacing Marcus Oyelaran to look
 decisive would have added an organizational change to the team with the most fragile knowledge.
 
 **Results.** Sev1 and Sev2 incidents ran 30, 21, 17, then 14 in quarter 3, the first quarter at or below
-the mandate's 15. Availability was 99.86 percent in quarter 2 and 99.89 percent in quarter 3, still just
-below 99.9 percent (about 144 minutes unavailable against about 131 allowed in a 91-day quarter).
-Credits fell to $95,000 and then $60,000 a quarter. Customer-detected share fell from 47 to 29 percent
-in quarter 1 and stayed there in quarter 2. On counts this small, the trend across four quarters is
-more convincing than any single step, and the availability commitment has still not been met.
+the mandate's 15. Availability reached 99.89 percent in quarter 3, still just below 99.9 percent.
+Credits fell to $60,000 a quarter. On counts this small, the trend across four quarters is more
+convincing than any single step, and the availability commitment has still not been met.
 
 ## Exercises
 
@@ -648,20 +565,20 @@ later from the paging tool; assume you can obtain them now.) Headcount is flat a
 actions you would take in weeks 2 to 4, who owns each, what they cost in capacity, and how you would
 tell Marcus Oyelaran and the three engineers.
 
-**A2.** This scenario is hypothetical and not part of the canon. Suppose that at Halvard, Beatriz Quintero reported the integration roadmap as on track for three months
+**A2.** This scenario is hypothetical and not part of the case. Suppose that at Halvard, Beatriz Quintero reported the integration roadmap as on track for three months
 before it slipped by a quarter. She is otherwise effective, and her area's incidents are falling.
 Decide whether this is an integrity problem, a skill problem, or a system problem, using the
-chapter's evidence on silence and bad news. Write the conversation you would open with, and the change
+chapter's evidence on bad news that does not travel. Write the conversation you would open with, and the change
 to the reporting system that would make the next slip visible earlier.
 
-**A3.** Draft the stakeholder side of the trust track for Northstar's first 30 days. For Helena Marsh,
-Rajiv Menon, Amara Okafor, Greg Tanaka, and Sofia Alvarez, identify which trust factor (ability,
+**A3.** Draft the stakeholder side of the trust track for Northstar's first 30 days. For Helena Marsh (CEO),
+Rajiv Menon (CFO), Amara Okafor, Greg Tanaka (VP Sales), and Sofia Alvarez, identify which trust factor (ability,
 benevolence, integrity) each most doubts, the evidence that would move them, and the one behavioral
 promise you would make to each. Check that no two promises conflict.
 
 ### Executive Decision-Making
 
-**X1.** This scenario is hypothetical and not part of the canon. Suppose that at day 120 Rhys Gallagher
+**X1.** This scenario is hypothetical and not part of the case. Suppose that at day 120 Rhys Gallagher
 has trained the commander rotation but still overrides his managers' decisions on pay calculation
 engine changes, and two of his managers have told Ngozi Adeyemi they will leave if nothing changes. Ngozi asks
 you, as Halvard's CTO, to support moving Rhys out of the director role into a principal engineer role.
@@ -706,7 +623,7 @@ than 200 words, stating what is recovered, what is not, and what you would not y
 ## References and Further Reading
 
 - [Watkins, 2003](../../references/bibliography.md#watkins2003first): leadership transitions and
-  matching strategy to the situation (idea level).
+  matching strategy to the situation.
 - [Watkins et al., 2014](../../references/bibliography.md#watkins2014hit): turnaround versus
   realignment and why leaders differ by stage.
 - [Trahms et al., 2013](../../references/bibliography.md#trahms2013decline): review of organizational
@@ -721,14 +638,14 @@ than 200 words, stating what is recovered, what is not, and what you would not y
   typology and information flow.
 - [Goldratt and Cox, 1984](../../references/bibliography.md#goldratt1984goal) and
   [Kim, Behr, and Spafford, 2013](../../references/bibliography.md#kim2013phoenix): constraints and an
-  IT turnaround told as fiction (idea level).
+  IT turnaround told as fiction; illustrations, not evidence.
 - [Mayer et al., 1995](../../references/bibliography.md#mayer1995integrative): ability, benevolence,
-  and integrity as factors of trustworthiness (idea level).
+  and integrity as factors of trustworthiness.
 - [Kim et al., 2004](../../references/bibliography.md#kim2004removing): repairing competence and
   integrity violations.
 - [Dirks and Ferrin, 2002](../../references/bibliography.md#dirks2002trust): trust in leadership,
   meta-analysis.
-- [Weick, 1984](../../references/bibliography.md#weick1984small): small wins (idea level).
+- [Weick, 1984](../../references/bibliography.md#weick1984small): small wins.
 - [Lazear et al., 2015](../../references/bibliography.md#lazear2015value) and
   [Hoffman and Tadelis, 2021](../../references/bibliography.md#hoffman2021people): how much managers
   matter.
@@ -739,4 +656,4 @@ than 200 words, stating what is recovered, what is not, and what you would not y
 - [Felps et al., 2006](../../references/bibliography.md#felps2006bad): how one negative member harms a
   group.
 - [Lencioni, 2002](../../references/bibliography.md#lencioni2002five): the leadership team as a team;
-  useful when rebuilding a management group that has stopped trusting each other (idea level).
+  useful when rebuilding a management group that has stopped trusting each other.

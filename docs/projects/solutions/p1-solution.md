@@ -6,7 +6,13 @@ as a submission to be tested, not as the answer. The conclusion is that the rede
 shape, homes every loop in its own matrix, misses four loops its matrix does not list, fails two
 acceptance criteria as written, and needs five amendments. Every recommendation here is this
 solution's, one defensible answer among several. All Northstar facts are fictional; estimates marked
-as this solution's are assumptions, not canon.
+as this solution's are assumptions, not facts from the case.
+
+People named, with roles (see the [cast](../../case-studies/northstar/cast.md)): Victor Lindqvist (CTO),
+Amara Okafor (CPO), and the engineering managers Priya Raman (Orders), Marcus Oyelaran (Billing), Elena
+Sokolova (Payments and Integrations), Daniel Cho (Customer Experience), and Tom Becker (Platform
+Operations); the staff engineers Kwame Mensah, Ines Carvalho, and Li Na Zhou; and Mateo Arango Ríos,
+Customer Experience's informal mobile lead in Bogotá.
 
 ## 1. The quarter 2 system, recomputed twice
 
@@ -51,14 +57,14 @@ review 0.19 (45 minutes a month ÷ 4), delivery review 0.375, all-hands 0.25, re
 ## 2. The matrix, extended
 
 Chapter 37's six rows, plus seven loops its matrix does not list. "Appears" and "resolved" are read
-from the canon up to week 22.
+from Northstar's record up to week 22.
 
 | Loop | Appears in | Resolved in | Status |
 |---|---|---|---|
 | Renewal status | Six forums | Renewal check-in | Duplicated |
 | Incident follow-ups due | Four forums | Operational review | Duplicated |
 | Platform requests and environment waits | Managers' meeting, product sync, delivery review | Nowhere | Missing |
-| Cross-team decisions (ADR-0001, core/permissions owner) | Managers' meeting, staff group, Billing and Orders sync | Nowhere | Missing |
+| Cross-team decisions ([ADR-0001](../../glossary.md#adr-0001) on how integrations read ledger data; the core/permissions owner) | Managers' meeting, staff group, Billing and Orders sync | Nowhere | Missing |
 | Technology risk register | None | Nowhere | Missing |
 | Promotion calibration | One-on-ones | Nowhere | Missing |
 | *Open log entries past "needed by"* | Nowhere (log opened week 14) | Nowhere | Missing |

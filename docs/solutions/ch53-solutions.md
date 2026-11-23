@@ -3,11 +3,24 @@
 Worked solutions for the [chapter 53 exercises](../parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md#exercises).
 Most of these exercises have more than one defensible answer. Each solution gives one worked answer,
 the criteria a good answer meets, and the weak answer to watch for. All Northstar and Halvard data is
-fictional; the week 44 snapshot and the draft register are the chapter's additions.
+fictional.
+
+## How the register's figures are derived
+
+The chapter's register states its exposures without arithmetic; the derivations are here.
+
+| Figure | Derivation |
+|---|---|
+| Revenue at renewal | Six of the 40 largest customers renew in quarters 5 to 8 at about $1.17M each: $7.02M |
+| Loss of one customer | About $1.17M of revenue; at the 72 percent gross margin, about $842,000 a year |
+| Credits range | $95,000 in quarter 2 and $60,000 in quarter 3, or $380,000 and $240,000 a year at those rates |
+| Questionnaire load | 34 × 14 hours = 476 hours a year; at 1,840 working hours (230 days of 8 hours), about 0.26 FTE |
+| TR-01 migration | Finance's scenarios of 120, 190, and 243 engineer-days at $800 a day: $96,000, $152,000, $194,400, used instead of Chapter 30's earlier 120 to 180 days so the register and the budget show one range |
+| ER-01 likelihood 4 | Six large renewals in quarters 5 to 8, and availability below 99.9 percent in every measured quarter (99.86 and 99.89 percent): a loss is judged likely, not certain |
 
 ## F1 — Splitting the one corporate technology line
 
-**Splitting "Cyber attack or IT outage."** The one canonical line splits into at least three
+**Splitting "Cyber attack or IT outage."** The one corporate line splits into at least three
 statements. (a) "Because a known-exploited
 vulnerability in auth-svc can only be mitigated at the load balancer until the service leaves its
 shell-script deploy, an attacker may bypass the restriction and reach customer sessions, which would
@@ -36,7 +49,7 @@ respond alone on each system, recounted quarterly. Choosing financial correctnes
 of the two missing lines is equally defensible, since it is a Sev1 consequence the corporate register
 does not mention.
 
-A good answer names causes from the canon, separates owner from accepter, and picks indicators that move
+A good answer names causes from Northstar's record, separates owner from accepter, and picks indicators that move
 before the event, and notices that the corporate register's single line omits whole categories of
 technology risk. The weak answer rewords the line ("Risk of cyber attack due to threats"), keeps one
 owner for everything, and proposes no missing lines.
@@ -56,7 +69,7 @@ questionnaires; ER-02 and ER-08 are honestly "not quantified"); the trend; the t
 who accepts the residual; and whether it is inside the proposed appetite.
 
 Which to discuss first: ER-06, because it is the only one of the four that needs a decision from
-executives now (attestation options A, B, or C) and it is worsening as renewals approach. ER-02 is a
+executives now (SOC 2 options A, B, or C) and it is worsening as renewals approach. ER-02 is a
 strong alternative, because a customer-visible financial error is a Sev1 by Northstar's definition and
 the risk sits on two one-person systems. The weak answer re-scores the four until they differ, which
 keeps the false precision and adds argument about the decimals.
@@ -66,7 +79,7 @@ keeps the false precision and adds argument about the decimals.
 | Obligation | Control | Evidence from | Owner | True on paper, failing in fact |
 |---|---|---|---|---|
 | 99.9 percent availability | SLOs and error budget policy; tier 1 minimums | Synthetic checks; incident tracker | Engineering Director, with team owners | Checks from one region miss the mobile path (a known baseline weakness), so availability reads high while mobile users fail |
-| Change management under an attestation | Every tier 1 change reviewed and deployed through an auditable pipeline | Repository and pipeline logs | Kwame Mensah (pipelines), teams | Reviews exist but are rubber stamps, as in the baseline pull request checklist where ticked boxes were false; sample reviews against diffs |
+| Change management under a SOC 2 audit | Every tier 1 change reviewed and deployed through an auditable pipeline | Repository and pipeline logs | Kwame Mensah (pipelines), teams | Reviews exist but are rubber stamps, as in the baseline pull request checklist where ticked boxes were false; sample reviews against diffs |
 | Card data protection | Card numbers handled only by the processor's hosted fields and tokens; scope boundary documented | Network and access configuration; annual scope review | Joon Park, with Elena Sokolova | A logging change captures request bodies containing card data; the scope document stays unchanged |
 | SBOM and SSDF evidence | SBOM generated per build; remediation service levels | Build artifacts; scanner and exception records | Kwame Mensah; Joon Park | SBOMs cover 14 of 15 tier 1 components, and the one missing (auth-svc) is the one with the known-exploited item |
 
@@ -105,7 +118,7 @@ For Marta Kowalczyk and Rajiv Menon, monthly:
 | Exceptions by age and accepter level | Renewal under a new date | Exceptions older than one quarter listed by name |
 | Tier 1 coverage: SBOM per build, auditable pipeline, signed provenance | Counting components with the tool installed but output unused | Share of findings with an owner's decision within service level |
 | Secrets in plain files; certificates with owner and alerting | Inventory omits hard cases | Expiry and leaked-credential incidents |
-| Questionnaire hours and attestation requests | Under-recording time | Deals where assurance was raised, from Greg Tanaka's pipeline |
+| Questionnaire hours and SOC 2 requests | Under-recording time | Deals where assurance was raised, from Greg Tanaka's pipeline |
 
 Penetration test findings stay as context, reported as findings open past their due date, not as a
 count. Phishing click rate and training completion move to an appendix: they are activity measures and
@@ -125,7 +138,7 @@ to promise it, because if we miss it the prospect has grounds to leave and we ha
 commitments are soft. Here is what we can offer now: a completed security questionnaire with evidence
 from our systems (scanning on all 24 components, SBOMs for 14 of 15 tier 1 components, remediation
 service levels and their record, our latest external penetration test summary), and a call with Joon
-Park and me. Whether Northstar pursues an attestation is a decision Victor takes to the executive team,
+Park and me. Whether Northstar pursues a SOC 2 report is a decision Victor takes to the executive team,
 with options in front of the audit committee in week 50. If they approve an audit in year 2, I will tell
 you the earliest date we can commit to, and you can offer it then. Can you ask the prospect whether a
 signed commitment to start the audit by a date, with a right to terminate if it slips, would satisfy

@@ -8,7 +8,8 @@ the criteria a good answer meets, and the weak answer to watch for. All Northsta
 
 **Classification.** The head of customer success holds an **external**, user-based view: quality is
 what customers experience. The QA lead holds a **conformance** (manufacturing-based) view, which is a
-narrow slice of external quality: the product matches its specified behavior. Ines Carvalho holds an
+narrow slice of external quality: the product matches its specified behavior. Ines Carvalho (staff
+engineer, Core domain) holds an
 **internal** view: quality is how safely the system can be changed. Garvin's transcendent strand is
 also present in "code we can change without fear", which is easier to feel than to measure.
 
@@ -78,13 +79,14 @@ something other than discipline.
 
 ## A1 — Responding to Tom Becker on independence
 
-**What is supported.** Independence is a real property: testers without a stake in the change find
+**What is supported.** Tom Becker (Platform Operations manager) is right that independence is a real
+property: testers without a stake in the change find
 things authors miss, and specialized testing skills exist. The research on testing roles also shows
 that domain knowledge is a testing asset (Mäntylä, Itkonen, and Iivonen, 2012), and Northstar's QA
 engineers have years of it. Concede both.
 
-**What is not supported.** No study the book found shows that removing a central QA group raises
-escaped defects; the question is unresolved (gap G4). And the baseline undercuts the claim that the
+**What is not supported.** No study shows that removing a central QA group raises escaped defects;
+the evidence on the question is thin and unresolved. And the baseline undercuts the claim that the
 current model is protecting customers: 212 escaped defects last quarter, 81 of them regressions, and
 14 of 30 incidents found by customers, all with the three-day pass in place. Chapter 27 records that
 the pass caught none of the nine train-triggered incidents.
@@ -122,8 +124,8 @@ The weak answer describes a tester embedded in a team: same job, different seat.
 
 ## A3 — Elena's team and its boundaries
 
-**Decision.** One defensible choice: do not impose an embedded quality engineer on Payments and
-Integrations if its ownership is working, but do make the boundary defects owned. The detection-point
+**Decision.** One defensible choice: do not impose an embedded quality engineer on Elena Sokolova's
+Payments and Integrations team if its ownership is working, but do make the boundary defects owned. The detection-point
 data says the problem is at the contracts between teams, not inside the team.
 
 **How.**
@@ -143,14 +145,14 @@ The weak answers are uniformity ("every team gets one") or deference ("they're f
 
 ## X1 — Keeping quality specialists
 
-**Recommendation.** Keep quality specialists, change what they do. Embed most of the seven in product
+**Recommendation.** Tell Victor Lindqvist (CTO): keep quality specialists, change what they do. Embed most of the seven in product
 teams as quality engineers; automate the manual regression pass over two quarters; keep a narrow
 independent check for irreversible data migrations on the payment path.
 
 **Evidence and limits.** "No QA" at admired companies usually means no separate QA department, with
 heavy investment in engineer-owned testing and shared infrastructure; *Software Engineering at Google*
 describes that model at one very large company, and it is documented practice, not proof it
-transfers. No study directly compares the models (gap G4). The best research available says domain
+transfers. No study directly compares the models; the evidence is thin. The best research available says domain
 knowledge matters for validation and that defects raised inside teams are fixed more often (Mäntylä,
 Itkonen, and Iivonen, 2012). Northstar's data say the current central pass is expensive ($440,000 a
 year) and is not preventing customer-visible failures.

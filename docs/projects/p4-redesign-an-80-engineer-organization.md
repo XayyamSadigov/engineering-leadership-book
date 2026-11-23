@@ -3,29 +3,36 @@
 It is week 44 of your first year as Engineering Director at Northstar Technologies, the fictional
 company of the [case study](../case-studies/northstar/index.md). The quality transformation has been
 running for three quarters. Victor Lindqvist, the CTO, has asked you for a year-2 organization
-proposal, effective at the start of quarter 5 (week 53). He will decide. Your job in this project is
-to produce that proposal: a design that fits Northstar's architecture, products, and fixed headcount,
-with its alternatives, its arithmetic, its transition cost, and the evidence that would show it
-worked.
+proposal, effective at the start of quarter 5 (week 53). He will decide. Your job is to produce that
+proposal: a design that fits Northstar's architecture, products, and fixed headcount. It comes with
+its alternatives, its arithmetic, its [transition cost](../glossary.md#transition-cost), and the
+evidence that would show it worked.
 
 The project applies [Chapter 33](../parts/07-organization-design/33-conways-law-team-topologies-and-cognitive-load.md),
 [Chapter 34](../parts/07-organization-design/34-spans-layers-and-dependency-mapping.md),
 [Chapter 35](../parts/07-organization-design/35-designing-organizations-at-four-scales.md), and
-[Chapter 36](../parts/07-organization-design/36-reorganizations-evolution-and-succession.md). It
-takes about 12 to 20 hours.
+[Chapter 36](../parts/07-organization-design/36-reorganizations-evolution-and-succession.md). After
+that reading, the full project takes about 28 to 35 hours.
+
+!!! note "Core version (about 10 to 12 hours)"
+    Do deliverables 1, 2, 6, and 9 only: the breakage register, the options, the transition cost and
+    plan, and the memo to Victor. Apply acceptance criteria 1, 3, 4, 6, and 10, and score the rubric
+    rows Breakages and cheaper answers, Arithmetic and completeness, Options and honest evaluation,
+    and Transition cost and plan (60 of the 100 points; rescale to 100).
 
 ## Problem Statement
 
 Northstar's engineering organization was not designed; it accumulated. In the baseline quarter, items
 with no cross-team dependency took a median of 11 days, items with one took 24, and items with two or
-more took 41. Three Core modules changed by four teams had no owner, and three staff engineers had
+more took 41. Three modules of [Core](../glossary.md#core), the monolith, were changed by four teams and
+had no owner, and three staff engineers had
 titles without mandates. The first quarter fixed some of this by decision (owners for core/customer,
 core/scheduler, auth-svc, and webhooks; the QA engineers moved into product teams), and quarter 2 added
 a Billing-owned order-to-invoice contract. The structure itself has not changed.
 
 By week 44 the strain shows in specific places. One manager has 17 reports across two sites and two
-products. A first-year manager has 16 reports and seven components. A tier 1 module still has no
-owner. A five-person platform team still works largely as a ticket queue. Ten roles are critical,
+products. A first-year manager has 16 reports and seven components. A [tier 1](../glossary.md#tier-1)
+module still has no owner. A five-person platform team still works largely as a ticket queue. Ten roles are critical,
 and none has a successor ready now.
 
 Your task is to propose the year-2 organization under the flat-headcount rule: 87 people in total,
@@ -40,12 +47,22 @@ evaluate at least two of the chapter's alternatives honestly, including the stro
 ## Scenario and Constraints
 
 **Your position.** Engineering Director, with nine direct reports (six managers, three staff
-engineers). You design the organization and the transition plan. Victor
-Lindqvist decides the design and any engineering seat converted into a management seat. Amara Okafor
+engineers; the [cast](../case-studies/northstar/cast.md) lists them). You design the organization and
+the transition plan. Victor Lindqvist decides the design and any engineering seat converted into a management seat. Amara Okafor
 (CPO) cares about which teams serve which product outcomes. Rajiv Menon (CFO) holds the headcount line.
 
 **Timing.** You submit in week 44. Victor decides in week 46. Reporting lines change in week 53. Your
 proposal must work with a quarter of preparation and a quarter of settling.
+
+**The time rule.** Use facts dated week 44 or earlier: the
+[Northstar overview](../case-studies/northstar/index.md), the
+[baseline data](../case-studies/northstar/baseline-data.md), the first-year record through
+[quarter 3 results](../case-studies/northstar/first-quarter.md#quarter-3-results) and the weeks 40 to
+44 entries of the [quarter 4 calendar](../case-studies/northstar/first-quarter.md#calendar-of-quarter-4),
+and the [timeline](../case-studies/northstar/timeline.md) to week 44. You may read the director's
+[week 44 proposal](../case-studies/northstar/first-quarter.md#the-year-2-organization-proposal-week-44)
+as an answer to test. Victor's decision and anything after week 44 are not recorded and are off
+limits.
 
 **Constraints.** These are binding.
 
@@ -58,8 +75,9 @@ proposal must work with a quarter of preparation and a quarter of settling.
    that have none today.
 4. **No pay or level changes** as part of the reorganization; promotions run through the normal
    calibrated cycle.
-5. **Ownership standards.** Tier 1 components must reach the four operational minimums (owner,
-   complete user-facing alerts, runbook, on-call); exemptions expire after at most two quarters.
+5. **Ownership standards.** Tier 1 components must reach the four
+   [operational minimums](../glossary.md#tier-1-operational-minimums) (owner, complete user-facing
+   alerts, runbook, on-call); exemptions expire after at most two quarters.
 
 ## Starting Dataset
 
@@ -76,33 +94,34 @@ Use these sources:
   the candidate moves M1 to M3) and the week-44 succession table in Chapter 36.
 
 **Project data: the week-44 roster.** [`p4-week44-roster.csv`](data/p4-week44-roster.csv) lists each
-team at week 44 with its manager, engineers by location, composition, and components owned. It is
-**derived from the canon**, not new: the baseline roster and locations, plus the quarter 1 and quarter
-2 ownership moves and the seven QA engineers' placement in week 10. Check: 16 + 15 + 13 + 17 + 11 + 5 +
-3 = 80 engineers; 52 in Minneapolis, 16 in Bogotá, 12 remote. Its last row lists the two components
+team at week 44 with its manager, engineers by location, composition, and components owned. It
+**comes from the case**, not new: the baseline roster and locations, plus the quarter 1 and quarter 2
+ownership moves and the seven QA engineers' placement in week 10. The teams total 80 engineers: 52 in
+Minneapolis, 16 in Bogotá, and 12 remote. Its last row lists the two components
 with no owner: core/permissions (exemption lapsed at week 39) and document-store (orphaned since baseline).
 
 **Facts your submission must use.**
 
 | Area | Facts |
 |---|---|
-| People and spans | Spans 16, 15, 13, 17, 11, 5; director with 9 direct reports; 87 people; Priya Raman in her first year as manager; Mateo Arango Ríos doing lead work unrecognized for over a year; Hannah Lindgren the informal web lead |
+| People and spans | [Spans](../glossary.md#span-of-control) 16, 15, 13, 17, 11, 5; director with 9 direct reports; 87 people; Priya Raman (Orders) in her first year as manager; Mateo Arango Ríos (informal mobile lead) doing lead work unrecognized for over a year; Hannah Lindgren the informal web lead |
 | Customer Experience | 9 web, 6 mobile (all in Bogotá), 2 quality engineers; one board and sprint; health check in week 16 with mobile red on 4 of 10 indicators; two of four baseline Sev2 incidents at the mobile-bff and mobile boundary |
 | Dependencies | 86 links by pair in the baseline quarter; the five heaviest classified by cause (Chapter 34); lead time by number of dependencies; Orders, Billing, and Payments exchanging 27 links among themselves and 48 with the other three teams |
 | Architecture | Co-change pairs (order-capture and pricing-rules 53 percent of pricing-rules' 110 merge requests); core/permissions changed by 38 merge requests, 17 from Orders; Orders knowledge map in week 14; document-store's two callers |
 | Orders load | Seven components across six domains; about 2.6 engineers left for everything else in quarter 2 while bulk ordering ran |
-| Platform | Five engineers; two-person interrupt rotation; other teams' requests down from 20 to 14 points of capacity by week 18; four CI systems costing about 1.5 FTE a year against about 0.5 for one |
-| Data and Analytics | 12 points of capacity on other teams' requests at baseline; Farah Haddad also the team's data architect; search-svc's authors on the team |
+| Platform | Five engineers; two-person interrupt rotation; other teams' requests down from 20 to 14 points of capacity by week 18; four CI systems costing about 1.5 [FTE](../glossary.md#fte) a year against about 0.5 for one |
+| Data and Analytics | 12 points of capacity on other teams' requests at baseline; Farah Haddad (its manager) also the team's data architect; search-svc's authors on the team |
 | Succession | 10 critical roles; none ready now; 6 with interim cover; 4 with none |
 | Money | $185,000 per engineer-year; 13-week quarters; 80 × 13 = 1,040 engineer-weeks a quarter |
 
-**Facts you do not have.** The canon leaves these open, and your proposal must treat each as an input
+**Facts you do not have.** The case leaves these open, and your proposal must treat each as an input
 with branches, not assume an answer: whether Victor Lindqvist will release an engineering seat for a
-seventh manager; whether Mateo wants the manager role; Rafael Duarte's choice between management and
-the staff track (Chapter 4); the outcome of Tomasz Wierzbicki's outside offer (week 20); whether the
+seventh manager; whether Mateo wants the manager role; the choice of Rafael Duarte (Orders senior engineer) between management and
+the staff track (Chapter 4); the outcome of the outside offer to Tomasz Wierzbicki, a Billing ledger
+engineer (week 20); whether the
 order-to-invoice contract has shortened Orders and Billing waits; how Customer Experience's links split
 between web and mobile (the matrix counted one team); and quarter 2 and 3 incident and delivery
-results beyond what the canon states. State any assumption you make about the renewals having shipped.
+results beyond what the case states. State any assumption you make about the renewals having shipped.
 
 ## Required Deliverables
 
@@ -206,7 +225,7 @@ A submission is accepted only if all of these hold.
 7. The succession table is redone for the recommendation.
 8. Each input from "Facts you do not have" that affects the design has a branch.
 9. Evidence for the two-quarter review and triggers for the next change are stated.
-10. No fact is invented about the canon; assumptions are labeled as assumptions.
+10. No fact about Northstar is invented; assumptions are labeled as assumptions.
 
 ## Evaluation Rubric
 
@@ -217,7 +236,7 @@ Weights total 100. A strong pass is 75 or more with no criterion weak.
 | Breakages and cheaper answers | 15 | Each structural change answers a named breakage with evidence; cheaper answers tested and the reason they fall short stated; at least one breakage deliberately left alone | Breakages named with evidence; cheaper answers mentioned | Structure justified by headcount ("we are 80, so we need groups") or by a famous company's model |
 | Arithmetic and completeness | 15 | All options add to 87, checked by team and by role; spans and director reports shown; every component placed once | Totals correct for the recommendation; minor gaps elsewhere | Totals wrong or missing; a component left unowned; seats appear from nowhere |
 | Architecture and dependency fit | 15 | Overlay counted per option; co-change and knowledge data used to place seams; unmeasured links named as risks | Overlay for the recommendation; co-change mentioned | Boundaries drawn without reference to links or coupling |
-| Options and honest evaluation | 20 | Do-nothing plus three designs; the strongest case for each rejected option; Chapter 35's proposal treated as an answer to test, with its weaknesses named | Options present; rejected ones dismissed briefly | One design; alternatives are straw men; the canon proposal copied without evaluation |
+| Options and honest evaluation | 20 | Do-nothing plus three designs; the strongest case for each rejected option; Chapter 35's proposal treated as an answer to test, with its weaknesses named | Options present; rejected ones dismissed briefly | One design; alternatives are straw men; the week 44 proposal copied without evaluation |
 | Transition cost and plan | 10 | Part-by-part estimate, compared across options and against a forecast benefit; plan sequences announcement, rotations, and readiness checks; states what does not change | Estimate for the recommendation; plausible plan | No cost, or "minimal disruption" asserted |
 | People | 15 | Succession redone; new managers have a developer and a cover; staff mandates with decision scope; the site, on-call, and career effects on named people considered | Mandates and succession present | People absent from the design, or moved without regard to knowledge and rotations |
 | Decisions, inputs, triggers | 10 | Every open input branched; evidence and thresholds for the two-quarter review; triggers for C and D named | Some branches and triggers | Assumes Victor's and others' decisions; no way to tell whether the design worked |

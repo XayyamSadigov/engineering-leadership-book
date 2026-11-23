@@ -7,9 +7,9 @@ rather than merely busy? And how should an experienced engineer choose between t
 and the staff-plus track, and switch later if the choice was wrong? The running example is Northstar
 Technologies, the fictional company in the [case study](../../case-studies/northstar/index.md).
 
-This chapter is the map. Chapter 8 owns career ladders and promotion, Chapter 29 staff-plus roles,
+This chapter is the map. Chapter 8 covers career ladders and promotion, Chapter 29 staff-plus roles,
 and Chapters 40, 47, and 50 the director, VP, and CTO roles. Chapter 1 defines managerial output; this
-chapter owns how to measure it.
+chapter shows how to measure it.
 
 ## Why This Matters
 
@@ -77,12 +77,11 @@ not always a level.
 
 ### The ladder, level by level
 
-The table below is **this book's synthesis**, built on practitioner descriptions rather than research:
-Fournier's well-known progression from tech lead through manager of managers to senior leadership
-([Fournier, 2017](../../references/bibliography.md#fournier2017manager)), Larson's staff-plus
-descriptions ([Larson, 2021](../../references/bibliography.md#larson2021staff)), and his writing on
-engineering executives ([Larson, 2024](../../references/bibliography.md#larson2024primer)). The time
-horizons are typical ranges, not rules.
+The table below is **this book's recommendation**, built on practitioner descriptions rather than
+research ([Fournier, 2017](../../references/bibliography.md#fournier2017manager);
+[Larson, 2021](../../references/bibliography.md#larson2021staff);
+[Larson, 2024](../../references/bibliography.md#larson2024primer)). The time horizons are typical
+ranges, not rules.
 
 | Role | Scope | Time horizon | Primary output | Main failure mode |
 |---|---|---|---|---|
@@ -140,14 +139,16 @@ starting position.
 
 ### Measuring managerial effectiveness
 
-The common error is to measure a manager by the team's **activity**: deployments, tickets closed, story points, one-on-ones held, roadmap items
-shipped. Activity is easy to count and partly under the manager's control. It is not the manager's
+The common error is to measure a manager by the team's **activity**: deployments, tickets closed,
+story points, one-on-ones held, roadmap items shipped. Activity is easy to count and partly under the manager's control. It is not the manager's
 output, for three reasons.
 
-1. **Attribution.** Team results depend on the system the team sits in. At Northstar, the baseline page
-   warns that Orders' and Billing's lead time and failure rate describe the Core release train more than
-   the teams ([baseline data](../../case-studies/northstar/baseline-data.md)). Neither manager could
-   have changed the train alone.
+1. **Attribution.** Team results depend on the system the team sits in. At Northstar, the book's
+   fictional company, Orders and Billing ship most changes inside Core, a shared monolith released on a
+   fixed two-week schedule (the [release train](../../glossary.md#release-train)). Their
+   [lead time](../../glossary.md#lead-time) (commit to production) and failure rate therefore describe
+   the train more than the teams ([baseline data](../../case-studies/northstar/baseline-data.md)).
+   Neither manager could have changed the train alone.
 2. **Lag.** The most important managerial work (hiring, growing people, clarifying ownership) shows in
    results one or two quarters later. A measure taken this quarter credits the previous manager.
 3. **Gaming.** Every activity measure can be raised without improving anything: more, smaller
@@ -185,13 +186,20 @@ decision framework below turns it into criteria.
 
 ## Engineering Organization Example
 
+!!! info "Northstar so far"
+    Week 1 of the Engineering Director's first year. The CTO, Victor Lindqvist, has asked the director
+    to halve Sev1 and Sev2 incidents (the two most serious levels) within twelve months with flat
+    headcount. Six managers and three staff engineers report to the director. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
 Northstar's role structure as the director finds it. All figures are **illustrative**, from the
 [baseline data](../../case-studies/northstar/baseline-data.md).
 
-**Spans.** The six teams hold 77 engineers (14, 13, 12, 15, 11, 12): 12.8 per manager on average,
-from 11 (Data and Analytics) to 15 (Customer Experience). This book's recommendation (Chapter 1; gap
-G8) is that people work crowds out the rest above about eight to ten reports; Chapter 34 owns spans
-and Chapter 33 team sizing. A manager with 12 to 15 reports has little time for people growth and leverage.
+**Spans.** The six teams hold 77 engineers, about 13 per manager, from 11 (Data and Analytics) to 15
+(Customer Experience). This book's recommendation (Chapter 1) is that people work crowds out the rest
+above about eight to ten reports; Chapter 34 covers [span of control](../../glossary.md#span-of-control)
+and Chapter 33 team sizing. A manager with 12 to 15 reports has little time for people growth and
+leverage.
 
 **Tech leads.** A tech lead per team of six to ten engineers (**this book's recommendation**) gives
 eight to twelve for 77 team engineers. Northstar has none with the title; each team relies
@@ -206,15 +214,15 @@ view Daniel Cho is the strongest manager and Marcus Oyelaran the weakest. Now ap
 
 | Manager | Activity view | What the four areas would ask |
 |---|---|---|
-| Daniel Cho, Customer Experience | Most deployments (26 a month) | 44 escaped defects; one manager for two platforms and 15 people. Health and growth unknown |
+| Daniel Cho, Customer Experience | Most deployments (26 a month) | 44 [escaped defects](../../glossary.md#escaped-defect) (bugs found after release); one manager for two platforms and 15 people. Health and growth unknown |
 | Elena Sokolova, Payments and Integrations | Shortest lead time among product teams (4 days) | Best operational discipline; is it written down and owned by the team, or held by a few people? |
-| Marcus Oyelaran, Billing | Fewest deployments (8), most incidents (8) | Three people carry most pages: a health and concentration risk he can change. Lead time is mostly the release train, which he cannot |
+| Marcus Oyelaran, Billing | Fewest deployments (8), most Sev1 and Sev2 incidents (8) | Three people carry most pages: a health and concentration risk he can change. Lead time is mostly the release train, which he cannot |
 | Priya Raman, Orders | 11 deployments, 7 incidents | Promoted eight months ago; growth and leverage evidence matter more than one quarter's results |
 
 The two views rank differently, and the second separates what each manager controls (on-call
-concentration, people growth, ownership) from what the system controls (the release train). One quantity worth computing: Billing's unplanned work is 41
-percent of 13 engineers, about 5.3 engineer-equivalents. If the manager cut it to 30 percent, about 1.4
-engineers' worth of capacity would return. That gain would be partly the manager's work and partly the
+concentration, people growth, ownership) from what the system controls (the release train). One quantity is worth computing. If Billing's
+[unplanned work](../../glossary.md#unplanned-work) fell from 41 to 30 percent of its 13 engineers,
+about 1.4 [FTE](../../glossary.md#fte) (full-time engineers) of capacity would return. That gain would be partly the manager's work and partly the
 release train's, so the review asks what he changed, not only what moved.
 
 ## Decision Framework
@@ -263,7 +271,8 @@ looks like a demotion to everyone, including the person.
 **Two tracks versus one ladder.** Two tracks let strong engineers grow without managing people. They
 cost a second set of role definitions and cross-track calibration, and the staff track can become a
 holding pen for people not made managers. One ladder is simpler and pushes the best engineers into
-management, with the Peter Principle risk above.
+management, with the Peter Principle risk (Chapter 2): people promoted for doing their current job
+well until they reach a job they do poorly.
 
 **Separate tech lead versus tech-lead manager.** A separate tech lead frees the manager for people
 work and gives engineers a step that tests leadership, at the cost of a coordination point. One person
@@ -357,27 +366,27 @@ company's problem with it.
 
 ## Case Study
 
-Northstar as the director finds it, with one decision set in quarter 2. Everything is fictional
-([overview](../../case-studies/northstar/index.md)); the role definitions are additions for this chapter, and the [first-quarter](../../case-studies/northstar/first-quarter.md)
-events are unchanged.
+Northstar as the director finds it, with one decision set in quarter 2 (weeks 14 to 26). Everything
+is fictional ([overview](../../case-studies/northstar/index.md)).
 
 **Roles as found.** Northstar's only written role document is a wiki page, "Engineering levels", with
 a paragraph for each of three engineering levels: Engineer, Senior Engineer, and Staff Engineer. The
 staff paragraph describes a "recognized technical expert" and names no scope or output. The only
 description of the manager role is one shared line, "lead a team of engineers to deliver high-quality
-software", with no manager-specific review criteria, and managers have been reviewed once a year on their teams' roadmap delivery, which last quarter was 7 of
-17 committed items. There is no tech lead role. The director's own role is defined by the CTO's
+software", with no manager-specific review criteria. Managers have been reviewed once a year on their
+teams' roadmap delivery, which last quarter was 7 of 17 committed items. There is no tech lead role. The director's own role is defined by the CTO's
 one-sentence mandate and a hiring brief. There is no VP Engineering: Victor Lindqvist, the CTO, has
 the director as his engineering leader.
 
-**What the first quarter did and did not settle.** The first quarter gave the staff engineers
-transformation mandates (Chapter 27): Kwame Mensah release and detection, Ines Carvalho Core module
-boundaries and contract tests, Li Na Zhou migration and configuration safety, plus the matching
-standards with a ten-day decision rule. None says what they own once the quality program ends, how
+**What the first quarter did and did not settle.** In the first quarter the director ran a quality
+program to cut incidents (Chapter 27). It gave the three staff engineers mandates: Kwame Mensah release
+and detection, Ines Carvalho Core module boundaries and contract tests, Li Na Zhou migration and
+configuration safety. Each also owned matching engineering standards, with a rule that questions on
+them are decided within ten working days. None says what they own once the quality program ends, how
 they are evaluated, or how their authority relates to the managers whose teams change the code they
 govern. Chapter 29 develops those questions.
 
-**A track question in quarter 2 (a decision the reader faces).** Rafael Duarte, a senior engineer
+**A track question in quarter 2.** Rafael Duarte, a senior engineer
 in Orders, lost the Orders manager role to Priya Raman (Chapter 2); since week 2 he has shared
 review ownership of core/order-capture. After the first quarter he asks
 the director whether to try for management again or work toward staff engineer. Priya is staying,
@@ -437,7 +446,7 @@ engineers, six managers, and one director. You are advising Victor. Recommend wh
 role now, what it would be accountable for if created, and what you would do instead if not.
 
 **X2.** Suppose that at the end of the director's first year, Helena Marsh asks Victor how he will judge whether
-the director has been effective. Sev1 and Sev2 incidents have fallen, but one strong manager has left
+the director has been effective. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents have fallen, but one strong manager has left
 and two staff engineers say they are still unsure of their mandate. As Victor, write the evaluation
 approach: which evidence you weigh, over what horizon, and how you separate the director's
 contribution from the system's.
@@ -473,12 +482,12 @@ contribution from the system's.
 - [Fournier, 2017](../../references/bibliography.md#fournier2017manager). *The Manager's Path*: the
   management levels from tech lead to senior leadership.
 - [Larson, 2021](../../references/bibliography.md#larson2021staff). *Staff Engineer*: the staff-plus
-  track; mostly free at staffeng.com. Pages read for this chapter:
+  track; mostly free at staffeng.com. Pages cited:
   [Staff archetypes](../../references/bibliography.md#larson-staff-archetypes),
   [What do Staff engineers actually do?](../../references/bibliography.md#larson-staffeng-actually-do),
   and [Where do Staff-plus engineers fit?](../../references/bibliography.md#larson-staffeng-reporting).
 - [Larson, 2024](../../references/bibliography.md#larson2024primer). *The Engineering Executive's
-  Primer*: the executive role. Draft chapters read:
+  Primer*: the executive role. Draft chapters cited:
   [Larson, 2023a](../../references/bibliography.md#larson2023executive-job) on inconsistent executive
   titles, and [Larson, 2023b](../../references/bibliography.md#larson2023balancing) on balancing the
   CEO, peers, and engineering.

@@ -14,7 +14,7 @@ reading, not as a raw number.
 
 **Tom Becker and Marcus Oyelaran on ledger test environments.** A disagreement between two teams about
 a recurring responsibility: the **escalation path**, after five days of trying. The joint case should
-include the canon's demand data (Billing sent Platform Operations 7 links, 4 of them test environments
+include the baseline demand data (Billing sent Platform Operations 7 links, 4 of them test environments
 with ledger data). It ends in the **log**.
 
 **auth-svc exemption expiry.** A dated item in the **log**: the expiry is the review trigger. The steward
@@ -54,7 +54,7 @@ trigger.
 | Field | Content |
 |---|---|
 | Id, date, title | DL-04 (part): owner of core/permissions; open since the week 4 ownership decisions |
-| Decider and method | Canon is silent on who decides. Chapter 13 frames the director as Approver; the director must write that down |
+| Decider and method | The record does not say who decides. Chapter 13 frames the director as Approver; the director must write that down |
 | Options | Orders (made 17 of 38 baseline changes; Priya Raman would accept after week 26) or Platform Operations (next to auth-svc; made none; cannot support Core Java) |
 | Status | Open, past any reasonable date |
 | Needed by | Before the exemption lapses: exemptions last at most two quarters, so before the end of quarter 3. The director should set an earlier date, because the permissions extraction is changing the module now |
@@ -65,19 +65,19 @@ consulting Priya Raman, Tom Becker, Ines Carvalho, and Kwame Mensah). The "neede
 announce it. Priya Raman's condition (after week 26) has been met by the start of quarter 3, which
 removes the stated reason to wait; the entry should say so.
 
-Criteria: the entry does not decide the owner (the canon leaves it open), it does not invent a
-decider the canon lacks, and it makes the cost of further delay visible. The weak answer fills every
-field with confident text the canon does not support.
+Criteria: the entry does not decide the owner (the case leaves it open), it does not invent a
+decider the record lacks, and it makes the cost of further delay visible. The weak answer fills every
+field with confident text the facts do not support.
 
 ## A1 — A Billing–Orders dispute under the escalation path
 
 **Design.** Five working days for Priya Raman and Marcus Oyelaran to settle it, with Ines Carvalho
 (Core code) invited as the domain's staff engineer. If unsettled, a joint case to the director,
 decided within five working days, logged, and sent to both teams. Given the history, the director
-should also set the first meeting, because the canon shows these two do not start conversations: the
+should also set the first meeting, because the record shows these two do not start conversations: the
 INC-417 thread had no manager response at all.
 
-**Joint case template.** The decision needed in one sentence; the facts both agree on (here, the canon's
+**Joint case template.** The decision needed in one sentence; the facts both agree on (here, the baseline
 order-to-invoice links: 6 of Orders' 9 links to Billing were mapping changes in core/invoicing); each
 side's option and reasons, written by that side; what each option costs the other team; the cost of no
 decision by a date; and what both will do once decided. The Billing-owned order-to-invoice contract

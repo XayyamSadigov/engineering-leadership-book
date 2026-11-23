@@ -6,6 +6,25 @@ where the baseline data supports them, and departs from them in two places where
 at arrival supported a better move. Other answers can score as well; the last sections say which, and
 show how the rubric separates a strong plan from a weak one. All Northstar facts are fictional.
 
+People named: Victor Lindqvist (CTO), Amara Okafor (CPO), Rajiv Menon (CFO), Helena Marsh (CEO), Sofia
+Alvarez (VP Customer Success), Elena Sokolova (Payments and Integrations manager), and the staff
+engineers Kwame Mensah, Li Na Zhou, and Ines Carvalho. Incidents named, from the incident file:
+
+| Incident | What happened |
+|---|---|
+| INC-401, INC-409 | Invoice rounding error; duplicate invoices from a retried batch job (both after Core releases) |
+| INC-404 | A token lifetime changed in production configuration; mobile sessions dropped |
+| INC-406, INC-424 | Ledger migrations: a table locked in business hours; replicas served stale balances |
+| INC-407 | A search cluster node lost, with nobody on call for the service |
+| INC-412 | An email template variable renamed; order confirmations sent blank |
+| INC-413 | A partner bank outage with no fallback route |
+| INC-414 | A tax rate table missing the effective date for a new jurisdiction |
+| INC-418 | A webhook signature format changed without versioning |
+| INC-419 | A pricing-rule migration ran before the code deploy |
+| INC-425 | An expired certificate on the card processor endpoint |
+| INC-427 | Credit notes applied twice after a release; manual data repair |
+| INC-429 | Year-boundary date handling rejected next-year delivery dates |
+
 ## 1. Diagnosis
 
 ### Incidents, recomputed from the file
@@ -147,7 +166,7 @@ Assumptions: 80 FTE; unplanned work 34 percent; prevention 12 FTE in quarters 1 
 3, 6 in quarter 4; in the planned case the train and detection work remove about a third of
 change-induced incidents by the end of quarter 2. This is Chapter 27's model.
 
-| Quarter | Unplanned, planned | Prevention | Feature, planned | Change | Unplanned, pessimistic | Feature, pessimistic | Change |
+| Quarter | Unplanned, planned | Prevention | Feature, planned | Change | Unplanned, cautious | Feature, cautious | Change |
 |---|---|---|---|---|---|---|---|
 | Baseline | 34% = 27.2 | 0 | 52.8 | | 34% = 27.2 | 52.8 | |
 | Q1 | 33% = 26.4 | 12 | 41.6 | −21% | 34% = 27.2 | 40.8 | −23% |
@@ -155,10 +174,10 @@ change-induced incidents by the end of quarter 2. This is Chapter 27's model.
 | Q3 | 22% = 17.6 | 8 | 54.4 | +3% | 29% = 23.2 | 48.8 | −8% |
 | Q4 | 18% = 14.4 | 6 | 59.6 | +13% | 26% = 20.8 | 53.2 | +1% |
 
-**Check one, by subtraction:** Q1 planned 80 − 26.4 − 12 = 41.6; Q4 pessimistic 80 − 20.8 − 6 =
-53.2, which is Chapter 27's pessimistic figure. **Check two, by formula** feature = 80 × (1 − u) − p:
-Q4 planned 80 × 0.82 − 6 = 65.6 − 6 = 59.6; Q2 pessimistic 80 × 0.68 − 12 = 54.4 − 12 = 42.4. The
-intermediate pessimistic quarters are this answer's assumption; Chapter 27 gives only the quarter 4
+**Check one, by subtraction:** Q1 planned 80 − 26.4 − 12 = 41.6; Q4 cautious 80 − 20.8 − 6 =
+53.2, which is Chapter 27's cautious figure. **Check two, by formula** feature = 80 × (1 − u) − p:
+Q4 planned 80 × 0.82 − 6 = 65.6 − 6 = 59.6; Q2 cautious 80 × 0.68 − 12 = 54.4 − 12 = 42.4. The
+intermediate cautious quarters are this answer's assumption; Chapter 27 gives only the quarter 4
 value.
 
 **Quarter 1 allocation by team.** Billing 25 percent, Orders and Payments and Integrations 10 percent
@@ -191,7 +210,7 @@ $185,000 = $1,757,500. Route two: $185,000 ÷ 4 = $46,250 per FTE-quarter × 38 
 unplanned work in year 1, planned case: 0.8 + 4.8 + 9.6 + 12.8 = 28 FTE-quarters, $1,295,000. Year 1
 is therefore a net capacity investment of about $460,000, before any change in service credits
 ($1.64M a year at the baseline rate) or the $9M of renewals. The run rate at quarter 4 is 12.8 FTE,
-about $2.37M a year. In the pessimistic case year 1 recovers 0 + 1.6 + 4.0 + 6.4 = 12 FTE-quarters
+about $2.37M a year. In the cautious case year 1 recovers 0 + 1.6 + 4.0 + 6.4 = 12 FTE-quarters
 ($555,000) and the run rate is 6.4 FTE, about $1.18M a year. Say both to Rajiv Menon. The plan pays
 back on capacity in year 2 in either case; in year 1 it is justified by credits and renewals, not
 capacity.
@@ -204,7 +223,7 @@ capacity.
   renewals keep their dates.
 - **Constraint:** the Core release train (evidence above).
 - **Parallel workstreams:** detection; tier 1 ownership; migration and configuration safety.
-- **Capacity trade:** as modeled; quarter 1 feature capacity 41.6 FTE against 52.8, pessimistic 40.8.
+- **Capacity trade:** as modeled; quarter 1 feature capacity 41.6 FTE against 52.8, cautious 40.8.
 - **Protected commitments:** bulk ordering, accounting integration.
 - **What we stop:** the three-day manual pass (replaced over two quarters); the six teams' separate
   status meetings (replaced by the weekly operational review); three roadmap items moved to quarter 2
@@ -231,10 +250,10 @@ capacity.
 | 30–60 | Weekly Core releases; flaky-test quarantine; payments-gateway configuration under review; first contract tests; alerts on tier 1 paths |
 | 60–90 | Migration check in the pipeline; manual suite triaged into automate, delete, and exploratory charters; trend reviewed; quarter 2 targets set from the new baseline |
 
-**Two departures from the canon story, both supported by data available at arrival.**
+**Two departures from Northstar's story, both supported by data available at arrival.**
 
 First, **the interim migration rule starts in week 2, not week 9.** The baseline already showed three
-migration incidents and INC-427 (credit notes applied twice after a release, manual repair). The canon
+migration incidents and INC-427 (credit notes applied twice after a release, manual repair). In the story the
 director promised a pipeline check after INC-427, it slipped, and a Sev1 with the same mechanism
 landed in week 9. A rule that costs nothing (no release may contain a ledger migration and code that
 depends on it) belongs in the first two weeks, with the pipeline check as its planned replacement.
@@ -243,7 +262,7 @@ Second, **the QA plan is announced in week 4, with the capacity model.** Each of
 a product team as a quality engineer (2 Orders, 2 Billing, 2 Customer Experience, 1 Payments and
 Integrations), reporting to that team's manager, with the regression triage as their first quarter's
 work: they decide what to automate, delete, or turn into exploratory charters, because they know the
-workflows. The canon announced in week 10 after two engineers asked whether they were being automated
+workflows. In the story the director announced it in week 10 after two engineers asked whether they were being automated
 out of a job; the cost of waiting was six weeks of anxiety in the people whose knowledge the plan
 depends on. Anyone who does not want the new role is offered a conversation about other roles before
 any change, and the plan says so.
@@ -261,13 +280,13 @@ any change, and the plan says so.
 ## 6. Decision requests and reporting
 
 To Victor Lindqvist and Amara Okafor by week 4: approve the four-quarter capacity model with the
-planned and pessimistic cases; agree which three roadmap items move to quarter 2; agree that the model
+planned and cautious cases; agree which three roadmap items move to quarter 2; agree that the model
 is updated monthly. To Victor alone: support for the ownership decisions, and agreement that
 incidents are reported upward as mechanism, not person. Reports at day 30 (plan agreed, baseline
 published), day 60 (first weekly releases, alerting coverage), and day 90 (trend with stated
 uncertainty, quarter 2 allocation, the next constraint check).
 
-For comparison, the canon quarter ended with 21 incidents (4 via the train), customer-detected share
+For comparison, Northstar's actual quarter 1 ended with 21 incidents (4 via the train), customer-detected share
 29 percent, Core change failure rate 22 percent, 11 releases, and unplanned work 31 percent. A plan is
 not graded on whether it would have produced those numbers; it is graded on whether it is the plan
 the data supported at arrival.
@@ -310,7 +329,7 @@ weak); QA engineers get more of the work the data shows is not working, and nobo
 acceptance criteria 3, 4, 5, and 6.
 
 **The adequate submission** names the release train, copies Chapter 27's capacity table without the
-team split or a pessimistic path, lists sensible measures without gaming analysis, and mentions the QA
+team split or a cautious path, lists sensible measures without gaming analysis, and mentions the QA
 engineers without a date. It passes the acceptance criteria and scores around 60: correct, but not yet
 a plan a skeptical CPO would sign.
 

@@ -7,8 +7,7 @@ hold identically in every group, and how the management system grows without a n
 the organization does. The enterprise example is Halvard Systems, the fictional 500-engineer company
 from [Chapter 35](../07-organization-design/35-designing-organizations-at-four-scales.md); the case
 study is the fictional [Northstar Technologies](../../case-studies/northstar/index.md) building its
-year-2 workforce plan under a flat headcount rule. Chapter 34 owns spans, Chapter 20 owns standards at
-director scale, and Chapter 59 will own removing bureaucracy.
+year-2 workforce plan under a flat headcount rule.
 
 ## Why This Matters
 
@@ -39,6 +38,9 @@ After this chapter you will be able to:
 - Design a short enterprise policy set in which every policy has an owner, an enforcement point, an
   exception path, and a measure.
 - Choose the cheapest coordination mechanism for a new need before adding a management layer.
+
+Related chapters: Chapter 38 (quarterly capacity) comes first. Chapter 34 covers spans and layers,
+Chapter 20 standards at director scale, and Chapter 59 removing bureaucracy.
 
 ## The Mental Model
 
@@ -89,13 +91,13 @@ given for a quarter; the workforce plan sets headcount and its shape for a year 
 | Supply | Who is here, by team, level, location, employment type | HR system, checked with managers |
 | Flows | Departures, promotions, moves, time to fill | Last two years, stated as assumptions |
 | Shape rules | Level bands, location rules, vendor rules | This plan |
-| Cost | Fully loaded cost by level and location | Finance, loading factor stated |
+| Cost | [Fully loaded cost](../../glossary.md#fully-loaded-cost) by level and location | Finance, loading factor (the multiplier from salary to loaded cost) stated |
 | Risks | Single points of knowledge, sites without leaders | Knowledge maps, succession (Chapter 36) |
 
 Larson's primer on the engineering executive's job counts planning and organization design as part of
-that job ([Larson, 2024](../../references/bibliography.md#larson2024primer); idea level). It helps to read
-costs as finance does ([Berman and Knight, 2006](../../references/bibliography.md#berman2006financial),
-idea level): fully loaded cost (salary, benefits, taxes, equipment, space) rather than salary, and a
+that job ([Larson, 2024](../../references/bibliography.md#larson2024primer); **expert opinion**). It
+helps to read costs as finance does
+([Berman and Knight, 2006](../../references/bibliography.md#berman2006financial)): fully loaded cost (salary, benefits, taxes, equipment, space) rather than salary, and a
 budget that assumes every funded seat is filled every week. Vacancy weeks are approved budget unspent.
 
 ### Attrition, vacancy, and knowledge
@@ -103,12 +105,12 @@ budget that assumes every funded seat is filled every week. Vacancy weeks are ap
 > average missing capacity = departures per year × weeks to fill ÷ 52
 
 Add ramp-up: the idea credited to Brooks is that new people consume the time of those who teach them
-([Brooks, 1995](../../references/bibliography.md#brooks1995mythical), idea level). The research is
-about knowledge. In one large project, recent departures were associated with a higher probability of
+([Brooks, 1995](../../references/bibliography.md#brooks1995mythical); **expert opinion**). The
+research is about knowledge. In one large project, recent departures were associated with a higher probability of
 customer-reported defects ([Mockus, 2010](../../references/bibliography.md#mockus2010volatility);
-**research finding**, observational). A study of Chrome and a project at Avaya found historical losses
-from departed developers' files could exceed three times the expected loss, and that naming
-successors reduced expected loss by up to 15 percent
+**research finding**, observational). A study of Chrome and a project at Avaya found that historical losses
+from departed developers' files could exceed three times the expected loss. Naming successors reduced
+expected loss by up to 15 percent
 ([Rigby et al., 2016](../../references/bibliography.md#rigby2016turnover); **research finding**, two
 projects). Plan for the average vacancy; protect the few knowledge areas where one departure is a tail
 risk.
@@ -137,18 +139,20 @@ some backfills at entry level.
 
 ### Location strategy
 
-The usual case for a location is cost. The saving is real on the rate card and uncertain in total.
+The usual case for a location is cost. The saving is real on the rate card (the price per person in
+that location or from that vendor) and uncertain in total.
 
 - Using change-management data and surveys, distributed work items appeared to take about two and a
   half times as long as similar colocated ones, and the number of people involved was strongly related
   to completion time ([Herbsleb and Mockus, 2003](../../references/bibliography.md#herbsleb2003empirical);
   **research finding**, early 2000s).
-- A review of published global software engineering studies found not enough evidence to conclude
-  that offshoring reduced costs ([Šmite, Calefato, and Wohlin, 2015](../../references/bibliography.md#smite2015cost);
-  **research finding**, abstract read).
+- A review of published global software engineering studies, its abstract reports, found not enough
+  evidence to conclude that offshoring reduced costs
+  ([Šmite, Calefato, and Wohlin, 2015](../../references/bibliography.md#smite2015cost);
+  **research finding**).
 - A systematic review of follow-the-sun development (handing work between time zones to shorten
-  calendar time), covering 1990 to 2012, catalogued 36 practices and 17 challenges and notes that
-  communication problems at task allocation and daily handovers make it hard to adopt
+  calendar time) covered 1990 to 2012 and catalogued 36 practices and 17 challenges. Communication
+  problems at task allocation and daily handovers make it hard to adopt
   ([Kroll et al., 2013](../../references/bibliography.md#kroll2013followthesun); **research finding**).
 
 The rule that follows (this book's recommendation): **place whole ownership, not fragments**. A site
@@ -168,15 +172,17 @@ Three tests decide whether work suits a vendor (this book's recommendation):
 3. **Not core knowledge:** nobody needs the vendor's people to keep the system running afterwards.
 
 Rebuilding ledger posting rules fails the third test: it rents knowledge that leaves with the
-contract. No vendor engineer should be the only person able to change a tier 1 component. And flat
+contract. No vendor engineer should be the only person able to change a
+[tier 1](../../glossary.md#tier-1) (business-critical) component. And flat
 headcount with an open contractor budget is not flat cost; an honest plan shows both.
 
 ### Enterprise governance: few policies, enforced
 
 Chapter 20 turns a wiki of musts into a director's register of standards. At VP scale the question is
-which rules must be identical across groups that do not share a director. The **externality test**
-(this book's recommendation): a rule earns enterprise scope only if a violation in one group harms
-another group, customers, or the company. Shared production infrastructure, customer data, financial
+which rules must be identical across groups that do not share a director. In economics an
+externality is a cost that lands on someone other than the party that caused it. Hence the
+**externality test** (this book's recommendation): a rule earns enterprise scope only if a violation in
+one group harms another group, customers, or the company. Shared production infrastructure, customer data, financial
 correctness, contractual availability, and dates promised to customers pass. Code style, sprint
 length, and test frameworks do not. RFC 2119, which defines MUST, SHOULD, and MAY, advises using such
 imperatives sparingly, only where required for interoperation or to limit harm
@@ -184,10 +190,11 @@ imperatives sparingly, only where required for interoperation or to limit harm
 protocols, used here as an analogy).
 
 Each policy needs an **owner**, an **enforcement point** where it cannot be skipped, an **exception
-path** with expiry, and a **measure** from system data rather than attestation.
+path** with expiry, and a **measure** from system data rather than attestation (teams declaring
+themselves compliant).
 
 **Enforce in the path of work, not in a meeting.** DORA reports that heavyweight change approval by a
-board or senior manager hurt delivery performance with no evidence of lower change failure rates, and
+board or senior manager hurt delivery performance with no evidence of lower change failure rates. It
 recommends recorded peer review plus automated testing and monitoring
 ([DORA, Streamlining change approval](../../references/bibliography.md#dora-cap-change-approval);
 **industry research**, survey-based). A policy enforced by a board is a queue in front of every
@@ -196,14 +203,15 @@ group; enforced by the pipeline, it costs seconds.
 **Mandate outcomes, not tools, unless the tool is the control.** The CNCF platforms white paper says
 platforms should not rely on top-down mandates for adoption
 ([CNCF Platforms White Paper](../../references/bibliography.md#cncf-platforms-whitepaper);
-**practitioner consensus**), and DORA's 2024 report found respondents required to use a platform
+**practitioner consensus**). DORA's 2024 report found that respondents required to use a platform
 exclusively for the whole lifecycle reported 6 percent lower throughput
 ([DORA, 2024](../../references/bibliography.md#dora2024accelerate); **industry research**,
 cross-sectional). "Every production change passes an auditable pipeline with rollback" is a policy;
 "every team uses pipeline product X" should win by being better.
 
-**Govern delivery too.** A date given to a customer before anyone sized the work is a cross-group
-failure, so one delivery policy usually passes: no external date without an estimate and an owner.
+**Govern delivery too.** One delivery policy usually passes the test: no external date without an
+estimate and an owner ([Chapter 44](../10-business-leadership/44-working-with-product.md#the-dates-that-remain)
+explains it).
 
 Finally, check that policies are real. Organizations adopt formal structures for legitimacy and
 decouple them from work ([Meyer and Rowan, 1977](../../references/bibliography.md#meyer1977institutionalized);
@@ -229,25 +237,29 @@ flowchart TD
 Each layer adds a hop to every decision that crosses it. Williamson's model of firm size is known for
 "control loss", a share of intent lost at each level and compounding with depth
 ([Williamson, 1967](../../references/bibliography.md#williamson1967hierarchical); a theoretical
-model, abstract read). GitLab's handbook keeps the same span range at every
+model). GitLab's handbook keeps the same span range at every
 level explicitly to avoid an additional layer
 ([GitLab, Organizational Structure](../../references/bibliography.md#gitlab2026structure);
-**documented practice**). Spans are Chapter 34's; the point here is what to try before a layer: a
-written decision right, a policy enforced by tooling, a common review format so every director reports
+**documented practice**). [Spans](../../glossary.md#span-of-control) are Chapter 34's subject; the point here is what to try
+before a [layer](../../glossary.md#layer): a written decision right, a policy enforced by tooling, a common review format so every director reports
 the same scorecard, a staff or principal role with a mandate, or a platform that removes the need to
 coordinate.
 
 ## Engineering Organization Example
 
 This example is **fictional**; the Halvard figures are from the
-[Halvard canon page](../../case-studies/northstar/halvard.md).
+[Halvard page](../../case-studies/northstar/halvard.md).
 
 **Supply.** Product groups of 130 (Commerce), 110, 100, and 90, plus a 70-engineer platform
-organization. Engineer 190, Senior 245, Staff 58, Principal 7; Senior and above 310 (62 percent).
-**Assumptions.** Attrition 12 percent (60 departures), in proportion to the mix: Engineer 23 (22.8),
-Senior 29 (29.4), Staff 7 (6.96), Principal 1 (0.84). Promotions: 8 percent of Engineers to Senior
-(15), 3 percent of Seniors to Staff (7). Fully loaded cost: Engineer $170,000, Senior $215,000, Staff
-$270,000, Principal $330,000. Headcount held at 500.
+organization: 500 engineers, 62 percent at Senior or above. "Engineer" below is the career level
+beneath Senior. The assumptions, with headcount held at 500:
+
+| Level | Headcount | Departures (12 percent, in proportion) | Promoted to the next level | Fully loaded cost |
+|---|---|---|---|---|
+| Engineer | 190 | 23 | 15 (8 percent) | $170,000 |
+| Senior | 245 | 29 | 7 (3 percent) | $215,000 |
+| Staff | 58 | 7 | 0 | $270,000 |
+| Principal | 7 | 1 | 0 | $330,000 |
 
 **Policy 1, like-for-like backfill:**
 
@@ -261,16 +273,21 @@ $270,000, Principal $330,000. Headcount held at 500.
 
 Senior and above rises to 325 (65 percent).
 
-**Policy 2, hold the mix:** hire Engineer 23 + 15 = 38, Senior 29 + 7 − 15 = 21, Staff 0, Principal 1;
-still 60 hires.
+**Policy 2, hold the mix:** hire so each level ends where it started, still 60 hires.
 
-**Cost of drift.** Policy 1 ends with 15 fewer Engineers, 8 more Seniors, and 7 more Staff:
-−15 × $170,000 + 8 × $215,000 + 7 × $270,000 = $1,060,000 a year, about 1 percent of the held-mix
-payroll of $102.9 million. Decided by nobody.
+| Level | Start | Leave | Promoted out | Promoted in | Hired | End |
+|---|---|---|---|---|---|---|
+| Engineer | 190 | 23 | 15 | 0 | 38 | 190 |
+| Senior | 245 | 29 | 7 | 15 | 21 | 245 |
+| Staff | 58 | 7 | 0 | 7 | 0 | 58 |
+| Principal | 7 | 1 | 0 | 0 | 1 | 7 |
+
+**Cost of drift.** Policy 1 ends with 15 fewer Engineers, 8 more Seniors, and 7 more Staff. That adds
+$1,060,000 a year, about 1 percent of the held-mix payroll of $102.9 million, decided by nobody.
 
 **Cost of holding it.** If each of 38 entry-level hires needs four hours a week of senior time for 26
-weeks (an assumption), that is 3,952 hours, about 2.1 senior engineer-years at 1,840 hours a year, and
-no external Staff hires at all. So the VP sets **a band per group**: the platform organization may hold
+weeks (an assumption), that is 3,952 hours, about 2.1 senior engineer-years at 1,840 hours a year.
+Policy 2 also makes no external Staff hires at all. So the VP sets **a band per group**: the platform organization may hold
 a higher senior share; feature-heavy product groups hire more at entry level and staff the mentoring.
 
 **Vendors.** About 60 contractors on two contracts sit outside the 500. Every vendor scope
@@ -287,14 +304,14 @@ by a principal engineer:
 | Tier 1 operational minimums | Quarterly sample | Tier 1 share meeting all |
 | Auditable pipeline with rollback | The shared pipeline | Share of deploys through it |
 | Vulnerability remediation service levels | Scanner in the pipeline | Findings past deadline |
-| Tracked review for every Sev1 | Incident tracker | Actions closed on time |
+| Tracked review for every [Sev1](../../glossary.md#severity-sev1-sev2-sev3) (most severe incident) | Incident tracker | Actions closed on time |
 | No customer date without estimate and owner | Planning tool | Dates given before sizing |
 
 The rest belongs to the VPs and their directors.
 
 ## Decision Framework
 
-**For each departure, before the requisition opens:**
+**For each departure, before the requisition (the approved request to hire into a seat) opens:**
 
 | Question | If yes | If no |
 |---|---|---|
@@ -398,8 +415,8 @@ not a level between the VPs and the CTO.
 The hardest workforce conversation is with finance. Flat headcount counts people, not cost, capacity,
 or knowledge. With vacancy, mix, and contractor figures in hand, a CTO can negotiate for a cost
 ceiling with freedom in shape instead of a number that invites contractor workarounds. Whether
-Northstar, at 80 engineers under one director, needs a VP in year 2 is Victor Lindqvist's open
-week-45 question (Chapter 47).
+Northstar, at 80 engineers under one director, needs a VP in year 2 is an open question for Victor
+Lindqvist (CTO), raised in week 45 (Chapter 47).
 
 ## Practical Playbook
 
@@ -422,57 +439,63 @@ week-45 question (Chapter 47).
 
 ## Case Study
 
-This case is **fictional**. It is set in quarter 4 (weeks 40–52), alongside the week-44 year-2
-organization proposal, whose outcome is open
-([first quarter page](../../case-studies/northstar/first-quarter.md)), where the quarter 4 facts used
-here are recorded. The decision is left to the reader.
+!!! info "Northstar so far"
+    Week 41 of the director's first year. Sev1 and Sev2 incidents fell from 30 a quarter to 14 in
+    quarter 3 with headcount flat at 80 engineers. The level mix in week 40 was 39 Engineers, 38
+    Seniors, and 3 Staff. Victor Lindqvist (CTO) has asked for the year-2 plans. See the
+    [timeline](../../case-studies/northstar/timeline.md).
 
-**The request.** In week 41 Rajiv Menon asks for a year-2 workforce plan to accompany the budget pack;
-Victor Lindqvist asks for options. The rule holds: 87 seats (80 engineers), backfills allowed, no net
+This case is **fictional**, set in weeks 41 to 49; the decision has no recorded outcome, and it is
+yours.
+
+**The request.** In week 41 Rajiv Menon (CFO) asks for a year-2 workforce plan to accompany the budget
+pack; Victor asks for options. The rule holds: 87 seats (80 engineers), backfills allowed, no net
 additions.
 
 **Supply.** The mix at arrival was 44 Engineers, 33 Seniors, 3 Staff; the quarter-3 cycle promoted
 five to Senior, giving 39, 38, and 3 (assuming departures since arrival were backfilled at the same
 level). Locations: Minneapolis 52, Bogotá 16, remote US 12. Finance's figure for a Bogotá
-engineer-year, fully loaded with the office, is about $110,000. With the canon's $185,000
-average over 87 people, US-based staff average about $202,000: (87 × $185,000 − 16 × $110,000) ÷ 71.
+engineer-year, fully loaded with the office, is about $110,000. Against Northstar's $185,000 average
+over 87 people, US-based staff therefore average about $202,000.
 
-**Flows.** Assume the baseline rate continues: 8 departures and 15 weeks to fill. Vacancy:
-8 × 15 ÷ 52 = 2.3 engineers, about 2.3 × $185,000 = $427,000 of approved budget unspent. If the
-proposal's Mobile team is approved, Mateo Arango Ríos's seat is not backfilled and the plan starts at
-79; it must work either way.
+**Flows.** Assume the baseline rate continues: 8 departures a year and 15 weeks to fill. Vacancy is
+2.3 engineers on average, about $427,000 of approved budget unspent. If the year-2 proposal's Mobile
+team is approved, one engineer becomes its manager, that seat is not backfilled, and the plan starts
+at 79 engineers; it must work either way.
 
 | Option | What it does | Capacity | Cost | Risks |
 |---|---|---|---|---|
 | A. Like-for-like | Same level, team, location | Vacancy about 2.3 FTE | Baseline | Senior drift; eight decisions unused |
 | B. Shaped | Entry level unless a named knowledge gap; seats in teams with a Bogotá cluster may move there | As A, plus mentoring | Saves about $91,000 (level) and $174,000 (location) at full year | Mentoring load; Bogotá has no site manager unless the proposal passes |
 | C. Hire ahead | Two requisitions open before departures, for ledger and Core roles | Vacancy about 0.9 FTE | Within budget; up to $370,000 over if attrition falls short | Engineers briefly 81 or 82 (88 or 89 of the 87 seats); needs an explicit, dated exception to the 87-seat rule from Victor Lindqvist and Rajiv Menon |
-| D. Vendor | Fixed-scope contract for the Core framework migration (120 to 180 engineer-days) | Frees Core engineers | From the underspend; needs a quote | Core line coverage 41 percent, so weakly verifiable |
+| D. Vendor | Fixed-scope contract for the Core framework migration (120 to 180 engineer-days) | Frees Core engineers | From the underspend; needs a quote | Core, the Java monolith, has 41 percent line coverage, so the work is weakly verifiable |
 
 The arithmetic, with assumptions:
 
 - **B, level.** Leavers half Engineer, half Senior (the mix is 39 to 38). Hiring two of four Senior
-  replacements at Engineer level saves (152,500 − 120,000) × 1.4 = $45,500 per seat (US midpoints,
-  Chapter 8's 1.4 loading assumption), so $91,000.
+  replacements at Engineer level saves $45,500 per seat, so $91,000. (US salary midpoints of $152,500
+  and $120,000, times Chapter 8's 1.4 loading assumption.)
 - **B, location.** Last year's departures: Billing 2, Orders 2, Data and Analytics 2, Customer
   Experience 1, Payments and Integrations 1. Up to four seats are in teams with a Bogotá cluster (the
-  Customer Experience one only if mobile). Moving three saves about $168,000 − $110,000 = $58,000
-  each (a loaded US Engineer at midpoint against the Bogotá average): $174,000 at full year, about
-  half in year 2 if hires land mid-year.
-- **C.** With an approved pipeline, the lag falls from 15 weeks to about 6 (one to offer, five of
-  notice, from Tamsin Achterberg's hire): 8 × 6 ÷ 52 = 0.9 FTE, recovering about 1.4. If fewer than
+  Customer Experience one only if mobile). Moving three saves about $58,000
+  each (a loaded US Engineer at midpoint, $168,000, against the Bogotá average). That is $174,000 at
+  full year, about half in year 2 if hires land mid-year.
+- **C.** With an approved pipeline of candidates, the lag falls from 15 weeks to about 6 (one to
+  offer, five of notice, as on Billing's last ledger hire): 8 × 6 ÷ 52 = 0.9
+  [FTE](../../glossary.md#fte), recovering about 1.4. If fewer than
   eight leave, up to two extra people: 2 × $185,000 = $370,000.
 
-**Governance.** The draft adds one delivery rule: no date to a customer without an engineering
-estimate and a named owner, with estimates within five working days. In the baseline quarter, 5 of 17
-dates were given before sizing, including Greg Tanaka's two deal features. Greg objects that it slows
-deals.
+**Governance.** The draft adopts Chapter 44's delivery rule as an organization-wide policy: no date
+to a customer without an engineering estimate and a named owner, with estimates within five working
+days. It passes the externality test, because a missed customer date lands on sales, customer success,
+and the renewal. Greg Tanaka (VP Sales) objects that it slows deals.
 
 **Where it stands.** In week 49 the director sends the draft to Victor and Rajiv with the
 recommendation left open. Rajiv likes B and dislikes C, because a headcount above the 87 seats, however brief,
 appears in the board pack. Victor wants ledger risk first: at baseline one person could safely change
 period close and one currency and rounding, and B's entry-level default does not obviously reach
-either. Tomasz Wierzbicki's offer and the year-2 proposal are still open.
+either. The outside offer a Billing ledger engineer reported in week 20, and the year-2 proposal, are
+still open.
 
 ## Exercises
 
@@ -499,18 +522,28 @@ name an enforcement point and a measure; for each that fails, say who should own
 
 ### Applied Leadership
 
-**A1.** Two Data and Analytics engineers in Minneapolis resign in the same month. Farah Haddad asks to
-backfill both in Minneapolis at Senior level, "because that's who we lost". Five of her engineers are
-in Bogotá, and Yusuf Demir received a "not yet" for Senior in quarter 3. Use the backfill questions to
-decide each seat's level and location, and say what you need to know first.
+**A1.** Two Data and Analytics engineers in Minneapolis resign in the same month. Farah Haddad, the
+team's manager, asks to backfill both in Minneapolis at Senior level, "because that's who we lost".
+Her 11 engineers sit 4 in Minneapolis, 5 in Bogotá, and 2 remote, and before these departures were
+about 5 at Engineer level and 6 Seniors. Yusuf Demir, an Engineer on her team, received a
+[not yet](../../glossary.md#not-yet) for Senior in quarter 3; his plan is to lead the ledger-export
+contract design through Billing's review. Use the backfill questions to decide each seat's level and
+location, and say what you need to know first.
 
-**A2.** Tom Becker proposes four contractors for nine months to finish CI consolidation phase 1 (the
-four shell-script services), paid from the vacancy underspend. Apply the three vendor tests to the
-scope, decide whether to support it, and specify the conditions you would attach.
+**A2.** Tom Becker, the Platform Operations manager, proposes four contractors for nine months to
+finish CI consolidation phase 1: moving the four services still deployed by hand-maintained shell
+scripts onto a shared pipeline. Only one Platform Operations engineer understands those scripts. The
+platform roadmap planned about 29 engineer-weeks for three items, phase 1 among them, and the target
+pipeline (GitLab CI was proposed) has not been chosen. The contract would be paid from the vacancy
+underspend. Apply the three vendor tests to the scope, decide whether to support it, and specify the
+conditions you would attach.
 
-**A3.** Greg Tanaka escalates the rule that no customer date is given without an engineering estimate,
-saying two deals will slip a quarter. Prepare the conversation: what the rule protects, what service
-level engineering commits to, and what exception path you would offer.
+**A3.** Halvard's CTO staff list still holds a rule that every service has an architecture review
+before each major release. No system records whether the reviews happen, and two groups say they
+stopped holding them a year ago without incident. A principal engineer wants it made a seventh
+enterprise policy, because a review once caught a design that would have caused an outage. Apply the
+externality test and the four policy requirements, decide whether to keep, redesign, delegate, or
+retire the rule, and say how you would announce the decision.
 
 ### Executive Decision-Making
 
@@ -554,9 +587,9 @@ using the layer diagram, and describe what you would build instead if you refuse
 ## References and Further Reading
 
 - [Larson, 2024](../../references/bibliography.md#larson2024primer). Engineering executive work,
-  including planning and headcount (idea level).
+  including planning and headcount.
 - [Larson, 2019](../../references/bibliography.md#larson2019elegant). Systems thinking about
-  engineering organizations and their sizing (idea level).
+  engineering organizations and their sizing.
 - [Berman and Knight, 2006](../../references/bibliography.md#berman2006financial). Financial literacy
   before a workforce conversation with finance.
 - [Herbsleb and Mockus, 2003](../../references/bibliography.md#herbsleb2003empirical),

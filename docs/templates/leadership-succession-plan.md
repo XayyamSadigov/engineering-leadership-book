@@ -1,9 +1,14 @@
 # Leadership succession plan
 
-**Used in:** Chapter 36 (reorganizations, organizational evolution, and succession), Chapter 41
-(managing and developing engineering managers, where the bench is grown), Chapter 12 (knowledge maps,
-the input for concentrated-knowledge roles), Chapter 55 (what the board asks about key-person risk);
-Project 6 builds one.
+**Used in:** [Chapter 36](../parts/07-organization-design/36-reorganizations-evolution-and-succession.md)
+(reorganizations, organizational evolution, and succession),
+[Chapter 41](../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md)
+(managing and developing engineering managers, where the bench is grown),
+[Chapter 12](../parts/03-high-performing-teams/12-team-charters-working-agreements-and-knowledge-sharing.md)
+(knowledge maps, the input for concentrated-knowledge roles),
+[Chapter 55](../parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md)
+(what the board asks about key-person risk); [Project 6](../projects/p6-manager-development-and-succession.md)
+builds one.
 **Owner:** the leader the critical roles report to (the director, for managers and staff engineers),
 reviewed with the managers and HR. The CTO sees the rows for the top roles.
 **Cadence:** reviewed twice a year; redone whenever a reorganization is drafted, a critical role holder
@@ -12,24 +17,10 @@ resigns, or a candidate moves.
 A succession plan answers one question for every critical role: if the person in it left next week, who
 would keep it running, and who is being developed to take it over? A **critical role** is one whose
 sudden vacancy would stop a team, a system, or a class of decisions: every manager, every staff engineer,
-the director, and the holders of concentrated knowledge on tier 1 systems. The readiness scale and the
-coverage rule below are Chapter 36's
-([Chapter 36](../parts/07-organization-design/36-reorganizations-evolution-and-succession.md#succession-coverage));
-how to grow the names in the plan is Chapter 41's
-([Chapter 41](../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md)).
-
-Succession is a process, not an event. A review of five decades of CEO succession research notes that
-studies have mostly treated it as an event, contrary to practice, which treats it as continuous
-([Berns and Klarner, 2017](../references/bibliography.md#berns2017succession)); that is a **research
-finding** about chief executives, used here only for the framing. For code, a study of Chrome and a
-project at Avaya found that having designated successors reduced expected loss from developer turnover
-by as much as 15 percent ([Rigby et al., 2016](../references/bibliography.md#rigby2016turnover)), a
-**research finding** about files and their authors; that prepared successors also reduce the cost of
-losing a manager is this book's inference. Firms tend to promote on current performance even when other
-traits predict managerial success better
-([Benson, Li, and Shue, 2019](../references/bibliography.md#benson2019promotions), **research finding**
-on sales workers), so candidates are selected on evidence of managerial work, created through trial
-assignments. The fields and the review rules are **this book's recommendation**.
+the director, and the holders of concentrated knowledge on [tier 1](../glossary.md#tier-1) systems.
+[Succession coverage](../glossary.md#succession-coverage) is the share of critical roles with someone
+who could step in. Succession is a process, not an event: the names in the plan are grown through trial
+assignments, not just written down.
 
 The plan is confidential to the director, HR, and the CTO. The candidates themselves are told they are
 developing toward broader work, and what that work is; they are not told they are the heir.
@@ -107,18 +98,15 @@ counts:
 
 ## Example: Northstar, the week 44 succession table
 
-**Fictional.** The ten roles, the names in each column, and the counts are the week 44 ratings recorded
-in Chapter 36 and on the [first quarter](../case-studies/northstar/first-quarter.md) page; they are the
-director's fictional judgments. The development actions are the ones proposed in Chapter 41's quarter 3
-plans and Chapter 36's case study, all with outcomes open. The layout, the coverage-rule column, and the
-rows marked "none recorded" are this template's reading of those sources. Nothing here records an
-outcome.
+!!! info "Northstar so far"
+    Week 44 of the Engineering Director's first year at Northstar Technologies, a fictional company with
+    six engineering managers and three staff engineers. The year-2 organization proposal, drafted the
+    same week, would split Customer Experience and make Mateo Arango Ríos (informal mobile lead)
+    Mobile's manager; Victor Lindqvist (CTO) decides in week 46. See the
+    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
 
-**Context.** Week 44 of the director's first year. The year-2 organization proposal, drafted the same
-week, would split Customer Experience and make Mateo Arango Ríos Mobile's manager; Victor Lindqvist
-decides in week 46. In week 45 Victor asks whether Northstar needs a VP of Engineering in year 2. Writing
-the reorganization plan raised the question the proposal had not asked: if a name on the chart left,
-who would step in?
+The ratings are the director's fictional judgments; the development actions are proposals with no
+recorded outcome. Each row names the role holder, who is a manager or staff engineer (see the cast).
 
 | Critical role | Ready now or interim | In development | Covered by the rule? | Development action (proposed) and owner |
 |---|---|---|---|---|
@@ -133,26 +121,25 @@ who would step in?
 | Staff, data and integration (Li Na Zhou) | None | Sunil Varghese (warehouse); the Payments informal tech lead (integration) | No: no cover; split development | None recorded |
 | Director | Elena Sokolova, interim | Elena Sokolova | No: Elena holds a critical role; if she acts, Payments falls to its informal tech lead | Elena chairs the operations review during the director's two weeks of leave; the director |
 
-**Counts.** Ready now: 0 of 10. Interim: 6 (Orders, Payments and Integrations, Customer Experience,
-Platform Operations, staff infrastructure, director). None: 4 (Billing, Data and Analytics, the
-core-domain and data-and-integration staff roles). Covered by the rule: 3 (Orders, Payments and
-Integrations, Customer Experience), two of them by one person in both columns. People in more than one
-role: Aisha Bello (Orders and core domain), Rafael Duarte (Orders and core domain, both conditional or
-partial), Sunil Varghese (Data and Analytics and data and integration), the Payments informal tech lead
-(Payments and data and integration), Kwame Mensah (holds infrastructure, covers Platform Operations),
-Elena Sokolova (holds Payments, covers the director).
+**Counts.**
+
+| Measure | Count | Roles |
+|---|---|---|
+| Ready now | 0 of 10 | |
+| Interim cover | 6 | Orders, Payments and Integrations, Customer Experience, Platform Operations, staff infrastructure, director |
+| No cover | 4 | Billing, Data and Analytics, the core-domain and data-and-integration staff roles |
+| Covered by the rule | 3 | Orders, Payments and Integrations, Customer Experience (two of them by one person in both columns) |
+
+Six people appear in more than one row: Aisha Bello, Rafael Duarte, Sunil Varghese, the Payments
+informal tech lead, Kwame Mensah (holds infrastructure, covers Platform Operations), and Elena Sokolova
+(holds Payments, covers the director).
 
 What to notice: the table changes the reorganization. Promoting Mateo Arango Ríos removes Customer
 Experience's development candidate and creates a Mobile manager role with no cover, in a site where
-nobody else leads; Chapter 36's director therefore plans to redo the table in week 49 with seven teams,
-before any announcement. The three staff rows have names in development and no recorded action, which
-is how succession theater starts. Missing from the ten rows altogether are the concentrated-knowledge
-holders Chapter 36 says belong here: in the baseline counts of Billing's ledger knowledge, currency
-and rounding had one person who could respond alone and one who could change it safely. The VP question would also
-change the director row: a VP takes one of the 87 seats. When Anders Holm, the board chair, asks whether
-the year-1 gains depend on a few people (Chapter 55), these counts are the honest answer, together with
-the continuation proposal's requirement that no critical role be without cover by week 78, a proposal
-whose status is undecided.
+nobody else leads, so the table must be redone for seven teams before any announcement. The three staff
+rows have names in development and no recorded action, which is how succession theater starts. And the
+concentrated-knowledge holders are missing: in Billing's ledger, currency and rounding had one person
+who could respond alone and one who could change it safely.
 
 ## Common mistakes
 
@@ -179,3 +166,24 @@ whose status is undecided.
 3. Which gap has no development action, owner, and date?
 4. Which knowledge, held by one or two people on a tier 1 system, is missing from the table?
 5. What does the proposed chart do to this table?
+
+## Evidence and references
+
+The readiness scale and the coverage rule are
+[Chapter 36's](../parts/07-organization-design/36-reorganizations-evolution-and-succession.md#succession-coverage);
+how to grow the names in the plan is
+[Chapter 41's](../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md).
+
+- [Berns and Klarner, 2017](../references/bibliography.md#berns2017succession): a review of five
+  decades of CEO succession research notes that studies have mostly treated succession as an event,
+  while practice treats it as continuous (**research finding** about chief executives, used here only
+  for the framing).
+- [Rigby et al., 2016](../references/bibliography.md#rigby2016turnover): in Chrome and a project at
+  Avaya, designated successors reduced expected loss from developer turnover by as much as 15 percent
+  (**research finding** about files and their authors). That prepared successors also reduce the cost
+  of losing a manager is this book's inference.
+- [Benson, Li, and Shue, 2019](../references/bibliography.md#benson2019promotions): firms tend to promote
+  on current performance even when other traits predict managerial success better (**research
+  finding** on sales workers), which is why candidates are selected on evidence of managerial work.
+
+The fields and the review rules are **this book's recommendation**.

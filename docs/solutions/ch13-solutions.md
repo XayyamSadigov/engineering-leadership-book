@@ -149,7 +149,7 @@ bottleneck to a person without the authority to move engineers between teams.
 | Component ownership | Director | Candidate managers, relevant staff engineer | 10 working days to a decision or dated plan |
 | Interface changes to shared modules | Owning team's manager | Consuming teams | 5 working days |
 | Roadmap conflicts between teams | Director with the CPO | Managers involved | Next weekly leadership meeting |
-| Architecture across teams | Left to Chapter 28's design | | |
+| Architecture across teams | Left open (contested; see Chapter 28) | | |
 
 Plus an open-decisions list reviewed weekly, and a shared decision log.
 
@@ -163,7 +163,7 @@ cross-team changes. Managers frame decisions as reversible to avoid consultation
 **Cost.** Perhaps a few hours a week of the director's time in the first quarter, and some friction
 as managers find informal authority written down.
 
-**Deliberately undefined.** Architecture decision rights (disputed; owned by Chapter 28), and decisions
+**Deliberately undefined.** Architecture decision rights (contested; Chapter 28 discusses them), and decisions
 inside teams, which stay with managers.
 
 A good answer is small, names deciders not committees, and includes its own failure modes. The weak

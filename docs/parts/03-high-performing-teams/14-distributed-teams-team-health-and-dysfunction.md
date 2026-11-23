@@ -1,11 +1,11 @@
 # Chapter 14 — Distributed Teams, Team Health, and Diagnosing Dysfunction
 
-This chapter covers three jobs: designing how a team works when its members are not in one room,
-using what the remote and hybrid work research shows; finding out how healthy a team is without
-turning the answer into a score people learn to manage; and diagnosing a team that is not working,
-then choosing between coaching, restructuring, and changing its leader. Chapter 11 owns psychological safety, Chapter 18 owns
-developer-experience surveys, and Chapter 33 owns team design and cognitive load; this chapter uses
-them without re-teaching them. The running example is Customer Experience at Northstar Technologies,
+This chapter covers three jobs. The first is designing how a team works when its members are not in
+one room, using what the remote and hybrid work research shows. The second is finding out how healthy
+a team is without turning the answer into a score people learn to manage. The third is diagnosing a
+team that is not working, then choosing between coaching, restructuring, and changing its leader. Psychological safety
+(Chapter 11), developer-experience surveys (Chapter 18), and team design (Chapter 33) are taught
+elsewhere; this chapter uses them without re-teaching them. The running example is Customer Experience at Northstar Technologies,
 the fictional company in the [case study](../../case-studies/northstar/index.md): nine web engineers
 in Minneapolis and remote, six mobile engineers in Bogotá, one manager.
 
@@ -73,18 +73,18 @@ Five studies carry most of the weight. Each answers a narrower question than it 
 |---|---|---|---|
 | [Herbsleb and Mockus, 2003](../../references/bibliography.md#herbsleb2003empirical) | Globally distributed software development, two organizations | Distributed work items took about 2.5 times as long as similar colocated ones; more people involved, longer calendar time | Whether modern tools close the gap |
 | [Yang et al., 2022](../../references/bibliography.md#yang2022remote) | About 61,000 US employees of one technology company, early 2020 | Firm-wide remote work made collaboration networks more static and siloed, with fewer bridges; synchronous communication fell, asynchronous rose | Effects on output |
-| [Gibbs, Mengel, and Siemroth, 2023](../../references/bibliography.md#gibbs2023wfh) | Over 10,000 professionals at one IT services firm, pandemic work from home | Hours rose while output did not; coordination grew, while uninterrupted work, coaching, and supervisor one-on-ones fell | A chosen policy; the published estimates (working-paper abstract read) |
+| [Gibbs, Mengel, and Siemroth, 2023](../../references/bibliography.md#gibbs2023wfh) | Over 10,000 professionals at one IT services firm, pandemic work from home | Hours rose while output did not; coordination grew, while uninterrupted work, coaching, and supervisor one-on-ones fell | A chosen policy; a peer-reviewed estimate (it is a working paper) |
 | [Bloom, Han, and Liang, 2024](../../references/bibliography.md#bloom2024hybrid) | Randomized trial, 1,612 employees of one technology company, two home days a week | Quits fell by about a third; no effect on performance grades, promotions, or engineers' lines of code; managers' expectations turned from negative to slightly positive | Fully remote work; cross-group ties |
 | [Emanuel, Harrington, and Pallais, 2023](../../references/bibliography.md#emanuel2023proximity) | Software engineers at one large US firm; office closures and returns as natural experiments | Sitting near teammates raised the coding feedback engineers received, most for newer engineers; experienced engineers wrote less code | Whether remote mentoring can substitute |
 
 These are **research findings**, each from one organization; the pandemic studies measure a forced,
-sudden change. Together they are more consistent than the public argument: hybrid with some home days
-cost nothing measurable in the one randomized trial and helped retention; full distance at scale weakens
-ties between groups and raises coordination cost; and proximity is a transfer of feedback from
-experienced engineers to newer ones.
+sudden change. Together they are more consistent than the public argument. Hybrid with some home days
+cost nothing measurable in the one randomized trial and helped retention. Full distance at scale weakens
+ties between groups and raises coordination cost. Proximity transfers feedback from experienced
+engineers to newer ones.
 
-**The book's position on remote, hybrid, or colocated teams** (disputed claim D5): no study shows
-one arrangement is best for software teams in general. The evidence supports three narrower claims: a
+**The book's position on remote, hybrid, or colocated teams.** The evidence is contested, and no study
+shows one arrangement is best for software teams in general. The evidence supports three narrower claims: a
 hybrid schedule with anchor days is a low-risk default; full distance must be paid for with deliberate
 cross-group and feedback mechanisms; and teams with many newer engineers gain most from time together.
 The choice is a design decision about which communication the work needs (**this book's
@@ -108,8 +108,7 @@ location becomes the center of gravity: hallway decisions, the faster one-on-one
 assignments. Second, **make cultural norms explicit.** Erin Meyer's
 [*The Culture Map*](../../references/bibliography.md#meyer2014culture) is known for the argument that
 national cultures differ in how directly people give negative feedback, disagree, and signal
-decisions, and that misreading these differences damages trust (**expert opinion**, credited here at
-idea level). On a team spanning two countries, agree how disagreement and bad news are raised.
+decisions, and that misreading these differences damages trust (**expert opinion**). On a team spanning two countries, agree how disagreement and bad news are raised.
 
 ### Team health assessment without a score to manage
 
@@ -122,9 +121,9 @@ workshops** such as Spotify's squad health check ask the team to rate about ten 
 technical quality, mission, learning, support, and others) as green, yellow, or red with a trend, and to
 discuss why ([Kniberg and Lindwall, 2014](../../references/bibliography.md#kniberg2014squad)).
 
-The rules around the instrument matter more. Kniberg and Lindwall warn that the model works only where trust is high, because self-reported data is
-easy to game; teams should not be compared; and it is a support tool, not a judgment tool (**documented
-practice**). Orosz and Beck describe what happens otherwise: survey scores at one large company became
+The rules around the instrument matter more. Kniberg and Lindwall warn that the model works only where
+trust is high, because self-reported data is easy to game. Teams should not be compared, and it is a
+support tool, not a judgment tool (**documented practice**). Orosz and Beck describe what happens otherwise: survey scores at one large company became
 distorted once they were tied to performance reviews and to pressure from managers
 ([Orosz and Beck, 2023](../../references/bibliography.md#orosz2023measuring)). This is the general
 gaming loop that [Chapter 18](../04-execution/18-measuring-engineering-productivity.md) explains.
@@ -191,7 +190,7 @@ Three remedies, in rising order of cost and irreversibility:
   change.
 - **Restructuring**: splitting a team, moving a boundary or component, changing the board and cadence.
   Weeks of disruption and a delivery dip. It works when the team is really two teams or its boundary
-  guarantees conflict (Chapter 33 owns team design).
+  guarantees conflict (Chapter 33 covers team design).
 - **Leadership change**: moving or replacing the manager. Months of disruption, risk of losing people
   loyal to the leader, and a signal to every other manager. Warranted when the leader has had clear
   expectations, support, and time and has not changed, or has lost trust beyond repair.
@@ -200,8 +199,12 @@ Coaching a structural problem wastes quarters; changing a leader for one punishe
 
 ## Engineering Organization Example
 
-Northstar's working arrangements are **illustrative** and recorded on the baseline page.
-Headquarters is in Minneapolis, where all executives and engineering managers work, with office anchor
+!!! info "Northstar so far"
+    The director is at the start of quarter 2 (week 14). Quarter 1 cut Sev1 and Sev2 incidents (the two
+    highest severity levels) from 30 to 21, and in week 10 the seven QA engineers moved into product
+    teams as quality engineers. See the [timeline](../../case-studies/northstar/timeline.md).
+
+Northstar's working arrangements are **illustrative** (the company is fictional). Headquarters is in Minneapolis, where all executives and engineering managers work, with office anchor
 days Tuesday to Thursday. The second engineering office is in Bogotá, at most one hour from
 Minneapolis. Twelve engineers are fully remote in the United States.
 
@@ -235,13 +238,19 @@ Assume $3,000 per person-trip (flight, hotel, meals), an **illustrative** figure
 | Managers to Bogotá | 3 × 2 × $3,000 | $18,000 |
 | **Total per year** | | **$114,000** |
 
-Against that, one departure costs the vacancy plus ramp-up. The baseline median from resignation to a
-replacement's first day is 15 weeks: at $185,000 a year, about $53,000 (185,000 × 15 ÷ 52). Assume 13
-more weeks at half productivity: about $23,000. A departure costs about $76,000 before recruiting fees.
-Chapter 10 prices a ledger specialist at about $124,000; a typical role ramps faster, and recruiting is
-excluded here. So the program costs about one and a half departures. No study cited here shows that visits reduce
-attrition (Bloom et al. studied home days, not travel), so this is a bet with a stated break-even.
-Travel is operating expense, which Rajiv Menon wants flat, so the money must come from somewhere visible.
+Against that, one departure costs the vacancy plus ramp-up, at Northstar's fully loaded $185,000 per
+engineer per year:
+
+| Cost of one departure | Assumption | Cost |
+|---|---|---|
+| Vacancy | Baseline median of 15 weeks from resignation to a replacement's first day | about $53,000 |
+| Ramp-up | 13 more weeks at half productivity | about $23,000 |
+| **Total, before recruiting fees** | | **about $76,000** |
+
+So the travel program costs about one and a half departures a year. No study cited here shows that
+visits reduce attrition (Bloom et al. studied home days, not travel), so this is a bet with a stated
+break-even. Travel is [operating expense](../../glossary.md#operating-expense) (running costs booked in
+the year they occur), which Rajiv Menon (CFO) wants flat. The money must come from somewhere visible.
 
 ## Decision Framework
 
@@ -379,35 +388,36 @@ patterns: a CTO who asks for team health scores has created the league table.
 ## Case Study
 
 This case is **fictional**. It is set at the start of quarter 2 at Northstar, after the director's
-first quarter (recorded on [the first quarter](../../case-studies/northstar/first-quarter.md) page);
-baseline facts are on the [baseline page](../../case-studies/northstar/baseline-data.md). The
-locations and informal leads are recorded on the baseline page; the health check and its results are on
-the first quarter page. The outcome is a decision the reader faces.
+[first quarter](../../case-studies/northstar/first-quarter.md). The outcome is a decision the reader
+faces.
 
-**The team.** Customer Experience has 15 engineers under Daniel Cho: nine web (seven in Minneapolis,
+**The team.** Customer Experience has 15 engineers under Daniel Cho, its engineering manager: nine web (seven in Minneapolis,
 two remote) and six mobile, all in Bogotá. It owns web-app, mobile-app, and mobile-bff; notification-svc
-moved to Orders at the start of quarter 2. Two former QA engineers joined as quality engineers after the
-week 10 announcement, both in Minneapolis. Nobody holds a tech lead title; Hannah Lindgren leads web
+moved to Orders at the start of quarter 2. Two former QA engineers joined as quality engineers in
+week 10, when the QA group moved into product teams; both are in Minneapolis. Nobody holds a tech lead title; Hannah Lindgren leads web
 informally and Mateo Arango Ríos leads mobile. Daniel spends 45 percent of his time on people, the
 highest share of any Northstar manager.
 
-**The signals.** On delivery measures the team looks healthy: 26 deploys a month, the most of any team; a
-median lead time of six days; a 17 percent change failure rate; and 28 percent unplanned work against an
-organization average of 34. Other signals disagree:
+**The signals.** On delivery measures the team looks healthy. It deploys 26 times a month, the most of
+any team. Its median [change lead time](../../glossary.md#lead-time) (commit to running in production)
+is six days. Its [change failure rate](../../glossary.md#change-failure-rate) (share of deployments that
+fail) is 17 percent, and [unplanned work](../../glossary.md#unplanned-work) takes 28 percent of its
+capacity against an organization average of 34. Other signals disagree:
 
 - One board and one two-week sprint for web and mobile, although mobile releases pass app-store
-  review. INC-426's fix waited for that review; restoration took 1,310 minutes.
-- Two of the team's four baseline Sev2 incidents are on the mobile side: INC-405 at mobile-bff and
-  INC-426 in mobile-app.
+  review. In INC-426, offline sync corrupted drafts on one phone operating system; the fix
+  waited for that review, and restoration took 1,310 minutes.
+- Two of the team's four baseline [Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents are on
+  the mobile side: INC-405 at mobile-bff (described above) and INC-426 in mobile-app.
 - Retrospectives run with Minneapolis in one room and Bogotá on video; 6 of the last 8 retrospective
   actions concerned web work.
 - About half of Daniel's video one-on-ones with mobile engineers were rescheduled in the baseline
   quarter.
 - In the baseline quarter the team committed four roadmap items and delivered two.
 
-**The health check.** In week 16 the director asked Elena Sokolova, whose team also spans both sites,
-to facilitate. She ran it twice, once for web with the quality engineers and once for mobile.
-Normally only patterns and requests leave the room; because a structural decision depended on them,
+**The health check.** In week 16 the director asked Elena Sokolova (manager of Payments and
+Integrations, a team that also spans both sites) to facilitate. She ran it twice, once for web with the quality engineers and once for mobile.
+Normally only patterns and requests leave the room. Because a structural decision depended on them,
 both groups agreed to show Daniel and the director their ratings this once. Web rated 5 areas green, 4 yellow,
 and 1 red (speed, which they tied to waiting on Orders). Mobile rated 2 green (learning, fun), 4
 yellow, and 4 red: easy to release, suitable process, support, and "pawns or
@@ -458,8 +468,8 @@ quarters, using the chapter's loop, and propose a design that still finds teams 
 
 ### Applied Leadership
 
-**A1.** You are Elena Sokolova preparing to facilitate the Customer Experience health check in week 16.
-The six mobile engineers have never spoken much in team forums, and Daniel Cho asked to attend. Design the
+**A1.** You are Elena Sokolova, Payments and Integrations' manager, preparing to facilitate the Customer Experience health check in week 16.
+The six mobile engineers have never spoken much in team forums, and Daniel Cho, their manager, asked to attend. Design the
 sessions: who attends, in what format, what leaves the room, and what you will say to Daniel.
 
 **A2.** Data and Analytics has four engineers in Minneapolis, five in Bogotá, and two remote, and the
@@ -474,14 +484,14 @@ choose a remedy, saying what evidence would change your choice.
 
 ### Executive Decision-Making
 
-**X1.** Helena Marsh asks Victor Lindqvist for a policy of four office days a week at headquarters,
+**X1.** Helena Marsh (CEO) asks Victor Lindqvist (CTO) for a policy of four office days a week at headquarters,
 arguing that collaboration has weakened, and asks whether the Bogotá office is worth keeping. Write the
 CTO's response: what the evidence supports, the cost and risk of each option under flat headcount and
 flat operating expense, and what you recommend.
 
 **X2.** It is the end of quarter 3. Customer Experience split its board and cadence as recommended.
 Mobile's health check now shows 3 red areas instead of 4, mobile-app had one Sev2 in the quarter, Daniel
-visited Bogotá once instead of the agreed twice, and Mateo Arango Ríos asks whether he could become
+visited Bogotá once instead of the agreed twice, and Mateo Arango Ríos, mobile's informal lead, asks whether he could become
 mobile's manager. Decide whether to split the team, coach further, or change the leadership, and how to
 answer Mateo.
 

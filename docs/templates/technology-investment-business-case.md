@@ -1,7 +1,8 @@
 # Technology investment business case
 
-**Used in:** Chapter 45 (engineering economics and cost of delay), Chapter 52 (financial statements
-and budgeting), Project 8.
+**Used in:** [Chapter 45](../parts/10-business-leadership/45-business-models-and-engineering-economics.md)
+(engineering economics and cost of delay), [Chapter 52](../parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md)
+(financial statements and budgeting), [Project 8](../projects/p8-cto-technology-investment-proposal.md).
 **Owner:** the leader asking for the money or capacity; finance checks the arithmetic, and the
 decider is named in the ask.
 **Cadence:** once per investment, before the decision; revisited at each checkpoint the case
@@ -13,18 +14,13 @@ solves, what the options cost, what each returns, what waiting costs, and what w
 answer. Its job is not to win the money. A case that hides its weakest assumption usually gets
 approved once and distrusted afterwards.
 
-Engineering economics belongs to Chapter 45; this template uses its definitions and only gives the
-fields. **Cost of delay** is the value lost for each week a benefit arrives late, in dollars per
-week. **CD3** is cost of delay in thousands of dollars per week divided by duration in weeks, the
-ranking Chapter 15 uses; SAFe's relative form is Weighted Shortest Job First
-([SAFe, WSJF](../references/bibliography.md#safe-wsjf); the idea is credited to
-[Reinertsen, 2009](../references/bibliography.md#reinertsen2009principles)). Each benefit is assigned
-one **value channel** (increase revenue, protect revenue, reduce costs, or avoid costs), the four
-benefit types Arnold and Yüce describe ([Arnold and Yüce, 2013](../references/bibliography.md#arnold2013blackswan)),
-and one of Chapter 45's four **urgency profiles**: long life, peak unaffected; long life, peak
-affected; short life, peak affected; external deadline. An external-deadline item is scheduled
-backward from its date with a margin, not ranked by CD3. All of this is **practitioner consensus**
-for ordering work, not precise valuation.
+Four terms carry the template. [Cost of delay](../glossary.md#cost-of-delay) is the value lost for
+each week a benefit arrives late, in dollars per week. [CD3](../glossary.md#cd3-and-wsjf) is cost of
+delay in thousands of dollars per week divided by duration in weeks, a ranking for ordering work. Each
+benefit is assigned one **value channel**: increase revenue, protect revenue, reduce costs, or avoid
+costs. And each item has one of four **urgency profiles**: long life, peak unaffected; long life, peak
+affected; short life, peak affected; external deadline. An external-deadline item is scheduled backward
+from its date with a margin, not ranked by CD3.
 
 ## How to fill it in
 
@@ -32,14 +28,14 @@ for ordering work, not precise valuation.
    to market. The technology appears in the options, not in the problem statement.
 2. **Always include "do nothing" and a cheaper partial option.** A case with one option is a request,
    not a decision.
-3. **Price costs fully.** Engineering time at fully loaded cost, cash spend, run cost after the work,
+3. **Price costs fully.** Engineering time at [fully loaded cost](../glossary.md#fully-loaded-cost), cash spend, run cost after the work,
    and the opportunity cost: the item displaced, with its own cost of delay.
 4. **Count benefits by channel, with a formula and an owner for each factor.** New revenue counts at
    gross margin, avoided service credits at 100 percent, saved engineering time at the capacity rate
    and labeled *capacity*, not cash. Name the benefits you cannot count; do not price them.
 5. **Compute cost of delay per week,** name its urgency profile, and say what a quarter's slip costs.
-6. **Compute payback and three-year NPV** (net present value: future flows discounted at finance's
-   hurdle rate) with the timing assumptions written down.
+6. **Compute payback and three-year [NPV](../glossary.md#net-present-value-npv)** (net present value:
+   future flows discounted at finance's [hurdle rate](../glossary.md#discount-rate-and-hurdle-rate)) with the timing assumptions written down.
 7. **Find the decisive input** and the value at which you would recommend a different option.
 8. **Write the ask last.** One decision, one decider, one date, checkpoints that would stop the
    spend, and a review date for checking the estimate against what happened.
@@ -107,24 +103,35 @@ ask:
 
 ## Example: Northstar, CI consolidation
 
-**Fictional.** Canon figures: four CI systems cost about 1.5 FTE a year; one system about 0.5 FTE;
-the whole consolidation is about two engineer-years, about 92 engineer-weeks at 46 working weeks a
-year; phase 1 is about 12 engineer-weeks; $185,000 per engineer-year
-([baseline data](../case-studies/northstar/baseline-data.md),
-[Chapter 21](../parts/05-engineering-quality/21-technical-debt.md),
-[Chapter 32](../parts/06-technical-leadership/32-platform-engineering-developer-experience-and-modernization.md)).
-The 10 percent hurdle rate and 72 percent gross margin are canon (Chapter 45's economic assumptions). The option structure, the timing, the
-checkpoints, and the risks are illustrative additions. The consolidation target (DL-10) is open in
-the canon, and so is whether Victor Lindqvist funds the work; the case picks neither.
+!!! info "Northstar so far"
+    Quarter 2 of the Engineering Director's first year at Northstar Technologies, a fictional company.
+    Northstar builds and deploys its 17 units on four different CI systems, and a shared deploy script
+    broke rollback for four services in INC-416. Tom Becker (Platform Operations manager) and Kwame
+    Mensah (staff engineer, infrastructure) draft the case for Victor Lindqvist (CTO). See the
+    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
 
-**Arithmetic.** Effort is priced per working engineer-week, $185,000 ÷ 46, about $4,000; benefit per
-calendar week, $185,000 ÷ 52, about $3,558. Four systems: 1.5 × $185,000 = $277,500 a year; one
-system: 0.5 × $185,000 = $92,500; saving: $185,000 a year, about $3,558 a week, all of it capacity.
-Principal: 2 × $185,000 = $370,000. Phase 1: 12 × about $4,000 = about $48,000.
-Payback: $370,000 ÷ $185,000 = 2.0 years of saving after completion.
-NPV over three years at 10 percent, assuming $185,000 of effort at the end of each of years 1 and 2
-and the full saving only in year 3: −$185,000 ÷ 1.1 − $185,000 ÷ 1.21 + $185,000 ÷ 1.331 =
-−$168,182 − $152,893 + $138,993, about **−$182,000**.
+The run costs, effort, and rates come from the [baseline data](../case-studies/northstar/baseline-data.md)
+and Northstar's economic assumptions (10 percent hurdle rate, 72 percent gross margin). The option
+structure, timing, checkpoints, and risks are illustrative. Which CI system to consolidate onto is an
+open decision, and so is whether Victor funds the work; the case picks neither.
+
+**Rates.** Effort is priced per engineer-week of work; the saving accrues every calendar week.
+
+| Rate | Derivation | Value |
+|---|---|---|
+| Effort, per engineer-week | $185,000 a year ÷ 46 working weeks | about $4,000 |
+| Saving, per calendar week | $185,000 a year ÷ 52 weeks | about $3,558 |
+
+**Costs and saving.**
+
+| Item | Derivation | Value |
+|---|---|---|
+| Run cost, four systems | 1.5 FTE × $185,000 | $277,500 a year |
+| Run cost, one system | 0.5 FTE × $185,000 | $92,500 a year |
+| Saving | difference, all of it capacity | $185,000 a year |
+| Full consolidation | about 2 engineer-years (92 engineer-weeks) | about $370,000 |
+| Phase 1 | about 12 engineer-weeks × $4,000 | about $48,000 |
+| Payback | $370,000 ÷ $185,000 | 2.0 years of saving after completion |
 
 | Option | One-time | Run cost after | Counted saving a year | What it leaves |
 |---|---|---|---|---|
@@ -147,8 +154,8 @@ problem:
   statement: Four ways to build and deploy 17 units raise run cost, block comparable delivery data,
     and leave tier 1 services without an auditable pipeline with automated rollback
   current_cost:
-    - about 1.5 FTE a year of Platform Operations time, about $277,500 (canon)
-    - 2 of 30 baseline Sev1 and Sev2 incidents in ci-cd (INC-416, INC-428)
+    - about 1.5 FTE a year of Platform Operations time, about $277,500
+    - 2 of 30 baseline Sev1 and Sev2 incidents in ci-cd (INC-416 broken rollback; INC-428 all Jenkins deploys failed)
     - Platform Operations must know all 4 systems; product teams 1 to 2 each
 options:
   - {id: O3, name: "full consolidation, staged; phase 1 in quarter 2", one_time_cost: 370000, annual_run_cost: 92500}
@@ -161,7 +168,7 @@ benefit:
   uncounted:
     - auditable pipeline with automated rollback for tier 1 (fifth minimum)
     - comparable delivery data across teams
-    - lower cognitive load; less dependence on one Jenkins responder (TR-02)
+    - lower cognitive load; less dependence on one Jenkins responder
 opportunity_cost:
   displaced_item: about 80 engineer-weeks after phase 1, mostly product teams migrating their own services
   its_cost_of_delay_per_week: not estimated; Amara Okafor to name the displaced items
@@ -186,7 +193,7 @@ decisive_input:
   effect: no run-cost value reaches NPV 0 in 3 years (it would need about 2.3 FTE saved, more than
     the 1.5 FTE spent today); on run cost alone NPV turns positive only in year 5
 ask:
-  decision: Approve phase 1 inside the quarter 2 platform roadmap; decide the target (DL-10) separately; decide phases 2 and later at week 26 on phase 1 evidence
+  decision: Approve phase 1 inside the quarter 2 platform roadmap; decide the target system separately; decide phases 2 and later at week 26 on phase 1 evidence
   funding_source: existing capacity and licenses; no new cash
   checkpoints:
     - {when: week 26, evidence: "template has run one service in production for a month", stop_if: "rollback untested or shell-script services not moved"}
@@ -194,17 +201,22 @@ ask:
   review_date: week 52
 ```
 
+**Returns.** NPV at 10 percent, with $185,000 of effort at the end of each of years 1 and 2 and the
+full saving from year 3 on:
+
+| Horizon | Cumulative NPV |
+|---|---|
+| 3 years | about −$182,000 |
+| 4 years | about −$55,700 |
+| 5 years | about +$59,100 |
+
+For the case to break even in three years, the uncounted benefits (lead-time drag and incident risk
+the pipeline removes) must be worth about $4,660 a week from year 3 ($182,082 × 1.331 ÷ 52).
+
 What to notice: on counted benefits alone the three-year NPV is negative and payback comes two years
 after completion. The honest version of this case says that, labels the saving as capacity rather
 than cash, and puts the uncounted benefits, especially the auditable pipeline tier 1 services need,
-in front of the decider by name. No run-cost figure rescues the three-year NPV: reaching zero would
-need about $427,000 of saving in year 3 ($321,075 × 1.331), about 2.3 FTE, more than the 1.5 FTE the
-four systems cost today. Two honest break-evens remain. On horizon: with the 1 FTE saving continuing,
-cumulative NPV is about −$55,700 after year 4 (adding $185,000 ÷ 1.4641 = $126,357) and about +$59,100
-after year 5 (adding $185,000 ÷ 1.6105 = $114,870). On uncounted value: the lead-time drag and incident
-risk the pipeline removes must be worth about $4,660 a week ($182,082 × 1.331 ÷ 52) from year 3 for the
-case to break even in three years. The decider is judging that number, so the case states it. Chapter 21's interest-to-principal ratio of 0.75 for
-TD-006 counts all 1.5 FTE; on the 1 FTE actually saved it is 0.5, the correction Chapter 32 makes.
+in front of the decider by name, with the $4,660 a week they would have to be worth.
 
 ## Common mistakes
 
@@ -222,3 +234,20 @@ TD-006 counts all 1.5 FTE; on the 1 FTE actually saved it is 0.5, the correction
 2. What will the people doing this work not do, and what does that cost per week?
 3. If the decision slips a quarter, what is lost, and is that loss written in the ask?
 4. Which checkpoint would you actually stop at, and who has the authority to stop?
+
+## Evidence and references
+
+Engineering economics is [Chapter 45](../parts/10-business-leadership/45-business-models-and-engineering-economics.md);
+this template uses its definitions and gives only the fields. Budgets and financial statements are
+Chapter 52.
+
+- [SAFe, WSJF](../references/bibliography.md#safe-wsjf): the framework's relative form of CD3, Weighted
+  Shortest Job First.
+- [Reinertsen, 2009](../references/bibliography.md#reinertsen2009principles): the book widely credited
+  with cost of delay as a decision tool.
+- [Arnold and Yüce, 2013](../references/bibliography.md#arnold2013blackswan): the four benefit types
+  this template calls value channels.
+
+Using cost of delay and value channels to order work is **practitioner consensus**, not precise
+valuation. The field set and the rule that uncounted benefits are named, not priced, are **this
+book's recommendation**.

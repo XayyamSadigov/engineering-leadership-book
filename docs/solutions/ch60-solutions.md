@@ -3,8 +3,8 @@
 Worked solutions for the [chapter 60 exercises](../parts/15-capstone/60-capstone-northstar.md#exercises).
 Most of these exercises have more than one defensible answer. Each solution gives one worked answer, the
 criteria a good answer meets, and the weak answer to watch for. All Northstar and Halvard data is
-fictional. Where an exercise is hypothetical, its consequences are judgments, not canon facts, and the
-canon still records no outcome for any quarter 4 decision.
+fictional. Where an exercise is hypothetical, its consequences are judgments, not facts of the case, and the
+case still records no outcome for any quarter 4 decision.
 
 ## F1 — The first ten register entries
 
@@ -70,7 +70,7 @@ and in quarters 7 and 8 it needs 0.5 FTE less.
 shock absorber: it holds options rather than commitments to today's customers. Horizon 2 then runs at 9.5
 FTE in quarters 5 and 6 and 10.5 in quarters 7 and 8, averaging the draft's 10.0. Borrowing from estate
 currency (2.0) instead cuts a quarter of that line for half a year and delays the work the estate risks need;
-borrowing from product for today's customers puts the loan on Amara Okafor's roadmap directly.
+borrowing from product for today's customers puts the loan on Amara Okafor (CPO)'s roadmap directly.
 
 **Amara's condition.** A fixed allocation per stage fixes the loan too: stage 2 plans horizon 2 at 9.5 and
 stage 3 at 10.5, written down in advance. That is a gain in predictability, but it removes horizon 2's
@@ -94,19 +94,19 @@ renewal commitment with 5 of its 14 engineers and a first-year manager who still
 code and review; adding a tier 1 module with no alerts or on-call raises the risk to the week-26 date.
 Platform Operations had the adjacency to auth-svc but no engineer who had changed Core code.
 
-**Plausible consequences by week 44 (judgments, not canon).** The quarter 2 permissions extraction led
-by Ines Carvalho would have had an owning team to land in, rather than an exemption. The exemption would
+**Plausible consequences by week 44 (judgments, not facts of the case).** The quarter 2 permissions extraction led
+by Ines Carvalho (staff engineer, core domain) would have had an owning team to land in, rather than an exemption. The exemption would
 not have lapsed at week 39, and the year-2 proposal would not have been the first document to resolve the
-question. Orders would have needed an on-call rotation and alerts for the module, adding to Priya Raman's
+question. Orders would have needed an on-call rotation and alerts for the module, adding to Priya Raman (Orders manager)'s
 load during bulk ordering, while her hands-on time rose from 8 to 10 to 12 hours a week, against a cap of
-8, at the week 16, 20, and 24 checks. The tier 1 readiness count might have moved earlier or later; the canon does not say which two of
+8, at the week 16, 20, and 24 checks. The tier 1 readiness count might have moved earlier or later. The case does not say which two of
 the 15 still missed the minimums at quarter 3, so any claim about the count is an assumption.
 
 A good answer separates the week-4 argument from the hindsight trace and labels every consequence. The
-weak answer states canon outcomes for a hypothetical, or argues only from the week-26 risk without the
+weak answer states outcomes of the case for a hypothetical, or argues only from the week-26 risk without the
 co-change evidence.
 
-## A2 — The measurement note for Margaret Lin
+## A2 — The measurement note for Margaret Lin (audit committee chair)
 
 **Sev1 and Sev2 incidents (30, 21, 17, 14).** The baseline's 30 were rated before written definitions;
 under the week-3 definitions they would be 9 Sev1 and 21 Sev2 rather than 7 and 23, and the total is
@@ -140,18 +140,18 @@ clean trend lines.
 | TD-002 shell-script deploys | Partly open: CI consolidation phase 1 was on the quarter 2 platform roadmap, but in week 44 two script services still kept secrets in plain files, and auth-svc's known-exploited critical sits under an exception "until the migration" |
 | TD-003 shared modules | core/customer and core/scheduler owned from week 4; core/permissions open until the year-2 proposal |
 | TD-004 migration practice | Reduced: the pipeline check landed in week 11 |
-| TD-005 webhook versioning | Not recorded in the canon; a good answer says so rather than guessing |
+| TD-005 webhook versioning | Not recorded in the case; a good answer says so rather than guessing |
 
-**Core framework migration (TR-01).** The canon gives cost scenarios of 120, 190, and 243 engineer-days
+**Core framework migration (TR-01).** The case gives cost scenarios of 120, 190, and 243 engineer-days
 ($96,000, $152,000, $194,400), expensed, and one open Core critical waiting on it. It gives no interest
 figure: no incidents are attributed to the framework. Stage 8 must state an assumption about exposure
 (for example, the chance of a critical with no patch in a year) and its break-even.
 
 **CI consolidation.** Four CI systems cost about 1.5 FTE a year against about 0.5 for one, so the interest
-is about 1.0 FTE, roughly $185,000 a year, derived from canon. The target choice (DL-10) is open; the
+is about 1.0 FTE, roughly $185,000 a year, derived from the case. The CI target choice is open; the
 continuation releases $100,000 only if a target is chosen, at the week-78 gate.
 
-**ADR-0001.** Interest the canon supports: 7 of quarter 3's 11 failed or partial warehouse loads traced to
+**ADR-0001.** Interest the case supports: 7 of quarter 3's 11 failed or partial warehouse loads traced to
 Core schema changes, which is the same coupling to tables. Attributing the two days a month of manual
 revenue reconciliation to it would be a judgment.
 
@@ -164,20 +164,20 @@ decision as well as of the code, and a trigger date. The weak answer prices prin
 |---|---|---|
 | Week-3 severity definitions | Yes | Honored and strengthened in writing: the week-7 creative ratings led to the weekly severity audit; the baseline re-rating was bridged |
 | Tier 1 list of 15 | Yes | Bridged: year-1 counts keep 15, year-2 reports use 14 |
-| Quarter 1 prevention allocation | Yes | Revised in writing to 8 FTE in quarter 3; the canon records no step-down rule tying the reduction to evidence |
+| Quarter 1 prevention allocation | Yes | Revised in writing to 8 FTE in quarter 3; the case records no step-down rule tying the reduction to evidence |
 | QA engineers into product teams | Yes | Honored, announced in week 10, later than it should have been |
 | No decision-rights map | Unclear; nothing was decided | Orphaned: the week-14 remark on ADR-0001 filled the gap until Victor reversed it in week 47 |
 
 **The migration check, judged apart from its outcome.** In the baseline, three incidents were triggered by
 database migrations, and migrations were tested against an empty schema only. The check was promised after
-INC-427 and scheduled for week 7. Was relying on the tool alone reasonable on week-3 information? A strong
+INC-427 (credit notes applied twice after a Core release) and scheduled for week 7. Was relying on the tool alone reasonable on week-3 information? A strong
 answer argues not: an interim rule that no release carries a ledger migration with code that depends on it
 cost almost nothing and was available in week 3, yet it was adopted only after the week-9 Sev1. That
 judgment would hold even if no incident had occurred. The information that would have changed the decision
 is already in the baseline: the migration-triggered incidents and the recurrences in Billing.
 
 A good review also names one decision that worked partly by luck; reasonable candidates are hard to prove
-from the canon, so the answer should say what evidence would distinguish luck from skill. The weak review
+from the case, so the answer should say what evidence would distinguish luck from skill. The weak review
 grades every decision by its result.
 
 ## X1 — One year-2 envelope at three seat counts
@@ -210,7 +210,7 @@ absorber, so a bad quarter is not read as a broken roadmap promise to Amara Okaf
 fits this table. Each author is told in writing, and the envelope enters the decision log.
 
 **Not decided this week:** the organization decision, if your assumption is that it was deferred; the VP
-recommendation (due this week, and taken as a position, not a canon outcome); ADR-0001 (proposed for week 60), the CI
+recommendation (due this week, and taken as a position, not a recorded outcome); ADR-0001 (proposed for week 60), the CI
 target (week 78), the SOC 2 option, and the auth-svc exception (before week 50). The weak answer picks one
 seat count and leaves the others to "later".
 
@@ -218,17 +218,17 @@ seat count and leaves the others to "later".
 
 | Director | Concern | Year-1 artifact that answers it |
 |---|---|---|
-| Anders Holm | Dependence on a few people | Stage 5: incident commanders, standard owners, staff engineer mandates; the week-44 succession table (10 critical roles, none ready now, 6 interim, 4 none) |
-| Natalie Brooks | A buyer's diligence | Stages 4 and 9: the debt and risk registers; unsupported Core framework, no SOC 2 report, auth-svc's exception, signed provenance on 0 of 15 tier 1 components |
-| Samuel Osei | Flat headcount and the roadmap | Stages 6 and 7: unplanned work 34 to 25 percent, 7.2 FTE returned, one envelope with horizon 2 as buffer |
+| Anders Holm (board chair) | Dependence on a few people | Stage 5: incident commanders, standard owners, staff engineer mandates; the week-44 succession table (10 critical roles, none ready now, 6 interim, 4 none) |
+| Natalie Brooks (investor director) | A buyer's diligence | Stages 4 and 9: the debt and risk registers; unsupported Core framework, no SOC 2 report, auth-svc's exception, signed provenance on 0 of 15 tier 1 components |
+| Samuel Osei (investor director) | Flat headcount and the roadmap | Stages 6 and 7: unplanned work 34 to 25 percent, 7.2 FTE returned, one envelope with horizon 2 as buffer |
 | Margaret Lin | Measures mean the same thing | Stages 1 and 3: counting rules and bridges (exercise A2) |
-| David Ferrante | Payment path, availability miss, framework | Stage 3's SLOs and availability definition; stage 4's TR-01 entry; stage 9's policy on money data |
+| David Ferrante (independent director) | Payment path, availability miss, framework | Stage 3's SLOs and availability definition; stage 4's TR-01 entry; stage 9's policy on money data |
 
 **Headline.** One defensible choice is the director's counter: at most 40 Sev1 and Sev2 over year 2 as a
 rolling four-quarter total, reported with the severity audit, 99.9 percent every quarter, and a reopening
 trigger at two consecutive quarters above 12. The reasoning: at counts near 10, quarter-to-quarter noise
 can break a per-quarter threshold of "below 10" without any real change (an assumption about count
-variability, not a canon fact), and a rolling total pairs naturally with the audit Margaret Lin will ask
+variability, not a fact of the case), and a rolling total pairs naturally with the audit Margaret Lin will ask
 about. Choosing Victor's headline is also defensible if the page states that a single quarter above 10 will
 be explained, not hidden.
 
@@ -242,7 +242,7 @@ One strong answer changes stage 5: a decision-rights map with a CTO lane and a r
 decision and every exemption has an owner of its next step and a date in the decision cadence.
 
 **Knowable in week 4?** Yes. The baseline records no decision records anywhere, decisions made "by Victor
-Lindqvist in unrecorded conversations", disputes reaching him in conversation, and three Core modules
+Lindqvist (CTO) in unrecorded conversations", disputes reaching him in conversation, and three Core modules
 changed by four teams and owned by none. Nothing about the choice depends on later events.
 
 **Effect on stage 9 (hypothetical).** ADR-0001 would have had a decider in week 14. If the contract

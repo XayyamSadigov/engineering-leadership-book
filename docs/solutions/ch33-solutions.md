@@ -14,7 +14,7 @@ the criteria a good answer meets, and the weak answer to watch for. All Northsta
 | Billing | Stream-aligned | Invoice to ledger is one flow of value | Ledger knowledge sits with three experts, like a complicated subsystem inside the team |
 | Payments and Integrations | Stream-aligned | Owns payments end to end, deploys 22 times a month | Customer integrations (erp-sync, webhooks) are a second stream |
 | Customer Experience | Channel team | Owns web, mobile, and mobile-bff | Most of its changes need Orders (8 dependency links) |
-| Data and Analytics | Mixed | Owns customer reporting and exports | 12 points of capacity go to other teams' requests |
+| Data and Analytics | Mixed | Owns customer reporting and exports | 12 percent of its capacity goes to other teams' requests |
 | Platform Operations | Platform | Owns CI/CD and infrastructure | 46 percent unplanned, 29 of 86 links received: a request queue |
 | Staff engineers | Enabling | Kwame Mensah's release working group facilitated flaky-test ownership | Ines Carvalho's unscheduled questions are a dependency; they also govern standards |
 
@@ -108,7 +108,7 @@ exemption with an end date while a product team is chosen, or treat it as a comp
 named owner and an interface. Leaving it as background work for five infrastructure engineers on an
 interrupt rotation is the weakest option.
 
-**What to measure.** Requests from other teams (20 to 14 points by week 18, aim lower), environment
+**What to measure.** Requests from other teams (20 to 14 percent of capacity by week 18, aim lower), environment
 wait, and how many capabilities are used without a ticket.
 
 **Weak answer:** "rename it Platform and add a product manager," with no capability list.
@@ -144,8 +144,8 @@ Reconsider C at the same review, after bulk ordering ships, with the data.
 
 **Sequencing and costs.** B moves a component nobody in Orders can change (knowledge count 0) to the
 team that holds its authors. Cost: a handover of perhaps two to three engineer-weeks across both teams,
-an on-call rotation set up in Data and Analytics, and added load on a team already carrying 12 points
-of requests, which the charter must accept explicitly. It touches nothing on the bulk-ordering path.
+an on-call rotation set up in Data and Analytics, and added load on a team already giving 12 percent of its capacity
+to requests, which the charter must accept explicitly. It touches nothing on the bulk-ordering path.
 C before week 26 would disrupt the five engineers on bulk ordering; after week 26 it is a real option.
 Under flat headcount, a second manager means an engineer's seat not backfilled, about 13 engineer-weeks
 a quarter, roughly two fifths of the 33.3 the assessment left for non-commitment work. That price has to buy

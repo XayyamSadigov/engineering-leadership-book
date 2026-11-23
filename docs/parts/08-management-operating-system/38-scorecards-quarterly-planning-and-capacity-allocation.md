@@ -7,23 +7,25 @@ the allocation is a budget, the plan spends it, and the scorecard shows whether 
 what it promised. The running example is quarter 3 planning at Northstar Technologies, the fictional
 company in the [case study](../../case-studies/northstar/index.md).
 
-Chapter 15 owns team-level planning and prioritization, Chapter 17 forecasts and commitments, Chapter
-18 metric design and gaming, Chapter 27 the quality scorecard and the prevention capacity model, and
-Chapter 32 the platform roadmap. Chapter 37 places the quarterly cycle among the other cadences,
-Chapter 39 covers reviews and executive reporting, and Chapter 45 cost of delay.
+!!! info "Related chapters"
+    Team-level planning is in Chapter 15, forecasts and commitments in Chapter 17, metric design and
+    gaming in Chapter 18, the quality scorecard and the prevention capacity model in Chapter 27, and
+    the platform roadmap in Chapter 32. [Chapter 37](37-cadences-and-leadership-meetings.md) places the
+    quarterly cycle among the other cadences;
+    [Chapter 39](39-reviews-decision-logs-escalation-and-executive-reporting.md) covers reviews and
+    executive reporting.
 
 ## Why This Matters
 
 At team level, planning mistakes show within a sprint and are cheap to fix. At organization level,
 the same decisions are made once a quarter for six or more teams, and errors
 compound. An over-committed plan does not fail evenly: cross-team items fail first, interrupts land on
-the teams with least slack, and quality work nobody asked for is dropped first. Northstar's baseline
-shows the pattern: 7 of 17 committed items delivered, 8 of the 10 misses cross-team, about 560
-engineer-weeks committed against roughly 686 that unplanned work left, and four quarters at about 42
-percent.
+the teams with least slack, and quality work nobody asked for is dropped first. Northstar shows the
+pattern: over the four quarters before the director arrived, it delivered about 42 percent of the
+roadmap items it committed, and most of the misses were cross-team items.
 
-At executive scale, the plan is where engineering spending becomes visible. A CFO with flat operating
-expense and a CPO with dates promised to customers ask the same question: is the money going to the
+At executive scale, the plan is where engineering spending becomes visible. A CFO with flat
+[operating expense](../../glossary.md#operating-expense) (the running cost, mostly salaries) and a CPO with dates promised to customers ask the same question: is the money going to the
 right places, and is that improving? A director who shows the allocation, the commitments it funds,
 what it does not fund, and a scorecard that tracks the return can hold a position, and change it when
 evidence changes.
@@ -48,6 +50,17 @@ After this chapter you will be able to:
 > commits only what the cautious case can pay for, and writes down what it is not buying. The
 > scorecard is the receipt.
 
+!!! note "Terms used in this chapter"
+    - **[FTE](../../glossary.md#fte)** (full-time equivalent): one engineer's full working time. Capacity
+      tables here are in FTE averaged over a 13-week quarter.
+    - **[FTE-quarter](../../glossary.md#fte-quarter)**: one FTE for one quarter, a size of work.
+      1 FTE-quarter = 13 [engineer-weeks](../../glossary.md#engineer-week-engineer-day-engineer-year).
+    - **[Planned case](../../glossary.md#planned-case-and-cautious-case)**: the capacity left if unplanned
+      work comes in as projected. **Cautious case**: the capacity left if it stays at last quarter's
+      higher level.
+    - **Growth allowance**: a divisor for the way work grows between estimate and delivery.
+    - **Target band**: work above the commitment line that starts only if the planned case holds.
+
 Three ideas follow. First, **unplanned work is not allocated; it is a tax you measure**, paid before
 any plan is made. Chapter 16 shows how to make it visible
 ([unplanned work, visible and classified](../04-execution/16-flow-lead-time-dependencies-and-unplanned-work.md#unplanned-work-visible-and-classified)).
@@ -68,15 +81,16 @@ rest as targets, and name what nobody will work on.
 ### The organization scorecard
 
 An organization scorecard tells the director, and through them the CTO, whether the allocation and the
-plan are working. It needs several areas, because one can improve while the organization gets worse; the SPACE authors argue that
-productivity cannot be captured by any single metric or dimension
+plan are working. It needs several areas, because one can improve while the organization gets worse.
+The authors of [SPACE](../../glossary.md#space), a framework of developer productivity dimensions, argue
+that productivity cannot be captured by any single metric or dimension
 ([Forsgren et al., 2021](../../references/bibliography.md#forsgren2021space)).
 
 | Area | Question | Typical measures |
 |---|---|---|
-| Outcomes | Are customers and contracts better served? | Contractual availability, service credits |
+| Outcomes | Are customers and contracts better served? | Contractual availability, [service credits](../../glossary.md#service-credits) (refunds owed for missed availability) |
 | Quality | Is the inflow of failures falling? | Chapter 27's quality scorecard, by reference |
-| Delivery | Is change flowing faster and safer? | DORA's throughput and instability measures |
+| Delivery | Is change flowing faster and safer? | [DORA](../../glossary.md#dora-metrics)'s throughput and instability measures |
 | Commitments and investment | Did we do what we said, and spend where we said? | Committed items delivered, capacity by category against plan |
 | People | Is the system sustainable? | Survey items on feedback loops and cognitive load, after-hours pages |
 
@@ -107,20 +121,20 @@ understand.
 
 ### What the research says about goals, and about OKRs
 
-OKRs (objectives and key results) pair a qualitative objective with a few measurable results that
+[OKRs](../../glossary.md#okr) (objectives and key results) pair a qualitative objective with a few measurable results that
 would show it was reached. John Doerr popularized the format, crediting its origin to Grove's practice
 at Intel ([Doerr, 2018](../../references/bibliography.md#doerr2018measure)) (**practitioner
-consensus**, at the level of the idea).
+consensus**).
 
-The research underneath is goal-setting theory. Locke and Latham's reviews summarize decades of
-studies on the effectiveness of specific, difficult goals, the mechanisms through which goals work,
-the moderators that change their effect, and the theory's limits
+The research underneath is goal-setting theory: specific, difficult goals tend to raise performance.
+Locke and Latham's reviews summarize decades of studies on that effect, the mechanisms behind it, the
+conditions that change it, and the theory's limits
 ([Locke and Latham, 2002](../../references/bibliography.md#locke2002building);
-[Locke and Latham, 2006](../../references/bibliography.md#locke2006new)) (**research finding**, read at
-abstract level).
+[Locke and Latham, 2006](../../references/bibliography.md#locke2006new)) (**research finding**, as
+the reviews' abstracts report it).
 
 The side effects are disputed. Ordóñez and colleagues accept that specific, challenging goals can boost
-performance but argue that the benefits are overstated and the harms ignored: neglect of everything
+performance. They argue that the benefits are overstated and the harms ignored: neglect of everything
 outside the goal, distorted risk-taking, more unethical behavior, inhibited learning, corroded culture,
 and reduced intrinsic motivation ([Ordóñez et al., 2009](../../references/bibliography.md#ordonez2009goals)).
 Locke and Latham replied that the critique rests on anecdote and unrepresentative citations, and that
@@ -129,9 +143,9 @@ its pitfalls were already in the goal-setting literature
 mechanism that matters here: a goal focuses attention, and what lies outside it gets less. That is why
 scorecard pairs exist. Treat the size of the side effects as **disputed**.
 
-Evidence on OKRs specifically is thin. One qualitative case study of two teams in a large distributed
-agile project found that OKRs helped knowledge sharing, goal alignment, and insight across teams, and
-that people needed support writing key results
+Evidence on OKRs specifically is thin. One qualitative case study followed two teams in a large
+distributed agile project. OKRs helped knowledge sharing, goal alignment, and insight across teams,
+and people needed support writing key results
 ([Stray et al., 2022](../../references/bibliography.md#stray2022okrs)) (**research finding**: one
 project, interviews, no performance outcome). This book found no controlled study of OKRs' effect on
 software delivery.
@@ -168,8 +182,9 @@ flowchart TD
 | Write the unfunded list | Leaving it implied | Requesters assume their items are coming |
 | Agree in writing | Verbal agreement | Renegotiated in week 6 |
 
-The **unfunded list** is the step most often skipped and the one that makes the plan honest. It turns "engineering is slow"
-into "we chose these over those, together, in week 26".
+The [unfunded list](../../glossary.md#unfunded-list) is the step most often skipped and the one that makes
+the plan honest. It turns "engineering is slow" into "we chose these over those, together, in week
+26".
 
 ### Allocating capacity, and defending the split
 
@@ -194,27 +209,34 @@ level that remainder also pays for platform work, so this chapter splits it into
 
 ## Engineering Organization Example
 
-This example is **illustrative**: canonical Northstar numbers where they exist, every other assumption
-stated. It is set in weeks 25 and 26, planning quarter 3 (weeks 27 to 39).
+!!! info "Northstar so far"
+    Week 25 of the director's first year, near the end of quarter 2. Sev1 and Sev2 incidents fell
+    from 30 to 21 in quarter 1, and unplanned work from 34 to 31 percent of capacity. One renewal
+    commitment (the accounting integration) has been live since week 19; bulk ordering is due at the
+    end of week 26. See the [timeline](../../case-studies/northstar/timeline.md).
+
+This example is **illustrative**: Northstar's recorded numbers where they exist, every other
+assumption stated. It is set in weeks 25 and 26, planning quarter 3 (weeks 27 to 39). All capacity is
+in FTE over the quarter, which is the same number as FTE-quarters of work; engineer-weeks appear only
+in parentheses (1 FTE-quarter = 13 engineer-weeks).
 
 **Starting figures.** 80 engineers. Chapter 27's projection for quarter 3: unplanned work 22 percent
-(17.6 FTE), prevention 8 FTE, leaving 54.4 FTE. Platform Operations is Tom Becker and five
-infrastructure engineers; two rotate on interrupts and three do planned work, as in Chapter 32's
+(17.6 FTE), prevention 8 FTE, leaving 54.4 FTE. Platform Operations is Tom Becker (its manager) and
+five infrastructure engineers; two rotate on interrupts and three do planned work, as in Chapter 32's
 quarter 2 roadmap
 ([Chapter 32 case study](../06-technical-leadership/32-platform-engineering-developer-experience-and-modernization.md#case-study)).
 
-**Assumptions added for this example** (fictional additions):
+**Assumptions for this example:**
 
-- **Cautious case.** Unplanned work stays at quarter 2's measured 28 percent (22.4 FTE), the figure in
-  the director's quarter 2 report (Chapter 39).
+- **Cautious case.** Unplanned work stays at quarter 2's measured 28 percent (22.4 FTE).
 - **Platform.** 3 FTE of Platform Operations planned work, plus 1.5 FTE in product teams for migrating
   their own services to the pipeline template, held until the consolidation target is decided.
-- **Bulk ordering reserve.** Bulk ordering is due in week 26; two engineers stay on support for its
-  first four weeks: 8 engineer-weeks, about 0.6 FTE-quarters.
-- **Growth.** Orders' features grew 15 to 35 percent between start and delivery, so product capacity is
-  divided by 1.25, the middle of that range, before estimates are committed against it.
-- **Demand.** Amara Okafor's candidate list holds 24 items, about 62 FTE-quarters (806 engineer-weeks)
-  of estimated effort.
+- **Bulk ordering reserve.** Two engineers stay on support for its first four weeks after launch:
+  about 0.6 FTE-quarters (8 engineer-weeks).
+- **Growth allowance.** Orders' features grew 15 to 35 percent between start and delivery, so product
+  capacity is divided by 1.25, the middle of that range, before estimates are committed against it.
+- **Demand.** Amara Okafor (CPO) has a candidate list of 24 items, about 62 FTE-quarters (806
+  engineer-weeks) of estimated effort.
 
 | Line | Planned case (FTE) | Cautious case (FTE) |
 |---|---|---|
@@ -225,17 +247,17 @@ quarter 2 roadmap
 | Product after bulk ordering reserve | 49.3 | 44.5 |
 | Estimated effort it can absorb (÷ 1.25) | 39.4 | 35.6 |
 
-Check: 17.6 + 8 + 4.5 + 49.9 = 80.0, and 22.4 + 8 + 4.5 + 45.1 = 80.0. Product plus platform in the
-planned case is 54.4 FTE, Chapter 27's quarter 3 feature capacity.
+The first four lines of each column sum to the 80 engineers.
 
-**What the plan commits.** About 35.6 FTE-quarters of estimated effort, from the top of the ranked list,
-each cross-team item with a lead team. The next 3.8 are targets that start only if the planned case
-holds. The remaining 22.6 (about 36 percent of the list) go on the unfunded list.
+**What the plan commits.** About 35.6 FTE-quarters of estimated effort (about 463 engineer-weeks),
+from the top of the ranked list, each cross-team item with a lead team. The next 3.8 FTE-quarters are
+the target band. The remaining 22.6 (about 36 percent of the list) go on the unfunded list.
 
-Two observations. The committed scope, about 463 engineer-weeks, is smaller than the 560 the
-baseline committed; the difference is the growth allowance, the cautious case, and the investment
-lines, none of which the baseline plan had. And prevention is a third below quarters 1 and 2, as Chapter 27 projected, which rests on unplanned work actually falling; the week 31 trigger
-keeps that honest.
+Two observations. The committed scope is smaller than the baseline quarter's 560 engineer-weeks
+(about 43 FTE-quarters). The difference is the growth allowance, the cautious case, and the investment
+lines, none of which the baseline plan had. And prevention is a third below quarters 1 and 2, as
+Chapter 27 projected. That rests on unplanned work actually falling; the week 31 trigger keeps it
+honest.
 
 **Prevention by team.** The director proposes sizing the 8 FTE by where failures come from:
 
@@ -314,7 +336,9 @@ the planned case, or no unplanned-work line. Countermeasure: open the planning d
 capacity table and rank nothing until it is agreed.
 
 **The paper allocation.** Prevention and platform disappear in week 5, borrowed for a slipping feature.
-Signal: time sampling diverges from plan by more than about a fifth. Countermeasure: allocation spent
+Signal: time sampling (a periodic sample of what engineers actually worked on, as in
+[Chapter 16](../04-execution/16-flow-lead-time-dependencies-and-unplanned-work.md#unplanned-work-visible-and-classified))
+diverges from plan by more than about a fifth. Countermeasure: allocation spent
 against plan as a scorecard row, owned by the director.
 
 **The invisible unfunded list.** Requesters assume unlisted items are coming and escalate in week 8.
@@ -359,8 +383,9 @@ should come from systems the director can query directly, not only from the peop
 At CTO level, the allocation is a portfolio decision presented to a board and a CFO.
 
 **Categories become investment classes:** run (unplanned work and maintenance), grow (product), and
-improve (prevention and platform), with the trend. At $185,000 per engineer, the quarter 3 planned case
-spends about $814,000 in the quarter on unplanned work alone (17.6 FTE × $185,000 ÷ 4). Budgeting
+improve (prevention and platform), with the trend. At Northstar's
+[fully loaded cost](../../glossary.md#fully-loaded-cost) of $185,000 per engineer-year, the quarter 3 planned
+case spends about $814,000 in the quarter on unplanned work alone. Budgeting
 belongs to Chapter 52.
 
 **The scorecard becomes a few exposures.** A board needs four or five numbers: availability against
@@ -391,28 +416,25 @@ a reason to watch for side effects, not to ban goals.
 
 ## Case Study
 
-This case is **fictional**. The prevention allocations, the bulk-ordering date, and the platform
-roadmap's structure come from the [first quarter](../../case-studies/northstar/first-quarter.md) page
-and Chapters 27 and 32. The candidate list, cautious case, support reserve, per-team prevention split,
-scorecard proposal, and Victor Lindqvist's request for OKRs are additions for this chapter. The case is
-set in weeks 25 and 26; the decisions are the reader's.
+This case is **fictional**. It is set in weeks 25 and 26 and continues the example above; the
+decisions are the reader's.
 
 **The situation.** Bulk ordering is due at the end of week 26 and has not shipped. The consolidation
-target for the pipeline template is still undecided. Greg Tanaka's two deal features are among the
-committed items. The draft allocation is the one in the Engineering Organization Example.
+target for the pipeline template is still undecided. Greg Tanaka (VP Sales) promised two features in open deals, and both
+are among the committed items. The draft allocation is the one in the Engineering Organization Example.
 
 **The proposed organization scorecard,** eight entries:
 
 | # | Measure | Paired with | Row owner | Data steward |
 |---|---|---|---|---|
-| 1 | Contractual availability (target 99.9%, set by contract) | Customer-detected share | Director | Kwame Mensah |
+| 1 | Contractual availability (target 99.9%, set by contract) | Customer-detected share | Director | Kwame Mensah (staff engineer, reliability) |
 | 2 | Quality block: Chapter 27's rows, by reference | As defined there | As defined there | As defined there |
-| 3 | Deployment frequency and change fail rate, by component | Each other | Elena Sokolova | Kwame Mensah |
+| 3 | Deployment frequency and change fail rate, by component | Each other | Elena Sokolova (Payments and Integrations manager) | Kwame Mensah |
 | 4 | Committed items delivered | Forecast calibration (Chapter 17) | Director | Planning tool owner |
 | 5 | Capacity by category against plan | Unplanned share by team | Director | Tom Becker |
-| 6 | Corrective-action closure | Recurrence | Marcus Oyelaran | Kwame Mensah |
+| 6 | Corrective-action closure | Recurrence | Marcus Oyelaran (Billing manager) | Kwame Mensah |
 | 7 | Median environment wait | Other teams' requests on Platform Operations | Tom Becker | Platform Operations |
-| 8 | Survey: feedback loops, cognitive load (teams of five or more respondents) | After-hours pages | Daniel Cho | Survey administrator |
+| 8 | Survey: feedback loops, cognitive load (teams of five or more respondents) | After-hours pages | Daniel Cho (Customer Experience manager) | Survey administrator |
 
 Delivery rows come from the deployment-event store once it runs; until then from the hand-joined
 numbers, with that caveat beside them.
@@ -425,15 +447,15 @@ numbers, with that caveat beside them.
   ledger knowledge is still concentrated in three people.
 - **Tom Becker** says the 1.5 FTE held for migrations will be lost to product if the target decision
   slips past week 30, and asks for a date.
-- **Priya Raman** cannot yet say whether bulk ordering will need more than four weeks of support.
+- **Priya Raman** (Orders manager) cannot yet say whether bulk ordering will need more than four weeks of support.
 - **Kwame Mensah** points out that rows 1, 3, and 6 repeat measures already in the quality block, and
   that row 7's steward is Tom Becker's own team.
-- **Victor Lindqvist** asks each director for three OKRs for quarter 3 and suggests "Sev1 and Sev2
+- **Victor Lindqvist** (CTO) asks each director for three OKRs for quarter 3 and suggests "Sev1 and Sev2
   incidents below 10" as a key result.
 
-**The reader decides:** whether to commit the target band; how to answer Marcus within the 8 FTE or by
-reopening it; what happens to the held platform line in week 30; how the plan changes if bulk ordering
-slips; and which three OKRs to send Victor, each with its scorecard pair.
+**The reader decides** five things. Whether to commit the target band. How to answer Marcus, within
+the 8 FTE or by reopening it. What happens to the held platform line in week 30. How the plan changes
+if bulk ordering slips. And which three OKRs to send Victor, each with its scorecard pair.
 
 ## Exercises
 
@@ -455,7 +477,7 @@ unplanned work in the cautious case is 30 percent. State which change matters mo
 you about where to spend effort improving the plan.
 
 **F3.** A team lead proposes this key result for quarter 3: "Increase deployment frequency of Core from
-weekly to daily." Using the goal-setting research and the scorecard rules in this chapter, explain what
+weekly to daily." Use the goal-setting research and the scorecard rules in this chapter. Explain what
 the key result would likely produce, what could go wrong, and how you would rewrite or pair it.
 
 ### Applied Leadership
@@ -481,7 +503,7 @@ incidents below 10" as one key result. Draft the three objectives with key resul
 accept his key result, and show the scorecard pair that would expose each key result being met the
 wrong way.
 
-**X2.** Rajiv Menon proposes that from quarter 4 engineering report its spending only as "roadmap" and
+**X2.** Rajiv Menon (CFO) proposes that from quarter 4 engineering report its spending only as "roadmap" and
 "keep the lights on", and that any category below 10 percent of capacity be folded into the larger
 one. Assess the proposal from the CFO's, CPO's, and director's points of view, and decide what you
 would agree to, what you would refuse, and what you would offer instead.

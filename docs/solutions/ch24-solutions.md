@@ -86,7 +86,9 @@ measuring it is the first action.
 2. Build a rotation from all 13 Billing engineers: 24/7 primary and secondary. Thirteen exceeds the
    Workbook's single-site minimum of eight, so the constraint is knowledge, not headcount.
 3. Pair: each new engineer shadows the experts for two shifts before taking primary.
-4. Write runbooks for the top failure modes from INC-406, 409, 417, 424, and 427, with the experts as
+4. Write runbooks for the top ledger and invoicing failure modes (INC-406, a ledger migration that
+   locked a table; 409, duplicate invoices; 417, payments in the wrong period; 424, stale balances on
+   replicas; 427, credit notes applied twice), with the experts as
    authors, and test them in a game day.
 5. Delete or demote cause-based pages; move Billing's journeys to burn-rate alerts.
 
@@ -94,7 +96,7 @@ measuring it is the first action.
 experts, and median restore time for Billing incidents.
 
 **Cost.** Pairing time, slower first responses for a quarter, and the experts' time writing runbooks
-(roughly a few days each). Say this to Marcus and to product up front.
+(roughly a few days each). Say this to Marcus Oyelaran (Billing manager) and to product up front.
 
 **Tell the engineer** that the request is reasonable, what changes and when, and that asking was the
 right thing to do. The weak answer keeps the three experts on call "until the runbooks are done", which
@@ -119,7 +121,7 @@ real owner, partial alerting, no runbook, a deploy path one person understands, 
   sessions).
 
 **Escalate to the CTO** the staffing trade-off (whether to accept below-minimum on-call for a tier 1
-service for a defined period) and the knowledge risk of a service one person understands. Kwame Mensah
+service for a defined period) and the knowledge risk of a service one person understands. Kwame Mensah (staff engineer, infrastructure and reliability)
 should own the migration off the shell scripts as part of CI consolidation.
 
 The weak answer fails the review and stops. A review that only says "no" to a running tier 1 service

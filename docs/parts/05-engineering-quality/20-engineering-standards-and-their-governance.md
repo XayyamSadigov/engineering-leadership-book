@@ -21,7 +21,7 @@ Scale also makes bad standards expensive. A rule costing each engineer ten minut
 changes adds waiting time to all of them. And a page of 52 "musts" that nobody follows teaches
 engineers that "must" is decorative, which weakens the few rules that matter.
 
-At executive scale, standards are a governance instrument. A CTO cannot inspect quality directly and
+At executive scale, standards are a governance instrument. A chief technology officer (CTO) cannot inspect quality directly and
 relies on a few properties guaranteed everywhere. Whether those guarantees are real or ceremonial
 decides whether the CTO's reports to the board are true.
 
@@ -92,10 +92,10 @@ Most written standards state only a property. A complete standard has seven part
 rule can only be obeyed or evaded; with it, the rule can be met in a better way than its author
 imagined.
 
-**Level** needs precise words. RFC 2119 defines "must" as an absolute requirement, "should" as a
-recommendation that may be ignored for valid reasons once the implications are weighed, and "may" as
-optional, and advises using the imperatives sparingly, only where needed for interoperation or to limit
-harm ([Bradner, 1997](../../references/bibliography.md#bradner1997rfc2119)). That **standard** was
+**Level** needs precise words. RFC 2119, the internet standards document on requirement words,
+defines "must" as an absolute requirement. "Should" is a recommendation that may be ignored for valid
+reasons once the implications are weighed, and "may" is optional. It advises using the imperatives
+sparingly, only where needed for interoperation or to limit harm ([Bradner, 1997](../../references/bibliography.md#bradner1997rfc2119)). That **standard** was
 written for protocols and fits engineering standards well: reserve "must" for properties whose
 violation harms someone outside the violating team. Schwartz draws the same line between **rules**,
 which are mandatory and set aside only by approved exception, and **guidance**, which leaves room for
@@ -114,10 +114,9 @@ A paved road is the supported default: a service template with health checks, lo
 a shared pipeline that runs the agreed checks and records every deployment. A team on it meets most
 standards without thinking. It is the cheapest enforcement because it removes the per-change cost, and
 it reframes autonomy: teams may leave the road, and the road's quality persuades them to stay.
-*Team Topologies* gives the organizational form: **platform teams** provide internal services that
+*Team Topologies* is known for the organizational form: **platform teams** provide internal services that
 reduce other teams' cognitive load, and **enabling teams** help teams acquire a capability and then
-step away ([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team); credited at
-idea level). Chapter 33 covers team types; here the point is that whoever owns the paved road makes
+step away ([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team)). Chapter 33 covers team types; here the point is that whoever owns the paved road makes
 standards cheap.
 
 ### Automated checks, and why most fail
@@ -134,9 +133,9 @@ customization made results inconsistent across a team.
 What worked was a two-level policy. Checks that break the build must be understandable, actionable,
 never wrong on correct code, and about correctness; existing violations are cleaned up first, because
 developers ignored warnings. Checks shown in code review may be wrong up to 10 percent of the time (a
-threshold the authors say was first chosen somewhat arbitrarily); a "Not useful" button reaches the
+threshold the authors say was first chosen somewhat arbitrarily). A "Not useful" button reaches the
 check's owners, and a check above a 10 percent not-useful rate is switched off until fixed.
-Configuration is per project, not per person. Peer-reviewed work points the same way: in interviews
+Configuration is per project, not per person. Peer-reviewed work points the same way. In interviews
 with 20 developers, all of whom thought static analysis beneficial, false positives and the way warnings
 are presented were among the barriers to use ([Johnson et al., 2013](../../references/bibliography.md#johnson2013why)),
 a **research finding** from a small qualitative sample.
@@ -148,7 +147,7 @@ feedback channel, because a check is a standard in executable form.
 Some standards concern whole-system properties: no module reads another's database, build time stays
 under a limit. *Building Evolutionary Architectures* popularized the **fitness function**, an automated
 test of such a property run continuously as the system changes
-([Ford, Parsons, and Kua, 2017](../../references/bibliography.md#ford2017building); idea level). It
+([Ford, Parsons, and Kua, 2017](../../references/bibliography.md#ford2017building)). It
 moves architectural rules from meetings into the pipeline. Which architectural decisions deserve that
 protection, and who makes them, is Chapter 28's subject.
 
@@ -156,8 +155,11 @@ protection, and who makes them, is Chapter 28's subject.
 
 An internal export job and the payment path should not carry the same obligations. Uniform rules
 produce either unaffordable burden on low-risk systems or quiet non-enforcement on high-risk ones.
-Tiering assigns each component a tier by business impact and scopes each standard to tiers. SLSA, a
-supply-chain security **standard**, shows the shape: separate tracks, each with ascending levels with
+Tiering assigns each component a tier by business impact and scopes each standard to tiers. At
+Northstar, a component is [tier 1](../../glossary.md#tier-1) if it is on the order or payment path (15
+of 24 components in year 1); tier 2 and tier 3 carry lighter obligations, such as business-hours
+on-call. SLSA (Supply-chain Levels for Software Artifacts), a supply-chain security **standard**, shows
+the shape: separate tracks, each with ascending levels with
 explicit content (version 1.2's build track runs from L0, no guarantees, to L3, a hardened build
 platform) ([SLSA Specification](../../references/bibliography.md#slsa-spec)). An engineering
 organization needs the same two features: named levels with explicit obligations, and a public
@@ -184,11 +186,16 @@ flowchart TD
     N --> B
 ```
 
-This is a reinforcing loop like those Chapter 27 describes. Three design choices, this book's
-recommendation, keep governance out of it: **decide by owner, not by meeting**, with any council
-deciding only changes to the mandatory set; **publish a decision service level** (say ten working days);
-and **push repeated questions down the ladder**, changing the standard or the paved road instead of
-approving the same exemption again. The AWS Well-Architected Framework describes its reviews as
+This is a reinforcing loop: each turn makes the next one worse
+([Chapter 3](../01-foundations/03-managerial-leverage-and-systems-thinking.md) introduces the idea).
+Three design choices, this book's recommendation, keep governance out of it:
+
+- **Decide by owner, not by meeting**, with any council deciding only changes to the mandatory set.
+- **Publish a decision service level** (say ten working days).
+- **Push repeated questions down the ladder**: change the standard or the paved road instead of
+  approving the same exemption again.
+
+The Amazon Web Services (AWS) Well-Architected Framework describes its reviews as
 constructive conversations rather than an audit mechanism
 ([AWS Well-Architected Framework](../../references/bibliography.md#aws-well-architected)), a useful
 posture for any review a standard requires.
@@ -224,12 +231,18 @@ production change goes through an auditable pipeline with automated rollback" ca
 
 ## Engineering Organization Example
 
+!!! info "Northstar so far"
+    Week 3 of the director's first year. The baseline quarter had 30 Sev1 and Sev2 incidents and
+    $410,000 in service credits. The director has classified those incidents and is publishing
+    severity definitions; this chapter's story then runs to day 90. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
 All figures are **illustrative** (see the [baseline](../../case-studies/northstar/baseline-data.md)).
 
 Northstar's one standards document is a wiki page written in 2019 by an architect who left in 2021. It
 has 52 rules (24 on style and naming, 10 on testing, 8 on APIs and data, 6 on operations, 4 on
 security), all "must", none with intent, scope, owner, exemption path, or review date. One reads "Every
-module must have at least 70 percent line coverage." Core is at 41 percent, and nobody treats that as
+module must have at least 70 percent line coverage." [Core](../../glossary.md#core), Northstar's Java monolith, is at 41 percent, and nobody treats that as
 news.
 
 | Build system | Components | What it checks |
@@ -241,13 +254,23 @@ news.
 
 Thirteen of the 52 rules are checked by a tool somewhere; none is checked the same way everywhere. The
 Engineering Practices Guild, formed in 2022, averages five attendees and has never changed the page. In
-a sample of 40 merged pull requests, 38 had every checklist box ticked, and 11 of those changed
+a sample of 40 merge requests already merged, 38 had every checklist box ticked, and 11 of those changed
 production code with no test change while "tests added or updated" was ticked.
 
-Meanwhile the properties the CTO's mandate needs are not on the page. Against Chapter 27's proposed
-tier 1 minimums, `components.csv` gives, for the 15 proposed tier 1 components: clear owner 11, runbook
-6, complete alerting 3, on-call rotation 12. Only 3 (pricing-svc, payments-gateway, bank-connectors)
-meet all four, and auth-svc still deploys by script.
+Meanwhile the properties the CTO's mandate needs are not on the page. The director proposes four
+[operational minimums](../../glossary.md#tier-1-operational-minimums) for every tier 1 component: an
+owning team, complete user-facing alerts, a runbook, and an on-call rotation. The component inventory
+(`components.csv`) shows how far the 15 tier 1 components are from them:
+
+| Minimum | Tier 1 components that meet it |
+|---|---|
+| Clear owning team | 11 of 15 |
+| Runbook | 6 of 15 |
+| Complete alerting | 3 of 15 |
+| On-call rotation | 12 of 15 |
+| All four | 3 of 15 (pricing-svc, payments-gateway, bank-connectors) |
+
+And auth-svc, the login service, still deploys by a shell script.
 
 The director and the three staff engineers triaged the 52 rules with three questions: does breaking it
 harm someone outside the team; can a tool check it without false alarms; has anyone cited it in the last
@@ -259,8 +282,10 @@ mandatory set falls from 52 unverified rules to 19, each checked, sampled, or re
 Cost: writing the 19 in full is about two weeks of staff time. Automating the 9 checkable rules in
 Jenkins and GitLab CI, including clearing existing violations, is about one engineer for most of a
 quarter, roughly $40,000 of capacity at $185,000 per engineer-year, and would be cheaper on one
-consolidated pipeline. Bringing 12 tier 1 components up to the minimums comes from the prevention
-allocation in [Chapter 27](27-quality-transformation-at-enterprise-scale.md), not from new budget.
+consolidated pipeline. Bringing 12 tier 1 components up to the minimums comes from the
+[prevention allocation](../../glossary.md#prevention-allocation), not from new budget. That is 12
+[FTE](../../glossary.md#fte) (full-time equivalent engineers) reserved in quarter 1 for work that
+removes the sources of incidents, agreed in week 4.
 
 ## Decision Framework
 
@@ -352,8 +377,8 @@ In an organization of 50 to 150 engineers, the director cannot maintain standard
   decisions, and proposed retirements. This is a natural mandate: cross-team technical judgment
   without owning components.
 - **Engineering managers** own compliance for their components and the honesty of their teams'
-  attestations. In Chapter 27's monthly quality review, compliance appears per component, not as a
-  team score.
+  attestations. In the monthly quality review each manager holds with the director, compliance appears
+  per component, not as a team score.
 - **The platform team** owns the paved road, measured by adoption by choice.
 - **The guild** shares practice and proposes standards. It should not approve: voluntary groups with
   decision rights produce either queues or rubber stamps.
@@ -366,8 +391,10 @@ tier 1 minimums as a section, so compliance is read beside outcomes.
 
 ## CTO Perspective
 
-**Keep the enterprise list short.** Chapter 27 proposes candidates: tier 1 ownership, alerts, runbook,
-and on-call; an auditable pipeline for every production change; tracked reviews for every Sev1. The
+**Keep the enterprise list short.** Northstar's candidates are the four tier 1 operational minimums,
+an auditable pipeline for every production change, and a tracked review for every Sev1 (the highest
+[severity](../../glossary.md#severity-sev1-sev2-sev3): an order or payment path down, or a wrong
+financial record visible to customers). The
 CTO's job is to keep that list short, enforce it everywhere, and leave the rest to directors. A list of
 dozens recreates the wiki of musts at a higher altitude.
 
@@ -383,11 +410,12 @@ CTO sets that criterion.
 **Standards cost money.** Each enterprise standard spends capacity in every team. Before adding one,
 ask each director what they would retire.
 
-**External frameworks.** NIST's Secure Software Development Framework presents itself as a core set
+**External frameworks.** The Secure Software Development Framework (SSDF) of NIST, the US National
+Institute of Standards and Technology, presents itself as a core set
 of secure development practices and a common vocabulary for software purchasers and suppliers
 ([Souppaya, Scarfone, and Dodson, 2022](../../references/bibliography.md#nist2022ssdf)), a **standard**
-that customers' security reviews may draw on. Mapping the internal register onto such a framework is cheaper than a parallel compliance program and
-keeps evidence in the systems engineers already use.
+that customers' security reviews may draw on. Mapping the internal register onto such a framework is
+cheaper than a parallel compliance program, and keeps evidence in the systems engineers already use.
 
 ## Practical Playbook
 
@@ -406,14 +434,15 @@ keeps evidence in the systems engineers already use.
 
 ## Case Study
 
-This case is **fictional** and runs alongside the transformation in
-[Chapter 27](27-quality-transformation-at-enterprise-scale.md).
+This case is **fictional** and runs through the director's first quarter, alongside the wider quality
+program that Chapter 27 describes as a whole.
 
 In week 3, the director read the standards page aloud to the staff engineers and asked, rule by rule,
 who would notice a violation tomorrow. For 39 of the 52 (every rule no tool checked), the answer was
-nobody. The triage followed, and each staff engineer took a standards domain beside their Chapter 27
-work: Kwame Mensah the operational minimums and pipeline standards, Ines Carvalho the Core code
-standards, Li Na Zhou data, migration, and configuration standards. Every request would get a decision
+nobody. The triage followed, and each staff engineer took a standards domain beside their other work
+in the quality program. Kwame Mensah (infrastructure and reliability) took the operational minimums and
+pipeline standards, Ines Carvalho (Core domain) the Core code standards, and Li Na Zhou (data and
+integration) the data, migration, and configuration standards. Every request would get a decision
 within ten working days.
 
 The guild objected; its regulars had expected to become the approving body. The director kept it as
@@ -428,8 +457,9 @@ left scripts; its exemption expired at the end of quarter 2.
 
 Two things went badly. The first Jenkins check went live without clearing the Core backlog, produced 180
 build failures on day one, and was reverted within hours; it returned two weeks later, failing only on
-new violations. And Marcus Oyelaran argued that runbook work landing on Billing's three overloaded
-on-call engineers, on top of a 25 percent prevention allocation, would read as more process. The
+new violations. And Marcus Oyelaran (Billing manager) argued that runbook work landing on Billing's
+three overloaded on-call engineers would read as more process, on top of the 25 percent of Billing's
+capacity already reserved for prevention. The
 director counted it inside the allocation instead.
 
 | Measure | Baseline | Day 90 |
@@ -462,14 +492,14 @@ by the standard formatter; (b) database migrations are backward compatible with 
 by a consumer team; (e) no secrets are committed. For each, state the cost of a false alarm and of a
 missed violation.
 
-**F3.** Of 40 sampled pull requests, 38 had every checklist box ticked, including 11 that ticked "tests
+**F3.** Of 40 sampled merge requests, 38 had every checklist box ticked, including 11 that ticked "tests
 added or updated" with no test change. A manager argues the checklist works because almost everyone
 completes it. Explain what the sample does and does not show, and propose what should replace the
 checklist item.
 
 ### Applied Leadership
 
-**A1.** Daniel Cho asks for a permanent exemption for the mobile app from the standard that every
+**A1.** Daniel Cho (Customer Experience manager) asks for a permanent exemption for the mobile app from the standard that every
 production change goes through the shared pipeline with automated rollback, because app store releases
 cannot be rolled back like services. Decide whether to grant it, in what form, with what compensating
 controls, and what the request tells you about the standard.
@@ -479,14 +509,14 @@ Northstar codebase, citing a recent vulnerability in a dependency. They are moti
 meet weekly. Respond: what problem the proposal addresses, how it would behave at Northstar's rate of
 change, and what you would offer instead.
 
-**A3.** After the tier 1 minimums are announced, Priya Raman proposes moving core/pricing-rules to tier
+**A3.** After the tier 1 minimums are announced, Priya Raman (Orders manager) proposes moving core/pricing-rules to tier
 2 because it is "configuration, not a service". It has no runbook and partial alerting. Decide how to
 handle the request, who decides, and what criterion settles it, then say what you will watch for across
 the organization in the following month.
 
 ### Executive Decision-Making
 
-**X1.** Victor Lindqvist is preparing for a security review with one of the two renewal customers and
+**X1.** Victor Lindqvist (CTO) is preparing for a security review with one of the two renewal customers and
 wants to say that "every production change at Northstar goes through an auditable pipeline with
 automated rollback." Four services still deploy by script, one tier 1, under an exemption expiring at
 the end of quarter 2. Advise him what to say, what not to say, and what evidence to bring, and explain

@@ -26,24 +26,29 @@ arithmetic, and explains why a VP is premature or under what conditions it is no
 
 ## F2 — Counting crossing links under alternative C
 
-**The count.** All 86 baseline dependency links are between existing teams, so they cross a boundary
-today and still cross one under alternative C. The three transfers to the platform team do not change any
-link (they move people, not components). So at least 86 links cross a boundary.
+**The count.** All 86 baseline links are between existing teams, so they cross a boundary today and
+still cross one under alternative C. The three transfers to the platform team move people, not
+components, so they change no link. The split adds the work that used to stay inside Orders. Chapter
+34's recount puts that at 4 work items of a week or more that touched both order capture and pricing,
+catalog, or search. Under the matrix's rules the answer is about 90 links: 86 plus 4.
 
-**The assumption.** Orders sent 23 links (9 to Billing, 2 to Payments, 3 to Customer Experience, 1 to
-Data, 8 to Platform) and received 18. Under alternative C those must be split between Order Capture and
-Catalog and Pricing, which needs an assumption, for example that links follow the components involved.
-That split does not change the total; it changes which new team carries them.
+**The assumption.** Orders' 23 requested and 18 received links must be divided between Order Capture
+and Catalog and Pricing. A reasonable assumption is that each link follows the component involved: the
+order-to-invoice mapping and order-status links go with Order Capture, pricing-rules and search-svc
+links with Catalog and Pricing. That split does not change the total; it changes which new team carries
+each link.
 
-**What the count tells you.** The baseline matrix cannot evaluate the split at all, because it never
-recorded dependencies inside Orders. Work that needs both order capture and pricing rules was internal
-to Orders and becomes a new cross-team link. The answer is "86 plus an unknown number", and the action
-is to sample Orders' own items for one or two quarters before deciding the boundary. The same blind
-spot applies to the proposal's Web and Mobile split: links inside Customer Experience were never
-recorded either.
+**What the count tells you, and what it cannot see.** The 4 is a floor, not the cost. The matrix only
+counts items of a week or more, so it misses the smaller coupling: about 58 merge requests a quarter
+changed both pricing-rules and order-capture (Chapter 31), and each would need cross-team review and a
+coordinated release after the split. Two more blind spots: Orders' internal work was never classified
+beyond those 4 items, and the proposal's own Web and Mobile split has no measured links, because the
+matrix counted Customer Experience as one team. The action is to sample Orders' and Customer
+Experience's internal items for a quarter before deciding either boundary.
 
-**Criteria:** sees that existing links all cross already, states the assumption, and identifies the
-missing data. **Weak answer:** a precise number that silently assumes no intra-Orders coupling.
+**Criteria:** sees that existing links all cross already, uses Chapter 34's 4 items, states the
+assumption, and explains why the count understates the split's cost. **Weak answer:** a precise number
+presented as the whole cost, or "86" with no account of the work the split creates.
 
 ## F3 — "Never more than seven"
 
@@ -56,7 +61,7 @@ The chapter's evidence points the same direction as the colleague (more people i
 diffuse ownership go with slower work and more failures), but none of it measures an optimal team size.
 Herbsleb and Mockus related people involved to calendar time for work items, in a distributed setting.
 Nagappan and colleagues related ownership diffusion to failures in one system. Neither tests a cap.
-The book records the absence of a validated size as research gap G8.
+The book records that no validated team size exists; the evidence is thin.
 
 A good answer accepts the direction, rejects the cap, and replaces it with a test: does the team's
 work hold together, can one manager support the people, and is coordination inside the team rather than
@@ -72,7 +77,7 @@ four script-deployed services and the Jenkins services onto one pipeline with au
 retire one CI system per half-year."
 
 **Two adoption measures.** First, the share of components deploying through the common pipeline,
-starting from the canon's four-system baseline; it is gamed by moving easy components first, so report
+starting from the four-system baseline; it is gamed by moving easy components first, so report
 tier 1 components separately. Second, the median wait for a test environment, which Chapter 16's
 re-sample put at about 2 days in week 18; it is gamed by redefining "ready", so define it with the users.
 
@@ -129,7 +134,7 @@ team's on-call rotation design, beyond the minimums.
 
 **Criteria:** an archetype per person with reasons, decision scope in a sentence, reporting line
 justified (Chapter 29's trade-off between leaf managers and senior leaders), and a boundary between deciding
-and advising. Canon facts about each person (Ines's rejected-design history, for instance) may inform the
+and advising. Facts from the case about each person (Ines's rejected-design history, for instance) may inform the
 "advises" choices. **Weak answer:** mandates that list topics with no decision scope.
 
 ## X1 — Responding to the CTO's preference for alternative D

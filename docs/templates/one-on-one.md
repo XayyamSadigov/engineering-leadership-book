@@ -1,28 +1,26 @@
 # 1:1 template
 
-**Used in:** Chapter 5 (one-on-ones, coaching, and mentorship), Chapter 9 (performance management,
-where the record replaces recollection), Chapter 41 (managing managers, whose one-on-ones follow the
-same design).
+**Used in:** [Chapter 5](../parts/02-people-management/05-one-on-ones-coaching-and-mentorship.md)
+(one-on-ones, coaching, and mentorship), [Chapter 9](../parts/02-people-management/09-performance-management-and-underperformance.md)
+(performance management, where the record replaces recollection),
+[Chapter 41](../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md)
+(managing managers, whose one-on-ones follow the same design).
 **Owner:** the report owns the agenda; the manager owns the record and every commitment made in it.
-**Cadence:** weekly or every two weeks, set per person with Chapter 5's cadence table; a five-minute
-record after each meeting; a three-line summary each month; a channel check every six weeks.
+**Cadence:** weekly or every two weeks, set per person; a five-minute record after each meeting; a
+three-line summary each month; a channel check every six weeks.
 
-A one-on-one is an information channel owned by the report, and its value is the news it carries:
-what the manager could not have learned from the board, the chat, or the stand-up
-([Chapter 5](../parts/02-people-management/05-one-on-ones-coaching-and-mentorship.md)). This template
-has three parts that serve that purpose. A shared running document puts the report's topics first and
-keeps status out. A record, written in five minutes afterwards, turns the meeting into dated evidence
-for reviews and promotions. A six-week check counts whether the channel still carries news, because the
-manager's own impression is the least reliable judge of that.
+A one-on-one is a recurring private meeting between a manager and one report. It is an information
+channel owned by the report, and its value is the news it carries: what the manager could not have
+learned from the board, the chat, or the stand-up. This template has three parts. A shared running
+document puts the report's topics first and keeps status out. A record, written in five minutes
+afterwards, turns the meeting into dated evidence for reviews and promotions. A six-week check counts
+whether the channel still carries news, because the manager's own impression is the least reliable
+judge of that.
 
-The design follows the two points the evidence and the practitioner tradition agree on. In a researcher's
-summary of his survey work, meetings were rated highest when the report created the agenda, and
-managers' ratings of their own one-on-one skill appeared inflated
-([Rogelberg, 2024](../references/bibliography.md#rogelberg2024unlocking)); that is **expert opinion**
-informed by survey data whose methods the summary does not describe. Treating the one-on-one as the
-subordinate's meeting is the idea Grove's *High Output Management* is known for
-([Grove, 1983](../references/bibliography.md#grove1983high)), which is **expert opinion**. The
-fields, thresholds, and the five-line record are **this book's recommendation**.
+!!! tip "Minimum version"
+    On day one, use only Part 1 (the shared document: the report's topics first, then commitments both
+    ways) and the "News" line of Part 2. Add the rest of the record after a month, and the six-week
+    check once you have six weeks of entries.
 
 ## How to fill it in
 
@@ -70,7 +68,7 @@ fields, thresholds, and the five-line record are **this book's recommendation**.
 | Topic type | Work, people, growth, the manager, personal (one or more) |
 | Observations | Behavior, effect, date, source. "Led the incident review on 3 March; every action had an owner" is evidence; "strong communicator" is not |
 | Growth | Their stated goal and what moved toward it |
-| Mode of help used | Directing, coaching, mentoring, or sponsoring (Chapter 5's diagram), and whether the goal needed that mode |
+| Mode of help used | Directing, coaching, mentoring, or sponsoring (Chapter 5), and whether the goal needed that mode |
 | Sponsorship actions | Opportunities you proposed them for, and the result |
 
 **Part 3. The six-week channel check**
@@ -88,55 +86,34 @@ kind of work do you want more of in a year? What am I doing that gets in your wa
 not to raise with me this month? Who on another team makes your work harder, and how?
 
 ```yaml
-one_on_one:
-  report: ""
-  manager: ""
-  cadence: ""              # weekly / every two weeks
-  cadence_reason: ""
-  minutes_booked: 0
+one_on_one: {report: "", manager: "", cadence: "", cadence_reason: ""}
 entries:
   - date: ""
-    minutes_actual: 0
-    moved_or_cancelled: ""  # blank, or "moved by manager", "cancelled by report", ...
+    minutes: 0
+    moved_or_cancelled: ""        # blank, or "moved by manager", "cancelled by report", ...
     report_topics: []
     manager_topics: []
-    previous_commitments:
-      - {owner: "", item: "", due: "", result: ""}   # kept / late / dropped: reason
-    new_commitments:
-      - {owner: "", item: "", due: ""}
+    commitments: []               # {owner, item, due, result: kept / late / dropped}
     record:
-      news: false
-      news_note: ""
-      topic_types: []      # work / people / growth / manager / personal
-      observations:
-        - {date: "", behavior: "", effect: "", source: ""}
+      news: false                 # plus one line on what
+      topic_types: []             # work / people / growth / manager / personal
+      observations: []            # {date, behavior, effect, source}
       growth: ""
-      mode_of_help: ""     # directing / coaching / mentoring / sponsoring
+      mode_of_help: ""            # directing / coaching / mentoring / sponsoring
       sponsorship: []
-monthly_summary:
-  - {month: "", did: "", working_toward: "", owed_by_manager: ""}
-channel_check:
-  window: {start: "", end: ""}
-  held: 0
-  with_news: 0
-  report_added_topics: 0
-  topic_types_seen: []
-  moved_or_cancelled: {by_manager: 0, by_report: 0}
-  surprises: []
-  quarterly_written_feedback: {more_of: "", less_of: ""}
+monthly_summary: []               # {month, did, working_toward, owed_by_manager}
 ```
 
 ## Example: Northstar, Daniel Cho and Mateo Arango Ríos (quarter 2)
 
-**Fictional.** Every fact below is canon, from the [baseline data](../case-studies/northstar/baseline-data.md),
-the [first quarter](../case-studies/northstar/first-quarter.md) page, and the case studies of Chapters
-5 and 14. The layout of the entry, and Daniel's choice of what to write in it, are illustrative and
-written for this template; the canon leaves Daniel with a draft, and no outcome of that draft is
-recorded here.
+!!! info "Northstar so far"
+    Week 19 of the Engineering Director's first year at Northstar Technologies, a fictional company.
+    Daniel Cho manages Customer Experience: 15 web and mobile engineers, 17 reports with the two quality
+    engineers who joined in week 10. Mateo Arango Ríos is the team's informal mobile lead in Bogotá. See
+    the [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
 
-**The channel check, weeks 14 to 19 (Part 3, filled in from Chapter 5's recode).** Daniel Cho manages
-15 engineers in Customer Experience (17 reports from week 10, counting the two quality engineers, who
-were left out of the sample as too recent).
+**The channel check, weeks 14 to 19 (Part 3).** The director recoded Daniel's records for six weeks.
+The two quality engineers were left out of the sample as too recent.
 
 | Signal | Count | Reading |
 |---|---|---|
@@ -144,32 +121,29 @@ were left out of the sample as too recent).
 | Agenda source | 79 of 84 opened from Daniel's questions | Decayed: the manager's template every time |
 | Topics | Status or blockers already on the board 64; career or growth 8 (with 6 people); team or process 7; personal 5 | Mostly work; 9 of 15 engineers had no career conversation in six weeks |
 | Cancellations | 90 scheduled, 84 held, average 26 minutes | Healthy on attendance, which is the measure that misleads |
-| Surprises | Mobile rated four areas red in the week 16 health check; in week 17 Mateo told the director, not Daniel, that he had done a lead's job for over a year | Decayed: both learned through other channels |
+| Surprises | Mobile rated four areas red in the week 16 team health check; in week 17 Mateo told the director, not Daniel, that he had done a lead's job for over a year | Decayed: both learned through other channels |
 
 The two informal leads' 12 meetings were all dominated by platform-wide status. Mateo described his as
 "where I tell Daniel where mobile is."
 
-**What the first entry of Mateo's running document would hold under Daniel's week 19 draft (Parts 1
-and 2, before the meeting; illustrative, since whether Daniel adopts the draft is open).**
+**Mateo's first entry under Daniel's week 19 draft (Parts 1 and 2, before the meeting).** The layout is
+illustrative, and whether Daniel adopts the draft is not recorded.
 
 | Field | Entry |
 |---|---|
-| Cadence and reason | Weekly, 30 minutes (cadence D in Chapter 5): Mateo is a lead others depend on |
+| Cadence and reason | Weekly, 30 minutes: Mateo is a lead others depend on |
 | Report's topics | Left empty for Mateo. Daniel does not fill it |
 | Manager's topics | 1. What the mobile group asked for in the health check: "our own board, and decisions that happen where we can hear them." 2. How Mateo wants the lead work he has done to be recognized |
 | Status | Moved to the three-line weekly written update; not discussed |
-| Observations to record (with source) | Baseline: leads mobile technical direction without a title for over a year (baseline page). Week 16: the mobile group's request in his words (health check, shared once with the group's agreement). Week 17: raised the unrecognized lead work with the director, who brings it with Mateo's agreement (director) |
+| Observations (with source) | Leads mobile technical direction without a title for over a year (baseline). Week 16: the mobile group's request in his words (health check, shared with the group's agreement). Week 17: raised the unrecognized lead work with the director, who passes it on with Mateo's agreement |
 | Growth | Not yet asked; Mateo states it in his own words |
 | Mode of help | Open. Recognition of lead work is a sponsorship question, not a coaching one |
-| Sponsorship action | Open in Daniel's draft: propose him as a named tech lead (needs the director's agreement and changes how other teams work with Customer Experience) or start with smaller opportunities |
+| Sponsorship action | Open: propose him as a named tech lead (needs the director's agreement) or start with smaller opportunities |
 
-What to notice: by attendance, Daniel's practice looked excellent (84 of 90 held). By
-the measure that matters it carried news in 13 percent of meetings, and the two largest pieces of news
-about his own team reached him through a health check and through his manager. The draft entry addresses the
-cause, not the frequency: the report's section comes first and stays empty until Mateo fills it, and
-status leaves the meeting entirely. The record's observations each carry a source, so that when
-Chapter 41's question "who on your team is doing a piece of your job?" is asked, Daniel can answer from
-evidence rather than memory.
+What to notice: by attendance, Daniel's practice looked excellent (84 of 90 held). By the measure that
+matters it carried news in 13 percent of meetings, and the two largest pieces of news about his own
+team reached him through a health check and through his manager. The draft fixes the cause, not the
+frequency: the report's section comes first, and status leaves the meeting.
 
 ## Common mistakes
 
@@ -194,3 +168,18 @@ evidence rather than memory.
 3. Which of your commitments to this person is overdue, and does the record say so?
 4. What did you learn about this report from someone else this quarter?
 5. When did this person last talk with you about their career, and what did you do about it?
+
+## Evidence and references
+
+The method is [Chapter 5](../parts/02-people-management/05-one-on-ones-coaching-and-mentorship.md),
+which also gives the cadence table and the four modes of help.
+
+- [Rogelberg, 2024](../references/bibliography.md#rogelberg2024unlocking): in a researcher's summary of
+  his survey work, meetings were rated highest when the report created the agenda, and managers' ratings
+  of their own one-on-one skill appeared inflated. That is **expert opinion** informed by survey data
+  whose methods the summary does not describe.
+- [Grove, 1983](../references/bibliography.md#grove1983high): *High Output Management*, the book known
+  for treating the one-on-one as the subordinate's meeting (**expert opinion**).
+
+The fields, the thresholds in Part 3 (marked illustrative), and the five-line record are **this book's
+recommendation**.

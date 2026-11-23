@@ -1,26 +1,27 @@
 # Risk register
 
-**Used in:** Chapter 30 (the first technology risk register), Chapter 53 (enterprise technology risk,
-governance, and reporting), Chapter 55 (reporting to a board).
+**Used in:** [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md)
+(the first technology risk register), [Chapter 53](../parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md)
+(enterprise technology risk, governance, and reporting),
+[Chapter 55](../parts/12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md)
+(reporting to a board).
 **Owner:** the CTO for the enterprise technology register; a director or vice president for an
 engineering or group register. Each line has its own owner and accepter.
 **Cadence:** engineering register monthly in the quality review; enterprise register quarterly with
-the CFO and head of IT; reported to the audit committee twice a year, and at the next meeting whenever a
-risk moves outside appetite. Every acceptance carries an expiry date and is decided again on it.
+the CFO and head of IT; reported to the [audit committee](../glossary.md#audit-committee) twice a year,
+and at the next meeting whenever a risk moves outside appetite. Every acceptance carries an expiry date
+and is decided again on it.
 
-A risk register is a decision record. Each line exists to force one decision (reduce, transfer,
-avoid, or accept) by a person with the authority to make it, and to show later whether the decision
-still holds. A register that only lists worries, or is rebuilt once a year for a committee, does
-neither.
+A [risk register](../glossary.md#risk-register) is a decision record. Each line exists to force one
+decision (reduce, transfer, avoid, or accept) by a person with the authority to make it, and to show
+later whether the decision still holds. [Risk appetite](../glossary.md#risk-appetite) is the amount of
+risk the company has agreed to carry, written as lines a risk is inside or outside. A register that
+only lists worries, or is rebuilt once a year for a committee, does neither.
 
-Chapter 53 owns the method; this template gives the fields. NIST IR 8286 Rev. 1 describes risk
-registers at system and organizational levels whose measures roll up to the enterprise
-([Quinn et al., 2025](../references/bibliography.md#nist2025ir8286r1); **standard**). The rating
-columns use a likelihood-impact matrix because most companies' registers do, but matrices are poor at
-ranking risks and can rate smaller risks above larger ones
-([Cox, 2008](../references/bibliography.md#cox2008risk); **research finding**, read at abstract level),
-so the template adds an exposure range and a line of reasoning beside every score. The two-quarter
-limit on acceptances, the accepter rules, and the field set are **this book's recommendation**.
+!!! tip "Minimum version"
+    Start with five fields per risk: the statement (cause, event, consequence), owner, accepter,
+    treatment with a date, and review date. Add ratings, exposure, indicators, and appetite once the
+    company has a scale and appetite lines to rate against.
 
 ## How to fill it in
 
@@ -98,20 +99,20 @@ risks:
 
 ## Example: Northstar, enterprise technology register (draft, week 47)
 
-**Fictional.** Canon figures: TR-01 to TR-09 ([Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md))
-and Finance's week 46–48 TR-01 cost scenarios of 120, 190, and 243 engineer-days at $800 a day
-([Chapter 52](../parts/12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md));
-the day-90 security results and the auth-svc exception
-([Chapter 26](../parts/05-engineering-quality/26-security-and-software-supply-chain-quality.md)); six of
-the 40 largest customers renewing in quarters 5 to 8 at about $1.17M each, gross margin 72 percent,
-quarter 2 and quarter 3 credits of $95,000 and $60,000
-([first quarter](../case-studies/northstar/first-quarter.md)), whose quarter 4 risk, security, and
-compliance facts also record the corporate register, the week 44 security snapshot and questionnaire
-tally, the $310,000 prospect, the draft register, its appetite lines, and the SOC 2 options
-([Chapter 53](../parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md)). The
-ratings, reasoning, and exposure ranges are illustrative. The register is the director's draft for Victor Lindqvist
-before the audit committee's week 50 session; whether the committee adopts the appetite lines is not
-recorded.
+!!! info "Northstar so far"
+    Week 47 of the Engineering Director's first year at Northstar Technologies, a fictional company.
+    Victor Lindqvist (CTO) asked for an enterprise technology risk register after Margaret Lin, who
+    chairs the board's audit committee, asked for a risk session in week 50. This is the director's
+    draft; whether the committee adopts its appetite lines is not recorded. See the
+    [timeline](../case-studies/northstar/timeline.md), the [cast](../case-studies/northstar/cast.md),
+    and the [quarter 4 briefing](../case-studies/northstar/quarter-4-briefing.md).
+
+The figures come from [risk, security, and compliance](../case-studies/northstar/first-quarter.md#risk-security-and-compliance-chapter-53)
+and [finances](../case-studies/northstar/first-quarter.md#finances-chapter-52) in Northstar's quarter 4
+record. The ratings, reasoning, and exposure ranges are illustrative. Other people named: Marcus
+Oyelaran (Billing manager), Tom Becker (Platform Operations manager), Kwame Mensah and Ines Carvalho
+(staff engineers), Joon Park (IT security lead), Marta Kowalczyk (Head of IT), Rajiv Menon (CFO), and
+Helena Marsh (CEO).
 
 **Scale.** Likelihood 1 to 5, where 4 means expected within four quarters and 5 means already
 happening. Impact 1 to 5, where 4 means a tier 1 path, financial correctness, or a material deal at
@@ -119,11 +120,17 @@ stake and 5 means revenue at renewal or contractual breach. ER-01 is rated likel
 top-40 renewals fall in quarters 5 to 8 and availability was below 99.9 percent in every quarter in
 which it was measured (99.86 and 99.89 percent); a loss is judged likely, not certain.
 
-**Arithmetic.** Revenue at renewal: 6 × $1.17M = $7.02M; one customer about $1.17M, at 72 percent gross
-margin about $842,000 a year. Credits: $95,000 × 4 = $380,000 and $60,000 × 4 = $240,000 a year at the
-quarter 2 and quarter 3 rates. Questionnaires: 34 × 14 hours = 476 hours, about 0.26 FTE at 1,840 hours
-a year, about $48,100 of capacity at $185,000. TR-01: 120 × $800 = $96,000; 190 × $800 = $152,000; 243 × $800 = $194,400 (Finance's
-scenarios, used instead of Chapter 30's earlier 120 to 180 days so the register matches the budget pack).
+**The numbers behind the exposure column.** Six of the 40 largest customers renew in quarters 5 to 8,
+at about $1.17M a year each, with a 72 percent gross margin. TR-01 is the Core framework migration on
+the technology risk register.
+
+| Item | Derivation | Result |
+|---|---|---|
+| Revenue at renewal | 6 × $1.17M | $7.02M |
+| Margin per customer lost | $1.17M × 72% | about $842,000 a year |
+| Service credits, annualized | $60,000 (quarter 3) or $95,000 (quarter 2) a quarter × 4 | $240,000 to $380,000 a year |
+| Questionnaire load | 34 × 14 hours = 476 hours; ÷ 1,840 hours a year; × $185,000 | 0.26 FTE, about $48,100 a year |
+| TR-01 migration | 120, 190, or 243 engineer-days × $800 (Finance's scenarios) | $96,000, $152,000, or $194,400 |
 
 | ID | Risk (consequence) | Owner | Accepter | Score | Exposure | Treatment | Appetite |
 |---|---|---|---|---|---|---|---|
@@ -137,7 +144,7 @@ scenarios, used instead of Chapter 30's earlier 120 to 180 days so the register 
 | ER-08 | A corporate identity compromise reaches production | Marta Kowalczyk | Rajiv Menon (IT-owned) | 12 | Not quantified | Reduce | No line |
 | ER-09 | Corporate business systems are lost | Marta Kowalczyk | Rajiv Menon | 6 | Not quantified | Reduce (restore tests) | No line |
 
-Two lines in full:
+One line in full:
 
 ```yaml
 register:
@@ -176,30 +183,6 @@ risks:
     appetite: {inside: false, line: L2}
     acceptance: {reason: "compensating control at the load balancer", accepter: "Engineering Director (quarter 1, 'until the migration'); no CTO signature", signed: "quarter 1", expires: "week 52, written in by Joon Park in week 44 with no new signature"}
     review_date: week 52
-  - id: ER-06
-    statement: Because Northstar holds no independent assurance report and answers questionnaires by
-      hand, prospects and renewing customers may delay or decline, which would cost revenue and keep
-      0.26 FTE and the CTO's time on questionnaires
-    category: compliance
-    sources: [no attestation, questionnaire load]
-    owner: Victor Lindqvist
-    accepter: Helena Marsh
-    rating: {likelihood: 4, impact: 3, score: 12, reasoning: "11 of 34 questionnaires asked for a report;
-      one prospect makes it a condition; no renewal has yet been lost over it"}
-    exposure: {range: "at least $310,000 ARR; about $48,100 a year of capacity", derivation: "week 42
-      prospect; 34 x 14 hours = 476 hours, 0.26 FTE x $185,000"}
-    trend: {direction: rising, evidence: "six large renewals in quarters 5 to 8"}
-    treatment:
-      type: decision open
-      action: "options A (audit in year 2), B (readiness, decide at week 78), C (evidence library only);
-        draft recommends B"
-      cost: "A: $75,000 to $100,000 a year cash plus about 1 FTE in year 1 (illustrative quotes)"
-      owner: Victor Lindqvist
-      due: executive team decision; outcome not recorded
-    indicator: {measure: "deals and renewals where assurance was a stated condition", current: "1", threshold: "3 or more switches the recommendation to A"}
-    appetite: {inside: true, line: none}
-    acceptance: {reason: "", accepter: "", signed: "", expires: ""}
-    review_date: week 56
 ```
 
 What to notice: four risks score 12 and have nothing in common, which is why the exposure, reasoning,
@@ -230,3 +213,19 @@ requires. And the only line with a defensible dollar range, ER-01, is not a secu
 3. Which indicator would have moved first before the last serious incident?
 4. Which risks are outside appetite today, and has the audit committee been told?
 5. Which lower-level item is not represented in any enterprise line, and why?
+
+## Evidence and references
+
+The method is [Chapter 53](../parts/12-cto-leadership/53-risk-governance-regulation-and-security-strategy.md);
+this template gives the fields.
+
+- [Quinn et al., 2025](../references/bibliography.md#nist2025ir8286r1): NIST IR 8286 Rev. 1 describes
+  risk registers at system and organizational levels whose measures roll up to the enterprise
+  (**standard**).
+- [Cox, 2008](../references/bibliography.md#cox2008risk): the abstract reports that likelihood-impact
+  matrices are poor at ranking risks and can rate smaller risks above larger ones (**research
+  finding**). The template keeps a matrix because most companies' registers use one, and adds an
+  exposure range and a line of reasoning beside every score.
+
+The two-quarter limit on acceptances, the accepter rules, and the field set are **this book's
+recommendation**.

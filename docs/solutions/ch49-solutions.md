@@ -9,7 +9,7 @@ fictional.
 
 | Criterion | Met on paper while the problem remains | Pairing check |
 |---|---|---|
-| Sev1+Sev2 at most 12 a quarter | Incidents rated Sev3 that meet the Sev1 or Sev2 definition | The weekly severity audit against the week 3 definitions, sampled by someone outside the owning team |
+| Sev1+Sev2 rolling total (at most 40 over year 2; above 12 in a quarter triggers review) | Incidents rated Sev3 that meet the Sev1 or Sev2 definition | The weekly severity audit against the week 3 definitions, sampled by someone outside the owning team |
 | 99.9% in each quarter | Measuring availability on a narrower path, or excluding "planned" downtime | The contractual definition, unchanged, and the service-credit total as a cross-check |
 | Credits at most $25,000 | Credits negotiated away commercially rather than earned by uptime | Credits paired with availability; a fall in credits without a rise in availability is a signal |
 | 14 of 14 tier 1 (current list) meeting the minimums | Runbooks that exist but are stale; on-call rotations of one person | A quarterly drill on two random tier 1 components using only the runbook |

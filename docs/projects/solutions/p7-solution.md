@@ -6,7 +6,13 @@ because the most useful lesson for year 2 is in what happened to it: its diagnos
 three decisions its policies were tested against is recorded as made 33 weeks later. The year-2 strategy
 below therefore keeps the diagnosis short, puts correctness next to availability, and gives every policy a
 decider and a date. It is this solution's recommendation, one defensible answer among several. All
-Northstar facts are fictional; estimates marked as this solution's are assumptions, not canon.
+Northstar facts are fictional; estimates marked as this solution's are assumptions, not facts from the case.
+
+People named, with roles (see the [cast](../../case-studies/northstar/cast.md)): Victor Lindqvist (CTO),
+Amara Okafor (CPO), Rajiv Menon (CFO), Greg Tanaka (VP Sales), Sofia Alvarez (VP Customer Success); the
+engineering managers Priya Raman (Orders), Marcus Oyelaran (Billing), Elena Sokolova (Payments and
+Integrations), Daniel Cho (Customer Experience), and Tom Becker (Platform Operations); the staff engineers
+Ines Carvalho, Kwame Mensah, and Li Na Zhou; and Rafael Duarte (Orders senior engineer).
 
 ## 1. What the week-14 draft decided
 
@@ -35,7 +41,7 @@ From [`p7-year1-readings.csv`](../data/p7-year1-readings.csv), each recomputed.
 | Reading | Computation | Use in the strategy |
 |---|---|---|
 | Sev1 and Sev2, baseline to quarter 3 | 30 to 14, −53 percent. Poisson 95 percent interval for 14: 7.7 to 23.5. Conditional on 44 incidents, 14 is 2.4 standard deviations below an even split ((14 − 22) ÷ √11) | The fall from baseline is real; quarter 2 to quarter 3 (17 to 14) is 0.5 standard deviations and cannot be told from noise |
-| Availability gap, quarter 3 | 0.0011 × 131,040 = about 144 minutes against about 131 allowed; 13 minutes over | One INC-413-class payment outage (150 minutes) would exceed a whole quarter's allowance on its own |
+| Availability gap, quarter 3 | 0.0011 × 131,040 = about 144 minutes against about 131 allowed; 13 minutes over | One payment outage like INC-413 (a partner bank outage with no fallback route, 150 minutes) would exceed a whole quarter's allowance on its own |
 | Credits | $60,000 × 4 = $240,000 a year against $1.64M at baseline | The cash case for prevention has mostly been collected; what remains is renewals and capacity |
 | Unplanned work | 25 percent of 80 = 20 FTE, about $925,000 a quarter (20 × $46,250); baseline 27.2 FTE | 7.2 FTE recovered, about $1.33M a year of capacity, if the samples compare |
 | Corrected orders | 7,800 ÷ 600,000 = 1.3 percent; errors 1.3 × 340 ÷ 400 = about 1.1 percent, about 6,630 orders per 28 days | Duplicates alone: 7,800 × 70 ÷ 400 = about 1,365 corrections per 28 days, from a missing idempotency key |
@@ -110,7 +116,7 @@ engineer-weeks a quarter at 6 FTE and 65 at 5 FTE.
 | 5 | Last tier 1 minimums (14 of 14 on the current list) | Transition | P3 | Kwame Mensah | Week 78 | 10 |
 | 5 to 6 | Second responders for ledger period close and currency and rounding (TR-07) | Transition | P3 | Marcus Oyelaran | Week 78 | 13 a quarter |
 | 5 | Scope the Core framework migration (TR-01); add a mobile-path synthetic check | Transition | P3, P2 | Ines Carvalho; Kwame Mensah | Week 65 | 4 + 1 |
-| 6 to 7 | Core framework migration, base case 150 engineer-days (canon range 120 to 180) | Transition | P3 | Ines Carvalho | Week 91 | 15 a quarter |
+| 6 to 7 | Core framework migration, base case 150 engineer-days (recorded range 120 to 180) | Transition | P3 | Ines Carvalho | Week 91 | 15 a quarter |
 | 6 | Correctness checks on the pricing path (price change between draft and submit) | Transition | P2 | Priya Raman | Week 78 | 10 |
 | 6 | Stage 2 gate | Escalation | P1 | Victor Lindqvist | Week 78 | 0 |
 | 7 to 8 | Tier 1 deployed through an auditable pipeline with automated rollback, on the chosen CI target | Transition | P3 | Tom Becker | Week 104 | 20 a quarter |
@@ -124,7 +130,7 @@ named items to grow; the corrective-action line is the buffer.
 ### Capacity envelope at 79 engineers
 
 Unplanned work is planned at quarter 3's planned 22 percent (the same 17.4 FTE as Victor's draft) and the
-cautious case at quarter 3's measured 25 percent. The platform line stays at 4.5 FTE (an assumption; the canon fixes it only for quarter 3). The
+cautious case at quarter 3's measured 25 percent. The platform line stays at 4.5 FTE (an assumption; the case fixes it only for quarter 3). The
 organization transition costs about 21 engineer-weeks, 1.6 FTE-quarters, placed in quarter 5.
 
 | Quarter | Unplanned, planned (cautious) | Prevention | Platform | Transition | Product, planned (cautious) |
@@ -148,7 +154,7 @@ line. Under his split, about 1 FTE of prevention is freed in those quarters for 
 
 **Other seat counts.** At 80 engineers (alternative B) each quarter gains about 0.8 FTE of product after
 the unplanned share (planned 50.3 in quarter 5 if B's transition cost equalled the main proposal's; the
-canon does not cost B's transition). At 78 (a VP takes a seat) each quarter loses about 0.8 (quarter 5
+case does not cost B's transition). At 78 (a VP takes a seat) each quarter loses about 0.8 (quarter 5
 planned 48.7). The
 strategy holds at all three; only product capacity moves.
 
@@ -266,7 +272,7 @@ Lindqvist with the summary (end of week 48), before the executive team meets in 
 > first, move fast, own your code. The director will drive all initiatives. Headcount: we will ask the
 > board for 10 more engineers to deliver this."
 
-Against the rubric: goals instead of a diagnosis, and no numbers from the canon (diagnosis weak); policies
+Against the rubric: goals instead of a diagnosis, and no numbers from the case (diagnosis weak); policies
 that cost nothing and decide nothing, all owned by the director (choices and policies weak); no dated
 actions or enforcement (actions weak); a headcount request that breaks a binding constraint and no
 envelope (capacity weak); open decisions ignored (uncertainty weak); targets that invite gaming, with no

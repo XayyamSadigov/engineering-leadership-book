@@ -7,9 +7,8 @@ transformation that reduces the creation of new defects before spending effort o
 the scorecard and accountability that run it, and fund the work honestly. The running example is
 Northstar Technologies, the fictional company in the [case study](../../case-studies/northstar/index.md).
 
-This is the capstone of Part V. Chapters 19 to 26 own the practices (quality definitions, standards,
-debt, testing, CI/CD, SLOs, incidents, security), and Chapter 18 owns delivery metrics and metric
-gaming. This chapter summarizes and links to them, and teaches how to combine them into one program.
+This is the capstone of Part V. Chapters 19 to 26 own the practices; this chapter links to them and
+teaches how to combine them into one program.
 
 ## Why This Matters
 
@@ -21,7 +20,9 @@ costs land elsewhere: another team's interrupts, a support queue, service credit
 conversation. Every manager can explain their own part, and nobody owns the whole.
 
 Northstar shows the shape. Last quarter it had 30 Sev1 and Sev2 incidents, and customers found almost
-half before any alert fired. About a third of engineering capacity went to unplanned work. The
+half before any alert fired. (Sev1 and Sev2 are the two highest
+[severity](../../glossary.md#severity-sev1-sev2-sev3) ratings: an order or payment path down or a
+wrong financial record for Sev1, narrower failures for Sev2.) About a third of engineering capacity went to unplanned work. The
 company paid $410,000 in service credits, and two customers worth $9M in annual recurring revenue
 named reliability as their reason for hesitating to renew.
 
@@ -81,9 +82,6 @@ a quality decline is the mechanism through which most of the damage enters; at N
 release train. Better tests in a well-behaved service may be good engineering, but will not move
 the incident count.
 
-Put together: find the mechanism that feeds most of the loop, reduce its inflow, and use the
-recovered capacity to drain the stock and strengthen the next weakest point.
-
 ## Deep Conceptual Explanation
 
 ### Outcome, lever, and investment
@@ -98,18 +96,16 @@ without a visible result and lose their mandate.
 
 ### Inflow before stock
 
-Take a defect backlog. These numbers are **hypothetical**, not part of Northstar's baseline: the
-open backlog is 600 and the teams close about 200 a quarter, roughly matching inflow. The tempting
-response is a campaign: ten engineers for a quarter on old defects. It drains the stock, leaves the
-inflow untouched, and removes capacity whose loss adds schedule pressure, one of the inflow's
-causes. A plausible result: the backlog drops to 450, then climbs back over two quarters.
+Take a **hypothetical** backlog of 600 defects, with teams closing about 200 a quarter, roughly
+matching inflow. The tempting response is a campaign: ten engineers for a quarter on old defects. It
+drains the stock, leaves the inflow untouched, and adds schedule pressure, one of the inflow's causes.
+A plausible result: the backlog drops to 450, then climbs back over two quarters.
 
 The alternative is to classify where the inflow comes from and close the largest openings first.
-Northstar's baseline classifies escaped defects by the earliest point a reasonable check would have
-caught them: 27 percent at unit level, 23 percent at integration or contract boundaries, 19 percent
-in end-to-end flows, 18 percent in migrations and configuration, and 13 percent in misunderstood
-requirements. By trigger, 19 of 30 incidents came from Northstar's own changes, 9 of those through
-the Core release train.
+Chapter 19 classifies Northstar's [escaped defects](../../glossary.md#escaped-defect) (customer-reported
+bugs confirmed as defects) by the earliest point a reasonable check would have caught them. About half
+sit at unit and contract level. By trigger, 19 of 30 incidents came from Northstar's own changes, 9 of
+those through the release train of [Core](../../glossary.md#core), the Java monolith.
 
 The classification also shows inflow that is not a testing problem: misunderstood requirements are
 fixed by how product and engineering collaborate, and third-party failures (6 of 30 incidents) by
@@ -140,27 +136,25 @@ batches ([Humble and Farley, 2010](../../references/bibliography.md#humble2010co
 23 covers the [pipeline mechanics](23-code-review-ci-cd-and-release-engineering.md#a-trustworthy-pipeline-and-a-healthy-main-branch).
 
 Two other mechanisms amplify every failure without being the main source. **Detection** is weak:
-customers found 14 of 30 incidents, with a median detection time of 108 minutes against 6 when
-monitoring caught it. **Ownership** has gaps: 8 of 24 components have disputed, shared, or no
+customers found 14 of 30 incidents, and those took far longer to detect than the ones monitoring
+caught (Chapter 24 gives the figures). **Ownership** has gaps: 8 of 24 components have disputed, shared, or no
 owner, and 8 have nobody on call.
 
 ### The speed objection
 
 The common objection is that the program will slow delivery. For a quarter it usually does, and the
-capacity model below says by how much. DORA's industry research, summarized in *Accelerate*
-([Forsgren, Humble, and Kim, 2018](../../references/bibliography.md#forsgren2018accelerate)) and
-its current guide ([DORA, metrics guide](../../references/bibliography.md#dora-metrics-guide)),
-reports that speed and stability tend to move together. The data are survey-based and correlational,
-and the metric set has changed over time, so the trade-off is not a law, but faster releases are not
-proven to cut your failures either (Chapter 18 covers the metrics). Refuse "quality or speed" as a
-framing; ask which practice costs speed, how much, for how long, and what it buys.
+capacity model below says by how much. The industry research of DORA (DevOps Research and
+Assessment), summarized in *Accelerate*
+([Forsgren, Humble, and Kim, 2018](../../references/bibliography.md#forsgren2018accelerate)) and its
+current guide ([DORA, metrics guide](../../references/bibliography.md#dora-metrics-guide)), reports
+that speed and stability tend to move together. The data are survey-based and correlational, so this
+is not a law (Chapter 18 covers the metrics). Refuse "quality or speed" as a framing; ask which
+practice costs speed, how much, for how long, and what it buys.
 
 ### Scorecard design rules
 
-A scorecard used for decisions will be optimized. The idea that an indicator relied on for decisions
-gets bent, along with the process it tracks, is usually credited to Donald Campbell
-([Campbell, 1979](../../references/bibliography.md#campbell1979assessing)); Chapter 18 treats metric
-gaming in general. Quality metrics are especially exposed because the people measured also produce
+A scorecard used for decisions will be optimized, an idea usually credited to Donald Campbell
+([Campbell, 1979](../../references/bibliography.md#campbell1979assessing)). Quality metrics are especially exposed because the people measured also produce
 the data: on-call assigns severity, support decides what counts as a defect. Four design rules:
 
 - **Pair measures** so that gaming one moves the other. Change failure rate with deployment
@@ -181,13 +175,40 @@ few (incidents).
 ### Accountability design
 
 Transformations stall when quality is owned by someone other than the people who change the code.
-At Northstar, managers describe quality as the job of the QA group and the release train, so teams
-learn about their defects late and secondhand. Attach accountability to the **system and the
+Attach accountability to the **system and the
 follow-through**: a manager answers for whether their components have owners, alerts, and runbooks,
 whether follow-up actions close, and whether change failure rate trends down. The engineer whose
 change triggered an incident is the best witness to how the system allowed it, not its culprit.
 Chapter 25 owns [blameless review](25-incidents-postmortems-and-change-failure-analysis.md#blameless-review-and-its-critics);
 the transformation depends on it holding under executive pressure.
+
+### Changing roles without losing the people
+
+Most quality programs change someone's job, usually the testers whose manual pass is being
+automated. Handled badly, the change loses their knowledge and tells every engineer what happens when
+work is automated. Five moves (this book's recommendation) keep both the people and the knowledge:
+
+1. **Announce early, with the destination.** Uncertainty costs more than the news. Once the decision
+   is made, say where each person is going and when, even if details are open. Say plainly what is
+   not happening, if it is true that nobody loses a job.
+2. **Offer a role, not a reassignment.** Each person gets a team, a manager, and a written mandate
+   that says what they own and what they stop doing (Chapter 19 sets out the embedded quality
+   engineer's mandate).
+3. **Fund the retraining.** Learning automation and test design takes time out of the quarter. Count
+   it inside the prevention allocation, and pair each person with developers on real work.
+4. **Let people choose the transition work.** Keeping a shrinking part of the old work and starting
+   automation at once both help the program.
+5. **Define the path for anyone who declines.** Agree it one to one: a time-limited stay on the
+   remaining manual work, a move to another function, or a supported exit with notice. Nobody should
+   learn their option from the org chart.
+
+At Northstar, constraint 5 of the case required any plan to say what the seven QA engineers would do
+next. The plan moved each into a product team as a quality engineer reporting to that team's
+manager: two to Orders, two to Billing, two to Customer Experience, and one to Payments and
+Integrations. The director delayed the announcement until week 10, after two QA engineers had asked
+whether they were being automated out of a job. That delay is the part not to copy. The transition
+work was chosen, not assigned: two chose to run the roughly 600-case weekly regression subset, all
+seven triaged the manual suite with the teams, and five also automated cases.
 
 ### Funding the work
 
@@ -200,17 +221,23 @@ abandoned at the first roadmap slip. The honest model has three parts:
 3. **Feature capacity**: what remains.
 
 Prevention starts before unplanned work falls, so feature capacity dips first. If prevention works,
-unplanned work later falls by more than prevention costs. The depth of the dip and the speed of the
-recovery are what the director negotiates with product and finance.
+unplanned work later falls by more than prevention costs. The director negotiates the depth of the
+dip with product and finance.
 
 ## Engineering Organization Example
+
+!!! info "Northstar so far"
+    Weeks 1 to 4 of the director's first year; this chapter then follows the whole first quarter. The
+    baseline quarter had 30 Sev1 and Sev2 incidents, 99.62 percent availability against a 99.9 percent
+    commitment, $410,000 in service credits, and 34 percent of capacity on unplanned work. See the
+    [timeline](../../case-studies/northstar/timeline.md).
 
 The following model is **illustrative**. The figures for the first quarter come from Northstar's
 baseline; the later quarters are the director's projection, and every assumption is stated.
 
 Assumptions:
 
-- 80 engineers. Capacity is measured in full-time-equivalent engineers (FTE).
+- 80 engineers. Capacity is measured in full-time-equivalent engineers ([FTE](../../glossary.md#fte)).
 - Unplanned work starts at 34 percent of capacity (27.2 FTE).
 - The director proposes a prevention allocation of 12 FTE in quarters 1 and 2, falling to 8 FTE in
   quarter 3 and 6 FTE in quarter 4 as the work moves from building capabilities to maintaining them.
@@ -236,15 +263,13 @@ work falls only to 26 percent by quarter 4, feature capacity is 53.2 FTE, roughl
 that pessimistic case alongside the planned one.
 
 Third, the money is not small. At Northstar's average fully loaded cost of $185,000 per engineer,
-the 38 FTE-quarters of prevention in the plan cost about $1.76M. Against that: service credits
+the 38 FTE-quarters of prevention in the plan (one FTE for one quarter each) cost about $1.76M. Against that: service credits
 running at $1.64M a year, $9M of revenue in at-risk renewals, and, if the plan works, about 13 FTE of
 unplanned work removed by quarter 4, worth about $2.4M a year in recovered capacity. This is the
 shape of the business case in Chapter 52, and of Project 8.
 
-Allocation need not be uniform; it should follow where the inflow comes from and where commitments
-sit. The teams that own the two renewal commitments (Orders for bulk ordering, Payments and
-Integrations for the accounting integration) take a smaller share in quarter 1, and Billing, with
-the highest incident load and no renewal commitment, takes a larger one.
+Allocation need not be uniform. It should follow where the inflow comes from and where commitments
+sit; the case shows Northstar's split by team.
 
 ## Decision Framework
 
@@ -269,7 +294,8 @@ flowchart TD
 | Improve the data first | One quarter of disciplined classification before choosing |
 
 Two checks run alongside any constraint, because they are cheap and amplify everything else. If
-customers detect more than about a quarter of incidents, put user-facing alerts on tier 1 paths. If
+customers detect more than about a quarter of incidents, put user-facing alerts on
+[tier 1](../../glossary.md#tier-1) paths (at Northstar, the order and payment paths). If
 orphaned components appear in incidents, assign tier 1 owners now; ownership is a precondition, not
 a project.
 
@@ -300,10 +326,9 @@ irritant rather than a threat, 8 percent and a slower curve may be right.
 than six teams coordinating, and risks becoming the place where quality lives. Mitigate with
 explicit hand-back: a receiving team, a date, and a check that the team can operate it alone.
 
-**Standards and gates against flow.** Enforced minimums and approval steps feel safe; each manual
-gate also adds waiting time and batch size, as the Northstar train shows. Standardize properties
-before tools (Chapter 20), and prefer automated checks and progressive rollout to human approval for
-routine changes (Chapter 23 reviews the
+**Standards and gates against flow.** Each manual gate adds waiting time and batch size, as the
+Northstar train shows. Prefer automated checks and progressive rollout to human approval for routine
+changes (Chapter 23 reviews the
 [evidence on change approval](23-code-review-ci-cd-and-release-engineering.md#change-approval-and-pipeline-outcomes)).
 
 **Transparency against gaming.** Broad publication of team scorecards adds accountability and
@@ -311,9 +336,8 @@ pressure to optimize. A middle course: team scorecards visible to managers and s
 organization-level aggregates reported upward.
 
 **People in changing roles.** Northstar's seven QA engineers know real customer workflows better
-than anyone in engineering. Automating the regression pass without a plan for them loses that
-knowledge and tells every engineer what happens when work is automated. Moving them into product
-teams as quality engineers costs a transition period and retraining, and keeps the knowledge.
+than anyone in engineering. Moving them into product teams costs a transition period and retraining,
+and keeps that knowledge; automating around them is cheaper this quarter and loses it.
 
 ## Failure Modes
 
@@ -322,13 +346,9 @@ backlog returns. Signal: the main metric is tickets closed. Countermeasure: make
 change failure rate) the primary outcome.
 
 **Metric theater.** Incident counts fall, customer escalations do not; more incidents are rated
-Sev3. Signal: the severity distribution shifts while customer-detected share and credits do not.
+Sev3, the level below the headline count. Signal: the severity distribution shifts while customer-detected share and credits do not.
 Countermeasure: impact-based severity definitions, a weekly audit of sampled severity decisions,
 paired measures.
-
-**The tiger team that never leaves.** A central team fixes the worst services; a year later they are
-fragile again and the team is a bottleneck. Countermeasure: every engagement ends with the owning
-team operating the result, verified.
 
 **Practice mandates instead of inflow targets.** After a bad release, an executive requires sign-off
 for every Core change, or teams are told to reach 80 percent line coverage. Batches grow, or tests
@@ -378,11 +398,10 @@ system):
 | Monthly quality review | Director with each manager, staff engineers attending | One team's scorecard in depth: what changed, why, what the allocation bought | 45 minutes per team |
 | Quarterly reset | Director, managers, CTO, CPO | Capacity model update, allocation for the next quarter, constraint re-check | half a day |
 
-The quality review inspects the system the manager runs, with the manager as the person who knows
-it best. Andrew Grove's argument that a manager's output is the output of the organization under
-their influence ([Grove, 1983](../../references/bibliography.md#grove1983high)) applies directly: a
-manager whose team's change failure rate is falling has produced something, even if they wrote no
-code. The [engineering quality scorecard template](../../templates/engineering-quality-scorecard.md)
+The quality review inspects the system the manager runs. Andrew Grove's argument that a manager's
+output is the output of the organization under their influence
+([Grove, 1983](../../references/bibliography.md#grove1983high)) applies: a manager whose team's change
+failure rate is falling has produced something. The [engineering quality scorecard template](../../templates/engineering-quality-scorecard.md)
 shows a filled-in version for Northstar.
 
 ## CTO Perspective
@@ -396,12 +415,12 @@ trend. Incident counts are supporting detail.
 
 **Portfolio and tiering.** Running an internal tool at lower reliability than the payment path is
 good management when deliberate. The CTO sets the tiering policy and a few enforced minimums, and
-leaves the how to directors. At Northstar the minimums are the four operational ones Chapter 24
-defines (owning team, complete user-facing alerts, runbook, on-call rotation), with deployment
-through an auditable pipeline with automated rollback tracked as a separate standard (Chapter 20).
+leaves the how to directors. At Northstar the minimums are the four
+[tier 1 operational minimums](../../glossary.md#tier-1-operational-minimums), plus an auditable
+pipeline tracked as a separate standard (Chapter 20).
 
-**Time horizon.** Directors work in quarters; the CTO also asks whether the Core monolith should
-keep its shape and whether the decline will recur in the next growth phase (Chapter 51).
+**Time horizon.** The CTO also asks whether Core should keep its shape and whether the decline will
+recur in the next growth phase (Chapter 51).
 
 **Credibility.** A CTO who promises a board "zero Sev1 incidents" has made a promise no organization
 keeps, and has invited reclassification. Commit to rates and trends with stated confidence.
@@ -449,10 +468,11 @@ working document.
 ## Case Study
 
 This case is **fictional**. It continues the Northstar story from the
-[baseline](../../case-studies/northstar/baseline-data.md); the canonical record of the quarter is
-[the director's first quarter](../../case-studies/northstar/first-quarter.md).
+[baseline](../../case-studies/northstar/baseline-data.md); the full record of the quarter is
+[the director's first year](../../case-studies/northstar/first-quarter.md).
 
-In week 2, the new director spent two afternoons with Kwame Mensah classifying incidents. Two things
+In week 2, the new director spent two afternoons with Kwame Mensah (staff engineer, infrastructure and
+reliability) classifying incidents. Two things
 surprised the managers when they saw the result. Nine of thirty incidents came through the Core
 release train, and its incidents took longest to restore. And 11 of the 30 were recurrences of
 failure modes the organization had already reviewed, including a bulk-upload failure (INC-421) that
@@ -464,7 +484,7 @@ triggered by Core releases or migrations. Tom Becker (Platform Operations) belie
 too little manual testing; the data showed that the three-day manual pass had not caught any of the
 nine train-triggered incidents.
 
-The director put the capacity model to Victor Lindqvist and Amara Okafor in week 4. Amara accepted
+The director put the capacity model to Victor Lindqvist (CTO) and Amara Okafor (CPO) in week 4. Amara accepted
 the quarter 1 dip on two conditions: the two renewal commitments kept their dates, and she saw the
 model updated monthly. The director sized the 12 FTE prevention allocation per team: Billing at 25
 percent, Orders and Payments and Integrations at 10 percent (because of the renewal commitments),
@@ -478,15 +498,12 @@ payment delay for nine customers. The severity definitions were being read creat
 scorecard pressure. The director re-rated it in the review, explained why, and added severity audit
 to the weekly meeting.
 
-In week 9, a Sev1 in Billing (credit notes applied twice) produced a call from the CEO asking who had
-made the change. The director answered with the mechanism: a migration and dependent code shipped
-in the same release, and the pipeline check promised after an earlier migration incident (INC-427)
-had slipped. The engineer involved led the review. An interim rule followed (no release may contain
-a ledger migration and code that depends on it) until the check landed in week 11.
+In week 9, a Sev1 in Billing, the repeat of INC-427 in which credit notes were applied twice, brought
+a call from the CEO asking who had made the change. The director answered with the mechanism, and the
+engineer involved led the review ([Chapter 25](25-incidents-postmortems-and-change-failure-analysis.md#case-study) tells it in full).
 
-And the QA transition caused anxiety. Two QA engineers asked whether they were being automated out
-of a job. The director had a plan (moving each QA engineer into a product team as a quality engineer)
-but had not announced it. It was announced in week 10, later than it should have been.
+And the QA transition caused anxiety, because the plan described under "Changing roles without
+losing the people" was announced only in week 10.
 
 At day 90, the numbers were these:
 
@@ -566,12 +583,11 @@ would make you change your mind by the end of the first quarter.
    does that reluctance tell you about how it is currently produced or used?
 2. Where in your organization does the response to risk increase the risk, as the Northstar release
    train does? Who would object if you removed that response, and why?
-3. When did you last see a quality program end? Did the inflow return, and how long did it take?
-4. How do engineers in your organization learn that a change they made caused a customer problem?
+3. How do engineers in your organization learn that a change they made caused a customer problem?
    How long does it take, and through whom does the information travel?
-5. If your largest customer suffered a Sev1 tomorrow, what would your executive team ask first, and
+4. If your largest customer suffered a Sev1 tomorrow, what would your executive team ask first, and
    would your answer protect the engineers' willingness to report the next one honestly?
-6. What would you stop doing to fund prevention work, and who would notice?
+5. What would you stop doing to fund prevention work, and who would notice?
 
 ## Key Takeaways
 

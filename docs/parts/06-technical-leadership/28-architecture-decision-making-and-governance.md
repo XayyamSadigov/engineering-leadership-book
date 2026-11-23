@@ -1,11 +1,12 @@
 # Chapter 28 — Architecture Decision-Making and Governance
 
 Every engineering organization makes architecture decisions. The question is who makes them and
-whether anyone can later find out why. This chapter covers assigning architectural decision rights
-among managers, staff engineers, and teams; recording decisions so they outlive their authors;
+whether anyone can later find out why. This chapter covers assigning architectural
+[decision rights](../../glossary.md#decision-rights) (who may decide what) among managers, staff
+engineers, and teams; recording decisions so they outlive their authors;
 reviewing designs without building a queue; and turning the most important decisions into automated
-checks. Chapter 13 owns decision methods in general and Chapter 20 owns standards governance; this
-chapter applies both to architecture and takes a position on a dispute the book left open: who decides
+checks. Chapter 13 covers decision methods in general and Chapter 20 covers standards governance.
+This chapter applies both to architecture and takes a position on a contested question: who decides
 architecture. The running example is the fictional
 [Northstar Technologies](../../case-studies/northstar/index.md).
 
@@ -73,16 +74,18 @@ forum, and even there one person signs.
 
 ### What makes a decision architectural
 
-The ADR community site defines an architectural decision as a justified design choice addressing an
-architecturally significant requirement, one with a measurable effect on a system's architecture and
-quality ([adr.github.io](../../references/bibliography.md#adr-github-io)). A working test for
+An architectural decision is a design choice with a measurable effect on a system's architecture and
+quality. That is the definition used by the community around the
+[architecture decision record (ADR)](../../glossary.md#architecture-decision-record-adr), a short
+written record of one decision ([adr.github.io](../../references/bibliography.md#adr-github-io)).
+A working test for
 "significant" (**this book's recommendation**): reversing the decision would require changes by more
 than one team, a data migration, or a coordinated release. A library choice inside a service usually
 fails it; the format of an event other teams consume passes it.
 
-### Who decides architecture (disputed claim D7)
+### Who decides architecture
 
-The book recorded this as an open dispute. Each position has a real argument.
+Practitioners disagree on this, and each position has a real argument.
 
 - **Managers decide**, because they own outcomes, staffing, and dates. The weakness: the manager is
   rarely the person with the best technical information, and every design becomes an escalation.
@@ -97,19 +100,19 @@ The book recorded this as an open dispute. Each position has a real argument.
   not settle cross-team questions, and two teams with equal rights on an interface deadlock or decide
   by who ships first.
 
-The most useful theory is economic. Aghion and Tirole separate **formal authority**, the right to
-decide, from **real authority**, effective control, and argue that real authority follows
-information: a superior who lacks the information, is overloaded, or faces urgent decisions ends up
-ratifying what the informed subordinate proposes. Giving the informed party more real authority raises
-their initiative and costs the superior control
-([Aghion and Tirole, 1997](../../references/bibliography.md#aghion1997formal)). This is economic
-theory (**expert opinion (economic theory)** in this book's labels), read at abstract level, not a study of software teams. It fits a familiar pattern: the
-manager formally approves the design, the senior engineer actually decides it. Larson's caution that people overestimate how much formal
-authority helps them points the same way
+The most useful theory is economic: real authority follows information. Aghion and Tirole separate
+**formal authority**, the right to decide, from **real authority**, effective control. A superior who
+lacks the information, is overloaded, or faces urgent decisions ends up ratifying what the informed
+subordinate proposes. Giving the informed party more real authority raises their initiative and costs
+the superior control ([Aghion and Tirole, 1997](../../references/bibliography.md#aghion1997formal)).
+This is **expert opinion (economic theory)**, not a study of software teams. It fits a familiar
+pattern: the manager formally approves the design, the senior engineer actually decides it. Larson's
+caution that people overestimate how much formal authority helps them points the same way
 ([Larson, Where do Staff-plus engineers fit](../../references/bibliography.md#larson-staffeng-reporting)).
 
 **This book's position.** Split the right by what the decision is mainly about, and give each decision
-one decider.
+one decider. In the table, an **agreement right** is a narrower right than deciding: the holder must
+agree before the decision stands, but only on the named grounds (for example capacity and dates).
 
 | Decision is mainly about | Decider | Consulted | Agreement right |
 |---|---|---|---|
@@ -118,13 +121,13 @@ one decider.
 | Organization-wide direction (platforms, data stores, build systems) | A small forum of technical leaders, one named signer | All managers | Director or CTO, on cost and risk |
 | A trade-off of date, money, or risk appetite | Director or CTO | Technical leaders, in writing | None |
 
-The conditions matter as much as the table. A technical leader holds the right only with a written
-mandate for the domain, time to do the work, and accountability for consequences (a review trigger
-they must act on, involvement when the decision fails in production). Otherwise the manager decides by
-default and should say so. In small organizations the manager may be the best technical leader; the
-split still says which hat they wear. When technical leaders disagree, or a
-technical question turns into one of risk appetite ("ship the shortcut and accept the debt?"), the
-decision moves to whoever owns that trade-off. No study compares these arrangements in software
+The conditions matter as much as the table. A technical leader holds the right only with three
+things: a written mandate for the domain, time to do the work, and accountability for consequences.
+Accountability means a review trigger they must act on and involvement when the decision fails in
+production. Without these, the manager decides by default and should say so. In small organizations
+the manager may be the best technical leader; the split still says which hat they wear. Sometimes
+technical leaders disagree, or a technical question turns into one of risk appetite ("ship the
+shortcut and accept the debt?"). Then the decision moves to whoever owns that trade-off. No study compares these arrangements in software
 organizations; the position rests on the authority model, practitioner sources, and this book's
 reasoning.
 
@@ -139,15 +142,14 @@ superseded rather than deleted) exist so that successors need not accept or reve
 blindly ([Nygard, 2011](../../references/bibliography.md#nygard2011adr)). Chapter 13 covers the format
 and the fields a successor needs; this section covers running a decision log.
 
-Thoughtworks' Technology Radar placed lightweight ADRs in Adopt from November 2017 to May 2018,
-recommending source control over a wiki
-([Thoughtworks, Lightweight ADRs](../../references/bibliography.md#thoughtworks-radar-lightweight-adr));
-that is **practitioner consensus**, not evidence of effect. Mining open source GitHub repositories,
-Buchgeher and colleagues found ADR adoption low though growing, about half the repositories with ADRs
-holding only one to five records, and systematic use associated with recording as a team activity
-over time ([Buchgeher et al., 2023](../../references/bibliography.md#buchgeher2023adr)). This
-**research finding** (abstract level, open source only, no outcome measure) still carries a lesson:
-ADRs usually fail not through a bad template but through a log that stops.
+ADRs usually fail not through a bad template but through a log that stops. Thoughtworks' Technology
+Radar placed lightweight ADRs in Adopt from November 2017 to May 2018, recommending source control over
+a wiki ([Thoughtworks, Lightweight ADRs](../../references/bibliography.md#thoughtworks-radar-lightweight-adr));
+that is **practitioner consensus**, not evidence of effect. Buchgeher and colleagues mined open source
+GitHub repositories. Their abstract reports ADR adoption low though growing, about half the
+repositories with ADRs holding only one to five records, and systematic use associated with recording
+as a team activity over time ([Buchgeher et al., 2023](../../references/bibliography.md#buchgeher2023adr)).
+This **research finding** covers open source only and measures no outcomes.
 
 What keeps a log alive (**this book's recommendation**):
 
@@ -177,9 +179,9 @@ reopened under stated conditions, by a new record, never by silent drift.
 ### Lightweight design review
 
 ADRs record decisions; design documents work them out. Ubl describes Google's design docs as informal,
-written before coding, centered on trade-offs and alternatives, and reviewed in stages from comments
-by a team list up to a formal meeting; he warns that formal review can slow development and says to
-skip the doc when the solution is obvious
+written before coding, and centered on trade-offs and alternatives. They are reviewed in stages, from
+comments by a team list up to a formal meeting. He warns that formal review can slow development and
+says to skip the doc when the solution is obvious
 ([Ubl, 2020](../../references/bibliography.md#ubl2020designdocs)). *Software Engineering at Google*
 treats the design doc as one documentation type, kept in source control with owners
 ([Manshreck, Documentation](../../references/bibliography.md#manshreck2020documentation)). Both are
@@ -233,7 +235,7 @@ says no, and has a shrinking agenda.
 A record says what was decided; it does not stop the next change from undoing it. *Building
 Evolutionary Architectures* popularized the **architectural fitness function**, an automated check of
 an architectural characteristic run continuously as the system changes
-([Ford, Parsons, and Kua, 2017](../../references/bibliography.md#ford2017building); idea level).
+([Ford, Parsons, and Kua, 2017](../../references/bibliography.md#ford2017building)).
 Thoughtworks' Radar listed it in Trial in 2017 and 2018, noting that such checks can be built from
 existing unit tests, metrics, and monitors
 ([Thoughtworks, Architectural fitness function](../../references/bibliography.md#thoughtworks-radar-fitness-function)).
@@ -241,13 +243,15 @@ existing unit tests, metrics, and monitors
 The pairing (**this book's recommendation**): when an accepted ADR has a consequence a future change
 could silently undo, the ADR names a check, owned by the decider. "No service outside Billing reads
 ledger tables" becomes a database grant check that fails the pipeline; "the export stays backward
-compatible" becomes contract tests each consumer contributes. Most ADRs need no check. The few that do
+compatible" becomes [contract tests](../../glossary.md#contract-test) (automated checks that the
+provider still returns what each consumer relies on) that each consumer contributes. Most ADRs need no check. The few that do
 are where governance moves from meetings into code.
 
-Conway argued that organizations produce designs copying their communication structures
-([Conway, 1968](../../references/bibliography.md#conway1968committees)), so a cross-team interface is
-also an agreement between teams. When two teams cannot agree on one, check whether they disagree about
-the design or about who owns the data; the second is an ownership decision (Chapter 33 owns the
+A cross-team interface is also an agreement between teams. Conway argued that organizations produce
+designs copying their communication structures
+([Conway, 1968](../../references/bibliography.md#conway1968committees);
+[Conway's law](../../glossary.md#conways-law-and-the-reverse-conway-maneuver), taught in Chapter 33). When two teams cannot agree on one, check whether they disagree about
+the design or about who owns the data; the second is an ownership decision (Chapter 33 covers the
 structural side).
 
 ## Engineering Organization Example
@@ -267,9 +271,15 @@ diagram above.
 | Organization-wide | 10 | 10 | 0.8 |
 | **Total** | **210** | **90** | **6.9** |
 
-Arrivals of about 6.9 a week against a capacity of 4 grow the backlog by about 2.9 a week, to about
-38 after a quarter (2.9 × 13). A proposal arriving in week 13 waits about nine and a half weeks (38 ÷
-4). Long before that, teams submit late or not at all. The redesign routes each class to a decider:
+The board is overloaded by almost half. About 6.9 proposals arrive a week against a capacity of 4.
+
+| Queue measure | Value |
+|---|---|
+| Backlog growth per week | 6.9 − 4 = 2.9 |
+| Backlog after a quarter | 2.9 × 13 ≈ 38 |
+| Wait for a proposal arriving in week 13 | 38 ÷ 4 ≈ 9.5 weeks |
+
+Long before that, teams submit late or not at all. The redesign routes each class to a decider:
 
 - **Inside one team, hard to reverse (50):** the team decides and writes an ADR; a staff engineer is a
   named reader with a three-working-day comment window. Board load: zero.
@@ -277,9 +287,7 @@ Arrivals of about 6.9 a week against a capacity of 4 grow the backlog by about 2
   working days, after a five-day comment window. Load: about 7.5 decisions per staff engineer per
   quarter, roughly one every two weeks each.
 - **Organization-wide (10):** the board, now a forum of technical leaders with one named signer. Load:
-  10 of a capacity of 52 a quarter (4 × 13), about 19 percent.
-
-Check: 50 + 30 + 10 = 90; 30 ÷ 4 = 7.5; 10 ÷ 52 ≈ 0.19.
+  10 of a quarterly capacity of 52 (4 × 13), about 19 percent.
 
 Spare board capacity goes to sampling team ADRs after the fact and turning recurring questions into
 standards. The transition cost: four staff
@@ -409,38 +417,45 @@ sample.
 
 ## Case Study
 
-This case is **fictional**; facts not in the [Northstar canon](../../case-studies/northstar/index.md)
-are recorded as additions for this chapter. It describes how architecture was decided before the
-director arrived, then sets a quarter 2 decision for the reader, continuing
+!!! info "Northstar so far"
+    Week 14, the start of quarter 2 of the director's first year. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
+    to 21 in quarter 1 after ownership, severity, and weekly release changes. Both renewal commitments
+    are on track: the accounting integration is due in week 19. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
+This case is **fictional**. It describes how architecture was decided at
+[Northstar](../../case-studies/northstar/index.md) before the director arrived, then sets a quarter 2
+decision for the reader, continuing
 [Chapter 16](../04-execution/16-flow-lead-time-dependencies-and-unplanned-work.md). The outcome is
 deliberately not fixed.
 
-**How Northstar decided architecture.** The canon records a 2019 standards page by a principal
-architect who left in 2021, staff engineers with no mandate, Ines Carvalho consulted on most Core
-changes without owning decisions, and, in Billing, technical direction decided during incidents
-([baseline data](../../case-studies/northstar/baseline-data.md)). This chapter's additions fill in the
-rest. The principal architect had chaired a monthly architecture review that approved service
-extractions; it stopped when they left. At the director's arrival no repository held a decision record
-or design document. Decisions were made by whichever team built first, in chat threads, during
-incidents, or, when a dispute reached him, by Victor Lindqvist in conversation, unrecorded. INC-418
-shows the cost: the webhook signature format changed without versioning and customer integrations
-rejected events. Nobody had decided that the format was a contract.
+**How Northstar decided architecture.** Nobody did, on the record. A 2019 standards page was written
+by a principal architect who left in 2021. The three staff engineers had no mandate. Ines Carvalho
+(staff engineer, Core domain) was consulted on most changes to Core, the Java monolith, without owning
+decisions. In Billing, technical direction was decided during incidents
+([baseline data](../../case-studies/northstar/baseline-data.md)). The principal architect had chaired
+a monthly architecture review that approved service extractions; it stopped when they left. At the
+director's arrival no repository held a decision record or design document.
 
-The additions also record that the older erp-sync connectors and Data and Analytics' warehouse
+Decisions were made by whichever team built first, in chat threads, or during incidents. When a
+dispute reached Victor Lindqvist (CTO), he settled it in conversation, unrecorded. [INC-418](../../glossary.md#inc-numbers) shows the
+cost: the webhook signature format changed without versioning and customer integrations rejected
+events. Nobody had decided that the format was a contract.
+
+The ledger shows the same gap. The older erp-sync connectors and Data and Analytics' warehouse
 pipelines read 12 core/ledger tables directly through the read replicas. Every ledger migration
-changes an interface nobody wrote down, and INC-424 (replicas serving stale balances after a
-migration) showed the replicas themselves can lag.
+changes an interface nobody wrote down. INC-424 (replicas serving stale balances after a migration)
+showed the replicas themselves can lag.
 
-**The decision at the start of quarter 2.** From the canon: Payments and Integrations is building the
-new erp-sync connector for the accounting-system renewal commitment, due at the end of week 19.
-Billing has reserved capacity in weeks 14 to 16 for the posted-invoice export the reconciliation
-reads (the additions put it at two engineers for three weeks, six engineer-weeks). Most of the nine
-dependency links between the two teams were ledger fields, and Li Na Zhou, staff engineer for data,
-migration, and configuration standards, was asked to propose a ledger-export contract with contract
-tests.
+**The decision at the start of quarter 2.** Payments and Integrations, managed by Elena Sokolova, is
+building the new erp-sync connector for the accounting-system renewal commitment, due at the end of
+week 19. Billing, managed by Marcus Oyelaran, has reserved two engineers in weeks 14 to 16 (six
+engineer-weeks) for the posted-invoice export the reconciliation reads. Most of the nine dependency
+links between the two teams were ledger fields. Li Na Zhou, staff engineer for data, migration, and
+configuration standards, was asked to propose a ledger-export contract with contract tests.
 
-In week 14 Li Na Zhou opened ADR-0001, Northstar's first decision record, status Proposed. Its options, with
-estimates the additions record:
+In week 14 Li Na Zhou opened [ADR-0001](../../glossary.md#adr-0001), Northstar's first decision
+record, status Proposed. Its options:
 
 | Option | What it means | Billing effort | Payments effort | Ready by week 19? | Main risk |
 |---|---|---|---|---|---|
@@ -448,21 +463,21 @@ estimates the additions record:
 | B. Versioned export contract | Billing publishes a documented, versioned posted-invoice export; consumers add contract tests; direct reads end for new work | 5 engineer-weeks | 2, plus contract tests | Yes, with about one week of slack | Billing owns a new interface with no technical lead |
 | C. Ledger posting events | Billing emits an event per posting; consumers build their own views | about 16 engineer-weeks, including Platform Operations | 4 | No; earliest about week 24 | New infrastructure on the renewal's critical path |
 
-Check: option B's 5 Billing engineer-weeks fit inside the 6 reserved; option C's 16 do not, and the
-remaining 10 would have to come from Billing or Platform Operations after week 16.
+Efforts are in engineer-weeks. Option B fits Billing's 6 reserved engineer-weeks; option C would need
+10 more from Billing or Platform Operations after week 16.
 
-Li Na Zhou recommended B for the new connector, the warehouse pipelines moving to the export in
-quarter 3, and C deferred under a review trigger (a third consumer, or posting volume above an agreed
-threshold), plus a fitness function: a weekly check that no new database grant gives a non-Billing
-service read access to ledger tables.
+Li Na Zhou recommended B for the new connector, with the warehouse pipelines moving to the export in
+quarter 3. C is deferred under a review trigger: a third consumer, or posting volume above an agreed
+threshold. A fitness function guards the decision: a weekly check that no new database grant gives a
+non-Billing service read access to ledger tables.
 
 Two facts complicate it. In week 14 Victor Lindqvist told Elena Sokolova in passing to "read the
 tables now and clean it up later", to protect week 19. And nobody knows who decides. Li Na Zhou holds
-the domain but wrote the proposal; Billing provides the interface but has no technical lead, and
-Marcus Oyelaran's capacity is the constraint; Elena Sokolova's team carries the date. The director
+the domain but wrote the proposal. Billing provides the interface but has no technical lead, and
+Marcus Oyelaran's capacity is the constraint. Elena Sokolova's team carries the date. The director
 owns a decision-rights map that does not yet exist.
 
-The core/permissions owner stays open (Chapter 13). The reader's decisions are who decides ADR-0001,
+Who owns core/permissions stays open (Chapter 13). The reader's decisions are who decides ADR-0001,
 by when, how Victor Lindqvist's remark is handled, and what the record must say.
 
 ## Exercises
@@ -509,8 +524,10 @@ record shows either way.
 
 **X1.** Victor Lindqvist proposes a weekly Architecture Review Board, chaired by himself, that every
 cross-team design must pass before building starts, citing the webhook incident and the ledger
-replicas. As director, decide whether to support, modify, or oppose it. Estimate the board's load from
-Northstar's dependency data, and propose what you would put in its place or alongside it.
+replicas. Like the board in this chapter's example, it could review four proposals a meeting. The
+baseline quarter recorded 61 cross-team work items of a week or more and 86 dependency links between
+teams. As director, decide whether to support, modify, or oppose the board. Estimate its load from
+those figures, and propose what you would put in its place or alongside it.
 
 **X2.** A year from now the decision log holds 60 records. The CEO asks whether architecture
 governance has been worth the staff engineers' time, given flat headcount. Decide what evidence you

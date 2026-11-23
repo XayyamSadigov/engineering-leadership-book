@@ -1,14 +1,14 @@
 # Project 8 solution: Northstar's year-2 technology investment proposal
 
-This is one worked answer to [Project 8](../p8-cto-technology-investment-proposal.md), written in Victor
-Lindqvist's seat in week 47. Its main finding is uncomfortable and, for that reason, the one to put in front
-of the executive team and, through Helena Marsh's operating plan, the board: on counted benefits alone, the
+This is one worked answer to [Project 8](../p8-cto-technology-investment-proposal.md), written in the seat of
+Victor Lindqvist (CTO) in week 47. Its main finding is uncomfortable and, for that reason, the one to put in front
+of the executive team and, through the operating plan of Helena Marsh (CEO), the board: on counted benefits alone, the
 recommended package has a three-year NPV of about −$70,000 in the base case, and the quality continuation at its center breaks even only if it keeps unplanned work about
 4 points lower than it would otherwise be. The package is still recommended, because migrating the unsupported Core framework is
 cheaper than the realistic alternative of paying for extended support, and because the renewal protection it
 buys has to be worth little to close the gap. It asks for no cash beyond the continuation's $150,000. The case says so in those words. All Northstar facts are fictional;
 the figures marked invented come from the project's data files, and estimates marked as this solution's are
-assumptions, not canon.
+assumptions, not facts from the case. Also named: Rajiv Menon (CFO) and Greg Tanaka (VP Sales).
 
 ## 1. The decision in board terms
 
@@ -153,7 +153,7 @@ triggered by a CI target at the week 78 gate (with O3, $25,000 a year once the l
 | C1 | Unplanned-work difference the continuation makes | 4.5 points | 3.9 points | Fragile: a modest overestimate turns it negative. The week 78 gate must test it |
 | C2 | Migration effort | 38 engineer-weeks (190 days) | About 46 engineer-weeks (about 230 days) against support | Thin: Finance's pessimistic 243 days is past it. The scoping at week 60 decides |
 | C4 | Partner outages over two hours a year | 1 | 0.93 a year; at 36 engineer-weeks of effort the base case turns to about −$22,000 | Near zero on expected credits; see the 99.9 percent argument below |
-| C5 | Value of seeing invoice correctness | Not counted | About $27,000 a year ($68,000 ÷ 2.4869) | One prevented INC-409-class incident every few years plausibly covers it |
+| C5 | Value of seeing invoice correctness | Not counted | About $27,000 a year ($68,000 ÷ 2.4869) | One prevented incident like INC-409 (duplicate invoices from a retried batch job) every few years plausibly covers it |
 | Package | Renewal protection | Not counted | About $28,200 a year ($70,120 ÷ 2.4869): a 3.3-point lower annual chance of losing one top-40 customer ($28,200 ÷ ($1.17M × 72%)) | Small against $7.0M of ARR renewing |
 
 The package NPV is the sum of C1 (+$110,207), C2 against doing nothing (−$122,902), C4 (+$10,575), and C5

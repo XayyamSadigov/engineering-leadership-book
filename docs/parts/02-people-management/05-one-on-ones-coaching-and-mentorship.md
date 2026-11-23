@@ -76,16 +76,22 @@ nothing has a perfect record and a broken channel.
 
 ### What the evidence on one-on-ones says, and how much
 
-Peer-reviewed research on manager and report one-on-ones is thin. The most systematic work comes from
-Steven Rogelberg, an organizational scientist who has surveyed managers and their reports. In a
-summary for a general audience, he reports that nearly half of employees found their one-on-ones
-lacking in substance; that the strongest predictor of value was the report's active participation,
-with the report speaking roughly half to nine tenths of the time; that having a plan predicted
-effectiveness, and both sides rated meetings highest when the report created the agenda; that
-managers' ratings of their own one-on-one skill appear inflated; and that the evidence fits weekly or
-every-other-week meetings ([Rogelberg, 2024](../../references/bibliography.md#rogelberg2024unlocking)).
+The best available evidence says one-on-ones work when the report does most of the talking and sets
+the agenda, but that evidence is thin. Peer-reviewed research on manager and report one-on-ones is
+scarce. The most systematic work comes from Steven Rogelberg, an organizational scientist who has
+surveyed managers and their reports. In a summary for a general audience
+([Rogelberg, 2024](../../references/bibliography.md#rogelberg2024unlocking)), he reports that:
+
+- nearly half of employees found their one-on-ones lacking in substance;
+- the strongest predictor of value was the report's active participation, with the report speaking
+  roughly half to nine tenths of the time;
+- having a plan predicted effectiveness, and both sides rated meetings highest when the report created
+  the agenda;
+- managers' ratings of their own one-on-one skill appear inflated;
+- the evidence fits weekly or every-other-week meetings.
+
 Treat this as **expert opinion** informed by survey data: the summary does not describe samples or
-methods, and the underlying studies were not read for this book.
+methods.
 
 Two points matter most. The report, not the manager, should decide what the meeting is about. And
 the manager is the worst-placed person to judge whether it works, so check the channel with evidence.
@@ -157,16 +163,17 @@ diminishers is the check: a leader who supplies every answer gets people who sto
 ([Wiseman, 2010](../../references/bibliography.md#wiseman2010multipliers)).
 
 **Coaching** helps when the answer is within the person's reach and the learning matters more than
-the speed. A meta-analysis of coaching in organizations found significant positive effects on all five
-outcome categories it examined (performance and skills, well-being, coping, work attitudes, and
-goal-directed self-regulation), with effect sizes from g = 0.43 for coping to g = 0.74 for
-goal-directed self-regulation
+the speed. A [meta-analysis](../../glossary.md#meta-analysis) (a study that pools many studies) of
+coaching in organizations found positive effects on all five outcome categories it examined:
+performance and skills, well-being, coping, work attitudes, and goal-directed self-regulation. The
+[effect sizes](../../glossary.md#effect-size-d-g) ranged from moderate (coping) to large
+(self-regulation)
 ([Theeboom, Beersma, and van Vianen, 2014](../../references/bibliography.md#theeboom2014coaching)).
 A second, of 17 studies, found positive effects on learning and performance, stronger for internal
 than external coaches; it deliberately excluded coaching by a person's own manager
 ([Jones, Woods, and Guillaume, 2016](../../references/bibliography.md#jones2016coaching)). These are
-**research findings**, mostly about coaching programs. This book found no meta-analysis of managerial
-coaching it could read, so whether a manager who also sets pay gets the same effects is open. People
+**research findings**, mostly about coaching programs. We found no meta-analysis of coaching by a
+person's own manager, so whether a manager who also sets pay gets the same effects is open. People
 are less candid about their weaknesses with the person who rates them.
 
 **Mentoring** transfers experience: a first on-call shift, getting a design past a skeptical staff
@@ -177,10 +184,10 @@ outcomes such as pay ([Allen et al., 2004](../../references/bibliography.md#alle
 findings** from mostly correlational studies. Mentoring helps somewhat; it does not substitute for
 opportunity.
 
-**Sponsoring** turns development into advancement. Drawing on a survey of more than 4,000
-high-potential MBA graduates, a follow-up survey, and 40 interviews, Ibarra, Carter, and Silva
-distinguished sponsorship, in which a mentor goes beyond advice and uses their influence with senior
-executives on the person's behalf, from mentoring. Men and women alike reported useful advice from
+**Sponsoring** turns development into advancement. Ibarra, Carter, and Silva distinguished
+sponsorship from mentoring: a sponsor goes beyond advice and uses their influence with senior
+executives on the person's behalf. They drew on a survey of more than 4,000 high-potential MBA
+graduates, a follow-up survey, and 40 interviews. Men and women alike reported useful advice from
 mentors, but mostly men described being sponsored, and the men had received 15 percent more
 promotions at follow-up
 ([Ibarra, Carter, and Silva, 2010](../../references/bibliography.md#ibarra2010promotions)). It is
@@ -229,8 +236,8 @@ What stays out: speculation about motives, health details, protected characteris
 Write as if the person will read it one day; your HR team can tell you whether they may.
 
 Once a month, read each document and write three lines: what this person did, what they are working
-toward, what you owe them. At review time, the record replaces recollection. The mechanics of the
-review itself belong to Chapter 9.
+toward, what you owe them. At review time, the record replaces recollection. Chapter 8 uses it for
+promotion cases and Chapter 9 for performance problems.
 
 ## Engineering Organization Example
 
@@ -248,21 +255,19 @@ Assumptions: a 40-hour week; 10 minutes of preparation and notes per meeting; 4.
 | C. Every two weeks, 45 minutes | 5.6 | 1.25 | 6.9 | 97 |
 | D. Weekly 30 for 2 leads; every two weeks 45 for 13 | 5.9 | 1.4 | 7.3 | 130 (leads); 97 (others) |
 
-Check of D: two leads weekly is 1.0 hour; thirteen people every two weeks for 45 minutes is
-13 × 0.75 ÷ 2 = 4.9 hours; prep is (2 + 6.5) × 10 minutes, about 1.4 hours.
+Under A, one-on-ones take 10 of Daniel's 18 weekly hours of people time. Under D, people keep all or
+three quarters of their face time, and Daniel recovers about 2.7 hours a week.
 
-Daniel's people time is 18 hours a week (45 percent of 40). Under A, one-on-ones take 10 of the 18.
-Under D, people keep all or three quarters of their face time, and Daniel recovers about 2.7 hours.
+Frequency is a weak lever compared with content: cutting cadence alone saves hours and loses news,
+while changing content is free. The case study's six-week sample shows it. Daniel held 84 meetings and
+learned something no other channel showed in 11. Cadence D with a report-owned agenda would cost fewer
+hours and, if it raised the news rate to one meeting in three (an assumption, not a forecast), carry
+more news:
 
-Now the yield. Suppose that in six weeks Daniel held 84 of 90 scheduled meetings, averaging 26
-minutes, and learned something no other channel showed in 11 (the case study uses these figures).
-That is 84 × 26 = 2,184 minutes, about 36 hours of his time and the same of engineers' time, for 11
-pieces of news: about 6.6 person-hours per item. Under cadence D, six weeks hold 12 lead meetings and
-39 others, 51 in all. If a report-owned agenda raised the news rate to one in three, they would yield
-about 17 items in about 70 person-hours (12 × 30 + 39 × 45 minutes, counted for both people), about
-4.1 per item. The target rate is an assumption, not a forecast. The point is that frequency is a weak
-lever compared with content: cutting cadence alone saves hours and loses news; changing content is
-free.
+| Six weeks | Meetings | Person-hours (both people) | Meetings with news | Person-hours per item |
+|---|---|---|---|---|
+| Current: cadence A, status-led | 84 held, about 26 minutes each | about 73 | 11 | about 6.6 |
+| Cadence D, report-owned agenda | 51 (12 leads, 39 others) | about 70 | about 17 | about 4.1 |
 
 ## Decision Framework
 
@@ -397,20 +402,24 @@ For a manager rebuilding their one-on-ones over a quarter:
 
 ## Case Study
 
-This case is **fictional**. It is set early in quarter 2, after the director's first 90 days (see
-[the first quarter](../../case-studies/northstar/first-quarter.md) and the
-[baseline page](../../case-studies/northstar/baseline-data.md)); the team's sites and its week 16
-health check are described in Chapter 14. The six-week sample is recorded on the first quarter page.
+This case is **fictional** ([the first quarter](../../case-studies/northstar/first-quarter.md)).
 
-At baseline Daniel Cho managed 15 engineers, nine web and six mobile, and spent 45 percent of his time
+!!! info "Northstar so far"
+    Week 19 of the director's first year at Northstar, early in quarter 2 (weeks 14 to 26). Serious
+    (Sev1 and Sev2) incidents fell from 30 to 21 in the first quarter. In week 10 the seven QA engineers (manual testers)
+    moved into product teams as quality engineers, two of them to Daniel Cho's Customer Experience team.
+    See the [timeline](../../case-studies/northstar/timeline.md).
+
+At baseline, before the director arrived, Daniel Cho managed 15 engineers, nine web and six mobile, and spent 45 percent of his time
 on people management, more than any other Northstar manager. Technical direction sat with two informal
 leads without titles, Hannah Lindgren for web and Mateo Arango Ríos for mobile. The team deployed
 26 times a month, the most of any team. On an activity view Daniel looked like the strongest manager,
 while his team's health and growth were unknown ([Chapter 4](../01-foundations/04-the-leadership-ladder.md)).
 
 Daniel was proud of his one-on-ones: weekly, 30 minutes, rarely cancelled, though those with the
-mobile engineers in Bogotá, held by video, were often rescheduled. In week 16 the team health check
-(Chapter 14) showed mobile rating four areas red. Daniel was surprised. In week 17 Mateo told the
+mobile engineers in Bogotá, held by video, were often rescheduled. In week 16 a team health check, a
+self-assessment in which the team rates ten indicators green to red (Chapter 14), showed mobile rating
+four of them red. Daniel was surprised. In week 17 Mateo told the
 director that he had been doing a lead's job for over a year without anyone saying so, and that his
 one-on-ones were "where I tell Daniel where mobile is." He agreed the director could raise it.
 
@@ -433,8 +442,8 @@ the board, chat, or stand-up had not shown.
 Attendance was excellent and the channel was mostly status: 64 of 84 meetings (76 percent). The two
 leads, who carried the most context, used their meetings to report on everyone else's work. Mobile's
 red ratings and Mateo's frustration appeared in none of them. Daniel's first reaction was that his
-reports liked the meetings. The director's answer was that they might, and that manager self-ratings were exactly
-what neither of them should rely on. They agreed to ask the team.
+reports liked the meetings. The director's answer was that they might. But manager
+self-ratings were exactly what neither of them should rely on. They agreed to ask the team.
 
 Daniel drafted a change for the rest of quarter 2: shared agendas with the report's topics first; a
 three-line weekly written status; cadence D from the Engineering Organization Example; monthly
@@ -458,7 +467,8 @@ to check.
 
 **F2.** For each situation, choose directing, coaching, mentoring, or sponsoring, and justify the
 choice: a mid-level engineer stuck for two days on a test design she owns; a new hire about to make
-a schema change on a tier 1 table during an incident; a senior engineer who wants to become a staff
+a schema change on a [tier 1](../../glossary.md#tier-1) table (one on the order or payment path)
+during an incident; a senior engineer who wants to become a staff
 engineer and has never led cross-team work; an engineer asking how to handle a hostile reviewer on
 another team.
 
@@ -478,8 +488,9 @@ engineers to every two weeks for 45 minutes. Two engineers object that they will
 Evaluate the draft using the decision table and the chapter's arithmetic, and propose what you would
 change, if anything, and how you would know in six weeks whether it worked.
 
-**A3.** Priya Raman holds 30-minute one-on-ones every two weeks with her 16 reports (14 engineers and the two quality
-engineers who joined in week 10), as agreed with the director in week 2 of quarter 1. Rafael Duarte, who applied for her role, has used his meetings only for
+**A3.** Priya Raman (Orders manager) holds 30-minute one-on-ones every two weeks with her 16 reports
+(14 engineers and the two quality engineers who joined in week 10), as agreed with the director in
+week 2. Rafael Duarte, a senior engineer who applied for her role, has used his meetings only for
 order-capture review status since. Advise Priya on how to change his one-on-ones, which mode of help he
 most needs from her, and who else should sponsor him.
 
@@ -490,7 +501,7 @@ without reading anyone's notes. Design the lightest mechanism you can, say what 
 and how it can be gamed, and say what you would do if one manager's results were consistently poor.
 
 **X2.** Suppose that in a later quarter two senior engineers leave Northstar saying they had no path
-to staff, and Victor Lindqvist asks you for a mentoring program. You have no budget for external coaches. Decide what
+to staff, and Victor Lindqvist (CTO) asks you for a mentoring program. You have no budget for external coaches. Decide what
 you would build instead, with the role of mentoring, sponsorship, and the managers' records, and say
 what you would tell Victor the evidence does and does not support.
 

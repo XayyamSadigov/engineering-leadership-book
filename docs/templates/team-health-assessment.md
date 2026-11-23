@@ -1,8 +1,11 @@
 # Team health assessment
 
-**Used in:** Chapter 14 (distributed teams, team health, and diagnosing dysfunction), Chapter 11 (trust,
-psychological safety, and accountability), Chapter 41 (facilitating a health check as a trial
-assignment for a future manager).
+**Used in:** [Chapter 14](../parts/03-high-performing-teams/14-distributed-teams-team-health-and-dysfunction.md)
+(distributed teams, team health, and diagnosing dysfunction),
+[Chapter 11](../parts/03-high-performing-teams/11-high-performance-trust-safety-and-accountability.md)
+(trust, psychological safety, and accountability),
+[Chapter 41](../parts/09-engineering-directorship/41-managing-and-developing-engineering-managers.md)
+(facilitating a health check as a trial assignment for a future manager).
 **Owner:** the team owns the results; a facilitator from outside the team's reporting line runs the
 session; the manager convenes it and owns the response to the team's requests.
 **Cadence:** once a quarter, about two hours, with each team's trend read against its own previous
@@ -11,21 +14,12 @@ sessions; more often only while a team is in the middle of a structural change.
 A team health assessment is a structured way for a team to say how its working life is going, and to
 agree what to do about it. Its value is the discussion more than the ratings, and its candor depends on
 what happens to the answers. Used to help the team, it stays honest; used to judge or rank teams, it
-drifts toward green
-([Chapter 14](../parts/03-high-performing-teams/14-distributed-teams-team-health-and-dysfunction.md)).
+drifts toward green. [Psychological safety](../glossary.md#psychological-safety), the belief that
+speaking up will not be punished, is what keeps it honest.
 
-This template is a facilitated workshop of the kind Spotify's squad health check describes: the team
-rates about ten areas green, yellow, or red with a trend, and discusses why. Its authors warn that the
-model works only where trust is high, because self-reported data is easy to game; that teams should not
-be compared; and that it is a support tool, not a judgment tool
-([Kniberg and Lindwall, 2014](../references/bibliography.md#kniberg2014squad)). That is **documented
-practice** at one company, with no outcome data. Survey scores tied to performance reviews lose their
-value, as Orosz and Beck describe at one large company
-([Orosz and Beck, 2023](../references/bibliography.md#orosz2023measuring)), **expert opinion**. Where a
-validated instrument is needed, for research or for a formal diagnosis of how a team is structured,
-supported, and led, the Team Diagnostic Survey was developed and tested for that
-([Wageman, Hackman, and Lehman, 2005](../references/bibliography.md#wageman2005team)). The access rule,
-the pairing with system signals, and the two-action limit are **this book's recommendation**.
+This template is a facilitated workshop: the team rates about ten areas green, yellow, or red with a
+trend, and discusses why. It pairs each weak area with a signal already on record, and it works only
+where trust is high, because self-reported ratings are easy to game.
 
 This is not the developer-experience survey of
 [Chapter 18](../parts/04-execution/18-measuring-engineering-productivity.md), which measures friction
@@ -113,11 +107,14 @@ previous_followup:
 
 ## Example: Northstar, Customer Experience mobile session (week 16)
 
-**Fictional.** The session, its ratings, the request, and the system signals come from the
-[baseline data](../case-studies/northstar/baseline-data.md), the
-[first quarter](../case-studies/northstar/first-quarter.md) page, and Chapter 14's case study. The
-layout and the pairing of each area with a signal are illustrative and written for this template. The
-director's response is left open, as in Chapter 14.
+!!! info "Northstar so far"
+    Week 16 of the Engineering Director's first year at Northstar Technologies, a fictional company.
+    Incidents are falling after quarter 1's release and ownership changes; the renewal features are in
+    progress. Customer Experience is the one team that spans two sites and two products. See the
+    [timeline](../case-studies/northstar/timeline.md) and the [cast](../case-studies/northstar/cast.md).
+
+The layout and the pairing of each area with a signal are illustrative. The director's response is
+not recorded.
 
 **Context.** Customer Experience has 15 engineers under Daniel Cho: nine web (seven in Minneapolis, two
 remote) and six mobile, all in Bogotá, plus two quality engineers in Minneapolis since the week 10
@@ -142,7 +139,7 @@ this once. No earlier session is recorded, so there is no trend.
 
 | Red area | System signal on record | Agrees? |
 |---|---|---|
-| Easy to release | Mobile releases pass app-store review, yet share web's two-week sprint; INC-426's fix waited for that review and restoration took 1,310 minutes | Yes |
+| Easy to release | Mobile releases pass app-store review, yet share web's two-week sprint; the fix for INC-426 (offline sync corrupted drafts on one OS version) waited for that review and restoration took 1,310 minutes | Yes |
 | Suitable process | One board and one sprint for two products with different release mechanics; 6 of the last 8 retrospective actions concerned web work | Yes |
 | Support | About half of Daniel's video one-on-ones with mobile engineers were rescheduled in the baseline quarter | Yes |
 | Pawns or players | Retrospectives run with Minneapolis in one room and Bogotá on video; Mateo Arango Ríos had done lead work for over a year without recognition | Yes |
@@ -151,10 +148,8 @@ What to notice: on delivery measures the team looked healthy (26 deploys a month
 28 percent unplanned work against an organization average of 34), and the health check found what those
 measures could not. Splitting the session by subgroup is what surfaced it: in one joint session the
 web majority's mostly green picture would have averaged mobile away. Every red has a system signal that
-agrees with it, which is why Chapter 14's diagnosis starts at the structure layer (two products, one
-board, and a site boundary on top of a specialty boundary) rather than at Daniel or the mobile
-engineers. The one-time disclosure was a deliberate exception with a stated purpose. Repeated as a
-habit, it would turn the next session into a performance.
+agrees with it, so the diagnosis starts at the team's structure (two products, one board, and a site
+boundary on top of a specialty boundary) rather than at Daniel or the mobile engineers.
 
 ## Common mistakes
 
@@ -178,3 +173,20 @@ habit, it would turn the next session into a performance.
 3. Is there a subgroup that was quieter in the session than it is in one-on-ones?
 4. Who outside the team has seen these ratings, and did the team agree to that for a stated purpose?
 5. If the paired signal disagrees with the rating, which one are you inclined to believe, and why?
+
+## Evidence and references
+
+The method is [Chapter 14](../parts/03-high-performing-teams/14-distributed-teams-team-health-and-dysfunction.md).
+
+- [Kniberg and Lindwall, 2014](../references/bibliography.md#kniberg2014squad): Spotify's squad health
+  check, the model for this workshop. Its authors warn that it works only where trust is high, that
+  teams should not be compared, and that it is a support tool, not a judgment tool. That is **expert
+  opinion**: practice documented at one company, with no outcome data.
+- [Orosz and Beck, 2023](../references/bibliography.md#orosz2023measuring): survey scores tied to
+  performance reviews lose their value, as they describe at one large company (**expert opinion**).
+- [Wageman, Hackman, and Lehman, 2005](../references/bibliography.md#wageman2005team): the Team
+  Diagnostic Survey, developed and tested for research or a formal diagnosis of how a team is
+  structured, supported, and led. Use it where a validated instrument is needed.
+
+The access rule, the pairing with system signals, and the two-action limit are **this book's
+recommendation**.

@@ -4,9 +4,7 @@ Every engineering week is spent on one thing instead of another. Engineering eco
 comparison explicit: in money where money is honest, over time, under stated uncertainty. This
 chapter covers reading the business model, pricing time with cost of delay and opportunity cost, and
 comparing investments in one frame (payback, net present value, real options at a practitioner's
-level). Chapter 15 introduced cost of delay as a ranking rule and Chapter 21 used it to price debt;
-this chapter owns the economics underneath both. Chapter 52 owns financial statements and budgeting.
-The running example is the fictional
+level). The running example is the fictional
 [Northstar Technologies](../../case-studies/northstar/index.md).
 
 ## Why This Matters
@@ -16,8 +14,9 @@ argument to whoever speaks loudest. "Sales wants it" beats "the pricing rules ke
 someone states both in the same unit.
 
 At organization scale, the director allocates fixed capacity among product, prevention, and platform
-(Chapter 38). At Northstar's baseline, unplanned work consumed about $5.0M a year of engineering
-capacity and the quarter's service credits were $410,000. A director who cannot connect such figures
+(Chapter 38). At Northstar's baseline, [unplanned work](../../glossary.md#unplanned-work) consumed about $5.0M a
+year of engineering capacity, and the quarter's [service credits](../../glossary.md#service-credits)
+(refunds owed when availability falls below contract) were $410,000. A director who cannot connect such figures
 to revenue and margin funds whatever arrives with a customer's name on it.
 
 At executive scale, the CFO and CEO think in recurring revenue, margin, cash, and risk. A CTO who
@@ -34,6 +33,10 @@ After this chapter you will be able to:
 - Compare portfolio investments of different shapes with payback, net present value, and staged
   (option-like) investment, and detect how such analyses are gamed.
 
+Related chapters: Chapter 15 introduced cost of delay as a ranking rule and Chapter 21 used it to price
+debt; this chapter explains the economics underneath both. Chapter 52 covers financial statements and
+budgeting.
+
 ## The Mental Model
 
 > **Mental model:** Capacity is fixed, so every yes is a priced no. Ask three questions of any
@@ -49,7 +52,7 @@ increase revenue; reliability usually protects it; automation and efficiency red
 and compliance work usually avoids costs that have not happened yet.
 
 ```mermaid
-flowchart LR
+flowchart TD
     CAP["Capacity"] --> FEAT["Features: more revenue"]
     CAP --> REL["Reliability: kept revenue"]
     CAP --> EFF["Efficiency: lower costs"]
@@ -62,19 +65,18 @@ flowchart LR
 
 Four kinds of work usually argued about in four vocabularies end in the same place. Each arrow is a
 hypothesis with a size and a probability; the director's job is to make them explicit and comparable.
-Two corollaries follow: **time is a cost** (a feature worth $10,000 a week that ships ten weeks late
-has lost about $100,000), and **the price of engineering work is what it displaces**, not its salary
-cost, because with headcount fixed the salaries are paid whatever you choose.
+Two corollaries follow. **Time is a cost**: a feature worth $10,000 a week that ships ten weeks late
+has lost about $100,000. And **the price of engineering work is what it displaces**, not its salary
+cost: with headcount fixed, the salaries are paid whatever you choose.
 
 ## Deep Conceptual Explanation
 
 ### Reading a business model
 
-Teece describes a business model as the way an enterprise delivers value to customers, persuades
-them to pay for it, and converts those payments into profit; it embodies management's hypothesis
-about what customers want and how the firm can organize to meet that need and get paid
-([Teece, 2010](../../references/bibliography.md#teece2010business), abstract). For an engineering
-leader it becomes five questions that one hour with the finance partner can answer:
+A business model is a hypothesis about how the company gets paid. Teece's abstract describes it as the
+way an enterprise delivers value to customers, persuades them to pay, and converts those payments into
+profit ([Teece, 2010](../../references/bibliography.md#teece2010business)). For an engineering leader
+it becomes five questions that one hour with the finance partner can answer:
 
 | Question | What to find | Why engineering cares |
 |---|---|---|
@@ -84,23 +86,26 @@ leader it becomes five questions that one hour with the finance partner can answ
 | What do contracts promise? | Availability commitments, credits, security obligations | A breach converts directly into lost revenue |
 | Where is it concentrated? | Revenue share of the largest customers, segments, regions | A defect that hits the top 40 customers is a different event |
 
-**ARR** is the annualized value of subscription contracts in force. **Gross margin** is the share of
-revenue left after the costs of delivering the service. A dollar of new revenue is therefore worth
-less than a dollar to the company, while a dollar of service credits avoided is worth a full dollar,
-because a credit is refunded revenue with no delivery cost attached (**this book's recommendation**).
+**[ARR](../../glossary.md#arr)** is the annualized value of subscription contracts in force.
+**Churn** is the revenue lost when customers leave or shrink their contracts; **expansion** is revenue
+added by existing customers buying more. **[Gross margin](../../glossary.md#gross-margin)** is the share
+of revenue left after the costs of delivering the service. A dollar of new revenue is therefore worth
+less than a dollar to the company. A dollar of service credits avoided is worth a full dollar, because
+a credit is refunded revenue with no delivery cost attached (**this book's recommendation**).
 
-Strategy, in Lafley and Martin's widely used framing a set of choices about where to play and how to
-win ([Lafley and Martin, 2013](../../references/bibliography.md#lafley2013playing)), works here as a
-filter: an investment in a segment the company has chosen not to play in is worth less than its
-spreadsheet says, however large the deal.
+Strategy works as a filter. Lafley and Martin frame it as choices about where to play and how to win
+([Lafley and Martin, 2013](../../references/bibliography.md#lafley2013playing)). An investment in a
+segment the company has chosen not to play in is worth less than its spreadsheet says, however large
+the deal.
 
 ### Cost of delay: definition, shape, and origin
 
-**Cost of delay** is the value lost per unit of time while work is not done. Arnold and Yüce define a
-feature's cost of delay as the value it could generate over a period if it were available now,
-including the value of what would be learned by building it, and how both decay with time
-([Arnold and Yüce, 2013](../../references/bibliography.md#arnold2013blackswan)). Chapter 15 owns the
-ranking that follows (cost of delay divided by duration, CD3; see
+**[Cost of delay](../../glossary.md#cost-of-delay)** is the value lost per unit of time while work is
+not done. Arnold and Yüce define a
+feature's cost of delay as the value it could generate if it were available now, including what
+building it would teach, and how both decay with time
+([Arnold and Yüce, 2013](../../references/bibliography.md#arnold2013blackswan)). Chapter 15 teaches the
+ranking that follows ([CD3](../../glossary.md#cd3-and-wsjf), cost of delay divided by duration; see
 [prioritization as economics](../04-execution/15-planning-prioritization-and-delivery-methods.md#prioritization-as-economics))
 and SAFe's relative-scoring version, WSJF
 ([SAFe, WSJF](../../references/bibliography.md#safe-wsjf)). This section adds shape, estimation, and
@@ -126,36 +131,76 @@ than precision (Arnold and Yüce, 2013). The practical form is a one-line formul
 example deal ARR × probability the feature decides the deal × gross margin ÷ 52, with every factor a
 claim someone owns and can be checked later.
 
-**Evidence.** That Maersk Line case, presented at the Agile 2013 conference, applied cost of delay
-across a portfolio of about $100M; one feature's cost of delay was about $210,000 a week, and its 38
-weeks in queues cost nearly $8M of missed opportunity. Treat it as **documented practice**:
-one company, no control group, and cost of delay introduced together with other practices, so the
-authors do not attribute their reported improvements to it alone. It shows the method can run at
+**Evidence.** The Maersk Line case, presented at the Agile 2013 conference, applied cost of delay
+across a portfolio of about $100M. One feature's cost of delay was about $210,000 a week, and its 38
+weeks in queues cost nearly $8M of missed opportunity. Treat it as **documented practice**: one
+company, no control group, and other practices introduced at the same time. The authors do not
+attribute their reported improvements to cost of delay alone. It shows the method can run at
 portfolio scale, not how much it helps.
 
-**Origin (gap G6).** Cost of delay is widely credited to Donald Reinertsen
-([Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles)), but this book has not
-read his work. SAFe opens its WSJF guidance with a quotation credited to that book, and Arnold and
-Yüce cite it and Smith and Reinertsen's earlier book, but neither establishes who first defined the
-term. Credit Reinertsen for popularizing the idea; do not quote a date of origin.
+**Origin.** Donald Reinertsen is widely credited with popularizing cost of delay in product
+development ([Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles)).
 
 ### Opportunity cost and sunk cost
 
-Economists use **opportunity cost** for what must be given up to get what you choose, the value of
-the next best alternative; **sunk costs** are costs already incurred that cannot be recovered, and
-should be ignored in deciding what to do next
+Economists use **[opportunity cost](../../glossary.md#opportunity-cost-and-sunk-cost)** for the value
+of the next best alternative a choice gives up. **Sunk costs** are costs already incurred that cannot
+be recovered, and they should be ignored in deciding what to do next
 ([Greenlaw et al., 2022](../../references/bibliography.md#greenlaw2022economics)). Engineering
 planning violates both routinely.
 
-With fixed headcount, the opportunity cost of a 70 engineer-week project is not 70 × $3,558 (an
-engineer-week at $185,000 a year); it is the value of the best work those weeks would otherwise
-produce, usually the cost of delay of the displaced item. Salary cost remains a useful yardstick, but
-a portfolio that compares every project against it approves anything worth more than its payroll and
-never asks whether something else was worth more still.
+With fixed headcount, the opportunity cost of a 70
+[engineer-week](../../glossary.md#engineer-week-engineer-day-engineer-year) project is not its salary
+cost of about $249,000 (an engineer-week at $185,000 a year is about $3,558). It is the value of the
+best work those weeks would otherwise produce, usually the cost of delay of the displaced item. Salary
+cost remains a useful yardstick. But a portfolio that compares every project against it approves
+anything worth more than its payroll, and never asks whether something else was worth more still.
 
 Sunk cost shows up as "we are 60 percent through the migration". The only question is what the
 remaining 40 percent costs against what it delivers. Chapter 43 covers why people keep going
 (escalation of commitment); the economic rule is to price the future only.
+
+### Discounting: what a future dollar is worth today
+
+A dollar received next year is worth less than a dollar today. This is the **time value of money**: a
+dollar in hand now can be invested and earn a return in the meantime, and a dollar promised later may
+not arrive. To compare money that arrives at different dates, finance converts every future amount
+into its **present value**, what it is worth today.
+
+The conversion uses a [discount rate](../../glossary.md#discount-rate-and-hurdle-rate), a yearly
+percentage. In theory it is the company's **cost of capital**: the return its lenders and investors
+expect for funding it. That is hard to estimate, so most finance teams set a **hurdle rate**, the
+minimum yearly return they accept on an investment, and ask everyone to use it. Northstar's finance
+team uses 10 percent.
+
+At a rate r, a dollar received n years from now is worth 1 ÷ (1 + r)^n today. That number is the
+**discount factor**. At 10 percent, each year's factor is the previous one divided by 1.10:
+
+| Year | Calculation | Discount factor | $100,000 received that year is worth today |
+|---|---|---|---|
+| 1 | 1 ÷ 1.10 | 0.909 | $90,900 |
+| 2 | 1 ÷ 1.21 | 0.826 | $82,600 |
+| 3 | 1 ÷ 1.331 | 0.751 | $75,100 |
+| 4 | 1 ÷ 1.4641 | 0.683 | $68,300 |
+
+When a project returns the same amount every year, add the factors. Over three years at 10 percent,
+0.909 + 0.826 + 0.751 = 2.487, the three-year **annuity factor**. Multiply a steady yearly benefit by
+it to get the benefit's present value. When the amounts differ by year, discount each year separately.
+
+**[Net present value (NPV)](../../glossary.md#net-present-value-npv)** is the present value of what a
+project returns minus the present value of what it costs. Engineering capacity is usually spent at the
+start, in year 0, so its factor is 1. A worked example: a project costs $200,000 of capacity now and
+returns $100,000 a year for three years.
+
+| Line | Calculation | Value |
+|---|---|---|
+| Present value of benefits | $100,000 × 2.487 | $248,700 |
+| Present value of cost | $200,000 × 1 | $200,000 |
+| NPV | $248,700 − $200,000 | +$48,700 |
+
+A positive NPV means the project earns more than the hurdle rate; a negative one means the capacity
+would earn more elsewhere at that rate. Without discounting, the same project looks like a $100,000
+gain. Discounting removes about half of it, and it removes more the later the benefits arrive.
 
 ### A common frame: payback, net present value, and options
 
@@ -163,26 +208,25 @@ A feature earning revenue for three years, a prevention package, a platform, and
 compete for the same capacity in different shapes. A common frame makes their differences visible.
 
 **Payback period** is the time a project takes to recover its initial cost from the cash flows it
-generates. It is easy to explain, and it has well-known weaknesses: it ignores the time value of
-money, it uses an arbitrary cutoff, it ignores everything after the payback date, and it treats
-uncertain cash flows like certain ones
+generates. It is easy to explain and has well-known weaknesses. It ignores the time value of money,
+uses an arbitrary cutoff, ignores everything after the payback date, and treats uncertain cash flows
+like certain ones
 ([Dahlquist and Knight, 2022](../../references/bibliography.md#dahlquist2022finance)).
 
-**Net present value (NPV)** is the present value of a project's cash inflows minus the present value
-of its outflows; accept positive values, reject negative ones. The discount rate should in theory be
-the firm's cost of capital, which is hard to estimate, so the same textbook recommends checking how
-sensitive the answer is to the rate (Dahlquist and Knight, 2022). In practice, use the rate finance
-uses (a hurdle rate); count software benefits for two or three years, not ten, because the horizon
-moves the answer more than the rate; and cost capacity the same way for every option, since the real
-comparison is between options, not against zero.
+**Net present value**, from the previous section, accepts positive values and rejects negative ones.
+Because the cost of capital is hard to estimate, the same textbook recommends checking how sensitive
+the answer is to the rate (Dahlquist and Knight, 2022). In practice, use finance's hurdle rate. Count
+software benefits for two or three years, not ten: the horizon moves the answer more than the rate.
+And cost capacity the same way for every option, since the real comparison is between options, not
+against zero.
 
-**Real options.** Dixit and Pindyck's treatment of investment under uncertainty stresses the
-irreversibility of most investments and the option value of waiting for better, never complete,
-information, by analogy with financial options
-([Dixit and Pindyck, 1994](../../references/bibliography.md#dixit1994investment), publisher summary).
-Sullivan and colleagues applied real-options techniques to value modular software designs and found
-the results consistent with Parnas's argument for information hiding
-([Sullivan et al., 2001](../../references/bibliography.md#sullivan2001modularity), abstract). At a
+**Real options.** Waiting for better information has value when an investment is hard to reverse. The
+publisher's summary of Dixit and Pindyck's book stresses the irreversibility of most investments and
+the option value of waiting, by analogy with financial options
+([Dixit and Pindyck, 1994](../../references/bibliography.md#dixit1994investment)). Sullivan and
+colleagues' abstract reports that real-options techniques applied to modular software designs gave
+results consistent with Parnas's argument for information hiding
+([Sullivan et al., 2001](../../references/bibliography.md#sullivan2001modularity)). At a
 practitioner's level, without formulas, the idea becomes three rules (**this book's
 recommendation**):
 
@@ -206,16 +250,20 @@ flowchart TD
 
 The diagram is a routing rule, not a ladder of sophistication. Most weekly decisions end at CD3; NPV
 earns its effort for multi-quarter investments; staging comes first whenever one input could swing the
-answer. Finance books for non-financial managers, such as
-[Berman and Knight, 2006](../../references/bibliography.md#berman2006financial), are read for the same
-lesson: financial numbers rest on estimates and judgment, so the skill is knowing which assumptions
-carry the result.
+answer. Financial numbers rest on estimates and judgment, so the skill is knowing which assumptions
+carry the result, the lesson of finance books for non-financial managers such as
+[Berman and Knight, 2006](../../references/bibliography.md#berman2006financial).
 
 ## Engineering Organization Example
 
-The following example is **illustrative**. Northstar's revenue, customer counts, costs, and credits
-are canon, as are the gross margin and the hurdle rate; the prevention package and the cost and
-probability estimates were added for this chapter and are fictional.
+!!! info "Northstar so far"
+    Week 31 of the director's first year. [Sev1 and Sev2](../../glossary.md#severity-sev1-sev2-sev3)
+    incidents (the two most severe levels) fell from 30 to 17 a quarter by quarter 2, and service credits
+    from $410,000 to $95,000. Both renewal features are delivered. Greg Tanaka (VP Sales) has just asked
+    for a third deal feature. See the [timeline](../../case-studies/northstar/timeline.md).
+
+The following example is **illustrative**, like all Northstar figures. The prevention package and the
+cost and probability estimates are this example's assumptions.
 
 **Step 1: the business model in numbers.** Northstar sells an order-to-cash platform to about 1,900
 distributors on recurring contracts, with a 99.9 percent quarterly availability commitment on the
@@ -223,13 +271,13 @@ order and payment paths, backed by service credits.
 
 | Measure | Value | Derivation |
 |---|---|---|
-| ARR | $140M | canon |
+| ARR | $140M | case figure |
 | Average ARR per customer | about $74,000 | $140M ÷ 1,900 |
 | Top 40 customers | about $46.7M, about $1.17M each | one third of $140M, ÷ 40 |
 | Other 1,860 customers | about $93.3M, about $50,000 each | remaining two thirds ÷ 1,860 |
 | Engineering people plus cloud and tooling | $20.3M, 14.5 percent of ARR | $16.1M + $4.2M |
-| Service credits, baseline quarter | $410,000 ($1.64M a year, 1.2 percent of ARR) | canon |
-| Service credits, quarter 2 | $95,000 ($380,000 a year annualized) | canon |
+| Service credits, baseline quarter | $410,000 ($1.64M a year, 1.2 percent of ARR) | case figure |
+| Service credits, quarter 2 | $95,000 ($380,000 a year annualized) | case figure |
 | Gross margin | 72 percent | used for new revenue only |
 | Finance's hurdle rate | 10 percent a year | used for NPV |
 
@@ -239,25 +287,29 @@ credits down from $410,000 to $95,000 a quarter, prevention's cash case has shru
 on renewals and on capacity returned from unplanned work. Quarter 3 later came in at $60,000, which
 weakens the credits term further.
 
-**Step 2: three candidate investments**, compared as uses of capacity as the director saw them in week 31, before the week 34 forum. A and C are
-Chapter 42's items; B is fictional. One engineer-week costs $185,000 ÷ 52 = about $3,558.
+**Step 2: three candidate investments**, compared as uses of capacity as the director saw them in
+week 31. A and C are the items in Chapter 42's portfolio; B is a hypothetical prevention package.
 
 | | A. Purchase approval rules | B. Payment-path prevention package | C. Automated service-credit statements |
 |---|---|---|---|
 | Channel | Increase revenue | Protect revenue, reduce costs | Reduce costs |
 | Size | 70 engineer-weeks (about $249,000) | 70 engineer-weeks (about $249,000) | 50 engineer-weeks (about $178,000) |
-| Benefit if it works | Prospect at $700,000 ARR × 72% margin = $504,000 a year, less upkeep of $25,000 | Credits down $25,000 a quarter ($100,000 a year) plus 1 FTE of unplanned work returned ($185,000 a year) | 160 analyst-hours a quarter at $70 ($44,800 a year) plus $15,000 a year of disputes avoided |
-| Probability it works | 0.5 that the prospect signs (Greg Tanaka's estimate, unchecked) | 0.6 that the estimates hold | 0.9 |
-| Expected annual benefit | 0.5 × $504,000 − $25,000 = $227,000 | 0.6 × $285,000 = $171,000 | 0.9 × $59,800 = about $54,000 |
-| Payback | about 1.1 years | about 1.5 years | about 3.3 years |
+| Probability it works | 0.5 | 0.6 | 0.9 |
+| Expected annual benefit | $227,000 | $171,000 | about $54,000 |
 | NPV, 3 years at 10% | about +$315,000 | about +$176,000 | about −$44,000 |
-| Cost of delay per week | about $4,800 (revenue starts at go-live) | about $3,300 | about $1,000 |
+| Cost of delay per week | about $4,800 | about $3,300 | about $1,000 |
 
-The three-year annuity factor at 10 percent is 0.909 + 0.826 + 0.751 = 2.487. For A, $227,000 × 2.487
-= about $564,500, minus $249,000 = about $315,000. For B, $171,000 × 2.487 = about $425,300, minus
-$249,000 = about $176,000. For C, $54,000 × 2.487 = about $134,300, minus $178,000 = about −$44,000.
-Cost of delay per week is the expected annual benefit ÷ 52, with A's upkeep left out because upkeep
-starts only at go-live: A is 0.5 × $504,000 ÷ 52 = about $4,800.
+Where the benefits come from:
+
+- **A:** a prospect at $700,000 ARR, at 72 percent margin, is $504,000 a year, less $25,000 of upkeep.
+  The 0.5 is Greg Tanaka's estimate that the prospect signs, unchecked.
+- **B:** credits down $25,000 a quarter ($100,000 a year) plus 1 [FTE](../../glossary.md#fte)
+  (full-time equivalent engineer) of unplanned work returned ($185,000 a year).
+- **C:** 160 analyst-hours a quarter at $70 ($44,800 a year) plus $15,000 a year of disputes avoided.
+
+Each NPV is the expected annual benefit times the annuity factor 2.487, minus the size; for A, $227,000
+× 2.487 − $249,000 = about $315,000. Cost of delay is the expected benefit ÷ 52, without A's upkeep,
+which starts only at go-live. Payback is about 1.1, 1.5, and 3.3 years.
 
 **Step 3: what the table really says.** The ranking A, B, C is less interesting than its fragility:
 
@@ -266,10 +318,11 @@ starts only at go-live: A is 0.5 × $504,000 ÷ 52 = about $4,800.
   and its owner, the sponsor, should write it down and be checked later.
 - **B is undervalued.** It counts no renewal protection. If it cut by 15 points the probability of
   losing one top-40 customer, that alone adds about 0.15 × $1.17M × 72% = $126,000 a year, and B passes
-  A. Whether that is plausible is a question for Sofia Alvarez's renewal data.
+  A. Whether that is plausible is a question for the renewal data of Sofia Alvarez (VP Customer
+  Success).
 - **B and C interact.** C's value scales with the credits it processes; if B works, C is worth less.
 - **C fails on cost savings and might still be right** if accurate statements are worth something the
-  table omits, such as the CFO's confidence in the credit numbers. The frame forces that claim into
+  table omits, such as the confidence of Rajiv Menon (CFO) in the credit numbers. The frame forces that claim into
   the open.
 
 ## Decision Framework
@@ -285,9 +338,9 @@ Use the frame that fits the decision, and state the assumptions that carry it.
 | A proposal that saves cost or capacity | NPV with capacity valued at cost | Whether savings are cash or capacity | Counting capacity as cash |
 | Continuing a half-finished project | Remaining cost against remaining value | Only future costs | Sunk cost, "we've come this far" |
 
-Two guards apply to every row (**this book's recommendation**): the person who benefits from a number
-is never its only author (finance or a neutral reviewer checks inputs on large items), and every
-estimate that decided a choice is revisited a quarter or two later with the variance reported.
+Two guards apply to every row (**this book's recommendation**). The person who benefits from a number
+is never its only author: finance or a neutral reviewer checks inputs on large items. And every
+estimate that decided a choice is revisited a quarter or two later, with the variance reported.
 
 ## Trade-offs
 
@@ -388,15 +441,21 @@ estimate accuracy, misses included.
 
 ## Case Study
 
-This case is **illustrative**. The portfolio, the request, and the options come from
-[Chapter 42's case study](../09-engineering-directorship/42-cross-functional-dependencies-portfolio-and-influence.md#case-study);
-the cost estimates are fictional additions. The week 34 forum's decision remains open.
+This case is **fictional**, set in weeks 31 to 34; the forum's decision has no recorded outcome, and
+it is yours. It continues
+[Chapter 42's case study](../09-engineering-directorship/42-cross-functional-dependencies-portfolio-and-influence.md#case-study).
 
-**The situation.** In week 31 Greg Tanaka asked for purchase approval rules (about 70 engineer-weeks)
-for a prospect he valued at about $700,000 ARR, deciding in week 36. The week 34 forum had three
-options: queue it into the week 34 slot (forecast weeks 44 to 47); swap it into the week 33 slot,
-moving Rajiv Menon's service-credit statements to quarter 4; or start it now as a fourth initiative,
-putting at risk the multi-currency date already given in an open deal.
+**The situation.** Northstar runs at most three cross-team initiatives at once. Each starts in a fixed
+slot when an earlier one finishes, and the next slots open in weeks 33 and 34. A portfolio forum of
+the executives decides what fills them. In week 31 Greg Tanaka asked for purchase approval rules
+(about 70 engineer-weeks) for a prospect he valued at about $700,000 ARR, deciding in week 36. The
+week 34 forum had three options:
+
+1. **Queue it** into the week 34 slot (forecast weeks 44 to 47).
+2. **Swap it** into the week 33 slot, moving the service-credit statements that Rajiv Menon wants to
+   quarter 4.
+3. **Start it now** as a fourth initiative. That puts at risk multi-currency price lists, one of Greg's
+   earlier deal features, whose date is already promised in an open deal.
 
 **The economic note.** Before the forum, the director priced the options with the Engineering
 Organization Example's assumptions (win probability 0.5, 72 percent margin, revenue from go-live):
@@ -411,7 +470,7 @@ Two findings mattered more than the net. First, **queueing versus swapping is no
 dollars either way. Second, **the inputs with real swing were elsewhere**. A five-point change in the
 prospect's win probability is worth about 0.05 × $504,000 = $25,200 a year of margin, more than ten
 times that difference. Chapter 42 had shown that the prospect needed a reliable date and evidence that
-Northstar understood its approval process, not software in week 36; the scoping sessions in weeks 32
+Northstar understood its approval process, not software in week 36. The scoping sessions in weeks 32
 and 33 were the option premium that could move the probability. And the statements' value depended on
 credits still being paid, the condition Rajiv raised: if credits stay at or below quarter 2's $95,000
 a quarter, their cost of delay shrinks further.
@@ -463,9 +522,10 @@ draft what you say to the VP of Sales.
 
 ### Executive Decision-Making
 
-**X1.** Northstar's quarter 4 plan includes the deal allowance for small single-team requests that
-Chapter 42 proposed. Rajiv Menon asks how large it should be and how it should be judged. Using this
-chapter's frame and the canon figures, propose a size and a rule for admitting requests to it, state
+**X1.** Northstar's quarter 4 plan includes a deal allowance: capacity reserved for small single-team
+requests from sales, so they need not wait for a cross-team slot. The quarter 3 plan funded about 49.9
+FTE of product work out of 80. Rajiv Menon asks how large the allowance should be and how it should be
+judged. Using this chapter's frame and the case figures, propose a size and a rule for admitting requests to it, state
 the opportunity cost, and describe the evidence after two quarters that would make you shrink or
 remove it.
 
@@ -504,19 +564,18 @@ the CFO's proposal you would accept.
 
 - [Arnold and Yüce, 2013](../../references/bibliography.md#arnold2013blackswan): cost of delay at
   portfolio scale at Maersk Line; benefit types and urgency profiles. A single-company case report.
-- [Teece, 2010](../../references/bibliography.md#teece2010business): the business model defined
-  (abstract read).
+- [Teece, 2010](../../references/bibliography.md#teece2010business): the business model defined.
 - [Dahlquist and Knight, 2022](../../references/bibliography.md#dahlquist2022finance): open textbook
   on payback and NPV, weaknesses included.
 - [Greenlaw et al., 2022](../../references/bibliography.md#greenlaw2022economics): opportunity cost and
   sunk cost.
 - [Dixit and Pindyck, 1994](../../references/bibliography.md#dixit1994investment): investment under
-  uncertainty and the value of waiting (publisher summary read).
+  uncertainty and the value of waiting.
 - [Sullivan et al., 2001](../../references/bibliography.md#sullivan2001modularity): real options
-  applied to software modularity (abstract read).
+  applied to software modularity.
 - [SAFe, WSJF](../../references/bibliography.md#safe-wsjf): relative-scoring cost of delay over size.
 - [Reinertsen, 2009](../../references/bibliography.md#reinertsen2009principles): widely credited with
-  popularizing cost of delay; metadata only here (gap G6).
+  popularizing cost of delay in product development.
 - [Berman and Knight, 2006](../../references/bibliography.md#berman2006financial): financial literacy
   for managers; a bridge to Chapter 52.
 - [Lafley and Martin, 2013](../../references/bibliography.md#lafley2013playing): strategy as where to

@@ -159,7 +159,7 @@ around Rajiv: Mobile has the worst health check in the organization; two of Cust
 baseline Sev2s were on the mobile side; the open Customer Experience structure question could produce Northstar's
 first Bogotá-based manager, whose success depends on the director knowing the site; and one trip costs little against the
 cost of losing a mobile engineer (median 15 weeks to backfill at baseline). Ask for a small standing
-travel line rather than one trip, since the canon says travel has no budget line.
+travel line rather than one trip, since Northstar has never had travel as a budget line.
 
 A good answer respects flat operating expense, uses evidence rather than fairness alone, and has a
 plan that works if the answer is still no. The weak answer quietly moves money between budget lines.

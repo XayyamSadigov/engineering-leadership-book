@@ -1,12 +1,14 @@
 # Chapter 33 — Conway's Law, Team Topologies, and Cognitive Load
 
 Every boundary between teams is also a boundary in the system, whether anyone drew it there on
-purpose or not. This chapter covers three tools for drawing those boundaries deliberately: Conway's
-observation that systems copy the communication structure of the organizations that build them, the
-team types and interaction modes of *Team Topologies*, and team cognitive load, the total of domains,
+purpose or not. This chapter covers three tools for drawing those boundaries deliberately. The first is
+[Conway's law](../../glossary.md#conways-law-and-the-reverse-conway-maneuver), the observation that
+systems copy the communication structure of the organizations that build them. The second is the
+[team types and interaction modes](../../glossary.md#team-types-and-interaction-modes) of *Team
+Topologies*. The third is team [cognitive load](../../glossary.md#cognitive-load), the total of domains,
 systems, and interruptions a team must hold in its head. Each is useful and each is weaker as evidence
 than its popularity suggests. The running example is the fictional
-[Northstar Technologies](../../case-studies/northstar/index.md). Chapter 31 owns service boundaries,
+[Northstar Technologies](../../case-studies/northstar/index.md). Chapter 31 covers service boundaries,
 Chapter 34 spans and dependency mapping, Chapter 35 designs at different scales, and Chapter 36
 reorganizations.
 
@@ -84,15 +86,16 @@ flexible. The essay supports this with argument and anecdotes, not data: its lab
 opinion**.
 
 Researchers call the idea the **mirroring hypothesis**: organizational ties (communication,
-co-location, employment) correspond to the technical dependencies in the work. MacCormack, Baldwin,
+co-location, employment) correspond to the technical dependencies in the work. The forward direction
+has direct evidence. MacCormack, Baldwin,
 and Rusnak compared matched pairs of products with the same function, one built by a tightly coupled
 commercial firm and one by a loosely coupled open source community. In every pair, the loosely coupled
 organization's product was significantly more modular, measured by how far a change in one component
 could propagate ([MacCormack et al., 2012](../../references/bibliography.md#maccormack2012mirroring)).
 That is a **research finding** for the forward direction.
 
-Colfer and Baldwin reviewed 142 empirical studies
-([Colfer and Baldwin, 2016](../../references/bibliography.md#colfer2016mirroring)). Mirroring was
+Mirroring is common but not universal, according to Colfer and Baldwin's review of 142 empirical
+studies ([Colfer and Baldwin, 2016](../../references/bibliography.md#colfer2016mirroring)). It was
 prevalent in industry and firm studies but not universal. In fast-changing industries, **partial
 mirroring**, with knowledge boundaries drawn more broadly than operational boundaries, is likely the
 better strategy. Firms can deliberately "break the mirror" with modular partitions or relational
@@ -103,7 +106,8 @@ understanding its neighbors' interfaces and domain, and in a changing system tha
 
 ### Socio-technical congruence: the system-to-organization direction
 
-Cataldo, Herbsleb, and Carley made the idea measurable. They derive **coordination requirements** from
+Work goes faster when coordination matches technical dependencies. Cataldo, Herbsleb, and Carley made
+the idea measurable. They derive **coordination requirements** from
 technical dependencies and compare them with the coordination that actually happens. When developers'
 coordination matched their coordination needs, modification requests were resolved significantly
 faster, and logical dependencies (files that change together) mattered far more than call or data
@@ -119,7 +123,7 @@ team boundaries within one site is an inference, but the direction is consistent
 
 If the system copies the organization, design the organization you want the system to copy: the
 **reverse Conway maneuver**, which *Team Topologies* is known for promoting
-([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team); idea level). The logic
+([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team)). The logic
 follows; the evidence does not yet. MacCormack's comparison concerns new products built by different
 organizations, not a firm reorganizing around code it already has. An existing system pushes back:
 teams aligned to value streams that all run through one shared module still coordinate on that module.
@@ -151,7 +155,7 @@ collaborate": since when, and until when? Collaboration without an end date is a
 Where the model is thin:
 
 - **A taxonomy, not a finding.** This book found no peer-reviewed validation that organizations using
-  these types outperform others (a recorded research gap). Label: **practitioner consensus**,
+  these types outperform others; the evidence is thin. Label: **practitioner consensus**,
   consistent with the mirroring and congruence research, untested as a package.
 - **Most real traffic fits no mode.** Ad hoc requests, standards governance, incident escalation, and
   shared release trains are common, not exceptions.
@@ -165,14 +169,13 @@ Cognitive load theory comes from learning research. Sweller argued that conventi
 consumes so much limited processing capacity that little is left for building the schemas that
 distinguish experts from novices, supported by a computational model and experiments
 ([Sweller, 1988](../../references/bibliography.md#sweller1988cognitive)): a **research finding** about
-individual learners. *Team Topologies* borrows it for teams, separating load intrinsic to the problem,
-extraneous load from the environment, and germane load spent on learning, and argues a team's
-responsibilities should fit the load it can carry
-([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team); idea level).
+individual learners. *Team Topologies* borrows it for teams. It separates load intrinsic to the
+problem, extraneous load from the environment, and germane load spent on learning, and argues that a
+team's responsibilities should fit the load it can carry
+([Skelton and Pais, 2019](../../references/bibliography.md#skelton2019team); **expert opinion**).
 
 **Label the transfer.** A learner's working memory is not a team's capacity to own systems. "Team
-cognitive load" is an analogy with no validated instrument this book could find (a recorded research
-gap). It is still useful because its proxies are observable: domains and components owned, how many
+cognitive load" is an analogy with no validated instrument this book could find. It is still useful because its proxies are observable: domains and components owned, how many
 only one or two people can change safely, and time lost to interrupts and toolchain friction.
 Developer-experience surveys treat cognitive load as one dimension
 ([DX, DevEx report](../../references/bibliography.md#dx-devex-report); Chapter 18); use them as one
@@ -190,10 +193,9 @@ Chapter 4 deferred team sizing here, and the evidence for specific numbers is th
 noted that possible communication paths grow roughly with the square of headcount: *n* people form
 *n*(*n*−1)/2 pairs, so 8 people have 28 pairs and 16 have 120. Brooks is known for the argument that
 adding people adds communication and ramp-up overhead
-([Brooks, 1995](../../references/bibliography.md#brooks1995mythical); idea level). Numbers attributed
-to Dunbar's research on social group size are often used to cap teams; this book does not use them,
-because that research is about social groups, not software teams. A frequently cited study of team
-size and productivity in software projects could not be read for this book, so it is not used.
+([Brooks, 1995](../../references/bibliography.md#brooks1995mythical)). Numbers attributed to Dunbar's
+research on social group size are often used to cap teams. This book does not use them, because that
+research is about social groups, not software teams.
 
 **This book's recommendation**, not a finding: everyone on a team should know its whole scope well
 enough to review and be on call for it, and the stand-up should be coordination, not a status
@@ -203,13 +205,21 @@ spans).
 
 ## Engineering Organization Example
 
-In week 14, the first week of quarter 2, the director asks Priya Raman to assess the cognitive load of
-Orders: 14 engineers plus, since week 10, two quality engineers. All figures are **illustrative**.
+!!! info "Northstar so far"
+    Week 14, the start of quarter 2 of the director's first year. [Sev1 and
+    Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
+    to 21 in quarter 1. In week 4 orphaned components got owners, and in week 10 the seven QA engineers
+    joined product teams. See the [timeline](../../case-studies/northstar/timeline.md).
+
+This example assesses one team at Northstar, the book's fictional company. In week 14 the director asks
+Priya Raman (Orders manager) to assess the cognitive load of Orders: 14 engineers plus, since week 10,
+two quality engineers. All figures are **illustrative**.
 
 **Scope.** Orders now owns seven components across six domains: order capture, catalog, pricing (two
-components), search, customer data (from week 4), and notifications (from quarter 2). Four are tier 1.
-Bulk ordering, due in week 26, occupies 5 Orders engineers. Priya has said she would accept the still
-unowned core/permissions after week 26.
+components), search, customer data (from week 4), and notifications (from quarter 2). Four are
+[tier 1](../../glossary.md#tier-1), the most business-critical tier. Bulk ordering, due in week 26,
+occupies 5 Orders engineers. Priya has said she would accept the still unowned core/permissions after
+week 26.
 
 **Knowledge map.** As Billing did for its ledger (Chapter 12), Priya counts the Orders engineers who
 could change each component safely today. Operational columns are from the baseline component file.
@@ -222,9 +232,8 @@ could change each component safely today. Operational columns are from the basel
 | core/customer | 1 | 2 | no, no | 0 |
 | core/catalog | 2 | 3 | no, partial | 1 |
 | search-svc | 2 | 0 (its authors are in Data and Analytics) | no, partial | 1 |
-| notification-svc | 2 | 3 have committed to it; none has operated it | no, no | 0 under Orders (INC-412 was Customer Experience's) |
-
-The incident counts sum to Orders' 7 baseline Sev1 and Sev2 incidents.
+| notification-svc | 2 | 3 have committed to it; none has operated it | no, no | 0 under Orders (its incident, INC-412, was Customer Experience's) |
+| **Total** | | | | **7** |
 
 **Capacity arithmetic.** Assumptions: a 13-week quarter; unplanned work at Orders' baseline 36
 percent (the organization's fell from 34 to 31 percent in quarter 1; Orders' quarter 2 figure is not
@@ -238,9 +247,10 @@ known); prevention at the quarter 1 share of 10 percent; quality engineers and P
 | Prevention at 10 percent of 182 | −18.2 |
 | **Left for everything else** | **33.3, about 2.6 engineers** |
 
-Check: 182 × 0.64 = 116.5; 116.5 − 65 = 51.5; 51.5 − 18.2 = 33.3. Those 2.6 engineers must cover
-the rest of Orders' roadmap, give core/customer the tier 1 minimums and notification-svc a runbook and
-alerts, and support Ines Carvalho's permissions extraction from core/customer.
+Those 2.6 engineers must cover the rest of Orders' roadmap. They must also give core/customer the
+[tier 1 operational minimums](../../glossary.md#tier-1-operational-minimums) (owner, runbook, alerts,
+on-call), give notification-svc a runbook and alerts, and support the permissions extraction from
+core/customer led by Ines Carvalho (staff engineer, Core domain).
 
 **Reading it by kind of load.** Intrinsic load is spread across six domains, with two components at
 two or fewer capable engineers. Germane load is high and unfunded: nobody has time to learn
@@ -385,9 +395,9 @@ engineers cannot take one more product, the honest answer is load, and the knowl
 
 ## Case Study
 
-Northstar at the start of quarter 2 (week 14). All facts are fictional; the outcomes are open. Since
-the QA engineers moved into product teams in week 10, Platform Operations is five infrastructure
-engineers under Tom Becker.
+This case is **fictional** and set at Northstar at the start of quarter 2 (week 14); the outcomes are
+open. Since the QA engineers moved into product teams in week 10, Platform Operations is five
+infrastructure engineers under its manager, Tom Becker.
 
 | Team | Closest type | Where the label is untrue |
 |---|---|---|
@@ -395,22 +405,25 @@ engineers under Tom Becker.
 | Billing | Stream-aligned (invoice to ledger) | The ledger behaves like a complicated subsystem with three experts |
 | Payments and Integrations | Stream-aligned | Two streams (payments, customer integrations) |
 | Customer Experience | Organized by channel | Depends on Orders more than on any other team; its structure is Chapter 14's open question |
-| Data and Analytics | Mixed | Customer reporting plus other teams' requests (12 points of capacity) |
+| Data and Analytics | Mixed | Customer reporting plus other teams' requests (12 percent of its capacity) |
 | Platform Operations | Platform in name | Interrupt sink; also runs auth-svc, a tier 1 service on every login path |
 | Staff engineers | Enabling, perhaps | Three individuals with decision rights over standards |
 
 **Conway at Northstar.** notification-svc was owned by Customer Experience while most commits came
-from Orders and Billing; INC-412 (a renamed template variable sent blank confirmations) is a congruence
-gap between the people changing the code and the people operating it. The quarter 2 move to Orders
+from Orders and Billing. [INC-412](../../glossary.md#inc-numbers), in which a renamed template variable
+sent blank order confirmations, is a congruence gap between the people changing the code and the people
+operating it. The quarter 2 move to Orders
 aligns ownership with the main committers and adds to Orders' load. search-svc is nominally Orders',
-written by engineers now in Data and Analytics, with nobody on call, as INC-407 showed. core/permissions was
+written by engineers now in Data and Analytics, with nobody on call, as INC-407 showed when a search
+cluster node was lost. core/permissions was
 changed by four teams and designed by none. INC-405 (mobile-bff deployed against an older pricing-svc
 contract) crossed the Customer Experience and Orders boundary with no contract.
 
-**Platform Operations as interrupt sink.** It received 29 of 86 dependency links and spent 46 percent
-on unplanned work. The quarter 2 interrupt rotation and self-service test environments (Chapter 16) are
+**Platform Operations as interrupt sink.** It received 29 of 86 dependency links (a link is one work
+item of a week or more in which one team needed another; Chapter 34 teaches the method). It spent 46
+percent of its capacity on unplanned work. The quarter 2 interrupt rotation and self-service test environments (Chapter 16) are
 its first platform behavior: something consumed as a service rather than requested. By week 18 other
-teams' requests fell from 20 to 14 points. Still missing: a list of capabilities teams consume, a
+teams' requests fell from 20 to 14 percent of its capacity. Still missing: a list of capabilities teams consume, a
 roadmap, and a decision on whether auth-svc belongs with an infrastructure team (Chapter 31).
 
 ```mermaid
@@ -435,13 +448,16 @@ ordering and prevention.
 | Option | What it removes | Transition cost |
 |---|---|---|
 | A. Fund learning only | Some germane load | Scarce capacity; keeps six domains |
-| B. Move search-svc to Data and Analytics | A zero-knowledge component | Adds load to a team carrying 12 points of requests |
+| B. Move search-svc to Data and Analytics | A zero-knowledge component | Adds load to a team giving 12 percent of its capacity to requests |
 | C. Split Orders after week 26 (ordering; pricing and catalog) | Halves domains per team | A second manager under flat headcount (an engineer's seat, not backfilled); a new boundary; weeks of disruption |
 | D. Defer core/permissions | Prevents more load | A tier 1 module unowned longer, under its exemption |
 
-The director leans toward B at the next structural review (the year-2 proposal; quarter 2 moves no
-people), C reconsidered after bulk ordering ships, and D in any case. Data and Analytics' charter,
-Victor Lindqvist's view on a seventh manager, and Rafael Duarte's career question (Chapter 4) bear on it. Exercise X1 asks you to decide.
+The director leans toward three things. B waits for the next structural review, since quarter 2 moves
+no people (Chapter 35 takes up the year-2 design). C is reconsidered after bulk ordering ships, and D
+holds in any case. Three facts bear on it: Data and Analytics' draft charter lists search-svc as
+disputed; option C would need a seventh manager, which Victor Lindqvist (CTO) would have to approve; and
+Rafael Duarte, a senior engineer in Orders, has asked about the management track (Chapter 4). Exercise X1
+asks you to decide.
 
 ## Exercises
 
@@ -467,17 +483,28 @@ communication arithmetic says about teams of 8, 15, and 16, and what you would u
 ### Applied Leadership
 
 **A1.** Run the chapter's cognitive load assessment for Billing at the start of quarter 2. Billing owns
-core/invoicing, core/ledger, tax-svc, invoice-render, and since week 4 core/scheduler, with 13 engineers
-and two quality engineers. Use the ledger knowledge map from the baseline page. Classify the load,
-identify the top risk, and choose one move with its transition cost.
+core/invoicing, core/ledger, and tax-svc (all tier 1), invoice-render (tier 2), and since week 4
+core/scheduler (tier 2), with 13 engineers and two quality engineers. Its baseline unplanned work was 41
+percent. Three ledger engineers handled 126 of Billing's 180 pages in the baseline quarter. The ledger
+knowledge map from the baseline page:
+
+| Ledger area | Engineers who can respond alone | Engineers who can change it safely |
+|---|---|---|
+| Posting and journal rules | 3 | 3 |
+| Credit notes and adjustments | 4 | 2 |
+| Period close | 2 | 1 |
+| Schema migrations | 2 | 2 |
+| Currency and rounding | 1 | 1 |
+
+Classify the load, identify the top risk, and choose one move with its transition cost.
 
 **A2.** Platform Operations is five infrastructure engineers, runs a two-person interrupt rotation, and
-saw requests from other teams fall from 20 to 14 points by week 18. Tom Becker asks what "being a
+saw requests from other teams fall from 20 to 14 percent of its capacity by week 18. Tom Becker asks what "being a
 platform team" should mean for the next two quarters. Write the interaction mode you would set with
 each product team, the first two capabilities to offer as a service, and what you would do about
 auth-svc.
 
-**A3.** Ines Carvalho leads the funded permissions extraction from core/customer, which Orders now
+**A3.** Ines Carvalho (staff engineer, Core domain) leads the funded permissions extraction from core/customer, which Orders now
 owns. Assume she still answers about eight hours a week of unscheduled Core questions, as at baseline. Design her quarter 2
 work as one or more enabling engagements: which team, which capability, what exit criterion, and what
 happens to the unscheduled questions. Say how you would know in week 20 whether it is working.
@@ -486,12 +513,13 @@ happens to the unscheduled questions. Say how you would know in week 20 whether 
 
 **X1.** Decide Orders' structure for quarters 2 and 3 among the four options in the Case Study, or a
 combination. Bulk ordering is due in week 26 with 5 Orders engineers on it, headcount is flat, and
-core/permissions is still unowned. Write the recommendation you would take to Victor Lindqvist,
+core/permissions is still unowned. Write the recommendation you would take to Victor Lindqvist (CTO),
 including sequencing, transition costs in engineer-weeks, and what you would measure to know it worked.
 
 **X2.** Victor Lindqvist reads about the reverse Conway maneuver and proposes reorganizing all six teams
-around four value streams at the start of quarter 3, so that Core "breaks apart along the new lines".
-No rewrite of Core is funded. Assess the proposal against the evidence in this chapter, name what it
+around four value streams at the start of quarter 3, so that Core, the Java monolith, "breaks apart
+along the new lines". [Constraint 3](../../glossary.md#the-five-constraints) means no rewrite of Core is
+funded. Assess the proposal against the evidence in this chapter, name what it
 would cost, and propose what you would do instead or first. (Customer Experience's own structure is
 Chapter 14's open question; treat it as given.)
 

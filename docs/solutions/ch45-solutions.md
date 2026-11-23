@@ -73,7 +73,7 @@ as a hidden risk adjustment.
 
 ## A1 — Adding renewal protection to the comparison
 
-**Assumptions (illustrative).** The top-40 customer's ARR is about $1.17M (canon average). Without
+**Assumptions (illustrative).** The top-40 customer's ARR is about $1.17M (the top-40 average). Without
 action, the probability of losing it at the week 60 renewal is 30 percent; the prevention package, if
 it addresses the failures this customer has suffered, cuts that to 20 percent. A ten-point reduction
 is worth 0.10 × $1.17M × 72 percent = about **$84,000 a year** of margin. Lost revenue is valued at

@@ -62,14 +62,14 @@ answer agrees to 80 percent because it is easy to report, or refuses without off
 
 ## A1 — Getting the first contract in place
 
-**Learn first.** Ask Elena what "blocked" has cost her before: probably a shared integration environment
-that failed for reasons outside her control. Ask Marcus which payment fields his invoicing code relies on;
+**Learn first.** Ask Elena Sokolova (Payments and Integrations manager) what "blocked" has cost her before: probably a shared integration environment
+that failed for reasons outside her control. Ask Marcus Oyelaran (Billing manager) which payment fields his invoicing code relies on;
 he may find that the list is short.
 
 **Design.** Billing (the consumer) owns its expectations; they live in Billing's repository and describe
 only the fields and behavior invoicing actually uses. Payments and Integrations (the provider) runs them
 in its pipeline. A failing contract blocks the provider's merge, and the provider team decides: change its
-code, or open a conversation with Billing within one working day. Disputes go to Ines Carvalho, who owns
+code, or open a conversation with Billing within one working day. Disputes go to Ines Carvalho (staff engineer, Core domain), who owns
 contract-test standards, with a two-day decision limit.
 
 **The trade.** To Elena: Billing reviews each expectation for meaning, not just shape, so her team is not
@@ -89,7 +89,7 @@ charters); delete (duplicates of automated checks, features no customer uses, ca
 keep for now (cases that need automation not yet possible, with a review date).
 
 **Process.** The QA engineers propose a category for each case, with the owning team's engineer agreeing.
-Tom Becker and the relevant staff engineer decide contested cases weekly. Deletions above a threshold (say,
+Tom Becker (Platform Operations manager) and the relevant staff engineer decide contested cases weekly. Deletions above a threshold (say,
 any case touching invoicing or payments) need the owning manager's sign-off. The role change from Chapter 19
 is announced before triage starts, not after; otherwise the people doing the triage are being asked to
 delete their own jobs.
@@ -116,7 +116,7 @@ Past the deadline, the test is fixed or deleted by the team's manager, recorded 
 the suite is over budget for two consecutive weeks, the teams with the most quarantined tests spend their
 next prevention capacity on restoring it. New tests run repeatedly before they join the gate.
 
-**The objection.** Priya Raman's team (or Elena's) is protecting a renewal date and owns many flaky tests.
+**The objection.** The team of Priya Raman (Orders manager), or Elena's, is protecting a renewal date and owns many flaky tests.
 The policy handles it in two ways: deletion is an allowed outcome, so a team can clear its debt quickly by
 deleting duplicates; and the prevention allocation exists for exactly this work, so the policy spends
 capacity already agreed rather than new capacity. If the renewal date is genuinely at risk, the director
@@ -130,7 +130,8 @@ can grant a dated exception, recorded and visible.
 **Decision: do not accept the clause as written, and offer the evidence the customer is actually asking
 for.** The customer wants assurance that releases will not break their business. A contractual manual gate
 would lock the release train into large batches, which is the mechanism behind the incidents that made
-them nervous; Chapter 27 shows the three-day pass caught none of the nine train-triggered incidents.
+them nervous; Northstar's incident classification shows the three-day pass caught none of the nine
+incidents that came through Core releases.
 
 **What to offer.** A reliability commitment on outcomes they care about (availability on the order and
 payment paths, already 99.9 percent contractually), a quarterly report on change failure rate and
@@ -141,7 +142,7 @@ significant changes behind flags in a staging tenant.
 **To the CEO.** "The clause would make our releases bigger and slower, and big releases are where our
 incidents come from. We are offering the customer stronger evidence than a manual pass would give, tied to
 outcomes. If they insist, we can accept a scoped version: human exploratory testing of changes to their
-critical flows before release, which we do anyway." Sofia Alvarez should be in the customer conversation.
+critical flows before release, which we do anyway." Sofia Alvarez (VP Customer Success) should be in the customer conversation.
 
 **Criteria:** separates the customer's need from the mechanism they proposed, ties back to the batch-size
 mechanism, and has a fallback. The weak answer accepts the clause to close the deal, or refuses without

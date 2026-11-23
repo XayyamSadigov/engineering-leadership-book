@@ -112,7 +112,7 @@ compliance announced in advance.
 
 ## A2 — A hypothetical Northstar public outage
 
-This scenario is the reader's, not canon.
+This scenario is the reader's, not part of the case.
 
 **First 15 minutes.** The incident commander (from the 12 trained in weeks 4 and 5) declares Sev1 under
 the week 3 definitions, since the order path is unavailable for all customers. A communications role
@@ -183,7 +183,7 @@ every Sev1 statement is approved by Victor, which recreates Halvard's 14:52.
 
 ## X2 — Halvard's CTO and the general counsel
 
-This scenario is the reader's, not canon.
+This scenario is the reader's, not part of the case.
 
 **Decision.** The review says the outage was caused by a routing change Halvard made, and includes the
 15:20 macro and its correction. Legal reviews wording so that it describes facts without characterizing

@@ -86,8 +86,8 @@ plan, or is so gentle that Bram leaves without knowing there is a problem.
 
 **Diagnosis.** This is first a role-fit and skill question created by the organization. The engineer
 did the manual regression role well for years; the move in week 10 changed the role to one that
-rewards automation skill, and the canon notes that only five of the seven QA engineers automated cases
-during the transition. Check the system too: flaky tests may come from the shared Core test database
+rewards automation skill, and only five of the seven QA engineers automated cases during the
+transition; this engineer was not one of them. Check the system too: flaky tests may come from the shared Core test database
 rather than from the engineer, and Billing's unplanned share was 41 percent at baseline.
 
 **Response.** Marcus should stop the routing-around immediately and talk to the engineer directly. Then
@@ -96,8 +96,8 @@ automation scope, and an explicit timeline (one quarter). At the same time, make
 official: exploratory test charters were one of the outcomes of the manual-suite triage, and that
 work can be a recognized part of the role.
 
-**What the organization owes.** Constraint 5 of the canon says any plan that changes the QA engineers'
-work must say what they do next. The organization changed this person's role; it owes training time
+**What the organization owes.** Northstar's standing rule (the fifth of its five constraints) says any
+plan that changes the QA engineers' work must say what they do next. The organization changed this person's role; it owes training time
 and patience before any formal process. A formal plan only follows if, after real support, the
 engineer neither develops the skill nor accepts a reshaped role. The weak answer treats the struggle
 as an individual performance problem from the start.

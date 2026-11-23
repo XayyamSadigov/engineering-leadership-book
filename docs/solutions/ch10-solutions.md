@@ -51,7 +51,7 @@ teaches people that candor changes nothing.
 | Ines owns | The director owns | Recorded jointly |
 |---|---|---|
 | The design of the core/customer boundary within the mandate | Whether redesign work beyond the funded extraction is funded this half, and how much | The decision, its assumptions, and the condition that reopens it |
-| The content of the Core code standard; decisions on it within 10 working days (canon) | Who decides when Orders and Billing disagree on a Core change that the standard does not settle | Exemptions, with expiry |
+| The content of the Core code standard; decisions on it within 10 working days | Who decides when Orders and Billing disagree on a Core change that the standard does not settle | Exemptions, with expiry |
 | Which Core boundaries get contract tests first | The capacity the teams give to contract tests | The order agreed and why |
 
 **Archetypes.** At baseline Ines resembled Larson's solver: consulted on most Core changes, owning

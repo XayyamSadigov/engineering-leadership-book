@@ -58,30 +58,27 @@ change with nobody's help before notification day, or at least list what they ha
 back into selection. The weak answer says "ask managers who knows what", which is how the five gaps were
 missed in the first draft.
 
-## F3 — The notification-day sequence
+## F3 — The EU site's plan
 
 | When | What | Who |
 |---|---|---|
-| Day -1, afternoon | Managers of affected people briefed: names, criteria, severance terms, scripts, questions they may and may not answer | Imani Okonkwo, Leah Marchetti, counsel |
-| Day -1, evening | Calendar invitations sent to affected people for 15-minute meetings the next morning, with neutral titles; no other change | HR |
-| Day 0, 08:30–10:30 | Individual conversations: the person's own manager with HR present, in person or by video; written terms handed over; questions answered | Managers, HR |
-| Day 0, after each conversation | Access changes for that person, never before | IT, triggered by HR |
-| Day 0, 11:00 | Field Operations meeting: the reason, the work that stops, the criteria, the numbers, whether more rounds are planned, what happens to Classic's customers | Imani Okonkwo with all three directors |
-| Day 0, 11:30 | Written note to the group, then the CTO's short company note | Imani, Halvard's CTO |
-| Day 0, afternoon | Team meetings with each manager; the new ownership map shared in draft | Managers |
-| Days 1–10 | Skip-levels with every team; final ownership map; Classic roadmap closed and open customer requests answered | Imani, directors |
+| US day 0, before 11:00 | The EU site's managers briefed: the site's four roles are a proposal subject to consultation; no individual is told they are selected | Imani Okonkwo, Leah Marchetti, counsel |
+| US day 0, 11:00 | EU engineers join the group meeting by video and hear the same reason, the work that stops, and the criteria, plus a plain statement that their site's proposal goes to employee representatives first | Imani with the directors |
+| US day 0, afternoon | A site meeting led by the site's senior manager: what consultation is, its expected length, and when people will hear more | Site manager, HR |
+| Days 1–3 | Representatives receive in writing the reasons, the number of roles, the timing, and the proposed criteria | HR, counsel |
+| Weeks 1–4 | Consultation meetings on alternatives: the open roles, voluntary options, transition contracts, changes to the criteria; each proposal and the answer to it recorded | Imani or a director, HR, representatives |
+| Week 5 | The outcome shared with representatives first, then the site; individual conversations follow the US model, with access changing only after each conversation | Managers, HR |
+| Weeks 5–6 | Skip-levels at the site; the ownership map updated for the components the EU roles touched; a short note to both sites on what consultation changed | Imani, directors |
 
-The EU site follows its own timeline after consultation, and the plan says so in the group meeting rather
-than pretending that site is decided.
+**The step that matters most.** Treating consultation as a formality: telling people on the US day that they
+are selected, or running meetings in which nothing could change. It may be unlawful, and it tells survivors
+at both sites that the company's stated process is theater. The best evidence that consultation was real is
+one thing it changed, reported to everyone.
 
-**The step that matters most.** Access before conversation. An affected person who discovers the news
-through a failed login learns that the company valued process over them, and survivors who hear that
-story conclude the same about themselves. Every other mistake on the day can be explained; that one is
-remembered.
-
-**Criteria.** Affected people hear first and individually, access follows conversations, the most senior
-leader speaks the same morning, and the plan covers the following week. The weak answer sends a company
-email at 09:00 and holds conversations afterwards.
+**Criteria.** Nobody at the EU site is told an individual decision before consultation ends; the site still
+hears the reason on the US day, so rumor does not fill five weeks; consultation receives the written
+information it needs; access follows conversations. The weak answer copies the US timeline five weeks later
+and says nothing to the EU site in between. Several sequences are defensible, provided counsel sets the dates.
 
 ## A1 — Tobias Engel and the sustaining team
 
@@ -151,10 +148,10 @@ without pricing the people it would lose.
 
 ## X1 — A hypothetical board request at Northstar
 
-This is a scenario for the reader; no reduction is part of the Northstar canon, and the quarter 4 decisions stay
+This is a scenario for the reader; no reduction is part of Northstar's record, and the quarter 4 decisions stay
 open.
 
-**The arithmetic.** The base is the canon's FY2 personnel draft, $16.73 million at 87 full seats (not the year 1
+**The arithmetic.** The base is the case's FY2 personnel draft, $16.73 million at 87 full seats (not the year 1
 figure of $16.1 million). Ten percent is about $1.67 million; at $185,000 a seat, that is 9.0 seats. The 87-seat
 organization would become 78.
 

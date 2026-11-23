@@ -80,8 +80,8 @@ A defensible decision: if not KEV-listed and not reachable from external input, 
 for one quarter, with the upgrade scheduled into Billing's prevention allocation for the following
 quarter and staged behind the release-train improvements so it ships in a smaller batch. If
 reachable, apply a compensating control within the service level and keep the exception short. Record
-the decision in the exemption register: owner (Marcus), reason, compensating control, expiry, and who
-reviewed the reachability analysis (someone outside Billing, such as Joon Park or a staff engineer).
+the decision in the exemption register: owner (Marcus Oyelaran, Billing manager), reason, compensating control, expiry, and who
+reviewed the reachability analysis (someone outside Billing, such as Joon Park, the IT security lead, or a staff engineer).
 
 Marcus is right about two things worth saying out loud: a rushed framework upgrade could cause the
 ledger incident the vulnerability never would, and his team's allocation is already the largest. The
@@ -135,8 +135,8 @@ generation with existing tools, and defer the platform decision by one quarter.
 Reasoning: the questionnaire problem is an evidence problem, and evidence comes from pipelines. A
 platform layered on four CI systems and four script-deployed services will scan more, but it cannot
 produce provenance for artifacts built on a shared host, and it cannot rotate secrets or assign owners.
-It would also consume $180,000 of the $250,000 discretionary budget, leaving little for Chapter 27's
-competing tooling needs. What you give up: faster scanning coverage and a polished report for
+It would also consume $180,000 of the $250,000 discretionary budget, leaving little for the quality
+program's other tooling needs. What you give up: faster scanning coverage and a polished report for
 customers this quarter, and possibly some findings a commercial tool would catch that open-source
 scanners miss.
 

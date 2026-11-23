@@ -2,24 +2,32 @@
 
 It is weeks 25 and 26, the end of quarter 2 of your first year as Engineering Director at Northstar
 Technologies, the fictional company of the [case study](../case-studies/northstar/index.md). You are
-planning quarter 3 (weeks 27 to 39). The allocation is drafted: unplanned work as a measured tax,
-prevention stepping down from 12 FTE to 8, a platform line, and product work committed to the cautious
-case. Victor Lindqvist (CTO) will sign the plan, and he wants to see each quarter whether the spending
-bought what it promised. Your job in this project is to build the organization scorecard that answers
-that question for quarter 3: the measures, their definitions and sources, their pairs, their owners,
-and an honest reading of where Northstar stands.
+planning quarter 3 (weeks 27 to 39). The allocation is drafted: [unplanned work](../glossary.md#unplanned-work)
+as a measured tax, [prevention](../glossary.md#prevention-allocation) stepping down from 12
+[FTE](../glossary.md#fte) to 8, a platform line, and product work committed to the
+[cautious case](../glossary.md#planned-case-and-cautious-case). Victor Lindqvist (CTO) will sign the
+plan, and he wants to see each quarter whether the spending bought what it promised. Your job is to
+build the organization [scorecard](../glossary.md#scorecard) that answers that question for quarter 3:
+the measures, their definitions and sources, their pairs, their owners, and an honest reading of where
+Northstar stands.
 
 The project applies [Chapter 38](../parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md),
 with [Chapter 18](../parts/04-execution/18-measuring-engineering-productivity.md) for delivery measures
 and their gaming, [Chapter 24](../parts/05-engineering-quality/24-reliability-slos-and-operational-readiness.md)
-for SLOs and error budgets, [Chapter 27](../parts/05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)
+for [SLOs](../glossary.md#sli-slo-and-sla) and [error budgets](../glossary.md#error-budget-and-burn-rate), [Chapter 27](../parts/05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)
 for the quality scorecard, and the [engineering quality scorecard template](../templates/engineering-quality-scorecard.md).
-It takes about 12 to 18 hours.
+After that reading, the full project takes about 22 to 28 hours.
+
+!!! note "Core version (about 8 to 10 hours)"
+    Do deliverables 1, 2, and 5 only: the decision map, the scorecard, and the readings with
+    uncertainty. Apply acceptance criteria 1 to 5, 7, and 10, and score the rubric rows Decision
+    linkage, Definitions and data quality, Pairing and gaming, and Readings and uncertainty (65 of the
+    100 points; rescale to 100).
 
 ## Problem Statement
 
 Northstar measures more than it did. At baseline the only engineering figures in the CEO's board pack
-were committed roadmap items delivered and the Sev1 and Sev2 count, and delivery numbers came from one
+were committed roadmap items delivered and the Sev1 and Sev2 count. Delivery numbers came from one
 engineer joining four CI systems' logs by hand for two days a month. By week 26 there are SLOs in
 reporting mode, a severity definition with a weekly audit, a quality scorecard reviewed monthly per
 team, corrective actions with manager owners, and a decision log. There is not yet one scorecard that
@@ -29,15 +37,15 @@ that.
 
 The numbers also disagree in ways a scorecard must handle. Availability on the contractual paths was
 99.86 percent in quarter 2, still below the 99.9 percent in the contracts, while Sev1 and Sev2
-incidents fell from 30 at baseline to 17. Core's change failure rate has been flat for two quarters (22
-then 23 percent). Several numbers rest on human classification, the availability probe runs from one
+incidents fell from 30 at baseline to 17. The [change failure rate](../glossary.md#change-failure-rate)
+of [Core](../glossary.md#core), the monolith, has been flat for two quarters (22 then 23 percent). Several numbers rest on human classification, the availability probe runs from one
 region and does not see the mobile path, and the invoice correctness SLO has no data. Rajiv Menon (CFO)
 asked at the start of quarter 2 for an output-per-engineer figure by team for the budget pack, with
 Helena Marsh's (CEO) support; that request is still open.
 
-Your task is to build the quarter 3 organization scorecard: about ten entries, each with a pair, an
-owner, a separate data steward, a definition two people would compute the same way, a source, and the
-decision it informs, plus a reading of the baseline, quarter 1, and quarter 2 values with their
+Your task is to build the quarter 3 organization scorecard of about ten entries. Each entry has a
+pair, an owner, a separate data steward, a definition two people would compute the same way, a source,
+and the decision it informs. Add a reading of the baseline, quarter 1, and quarter 2 values with their
 uncertainty.
 
 [Chapter 38's case study](../parts/08-management-operating-system/38-scorecards-quarterly-planning-and-capacity-allocation.md#case-study)
@@ -49,11 +57,18 @@ against the chapter's own rules.
 
 **Your position.** Engineering Director. You own the organization scorecard. Victor Lindqvist approves
 it with the quarter 3 plan. Kwame Mensah (staff engineer, operational minimums and pipelines), Li Na
-Zhou (data, migration, and configuration), and Tom Becker's Platform Operations team hold most of the
-data. Amara Okafor (CPO) and Rajiv Menon read it.
+Zhou (staff engineer, data, migration, and configuration), and the Platform Operations team of Tom
+Becker (its manager) hold most of the data. The [cast](../case-studies/northstar/cast.md) lists everyone
+named here. Amara Okafor (CPO) and Rajiv Menon read it.
 
-**The time rule.** Use facts dated week 26 or earlier, including the quarter 2 results and the
-director's week-26 report (Chapter 39). Anything that happens in quarter 3 is off limits.
+**The time rule.** Use facts dated week 26 or earlier: the
+[Northstar overview](../case-studies/northstar/index.md), the
+[baseline data](../case-studies/northstar/baseline-data.md), [day 90](../case-studies/northstar/first-quarter.md#day-90),
+[starting points for quarter 2](../case-studies/northstar/first-quarter.md#starting-points-for-quarter-2),
+[quarter 2 results](../case-studies/northstar/first-quarter.md#quarter-2-results), and
+[the renewals and the operating system in quarter 2](../case-studies/northstar/first-quarter.md#the-renewals-and-the-operating-system-in-quarter-2),
+including the director's week-26 report (Chapter 39). The [timeline](../case-studies/northstar/timeline.md)
+shows what falls before week 27. Anything that happens in quarter 3 is off limits.
 
 **Constraints.** These are binding.
 
@@ -88,10 +103,10 @@ Use these sources:
   week-26 report.
 
 **Project data: the quarterly readings.** [`p5-quarterly-readings.csv`](data/p5-quarterly-readings.csv)
-gathers every measure the canon reports for the baseline quarter, quarter 1, and quarter 2, with
-numerators and denominators where the canon gives them and a note where it does not. It is **derived
-from the canon**, not new. Blank cells mean the canon does not record the value; do not fill them with
-estimates presented as readings.
+gathers every measure Northstar's record reports for the baseline quarter, quarter 1, and quarter 2,
+with numerators and denominators where the record gives them and a note where it does not. It **comes
+from the case**, not new. Blank cells mean the value is not recorded; do not fill them with estimates
+presented as readings.
 
 **Facts your submission must use.**
 
@@ -101,7 +116,7 @@ estimates presented as readings.
 | SLOs | Order submission 99.9 percent, order latency 99 percent within 2 seconds, payment final within 60 seconds 99.9 percent, invoice correctness 99.99 once reconciliation exists; about 600,000 order submissions and 240,000 payment attempts per 28 days; budgets in reporting mode, any incident consuming more than a fifth of a journey's budget gets a tracked review |
 | Incidents | 30, 21, 17 Sev1 and Sev2; via Core releases 9, 4, 2; recurrences 11, 5, 3; customer-detected 47, 29, 29 percent; 8 of the 14 baseline customer-detected incidents were correctness failures |
 | Delivery | Core releases 2 a month at baseline, 11 in quarter 1, 13 in quarter 2; Core change failure rate 31% (4 of 13 releases over the 26 weeks before arrival), 22% (2 of 9 weekly releases from week 5), 23% (3 of 13); Core lead time 19 days and services 3 at baseline; review wait 21 working hours; 74-minute pipeline |
-| Readiness and follow-through | Tier 1 at the four minimums 3, 8, 11 of 15 (year-1 counts keep the original list of 15 for comparability, although notification-svc moved to tier 2 from quarter 2; year 2 uses the current list of 14); corrective-action closure 32, 70, 78 percent |
+| Readiness and follow-through | [Tier 1](../glossary.md#tier-1) at the four [minimums](../glossary.md#tier-1-operational-minimums) 3, 8, 11 of 15 (year-1 counts keep the original list of 15 for comparability, although notification-svc moved to tier 2 from quarter 2; year 2 uses the current list of 14); corrective-action closure 32, 70, 78 percent |
 | Capacity | Unplanned work 34, 31, 28 percent; quarter 3 planned case 22 percent (17.6 FTE), cautious case 28 percent (22.4 FTE); prevention 8 FTE; platform 4.5 FTE; the week-31 trigger in Chapter 38 |
 | Friction | Environment waits about 6 days to 2 and other teams' requests 20 to 14 points by week 18 |
 | Measurement | Change failure rate linked by hand under a 72-hour rule; four shell-script services log nothing; unplanned work sampled for two weeks per team; severity assigned by on-call with a weekly audit since week 7 |
@@ -160,7 +175,7 @@ One scorecard document of no more than about 10 pages, plus your spreadsheet.
    its own. Mechanism measures built from many events (releases, pipeline runs, budget consumption)
    carry more.
 9. **Write the executive view and the reply to Rajiv,** then the evaluation of Chapter 38's proposal.
-10. **Check every number twice,** from counts and from the percentages the canon reports.
+10. **Check every number twice,** from counts and from the percentages the case reports.
 
 ```mermaid
 flowchart TD
@@ -201,13 +216,13 @@ A submission is accepted only if all of these hold.
    decision it informs; no steward measures their own team's results.
 3. No entry is per engineer, and no entry ranks teams.
 4. Every target has a stated reason; every other row carries a direction.
-5. Every quarter 2 reading is recomputed from counts where the canon gives counts, and the values the
-   canon does not record are left blank with an action, not estimated.
+5. Every quarter 2 reading is recomputed from counts where the case gives counts, and the values it
+   does not record are left blank with an action, not estimated.
 6. Each SLO's 28-day budget is computed, and invoice correctness and the mobile path are addressed.
 7. At least the incident count and Core change failure rate are read with their uncertainty.
 8. The scorecard works under both error budget policies.
 9. The reply to Rajiv Menon answers his underlying question.
-10. No fact is invented about the canon; assumptions are labeled as assumptions.
+10. No fact about Northstar is invented; assumptions are labeled as assumptions.
 
 ## Evaluation Rubric
 

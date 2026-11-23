@@ -1,19 +1,16 @@
 # Engineering strategy template
 
-**Used in:** Chapter 30 (technical strategy and technology selection), Chapter 51 (the CTO's
-technology strategy).
+**Used in:** [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md)
+(technical strategy and technology selection), [Chapter 51](../parts/12-cto-leadership/51-enterprise-technology-strategy.md)
+(the CTO's technology strategy), [Project 7](../projects/p7-twelve-month-engineering-strategy.md).
 **Owner:** the engineering director or CTO, written with the staff engineers; each guiding policy has
 a named owner who decides exceptions to it.
 **Cadence:** written once and kept to about two pages; the diagnosis is re-read quarterly against the
 technology risk register, and the whole document is revised when a review trigger fires.
 
 An engineering strategy is a diagnosis of what makes the situation hard, a few guiding policies that
-decide many later choices in advance, and the actions that make the policies real. The structure is
-Rumelt's strategy "kernel" ([Rumelt, 2011](../references/bibliography.md#rumelt2011good)), which Will
-Larson applies to engineering, arguing that coherent actions are the most important part
-([Larson, 2023](../references/bibliography.md#larson2023engstrategy)). Both are **expert opinion**.
-This template adds two sections the kernel leaves implicit: what the organization will not do, and
-the conditions that reopen the strategy.
+decide many later choices in advance, and the actions that make the policies real. This template adds
+two sections: what the organization will not do, and the conditions that reopen the strategy.
 
 A document with a vision, a list of goals, and a target architecture diagram is not a strategy under
 this definition. If nothing in it would have changed a decision made last quarter, it is decoration.
@@ -87,11 +84,19 @@ next_review: ""
 
 ## Example: Northstar, week 14 draft
 
-**Fictional.** The three policies, the diagnosis, and the register items come from
-[Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md) and
-the [first quarter](../case-studies/northstar/first-quarter.md) page. The scope line, the
-"will not do" list, the review triggers, and the policy owners are illustrative additions for this
-template. Dates are weeks from the director's first day.
+!!! info "Northstar so far"
+    Week 14 of the Engineering Director's first year at Northstar Technologies, a fictional company.
+    Quarter 1 cut Sev1 and Sev2 incidents from 30 to 21 by fixing ownership, severity, and the release
+    train of Core, the company's monolith. The director now drafts a technical strategy with the three
+    staff engineers. See the [timeline](../case-studies/northstar/timeline.md) and the
+    [cast](../case-studies/northstar/cast.md).
+
+The scope line, the "will not do" list, the review triggers, and the policy owners are illustrative.
+In the draft, TR numbers are entries on the technology [risk register](../glossary.md#risk-register),
+DL numbers are entries in the organization's [decision log](../glossary.md#decision-log), and
+"Constraint 3" is the case's rule that no rewrite of Core will be funded
+([the five constraints](../glossary.md#the-five-constraints)). Tom Becker and Marcus Oyelaran are the
+Platform Operations and Billing managers; Victor Lindqvist is the CTO.
 
 ```yaml
 strategy:
@@ -163,9 +168,10 @@ next_review: week 26
 What to notice: each policy has a decision already waiting for it in the decision log, so the first
 quarter of the strategy's life is a live test of whether it decides anything. Policy 2 points toward
 buying tax-rate content but does not choose between the vendor engine and the hybrid; that remains a
-selection decision with its own costs ([Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md)).
-The first "will not do" line restates a constraint the CTO set; the second disappoints Ines Carvalho,
-which is why it is written down.
+selection decision with its own costs. The first "will not do" line restates a constraint the CTO set; the second disappoints Ines Carvalho
+(staff engineer, Core domain),
+which is why it is written
+down.
 
 ## Common mistakes
 
@@ -187,3 +193,16 @@ which is why it is written down.
 2. Which finding has the weakest evidence, and what would you measure to strengthen or drop it?
 3. Who loses something under this strategy, and have they read it?
 4. Which review trigger is most likely to fire first, and who will notice?
+
+## Evidence and references
+
+The method is [Chapter 30](../parts/06-technical-leadership/30-technical-strategy-and-technology-selection.md);
+the company-level version is Chapter 51.
+
+- [Rumelt, 2011](../references/bibliography.md#rumelt2011good): the strategy "kernel" of diagnosis,
+  guiding policy, and coherent action that gives this template its structure (**expert opinion**).
+- [Larson, 2023](../references/bibliography.md#larson2023engstrategy): applies the kernel to
+  engineering and argues that coherent actions are the most important part (**expert opinion**).
+
+The "will not do" section, the review triggers, and the tests in the template table are **this book's
+recommendation**.

@@ -5,10 +5,10 @@ where should a boundary go, how strong should it be, and which team answers for 
 it. This chapter treats the microservices and modular-monolith positions fairly, reads boundaries
 from change history and team structure, and sets out an ownership model with no orphaned
 components. The running example is the fictional
-[Northstar Technologies](../../case-studies/northstar/index.md): a Java monolith called Core with
-eight modules, fourteen services, and three components still disputed or orphaned. Chapter 33 owns
-Conway's law and team types, Chapter 32 owns platform engineering and legacy modernization, and
-Chapter 24 owns operational readiness.
+[Northstar Technologies](../../case-studies/northstar/index.md): a Java monolith called
+[Core](../../glossary.md#core) with eight modules, fourteen services, and three components still
+disputed or orphaned. Chapter 33 covers Conway's law and team types, Chapter 32 platform engineering
+and legacy modernization, and Chapter 24 operational readiness.
 
 ## Why This Matters
 
@@ -18,8 +18,9 @@ that no sprint ritual will fix.
 
 At organization scale, boundaries and ownership decide where incidents land and who answers them.
 At baseline, 8 of Northstar's 24 components were disputed, shared, or orphaned, and 8 had nobody on
-call ([baseline data](../../case-studies/northstar/baseline-data.md)); one orphan, auth-svc, is tier
-1. Components lose owners quietly, and the loss shows up later as an incident nobody is paged for.
+call ([baseline data](../../case-studies/northstar/baseline-data.md)). One orphan, auth-svc, is
+[tier 1](../../glossary.md#tier-1): on the order or payment path, with the strictest obligations.
+Components lose owners quietly, and the loss shows up later as an incident nobody is paged for.
 
 At executive scale, architecture style becomes a multi-year bet with a narrative attached. Proposals
 to "move to microservices" or "go back to the monolith" arrive with confident claims and thin
@@ -69,7 +70,7 @@ flowchart TD
 | Step | What it adds | What it costs |
 |---|---|---|
 | Enforced module | Build fails on undeclared cross-module calls | A dependency rule set and its upkeep |
-| Owned module with a contract | One owning team, owner review, a tested interface | Review load on the owner; contract tests |
+| Owned module with a contract | One owning team, owner review, a tested interface | Review load on the owner; [contract tests](../../glossary.md#contract-test) (automated checks that the interface still gives each consumer what it relies on) |
 | Separate deployable | Own release cadence and rollback | Pipeline, versioning, compatibility |
 | Service owning its data | Independent scaling, fault isolation | Network failures, no shared transactions, data migration, on-call |
 
@@ -121,15 +122,16 @@ boundaries are hard to find up front and harder to move across services than wit
 sparse, links a dissenting view, and warns that many monoliths are too entangled to split cleanly.
 This is **expert opinion**, honestly labeled by its author.
 
-The most cited recent example needs reading at source. In 2023 a Prime Video engineer described
+The most cited recent example shows why claims must be read at source. In 2023 a Prime Video engineer
+described
 moving one service, a tool monitoring the audio and video quality of live streams, from serverless
 components (Step Functions orchestration, Lambda functions, frames passed through S3) into a single
 process on containers. The first design hit a hard scaling limit at about 5 percent of the
 expected load and cost too much at scale; after the move the team reported infrastructure costs
 down by over 90 percent. The components stayed the same, and the post concludes that the choice
 between microservices and a monolith has to be made case by case
-([Kolny, 2023](../../references/bibliography.md#kolny2023primevideo), read from an archived copy;
-the original address no longer resolves). This is **documented practice**, self-reported, about one
+([Kolny, 2023](../../references/bibliography.md#kolny2023primevideo); the original address no longer
+resolves, and an archived copy exists). This is **documented practice**, self-reported, about one
 service whose components exchanged large volumes of data per second of video. It shows that a
 network boundary in a data-heavy inner loop can be expensive, not that a company abandoned
 microservices, as it was widely retold.
@@ -168,9 +170,10 @@ and dependency upgrades touch everything and must be excluded.
 
 ### Drawing boundaries from team structure
 
-Melvin Conway argued that organizations design systems that copy their communication structures
-([Conway, 1968](../../references/bibliography.md#conway1968committees)); Chapter 33 owns that idea
-and the evidence on it. For boundary work, one consequence matters: a boundary inside one team is
+Systems tend to copy the communication structures of the organizations that build them
+([Conway's law](../../glossary.md#conways-law-and-the-reverse-conway-maneuver), taught in Chapter 33;
+[Conway, 1968](../../references/bibliography.md#conway1968committees)). For boundary work, one
+consequence matters: a boundary inside one team is
 cheap, because one conversation settles any change; a boundary between teams needs an interface and
 a contract. Matthew Skelton and Manuel Pais argue for sizing
 software responsibilities to what one team can hold in mind
@@ -198,12 +201,18 @@ interface, and carries its pager.
 
 ## Engineering Organization Example
 
-These figures are **illustrative**, from the fictional Northstar case, and recorded as additions to
-the canon. In the baseline quarter about 1,100 merge requests were merged into Core main (about 85 a
-week, canon). Ines Carvalho, the staff engineer for the Core code standard, counted for each module
-the requests that changed a file in its source directory, excluding 14 mass changes. Many requests
-touched only shared code outside the eight modules and many touched several, so the counts do not
-sum to the total.
+!!! info "Northstar so far"
+    Week 14, the start of quarter 2 of the director's first year. [Sev1 and
+    Sev2](../../glossary.md#severity-sev1-sev2-sev3) incidents (the two most serious levels) fell from 30
+    to 21 in quarter 1. Core now releases weekly, and in week 4 four unowned components got owners. See
+    the [timeline](../../case-studies/northstar/timeline.md).
+
+This example is a co-change analysis of Northstar's Core. Its figures are **illustrative**. In the
+baseline quarter about 1,100 merge requests were merged into Core main, about 85 a week. Ines Carvalho,
+the staff engineer for the Core code standard, counted for each module the requests that changed a file
+in its source directory, excluding 14 mass changes. Many requests touched only shared code outside the
+eight modules and many touched several, so the counts do not sum to the total. The owners are those set
+in week 4, when the director assigned owners to core/customer and core/scheduler.
 
 | Module | Owner (after week 4) | Merge requests | From teams other than the owner |
 |---|---|---|---|
@@ -214,40 +223,36 @@ sum to the total.
 | core/ledger | Billing | 170 | 12 (7%) |
 | core/scheduler | Billing | 45 | 19 (42%): Orders 11, Payments 6, Data 2 |
 | core/customer | Orders | 33 | 18 (55%): Billing 8, Customer Experience 6, Payments 4 |
-| core/permissions | undecided | 38 | Orders 17, Customer Experience 9, Billing 8, Payments 4 (canon) |
+| core/permissions | undecided | 38 | Orders 17, Customer Experience 9, Billing 8, Payments 4 |
 
-The co-change pairs, sorted by coupling share:
+The headline: **two clusters already match two teams.** Orders' modules change together, and so do
+Billing's, which is the cheap case. The co-change pairs that show it, and the exceptions:
 
 | Pair | Co-changes | Coupling share | Same owner? |
 |---|---|---|---|
-| customer and permissions | 22 | 22 of 33 = 67% | No (permissions has none) |
-| scheduler and invoicing | 27 | 27 of 45 = 60% | Yes, Billing |
-| order-capture and pricing-rules | 58 | 58 of 110 = 53% | Yes, Orders |
-| invoicing and ledger | 70 | 70 of 170 = 41% | Yes, Billing |
-| customer and order-capture | 12 | 12 of 33 = 36% | Yes, Orders |
-| catalog and pricing-rules | 27 | 27 of 80 = 34% | Yes, Orders |
-| permissions and order-capture | 11 | 11 of 38 = 29% | No |
-| catalog and order-capture | 15 | 15 of 80 = 19% | Yes, Orders |
-| scheduler and order-capture | 8 | 8 of 45 = 18% | No |
-| order-capture and invoicing | 38 | 38 of 230 = 17% | No |
-| permissions and invoicing | 6 | 6 of 38 = 16% | No |
-| ledger and order-capture | 5 | 5 of 170 = 3% | No |
+| customer and permissions | 22 | 67% (of 33) | No (permissions has none) |
+| scheduler and invoicing | 27 | 60% (of 45) | Yes, Billing |
+| order-capture and pricing-rules | 58 | 53% (of 110) | Yes, Orders |
+| invoicing and ledger | 70 | 41% (of 170) | Yes, Billing |
+| customer and order-capture | 12 | 36% (of 33) | Yes, Orders |
+| catalog and pricing-rules | 27 | 34% (of 80) | Yes, Orders |
+| order-capture and invoicing | 38 | 17% (of 230) | No |
+| ledger and order-capture | 5 | 3% (of 170) | No |
 
 Read against the four cases, the table says four things.
 
-1. **Two clusters already match two teams.** Orders' modules change together, and so do Billing's:
-   the cheap case. Splitting order-capture from pricing-rules into services would turn about 58
-   single changes a quarter into coordinated pairs.
-2. **The week 4 assignments fit the history.** scheduler changes with invoicing 60 percent of the
-   time (Billing); customer changes with order-capture more than with any other owned module (Orders).
-3. **customer and permissions behave like one unit split in two.** The funded permissions
-   extraction (Chapter 21) should cut this coupling by moving permission logic out of customer. It
-   informs the open ownership decision without settling it: the owner of permissions will review
-   changes from four teams, mostly arriving with customer changes, and Platform Operations made
-   none of the 38.
+1. **Two clusters already match two teams.** Splitting order-capture from pricing-rules into services
+   would turn about 58 single changes a quarter into coordinated pairs.
+2. **The week 4 ownership assignments fit the history.** scheduler changes with invoicing 60 percent of
+   the time, and went to Billing. customer changes with order-capture more than with any other owned
+   module, and went to Orders.
+3. **customer and permissions behave like one unit split in two.** The funded permissions extraction
+   (Chapter 21) should cut this coupling by moving permission logic out of customer. It informs the open
+   ownership decision without settling it. The owner of permissions will review changes from four
+   teams, mostly arriving with customer changes, and Platform Operations made none of the 38.
 4. **The Orders and Billing seam is wide in absolute terms.** order-capture and invoicing changed
-   together 38 times, about three a week, each needing both teams; the share is low only because
-   invoicing changes often. ledger and order-capture changed together only 5 times, yet the incidents
+   together 38 times, about three a week, each needing both teams. The share is low only because
+   invoicing changes often. ledger and order-capture changed together only 5 times. Yet the incidents
    between the two teams (Chapter 25) travel through data and runtime calls the table cannot show:
    Core's modules share one database schema, and no module owns its tables by rule.
 
@@ -298,8 +303,8 @@ every change crossing its interface now needs versioning and backward compatibil
 crossings are rare; ruinous when they are weekly.
 
 **Fault isolation against new failure modes.** A crashed service need not take the monolith down;
-in exchange come timeouts, retries, partial failures, and eventual consistency, each needing design
-and monitoring.
+in exchange come timeouts, retries, partial failures, and eventual consistency (data on two sides
+agrees only after a delay), each needing design and monitoring.
 
 **Team autonomy against shared infrastructure.** Services free teams to choose tools; Wang and
 colleagues' mature teams credited shared infrastructure built early. Northstar's four build systems
@@ -309,8 +314,9 @@ are autonomy without a platform (Chapter 32).
 queues; open contribution with owner review keeps both, at the cost of the owner's review load.
 
 **Transition cost.** Every extraction has a period in which old and new paths run together, data is
-synchronized, and two teams' attention is split. Constraint 3 rules out the rewrites most of
-Fritzsch and colleagues' respondents chose.
+synchronized, and two teams' attention is split. At Northstar,
+[constraint 3](../../glossary.md#the-five-constraints) (no funded rewrite of Core) rules out the
+rewrites most of Fritzsch and colleagues' respondents chose.
 
 ## Failure Modes
 
@@ -417,19 +423,18 @@ lack a clear owner, and why; that is where incidents go unanswered.
 ## Case Study
 
 This case is **fictional**. It continues the [first quarter](../../case-studies/northstar/first-quarter.md)
-and sets a decision at the start of quarter 2 (week 14). Its outcome is open. Facts not in the canon
-are recorded as Northstar additions for this chapter.
+and sets a decision at the start of quarter 2 (week 14). Its outcome is open.
 
 **Ownership at the start of quarter 2.** The baseline listed eight components as disputed, shared, or
 orphaned. In week 4 core/customer went to Orders, core/scheduler to Billing, auth-svc to Platform
-Operations, and webhooks to Payments and Integrations; notification-svc moves to Orders, and to tier
-2, from quarter 2 (canon). Three remain:
+Operations, and webhooks to Payments and Integrations. notification-svc moves to Orders, and to tier
+2, from quarter 2. Three remain:
 
 | Component | Tier | State | What is recorded |
 |---|---|---|---|
-| core/permissions | 1 | Owner undecided (Orders or Platform Operations) | Exemption with an interim incident lead; Priya Raman would accept it after week 26; Tom Becker's team cannot support Core Java (canon). Chapter 13 sets this decision |
+| core/permissions | 1 | Owner undecided (Orders or Platform Operations) | Exemption with an interim incident lead; Priya Raman (Orders manager) would accept it after week 26; the team of Tom Becker (Platform Operations manager) cannot support Core Java. Chapter 13 sets this decision |
 | search-svc | 2 | Disputed | Nominal owner Orders; authors now in Data and Analytics, whose draft charter lists it as disputed (Chapter 12) |
-| document-store | 2 | Orphaned, no nominal owner | Deployed by the shared shell script; one open critical vulnerability at baseline (canon). Its two callers are invoice-render (Billing), which stores rendered invoices, and core/order-capture (Orders), for order attachments (addition) |
+| document-store | 2 | Orphaned, no nominal owner | Deployed by the shared shell script; one open critical vulnerability at baseline. Its two callers are invoice-render (Billing), which stores rendered invoices, and core/order-capture (Orders), for order attachments |
 
 **Ines Carvalho's draft boundary proposal.** At the start of quarter 2 Ines Carvalho drafted, from the
 co-change analysis above, a proposal for which Core modules to keep and which to consider extracting.
@@ -444,12 +449,12 @@ Constraint 3 (no funded Core rewrite) and the two renewal dates (weeks 19 and 26
 | All eight | Enforce module dependencies in the Core build (new undeclared cross-module calls fail the build) | Turns convention into a checked boundary |
 | catalog | Named as the only plausible future extraction; no case today | One owner, tier 2, low cross-team change; no different runtime need recorded |
 
-The proposal extracts nothing in quarter 2. Ines's argument: Core now releases weekly (canon), which
-removed the strongest reason teams gave for wanting out; most coupling sits inside single-owner
-clusters; and the problems the data shows are ownership and module problems that a service would
-carry with it. Rafael Duarte, for Orders, argues for extracting order-capture: Orders makes about 25
-of Core's roughly 85 weekly merges (canon) and still waits for the shared weekly train. Marcus Oyelaran wants no Core boundary
-work before the accounting integration ships in week 19.
+The proposal extracts nothing in quarter 2. Ines makes three points. Core now releases weekly, which
+removed the strongest reason teams gave for wanting out. Most coupling sits inside single-owner
+clusters. And the problems the data shows are ownership and module problems that a service would carry
+with it. Rafael Duarte, a senior engineer in Orders, argues for extracting order-capture: Orders makes
+about 25 of Core's roughly 85 weekly merges and still waits for the shared weekly train. Marcus Oyelaran
+(Billing manager) wants no Core boundary work before the accounting integration ships in week 19.
 
 The director must decide in quarter 2 whether to adopt, modify, or reject the proposal, what would
 trigger a revisit, and how the three ownership gaps close. The exercises take this up; the outcome
@@ -474,16 +479,16 @@ the original post reports. State what the case is and is not evidence for, and w
 Northstar's Core.
 
 **F3.** Apply the chapter's ownership test (pager, review, runbook, dependencies) to six Northstar
-components using `components.csv` and the canon changes after week 4: core/customer, core/scheduler,
+components using `components.csv` and the ownership changes after week 4 listed in the case study: core/customer, core/scheduler,
 notification-svc, export-svc, search-svc, and document-store. For each, say which parts of the test
 it fails on the data available and what information you would need to complete the assessment.
 
 ### Applied Leadership
 
-**A1.** Tom Becker proposes extracting core/permissions from Core into a new service beside auth-svc,
+**A1.** Tom Becker (Platform Operations manager) proposes extracting core/permissions from Core into a new service beside auth-svc,
 owned by Platform Operations, arguing that a separate service would let his infrastructure engineers
-own it without learning Core's Java code. Using the co-change data, the decision path, and the canon
-about who changes the module, evaluate the proposal. Say what you would ask Tom to bring back, and
+own it without learning Core's Java code. Using the co-change data, the decision path, and the record
+of who changes the module, evaluate the proposal. Say what you would ask Tom to bring back, and
 how your answer affects the still-open ownership decision without making it.
 
 **A2.** document-store has no owner. Marcus Oyelaran refuses it because Billing is carrying the

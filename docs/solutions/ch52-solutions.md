@@ -177,7 +177,7 @@ scenarios to the board without a decision, or promises a fixed date from the opt
 
 ## X2 — Halvard and the EBITDA refinancing
 
-This is a hypothetical scenario, not Halvard canon.
+This is a hypothetical scenario, not part of Halvard's record.
 
 **Quantification.** Payroll about $102.9M. At 18 percent, $18.5M is capitalized (0.18 × 102.9); at 28
 percent, $28.8M (0.28 × 102.9). The difference is about $10.3M.

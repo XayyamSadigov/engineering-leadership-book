@@ -6,7 +6,7 @@ research measured, and what it does not mean), and shows how to combine it with 
 that a team is both candid and dependable. The running examples are two teams at Northstar
 Technologies, the fictional company in the [case study](../../case-studies/northstar/index.md):
 Payments and Integrations, whose operational discipline is the best in the organization, and Orders,
-after the management transition described in Chapter 2.
+whose manager was promoted from inside the team eight months before the director arrived.
 
 ## Why This Matters
 
@@ -73,12 +73,12 @@ future. This book uses three tests, and a team must pass all three (**this book'
 
 | Dimension | Question | Evidence to look at |
 |---|---|---|
-| Outcomes | Does the team deliver what it commits to, at a quality users notice? | Commitments delivered; change failure rate; customer-detected incidents |
+| Outcomes | Does the team deliver what it commits to, at a quality users notice? | Commitments delivered; [change failure rate](../../glossary.md#change-failure-rate) (share of releases that fail); customer-detected incidents |
 | Sustainability | Could the team keep this pace for two years without losing people? | After-hours pages per person; unplanned work; attrition; single-person components |
-| Learning | Does the team get better, or does the same failure happen twice? | Recurrences; corrective action closure; time for a new engineer to become independent |
+| Learning | Does the team get better, or does the same failure happen twice? | [Recurrences](../../glossary.md#recurrence) (repeats of a known failure); corrective action closure; time for a new engineer to become independent |
 
 Heroics fail the sustainability test: a weekend-saved release is a good outcome from a bad system.
-A team with few incidents but repeated ones fails the learning test. Chapter 18 owns delivery
+A team with few incidents but repeated ones fails the learning test. Chapter 18 covers delivery
 measurement; here the measures only show which test a team is failing.
 
 ### What psychological safety is
@@ -99,64 +99,48 @@ saw. Three features matter in practice:
 
 ### What the research measured
 
-The foundational study is Edmondson's field study of 51 work teams in one manufacturing company. Team
-psychological safety was associated with team learning behavior, and learning behavior mediated the
-relationship between safety and team performance; team efficacy (the team's belief in its own
-ability) was not associated with learning once safety was controlled for
-([Edmondson, 1999](../../references/bibliography.md#edmondson1999psychological)). This is a
-**research finding**, read at abstract level, correlational, from one company outside software. Its
-value is the mechanism: safety matters because it changes what a team does with information.
+Safety research is broad, mostly survey-based, and correlational. The studies this chapter relies on:
 
-Edmondson and Lei's review reports that organizational research has linked psychological safety to
-voice (speaking up), teamwork, team learning, and organizational learning
-([Edmondson and Lei, 2014](../../references/bibliography.md#edmondson2014psychological)). A 2017
-meta-analysis pooled 136 independent samples covering over 22,000 individuals and nearly 5,000
-groups, and tested, among other things, whether safety relates to task performance beyond related
-constructs such as good leader relations and work engagement
-([Frazier et al., 2017](../../references/bibliography.md#frazier2017psychological)). This book read
-only the abstract, which states what was tested but not the effect sizes. The evidence base is large
-and mostly survey-based; treat any specific number on a slide with caution unless you can trace it.
+| Study | Setting | Finding | Does not show |
+|---|---|---|---|
+| [Edmondson, 1999](../../references/bibliography.md#edmondson1999psychological) | 51 work teams in one manufacturing company | Safety went with team learning behavior; learning behavior carried the link from safety to performance. Team efficacy (belief in the team's ability) did not predict learning once safety was counted | Causation; anything about software |
+| [Edmondson and Lei, 2014](../../references/bibliography.md#edmondson2014psychological) | Review of organizational research | Safety has been linked to voice (speaking up), teamwork, team learning, and organizational learning | Effect sizes |
+| [Frazier et al., 2017](../../references/bibliography.md#frazier2017psychological) | Meta-analysis (a pooled analysis of many studies): 136 samples, over 22,000 people, nearly 5,000 groups | Tested whether safety relates to task performance beyond related constructs such as good leader relations and engagement. The abstract does not give effect sizes | A number for a slide |
+| [Google re:Work](../../references/bibliography.md#rework-team-effectiveness) | Project Aristotle: 180 Google teams (115 engineering, 65 sales) | Five dynamics of effective teams, in order: psychological safety, dependability, structure and clarity, meaning, impact. How a team worked together mattered more than who was on it | Peer review; anything outside one company |
 
-Google's re:Work guide reports that Project Aristotle studied 180 teams (115 engineering project teams
-and 65 sales pods) and lists five dynamics of effective teams in order: psychological safety,
-dependability, structure and clarity, meaning, and impact
-([Google re:Work](../../references/bibliography.md#rework-team-effectiveness)). The guide says
-effectiveness combined ratings by executives, team leaders, and team members with sales performance,
-and that how a team worked together mattered more than who was on it. This is **documented practice**
-from one company, not peer-reviewed. Note the second item: dependability, teammates reliably
-delivering quality work on time, sits next to safety in the same list. Google's own summary does not
-support reading safety as a replacement for accountability.
+Edmondson's study is a **research finding** whose value is the mechanism: safety matters because it
+changes what a team does with information. Project Aristotle is **documented practice** from one
+company. Its second item, dependability (teammates reliably delivering quality work on time), sits
+next to safety in the same list. Google's own summary does not support reading safety as a
+replacement for accountability.
 
 ### Evidence from software teams
 
-Software research is smaller and survey-based. Lenberg and Feldt surveyed 217 practitioners in 38
-agile teams at five Swedish organizations. Both psychological safety and **norm clarity** (how clear
-and accepted the team's standards of conduct are) were associated with self-assessed team performance
-and job satisfaction, and norm clarity was the stronger predictor, by about 30 percent for performance
-and 71 percent for satisfaction as the authors report it
-([Lenberg and Feldt, 2018](../../references/bibliography.md#lenberg2018psychological)). The authors
-name the weakness themselves: performance was self-assessed, and the model omits most of what affects
-it. It is a **research finding** from a small cross-sectional sample, and its message is pointed:
-clear standards were associated with performance at least as strongly as safety.
+Software research points the same way, and it stresses standards. Lenberg and Feldt surveyed 217
+practitioners in 38 agile teams at five Swedish organizations. Both psychological safety and **norm
+clarity** (how clear and accepted the team's standards of conduct are) went with self-assessed
+performance and job satisfaction. Norm clarity was the stronger predictor: by about 30 percent for
+performance and 71 percent for satisfaction, as the authors report it
+([Lenberg and Feldt, 2018](../../references/bibliography.md#lenberg2018psychological)). Performance was
+self-assessed and the sample small, so this is a modest **research finding**. Its message is pointed:
+clear standards mattered at least as much as safety.
 
-A larger survey of 1,118 participants in 161 software teams found psychological safety directly
-associated with better teamwork and less conflict
-([Verwijs and Russo, 2024](../../references/bibliography.md#verwijs2024double); abstract only).
-DORA's culture guidance uses Ron Westrum's typology, which classifies organizations by how they treat
-messengers: pathological cultures punish them, bureaucratic cultures neglect them, generative
-cultures train them. DORA states that high-trust cultures with good information flow predict delivery
-and organizational performance, and that its 2019 survey found psychological safety predictive of
-both and of productivity
-([DORA, generative culture](../../references/bibliography.md#dora-cap-generative-culture)).
-*Accelerate* is known for bringing the Westrum measure into delivery research
-([Forsgren et al., 2018](../../references/bibliography.md#forsgren2018accelerate)). That is
-**industry research**: survey-based, correlational, vendor-sponsored (Chapter 18 discusses its limits).
+Two larger sources agree on direction. A survey of 1,118 people in 161 software teams reports safety
+directly associated with better teamwork and less conflict
+([Verwijs and Russo, 2024](../../references/bibliography.md#verwijs2024double)). DORA (DevOps Research
+and Assessment, a long-running industry survey program) uses Ron Westrum's typology, which classifies
+cultures by how they treat messengers: pathological cultures punish them, bureaucratic cultures neglect
+them, generative cultures train them. DORA states that high-trust cultures with good information flow
+predict delivery and organizational performance, and that its 2019 survey found psychological safety
+predictive of both
+([DORA, generative culture](../../references/bibliography.md#dora-cap-generative-culture);
+[Forsgren et al., 2018](../../references/bibliography.md#forsgren2018accelerate)). That is **industry
+research**: survey-based, correlational, vendor-sponsored (Chapter 18 discusses its limits).
 
-Together, the evidence supports a modest claim strongly and a large claim weakly. **Strongly
-supported:** safety is consistently associated with speaking up, learning behavior, and teamwork,
-including in software teams. **Weakly supported:** that raising safety causes better delivery
-outcomes. No controlled study of that was found for this chapter. That is enough to invest in safety
-as a manager, not enough to promise a CFO a number.
+The evidence supports a modest claim strongly and a large claim weakly. **Strongly supported:** safety
+is consistently associated with speaking up, learning behavior, and teamwork, including in software
+teams. **Weakly supported:** that raising safety causes better delivery. No controlled study of that
+was found. That is enough to invest in safety as a manager, not enough to promise a CFO a number.
 
 ### Why safety is not the absence of standards
 
@@ -165,8 +149,8 @@ confuses **interpersonal** risk (being embarrassed, punished, or excluded for sp
 **performance** risk (the work judged against a bar). A team where nobody fears speaking and nobody is
 held to a commitment is not safe; it is comfortable, and its members usually know it.
 
-Lencioni's fable is known for arranging team dysfunctions as a pyramid, with absence of trust at the
-base and avoidance of accountability and inattention to results above it: a team that cannot be
+Lencioni's fable is known for arranging team dysfunctions as a pyramid. Absence of trust sits at the
+base, with avoidance of accountability and inattention to results above it: a team that cannot be
 candid will not hold its members to standards
 ([Lencioni, 2002](../../references/bibliography.md#lencioni2002five)). That is **expert opinion**
 told as a story. Allspaw describes a just culture as balancing safety and accountability, with
@@ -176,7 +160,7 @@ engineers not "off the hook" but expected to help make the system safer
 The line, then: **safety governs how people are treated when they speak; accountability governs what
 is expected of them afterward.** An engineer who reports that their change broke production is
 protected from ridicule and punishment for the report, and is still expected to tell the full story
-and help fix the system. Chapter 25 owns this boundary for incidents in
+and help fix the system. Chapter 25 covers this boundary for incidents in
 [blameless review](../05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md#blameless-review-and-its-critics).
 
 ### What accountability means in a team
@@ -199,14 +183,21 @@ Point 4 is where friendly teams break down, postponing the hard conversation (Ch
 **Liking is not safety.** In a team that likes its manager, criticizing the manager can feel like
 betraying a friend, so concerns go unsaid or go around the manager. **Absence of conflict is not
 safety either.** Months of design reviews without disagreement usually mean disagreement has become
-costly; Chapter 6 owns conflict. The test for safety is not how pleasant meetings are. It is where
+costly; Chapter 6 covers conflict. The test for safety is not how pleasant meetings are. It is where
 bad news goes first, and how long it takes to arrive.
 
 ## Engineering Organization Example
 
-This example reads two Northstar teams in the baseline quarter. Incident figures are computed from
+!!! info "Northstar so far"
+    This example is set in the baseline quarter, the 90 days before the director arrived. Northstar had
+    30 Sev1 and Sev2 incidents (its two highest severity levels), 34 percent of capacity went to
+    unplanned work, and 41 percent of committed roadmap items shipped on time. See the
+    [timeline](../../case-studies/northstar/timeline.md).
+
+This example reads two Northstar teams in that quarter. Incident figures come from
 [`incidents-last-quarter.csv`](../../case-studies/northstar/data/incidents-last-quarter.csv); the
-near-miss figures are new for this chapter and **illustrative**. All Northstar data is fictional.
+near-miss count is **illustrative**. [Severity](../../glossary.md#severity-sev1-sev2-sev3) levels are
+defined in the glossary. All Northstar data is fictional.
 
 | Signal, baseline quarter | Payments and Integrations | Orders |
 |---|---|---|
@@ -220,8 +211,7 @@ near-miss figures are new for this chapter and **illustrative**. All Northstar d
 | Near misses recorded by the team | 17 | No near-miss log |
 | Manager's time on people work | 35% | 15% |
 
-Restoration times: Payments and Integrations 25, 40, 70, 85, 150, 240 minutes (median 77.5); Orders
-110, 160, 180, 185, 195, 265, 380 (median 185). Six and seven incidents are small samples.
+Medians come from six and seven incidents, which are small samples.
 
 **Payments and Integrations** is strongest on outcomes: five of six incidents caught by monitoring,
 two of three commitments delivered, one recurrence (INC-413, a partner bank outage with no fallback
@@ -237,17 +227,18 @@ every risk it recognizes and blind to a practice it considers normal. Safety mak
 speakable, not visible; a standard (reviewed flag changes, from week 6 of the director's first
 quarter) did that.
 
-**Orders** is a friendly team with a well-liked manager and weak results: one of four commitments,
-Sprint Goals met in 2 of the last 6 sprints, four of seven incidents found by customers, and three
-recurrences, including INC-421, a bulk-upload failure Priya Raman had fixed herself months earlier and
-whose follow-up test, assigned to her, was never written. The most telling safety signal is indirect.
+**Orders** is a friendly team with a well-liked manager and weak results. It delivered one of four
+commitments and met its Sprint Goals in 2 of the last 6 sprints. Customers found four of its seven
+incidents, and three were recurrences. One was INC-421, a bulk-upload failure that Priya Raman (Orders'
+engineering manager) had fixed herself months earlier; its follow-up test, assigned to her, was never
+written. The most telling safety signal is indirect.
 Senior engineers Rafael Duarte and Aisha Bello raised their frustration that decisions waited for
 Priya with the new director in their first conversations, not with Priya. The team was comfortable,
 but not safe enough to tell its own manager the most important thing about how it worked.
 
 **A rough cost of the difference.** Assume, generously, that a team with clear ownership would have
 completed the follow-up actions and prevented all three Orders recurrences. Their restoration times
-were 185, 265, and 180 minutes: 630 minutes, about 10.5 hours, of customer-facing failure. Not all of
+add up to about 10.5 hours of customer-facing failure. Not all of
 it was full unavailability of the contractual paths, but for scale, a 99.9 percent commitment allows
 about 2.2 hours of unavailability a quarter. Follow-through is not a soft topic.
 
@@ -287,7 +278,7 @@ of their own decisions and acting visibly on it.
 | Customers find incidents far more often than the team | Low safety or weak detection; check which |
 | Commitments slip at the deadline, not before | Risks not raised (safety) or no owner of the date (accountability) |
 | Corrective actions open with no discussion | Low accountability |
-| Concerns about the manager reach the skip-level first | Low safety toward the manager |
+| Concerns about the manager reach the [skip-level](../../glossary.md#skip-level) (the manager's manager) first | Low safety toward the manager |
 
 ## Trade-offs
 
@@ -298,12 +289,12 @@ stands until new information arrives (Chapter 13 covers decision rights).
 **Accountability against comfort.** Clear ownership feels like pressure at first to people used to
 diffuse responsibility; say so in advance.
 
-**Local practice against consistency.** Elena Sokolova's team's habits work partly because the team
-chose them. Mandating the same ritual everywhere copies the form and loses the ownership. Standardize
+**Local practice against consistency.** The habits of Elena Sokolova (Payments and Integrations'
+manager) work partly because her team chose them. Mandating the same ritual everywhere copies the form and loses the ownership. Standardize
 outcomes (near misses recorded, actions owned) and let teams choose rituals.
 
 **Measurement against honesty.** Publishing team safety scores and asking managers to raise them
-invites teams to answer what management wants to hear. Chapter 14 owns team health assessment.
+invites teams to answer what management wants to hear. Chapter 14 covers team health assessment.
 
 ## Failure Modes
 
@@ -328,7 +319,8 @@ flowchart TD
 ```
 
 This is the loop behind INC-421. Signal: open follow-up actions owned by the manager.
-Countermeasure: the one Chapter 2 applied, handing follow-through to a named engineer with a date.
+Countermeasure: hand follow-through to a named engineer with a date, as Priya did in quarter 1 when
+two senior engineers took over review of core/order-capture.
 
 **Safety measured, not built.** Survey scores rise on request while near misses stay flat. Track
 behavior alongside any survey.
@@ -397,10 +389,9 @@ For a manager moving a team from one dial to both:
 
 ## Case Study
 
-This case is **fictional**. It uses the [baseline data](../../case-studies/northstar/baseline-data.md)
-and is set at the start of quarter 2, after the events on [the first quarter](../../case-studies/northstar/first-quarter.md)
-page. Payments and Integrations' operations review and near-miss log are recorded on the baseline page.
-The question at the end is a decision the reader faces.
+This case is **fictional**. It is set at the start of quarter 2 (week 14). By then the director's
+first quarter had assigned owners to most unowned components, published severity definitions, and cut
+Sev1 and Sev2 incidents from 30 to 21. The question at the end is a decision the reader faces.
 
 **How Payments and Integrations works.** For about two years before the director arrived, Elena
 Sokolova's team had held a 30-minute weekly operations review with a rotating facilitator. The
@@ -410,14 +401,14 @@ baseline quarter it had 17 entries, most written by the person who had nearly ca
 Items at risk on the Kanban board are raised in the same review by their owners, usually before they
 slip.
 
-When the director asked, at the start of quarter 2, why direct edits on the configuration server had
-never appeared in the log, the team's informal tech lead said everyone had always worked that way, so
-nobody had seen it as a risk. High safety and high accountability had still left a practice nobody
+At the start of quarter 2, the director asked why direct edits on the configuration server had never
+appeared in the log. The team's informal tech lead said everyone had always worked that way, so nobody
+had seen it as a risk. High safety and high accountability had still left a practice nobody
 could see. The fix had come from a standard, not from more candor.
 
 **Orders after the transition.** In quarter 1 Priya Raman capped her hands-on time, Aisha Bello led
 the bulk-ordering implementation, and Rafael Duarte and Aisha Bello took over review of
-core/order-capture (Chapter 2). Accountability moved toward the team. What the director did not yet
+core/order-capture. Accountability moved toward the team. What the director did not yet
 know was whether the team would now tell Priya what it had told a newcomer in its first conversations.
 
 At the start of quarter 2, Priya asked whether Orders should copy Elena's operations review, near-miss
@@ -432,9 +423,9 @@ The director's draft advice had three parts. First, Priya asks each senior engin
 decision she should have made differently, and acts on one answer before any new meeting. Second,
 Orders adopts the near-miss log and a weekly review, with follow-up actions owned by engineers, not
 Priya. Third, after a quarter, they check whether near misses appear and whether risks to the
-bulk-ordering date surface before the checkpoint rather than at it. Priya's concern was cost: the
-feature was due at the end of quarter 2, and a 30-minute weekly meeting for 16 people is eight
-hours a week. Exercise A1 asks you to decide.
+bulk-ordering date surface before the checkpoint rather than at it. Priya's concern was cost. The
+feature was due at the end of quarter 2, and Orders now had 16 engineers (two quality engineers
+joined in week 10), so a 30-minute weekly meeting costs eight hours a week. Exercise A1 asks you to decide.
 
 ## Exercises
 
@@ -444,31 +435,32 @@ Solutions are in [chapter 11 solutions](../../solutions/ch11-solutions.md). Nort
 ### Foundational
 
 **F1.** A team lead tells you: "We have great psychological safety. Nobody has been fired for an
-outage in five years, we never argue in meetings, and we don't do deadlines because they stress
+outage in five years. We never argue in meetings. And we don't do deadlines, because they stress
 people out." Assess each of the three claims against the chapter's definitions of safety and
 accountability, and say what evidence you would ask for before agreeing or disagreeing.
 
-**F2.** Classify each team into one of the four states and name the one observation that would most
-change your classification: (a) green dashboards, and the last three outages were reported by
+**F2.** Classify each team into one of the four states. For each, name the one observation that would
+most change your classification: (a) green dashboards, and the last three outages were reported by
 customers; (b) lively retrospectives, and an action list that has not shrunk in six months; (c) near
 misses logged weekly, and dates renegotiated two weeks early; (d) engineers who do what is assigned
 and never propose work.
 
 **F3.** A vice president's slide says: "Google proved psychological safety is the number one driver of
-team performance, so we will tie each manager's bonus to their team's safety survey score." Using what
+team performance. So we will tie each manager's bonus to their team's safety survey score." Using what
 Edmondson (1999), Project Aristotle, and Lenberg and Feldt actually measured, assess the first
 sentence, then assess the plan.
 
 ### Applied Leadership
 
-**A1.** You are the director at the start of quarter 2. Priya Raman asks whether Orders should adopt
+**A1.** You are the director at the start of quarter 2. Priya Raman (Orders' engineering manager) asks whether Orders should adopt
 Elena Sokolova's weekly operations review and near-miss log. The bulk-ordering feature is due at the
 end of the quarter, and the meeting would cost eight hours a week. Decide what you recommend,
 in what order, what you would measure after one quarter, and what result would change your course.
 
 **A2.** In Payments and Integrations, the informal tech lead tells you privately that one strong
-engineer has missed three commitments in two months without warning, and the team does not want to
-raise it in the operations review because "the review is supposed to be safe". Elena asks how to
+engineer has missed three commitments in two months without warning. The team does not want to
+raise it in the operations review because "the review is supposed to be safe". Elena Sokolova, the
+team's manager, asks how to
 handle accountability without damaging what the team has built. Advise her: where the conversation
 happens, what is said, and what the team should see.
 
@@ -479,15 +471,16 @@ you change first, what you leave alone, and which signals you expect to move, in
 
 ### Executive Decision-Making
 
-**X1.** Hypothetically, after a bad quarter, Helena Marsh proposes that each engineering manager's
+**X1.** Hypothetically, after a bad quarter, Helena Marsh (CEO) proposes that each engineering manager's
 bonus include their team's Sev1 and Sev2 count, "so managers are accountable for reliability". As CTO,
 decide whether you support it, what it would do to severity ratings and reporting, and what you would
 propose instead to give the CEO the accountability she wants.
 
-**X2.** Victor Lindqvist, impressed by Payments and Integrations, wants every Northstar team to run
-Elena Sokolova's weekly operations review from next quarter, with the same agenda. As director, decide
-what to standardize across the six teams, what to leave to each team, what it costs in engineer-hours,
-and how you would know within two quarters whether it worked.
+**X2.** Victor Lindqvist (CTO), impressed by Payments and Integrations, wants every Northstar team to
+run Elena Sokolova's weekly operations review from next quarter, with the same agenda. As director,
+decide what to standardize across the six teams, what to leave to each team, and how you would know
+within two quarters whether it worked. Estimate the cost in engineer-hours for Northstar's 80
+engineers, and in dollars at a fully loaded cost of $185,000 per engineer per year.
 
 ## Reflection Questions
 
