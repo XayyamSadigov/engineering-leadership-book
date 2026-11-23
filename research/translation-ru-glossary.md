@@ -77,6 +77,23 @@ changes, the Russian page is re-synced or the change is noted at the end of this
     (give a Russian gloss in parentheses on first use if needed), incident ids (INC-401), decision ids
     (DL-07), ADR numbers, URLs.
 
+### 2a. Editing patterns (binding; from the literary-editing pilot, chapters 2 and 13)
+
+Every chapter goes through a second, Russian-only literary edit (`research/translation-ru-editing-brief.md`).
+Translators should already avoid what the editors fixed most often; the full lists, with real before → after
+pairs, are in `research/translation-ru/editing-ch02.md` and `editing-ch13.md` (read both). The main ones:
+
+1. English skeletons repeated in a row («X означает, что… Y означает, что…») → rebuild («Из-за X…»).
+2. «На уровне команды / организации…» as paragraph openers copied from English → vary or drop.
+3. Chains of «который» and unclear pronouns → split the sentence.
+4. Calques: «в терминах», «роли не играл», «факты на столе», «лицо, принимающее решение», «голос, но не
+   право голоса», «кейс оставляет X» → plain Russian.
+5. Missing connectives where English relies on juxtaposition → «но», «то есть», «поэтому», «зато».
+6. «решение» is ambiguous (decision / answer) in chapters about decisions → «ответ», «вариант» where meant.
+7. Slang («рулить») and stray «ты» → neutral register, «вы».
+8. **Non-breaking spaces attach a label number to the word before it**, not after: «неделя⍽14, начало
+   квартала⍽2», «главы⍽2», «уровень⍽4 или⍽5», «День⍽90» (⍽ = U+00A0).
+
 ## 3. Term base
 
 Rule codes: **T** translate with the given term; **E** keep in English (Latin script, no translation);
