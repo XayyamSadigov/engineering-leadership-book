@@ -3,11 +3,22 @@
 Few engineering organizations can say what quality means for their own product. This chapter
 separates the three meanings of quality that leaders mix up (external, internal, and delivery
 quality) and turns each into a few measurable properties of a specific product. It compares four ways
-of owning quality (central QA, embedded quality engineers, team ownership, and platform-enabled
-ownership) and says when each fits. And it shows how to choose a few quality measures, with an
+of owning quality (central quality assurance or QA, embedded quality engineers, team ownership, and
+platform-enabled ownership) and says when each fits. And it shows how to choose a few quality measures, with an
 honest account of how each misleads. The running example is Northstar Technologies, the fictional
-company in the [case study](../../case-studies/northstar/index.md). Chapter 27 combines these choices
-into a full transformation program.
+company in the [case study](../../case-studies/northstar/index.md).
+
+**Part V at a glance.** The nine quality chapters work as one system. This chapter defines quality
+and who owns it. Chapter 20 turns the few properties that must hold everywhere into standards;
+Chapter 21 prices technical debt; Chapter 22 designs the tests; Chapter 23 shapes the path from
+merge to customer. Chapter 24 sets reliability targets and readiness, Chapter 25 handles incidents and
+what they teach, and Chapter 26 treats security as one more quality attribute. Chapter 27 combines
+them into one funded program. Each chapter follows one workstream of the same Northstar quarter, the
+director's first. The director arrives after a quarter of 30 serious incidents (Sev1 and Sev2, defined below) and publishes severity
+definitions in week 3. In week 4 the director reserves 12 FTE (full-time equivalent engineers) for
+prevention work, and Core, the main monolith, moves from a two-week to a weekly release in week 5.
+The seven QA engineers join product teams in week 10. By day 90, serious incidents have fallen from
+30 to 21. The [timeline](../../case-studies/northstar/timeline.md) lists every week.
 
 ## Why This Matters
 
@@ -77,7 +88,7 @@ it makes quality decline without anyone deciding to lower standards.
 The second half is about ownership. A property should be owned by whoever makes the decisions that
 change it. The authoring team decides how much of its logic is tested; a platform team decides
 whether contract tests are cheap to write; product and engineering together decide whether a
-requirement was understood. Assigning all of these to one quality assurance (QA) group puts ownership
+requirement was understood. Assigning all of these to one QA group puts ownership
 where the information arrives last.
 
 ## Deep Conceptual Explanation

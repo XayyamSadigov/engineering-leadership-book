@@ -156,9 +156,8 @@ that measures whether calibration meetings as engineering organizations run them
 the evidence is thin. The practice below is **practitioner consensus** plus this book's
 recommendation.
 
-Calibration fails predictably: the most articulate manager wins, absent managers' cases lose,
-late cases get less attention, and quotas turn it into a negotiation. Countermeasures (**this book's
-recommendation**):
+Calibration also adds biases of its own, described in the next subsection. Countermeasures (**this
+book's recommendation**):
 
 - A written **evidence packet** per case, each claim linked to an artifact (design document, incident
   review, merge requests, peer statements) and a ladder dimension.
@@ -169,6 +168,22 @@ recommendation**):
   budget limits how fast pay moves.
 - An **outcome review**: promotion rates by team, level, and any group your jurisdiction lets you
   analyze, against the eligible population.
+
+### Bias inside the calibration meeting
+
+A calibration meeting removes some of one manager's bias and adds the room's. The patterns are
+predictable (**practitioner consensus**, consistent with the research above):
+
+| Pattern | What it looks like | Counter |
+|---|---|---|
+| Advocacy | The most articulate or senior manager's cases pass | Independent readers present; nominator answers questions only |
+| Absence and order | Cases of absent managers, and late cases, get less attention | Fixed time per case; randomize order; revisit the first and last cases |
+| Halo and recency | One visible project or the last month decides the case | Evidence across the whole period, by dimension |
+| Affinity | Cases from people like the room read as stronger | Written evidence first; ask "what would we need to see?" before discussing the person |
+| "Potential" | Forecasts replace demonstrated scope | Strike potential from the form; decide on evidence only |
+
+Afterwards, compare outcomes by team and, where lawful, by group (see the outcome review below). A
+pattern the meeting cannot explain from the evidence is a finding about the meeting.
 
 ### A "not yet" that can be used
 
@@ -207,6 +222,26 @@ and who the manager is are not such reasons. A raise that corrects a gap with no
 increase**, the regular raise tied to performance, which is paid from an annual **merit budget**. The commonest equity failure in growing companies is
 **compression**: new hires come in at market while existing pay rises a few percent a year, until the
 newcomer earns more than the person who trained them.
+
+### Total compensation and choosing a level at offer
+
+Base salary is only part of what engineers are paid. **Total compensation** usually adds a cash bonus
+(often a target percentage of base, paid on company or individual results), equity (stock options or
+restricted stock units that vest over several years), and benefits. In most mid-size companies HR and
+finance set the bonus plan, equity pools, and benefits; the engineering manager controls the inputs:
+the level, the performance evidence, and the case for an exception. Know what each part is worth for
+your reports and explain it plainly. An engineer who sees only base pay compares it with an outside
+offer that leads with total compensation, and draws the wrong conclusion in both directions.
+
+The level chosen at offer matters more than the starting salary, because it sets the band, the
+expectations, and the first promotion date. Choose it from the hiring scorecard's evidence against
+your ladder (Chapter 7), not from the candidate's current title or pay (**this book's
+recommendation**). Titles differ between companies, and pay history carries past inequities forward;
+some jurisdictions forbid asking about it. Two errors are common. Leveling down to fit a budget
+produces a hire who is underpaid and doing the next level's work, and an equity problem within a year.
+Leveling up to win a candidate produces a person judged against expectations they were never assessed
+for. If the evidence sits between two levels, offer the lower one with a written review date, and say
+what evidence would move it.
 
 ### Pay transparency and equal pay
 

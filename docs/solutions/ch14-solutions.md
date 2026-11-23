@@ -129,6 +129,32 @@ close decisions after clear expectations, consider leadership.
 A good answer checks structure before relationships and names evidence that would change its mind. The
 weak answer goes straight to a team-building event.
 
+## A4 — A team with no overlap
+
+**Overlap window.** With no natural overlap, create a small one and share its cost: one hour, two or
+three days a week, with Austin starting early on some days and Bangalore staying late on others. Use it
+for planning, disagreement, and one-on-ones, never for status. Cost: some early mornings and late
+evenings for everyone, split fairly and written down, so the smaller site does not carry it alone.
+
+**Handoffs.** A short written note at the end of each site's day in one shared place: what changed,
+what is blocked, which decision is needed from whom. Cost: about fifteen minutes a person a day.
+
+**Decisions.** Written proposals with a comment window that covers a full working day at both sites,
+a named decider, and the decision posted where both sites look. Urgent decisions go to whoever is on
+shift, with a note for the other site. Cost: most decisions take a day longer.
+
+**On-call.** Follow-the-sun fits a tier 2 service: each site covers its own working hours, with a
+written incident handoff. It needs both sites able to act on the whole service, so pair across sites
+on changes and write runbooks before on-call starts. If Bangalore cannot yet act alone, Austin carries
+nights for a while, and that cost should be visible and time-limited.
+
+**Onboarding.** The new Bangalore hire gets a buddy in Bangalore, pairing in the overlap with an
+experienced Austin engineer, and a review turnaround target for their changes. The proximity finding
+says newer engineers lose most feedback at a distance, so this is where to spend senior time.
+
+A good answer prices each choice and spreads the inconvenience. The weak answer schedules every
+meeting in Austin's hours, or declares the team "async" without saying how decisions get made.
+
 ## X1 — Four office days and the Bogotá question
 
 **What the evidence supports.** The only randomized trial found two home days cost nothing measurable in

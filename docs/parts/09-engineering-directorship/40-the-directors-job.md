@@ -320,6 +320,31 @@ least informal contact with the director, so their concerns travel the longest f
 Schedule the other site first (Chapter 14 covers distance). These signals feed the operating
 cadences of Chapter 37 (the weekly operational review, the monthly business review).
 
+### The director's own sustainability and peer network
+
+The director is often the loneliest seat in the organization, and the one whose fatigue costs most.
+The managers report to the director, the executives are a level up, and the director may have no
+peer inside engineering. Nobody sees the director's week whole, so nobody else will protect it.
+
+**Peers.** Build a small network outside the reporting line (**this book's recommendation**):
+
+- directors in other functions (product, customer success, finance), who see the same executives
+  from another side;
+- two or three engineering directors at other companies, met monthly, for the question "is this
+  normal?";
+- a coach or a former manager for the decisions you cannot discuss inside, such as a manager's
+  performance or your own doubts.
+
+Use them to calibrate your judgment, not to vent about named people. Anything confidential stays out.
+
+**Sustainability.** The same signals that warn you about an engineer apply to you ([Chapter 10](../02-people-management/10-motivation-retention-and-senior-engineers.md)
+treats burnout). Three are specific to directors: firsthand hours are the first thing cut in a bad week; the
+unallocated buffer disappears for a month at a time; and irritation with managers who bring problems,
+which teaches them to stop bringing them. Practical guards: a fixed end to the working day that your
+managers know about, no incident response (leave it to trained incident commanders), and one
+manager who has explicit permission to tell you when you look overloaded. A director who runs at full
+capacity has no room for the incident, the resignation, or the reorganization that will arrive.
+
 ## CTO Perspective
 
 A CTO above several directors faces the same problem with three hops instead of two. The CTO's signal

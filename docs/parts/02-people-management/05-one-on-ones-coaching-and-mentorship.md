@@ -237,7 +237,7 @@ Write as if the person will read it one day; your HR team can tell you whether t
 
 Once a month, read each document and write three lines: what this person did, what they are working
 toward, what you owe them. At review time, the record replaces recollection. Chapter 8 uses it for
-promotion cases and Chapter 9 for performance problems.
+promotion cases and Chapter 9 for written reviews and performance problems.
 
 ## Engineering Organization Example
 

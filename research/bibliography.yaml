@@ -15667,3 +15667,231 @@
     practitioners. Year inferred from the Publishers Weekly review (dated 2023-10-10, publication
     "Jan.") with retailer listings giving January 2024; the author's page states no date. The publisher's
     page returned HTTP 403.
+
+# Merged on 2026-11-23 from research/pending-sources/ (readability phase 4).
+# from phase4-ch01-10.yaml
+- id: who2019burnout
+  type: web-guide
+  title: 'Burn-out an "occupational phenomenon": International Classification of Diseases'
+  authors:
+  - World Health Organization
+  year: 2019
+  venue: World Health Organization, news item, 28 May 2019
+  url: https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases
+  evidence_class: standard
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases
+  verified_on: '2026-11-23'
+  claims:
+  - text: ICD-11 defines burn-out as a syndrome conceptualized as resulting from chronic workplace stress
+      that has not been successfully managed.
+    basis: full-text
+  - text: 'It has three dimensions: energy depletion or exhaustion; increased mental distance from the job,
+      or negativism or cynicism about it; and reduced professional efficacy.'
+    basis: full-text
+  - text: It is classified as an occupational phenomenon, not a medical condition, and refers specifically
+      to the occupational context.
+    basis: full-text
+  caveats: A classification and definition, not evidence about causes, prevalence, or which interventions
+    work.
+  access_notes: News page read in full.
+# from phase4-ch19-27.yaml
+- id: otel-signals
+  type: web-guide
+  title: Signals
+  authors:
+  - OpenTelemetry Authors
+  year: 2026
+  venue: OpenTelemetry documentation
+  url: https://opentelemetry.io/docs/concepts/signals/
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://opentelemetry.io/docs/concepts/signals/
+  verified_on: '2026-11-23'
+  claims:
+  - text: OpenTelemetry lists traces, metrics, logs, and baggage as supported signals, defining a trace as
+      the path of a request through an application, a metric as a measurement captured at runtime, and a
+      log as a recording of an event; profiles are still in development.
+    basis: full-text
+  caveats: Project documentation, continuously updated; year is the access year. Describes one
+    vendor-neutral instrumentation standard, not evidence about outcomes.
+- id: otel-sampling
+  type: web-guide
+  title: Sampling
+  authors:
+  - OpenTelemetry Authors
+  year: 2026
+  venue: OpenTelemetry documentation
+  url: https://opentelemetry.io/docs/concepts/sampling/
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://opentelemetry.io/docs/concepts/sampling/
+  verified_on: '2026-11-23'
+  claims:
+  - text: The page calls sampling one of the most effective ways to reduce the costs of observability,
+      says systems generating very little data need not sample, and distinguishes head sampling (decided
+      early, cannot use the whole trace) from tail sampling (decided after seeing most of the trace, for
+      example to keep all traces with errors, but harder to operate).
+    basis: full-text
+  caveats: Project documentation; year is the access year. Its statement that a 1 percent sample can
+    represent high-volume traffic accurately is not used in the book.
+- id: otel-context-propagation
+  type: web-guide
+  title: Context propagation
+  authors:
+  - OpenTelemetry Authors
+  year: 2026
+  venue: OpenTelemetry documentation
+  url: https://opentelemetry.io/docs/concepts/context-propagation/
+  evidence_class: official-documentation
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://opentelemetry.io/docs/concepts/context-propagation/
+  verified_on: '2026-11-23'
+  claims:
+  - text: Context propagation carries identifiers such as trace and span IDs between services so that
+      telemetry can be correlated wherever it is generated; SDKs can attach these IDs to log records so
+      logs can be read in the context of the trace they belong to.
+    basis: full-text
+  caveats: Project documentation; year is the access year.
+- id: owasp-sast-tools
+  type: web-guide
+  title: Source Code Analysis Tools
+  authors:
+  - OWASP Foundation
+  year: 2026
+  venue: OWASP Foundation
+  url: https://community.owasp.org/Source_Code_Analysis_Tools
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://community.owasp.org/Source_Code_Analysis_Tools
+  verified_on: '2026-11-23'
+  claims:
+  - text: OWASP describes static analysis (SAST) tools as scaling well in CI and reliably finding
+      well-known flaw classes such as SQL injection, while identifying only a relatively small percentage
+      of application security flaws, producing high numbers of false positives, struggling with
+      authentication, access control, and cryptography problems, and often missing configuration issues.
+    basis: full-text
+  caveats: Community page; the old URL owasp.org/www-community/Source_Code_Analysis_Tools redirects here.
+    Practitioner consensus, not a measured comparison.
+- id: owasp-dast-tools
+  type: web-guide
+  title: Vulnerability Scanning Tools
+  authors:
+  - OWASP Foundation
+  year: 2026
+  venue: OWASP Foundation
+  url: https://community.owasp.org/Vulnerability_Scanning_Tools
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://community.owasp.org/Vulnerability_Scanning_Tools
+  verified_on: '2026-11-23'
+  claims:
+  - text: OWASP describes dynamic application security testing (DAST) tools as scanners that test a
+      running web application from the outside for flaws such as cross-site scripting, SQL injection, and
+      insecure server configuration, and says each tool has its own strengths and weaknesses.
+    basis: full-text
+  caveats: Community page listing tools without endorsement; the old www-community URL redirects here.
+    It does not quantify DAST limitations.
+- id: owasp-vuln-disclosure
+  type: web-guide
+  title: Vulnerability Disclosure Cheat Sheet
+  authors:
+  - OWASP Cheat Sheet Series Team
+  year: 2026
+  venue: OWASP Cheat Sheet Series
+  url: https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html
+  evidence_class: practitioner
+  access_level: full-text
+  verified_fields:
+  - title
+  - authors
+  - venue
+  - url
+  verified_via:
+  - https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html
+  verified_on: '2026-11-23'
+  claims:
+  - text: The cheat sheet says the most important step is giving researchers a way to contact the
+      organization, recommends a disclosure policy with scope, safe harbor for good-faith testing, and a
+      published contact such as security.txt, and says bug bounty programs should only be used by
+      organizations that already have a mature vulnerability disclosure process.
+    basis: full-text
+  - text: It lists bug bounty disadvantages including cost, large numbers of junk or false-positive
+      reports, the need for skilled triage staff, and risk to live systems from unskilled testers.
+    basis: full-text
+  caveats: Practitioner guidance; advises taking legal advice on safe-harbor wording.
+# from phase4-ch50-55.yaml
+- id: ec2026aiact
+  type: web-guide
+  title: AI Act | Shaping Europe's digital future
+  authors:
+  - European Commission
+  year: 2026
+  venue: European Commission, Shaping Europe's digital future (policy page on Regulation (EU) 2024/1689), last updated 19 October 2026
+  url: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+  evidence_class: standard
+  access_level: official-summary
+  verified_fields:
+  - title
+  - authors
+  - year
+  - venue
+  - url
+  verified_via:
+  - https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+  verified_on: '2026-11-23'
+  claims:
+  - text: The AI Act is Regulation (EU) 2024/1689, laying down harmonised rules on artificial intelligence;
+      it entered into force on 1 August 2024.
+    basis: official-summary
+  - text: 'It sorts AI uses into four risk levels: unacceptable (prohibited practices), high risk (strict
+      obligations before market placement), transparency risk (disclosure duties), and minimal or no risk
+      (no rules), which the page says covers most AI currently used in the EU.'
+    basis: official-summary
+  - text: People should be made aware when they interact with a chatbot, and providers of generative AI must
+      ensure AI-generated content is identifiable.
+    basis: official-summary
+  - text: Obligations for general-purpose AI models apply from 2 August 2025; the Act is generally applicable
+      from 2 August 2026 with exceptions; high-risk rules for Annex III use cases apply from 2 December 2027
+      and for products under Annex I from 2 August 2028.
+    basis: official-summary
+  caveats: The Commission's summary page, not the legal text; dates have been amended (the page cites the AI
+    Omnibus) and may change again. Not legal advice; applicability to a given product needs counsel.
+  access_notes: Official policy page read in session on 2026-11-23.

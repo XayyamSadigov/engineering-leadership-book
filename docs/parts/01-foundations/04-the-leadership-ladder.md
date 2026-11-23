@@ -119,6 +119,31 @@ engineering organization each see a valid but incomplete version of the problem,
 executive's job is to merge them and solve the company's problem rather than advocate for engineering
 ([Larson, 2023b](../../references/bibliography.md#larson2023balancing)). This is **expert opinion**.
 
+### Diagnosing the level someone actually works at
+
+A title says what level someone was given; their calendar and decisions show the level they work at.
+The method below is **this book's recommendation**. It reuses Chapter 1's calendar audit and asks three
+questions of each block of time.
+
+| Level | Decisions only this level makes | Horizon of open commitments | Who waits on them |
+|---|---|---|---|
+| Tech lead | Design choices inside the team | Weeks | The team's engineers |
+| Engineering manager | Assignments, hiring, feedback, the team's commitments | One to two quarters | The team, product partner |
+| Senior manager or director | Team boundaries, staffing across teams, which managers to develop | Two to four quarters | Managers, peer directors |
+| VP or CTO | Portfolio allocation, organization design, technical strategy | One year or more | Directors, executive peers |
+| Staff engineer | Technical direction across teams within a mandate | One to four quarters | Several teams' tech leads |
+
+1. **Sample two weeks** of calendar and decisions, as in Chapter 1.
+2. **Tag each block** with the lowest level that could have done it. A director reviewing one team's
+   pull requests is working at tech-lead level for that hour.
+3. **Check the open commitments.** List what the person has promised and by when. If almost nothing
+   runs past this quarter, they are working below a director's horizon, whatever the title says.
+
+Read the result as a share, not a verdict. Everyone spends some time below their level, during
+incidents for example. A director whose decisions mostly belong one level down is showing
+previous-level gravity (see Failure Modes). An engineer without the title whose commitments and
+waiting list match the next level is doing unrecognized work, which is promotion evidence (Chapter 8).
+
 ### The staff-plus track in parallel
 
 The staff-plus track exists so that technical leadership is not reachable only through people

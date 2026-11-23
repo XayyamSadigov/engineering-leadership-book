@@ -180,3 +180,29 @@ months may have been the director's honest belief.
 news withheld) before choosing a remedy, because each has a different fix. Defensible alternatives
 include a time-limited weekly report for the one organization involved. The weak answer is
 organization-wide surveillance.
+
+## X3 — Availability "excluding maintenance"
+
+**What to send.** Both figures, side by side, with the definition of each: availability as the
+contract defines it (just under 99.9 percent) and availability excluding the planned window (just
+over), with a note that the contract does not exclude planned maintenance. The contractual figure leads,
+because it is the one the customer can check against its own records and the one that decides
+service credits.
+
+**What to say to the CTO.** Start with what the request is for: a better story for the renewal
+meeting. Offer the legitimate version of that story: the trend over the quarters, the cause of the
+miss, what changes next quarter, and the fact that most lost minutes were planned and announced.
+That is framing. Presenting the excluded figure as "availability" to a customer whose contract
+counts the window is misleading, and it is the customer's number as much as yours.
+
+**If the CTO insists.** Say in writing that you believe the figure would mislead the customer and why,
+and decline to send it under your name. Because the number bears on a contract and on service credits,
+suggest involving finance or legal before anyone sends it. Do not quietly comply, and do not go around
+the CTO to the customer.
+
+**Criteria.** A good answer separates framing from misleading by the reader-fairness test, offers the
+CTO a real alternative, and keeps a written record. Defensible variations: proposing that the
+contract's treatment of planned maintenance be renegotiated openly at the renewal. The weak answers
+are silent compliance ("it's the CTO's call") and public confrontation before trying the side-by-side
+version.
+

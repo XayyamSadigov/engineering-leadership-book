@@ -196,6 +196,28 @@ document to one type such as reference or tutorial
 Northstar's 2019 standards page and its 143-item debt page are ownerless wiki documents of exactly this
 kind; Chapters 20 and 21 cover what happened to them.
 
+### Knowledge sharing beyond single points of failure
+
+Removing single points of failure protects a team; sharing knowledge makes it and its neighbors
+better. The two need different channels. *Software Engineering at Google* lists several ways to scale
+knowledge (office hours, talks, documentation, code review, and authoritative sources with owners) and
+treats psychological safety, feeling safe to ask and to admit not knowing, as their foundation
+([Chen and Barolak, 2020](../../references/bibliography.md#chen2020knowledge); **documented
+practice**). A small set is enough (**this book's recommendation**):
+
+| Channel | What it spreads | Make it work by |
+|---|---|---|
+| Onboarding | The basics every member needs | Having the newest member fix the onboarding guide wherever it failed them |
+| Design documents and reviews | Why a system is the way it is | Inviting one reviewer from a neighboring team |
+| Expert office hours | Answers only a few people know | Fixed weekly slots, so questions batch instead of interrupting |
+| Demos and short talks | What other teams are building | Keeping them short, recorded, and open to all sites |
+| Communities of practice | Shared craft across teams (testing, a language, the data platform) | A named host, a regular slot, and permission to spend the time |
+
+Within a team, the manager's lever is routing work and reviews. Between teams, it is the director's:
+cross-team design review, short rotations into a neighboring team, and one place where authoritative
+documents live with owners. At Northstar, for example, the unscheduled Core questions answered by Ines
+Carvalho (staff engineer for the Core domain) are a natural candidate for office hours plus documents written from the answers.
+
 ## Engineering Organization Example
 
 !!! info "Northstar so far"
@@ -333,7 +355,7 @@ entry with a remedy (retire, spread, or accept) and a date. It feeds backfill pr
 for retiring special tooling.
 
 **Staff engineers as spreaders.** Staff engineers are often single points of knowledge themselves. In
-the baseline, Ines Carvalho (staff engineer for the Core domain) answered about eight hours a week of unscheduled questions about Core
+the baseline, Ines Carvalho answered about eight hours a week of unscheduled questions about Core
 ([baseline](../../case-studies/northstar/baseline-data.md)). The leverage move, covered in Chapter 3 and
 Chapter 29, is to turn repeated answers into owned documents and reviews by others, not to
 answer faster.

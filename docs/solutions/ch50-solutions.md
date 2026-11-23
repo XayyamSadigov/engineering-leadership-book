@@ -132,6 +132,33 @@ Continue to read every Sev1 review.
 and adds forums for the CTO's own loops. **Weak answer:** dropping all three in week one, or keeping all three
 "for now", which in practice means permanently.
 
+## A4 — A 90-day plan for a new CTO
+
+**The plan.** Days 1 to 30: one-on-ones with the CEO, CPO, CFO, and the director; skip-levels with the
+managers and both staff engineers; the renewal customer's account history and contract read with the
+account owner; the financial plan read with the CFO; three weeks of your own calendar recorded. Days 31
+to 60: write down how significant technical decisions are made today (the year-long migration argument
+is evidence that nobody owns them), the implicit strategy, and the archetype: technology is the product,
+one director runs the organization, and "predictability" without an owner points toward an organization
+builder who delegates direction. Draft the decision-rights table, including the seam with IT under the
+CFO. Days 61 to 90: get the CEO's definition of "predictable" in writing as one or two measures, agree
+the decision-rights table, and set the rhythm.
+
+**The staff engineers.** Do not rule in week one. Ask who decides migrations of this size today; if the
+answer is nobody, say you will name the owner and the process within 60 days, and that a decision
+affecting the month-five renewal waits until then unless delay itself puts the renewal at risk. Ask them
+for a one-page record of both positions in the meantime.
+
+**The two changes.** First, a delivery forecast and risk review for the renewal commitment, because it
+has a date and a customer. Second, the decision process for significant technical decisions (an owner,
+a written record), because its absence produces the unpredictability the CEO complains about. Everything
+else waits.
+
+**Criteria.** A good answer sequences listening before changing, converts "predictable" into a written,
+measurable expectation, refuses the early ruling without stalling the engineers, and limits changes to
+two with reasons. **Weak answer:** a reorganization or a new process framework in the first month, or
+deciding the migration to show decisiveness.
+
 ## X1 — Choosing an option for the IT and security seam
 
 **One defensible choice: option 1, written narrowly.** Keep the structure, write the table, and leave the security

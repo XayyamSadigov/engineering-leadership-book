@@ -115,6 +115,35 @@ share, and plan projects against the rest.
 **Criteria.** Respects the existing strengths, fits two work shapes with two mechanisms, and states
 the capacity split. **Weak answer:** imposing Scrum for uniformity.
 
+## A4 — From five features to an outcome roadmap
+
+**Questions to each requester.** "What changes for the customer, or for us, if this works? How would
+we know? What happens if we wait a quarter?" The answers group the five features.
+
+**One defensible grouping.**
+
+- *Price changes are fast and safe for customers' admins* (bulk price update, audit log). Measure:
+  time to apply a price change across a catalog, and price-related support tickets. Guardrail: wrong
+  prices reaching orders do not rise; the audit log helps hold that line.
+- *Large customers get their negotiated prices without workarounds* (customer-specific price lists).
+  Measure: share of large accounts using manual overrides. Guardrail: price calculation time.
+- *The team spends less time on pricing pages* (faster price-list loading, from on-call pain).
+  Measure: pricing-related pages and unplanned hours. Guardrail: correctness of loaded prices.
+- *Partners integrate without custom work* (pricing API). Measure: integration requests handled by
+  hand. This one usually belongs in "later" until someone names a partner and a value.
+
+**Horizons.** "Now" holds the outcome with the best evidence and a measured baseline, often the
+on-call one (it is cheap to measure and its interest is real) or the price-change outcome if sales can
+show deals waiting on it. "Next" holds the second. "Later" holds the partner API, starting with a
+question rather than a build.
+
+**Baselines needed.** Current time to apply a bulk change, ticket counts, override counts, pages and
+hours. Where none exists, the first bet is instrumentation.
+
+A good answer merges features into fewer outcomes, gives each a measure and a guardrail, and keeps
+features as bets that can be dropped. The weak answer renames each feature as an outcome ("customers
+have bulk price update") with no measure.
+
 ## X1 — CTO approval of every customer-facing date
 
 **Decision: change it.** The problem the CEO is solving is real: in the baseline quarter, five of 17

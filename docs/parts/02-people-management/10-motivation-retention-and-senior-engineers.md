@@ -116,6 +116,39 @@ retains a second-year engineer, and you learn which by asking. Of the manager-ef
 related to attrition ([Hoffman and Tadelis, 2021](../../references/bibliography.md#hoffman2021people)).
 Retention is the manager's job, not HR's.
 
+### Burnout: signals and responses
+
+Burnout is a work problem with work causes, so the manager's main response is to change the work. The
+World Health Organization's classification (ICD-11) describes burnout as a syndrome resulting from
+chronic workplace stress that has not been successfully managed, with three dimensions: exhaustion,
+increasing mental distance or cynicism about the job, and reduced professional efficacy. It classes
+burnout as an occupational phenomenon, not a medical condition
+([WHO, 2019](../../references/bibliography.md#who2019burnout); a **standard** definition, not evidence
+about causes or remedies).
+
+The three dimensions give a manager observable signals (**this book's recommendation**):
+
+| Dimension | What you may see |
+|---|---|
+| Exhaustion | Tiredness that a weekend no longer fixes; sick days rising; mistakes in routine work |
+| Distance or cynicism | "Nothing changes here"; withdrawal from discussions the person used to lead |
+| Reduced efficacy | A capable person doubting their work; slower decisions; avoiding hard tasks |
+
+None of these proves burnout, and the manager should not try to diagnose it. The responses that are
+yours:
+
+- **Name what you see and ask**, privately: "You've seemed worn down since the migration. How are you
+  doing?"
+- **Change the load**, not only the person's coping: fewer after-hours pages, a deadline moved, a
+  project handed on. Resilience training without a load change tells people the problem is them.
+- **Look for the pattern.** Burnout on a team with heavy on-call is a system signal, and the next
+  person is close behind (see the Billing case).
+- **Know where your role stops.** Health is private. Point to HR, the employee assistance program if
+  there is one, and medical support, and agree any time off or adjusted duties through HR.
+
+Burnout also explains some cases that look like poor performance or "will" problems (Chapter 9):
+check the load before you check the person.
+
 ### Exit data, stay data, and system data
 
 Each source sees a different part of the mechanism, and each fails in a known way.

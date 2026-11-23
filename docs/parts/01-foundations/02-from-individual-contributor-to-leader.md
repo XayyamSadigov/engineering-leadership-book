@@ -75,9 +75,8 @@ loop goes quiet, the new manager reaches for the keyboard. Each such choice is d
 they keep the new manager in the old job.
 
 The second idea follows from the first: a manager's output is the team's output, not their own
-(Chapter 1 defines managerial output after Andrew Grove; Chapter 3 develops leverage). Delegation is the
-mechanism that converts one person's judgment into the team's capability, so it carries most of the
-weight in this chapter.
+(Chapter 1 defines managerial output after Andrew Grove; Chapter 3 develops leverage). Delegation converts one person's
+judgment into the team's capability.
 
 ## Deep Conceptual Explanation
 
@@ -119,12 +118,32 @@ channel; Chapter 4 covers measuring managerial effectiveness.
 
 ### Why the best engineer is not automatically the best manager
 
-The promotion pattern in the [Benson, Li, and Shue](../../references/bibliography.md#benson2019promotions)
-study has a second cost beyond picking the wrong person. Even a promoted engineer who would make a
-good manager arrives with the habits of the best engineer: solving the hard problem personally,
-reviewing everything important, being the person others ask. In the new role these habits concentrate
-work and decisions on one person. The usual remedies are preparation before or soon after promotion,
-and a technical career track so that management is not the only way up (Chapter 4).
+Even a promoted engineer who would make a good manager arrives with the best engineer's habits:
+solving the hard problem personally, reviewing everything important, being the person others ask. In
+the new role these habits concentrate work and decisions on one person.
+
+### Managing former peers
+
+Most first-line managers are promoted inside their own team, so the hardest part of the change is
+relational: yesterday's peers now report to you. Say plainly what has changed and what has not
+(**this book's recommendation**). You now decide assignments, give performance feedback, and have a
+say in pay and promotion; you are still the same person, and the team's technical judgment still
+counts as much as yours.
+
+Three situations need deliberate handling:
+
+- **Friends on the team.** Keep the friendship and lose the private channel: no talk about other team
+  members' performance or pay outside work. Tell the friend this yourself, early, before an awkward
+  moment forces it.
+- **The passed-over candidate.** Hold a one-on-one in the first week. Acknowledge that they wanted the
+  role, ask what they want now, and offer something real if you have it (a scope, a sponsor, a track
+  conversation), not consolation.
+- **Old alliances and disputes.** Decisions you argued against as an engineer are now yours to uphold
+  or reopen openly. Do not settle old technical arguments with new authority.
+
+What not to promise: that nothing will change, that you will always side with the team against
+management, or a promotion or raise you do not control. Each of these is broken within months, and the
+broken promise costs more than the honest answer would have.
 
 ### Delegating by outcome, with an explicit level of control
 
@@ -151,10 +170,9 @@ Yukl and Fu found managers delegated more to subordinates who were competent, sh
 objectives, and had worked with them longer. Managers valued delegation for developing people, yet
 many were reluctant to give up control over important decisions or to give important tasks to
 inexperienced subordinates
-([Yukl and Fu, 1999](../../references/bibliography.md#yukl1999determinants)). The result is a trap
-for a new manager: the important work is never delegated, so nobody gains the experience that would
-justify delegating it. The way out is to delegate important work at a lower level of control (2 or 3)
-rather than to withhold it.
+([Yukl and Fu, 1999](../../references/bibliography.md#yukl1999determinants)). The trap: important work
+is never delegated, so nobody gains the experience that would justify delegating it. Delegate it at
+level 2 or 3 instead of withholding it.
 
 Two rules make the levels work (**this book's recommendation**). Name the level out loud, with the
 outcome and the date: "This is level 3; tell me before you change the schema." And move the level by
@@ -178,22 +196,57 @@ Kinds of hands-on work, from cheapest to most costly for the team:
 | Being the required reviewer for an area | Informed | High: every change waits for the busiest person |
 | Owning work on a committed deadline | Productive-feeling | Highest: the critical path stops in every meeting |
 
-Camille Fournier's practitioner account of the engineering management path is known for this
-balance: stay close enough to the technology to judge, coach, and keep credibility, and stay off the
-critical path ([Fournier, 2017](../../references/bibliography.md#fournier2017manager)). A manager's
-calendar is interrupt-driven, so work others wait on is delayed by every escalation, and the team
-learns that the hardest problems belong to someone else.
+Camille Fournier's practitioner account is known for this balance: stay close enough to the
+technology to judge and coach, and stay off the critical path
+([Fournier, 2017](../../references/bibliography.md#fournier2017manager)). Work others wait on is
+delayed by every escalation in an interrupt-driven calendar.
 
 ### The first 90 days
 
-Michael Watkins's book on leadership transitions is known for the argument that the first months in a
-new role decide much of what follows, that a new leader should accelerate learning deliberately,
-match the strategy to the situation, agree expectations explicitly with their own manager, and
-secure a few early wins ([Watkins, 2003](../../references/bibliography.md#watkins2003first)). For a
-first-line engineering manager promoted from inside the team, two adjustments apply: the hardest
-learning is about changed relationships rather than an unfamiliar domain, and the most valuable early
-wins are not technical but visible changes in how the team works, such as decisions made faster or a
-recurring problem finally owned. The Practical Playbook turns this into a plan.
+Michael Watkins's book on leadership transitions is known for arguing that a new leader should
+accelerate learning, agree expectations explicitly with their own manager, and secure a few early wins
+([Watkins, 2003](../../references/bibliography.md#watkins2003first)). For a manager promoted from
+inside the team, the hardest learning is about relationships, and the most valuable early wins are
+visible changes in how the team works, such as decisions made faster or a recurring problem finally
+owned. The Practical Playbook turns this into a plan.
+
+### Managing up as a new manager
+
+Your own manager is part of your system, and a new manager who waits to be managed gets surprised.
+Managing up means making it easy for your manager to support you and to represent your team
+(**this book's recommendation**):
+
+- **Agree what success looks like** in writing in the first two weeks: the day-90 criteria, the time
+  budget, and which decisions are yours alone. Revisit it monthly.
+- **Report without being asked**, briefly and on a schedule: what changed, what is at risk, what you
+  need. A weekly five-line note beats a monthly meeting full of surprises.
+- **Bring bad news early, with a proposal.** "The renewal feature is two weeks behind; I want to move
+  Aisha off support for three weeks; here is the cost" gets a decision. The same news a week before
+  the date gets an escalation.
+- **Ask for the decision you need.** Name the options and your recommendation, and say by when.
+- **Learn what your manager is measured on.** Their pressures explain their questions; your updates
+  should answer them before they are asked.
+
+Two traps are common. Shielding the team by hiding problems from your manager fails the moment the
+problem surfaces elsewhere. Escalating every disagreement upward tells your manager you cannot hold
+the role. Disagree in private, with evidence, then carry the decision out or say plainly that you
+cannot.
+
+### Your own load and sustainability
+
+The new manager's week has no natural end. Engineering work finishes; people work, delivery, and
+escalations do not. A manager who absorbs the slack by working evenings sets a standard the team copies
+and spends the energy that slow, careful judgment needs.
+
+Three habits help (**this book's recommendation**). Keep slack in the weekly budget, as the
+Engineering Organization Example does, because escalations will fill it. Decide in advance which
+messages need you outside working hours, usually only incidents at the severity where you are on the
+escalation path, and say so to the team. And find support outside the reporting line: a peer manager,
+a mentor, or a manager group where you can admit what is not working.
+
+Watch for the early signs in yourself that Chapter 10 describes for engineers: lasting exhaustion,
+growing cynicism about the team or the company, and a sense that nothing you do makes a difference.
+They are reasons to change the load, not to try harder.
 
 ## Engineering Organization Example
 
@@ -287,9 +340,8 @@ feature depends on someone with an interrupt-driven calendar. Level 3 delegation
 checkpoints usually costs less than either extreme, but the manager should say which risk they are
 taking and to whom.
 
-**Friend against manager.** A manager promoted from inside the team loses some of a peer's candor.
-Pretending nothing changed fails, and so does sudden distance. Say plainly what has changed
-(assignments, performance, pay input) and what has not.
+**Friend against manager.** A manager promoted from inside the team loses some of a peer's candor;
+pretending nothing changed fails, and so does sudden distance (see Managing former peers).
 
 ## Failure Modes
 
@@ -338,9 +390,8 @@ for engineering performance. Look for evidence the candidate has already multipl
 leading a project through other people, handling a disagreement well. Keep a technical track with
 equal standing, so that the best engineer is not forced into management to advance (Chapter 4).
 
-**Preparation.** A trial period as tech lead or acting manager, with an end date and a conversation
-about whether to continue, lets both sides learn cheaply; Ibarra's provisional selves argue for making
-the experiment explicit.
+**Preparation.** A trial period as tech lead or acting manager, with an end date, lets both sides
+learn cheaply.
 
 **Support in the first year.** The new manager's own manager owns the transition: an agreed time
 budget, a monthly check of the leading indicators (decisions waiting, single-person areas,
@@ -359,10 +410,9 @@ The CTO also sets the incentives that produce super-engineer managers. If manage
 leadership meetings for personally rescuing releases, every first-year manager learns that rescuing
 releases is the job. Praise the manager whose team handled the incident without them.
 
-Finally, the evidence that managers matter (Chapter 1) and the economic research on promotion of
-sales workers ([Benson, Li, and Shue, 2019](../../references/bibliography.md#benson2019promotions))
-are not controlled studies of engineering teams: enough to justify investing in manager selection and
-preparation, not enough to promise a board a specific return.
+Finally, the evidence on managers and promotion (Chapter 1, and the Benson study above) does not come
+from engineering teams: enough to justify investing in manager selection, not to promise a board a
+specific return.
 
 ## Practical Playbook
 
@@ -510,7 +560,6 @@ each plausible finding, and what you would recommend.
    choosing to?
 4. When did you last lower someone's level of control without telling them?
 5. If you were promoted out of your current role tomorrow, which of your commitments would quietly stop?
-6. What would your team say is the hardest problem they are not allowed to work on?
 
 ## Key Takeaways
 
@@ -519,8 +568,8 @@ each plausible finding, and what you would recommend.
 - Treat the transition as a change of identity learned by experiment; choose role models deliberately.
 - Promotion on engineering performance alone is a known way to pick the wrong manager; keep a
   technical track and prepare managers before or soon after promotion.
-- Delegate outcomes, not tasks, and name the level of control, the checkpoints, and the date.
-- Delegate important work at a lower level of control rather than withholding it.
+- Delegate outcomes, not tasks; name the level of control, the checkpoints, and the date; delegate
+  important work at a lower level rather than withholding it.
 - Keep technical work that makes you able to judge; stay off the critical path and out of the
   required-reviewer role.
 - Hand over every engineering commitment at promotion; open items with your name on them stop.

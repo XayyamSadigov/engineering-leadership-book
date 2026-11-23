@@ -180,8 +180,8 @@ The method is [Chapter 14](../parts/03-high-performing-teams/14-distributed-team
 
 - [Kniberg and Lindwall, 2014](../references/bibliography.md#kniberg2014squad): Spotify's squad health
   check, the model for this workshop. Its authors warn that it works only where trust is high, that
-  teams should not be compared, and that it is a support tool, not a judgment tool. That is **expert
-  opinion**: practice documented at one company, with no outcome data.
+  teams should not be compared, and that it is a support tool, not a judgment tool. That is **documented
+  practice** at one company, with no outcome data.
 - [Orosz and Beck, 2023](../references/bibliography.md#orosz2023measuring): survey scores tied to
   performance reviews lose their value, as they describe at one large company (**expert opinion**).
 - [Wageman, Hackman, and Lehman, 2005](../references/bibliography.md#wageman2005team): the Team

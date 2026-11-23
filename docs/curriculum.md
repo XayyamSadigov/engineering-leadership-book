@@ -810,6 +810,10 @@ Reusable artifacts, each filled in with a Northstar example. This part has no ch
 | [Executive update](templates/executive-update.md) | On the site, awaiting human review |
 | [Leadership succession plan](templates/leadership-succession-plan.md) | On the site, awaiting human review |
 | [90-day quality transformation plan](templates/ninety-day-quality-plan.md) | On the site, awaiting human review |
+| [Hiring scorecard and interview kit](templates/hiring-scorecard.md) | On the site, awaiting human review |
+| [Performance improvement plan](templates/performance-improvement-plan.md) | On the site, awaiting human review |
+| [Team charter and working agreement](templates/team-charter.md) | On the site, awaiting human review |
+| [New manager's 90-day plan](templates/new-manager-90-day-plan.md) | On the site, awaiting human review |
 
 ## Part XV — Capstone: Build and Transform an Engineering Organization
 

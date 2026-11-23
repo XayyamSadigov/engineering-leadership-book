@@ -5,7 +5,7 @@
 
 Every source the book cites, with what was verified and how much of the source was actually read when the entry was created. An entry marked *bibliographic metadata only* means the citation details were checked against a publisher or catalog page; it does not mean the work was read in full for this project. Chapters cite by linking to the anchors on this page.
 
-447 entries. Grouped by evidence class, then alphabetically by id.
+455 entries. Grouped by evidence class, then alphabetically by id.
 
 ## Scholarly research
 
@@ -2957,6 +2957,19 @@ Cybersecurity and Infrastructure Security Agency (2025). *2025 Minimum Elements 
 - Supports (official-summary): CISA published the 2025 minimum elements on August 22, 2025 as a draft for public comment (comments through October 3, 2025), building on the 2021 NTIA minimum elements.
 - Caveats: Draft status as shown on the page read on 2026-11-19; no final version was seen. The specific added elements (reported by secondary sources as component hash, license, tool name, generation context) were not confirmed on a primary page and are not claimed.
 
+### ec2026aiact {#ec2026aiact}
+
+European Commission (2026). “AI Act | Shaping Europe's digital future”. European Commission, Shaping Europe's digital future (policy page on Regulation (EU) 2024/1689), last updated 19 October 2026.
+
+- <https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai>
+- Evidence class: Standard or framework. Access for this bibliography: official summary read.
+- Verified against a fetched page (2026-11-23): title, authors, year, venue, url.
+- Supports (official-summary): The AI Act is Regulation (EU) 2024/1689, laying down harmonised rules on artificial intelligence; it entered into force on 1 August 2024.
+- Supports (official-summary): It sorts AI uses into four risk levels: unacceptable (prohibited practices), high risk (strict obligations before market placement), transparency risk (disclosure duties), and minimal or no risk (no rules), which the page says covers most AI currently used in the EU.
+- Supports (official-summary): People should be made aware when they interact with a chatbot, and providers of generative AI must ensure AI-generated content is identifiable.
+- Supports (official-summary): Obligations for general-purpose AI models apply from 2 August 2025; the Act is generally applicable from 2 August 2026 with exceptions; high-risk rules for Annex III use cases apply from 2 December 2027 and for products under Annex I from 2 August 2028.
+- Caveats: The Commission's summary page, not the legal text; dates have been amended (the page cites the AI Omnibus) and may change again. Not legal advice; applicability to a given product needs counsel.
+
 ### fasb2025asu202506 {#fasb2025asu202506}
 
 Financial Accounting Standards Board (2025). *Intangibles—Goodwill and Other—Internal-Use Software (Subtopic 350-40): Targeted Improvements to the Accounting for Internal-Use Software*. FASB Accounting Standards Update No. 2025-06, September 2025.
@@ -3126,6 +3139,18 @@ SLSA (Supply-chain Levels for Software Artifacts) project (n.d.). *SLSA Specific
 - Supports (full-text): Source track: Source L1 (version controlled), L2 (history and provenance), L3 (continuous technical controls), L4 (two-party review).
 - Caveats: Date-sensitive. The release date of v1.2 was not seen on the pages read, hence year null and an id without a year. The single four-level ladder (SLSA 1-4) of the pre-1.0 specification no longer describes the current spec; levels are now per track, and the Build track tops out at L3.
 
+### who2019burnout {#who2019burnout}
+
+World Health Organization (2019). “Burn-out an "occupational phenomenon": International Classification of Diseases”. World Health Organization, news item, 28 May 2019.
+
+- <https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases>
+- Evidence class: Standard or framework. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-23): title, authors, year, venue, url.
+- Supports (full-text): ICD-11 defines burn-out as a syndrome conceptualized as resulting from chronic workplace stress that has not been successfully managed.
+- Supports (full-text): It has three dimensions: energy depletion or exhaustion; increased mental distance from the job, or negativism or cynicism about it; and reduced professional efficacy.
+- Supports (full-text): It is classified as an occupational phenomenon, not a medical condition, and refers specifically to the occupational context.
+- Caveats: A classification and definition, not evidence about causes, prevalence, or which interventions work.
+
 ## Official documentation
 
 ### adoptium-support {#adoptium-support}
@@ -3287,6 +3312,36 @@ Open Source Security Foundation (2026). “OpenSSF Scorecard”. scorecard.dev.
 - Supports (full-text): Scorecard assesses open-source projects for security risks through automated checks (18 at the time of reading), grouped as holistic security (for example whether the project is maintained, has a security policy, and has unfixed vulnerabilities), source risk (for example code review and branch protection), and build risk (for example pinned dependencies and signed releases).
 - Supports (full-text): Each check returns a score out of 10 with a risk level, combined into an aggregate score; it can run as a GitHub Action or from the command line against any project.
 - Caveats: Describes security hygiene signals, not proof that a project is safe or will remain maintained. Year is the access year.
+
+### otel-context-propagation {#otel-context-propagation}
+
+OpenTelemetry Authors (2026). “Context propagation”. OpenTelemetry documentation.
+
+- <https://opentelemetry.io/docs/concepts/context-propagation/>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-23): title, authors, venue, url.
+- Supports (full-text): Context propagation carries identifiers such as trace and span IDs between services so that telemetry can be correlated wherever it is generated; SDKs can attach these IDs to log records so logs can be read in the context of the trace they belong to.
+- Caveats: Project documentation; year is the access year.
+
+### otel-sampling {#otel-sampling}
+
+OpenTelemetry Authors (2026). “Sampling”. OpenTelemetry documentation.
+
+- <https://opentelemetry.io/docs/concepts/sampling/>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-23): title, authors, venue, url.
+- Supports (full-text): The page calls sampling one of the most effective ways to reduce the costs of observability, says systems generating very little data need not sample, and distinguishes head sampling (decided early, cannot use the whole trace) from tail sampling (decided after seeing most of the trace, for example to keep all traces with errors, but harder to operate).
+- Caveats: Project documentation; year is the access year. Its statement that a 1 percent sample can represent high-volume traffic accurately is not used in the book.
+
+### otel-signals {#otel-signals}
+
+OpenTelemetry Authors (2026). “Signals”. OpenTelemetry documentation.
+
+- <https://opentelemetry.io/docs/concepts/signals/>
+- Evidence class: Official documentation. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-23): title, authors, venue, url.
+- Supports (full-text): OpenTelemetry lists traces, metrics, logs, and baggage as supported signals, defining a trace as the path of a request through an application, a metric as a measurement captured at runtime, and a log as a recording of an event; profiles are still in development.
+- Caveats: Project documentation, continuously updated; year is the access year. Describes one vendor-neutral instrumentation standard, not evidence about outcomes.
 
 ### rework-structured-interviewing {#rework-structured-interviewing}
 
@@ -4628,6 +4683,37 @@ Gergely Orosz, and Kent Beck (2023). “Measuring developer productivity? A resp
 - Supports (full-text): They argue that measuring individuals changes behaviour and invites gaming, illustrated with an account of survey scores at Facebook becoming distorted once tied to reviews and manager pressure.
 - Supports (full-text): They conclude the McKinsey framework is likely to do more harm than good to engineering culture.
 - Caveats: Opinion piece by two practitioners, not empirical research; one side of a dispute. Dated August 29, 2023. A second part exists: https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity-part-2 (URL given on the page, not fetched).
+
+### owasp-dast-tools {#owasp-dast-tools}
+
+OWASP Foundation (2026). “Vulnerability Scanning Tools”. OWASP Foundation.
+
+- <https://community.owasp.org/Vulnerability_Scanning_Tools>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-23): title, authors, venue, url.
+- Supports (full-text): OWASP describes dynamic application security testing (DAST) tools as scanners that test a running web application from the outside for flaws such as cross-site scripting, SQL injection, and insecure server configuration, and says each tool has its own strengths and weaknesses.
+- Caveats: Community page listing tools without endorsement; the old www-community URL redirects here. It does not quantify DAST limitations.
+
+### owasp-sast-tools {#owasp-sast-tools}
+
+OWASP Foundation (2026). “Source Code Analysis Tools”. OWASP Foundation.
+
+- <https://community.owasp.org/Source_Code_Analysis_Tools>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-23): title, authors, venue, url.
+- Supports (full-text): OWASP describes static analysis (SAST) tools as scaling well in CI and reliably finding well-known flaw classes such as SQL injection, while identifying only a relatively small percentage of application security flaws, producing high numbers of false positives, struggling with authentication, access control, and cryptography problems, and often missing configuration issues.
+- Caveats: Community page; the old URL owasp.org/www-community/Source_Code_Analysis_Tools redirects here. Practitioner consensus, not a measured comparison.
+
+### owasp-vuln-disclosure {#owasp-vuln-disclosure}
+
+OWASP Cheat Sheet Series Team (2026). “Vulnerability Disclosure Cheat Sheet”. OWASP Cheat Sheet Series.
+
+- <https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html>
+- Evidence class: Practitioner literature. Access for this bibliography: full text read.
+- Verified against a fetched page (2026-11-23): title, authors, venue, url.
+- Supports (full-text): The cheat sheet says the most important step is giving researchers a way to contact the organization, recommends a disclosure policy with scope, safe harbor for good-faith testing, and a published contact such as security.txt, and says bug bounty programs should only be used by organizations that already have a mature vulnerability disclosure process.
+- Supports (full-text): It lists bug bounty disadvantages including cost, large numbers of junk or false-positive reports, the need for skilled triage staff, and risk to live systems from unskilled testers.
+- Caveats: Practitioner guidance; advises taking legal advice on safe-harbor wording.
 
 ### perlow2017stop {#perlow2017stop}
 

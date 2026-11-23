@@ -375,9 +375,20 @@ ruling from Halvard's CTO crosses group boundaries and does damage at six times 
 
 As the company grows, the CTO's time moves from deciding to designing who decides. The "only the CTO" list
 stays short while each item gets heavier. The first team matters more than the second, because influence
-on capital and risk is exercised among peers and with the board. Larson's advice
-to learn how the business makes and spends money, and to build peer relationships before conflict arises
-([Larson, 2020](../../references/bibliography.md#larson2020first90)), becomes the job, not the onboarding.
+on capital and risk is exercised among peers and with the board. The first-90-days advice below (learn
+the money, build peer relationships early) becomes the job, not the onboarding.
+
+### The executive's own sustainability
+
+Nobody above a CTO watches the CTO's load, so the CTO has to (**this book's recommendation**). The
+calendar audit is also a health check: Victor's 48-hour week had 14.5 hours of overhead and 2 of
+strategy, the profile of someone running on reaction. Three signals deserve attention: weeks that stay
+above about 50 hours for a quarter, strategy time that keeps losing to the inbox, and decisions you
+now postpone because you are tired rather than because you lack evidence. Three habits help. Delegate
+for capacity as well as for development, since every item on the keep, give, stop list returns hours.
+Protect one block a week that no request can take. Keep a peer network outside the company (other CTOs,
+a former manager) for problems you cannot discuss with your own team or the CEO. An exhausted CTO
+makes the decisions this chapter reserves for the top worse, and the organization copies the hours.
 
 ## Practical Playbook
 
@@ -396,6 +407,27 @@ to learn how the business makes and spends money, and to build peer relationship
 9. **Repeat the audit quarterly**, and revise the list when the archetype the company needs changes. To
    assess the CTO against the role rather than the calendar, use the
    [CTO competency matrix](../../templates/cto-competency-matrix.md).
+
+### A CTO's first 90 days
+
+A new CTO's first quarter should produce understanding and a few written agreements, not a program of
+change. Larson's advice for new CTOs and VPs of Engineering is to learn how the business makes and
+spends money, build peer relationships before conflict arises, get the manager's expectations in
+writing, and limit the number of changes in flight. He also warns that many lightly held opinions from
+a new executive create thrash ([Larson, 2020](../../references/bibliography.md#larson2020first90);
+**expert opinion**). This book's sequence turns that advice into the chapter's tools:
+
+| Days | Aim | Output |
+|---|---|---|
+| 1 to 30 | Listen and measure | One-on-ones with every executive peer and direct report; skip-levels; the company's financial plan read with the CFO; three weeks of your own calendar recorded |
+| 31 to 60 | Write down what exists | How high-impact technical decisions are actually made today; the implicit technology strategy; the archetype the company needs (three questions); a draft decision-rights table |
+| 61 to 90 | Agree and start | The CEO's expectations in writing; the decision-rights table agreed with peers; the "only the CTO" list; your operating rhythm (one-on-ones, written updates, a recruiting review, perhaps a weekly operational review); at most two changes started |
+
+Two traps are specific to the first quarter. The first is ruling early: in the first month every
+question reaches the new CTO, and each answer given then becomes precedent before you know who should
+own it. Say "who decides this today?" and write the answer down. The second is inheriting the
+predecessor's calendar. A CTO who walks into the previous CTO's forums becomes that archetype by
+default; attend for a month, then decide which to keep (exercise A3).
 
 ## Case Study
 
@@ -478,6 +510,13 @@ whether the redirect worked.
 operational review, the architecture review, and the incident review. Two directors run the organization.
 Design the new CTO's rhythm for the first two quarters: what to chair, what to attend without running, what
 to stop, and how to transfer each forum without signaling disengagement.
+
+**A4.** You join a 70-engineer software company as its CTO. There is one engineering director, no VP,
+a CPO, and a CFO who owns IT. Your predecessor left suddenly; the CEO says only that "engineering needs
+to be more predictable" and that a large customer renewal is due in month five. Two staff engineers ask
+in your first week whether you will approve a database migration they have argued about for a year.
+Write your 90-day plan as a one-page table, say what you answer the staff engineers, and name the two
+changes you would allow yourself to start, and why those two.
 
 ### Executive Decision-Making
 

@@ -119,10 +119,7 @@ blanket ban or blanket enthusiasm.
 | AI in internal operations | Support summaries, finance aids, usually a feature of another function's system | Data terms, relied-upon errors |
 | AI in the product | Features customers use | Customer-visible correctness, cost per transaction, a model provider inside the product's promise |
 
-This chapter treats product AI mainly as a build, buy, or wait decision. Its unit economics (inference
-cost against gross margin), dependence on a model provider, and emerging AI regulation and contract
-terms need fuller treatment than the evidence gathered here supports; treat them as open questions to
-take to finance and legal.
+Product AI carries four obligations the other two kinds do not; the next subsection covers them.
 
 Chapter 30's build-versus-buy method still applies. AI adds four factors (**this book's
 recommendation**):
@@ -156,6 +153,41 @@ flowchart TD
 
 A request that fails the data test is not rejected; it becomes the data work that would make it
 possible.
+
+### AI in the product: cost, provider, regulation, evaluation
+
+An AI feature in the product is a running cost, a dependency, a legal obligation, and a quality promise
+at once. Each needs an owner before launch (**this book's recommendation** unless marked).
+
+**Inference cost is a cost-of-revenue line.** Every call to a model costs money, so an AI feature lowers
+[gross margin](../../glossary.md#gross-margin) in proportion to use (Chapter 52 shows where cost of
+revenue sits). Price it per business transaction before building. An **illustrative** example: a feature
+that makes 4 model calls per order at $0.01 each costs $0.04 an order; at 500,000 orders a month that is
+$20,000 a month, or $240,000 a year, which must be covered by price, retention, or saved support cost.
+Usage grows with success, so model the cost at the volume you hope for, not the pilot's.
+
+**Provider dependence is a change you do not control.** Providers change prices, retire model versions,
+and alter behavior between versions. Keep the model behind one internal interface, pin versions, and
+negotiate data terms (retention, training use) and notice of retirement in the contract. Rerun the
+evaluation set on every model change before switching. A second provider kept usable is an option with
+a cost; buy it only where an outage or a price change would break a customer promise.
+
+**Regulation is arriving, unevenly.** The EU AI Act, Regulation (EU) 2024/1689, sorts AI uses into
+four risk levels: prohibited practices, high-risk uses with strict obligations before sale, uses with
+transparency duties, and minimal-risk uses with no new rules. Chatbot users must be told they are talking
+to a machine, and generative AI output must be identifiable. Its obligations phase in from 2025 to 2028,
+and the dates have already moved once ([European Commission, 2026](../../references/bibliography.md#ec2026aiact);
+**standard**). An order-to-cash feature is unlikely to be high-risk, but that is a legal judgment: list
+each AI feature, its risk level, and the duties it triggers, and have counsel confirm. NIST's AI Risk
+Management Framework gives a voluntary structure for the same work
+([NIST, 2023](../../references/bibliography.md#nist2023airmf)). Customers' contracts may add their own
+terms on AI and their data.
+
+**Evaluation is the quality gate.** Before launch, build an evaluation set from real cases, agree with
+the product owner what error rate is acceptable and which errors are unacceptable at any rate, and
+measure. After launch, sample live outputs against the same criteria, because inputs drift. A feature
+with no evaluation set has no definition of working, which is why the decision framework below gives a
+high-error-cost feature no external date until one exists.
 
 ### Governing AI use in engineering
 
@@ -493,6 +525,12 @@ reporting "83 percent of engineers say AI makes them faster" in the monthly repo
 Explain what the figure does and does not show, using the perception evidence in the chapter, and propose
 two team-level measures, each with a paired measure, that you would report instead.
 
+**F4.** A product manager proposes an AI feature that drafts a reply to every customer support ticket.
+Assume (illustratively) 120,000 tickets a month, 3 model calls per ticket at $0.015 a call, and that a
+drafted reply saves an agent 2 minutes at a loaded cost of $40 an hour, on the 60 percent of drafts
+agents accept. Compute the yearly inference cost and the yearly saving, state which assumption the case
+is most sensitive to, and list what you would require on provider terms and evaluation before launch.
+
 ### Applied Leadership
 
 **A1.** Suppose about 30 analysts outside engineering (an assumption for this exercise) query the
@@ -580,6 +618,8 @@ AI metrics into a contest.
 - [Sambasivan et al., 2021](../../references/bibliography.md#sambasivan2021data): data cascades.
 - [Sculley et al., 2015](../../references/bibliography.md#sculley2015hidden): technical debt in ML systems.
 - [NIST, 2023](../../references/bibliography.md#nist2023airmf): the AI Risk Management Framework.
+- [European Commission, 2026](../../references/bibliography.md#ec2026aiact): the EU AI Act's risk levels
+  and timeline, from the Commission's summary page.
 - [NIST SSDF project](../../references/bibliography.md#nist-ssdf-project) and
   [Souppaya et al., 2022](../../references/bibliography.md#nist2022ssdf): secure development, with a
   generative AI profile.

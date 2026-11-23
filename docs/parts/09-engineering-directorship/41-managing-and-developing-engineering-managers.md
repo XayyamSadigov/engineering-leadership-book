@@ -239,13 +239,39 @@ weigh more for a team carrying a renewal commitment, operational ownership and h
 concentrated on-call load. And treat the manager's response to a "Not yet" (curiosity, a draft plan,
 changed behavior within weeks) as evidence in its own right.
 
+### When a manager is not working out
+
+Moving a manager out of the role is a decision about fit, made only after the system and the
+director's own part are ruled out (**this book's recommendation**). Before deciding, check three
+things: the expectations were written and known, a one-quarter plan with a real decision was tried,
+and the "Not yet" pattern held across several dimensions for two quarters. If any is missing, the
+problem is still partly yours.
+
+The options, in order of preference:
+
+- **Return to engineering.** Many good engineers try management and go back. Offer the senior
+  engineering level the person's skills support, with no cut in pay where the ladder allows, and say
+  publicly that it is a normal path. Under a flat headcount, the returning manager fills an engineering
+  seat, so plan the seat.
+- **Smaller scope.** A smaller team or one without on-call can suit someone strong on people growth
+  and weak on running a large operation.
+- **Exit** through the formal process of Chapter 9, when neither fits.
+
+Then run the transition in this order:
+
+1. Agree the decision and the wording with HR, and settle interim cover from the bench.
+2. Tell the manager privately, with the evidence file, and let them choose how their move is described
+   where you can.
+3. Tell the team the same day, after the manager, with the interim lead in the room. Give the change and
+   the next steps, never the reasons; the reasons belong to the manager.
+4. Watch the team for six weeks through one-on-ones and skip-levels; a sudden change of manager raises
+   flight risk.
+5. Write down what the director should have seen or set earlier, and fix it for the next manager.
+
 ## Trade-offs
 
 **Consistency against context.** One rubric makes comparison fair to read, and also invites comparing a
 team on the Core train with one that deploys at will. Keep dimensions common, evidence local, and never rank.
-
-**Skip-level information against the manager's authority.** More frequent skip-levels buy information at
-a rising cost to the manager's standing, especially if themes return as directives.
 
 **Real decisions against risk.** A delegated decision that matters can go wrong and the director owns the
 result; a trivial one develops nobody. The level of control, not the size of the decision, is the valve.
@@ -256,9 +282,6 @@ what in a skip-level.
 
 **Bench development against delivery.** A senior engineer running planning engineers less, a real cost
 under flat headcount; a vacancy with no cover costs more, without warning.
-
-**Internal coaching against external programs.** Coaching is specific but bounded by the director's
-skill and time; a program brings practice and peers.
 
 ## Failure Modes
 
@@ -280,8 +303,7 @@ artifacts improve only when the director touched them.
 **Development plans without stretch.** Detection: nothing in the plan is a decision the manager will make
 that they could not make before.
 
-**Bench on paper.** Chapter 36's succession theater: named successors who do no management work.
-Detection: ask the named person.
+**Bench on paper.** Named successors who do no management work. Detection: ask the named person.
 
 ## Enterprise Application
 
@@ -296,11 +318,9 @@ cross teams. New managers get the rubric on day one, so expectations are stated 
 
 ## CTO Perspective
 
-The CTO manages managers of managers, and running the role now means a management system that works
-without the director in the room. Ask each director twice a year: Which of your managers would you hire
+The CTO manages managers of managers. Ask each director twice a year: Which of your managers would you hire
 again, and on what evidence? Who could do each manager's job in six months? What did you delegate to a
-manager this half that you used to decide yourself? The board sees succession for the top roles; the CTO
-sees whether it exists below, where engineering continuity lives. A CTO who finds every manager rated
+manager this half that you used to decide yourself? A CTO who finds every manager rated
 "Solid" has found a measurement problem. Funding a course without protecting the director's coaching
 hours buys the visible half of manager development.
 
@@ -308,8 +328,8 @@ hours buys the visible half of manager development.
 
 1. Write each manager's expectations on the six dimensions, including the decisions they own, before
    any rating.
-2. Keep an evidence file per manager: artifacts, metrics with context, artifact-review notes, peer and
-   staff-engineer observations, the manager's self-assessment.
+2. Keep an evidence file per manager: artifacts, metrics in context, peer observations, the manager's
+   self-assessment.
 3. Run Chapter 40's skip-level rotation, once a quarter in groups of three, under its written rule, with
    the four questions above.
 4. Draft ratings with one dated evidence item per cell; mark "No evidence" and close the gaps before the
@@ -460,6 +480,12 @@ you would do if he declines it.
 **A3.** Tom Becker says his "Not yet" on people growth is unfair: he has already drafted a fair plan for
 Bram Verhoeven, and HR will read the rating in his file. Decide whether to change the rating, how to
 record the evidence, and what Tom needs to show by week 38.
+
+**A4.** A hypothetical manager of eight engineers has had written expectations and a one-quarter
+development plan, and after two quarters is rated Not yet on people growth, team health, and running
+the role. Two engineers have asked to move teams. The manager says they miss writing code. Choose
+among the options in "When a manager is not working out", plan the first two weeks of the transition,
+and write the three sentences you would say to the team.
 
 ### Executive Decision-Making
 

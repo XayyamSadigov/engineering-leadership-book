@@ -177,6 +177,10 @@ nav:
       - "Career development plan": templates/career-development-plan.md
       - "Team health assessment": templates/team-health-assessment.md
       - "Leadership succession plan": templates/leadership-succession-plan.md
+      - "Hiring scorecard and interview kit": templates/hiring-scorecard.md
+      - "Performance improvement plan": templates/performance-improvement-plan.md
+      - "Team charter and working agreement": templates/team-charter.md
+      - "New manager's 90-day plan": templates/new-manager-90-day-plan.md
   - "XV. Capstone":
       - "Chapter 60 — Capstone: Transforming Northstar Technologies": parts/15-capstone/60-capstone-northstar.md
   - Projects:

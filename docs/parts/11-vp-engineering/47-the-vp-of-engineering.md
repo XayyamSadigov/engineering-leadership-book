@@ -99,14 +99,12 @@ VP; **expert opinion**, without data.
 
 ### Why who sits at the top matters
 
-Upper echelons theory, from general management research, holds that organizational outcomes (strategic
-choices and performance) are partially predicted by top managers' background characteristics
-([Hambrick and Mason, 1984](../../references/bibliography.md#hambrick1984upper)). Hambrick's update, in
-its abstract, states the premise as executives' experiences, values, and personalities shaping how they
-interpret situations and so what they choose
-([Hambrick, 2007](../../references/bibliography.md#hambrick2007upper)). The 1984 article offers
+Upper echelons theory holds that organizational outcomes are partially predicted by top managers'
+backgrounds, because experiences and values shape how executives interpret situations
+([Hambrick and Mason, 1984](../../references/bibliography.md#hambrick1984upper);
+[Hambrick, 2007](../../references/bibliography.md#hambrick2007upper)). The 1984 article offers
 propositions, not a test. Treat it as a **research finding** at the level of established theory about
-firms' top teams, not a measured effect in engineering; "partially" is doing real work.
+firms' top teams, not a measured effect in engineering.
 
 The inference here is modest (**this book's recommendation**). A VP's directors are a small upper echelon:
 what they notice depends on who they are. Three directors who came up through product teams will see
@@ -134,17 +132,62 @@ direct reports, including how they will be judged and how to resolve tension bet
 [Lencioni, 2002](../../references/bibliography.md#lencioni2002five)): **expert opinion**. The shared
 goal makes the first team real.
 
+### Running the director team
+
+Directors become a team only if the VP runs them as one. Without a shared forum, each director
+negotiates with the VP alone, and every cross-area question becomes a private lobbying contest. What
+follows is **this book's recommendation**, built on the written expectations above.
+
+**Rhythm.** Three meetings, each with one job:
+
+| Meeting | Cadence and length | Its one job |
+|---|---|---|
+| Director team meeting | Weekly, 60 minutes | Cross-area decisions and the shared goal |
+| Portfolio review | Quarterly, half a day | Re-rank bets; decide reallocations at their triggers |
+| One-on-ones and operating reviews | Weekly and monthly, per director | The director's own area and development |
+
+A weekly agenda that works: the shared goal's measure first, five minutes, discussed only if it moved.
+Then decisions that cross areas, each submitted in writing a day ahead with its options and their
+costs. Then one problem a director wants the team's help with. Status about one area stays in the
+operating review. Reallocation requests are heard only here, with every director present, which makes
+the allocation hard to lobby.
+
+**Decision rights.** Write down which decisions the team owns and how each is made
+([decision rights](../../glossary.md#decision-rights)), and revisit the list twice a year:
+
+| Decision | How it is made |
+|---|---|
+| Inside one area | The director decides; the team hears if it affects others |
+| Across areas, easy to reverse | The affected directors agree; the VP decides if they cannot within a week |
+| Across areas, hard to reverse (boundaries, shared platforms, reallocations) | The team discusses; the VP decides and records the reason |
+| Standards the whole group applies | The team proposes; the VP approves |
+
+The VP deciding is not a failure of the team. Directors argue for their areas; that is their job. The
+VP owes them a hearing, a decision on a known date, and a written reason.
+
+**Conflict.** The norm is to disagree in the room and commit outside it. Two behaviors break it:
+reopening a decided question with the VP privately, and criticizing a peer's area to that peer's
+stakeholders. Larson attributes competition among peers partly to habits learned where capturing
+existing capacity paid better than creating new capacity, and partly to an executive who does not
+enforce norms ([Larson, 2023c](../../references/bibliography.md#larson2023gelling)) (**expert
+opinion**). So enforce them. When a director undercuts a decision, raise it in your next one-on-one:
+name the behavior and its cost to the team, and restate the route (new evidence reopens a decision,
+in the meeting). If it recurs, it belongs in the director's assessment, because peer conduct is part
+of the job the shared goal defines.
+
+A sign the team works: directors raise their own areas' problems in the meeting before the VP hears of
+them elsewhere, and a director sometimes argues for giving capacity to a peer.
+
 ### The operating review
 
 The VP's main recurring instrument is a monthly operating review with each director: 60 minutes, the
 area's scorecard (Chapter 38), progress on funded bets, staffing, and what the director wants decided.
 It inspects the director's system, as Chapter 39 describes one level down.
 
-Status reports are biased, and the bias compounds with each layer. Keil and colleagues, summarizing
-their own studies, report that in a review of 56 experienced software project managers, status reports
-were biased 60 percent of the time. They advise executives to seek corroboration. Aggressive auditing
-can backfire into more misreporting, they report, while trust in supervisors was associated with
-willingness to report problems
+Status reports are biased, and the bias compounds with each layer. Keil and colleagues report that in
+a review of 56 experienced software project managers, status reports were biased 60 percent of the
+time. They advise seeking corroboration, and warn that aggressive auditing can backfire into more
+misreporting
 ([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)). That is a **research
 finding**, from samples that need caution in generalizing. A VP sits two filters above Chapter 40's
 director.
@@ -522,6 +565,12 @@ options and who bears each cost.
 managers as unavailable and slow to decide; that director's area is meeting its goals. Plan the VP's
 first quarter with this director: what the VP tests before acting, what evidence would justify a change,
 and what the VP does in the meantime.
+
+**A4.** Suppose two of Nadia Brennan's directors agree in the director team meeting to delay a shared
+checkout API change by one quarter. A week later a product lead tells Nadia that one of them has been
+telling his product partners the delay was "Commerce leadership overruling us" and is quietly
+staffing the change anyway. Decide what Nadia does in the next week, what she says to that director,
+and what, if anything, she changes about how the team makes decisions.
 
 ### Executive Decision-Making
 

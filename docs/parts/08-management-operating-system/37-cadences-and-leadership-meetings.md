@@ -392,6 +392,26 @@ teaches every director below to do the same.
 10. After six weeks, recount decisions, reopened decisions, and recurring hours, and adjust.
 11. Each quarter, spend 30 minutes of the reset auditing the system itself.
 
+### A sample forum charter
+
+A charter answers the audit's questions before anyone attends, and it fits on half a page. This one
+is for a hypothetical director's weekly leadership team meeting (**illustrative**):
+
+| Field | Entry |
+|---|---|
+| Job | Decide cross-team questions that have a decider but no other forum |
+| Not its job | Status (written update), incidents and follow-ups (operational review), one team's planning |
+| Inputs | Each member's written update by noon the previous working day: what changed, risks, decisions needed, asks, a link to the metrics. The open-decisions list, with decider and "needed by" date |
+| Outputs | Decisions logged with owner and date; what each member will tell their team |
+| Attendees | Director (chair), managers, staff engineers, one product lead; others invited per item |
+| Length | 75 minutes weekly; cancelled when no framed item is on the list |
+| Measures | Decisions per meeting; decisions reopened in another forum |
+| Review | End of quarter. Stops or merges if it averages under one decision a meeting for six weeks |
+
+Two rows do most of the work. "Not its job" names where other topics go, so the meeting does not
+become their overflow. The cancellation rule makes an empty agenda a reason to give the hour back,
+not to fill it with status. The update format doubles as the written status that step 7 asks for.
+
 ## Case Study
 
 This case is **fictional**. It is set in quarter 2 and at the start of quarter 3 at Northstar,

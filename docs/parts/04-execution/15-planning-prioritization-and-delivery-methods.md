@@ -194,6 +194,30 @@ A monthly team review with the product manager (what moved to now, what was lear
 estimates now say) keeps it honest, inside the organization's quarterly reset (Chapter 38). Fixed-date
 commitments sit outside the ranking, with reserved capacity and a visible margin.
 
+### A worked outcome roadmap
+
+The three horizons work better when each holds outcomes rather than features. An outcome is a change in
+customer or business behavior with a measure; features become bets toward it. Chapter 44 gives the
+conversion method. Here is the result for an **illustrative** ordering team, not Northstar, whose
+feature list read: saved order templates, a reorder button, CSV export, order search redesign.
+
+Asking each requester "what changes for the customer if this works?" gave the same answer for the first
+two: repeat orders take too long. The team measured the baseline first.
+
+| Horizon | Outcome and measure | Baseline | Target (review date) | Bets | Guardrail |
+|---|---|---|---|---|---|
+| Now | Repeat orders are faster: median time to place a repeat order | 9 minutes | 5 minutes (end of month 2) | Reorder button; saved templates | Order error rate does not rise |
+| Next | Customers find past orders without calling support: "where is my order" tickets | 140 a month | 80 a month (end of quarter) | Search filters first; redesign only if filters fall short | Search response time under 1 second |
+| Later | Finance teams reconcile orders without manual export | Not yet measured | Set once measured | Instrument first; CSV export is one candidate | None yet |
+
+Three things changed. Two features merged into one outcome, so the team can stop after the reorder
+button if it alone reaches 5 minutes. The search redesign shrank to a cheaper first bet. And the
+"later" item starts with measurement, not building.
+
+The monthly review then asks four questions: did the measure move, which bets shipped, what did we
+learn, and does anything move between horizons? The targets are targets in Chapter 17's sense; the
+commitment is the bets in "now" and the review date.
+
 ## Engineering Organization Example
 
 !!! info "Northstar so far"
@@ -486,6 +510,12 @@ you would send him, including what you need from him to rank the request and wha
 **A3.** Design the team-level roadmap cadence for Data and Analytics, which has no named method, a
 24 percent unplanned share, and a mix of quarter-long warehouse projects and small report requests.
 Say what you would keep from how it works today.
+
+**A4.** A team's next-quarter roadmap lists five features: bulk price update, a price-change audit log,
+customer-specific price lists, a pricing API for partners, and faster price-list loading. Two came from
+sales, one from customer success, one from finance, and one from the team's own on-call pain. Turn the
+list into an outcome roadmap with now, next, and later horizons: name the outcomes, the questions you
+would ask each requester, the baselines you need, and one guardrail per outcome.
 
 ### Executive Decision-Making
 

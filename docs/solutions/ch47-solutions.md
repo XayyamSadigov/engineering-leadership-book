@@ -136,6 +136,37 @@ decision date. Keep the managers' trust by not undermining the director publicly
 **Weak answer:** replacing the director in month one on hearsay, or ignoring it because the numbers are
 green.
 
+## A4 — A director who undercuts a team decision
+
+**First, check the facts.** A product lead's account is one source. Before acting, Nadia confirms two
+things directly: what the director has been telling his product partners, and whether engineers in
+his area are working on the delayed change. Both are observable in a day (ask the partners; look at
+the area's board or recent merge requests). Acting on hearsay would teach the team that the VP
+manages by rumor.
+
+**The one-on-one, within the week.** If confirmed, name both behaviors and their cost without a
+lecture: "We decided together to delay the API change. Telling your partners leadership overruled you
+makes the other directors' commitments look optional, and staffing it anyway spends capacity the team
+assigned elsewhere." Then restate the route: if he has new evidence that the delay is wrong, he brings
+it to the next director team meeting and the decision can be reopened there. Ask what made him go
+around the meeting; the answer may show that he felt unheard, or that the decision missed a cost his
+area carries.
+
+**Changes to the team's process.** Look for what made the side route attractive. Was the decision
+recorded with its reason? Did the director state his objection in the room, and was it answered? If
+not, tighten the practice: written options a day ahead, the decision and its reason in the log, and
+an explicit question before closing ("does anyone not commit to this?"). Nadia does not announce the
+incident to the team; she restates the norm for everyone at the next meeting.
+
+**If it recurs,** it goes into the director's half-year assessment as evidence on peer conduct, which
+the shared goal makes part of the job.
+
+**Criteria.** A good answer verifies first, addresses the behavior privately and specifically,
+separates the director's disagreement (legitimate, with a route) from the way he acted on it, and
+checks whether the team's process invited it. The weak answers are to ignore it because the director
+delivers, which tells every director that decisions are negotiable in private, or to reprimand him in
+the meeting, which turns a norm into a public trial.
+
 ## X1 — Does Northstar need a VP in year 2?
 
 Several recommendations are defensible; the quality is in the reasoning and its conditions.

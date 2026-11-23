@@ -1,8 +1,8 @@
 # Chapter 9 — Performance Management and Underperformance
 
-This chapter is about the part of management most managers postpone: deciding that someone is not
-performing, finding out why, and acting in a way that is fair to that person and to everyone who works
-with them. It covers diagnosis before action (skill, will, role fit, and the system around the
+This chapter is about the regular review cycle and the part of management most managers postpone:
+deciding that someone is not performing, finding out why, and acting fairly to that person and to
+everyone who works with them. It covers writing reviews, diagnosis before action (skill, will, role fit, and the system around the
 person), a documented improvement process with a real chance of success and a clear end, the cost of
 acting late, and what performance ratings can and cannot tell you. Chapter 6 covers the feedback
 conversation itself, and Chapter 8 covers promotion and calibration; this chapter uses both. The running
@@ -32,8 +32,8 @@ After this chapter you will be able to:
 
 - Separate skill, will, role fit, and system causes of low performance before acting, and name the
   evidence that distinguishes them.
-- Write performance expectations that a third party could check, and use them to open a documented
-  improvement process.
+- Write performance expectations that a third party could check, and use them in the regular review
+  cycle and to open a documented improvement process.
 - Run an improvement plan that gives the person a real chance of success, has a clear end, and stays
   within your organization's legal and HR boundaries.
 - Estimate the cost to the team of acting late, and use it to decide when to start.
@@ -115,6 +115,49 @@ Individual activity counts are not performance measures; delivery data shows whe
 judgment rests on impact and behavior
 ([Chapter 18](../04-execution/18-measuring-engineering-productivity.md#why-the-book-refuses-individual-productivity-scoring)).
 
+### The regular review cycle
+
+Most performance management is not about problems. It is the regular cycle of setting expectations,
+checking progress, and writing a review, and done well it makes underperformance rare and never a
+surprise. The design below is **this book's recommendation**.
+
+**Cadence.** A written review once or twice a year, fed by monthly notes and a short quarterly check
+against the expectations. The written review summarizes conversations already held; nothing in it
+should be new to the person.
+
+**Start of the period.** Agree two to four expectations per person, written to the third-party test
+above and tied to the ladder dimensions (Chapter 8), plus one growth goal.
+
+**Writing the review.** Start from the running record kept in one-on-ones (Chapter 5), not memory.
+Ask the person for a short self-review first; it surfaces work you missed. A review has four parts:
+
+| Part | Content | Weak version |
+|---|---|---|
+| What they did | Two to four outcomes, each with evidence and its effect | A list of tickets |
+| How, by ladder dimension | Behavior that produced the outcomes, good and less good | "Strong communicator" |
+| Growth | Progress on last period's goal; the next gap at their level or the next | "Keep it up" |
+| Next period | Expectations and the support you commit to | Nothing, or the same as last time |
+
+**Rating language.** If your organization uses ratings, use its defined words and show the evidence
+for the one you chose. "Meets expectations" means the agreed expectations were met; it is not a
+polite word for a problem you have not raised.
+
+**Strong performers.** They get the least attention and need specific feedback as much as anyone:
+what exactly made the work strong, what the next level asks of them, and one sponsorship action
+(Chapter 5). A strong performer who hears only praise concludes that nobody is watching their growth.
+
+**Delivery.** Share the written review a day before the conversation, so the meeting is a discussion,
+not a reading.
+
+### Performance evidence when code is AI-assisted
+
+AI coding assistants make volume measures even less meaningful: lines, commits, and merge requests
+grow without any change in contribution. Judge what the person owns (**this book's
+recommendation**): the outcomes against expectations, the quality of their design and review
+decisions, how they handle incidents, and whether they understand and stand behind the code they
+merge, whoever or whatever typed it. "I don't know, the assistant wrote that" in a review or an
+incident is a performance signal.
+
 ### The improvement process
 
 Formal processes go by many names; [performance improvement plan](../../glossary.md#performance-improvement-plan-pip),
@@ -123,13 +166,10 @@ organizations everyone, including the person on it, reads a PIP as the first ste
 both sides believe is a formality cannot succeed, and the manager loses what it was supposed to
 produce: evidence of whether the person can meet the bar with support.
 
-Elaine Pulakos and Ryan O'Leary argue that performance management has been reduced to prescribed
-steps in formal administrative systems, disconnected from the daily activities that decide whether it
-works: clear expectations, short-term objectives, and continual guidance. They argue for more
-attention to the manager-employee relationship and less redesign of formal systems
+Elaine Pulakos and Ryan O'Leary argue that performance management has been reduced to formal
+administrative steps, disconnected from the daily guidance that decides whether it works
 ([Pulakos and O'Leary, 2011](../../references/bibliography.md#pulakos2011broken)). It is a position
-paper, not an experiment, but it names the PIP failure: a form replacing the weekly guidance it was
-meant to formalize.
+paper, not an experiment, but it names the PIP failure: a form replacing weekly guidance.
 
 A process with a real chance of success has five properties (**this book's recommendation**):
 
@@ -185,9 +225,8 @@ cooperation ([Felps, Mitchell, and Byington, 2006](../../references/bibliography
 It is a proposed model, not a measured effect, and most underperformers are not "bad apples". But the withholding-effort path applies: a teammate who visibly does less without consequence
 is a fairness signal to everyone.
 
-The practical cost is usually measurable, as the Engineering Organization Example shows. Kim Scott's
-account of candor is known for naming the manager's failure here: withholding a hard message out of a
-wish to be kind, which helps nobody, including the person
+The practical cost is usually measurable, as the Engineering Organization Example shows. Kim Scott
+calls the manager's failure here ruinous empathy: withholding a hard message to be kind
 ([Scott, 2017](../../references/bibliography.md#scott2017radical)).
 
 ### What ratings measure
@@ -219,13 +258,11 @@ mainly on the percentage fired and on voluntary turnover
 ([Scullen, Bergey, and Aiman-Smith, 2005](../../references/bibliography.md#scullen2005forced)).
 
 Read carefully, that result argues against routine forced ranking in engineering (**this book's
-recommendation**). The gains are front-loaded, so a permanent annual cull
-keeps paying costs after the benefits shrink. The simulation models workforce potential; it does not
-report effects on cooperation, knowledge sharing, or willingness to take hard, low-visibility work,
-which engineering teams depend on. And it relies on ratings, with the rater effects described above.
-Forced distribution can be a defensible one-time correction where ratings have inflated into
-meaninglessness; as a permanent system it ranks people against each other in work that requires them
-to help each other.
+recommendation**). The gains are front-loaded, so a permanent cull keeps paying costs after the
+benefits shrink. The simulation does not report effects on cooperation or willingness to take hard,
+low-visibility work, and it relies on ratings with the rater effects above. Forced distribution can be
+a one-time correction where ratings have inflated into meaninglessness; as a permanent system it ranks
+people against each other in work that requires them to help each other.
 
 ## Engineering Organization Example
 
@@ -472,6 +509,11 @@ should commit to for each.
 conference places, arguing that ratings are the most objective data available. Each person was rated
 by one manager. Using the research on rater effects, explain what the ratings can and cannot support,
 and propose a better basis for the decision.
+
+**F4.** An engineer on your team had a strong year: she led a migration that removed a weekly manual
+step, mentored a new hire to independence, and twice raised design risks other teams then fixed. Her
+growth goal was to lead a cross-team design, which has not yet happened. Using the four-part structure,
+outline her written review, including the next period's expectations and your commitments.
 
 ### Applied Leadership
 

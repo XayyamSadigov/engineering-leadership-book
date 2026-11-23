@@ -135,6 +135,32 @@ will be used; if this cycle feeds pay, the director should say how the response 
 The weak answers are to soften the rating to avoid conflict, or to treat the rating as a verdict on the
 Bram decision, which is still open.
 
+## A4 — Moving a manager back to engineering
+
+**Option.** Return to engineering is the strongest fit. The preconditions hold: expectations were
+written, a plan was tried, and the Not yet pattern spans three dimensions over two quarters. The
+manager's own signal (missing code) points the same way, and two engineers asking to move is a team
+health cost that will grow. Smaller scope is weaker here, because the gaps are in people growth and
+team health, which a smaller team still needs. Exit is not warranted for someone with valued
+engineering skills.
+
+**First two weeks.** Days 1–3: agree the decision, level, and pay with HR (no cut where the ladder
+allows), choose interim cover from the bench, and plan the engineering seat the person will fill. Day
+4: tell the manager privately, with the evidence file, framed as a move to a role that fits; invite
+them to choose how it is described. Same day: tell the team after the manager, with the interim lead
+present. Days 5–10: one-on-ones with each engineer, starting with the two who asked to move; agree the
+returning engineer's first project away from their former team's daily decisions.
+
+**To the team.** "From Monday, [name] is moving back to an engineering role, which is a normal path
+here and one they chose to talk about with me. [Interim lead] will lead the team while we find a
+permanent manager. Each of you will have a one-on-one with me this week, and nothing about your work
+changes until we have talked."
+
+**Criteria.** A good answer checks the preconditions, prefers the path that keeps a good engineer,
+protects the person's dignity, and gives the team next steps without reasons. The weak answers are
+announcing reasons ("it wasn't working out"), delaying until a replacement is hired, or moving the
+person into the same team they managed.
+
 ## X1 — A ranking and a successor
 
 **The ranking.** Refuse to produce a single ordinal ranking, and offer what pay decisions actually need:

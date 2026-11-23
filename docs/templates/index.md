@@ -33,5 +33,9 @@ more useful than one with thirty fields they skip.
 | [Career development plan](career-development-plan.md) | A goal tied to the level framework, with evidence, support, and checkpoints |
 | [Team health assessment](team-health-assessment.md) | A team's self-assessment across health areas, paired with signals already on record |
 | [Leadership succession plan](leadership-succession-plan.md) | Critical roles, successor readiness, interim cover, and development actions |
+| [Hiring scorecard and interview kit](hiring-scorecard.md) | First-year outcomes, the attributes they need, which session measures each, rubrics, and a decision rule set in advance |
+| [Performance improvement plan](performance-improvement-plan.md) | A short, dated plan with checkable expectations, the manager's support, and both outcomes stated at the start |
+| [Team charter and working agreement](team-charter.md) | Mission, what the team owns and does not, decision rights, and agreements the team enforces on itself |
+| [New manager's 90-day plan](new-manager-90-day-plan.md) | Hand over the engineering work, agree day-90 criteria, then learn, delegate, and check |
 
-All twenty templates in the [curriculum](../curriculum.md) are available.
+All twenty-four templates in the [curriculum](../curriculum.md) are available.

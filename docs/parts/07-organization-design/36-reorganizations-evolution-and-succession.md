@@ -194,6 +194,38 @@ costs a few engineer-weeks, and its effect is visible by the next review.
 Evolution has limits: local fixes can drift into a structure nobody would design, and a new team
 type or management layer cannot be made in small steps. Those need a deliberate reorganization.
 
+### Undoing a reorganization that failed
+
+A reversal is a second reorganization, so it must pass the same tests and be priced the same way
+(**this book's recommendation**). It never restores the old state: people have new relationships,
+components have new runbooks, and someone was promoted.
+
+Decide in advance when the verdict is due. The 90-day review compares the forecast with what happened:
+cross-team items, lead time, incidents at the changed boundaries, attrition, and what one-on-ones
+report. Then separate two patterns:
+
+- **A transition dip** is worst in the first weeks and shrinks each month. Wait it out.
+- **A misfit** does not shrink after a quarter, or grows. The new boundary cuts work that changes
+  together, or a team carries more than it can.
+
+A misfit has three responses, from cheapest to dearest:
+
+| Response | When it fits | Cost |
+|---|---|---|
+| Adjust | The misfit sits on one component, interface, or person | A small redesign: a few engineer-weeks |
+| Partial reversal | One part failed and the rest works | One team's transition again |
+| Full reversal | The diagnosis behind the change was wrong | A full transition cost, plus lost trust in the next proposal |
+
+Most failed reorganizations need an adjustment. Take this chapter's 60-engineer example: suppose that
+after two quarters the cross-team items fell from 30 to 26, not to the forecast 18, and most of the 26
+touch one component the new boundary split. Moving that component is the answer; undoing the whole
+design would spend another 70 engineer-weeks to get back to the old problem.
+
+Communicate a reversal the way the original was meant to be: the evidence, what the forecast got
+wrong, what changes and on which date. The leader owns the error. The people who took new roles did
+not cause it, and a manager whose role disappears needs a real next role, agreed before the
+announcement.
+
 ### Succession coverage
 
 A review of CEO succession research notes that studies have mostly treated succession as an event,

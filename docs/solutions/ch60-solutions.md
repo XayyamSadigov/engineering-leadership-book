@@ -258,3 +258,28 @@ showing who decides what.
 **Why not simply the worst outcome?** The week-9 Billing Sev1 was the most visible failure, but changing
 "the migration check" after the fact rewards hindsight. The decision-rights gap is chosen because it was
 visible in week 4 and touches the most threads. The weak answer picks whatever went worst.
+
+## Grading aid for the ten stages
+
+Use this table with the "good enough" criteria in the chapter's
+[How to work through the capstone](../parts/15-capstone/60-capstone-northstar.md#how-to-work-through-the-capstone).
+"Adequate" meets those criteria; "excellent" adds what makes a later stage easier; "weak" is the answer that
+looks finished but breaks a hand-off. Score each stage on its own, then run the Decision Framework checks on
+the whole portfolio. A submission with any weak stage in the director half (stages 1 to 6) is not done,
+however strong the CTO stages are, because every later stage inherits the gap.
+
+| Stage | Excellent | Adequate | Weak |
+|---|---|---|---|
+| 1 Diagnosis | Names the constraint with evidence from several measures; the trust table says how each measure is produced; counting rules include a bridge plan for cadence changes | Claims cite baseline measures; counting rules exist for severity, tier 1, period, and change failure rate | Opinions without measures; no counting rules, or rules that break when releases go weekly |
+| 2 Ownership | All 24 components assigned or exempted; each exemption has an ending decision, a week, and an owner of its expiry; co-change evidence explains the hard calls | Every component appears once or has an exemption with a date | Exemptions with no owner of the expiry; components missing; teams restructured |
+| 3 Scorecard | Each row has a pair that exposes gaming and a continuity rule; unmeasured contract risks are visible rows | Baseline values, no targets, a continuity rule per row | Targets set in week 4; rows that silently change meaning later |
+| 4 Debt | Interest in units stage 8 can reuse for most entries; the decision owner and a trigger date for each | Ten or more priced entries with interest in some unit | Principal only, or a copy of the wiki list |
+| 5 Accountability | Decision-rights map with a CTO lane and a recording rule; owners for standards and corrective actions; staff engineer mandates tied to stage 1 findings | A decision-rights map exists and includes the CTO | Severity definitions only; executive decisions left unrecorded |
+| 6 90-day plan | Every stage 2 to 5 commitment funded; a step-down rule tied to evidence; risks with pre-agreed responses; the QA engineers' next roles named | Allocation by team and the QA engineers' roles; decision requests stated | A list of initiatives with no capacity, or no step-down rule |
+| Hinge | Each entry judged on what was knowable, with status and lesson; names one reasonable decision that went badly and one lucky one; compares its own allocation fairly | Every entry has a status and a lesson | Grades decisions by outcome; uses facts from after week 40 |
+| 9 Three-year | Policies and "excellent" capabilities trace to stage 1 or 4; options carry decision weeks and triggers; the premortem changes something | Groups, policies, and a year-2 column that matches stage 7 | Policies that decide nothing; a year-2 column that disagrees with stage 7 |
+| 7 12-month | One envelope at 80, 79, and 78 with the line that absorbs a fourth seat; a fate for every register entry; the documents to change and how their authors are told | The envelope at three seat counts and a fate for each entry | One seat count only; register entries ignored |
+| 8 Investment | Fits stage 7's envelope exactly; each candidate traces to a stage 4 entry; assumptions carry break-evens; capacity and cash on separate lines | Fits the envelope; capacity priced separately from cash | Reallocated capacity shown as new spending; numbers with no source |
+| 10 Board | Each director's concern maps to an artifact; the measurement note states every bridge; a headline chosen with reasons and its weakness stated | Concerns mapped and a measurement note written | Clean trend lines with no bridges; anything about the meeting's outcome |
+| Memo | Shows how the five threads moved through the year and picks one week-4 change on week-4 knowledge, with its effect on later stages | Names the threads and one change | Restates the stages, or picks the commitment that turned out worst |
+

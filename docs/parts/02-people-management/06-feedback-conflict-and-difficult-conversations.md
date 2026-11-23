@@ -239,6 +239,46 @@ flowchart TD
     AG --> W[Write it down]
 ```
 
+### A sample conversation, annotated
+
+This sample is **illustrative**: a hypothetical manager and Lee, a senior engineer on the team who
+blamed another team in a public incident channel. The manager prepared the five parts beforehand.
+
+> **Manager:** I want to talk about your post in the incident channel on Tuesday. I'll say what I saw,
+> then I want to hear your side. You wrote that the payments team "can't ship without breaking us".
+> Two of their engineers stopped posting in the channel after that, and the timeline wasn't finished.
+> I need incident channels to stay about what happened, not who's to blame.
+
+*The opening states the purpose, one event, its effect, and the standard, in under a minute. No
+compliment first, no adjective about Lee.*
+
+> **Lee:** Honestly? Management has ignored our on-call load for a year. I've been paged three
+> weekends running. Now I'm the problem?
+
+*A counter-attack. It contains a real grievance and a deflection. Do not argue the grievance or drop
+the point.*
+
+> **Manager:** Three weekends is too many, and you're right that I haven't fixed it. I want to come
+> back to that properly, this week. The post is a separate thing, and it still matters. Can we finish
+> this first?
+
+*The manager acknowledges what is true, commits to a separate conversation with a date, and returns to
+the behavior. Both topics survive; neither swallows the other.*
+
+> **Lee:** (silence, then) I don't think I can do this right now.
+
+*Withdrawal. Pushing on would get compliance at best.*
+
+> **Manager:** That's fine. Let's stop here and pick it up Thursday at ten. The point about the channel
+> stands; I'd like to hear what you think a fair version of that post would have said.
+
+*Pause and resume: a fixed time within two working days, the point restated, and a question that
+invites Lee to own the next step.*
+
+On Thursday the conversation ends with an agreement written in two lines: incident channels carry
+facts and the timeline; disagreement about cause goes to the review. Separately, the manager books the
+on-call conversation, because the grievance was real.
+
 Write the agreement down: both people leave with the same understanding, and if the pattern continues,
 Chapter 9's process starts from a record rather than from memory.
 

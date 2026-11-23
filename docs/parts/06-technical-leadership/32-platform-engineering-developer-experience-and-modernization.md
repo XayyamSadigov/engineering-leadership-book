@@ -350,6 +350,35 @@ CI consolidation belong in the debt register and are funded as projects.
 Modernization here is a coordination plan as much as a technical one: who owns each seam, who moves
 which slice, and who pays for the transitional code.
 
+### Sizing and funding a platform team
+
+Size a platform team from the work it removes, not from a ratio (**this book's recommendation**). No
+study gives a right share of engineers for platform work, and published ratios describe other
+companies' estates. Three numbers give a defensible size:
+
+- **Work already being done.** Shared tooling is usually run by someone today, badly and invisibly. At
+  Northstar, four CI systems take about 1.5 FTE a year. That is capacity the organization already pays
+  for, and the first source of platform staff.
+- **Interrupt load.** Engineers on rotation answer requests; they do not build. Count them separately.
+  Platform Operations' five engineers with two on rotation leave three builders.
+- **The roadmap's next two quarters.** Engineer-weeks for the capabilities users asked for, with
+  estimates, as in this chapter's case.
+
+Grow the team only when adoption and the removed load are measured. A platform that asks for more
+people before any team uses it unforced is asking to be funded as a queue.
+
+Funding has three common models:
+
+| Model | How it works | Strength | Risk |
+|---|---|---|---|
+| Central funding | The platform is a line in engineering's budget | Teams adopt freely; no billing overhead | Nobody sees what each team consumes |
+| Showback | Central funding, plus a quarterly report of usage and cost per team | Cost visible without discouraging use | Reports nobody reads |
+| Chargeback | Teams pay from their own budgets per use | Demand becomes a price signal | Teams avoid the platform and rebuild locally, defeating adoption |
+
+For an organization of 50 to 150 engineers, central funding with showback usually fits. Reserve
+chargeback for costs that grow with consumption, such as cloud spend, where a price changes behavior
+the platform wants changed.
+
 ## CTO Perspective
 
 At executive scale, platform work and modernization are investment lines competing with features for

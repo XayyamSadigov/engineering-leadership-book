@@ -27,8 +27,7 @@ examples are two groups of Halvard Systems, the book's fictional 500-engineer
 ## Why This Matters
 
 At team scale, a reduction is the worst conversation a manager has, and an acquisition is a group of
-strangers with a different build system. The manager's job is to be honest with individuals and keep the
-team's systems running.
+strangers with a different build system.
 
 At organization scale, both events move ownership. A reduction of fifteen percent can remove the only
 person who has changed a billing component in a year; an acquisition can add eleven services that nobody
@@ -134,9 +133,8 @@ developers leave can far exceed what is expected, and naming successors reduces 
 [Mockus, 2010](../../references/bibliography.md#mockus2010volatility)). These are **research findings**
 in limited settings.
 
-Voluntary turnover removes one person at a time and leaves time for handover. A reduction removes many at
-once, often with access revoked the same day. The ownership check in the mental model exists because of
-this asymmetry: it is the only point at which knowledge loss can be prevented rather than discovered.
+A reduction removes many people at once, often with access revoked the same day, so the ownership check is
+the only point at which knowledge loss can be prevented rather than discovered.
 
 ### Selection criteria
 
@@ -162,6 +160,23 @@ groups before it is final. In the United States, for example, a group waiver of 
 disclosing the ages and job titles of those selected and not selected in the unit
 ([EEOC, 2009](../../references/bibliography.md#eeoc2009waivers)). The test is useful anywhere: if you
 would be uncomfortable showing who was selected from which unit, the criteria are not doing the work.
+
+### Fairness and ethics in selection
+
+Legal review asks whether a list is defensible; fairness asks whether it is right. Run three checks
+before the list is final (**this book's recommendation**):
+
+- **Same rule, same way.** The criteria were written before names, and each was applied with the same
+  evidence across the unit. A manager with a personal conflict about someone does not score that person.
+- **Who carries the cut.** Look at who is selected among people with less power to object: those on
+  leave, part-time or remote staff, recent returners, people whose visa depends on the job. A pattern
+  there needs an explanation in the work, or the list changes.
+- **No one selected for speaking up.** Check every selected name against recent complaints, incident
+  reports, and concerns raised. If one matches, a second reviewer confirms the criteria alone explain it.
+
+Some moves are wrong even when lawful: timing notice to dodge a bonus or vesting date, pressing people
+into "voluntary" resignation, or giving different severance to similar cases. If you would not explain a
+choice to the survivors, do not make it.
 
 ### Notice and consultation obligations
 
@@ -304,7 +319,7 @@ than announcing a decision that is not yet lawful there.
 
 ## Decision Framework
 
-Use this framework when someone above you proposes a reduction, or when you must propose one.
+Use this framework whenever a reduction is proposed, by you or to you.
 
 | Question | If yes | If no |
 |---|---|---|
@@ -375,13 +390,11 @@ on them the following week. They are survivors as well.
 that will carry the strategy and keeps every commitment alive. Detect it when the plan has no list of work
 that stops.
 
-**The performance cleanup.** A reduction used to remove people whose performance was never addressed. It
-contaminates both processes: survivors conclude that ratings are a layoff list, and the selection becomes
-hard to defend. Detect it when names arrive before criteria.
+**The performance cleanup.** A reduction used to remove people whose performance was never addressed;
+survivors conclude ratings are a layoff list. Detect it when names arrive before criteria.
 
-**The silent expert.** The person who alone can operate a component is on the list because nobody checked.
-Detect it before notification with the ownership check, or afterwards with the first incident nobody can
-diagnose.
+**The silent expert.** The only person who can operate a component is on the list because nobody checked.
+Detect it with the ownership check, or later with the first incident nobody can diagnose.
 
 **Access before conversation.** People learn they are affected when their access stops working, the most
 humiliating version of the news. Detect it in the plan: revocation must follow each conversation.
@@ -457,8 +470,8 @@ policy, with actions on the runbooks the transition contracts produced
 ([Chapter 25](../05-engineering-quality/25-incidents-postmortems-and-change-failure-analysis.md)).
 
 **Weeks 14 to 26.** Departures fall to 3 (about 12.5 percent annualized), Classic's incidents
-return to 2, and the Classic understanding score rises to 54 percent. None of this proves the response worked;
-it is one group over two quarters. It does show the measures a leader should watch: attrition by team, not
+return to 2, and the Classic understanding score rises to 54 percent. It is one group over two quarters, not proof.
+The measures to watch are attrition by team, not
 only in aggregate; incidents on the components whose owners changed; and whether people believe the reasons.
 
 **The cost the payback table missed.** Two extra departures in the first quarter cost about $215,000,
@@ -468,10 +481,9 @@ that the reduction was "fully costed".
 
 ## CTO Perspective
 
-At the executive level, the CTO's first job is to make sure the decision is the right size and shape before it
-is a plan. Reductions are usually proposed in money; the CTO converts money into work that stops and states
-what the company will no longer do. If the executive team cannot name the work, the CTO should say that the
-reduction will be a spread cut and what that will break. Chapter 52 covers the budget arithmetic and Chapter
+The CTO's first job is to get the decision's size and shape right before it is a plan. Reductions are
+proposed in money; the CTO converts money into work that stops. If the executive team cannot name the
+work, the CTO says the reduction will be a spread cut and what that will break. Chapter 52 covers the budget arithmetic and Chapter
 55 the board conversation
 ([Chapter 52](../12-cto-leadership/52-technology-investment-budgeting-and-financial-literacy.md),
 [Chapter 55](../12-cto-leadership/55-boards-due-diligence-and-executive-decision-making.md)).
@@ -569,9 +581,8 @@ Halvard's policy. The first embedded feature ships in Reporting in month 5. The 
 proposes migrating the four Corvane services with the highest operating cost first and leaving the rest for a
 second decision a year later; the group adopts it.
 
-The case shows what a preserve decision buys and costs. It kept the people and the leader, and it kept two
-platforms running for at least a year longer, at a cost that was visible in the deal model rather than discovered
-afterwards.
+A preserve decision kept the people and the leader, and two platforms for at least a year longer, at a
+cost visible in the deal model rather than discovered afterwards.
 
 ## Exercises
 
@@ -662,8 +673,7 @@ conditions under which you would oppose it.
   well, and measure attrition, incidents, and trust by team for two quarters.
 - Integrate an acquisition per dimension: absorb security and incident policy on day one, preserve the people
   and the leader, stage the product, and decide the platform on a date set at close.
-- Put the integration cost and the attrition cost in the business case before the decision, not in the
-  explanation afterwards.
+- Put integration and attrition costs in the business case before the decision.
 
 ## References and Further Reading
 

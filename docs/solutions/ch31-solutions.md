@@ -66,6 +66,32 @@ which eight. It also notes that tier matters: export-svc at tier 3 may reasonabl
 but no component should be undeployable by its owner. The weak answer marks every component with a
 listed owner as passing.
 
+## F4 — Splitting the customer tables
+
+**First, inventory and freeze.** List every query on the customer tables from grants, query logs, and a
+code search, and confirm the three readers and the one writer. Then add a build check that fails on any
+new direct access, so the problem stops growing while you work. Both steps are cheap and reversible.
+
+**Then move the readers, the invoice run last.** The customer module publishes a versioned view or read
+interface. Move the two ordinary readers first to prove the interface. The invoice run moves last and
+in a quiet period, because a fault there produces wrong invoices; run old and new reads side by side
+for one cycle and compare the results.
+
+**The riskiest step is the writer.** "Last order date" is written in the same transaction as the order,
+so today both happen or neither does. Moving the write behind a customer-module operation either keeps
+one shared transaction (acceptable while both modules share a database) or splits it into two steps.
+If it is split, decide what happens when the order commits and the update fails, and add a
+reconciliation check that finds mismatched dates. Better still, ask whether the column belongs to the
+customer module at all; the order module may own that fact.
+
+**Done checks.** No outside query on the raw tables in a week of logs; only the customer module writes;
+old grants revoked on a set date.
+
+**What not to do yet:** move the tables to a separate database or service. Nothing in the setup asks for
+a different runtime.
+
+**Weak answer:** starting with a new database and dual writes, or treating the writer like a reader.
+
 ## A1 — Platform Operations' permissions service
 
 **Evaluation against the decision path.** Different change reason? Partly: permissions logic changes

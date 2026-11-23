@@ -61,6 +61,26 @@ who would learn something they will bring back, who has a talk accepted, who is 
 Ask people to propose themselves with a short reason, and rotate across the year. The weak answer
 either accepts the ratings as objective or rejects all evidence and allocates by seniority.
 
+## F4 — A review for a strong performer
+
+**One worked outline.**
+
+| Part | Content |
+|---|---|
+| What she did | Led the migration that removed the weekly manual step (state the hours or errors it saved, from the record); mentored a new hire to independence (name the milestone, such as first on-call shift alone); raised two design risks that other teams then fixed (name them and the effect) |
+| How, by ladder dimension | Delivery and ownership: carried the migration end to end. Influence and growth of others: the mentoring and the cross-team risk calls. One honest development point, for example that the risk calls came as review comments rather than as a proposal she led |
+| Growth | The cross-team design goal is not met. Say so plainly, and say whose part it was: if no such design was available, the gap is partly the manager's |
+| Next period | Lead one named cross-team design through review by another team; continue mentoring. Your commitments: assign the design, find a sponsor in the other team, check at three months |
+
+**Criteria for a good answer.** Every outcome has evidence and an effect, not adjectives. The unmet
+goal is stated without hedging and without implying a performance problem. The next period names a
+specific opportunity and what the manager will do to create it, which is the sponsorship half of the
+review. Nothing in it is new to her.
+
+**The weak answer** is all praise ("excellent year, keep it up"), which tells a strong performer that
+nobody is thinking about her growth, or one that treats the missed growth goal as a criticism of her
+when the opportunity was never offered.
+
 ## A1 — Tom's first conversation with Bram
 
 **What to say about the gap.** Specific facts, with dates: requests aging past the team's normal

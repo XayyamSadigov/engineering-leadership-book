@@ -692,6 +692,10 @@ templates:
   - {id: t18, file: executive-update.md, title: Executive update, status: review}
   - {id: t19, file: leadership-succession-plan.md, title: Leadership succession plan, status: review}
   - {id: t20, file: ninety-day-quality-plan.md, title: 90-day quality transformation plan, status: review}
+  - {id: t21, file: hiring-scorecard.md, title: Hiring scorecard and interview kit, status: review}
+  - {id: t22, file: performance-improvement-plan.md, title: Performance improvement plan, status: review}
+  - {id: t23, file: team-charter.md, title: Team charter and working agreement, status: review}
+  - {id: t24, file: new-manager-90-day-plan.md, title: New manager's 90-day plan, status: review}
 
 projects:
   - {id: p1, title: Build an Engineering Management Operating System, status: review}

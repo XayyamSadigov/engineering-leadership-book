@@ -236,6 +236,40 @@ At team level it works as a short conversation attached to design changes that c
 boundary: a new integration, an authentication change, a new flow of payment data. INC-418 shows what
 one question ("what breaks for verifiers if the signature format changes?") would have surfaced.
 
+### Finding flaws in your own code
+
+Dependency scanning finds other people's flaws. Your own code needs different checks, and each finds
+a different class of flaw, so the question is which mix, not which tool.
+
+| Method | Finds | Misses | Cost and cadence |
+|---|---|---|---|
+| Threat modeling (above) | Design flaws: a missing authorization step, an unprotected trust boundary | Implementation bugs | A short conversation per trust-boundary change |
+| Secure code review | Access-control and logic flaws in the diff | Anything outside the diff | Reviewer time; a checklist for auth-sensitive changes |
+| Static analysis (SAST) | Known flaw classes such as SQL injection, in source, on every build | Most access-control, cryptography, and configuration flaws | Cheap per run; false positives cost triage time |
+| Dynamic testing (DAST) | Flaws visible from outside a running application, such as cross-site scripting and insecure server settings | Paths the scanner cannot reach; business logic | Scheduled runs against a staging copy |
+| Penetration test | Chained attacks and business-logic abuse by a skilled person | Everything changed after the test | A priced engagement at one point in time |
+| Disclosure program or bug bounty | What outsiders find in production | Whatever they do not look at | Triage time; bounties add payouts |
+
+OWASP, the open application security community, describes static analysis as reliable on well-known
+flaw classes but able to find only a relatively small share of application flaws, with many false
+positives and frequent misses on authentication, access control, and configuration
+([OWASP, Source Code Analysis Tools](../../references/bibliography.md#owasp-sast-tools)). Dynamic scanners test the running
+application from outside instead ([OWASP, Vulnerability Scanning Tools](../../references/bibliography.md#owasp-dast-tools)).
+Both are **practitioner consensus**, not measured comparisons. The flaw that matters most in a
+multi-tenant product is one customer reading another's data by changing an ID in a request, and only
+review, design questions, and human testing reliably find it.
+
+**Disclosure before bounties.** Give outside researchers a way to reach you: a published policy with
+scope, a promise not to pursue good-faith testers, and a contact such as a `security.txt` file. OWASP's
+guidance calls that contact the most important step, and says bug bounties suit only organizations
+that already have a mature disclosure process. Bounties bring cost, many low-quality reports, and a
+need for skilled triage ([OWASP, Vulnerability Disclosure](../../references/bibliography.md#owasp-vuln-disclosure)).
+
+A sequence for 50 to 150 engineers (this book's recommendation): a disclosure contact in week one;
+static analysis in the pipeline, blocking only new high-confidence findings; threat modeling on
+trust-boundary changes; scheduled dynamic scans of tier 1 web paths; a penetration test of tier 1
+before the next big customer review; a bounty last, if ever.
+
 ### Champions and central teams
 
 Practitioners argue for **security champions** (engineers in product teams with a part-time security
@@ -599,6 +633,10 @@ track instead.
 - [Decan, Mens, and Constantinou, 2018](../../references/bibliography.md#decan2018impact) and
   [Meli, McNiece, and Reaves, 2019](../../references/bibliography.md#meli2019git). Vulnerability
   propagation in dependencies; secret leakage at scale.
+- [OWASP, Source Code Analysis Tools](../../references/bibliography.md#owasp-sast-tools),
+  [Vulnerability Scanning Tools](../../references/bibliography.md#owasp-dast-tools), and
+  [Vulnerability Disclosure](../../references/bibliography.md#owasp-vuln-disclosure). What static and dynamic testing find, and
+  how to receive outside reports.
 - [Gutfleisch et al., 2023](../../references/bibliography.md#gutfleisch2023champions) and
   [Nguyen-Duc et al., 2023](../../references/bibliography.md#nguyenduc2023champions). Two studies of
   security champions; read before designing a program.

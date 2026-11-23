@@ -415,6 +415,30 @@ sample.
 10. Review the log quarterly: fired review triggers, cross-team changes without records, and a
     sample of team ADRs.
 
+### Recovering decisions that were never written down
+
+Record only the old decisions that still constrain today's work (**this book's recommendation**). An
+organization that starts a decision log has years of unrecorded decisions behind it. Reconstructing all
+of them is a project nobody finishes; recording none leaves the most argued-about choices invisible.
+
+Pick candidates by four signals: the decision keeps coming up in design reviews, it caused or shaped an
+incident, it is an interface with several consumers, or new engineers ask about it in their first month.
+Ten to fifteen records in a quarter usually cover what matters.
+
+Write each one as a **recovered record**, with three differences from a new ADR:
+
+- **Status** is "Accepted (recovered)", with the date it is known to have been in force, not a decision
+  date nobody remembers.
+- **Context** separates what is known (code, commits, tickets, people who were there) from what is
+  inferred. A rationale nobody can confirm is written as "reason not recorded".
+- **Review trigger** is mandatory, because a recovered decision was never weighed against today's
+  conditions. Often the honest consequence is "revisit in the next quarter".
+
+Time-box the work: about two hours per record, most of it in one conversation with someone who was
+there. A typical example: two reporting jobs read another team's database tables directly. A recovered
+record would state that nobody chose the pattern on purpose, list the jobs that depend on it, mark the
+reason as not recorded, and set a trigger such as "the next schema migration of those tables".
+
 ## Case Study
 
 !!! info "Northstar so far"

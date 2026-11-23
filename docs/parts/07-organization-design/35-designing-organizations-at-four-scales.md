@@ -180,8 +180,8 @@ that Chapters 13 and 16 solve without moving anyone.
 
 ## Engineering Organization Example
 
-The three organizations below are **illustrative** and fictional, invented to show the arithmetic at
-20, 50, and 500 engineers. Northstar, at about 100 people, is the case study.
+The four organizations below are **illustrative** and fictional, invented to show the arithmetic at
+20, 50, 100, and 500 engineers. Northstar, at 80 engineers and 87 people, is the case study.
 
 **Fernwick (20 engineers).** A payroll software startup. All 20 engineers report to the cofounder CTO,
 who reviews most designs and is on call for everything. Three product areas (payroll engine, employee
@@ -208,6 +208,34 @@ time by two engineers on different teams; one senior engineer consulted on every
 | Management | Director with 6 managers; no second layer |
 
 Check: 43 + 5 + 2 = 50.
+
+**Ashgrove Logistics (100 engineers, hypothetical).** A freight software company with two product
+lines: tools for shippers and tools for carriers, with billing behind both. It has 12 teams, all 12
+managers report to one director, and the director spends most of the week routing cross-team
+decisions. The managers say they get a one-on-one with the director once a month.
+
+The breakage is the 100-engineer one: the director cannot develop twelve managers and route every
+decision. The design adds one layer, drawn along the architecture. Assume the dependency matrix shows
+about three quarters of cross-team links falling inside one of the two product lines; that assumption
+is what makes groups worth a layer (Chapter 34's layer test).
+
+| Unit | Teams | Engineers | Leads |
+|---|---|---|---|
+| Shipper group | 6 stream-aligned teams of 8 | 48 | Group lead over 6 managers; 1 staff engineer |
+| Carrier and billing group | 5 stream-aligned teams of 8 | 40 | Group lead over 5 managers; 1 staff engineer |
+| Platform team | 1, run as a product | 8 | Manager reports to the director |
+| Organization-wide staff engineers | none | 2 | Report to the director (architecture, reliability) |
+| Engineers | | 100 | |
+
+The director has 5 direct reports: two group leads, the platform manager, and two staff engineers. The
+organization has 12 first-line managers and 2 group leads. If the group leads are promoted from inside
+under flat headcount, each costs an engineering seat.
+
+What the layer buys: disputes inside a product line stop one level below the director, and each
+manager gets a leader with time to coach. What it costs: a hop on the quarter of links that cross the
+two groups, and two people new to managing managers. What it deliberately leaves out: a VP layer and
+separate testing or operations departments. The triggers to revisit are cross-group links rising above
+about a third, or a group passing about eight teams.
 
 **Halvard Systems (500 engineers).** A multi-product software company. Assumptions, chosen for this
 example and not benchmarks: 8 engineers per first-line manager and 6 managers per director.

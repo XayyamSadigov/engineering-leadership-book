@@ -154,6 +154,27 @@ software delivery.
 allocation is meant to move, and keep the scorecard watching everything else. Pair each key result
 with a row that would show it being hit the wrong way, and do not attach individual pay to them.
 
+### A good OKR and a bad one
+
+A key result is good when hitting it by any means would be welcome, and when a paired measure would
+expose the bad means. Two versions for a hypothetical organization (**illustrative**):
+
+**Bad.** Objective: "Ship faster." Key results: "Every service deploys daily"; "Close 200 tickets."
+Both are mechanism measures. Teams can split deployments and tickets to hit them while customers see
+nothing better, and neither key result has a pair that would show it.
+
+**Good.** Objective: "Customers can rely on placing an order."
+
+| Key result | Paired measure | What the pair exposes |
+|---|---|---|
+| Order submission meets its 99.9 percent [SLO](../../glossary.md#sli-slo-and-sla) (service level objective) in every 28-day window this quarter | Share of incidents customers found before we did | Meeting the SLO by missing or reclassifying failures |
+| Median wait for a test environment falls from 3 days to under 1 | Requests made outside the intake | A shorter queue achieved by pushing requests off the books |
+
+The objective names an outcome a customer would recognize. Each key result is a number someone has a
+legitimate reason to move, with a baseline and a date. Each pair comes from a different data source,
+so the same person cannot move both. Both rows also sit on the scorecard, so the key results add
+focus without adding measurement.
+
 ### Quarterly planning at organization level
 
 The organization plan is not the sum of team plans. Team methods and ranking belong to Chapter 15

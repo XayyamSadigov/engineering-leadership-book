@@ -3,9 +3,9 @@
 This chapter treats hiring as a measurement problem. It covers the role scorecard and the structured
 loop built from it, what selection research supports (including the 2022 revision of the best-known
 validity estimates), where engineering interview practice has run ahead of the evidence, debriefs
-that resist anchoring, and tracking hiring quality after the offer. Chapter 8 (Career Development, Promotion, and Compensation)
-covers career ladders and pay, and Chapter 10 (Motivation, Retention, and Managing Senior Engineers)
-covers keeping the people you hire. The running example is a Billing backfill at
+that resist anchoring, and tracking hiring quality after the offer, then the funnel around the loop and the first 90 days.
+Chapter 8 covers career ladders, pay, and choosing a level at offer; Chapter 10 covers keeping the
+people you hire. The running example is a Billing backfill at
 Northstar Technologies, the fictional company in the [case study](../../case-studies/northstar/index.md).
 
 ## Why This Matters
@@ -205,6 +205,67 @@ facilitator is not the hiring manager, who speaks last. Discussion goes by attri
 cites what the candidate said or did. Ratings may change after discussion, but the original is kept,
 so you can later see whether debate improved them.
 
+### Candidates using AI assistants
+
+Assume candidates have AI coding assistants, because most engineers now work with one. In one
+controlled experiment, developers given an AI assistant finished a set programming task about 56
+percent faster than those without one
+([Peng et al., 2023](../../references/bibliography.md#peng2023copilot); **research finding**, one
+task). A solo, timed coding exercise done unobserved now partly measures the tool.
+
+Decide the policy before the first candidate and tell candidates in writing (**this book's
+recommendation**). Either allow assistants in the work sample and assess what the job needs, which is
+judgment: reviewing generated code, spotting the planted defect, explaining a trade-off. Or run that
+session without them, observed, and say so. Do not rely on tools that claim to detect AI-written
+answers; a false accusation costs a good candidate and is hard to defend.
+
+### Inclusive hiring
+
+Structure is the main defense against bias in a loop, because it narrows the room for impressions,
+which is where bias acts (Chapter 8 summarizes the research on biased reward decisions). The practices
+below are **this book's recommendation**:
+
+- **Write the posting from the scorecard.** List the must-haves only. Long wish lists discourage
+  qualified people who read requirements literally.
+- **Widen sourcing** beyond referrals, which reproduce the current team's networks: outreach to
+  communities, schools, and boards the team does not usually use.
+- **Same questions, same rubric, written evidence** for every candidate, and no "culture fit" rating;
+  ask about specific behaviors instead.
+- **Mixed panels**, so that no candidate meets only people unlike themselves, without overloading the
+  few people from under-represented groups (track their interview hours).
+- **Accommodations on request**, offered in the invitation, not only when someone asks.
+- **Watch pass-through rates** by stage and, where local law allows, by group. A stage where one group
+  drops out far more often is where to look first.
+
+### The funnel around the loop
+
+The loop is the middle of a longer process, and candidates are lost at both ends (**this book's
+recommendation** throughout):
+
+- **Sourcing.** Referrals, a posting written from the scorecard, and direct outreach by an engineer
+  who can describe the work. Recruiter-only outreach for a specialist role rarely works.
+- **Candidate experience.** Give every candidate a decision within a few working days of the last
+  interview, and a short, honest rejection. Slow silence loses the candidates you wanted.
+- **Closing.** The hiring manager makes the offer, answers concerns directly (on-call, growth, the hard
+  parts), and sets a decision date. Strong candidates usually hold other offers.
+- **Interviewer load.** Cap interviews per person per week (two is a common limit) and spread them;
+  the people most often asked are usually the ones the team can least spare.
+
+### Onboarding: the first 90 days
+
+A hire is not finished at the offer; the first 90 days decide how soon they contribute and whether they
+stay. Write an onboarding plan from the scorecard before day one:
+
+| When | What is in place |
+|---|---|
+| Before day 1 | Laptop, access, a named buddy, the first small task chosen |
+| Week 1 | A first change reaches production, with the buddy |
+| Day 30 | First owned piece of work; one-on-ones running; shadowing on-call if the role includes it |
+| Day 60 | Working on the scorecard's first-year outcomes; on the rotation with a backup |
+| Day 90 | Manager and hire review progress against the plan, which feeds the six-month check |
+
+A ramp plan with time allocated for the people who teach is what the Case Study's hire never had.
+
 ### Tracking hiring quality after the offer
 
 A hiring system that never checks its predictions cannot improve. Post-hire tracking compares each
@@ -317,10 +378,6 @@ work sample on realistic material.
 ratings that change after the meeting, always toward the hiring manager. Countermeasure: the
 protocol above, and a record of original ratings.
 
-**Interviewer drift.** Interviewers drift back to rating on impression. Signal: one interviewer's
-ratings sit far above or below everyone else's. Countermeasure: quarterly calibration on the same
-recorded answer.
-
 **No feedback loop.** A question that predicts nothing survives for years. Signal: no one can say
 what happened to last year's hires. Countermeasure: a six-month check for every hire.
 
@@ -341,7 +398,7 @@ because only the team knows the job.
 
 **A trained interviewer pool.** Not every engineer should interview. Train a pool on the rubric,
 notes, and the debrief protocol, with shadowing before interviewing alone, and track interview hours
-per person: the people most often asked are usually the ones the team can least spare.
+per person.
 
 **Debrief facilitation outside the line.** A facilitator from another team runs debriefs; it is the
 cheapest defense against anchoring by the hiring manager.
@@ -384,8 +441,7 @@ For a director or manager introducing structured hiring for one role, then sprea
    interviewing alone.
 7. **Run debriefs by protocol.** Ratings alone, revealed together, discussed by attribute, hiring
    manager last, originals kept, reasons recorded.
-8. **Describe the job as it is,** including on-call and the hard parts; a hire surprised by the job
-   is a retention problem in waiting (Chapter 10).
+8. **Describe the job as it is,** including on-call and the hard parts (Chapter 10).
 9. **Check at six months.** Two people rate the hire against the scorecard; compare with the
    interview ratings.
 10. **Review yearly.** Retire questions everyone passes or that do not match later performance;

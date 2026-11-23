@@ -83,11 +83,10 @@ waste. Staw's study is known for introducing this tendency
 at program scale it hides better, because a large program always has some measure going well.
 
 **Strategic misrepresentation.** Flyvbjerg distinguishes optimism bias, an honest tendency to forecast
-too favorably, from strategic misrepresentation, deliberately understating costs to win approval, and
-argues the two need different remedies ([Flyvbjerg, 2006](../../references/bibliography.md#flyvbjerg2006nobel)).
-A director asking for a second year is under exactly that pressure. Better forecasting (Chapter 17)
-addresses the first; the second needs a gate where stated and actual cost meet in front of the same
-people.
+too favorably, from strategic misrepresentation, deliberately understating costs to win approval
+([Flyvbjerg, 2006](../../references/bibliography.md#flyvbjerg2006nobel)). Better forecasting
+(Chapter 17) addresses the first; the second needs a gate where stated and actual cost meet in front
+of the same people.
 
 ### Stages, gates, and exit criteria
 
@@ -121,12 +120,12 @@ mistaken its stage.
 
 ### Communicating to executives in their terms
 
-Dutton and Ashford treat top management's attention as a critical, limited resource and describe
-*issue selling*, the process by which people below the top shape where that attention goes early in
-decision making ([Dutton and Ashford, 1993](../../references/bibliography.md#dutton1993selling)). In a
-study of 82 accounts of issue selling, managers stressed packaging, involvement, and timing as the moves
-that matter ([Dutton et al., 2001](../../references/bibliography.md#dutton2001moves)). These are
-research findings about what managers believe works, not a test of which moves succeed.
+Executive attention is scarce, and people below the top compete for it. Dutton and Ashford call
+shaping where it goes *issue selling*
+([Dutton and Ashford, 1993](../../references/bibliography.md#dutton1993selling)). In 82 accounts of
+issue selling, managers stressed packaging, involvement, and timing
+([Dutton et al., 2001](../../references/bibliography.md#dutton2001moves)): **research findings** about
+what managers believe works, not a test of which moves succeed.
 
 **Packaging: their currency.** The CFO reads operating expense and variance; the sales leader, deals
 and dates; the chief executive, revenue at risk. Price every ask in dollars and engineers, and
@@ -145,15 +144,65 @@ and that senior executives sometimes ignore reported bad news
 ([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)). The director sponsors their
 own program, so state the measure missing its target before an executive finds it.
 
+### A sample page one
+
+Page one carries the whole decision; the rest is evidence. Here is a page one for the continuation
+proposal in this chapter's case study, using only the case's figures (**illustrative**):
+
+> **Decision requested by week 51.** Fund stage 2 of the quality program, "Hold", for quarters 5 and
+> 6: 6 of our existing 80 engineers on prevention and $150,000 of new tooling, conditional on the
+> stage 1 gate in week 56.
+>
+> **Why now.** Six of our 40 largest customers renew in quarters 5 to 8. Year 1 cut Sev1 and Sev2
+> incidents from 30 a quarter to 14 and service credits from $410,000 to $60,000. The gains are not
+> yet secure. Availability, at 99.89 percent in quarter 3, is still below our 99.9 percent
+> commitment, and Core's change failure rate has not improved since quarter 1.
+>
+> **What it costs.** No new headcount. The 6 engineers are $555,000 of capacity that would otherwise
+> go to roadmap work. The $150,000 is the only new operating expense and needs the CFO's approval.
+>
+> **If the answer is no.** Prevention gets whatever capacity the roadmap leaves. The risk is that
+> incidents and credits drift back up during the renewals, visible first in quarter 5's numbers.
+>
+> **How you will know.** A gate in week 78 with written exit criteria: the rolling incident total on
+> course for at most 40 over year 2, 99.9 percent availability every quarter, and credits at most
+> $25,000 a quarter. A miss without an understood cause stops the program for review.
+
+Each paragraph does one job: the decision and its date, the reason in the reader's currency, the price
+in both units (engineers and dollars), the cost of no, and the test. The missed measure appears on page
+one, before anyone has to find it.
+
+### Running the decision meeting
+
+The meeting decides; it does not present the document (**this book's recommendation**). Send the
+proposal at least two days ahead, finish the one-on-ones first, and agree with the chair who presents
+and who decides.
+
+Open with the decision requested and the options, in two minutes, and assume the document was read.
+Then sort each objection as it comes:
+
+| Objection | Response |
+|---|---|
+| A question of fact | Answer it, or commit to an answer by a named date |
+| A different interest | Point to the option that serves it, priced; or offer to price a new one |
+| A different judgment | State yours once, with the evidence, and ask the decider to choose |
+
+Do not argue the same point twice, and do not trade away the floor in the room to close.
+
+If the decision is deferred, ask what evidence would settle it and by when, and say what happens to
+the capacity meanwhile. A deferral without a date is a no that nobody has to own. Within a day, write
+the decision, its conditions, and any dissent into the decision log (Chapter 39) and send it to
+everyone who attended.
+
 ### Constructive politics
 
 Organizational politics is the use of influence on decisions where interests differ and authority does
-not settle the matter. Pfeffer's work is known for arguing that power and influence are how
-organizations get things done, and that managers should diagnose whose support a decision needs rather
-than treat politics as beneath them ([Pfeffer, 1992](../../references/bibliography.md#pfeffer1992managing)).
-Lencioni is known for putting a cohesive leadership team at the base of organizational health
-([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage)): a team that argues in the
-room and speaks with one voice outside it leaves little room for side deals.
+not settle the matter. Pfeffer is known for arguing that managers should diagnose whose support a
+decision needs rather than treat politics as beneath them
+([Pfeffer, 1992](../../references/bibliography.md#pfeffer1992managing)). Lencioni is known for putting a
+cohesive leadership team at the base of organizational health
+([Lencioni, 2012](../../references/bibliography.md#lencioni2012advantage)); such a team leaves little
+room for side deals.
 
 Two research findings pull in different directions.
 
@@ -183,8 +232,7 @@ of the organization would not see it as self-serving if they could see all of it
    one trades support for favors that bypass the shared process.
 
 On tactics, a field study found rational persuasion, inspirational appeal, and consultation most
-effective. Pressure, coalition, and appeals to legitimacy were least effective, and exchange did not
-work with superiors
+effective, and exchange ineffective with superiors
 ([Yukl and Tracey, 1992](../../references/bibliography.md#yukl1992consequences)): bring evidence, ask
 for input early, and do not trade favors upward.
 
@@ -194,9 +242,8 @@ A transformation only its sponsor can run ends when the sponsor moves. Chapter 3
 coverage and its readiness scale, and the review finding that succession is better treated as a process
 than an event ([Berns and Klarner, 2017](../../references/bibliography.md#berns2017succession)). This
 chapter adds one rule: put succession in the exit criteria, so a stage is incomplete while a role it
-depends on has nobody who could hold it. Running a stage's workstream then becomes the development
-assignment, with real stakes ([Chapter 41](../09-engineering-directorship/41-managing-and-developing-engineering-managers.md)
-covers developing managers through such work).
+depends on has nobody who could hold it. Running a stage's workstream then becomes a development
+assignment with real stakes ([Chapter 41](../09-engineering-directorship/41-managing-and-developing-engineering-managers.md)).
 
 ## Engineering Organization Example
 
@@ -315,8 +362,8 @@ In an organization of 50 to 150 engineers, the program is usually led by a direc
 on the executive team, and the CTO decides whether to sponsor the proposal or present it. A practical
 shape:
 
-- **One program document**, two to four pages, revised at every gate: purpose, stages, the current ask
-  and exit criteria, the option beyond, the cost of no.
+- **One program document**, two to four pages, revised at every gate, with page one as in the sample
+  above.
 - **One gate every two quarters**, held in an existing executive forum such as a business review.
 - **The stage as a line in the quarterly plan**, so any reduction is a visible decision, carried in the
   [capacity planning model](../../templates/capacity-planning-model.md); the
@@ -333,12 +380,10 @@ technology roadmap (Chapter 51). The CTO asks whether it serves company strategy
 team can hold it through a bad quarter, and who runs it if the director leaves.
 
 At Halvard Systems, the fictional 500-engineer company of
-[Chapter 35](../07-organization-design/35-designing-organizations-at-four-scales.md), with four product
-groups and a platform organization under five vice presidents, transformation runs through those groups,
-and the CTO cannot hold a gate per program per group. A workable pattern is one company-level gate each
-half-year judging every group's stage against the same kind of criteria, so funding moves on evidence
-rather than on which vice president argued best. The CTO's political risk there is groups competing for
-one budget; the job is to make the competition visible and rule-based.
+[Chapter 35](../07-organization-design/35-designing-organizations-at-four-scales.md), five vice
+presidents run groups, and the CTO cannot hold a gate per program per group. A workable pattern is one
+company-level gate each half-year, judging every group's stage against the same kind of criteria, so
+funding moves on evidence rather than on which vice president argued best.
 
 The CTO also owns the hardest succession question, whether the program has outgrown its leader's role;
 Chapter 47 asks when a company of Northstar's size needs a VP of Engineering.
@@ -354,7 +399,7 @@ Chapter 47 asks when a company of Northstar's size needs a VP of Engineering.
 5. **Map the funders**: interest, position, evidence needed, what they could lose, and conflicts.
 6. **Hold one-on-ones before the decision meeting.** Ask, do not pitch; change the proposal where an
    interest can be met.
-7. **Put the ask on page one**: the decision, the date, the consequence of no.
+7. **Put the ask on page one** (see the sample above).
 8. **Run the transcript test** on everything said in step 6.
 9. **Log the decision** with its conditions and dissent.
 10. **Make succession a criterion** and give workstreams to people you are developing.
@@ -378,8 +423,7 @@ headcount.
 | Tier 1 meeting four minimums | 3 of 15 | 8 of 15 | 11 of 15 | 13 of 15 |
 
 The incident target was met for the first time in quarter 3. Availability missed by about 13 minutes
-of downtime in the quarter: 99.9 percent of a 91-day quarter allows about 131 minutes, and 99.89
-percent means about 144. Quarter 4's numbers arrive after week 52, so year 2 must be
+of downtime in the quarter. Quarter 4's numbers arrive after week 52, so year 2 must be
 proposed before the year-1 verdict.
 
 **The proposal.** In week 45, a week after the year-2 organization proposal (decision due week 46), the

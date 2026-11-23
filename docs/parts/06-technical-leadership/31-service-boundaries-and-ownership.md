@@ -96,21 +96,15 @@ team that builds a service keeps running it
 practitioner description, not evidence. Its strongest argument is organizational: a team owning a
 capability end to end, data included, can change and release it alone.
 
-Studies of why organizations migrate agree on motives. An interview study of 14 systems at 10
-companies found maintainability and scalability to be the main drivers, and finding the right
-service cut a major challenge; most companies rewrote rather than split existing code, often for
-lack of a decomposition method
-([Fritzsch et al., 2019](../../references/bibliography.md#fritzsch2019migration)). A practitioner
-survey ranked the same two motives highest, with a slow return on investment judged worth the
-reduced long-run maintenance ([Taibi et al., 2017](../../references/bibliography.md#taibi2017processes)).
-In one company's four-year history, measured technical debt spiked when services were built, then
-grew more slowly than in the monolith
-([Lenarduzzi et al., 2020](../../references/bibliography.md#lenarduzzi2020migrating)). Mature
-microservice teams (21 interviews, a 37-person survey) often cut services by resource consumption
-rather than business capability, and named shared infrastructure built early as a main success
-factor ([Wang et al., 2021](../../references/bibliography.md#wang2021promises)). These are **research
-findings** within narrow samples: organizations that chose to migrate, reporting their own motives
-and results.
+Studies of why organizations migrate agree on motives: maintainability and scalability. Finding the
+right service cut is the major challenge, and most companies rewrote rather than split existing code
+([Fritzsch et al., 2019](../../references/bibliography.md#fritzsch2019migration);
+[Taibi et al., 2017](../../references/bibliography.md#taibi2017processes)). In one company, technical
+debt spiked when services were built, then grew more slowly than in the monolith
+([Lenarduzzi et al., 2020](../../references/bibliography.md#lenarduzzi2020migrating)). Mature teams
+named shared infrastructure built early as a main success factor
+([Wang et al., 2021](../../references/bibliography.md#wang2021promises)). These are **research
+findings** within narrow samples: organizations that chose to migrate, reporting their own results.
 
 ### The case for the modular monolith
 
@@ -149,16 +143,12 @@ for clear reasons than by many services.
 
 ### Drawing boundaries from change patterns
 
-Version history records which parts of a system change together. Harald Gall and colleagues used
-the release history of a large telecommunications switching system to detect **logical coupling**,
-modules that repeatedly change together, and to point at restructuring opportunities that code
-metrics missed ([Gall et al., 1998](../../references/bibliography.md#gall1998logical)). Thomas
-Zimmermann and colleagues mined version histories for association rules ("programmers who changed
-these functions also changed..."), which revealed coupling that program analysis cannot detect; on
-eight open source projects their prototype's top three suggestions contained a correct location more
-than 70 percent of the time ([Zimmermann et al., 2005](../../references/bibliography.md#zimmermann2005mining)).
-These are **research findings** that history carries real coupling signal, not that any given
-threshold marks a good boundary.
+Version history records which parts of a system change together, and that **logical coupling**
+reveals structure that code analysis misses
+([Gall et al., 1998](../../references/bibliography.md#gall1998logical);
+[Zimmermann et al., 2005](../../references/bibliography.md#zimmermann2005mining)). These **research
+findings** show that history carries real coupling signal, not that any given threshold marks a good
+boundary.
 
 A practical co-change analysis counts, for each pair of modules, the merged changes that touched
 both in a period. This book expresses that as a **coupling share**: co-changes divided by the
@@ -198,6 +188,32 @@ Shared ownership is the commonest orphan in disguise: "shared by four teams" mea
 the code and none answers for it. Contribution can be shared; ownership cannot. The workable pattern
 is one owner with open contribution: any team may change the module, and the owner reviews, sets its
 interface, and carries its pager.
+
+### Splitting a shared database safely
+
+Take tables away from shared access in small reversible steps, and move the physical database last
+(**this book's recommendation**, following common practitioner practice). A module boundary is only
+as strong as its data boundary. While several modules read and write the same tables, an owner cannot
+change its schema without breaking someone it never heard of.
+
+| Step | What happens | Done when |
+|---|---|---|
+| 1. Inventory | List who reads and writes each table, from grants, query logs, and a code search. Give every table one owning module | Each table has one owner and a list of outside users |
+| 2. Freeze | No new outside access: a build check fails on new direct reads, and new grants need the owner | The outside-user list only shrinks |
+| 3. Move readers | The owner publishes a read interface (a database view, an export, or an API) it versions; readers move one at a time | No outside query touches the raw tables |
+| 4. Move writers | Outside writes go through the owner's code. Transactions that span two modules become one owner-side operation, or two steps reconciled afterward | Only the owner writes |
+| 5. Separate | The tables move to their own schema with their own credentials, and later to a separate database only if the runtime needs it | Old grants revoked on a date |
+
+Step 4 is the hard one. A transaction across two modules guarantees that both changes happen or
+neither does. Splitting it means designing for the case where one half succeeds, with a reconciliation
+check that finds mismatches. Avoid a long period in which two codebases write the same data ("dual
+writes"): keep one writer and copy to the other side, with a cutover date.
+
+A worked sample: a billing module's invoice tables are read by two reporting jobs and written by an
+order module during checkout. Steps 1 to 3 (an inventory, a build check, and a versioned invoice view)
+take days and remove both readers. Step 4 replaces the order module's insert with a call to a billing
+operation; that change needs tests on both sides and a release with a rollback plan. The data never
+leaves the shared database, yet the boundary is now real.
 
 ## Engineering Organization Example
 
@@ -482,6 +498,12 @@ Northstar's Core.
 components using `components.csv` and the ownership changes after week 4 listed in the case study: core/customer, core/scheduler,
 notification-svc, export-svc, search-svc, and document-store. For each, say which parts of the test
 it fails on the data available and what information you would need to complete the assessment.
+
+**F4.** In a monolith, a customer module owns the customer tables. Three other modules read them
+directly, one of them inside the nightly invoice run, and a fourth module writes a "last order date"
+column during checkout, in the same transaction as the order. Plan the split with the chapter's five
+steps: what you do first, which step is riskiest and why, what check tells you each step is done, and
+what you would not do yet.
 
 ### Applied Leadership
 

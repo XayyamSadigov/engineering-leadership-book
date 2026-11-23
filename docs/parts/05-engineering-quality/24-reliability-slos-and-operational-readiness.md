@@ -184,19 +184,46 @@ what users experience. The SRE book's monitoring chapter draws the same line: pa
 use causes for debugging, and make every page urgent, actionable, and in need of human judgment
 ([Ewaschuk, Monitoring Distributed Systems](../../references/bibliography.md#google2017monitoring)).
 
-### Monitoring and observability
-
-Monitoring answers questions you knew to ask: dashboards and alerts on predefined signals, such as the
-SRE book's four golden signals of latency, traffic, errors, and saturation
-([Ewaschuk](../../references/bibliography.md#google2017monitoring)). Observability, as Charity Majors,
-Liz Fong-Jones, and George Miranda use the term, is the ability to ask new questions of a running
-system about failures nobody anticipated
-([Majors, Fong-Jones, and Miranda, 2022](../../references/bibliography.md#majors2022observability)).
-That is **expert opinion** from authors at an observability vendor; the distinction is widely used.
+### Observability in practice
 
 SLOs tell you **that** users are hurting; observability decides how long it takes to learn **why**.
-Northstar shows both gaps: 14 incidents found by customers, and INC-428, where deploys failed for
-every Jenkins-based service and the cause was never determined.
+Monitoring answers questions you knew to ask: dashboards and alerts on predefined signals, such as the
+SRE book's four golden signals of latency, traffic, errors, and saturation
+([Ewaschuk](../../references/bibliography.md#google2017monitoring)). Observability, as Charity Majors, Liz Fong-Jones, and
+George Miranda use the term, is the ability to ask new questions of a running system about failures
+nobody anticipated ([Majors, Fong-Jones, and Miranda, 2022](../../references/bibliography.md#majors2022observability)).
+That is **expert opinion** from authors at an observability vendor; the distinction is widely used.
+Northstar shows the gap: in INC-428, deploys failed for every Jenkins-based service and the cause was
+never found.
+
+**Three signal types.** OpenTelemetry, the vendor-neutral instrumentation standard, names them
+([OpenTelemetry, Signals](../../references/bibliography.md#otel-signals)):
+
+| Signal | What it is | Good for | Weakness |
+|---|---|---|---|
+| Metrics | Measurements captured at runtime, aggregated | SLIs, alerts, trends; cheap to keep | Cannot explain one request |
+| Logs | Records of events | Detail on what one component did | Costly at volume; useless if unstructured |
+| Traces | The path of a request through the services | Where the time went and which hop failed | Need instrumentation in every service |
+
+The signals become far more useful joined. **Context propagation** carries a request's trace ID from
+service to service, and SDKs can stamp it on every log line, so an engineer can move from an alert to
+the trace to the logs of the failing hop
+([OpenTelemetry, Context propagation](../../references/bibliography.md#otel-context-propagation)).
+
+**What to instrument first** (this book's recommendation), in order:
+
+1. The SLI events of each tier 1 journey, measured where users meet the system.
+2. A request ID created at the edge, passed through every service, and written to every log line.
+3. Structured logs with fixed fields (time, service, request ID, tenant, outcome), not free text.
+4. Traces across the services on tier 1 paths.
+5. Deploys and flag changes as events on the same timeline, so "what changed?" takes seconds.
+
+**Cost.** Telemetry bills grow with volume and with the number of distinct label values kept, so cost
+is a design choice. Sample traces: OpenTelemetry calls sampling one of the most effective ways to cut
+observability cost, and tail sampling can keep every trace that contains an error
+([OpenTelemetry, Sampling](../../references/bibliography.md#otel-sampling)). Keep debug logs short-lived, and never put
+per-request values such as order IDs into metric labels. Judge a tool by one test: for last quarter's
+incidents, could on-call have gone from alert to cause with the data it would hold?
 
 ### Operational readiness
 
@@ -205,12 +232,9 @@ taking on a service, covering architecture and dependencies, monitoring, emergen
 change management, and performance. It also records that the model did not scale, since each
 onboarding took two or three SREs several quarters, and that Google moved toward shared frameworks and
 platforms ([Cruz and Bhambhani, Evolving SRE Engagement Model](../../references/bibliography.md#google2017engagement)).
-Amazon Web Services (AWS) describes its **Operational Readiness Review** as questions distilled from its own post-incident
-analyses, answered by teams as self-assessments throughout a service's life so that lessons spread
-without slowing builders down ([AWS, Operational Readiness Reviews](../../references/bibliography.md#aws2022orr)).
-Both are **documented practice**. The Well-Architected Framework, the closest thing here to a
-**standard**, describes a review as a constructive conversation, not an audit
-([AWS Well-Architected Framework](../../references/bibliography.md#aws-well-architected)).
+Amazon Web Services (AWS) describes its **Operational Readiness Review** as questions distilled from
+its own post-incident analyses, answered by teams as self-assessments throughout a service's life
+([AWS, Operational Readiness Reviews](../../references/bibliography.md#aws2022orr)). Both are **documented practice**.
 
 Two lessons transfer: grow the questions from **your own incidents**, and let the **team own** the
 review as a conversation, because a central gate becomes the bottleneck Google describes.
@@ -225,13 +249,11 @@ and says out-of-hours on-call should be compensated
 a quarter of an SRE's time and warns that underload is also a risk, because rarely used skills decay
 ([Spadaccini, Being On-Call](../../references/bibliography.md#google2017oncall)).
 
-The health research is thinner and not about software. A 2004 review concluded that on-call scheduling
-can pose risks to sleep, mental health, and personal life, with critical gaps in the literature
-([Nicol and Botterill, 2004](../../references/bibliography.md#nicol2004oncall)). A 2017 systematic
-review of eight studies found that on-call work from home appears to reduce sleep quantity and, in most
-cases, quality, with too little data on stress physiology
-([Hall et al., 2017](../../references/bibliography.md#hall2017oncall)). These are **research
-findings** from other occupations; the evidence for software engineers specifically is thin. The
+The health research is thinner and not about software. Reviews from other occupations found that
+on-call work can pose risks to sleep, mental health, and personal life, and that on-call from home appears to
+reduce sleep ([Nicol and Botterill, 2004](../../references/bibliography.md#nicol2004oncall);
+[Hall et al., 2017](../../references/bibliography.md#hall2017oncall)). These are **research findings** from other
+occupations; the evidence for software engineers specifically is thin. The
 direction is still clear: on-call load is a cost borne by specific people,
 and it should be measured like any other cost.
 
@@ -423,8 +445,7 @@ default.
 **People.** On-call is a working-conditions policy with legal and health implications: compensation,
 rest after night pages, rotation size. It belongs in the CTO's policy set, reviewed with HR.
 
-Two cautions: a single company-wide availability figure hides the journeys where customers are hurt,
-and an SLO never missed means the target is too low or the SLI is blind.
+A caution: an SLO never missed means the target is too low or the SLI is blind.
 
 ## Practical Playbook
 
@@ -586,6 +607,8 @@ sides, the data you would ask for, and how you would explain the decision to the
   on-call work, mostly outside software.
 - [Majors, Fong-Jones, and Miranda, 2022](../../references/bibliography.md#majors2022observability):
   the case for observability as distinct from monitoring.
+- [OpenTelemetry: Signals](../../references/bibliography.md#otel-signals), [Context propagation](../../references/bibliography.md#otel-context-propagation),
+  and [Sampling](../../references/bibliography.md#otel-sampling): signal types, joining them, and controlling cost.
 - [Beyer et al., 2016](../../references/bibliography.md#beyer2016sre) and
   [Beyer et al., 2018](../../references/bibliography.md#beyer2018workbook): the free SRE books most of
   the above come from; read them as one company's practice.

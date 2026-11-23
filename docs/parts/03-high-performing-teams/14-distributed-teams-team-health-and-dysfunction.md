@@ -110,6 +110,32 @@ assignments. Second, **make cultural norms explicit.** Erin Meyer's
 national cultures differ in how directly people give negative feedback, disagree, and signal
 decisions, and that misreading these differences damages trust (**expert opinion**). On a team spanning two countries, agree how disagreement and bad news are raised.
 
+### Asynchronous work and real time-zone spread
+
+When working hours barely overlap, make written, asynchronous work the default and spend the overlap on
+what cannot be written. Northstar's sites are an hour apart, so take a **hypothetical** team instead:
+six engineers in Chicago and two in Kraków, seven hours ahead. Their working days overlap for about an
+hour.
+
+| Practice | What it looks like for this team |
+|---|---|
+| A protected overlap window | One hour, three days a week, for debate, conflict, and planning; the early or late slot rotates between sites |
+| Written handoffs | At the end of each site's day: what changed, what is blocked, which decision is needed from whom |
+| Asynchronous decisions | A written proposal, a comment window covering a full working day at each site, a named decider, the decision posted where both sites look |
+| Follow-the-sun on-call | Each site covers its own daytime, with a written incident handoff; it works only if both sites can act on every component they cover |
+| Remote onboarding | A buddy in the new hire's time zone, scheduled pairing in the overlap, review turnaround targets for the new hire's changes |
+
+The evidence explains why each one matters. Yang and colleagues found that remote work shifted
+communication from synchronous to asynchronous and made networks more siloed, so bridges between sites
+need designing ([Yang et al., 2022](../../references/bibliography.md#yang2022remote)). Emanuel and
+colleagues found that proximity raised feedback most for newer engineers, so a new hire seven hours
+away needs deliberate feedback, not hope
+([Emanuel, Harrington, and Pallais, 2023](../../references/bibliography.md#emanuel2023proximity)).
+
+Two traps are common. A team that keeps all its meetings in the larger site's hours makes the smaller
+site's day the overtime. And a team that writes everything but never meets builds trust slowly; budget
+some in-person time, as the table above prices it.
+
 ### Team health assessment without a score to manage
 
 A team health assessment is a structured way for a team to say how its working life is going. Two
@@ -481,6 +507,11 @@ organization something, and what you would change.
 retrospectives produce the same three actions every sprint, two senior engineers communicate mainly
 through code review comments, and the manager says the team "just needs to gel". Diagnose by layer and
 choose a remedy, saying what evidence would change your choice.
+
+**A4.** You manage a new team of seven: four engineers in Austin and three in Bangalore, about ten and
+a half to eleven and a half hours apart depending on the season, with no natural overlap. The team owns one tier 2 service and will start on-call next
+quarter. Design its working model: the overlap window, handoffs, how decisions are made, how on-call is
+covered, and how the next hire in Bangalore is onboarded. State what each choice costs and who bears it.
 
 ### Executive Decision-Making
 

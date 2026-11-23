@@ -124,9 +124,8 @@ information invites directors to make decisions in the meeting, which is how boa
 engineering.
 
 Powerful sponsors make status reports less candid, and reported bad news is sometimes ignored
-([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls); **research finding**). At board
-level the CTO sponsors everything engineering reports, so the CTO must state the missed measure before a
-director finds it.
+([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls); **research finding**). The CTO
+sponsors everything engineering reports, so state the missed measure before a director finds it.
 
 ### The line between oversight and management
 
@@ -144,12 +143,34 @@ conversation and find the same facts. Larson describes this layer of the job fro
 ([Larson, 2024](../../references/bibliography.md#larson2024primer); **expert opinion**), and Chapter 52
 covers the financial statements a board reads.
 
+### Ethics at board level: the misleading headline and disclosure
+
+The CTO's duty to the board is an accurate picture, even when a flattering one is available and someone
+senior prefers it (**this book's recommendation**). The pressure rarely asks for a false number. It asks
+for a true number chosen or framed to mislead: a headline target picked because chance or re-rating will
+probably deliver it, a measure redefined in the quarter it would have missed, a miss moved to an
+appendix, a known vulnerability left out of the risk page "until it is fixed".
+
+Three tests catch most of it. Would the page lead a careful director to believe something you know is
+false? Would you be comfortable if the director later saw the version you rejected? Would a buyer's
+diligence team, reading the data room, find something the board was never shown? A "yes" to the first
+or third, or a "no" to the second, means the page must change.
+
+When a peer or the CEO asks you to soften a page, say plainly what the change would hide and offer an
+honest framing instead: the miss stated first, with its treatment, is usually stronger than the omission.
+If you are overruled on something material, write down what you advised and why. A material known
+problem, such as a suspected breach or a contractual measure being missed, must reach the people who
+decide what the board, auditors, and counterparties are told. That is the lesson of the Yahoo case below
+([SEC, 2018](../../references/bibliography.md#sec2018altaba)). Where the normal path fails, the audit
+committee chair and the company's counsel are the route. Status reports already lose candor under
+powerful sponsors ([Keil et al., 2014](../../references/bibliography.md#keil2014pitfalls)); at the top,
+the CTO is the person who keeps them honest.
+
 ### Technology due diligence
 
 Due diligence is the investigation a buyer or investor makes before committing money: is what it has
-been told true, and what would it inherit? Technology diligence asks whether the product works as
-claimed, who owns the code, what it costs to run and change, what risks it carries, and whether the
-people who understand it will stay.
+been told true, and what would it inherit? Technology diligence asks whether the product works, who owns
+the code, what it costs to run, and whether the people who understand it will stay.
 
 Larson argues that engineering carries much of an acquisition's long-term cost, so the engineering
 executive should evaluate deals rigorously and say "no" when the evidence says so. Engineering usually
@@ -636,6 +657,8 @@ that engineering has one vote, not a veto.
 - State the miss first. Use expert directors as advisers between meetings; keep decisions where the charter puts them.
 - In diligence, write the thesis first and turn every finding into price, terms, integration plan, or a
   walk-away.
+- Never choose or frame a true number to mislead; a material known problem reaches the people who decide
+  disclosure.
 - Make diligence boring by keeping the evidence current and the data room consistent with what the
   board has already seen.
 - Judge decisions by how they were made: record assumptions, dissent, reversal triggers, and a review

@@ -66,6 +66,33 @@ productivity result. A good answer catches the denominator, names the perception
 speed measure with a stability or quality measure. The weak answer replaces the survey with acceptance
 rate or lines of code, which measures use, not value.
 
+## F4 — Pricing an AI support-reply feature
+
+**Arithmetic.**
+
+| Line | Calculation | Per year |
+|---|---|---|
+| Inference cost | 120,000 tickets × 3 calls × $0.015 = $5,400 a month | about $64,800 |
+| Saving | 120,000 × 60% accepted × 2 minutes = 144,000 minutes = 2,400 hours a month × $40 = $96,000 a month | about $1,152,000 |
+
+On these assumptions the saving is far larger than the inference cost, so the cost line is not the
+decision. The case is most sensitive to the acceptance rate and the minutes saved per accepted draft,
+which are guesses until measured; the per-call price matters less because even tripling it leaves the
+case positive. A second sensitivity is whether saved minutes become fewer hires or faster replies; only
+the first is a cash saving, and it is a workforce decision, not an engineering one.
+
+**Before launch.** Provider terms: no training on customer ticket data, a stated retention period, data
+location, and notice before a model version is retired. Evaluation: a set of real tickets with agreed
+criteria (factually wrong, wrong tone, discloses another customer's data), an unacceptable-error list
+that blocks launch at any rate, an agent-confirmation step since drafts are not sent automatically, and
+live sampling after launch. Transparency: if customers ever receive unedited AI text, check disclosure
+duties with counsel.
+
+**Criteria.** A good answer gets the arithmetic right, identifies acceptance rate as the decisive input,
+and treats provider terms and evaluation as launch conditions. **Weak answer:** approving because the
+saving is large, without noticing that the saving rests on unmeasured assumptions, or rejecting because
+inference "costs money" without comparing it to anything.
+
 ## A1 — Policy for analysis work
 
 **Data rules.** No customer personal data, credentials, or production logs containing them enter any

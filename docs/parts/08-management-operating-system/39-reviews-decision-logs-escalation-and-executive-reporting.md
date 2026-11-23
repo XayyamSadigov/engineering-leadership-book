@@ -98,10 +98,9 @@ this manager compares with that one; they feel rigorous and produce defensive pr
 
 The last column names the chapter that treats each review's content.
 
-The talent review is the hardest to keep systemic. Calibrating individuals belongs to Chapter 8; the
-organization-level review asks which teams held no career conversations, where only one person can
-change a component, and which critical roles have no successor. Its outputs act on the system:
-pairing, rotation, a ladder fix.
+The talent review is the hardest to keep systemic. It asks which teams held no career conversations,
+where only one person can change a component, and which roles have no successor; its outputs are
+pairing, rotation, or a ladder fix, not verdicts on individuals.
 
 Three rules keep any review an inspection (**this book's recommendation**). Send the data before the
 meeting. Let the presenter name the problems first, and treat a self-reported problem as the review
@@ -185,10 +184,9 @@ flowchart TD
     G --> L
 ```
 
-The clock is the point. Jeff Bezos's 2016 shareholder letter argues for escalating fundamental
-misalignment early rather than letting debate run until the side with more stamina wins
-([Bezos, 2017](../../references/bibliography.md#bezos2016letter)); that is **documented practice** from
-one company, but the failure it names is common.
+The clock is the point. Jeff Bezos argues for escalating fundamental misalignment early, before the
+side with more stamina wins ([Bezos, 2017](../../references/bibliography.md#bezos2016letter);
+**documented practice** from one company).
 
 Escalation also moves authority without moving information. Aghion and Tirole's model separates formal
 authority, the right to decide, from real authority, which depends on who holds the relevant
@@ -199,18 +197,35 @@ The joint case carries the information up with the question. Its two common corr
 **escalation as threat** ("I'll take this to Victor"). One rule fixes both: a decision exists only when
 it is in the log.
 
+### A joint escalation write-up
+
+The joint case is one page that both parties sign before it goes up. Its format (**this book's
+recommendation**):
+
+| Field | What goes in it |
+|---|---|
+| Question | The decision needed, in one sentence ending in a question mark |
+| Agreed facts | What both sides accept as true, with sources |
+| Option A, and the case for it | Written by the side that prefers it |
+| Option B, and the case for it | Written by the other side |
+| Cost of each option to the other team | In engineer-weeks, dates, or risk, each side's own estimate |
+| Cost of delay and "needed by" | What not deciding costs, and from which date |
+| Consulted | Who else is affected and what they said |
+| After the decision | What both parties will do, whichever option wins |
+
+Each side writes its own option, so neither can frame the other's badly. A dispute about facts goes
+back down to be settled, not up. The last row commits both sides before the decider chooses.
+
 ### The executive report
 
 An executive report lets a busy person see the state of commitments, the risks to them, and what you
 need from them, in a few minutes. Barbara Minto's pyramid principle puts the main point first with
 support grouped beneath it ([Minto, 2002](../../references/bibliography.md#minto2002pyramid)).
-Bezos's 2017 letter describes six-page narrative memos, read silently at the start of meetings in
-place of slides, and says a good one can take a week or more
-([Bezos, 2018](../../references/bibliography.md#bezos2017letter)). Full sentences expose reasoning that
-bullets hide, and writing costs real time. Will Larson argues that
-an engineering executive solves the company's problem rather than advocating for engineering
-([Larson, 2023](../../references/bibliography.md#larson2023balancing)); a report that reads as advocacy
-is discounted.
+Narrative memos in place of slides expose reasoning that bullets hide, at a real cost in writing time
+([Bezos, 2018](../../references/bibliography.md#bezos2017letter)). And an engineering executive solves
+the company's problem rather than advocating for engineering
+([Larson, 2023](../../references/bibliography.md#larson2023balancing)), so a report that reads as
+advocacy is discounted.
 
 The structure this book recommends:
 
@@ -229,7 +244,33 @@ Status colors need definitions, or they report the author's mood:
 | Amber | The 50 percent forecast meets it; the 85 percent does not |
 | Red | The 50 percent forecast misses it, or an outside dependency is unresolved |
 
-The thresholds are a choice; what matters is computing them the same way every time (Chapter 17 covers the forecasts).
+The thresholds are a choice; what matters is computing them the same way every time (Chapter 17
+covers the forecasts).
+
+### When you are pressed to make the numbers look better
+
+A report is worth reading only if it is never shaded, so treat a request to "show it differently" as
+a request about honesty until you know otherwise. The pressure rarely arrives as "lie". It arrives as
+"can we leave out the maintenance window" or "it's amber, not red, surely" before a board meeting.
+
+The line (**this book's recommendation**) runs between framing and misleading. Framing is legitimate:
+adding context, choosing which measures lead, explaining a cause. Misleading is not: changing a
+definition without saying so, picking the time window that flatters, dropping a known red, or
+reporting a forecast you do not believe. The test is whether the reader, learning everything you
+know, would feel the report was fair.
+
+When asked to cross it:
+
+1. Show both versions side by side, with the definitions stated. Most requests dissolve here, because
+   the requester wanted a better story, not a false one.
+2. If a definition really should change, change it openly, footnote it, and restate the past periods
+   on the new basis.
+3. If you are asked to send something you believe is false, say so in writing and decline. Numbers
+   that reach customers, the board, or auditors can carry contractual or legal consequences, so
+   involve finance or legal rather than settling it between two people.
+
+The cost is an awkward conversation with your manager. The alternative costs more: once one shaded
+report is found, every later report is discounted.
 
 ## Engineering Organization Example
 
@@ -242,10 +283,9 @@ The thresholds are a choice; what matters is computing them the same way every t
 This example is **illustrative**. It shows first what Northstar's review system costs, then what
 corroboration looks like, then what an undated decision costs.
 
-**Meeting time is cheap.** Counted as run rather than as booked, Northstar's weekly operational
-review, monthly quality reviews, and the proposed talent review and monthly report take under 1
-percent of engineering time. The expensive failure is a system that runs on schedule and carries
-distorted information, which no time budget shows.
+**Meeting time is cheap.** Northstar's whole review system, counted as run, takes under 1 percent of
+engineering time. The expensive failure is a system that runs on schedule and carries distorted
+information.
 
 **Corroboration through structure.** In week 7 the record showed four consecutive incidents rated
 Sev3, below the level the weekly review discussed. One of them was a two-hour payment delay for nine
@@ -290,7 +330,7 @@ flowchart TD
 ```
 
 The second is how heavy each mechanism should be. Log only cross-team, hard-to-reverse, and escalated
-decisions; logging everything buries them:
+decisions:
 
 | Situation | Reviews | Decision log | Escalation | Executive report |
 |---|---|---|---|---|
@@ -304,16 +344,12 @@ with the joint-case rule from the fourth.
 
 ## Trade-offs
 
-**Written against spoken.** Writing forces clear reasoning and leaves a record; it costs hours and can
-become performance. A two-page report with a fixed structure is the usual compromise.
+**Written against spoken.** Writing forces clear reasoning and leaves a record, but costs hours. A
+two-page report with a fixed structure is the usual compromise.
 
 **Candor against comparability.** Standard formats let the director compare teams; comparison invites
 ranking, and ranking invites optimizing the report. Compare a team against its own trend, and teams
 against each other only on measures computed from systems.
-
-**Corroboration against trust.** Checking reports catches distortion, but visible checking reads as
-suspicion, and Keil and colleagues report that aggressive auditing can increase misreporting. Build
-corroboration into structure, not investigations.
 
 **Escalation speed against ownership.** A short clock unblocks work and can teach managers to escalate
 instead of negotiate; a long one teaches endurance. Start at five working days per level and watch the
@@ -347,9 +383,8 @@ Countermeasure: a "decisions needed" section that may say "none", and rarely doe
 
 ## Enterprise Application
 
-In an organization of 50 to 150 engineers, the director designs these mechanisms and owns their
-integrity; managers and staff engineers run most of them. The director owns the report, the log, the
-escalation rules, and review agendas. Managers own the content they present. Staff engineers prepare
+In an organization of 50 to 150 engineers, the director designs these mechanisms and owns the report,
+the log, the escalation rules, and review agendas. Managers own the content they present. Staff engineers prepare
 any architecture review and own records in their domains (Chapter 29). A rotating log steward checks
 that every entry has a decider and a date.
 
@@ -377,9 +412,8 @@ delivery against commitments, one people measure), chosen as Chapter 38 describe
 executive primer is a practitioner guide to this layer
 ([Larson, 2024](../../references/bibliography.md#larson2024primer)).
 
-**The price of bad news.** Keil and colleagues report that powerful sponsors reduce candor. The CTO is
-engineering's most powerful sponsor, so the reaction to the first red report teaches every director
-what to send next time.
+**The price of bad news.** Keil and colleagues report that powerful sponsors reduce candor. The CTO's reaction
+to the first red report teaches every director what to send next time.
 
 **The CTO's own decisions.** Victor Lindqvist's unrecorded decisions were part of Northstar's problem.
 A CTO who logs their own decisions, including those made in passing, makes the system credible; one
@@ -519,8 +553,8 @@ and for each empty field say what the director must do to fill it.
 
 **A1.** Priya Raman and Marcus Oyelaran disagree about who changes the order-to-invoice mapping when
 Orders adds a field. Given their history (the INC-417 thread, the INC-427 review), design how this
-dispute moves under the week 15 escalation path, write the joint case template you would give them,
-and say what you do if one of them escalates alone.
+dispute moves under the week 15 escalation path, fill in the chapter's joint escalation write-up as
+far as the facts allow, and say what you do if one of them escalates alone.
 
 **A2.** Ines Carvalho (staff engineer, Core domain) proposes to restart and chair a monthly
 architecture review, lapsed since 2021. In weeks 7 to 12 she rejected 8 of 14 Core design proposals,
@@ -543,6 +577,11 @@ stop the board pack from reshaping the directors' reports.
 customer commitment slipped six weeks and you heard it from Sales. You are tempted to require weekly
 audited status from all three. Decide what you will change, using the research on status reporting,
 and explain what the audit option would cost.
+
+**X3.** Two days before a renewal meeting, your CTO asks you to report quarterly availability
+"excluding the planned maintenance window", which lifts it from just under the contractual 99.9
+percent to just over. The contract does not exclude planned maintenance. Decide what you send, what you
+say to the CTO, and what you do if the CTO insists.
 
 ## Reflection Questions
 

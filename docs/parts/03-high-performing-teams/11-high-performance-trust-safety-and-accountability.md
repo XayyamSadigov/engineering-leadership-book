@@ -186,6 +186,44 @@ safety either.** Months of design reviews without disagreement usually mean disa
 costly; Chapter 6 covers conflict. The test for safety is not how pleasant meetings are. It is where
 bad news goes first, and how long it takes to arrive.
 
+### Inclusion: safety for everyone, not on average
+
+A team is only as safe as it is for its least safe member. Because safety belongs to a context and a
+relationship, a team can be candid on average while some members stay quiet: the newest engineer, the
+two people at the other site, the person working in a second language, the only woman on the team, the
+junior who was corrected sharply once. Inclusion, in this book's sense, is whether every member's voice
+is heard and counted, not only permitted. It is part of safety, not a separate program
+(**this book's recommendation**).
+
+The cost is the one Chapter 13 describes for hidden profiles: the fact only one person knows is the
+one a meeting is least likely to hear. If that person is also the one who finds speaking riskiest, the
+team loses it twice.
+
+Signals a manager can observe:
+
+- **Who speaks, and who is interrupted.** Count it for a few meetings; most managers are surprised.
+- **Whose ideas are attributed.** A suggestion ignored when one person makes it and adopted when
+  another repeats it teaches the first person to stop.
+- **Who gets the visible work.** Incident command, design ownership, and demos to executives build
+  careers; the less visible "glue" work (coordination, onboarding, notes) often falls to the same few.
+- **Who is in the room when decisions happen,** including the hallway and the late call.
+
+What a manager does differently:
+
+1. **Structure turn-taking.** Written input before discussion, a round in which everyone speaks, and
+   the manager last.
+2. **Credit by name,** in the meeting and in writing, especially for quieter members.
+3. **Rotate visible and invisible work** on purpose, and track who has had each.
+4. **Fix the meeting, not the person.** Schedule across time zones and caregiving hours, and rotate
+   the inconvenient slot.
+5. **Ask in one-on-ones what someone did not say** in the last meeting, and act on one answer.
+6. **Treat a put-down as a safety event.** Address it privately and promptly; silence from the
+   manager reads as agreement.
+
+Check it the way the rest of the chapter does, from behavior: participation and visible assignments by
+subgroup over a quarter, and survey results by subgroup only where a group has at least five people, so
+nobody can be identified.
+
 ## Engineering Organization Example
 
 !!! info "Northstar so far"
