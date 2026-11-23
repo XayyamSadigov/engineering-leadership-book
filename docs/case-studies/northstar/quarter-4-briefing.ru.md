@@ -46,7 +46,7 @@ staff-инженера) и 6 руководителей. Ваш мандат, �
 [место](../../glossary.md#seat)).
 
 **Организация на год 2.** Директор предлагает разделить Customer Experience на Web под руководством
-Daniel Cho и Mobile под руководством Mateo Arango Ríos в Bogotá; его инженерное место не будет
+Daniel Cho и Mobile под руководством Mateo Arango Ríos в Боготе; его инженерное место не будет
 восполнено. core/permissions переходит в Orders, search-svc — в Data and Analytics, а Platform Operations
 становится Developer Platform и работает как внутренний продукт. В черновике есть три альтернативы:
 сохранить Customer Experience целой с двумя подкомандами (B), дополнительно разделить Orders и

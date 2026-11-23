@@ -510,6 +510,16 @@ bibliographic metadata only → только библиографические 
 | deployable unit | развёртываемая единица | T | |
 | Your team; Engineering system; Organization and operating system; Executive | Ваша команда; Инженерная система; Организация и операционная система; Высшее руководство | T | template nav groups |
 
+### 3.y Renderings adopted in chapter translation wave 1 (chapters 1–18)
+
+The translators of chapters 1–18 chose renderings for about 160 terms missing from this base. They are
+listed, with their English source terms, in `research/translation-ru/notes-t1.md`, `notes-t2.md`, and
+`notes-t3.md`, and are **binding** for later translators exactly as if they stood in this table (read all
+three before translating). Decisions taken by the maintainer: cities in Cyrillic (Богота, Миннеаполис);
+"bus factor" kept in English, with "truck factor" named once where the English uses it; extra evidence
+labels "this book's synthesis" → «синтез книги», "this book's illustration" → «иллюстрация книги»,
+"contested" → «вопрос спорный».
+
 ## 5. Sync debt
 
 Record here any Russian page that lags its English source, with the English commit it was translated
