@@ -16480,7 +16480,7 @@ Its value is not precision: it puts debt and features in one unit, so product le
 inputs rather than the category's legitimacy. And it favors cheap fixes for items that cost a lot every
 month over grand refactors.
 
-The ratio does not decide alone. Every entry has four options, cheapest effective first: **remove**
+The ratio does not decide alone. Every entry has four options; choose the cheapest one that works: **remove**
 (pay the principal), **reduce** (pay part of it to cut most of the interest), **contain** (stop it
 spreading, for example by freezing a format), and **accept** (record that the interest is tolerable,
 with a review date).
@@ -16827,8 +16827,7 @@ the report to one slide.
 - [Fowler, 2009](#fowler2009debtquadrant). "Technical Debt Quadrant";
   prudent versus reckless, deliberate versus inadvertent.
 - [Kruchten, Nord, and Ozkaya, 2012](#kruchten2012technical). Guest
-  editors' introduction to an IEEE Software special issue, read at abstract level only; a map of how
-  far the term had stretched.
+  editors' introduction to an IEEE Software special issue; a map of how far the term had stretched.
 - [Li, Avgeriou, and Liang, 2015](#li2015systematic). A systematic
   mapping of debt research to 2013.
 - [Ernst et al., 2015](#ernst2015measure). A large practitioner
