@@ -469,7 +469,7 @@ it is yours. It continues
 slot when an earlier one finishes, and the next slots open in weeks 33 and 34. A portfolio forum of
 the executives decides what fills them. In week 31 Greg Tanaka asked for purchase approval rules
 (about 70 engineer-weeks) for a prospect he valued at about $700,000 ARR, deciding in week 36. The
-week 34 forum had three options:
+week 32 forum had three options:
 
 1. **Queue it** into the week 34 slot (forecast weeks 44 to 47).
 2. **Swap it** into the week 33 slot, moving the service-credit statements that Rajiv Menon wants to

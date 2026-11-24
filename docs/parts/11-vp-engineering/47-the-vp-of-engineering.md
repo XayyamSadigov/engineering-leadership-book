@@ -282,7 +282,7 @@ assessment stays poor past its decision date. Every change is a transition for t
 decide once, on evidence.
 
 **Hiring or promoting a director.** Write the role first: the area's goals, what its managers need,
-and the blind spot the director team lacks. Test an internal candidate in an acting or stretch scope
+and the strength the director team lacks. Test an internal candidate in an acting or stretch scope
 with a review date; judge by how their managers perform. Interview an outside candidate against the
 written role (Chapter 7), take references from former reports, and agree a 90-day plan in week one.
 Let the other directors meet the candidates: they will be the newcomer's first team.

@@ -196,7 +196,7 @@ Weeks 27–39.
 |---|---|---|
 | Capacity plan | Planned and cautious cases, commitments, and reserve listed under this table | 38 |
 | Cross-team portfolio | At most three cross-team initiatives in progress (a one-quarter trial), listed under this table | 42 |
-| A fourth request | In week 31 Greg Tanaka asks for a third deal feature, purchase approval rules; the week 34 portfolio forum's outcome is open | 42 |
+| A fourth request | In week 31 Greg Tanaka asks for a third deal feature, purchase approval rules; the week 32 portfolio forum's outcome is open | 42 |
 | Operating system redesign | Proposed for week 27: a hard 45-minute operational review, a weekly 75-minute leadership team meeting replacing the managers' meeting and product sync, a monthly business review, a quarterly talent review | 37 |
 | Engineering Excellence Day | Launched by the director in week 27 without the managers or Amara Okafor; Fridays of weeks 28, 32, 36; participation 64, 41, 23 engineers | 43 |
 | Engineering Excellence Day results | 71 items merged, none touching the priced debt register; one Sev3 from a core/scheduler change; stopped in week 37 after a one-page note to the managers | 43 |

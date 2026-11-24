@@ -122,7 +122,7 @@ measurement decision with a portfolio decision.
 though not the director's manager, is an executive above the director's level. Rational persuasion in
 finance's terms is the tactic that fits.
 
-## X1 — The week 34 forum decision
+## X1 — The week 32 forum decision
 
 **One defensible recommendation: option 1, queue it,** with the scoping sessions and a forecast range of
 weeks 44 to 47 for Greg to give the prospect.

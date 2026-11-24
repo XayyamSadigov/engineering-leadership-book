@@ -3058,7 +3058,7 @@ Weeks 27–39.
 |---|---|---|
 | Capacity plan | Planned and cautious cases, commitments, and reserve listed under this table | 38 |
 | Cross-team portfolio | At most three cross-team initiatives in progress (a one-quarter trial), listed under this table | 42 |
-| A fourth request | In week 31 Greg Tanaka asks for a third deal feature, purchase approval rules; the week 34 portfolio forum's outcome is open | 42 |
+| A fourth request | In week 31 Greg Tanaka asks for a third deal feature, purchase approval rules; the week 32 portfolio forum's outcome is open | 42 |
 | Operating system redesign | Proposed for week 27: a hard 45-minute operational review, a weekly 75-minute leadership team meeting replacing the managers' meeting and product sync, a monthly business review, a quarterly talent review | 37 |
 | Engineering Excellence Day | Launched by the director in week 27 without the managers or Amara Okafor; Fridays of weeks 28, 32, 36; participation 64, 41, 23 engineers | 43 |
 | Engineering Excellence Day results | 71 items merged, none touching the priced debt register; one Sev3 from a core/scheduler change; stopped in week 37 after a one-page note to the managers | 43 |
@@ -3501,7 +3501,7 @@ reclassifying incidents instead of preventing them.
 |---|---|---|---|
 | VP of Engineering | Whether Northstar adds a VP in year 2 or the director grows into the role. A VP takes one of the 87 seats, so one engineer seat goes | Victor asked for a recommendation | Week 48 |
 | Workforce plan | How vacancies are filled in year 2. Four options: like-for-like backfills, shaped backfills, two [requisitions](#requisition) held ahead (which needs an exception to the 87-seat rule), or a fixed-scope vendor contract; plus the rule "no customer date without an engineering estimate and a named owner", which Greg opposes | Draft to Victor and Rajiv in week 49; recommendation left open | With the budget pack |
-| Week 34 portfolio forum | Whether Greg's third deal feature (purchase approval rules) breaks the limit of three cross-team initiatives in progress | The portfolio forum | Held week 34; outcome not recorded |
+| Week 32 portfolio forum | Whether Greg's third deal feature (purchase approval rules) breaks the limit of three cross-team initiatives in progress | The portfolio forum | Held week 34; outcome not recorded |
 | CI target | Which build system the other three converge on. GitLab CI was proposed in quarter 2, and stage 3's tooling depends on the choice | Open; Victor's strategy draft says the week 78 gate | Week 78 (draft) |
 | [ADR-0001](#adr-0001) | How integrations read posted ledger data: read the tables, a versioned export contract (Li Na Zhou's recommendation), or ledger posting events. Victor's strategy draft reverses his week 14 "read the tables" remark | Nobody's decision rights are mapped | Week 60 (proposed) |
 | SOC 2 | Whether Northstar gets an independent audit report on its controls: option A (audit in year 2), B (readiness in quarters 5–6, decision at week 78; recommended), or C (evidence library only). A prospect worth about $310,000 a year requires a report | Not named; the options are in the risk register drafted for Victor's review | Not set; option B decides at week 78 |
@@ -29320,7 +29320,7 @@ prospect in weeks 32 and 33 (a product manager and an Orders senior engineer, ou
 The director also offered a forecast range Greg could quote in week 35, then raised the possible swap with Rajiv before
 anyone proposed it in a meeting.
 
-**The decision.** The director brought three priced options to the week 34 portfolio forum, with
+**The decision.** The director brought three priced options to the week 32 portfolio forum, with
 Amara, Greg, Sofia, Rajiv, and Victor present:
 
 1. **Queue it.** Approval rules take the week 34 slot; forecast weeks 44 to 47; nothing displaced.
@@ -29369,13 +29369,13 @@ problem this exposes.
 into any team's work, bypassing intake. Prepare your response: her interests, what you can accept,
 what you cannot, and the evidence you would bring.
 
-**A3.** Write the interest map for Rajiv Menon going into the week 34 forum: his position on the swap,
+**A3.** Write the interest map for Rajiv Menon going into the week 32 forum: his position on the swap,
 the interests behind it, the evidence he trusts, and what the director should and should not offer him.
 Explain why exchange is a poor tactic with him.
 
 #### Executive Decision-Making
 
-**X1.** Using the case study, decide which option the week 34 forum should take. Write the
+**X1.** Using the case study, decide which option the week 32 forum should take. Write the
 recommendation as it would go to Victor Lindqvist: the options with costs in engineer-weeks and dates,
 who bears each cost, your recommendation, and what would make you change it.
 
@@ -31031,7 +31031,7 @@ it is yours. It continues
 slot when an earlier one finishes, and the next slots open in weeks 33 and 34. A portfolio forum of
 the executives decides what fills them. In week 31 Greg Tanaka asked for purchase approval rules
 (about 70 engineer-weeks) for a prospect he valued at about $700,000 ARR, deciding in week 36. The
-week 34 forum had three options:
+week 32 forum had three options:
 
 1. **Queue it** into the week 34 slot (forecast weeks 44 to 47).
 2. **Swap it** into the week 33 slot, moving the service-credit statements that Rajiv Menon wants to
@@ -31993,7 +31993,7 @@ assessment stays poor past its decision date. Every change is a transition for t
 decide once, on evidence.
 
 **Hiring or promoting a director.** Write the role first: the area's goals, what its managers need,
-and the blind spot the director team lacks. Test an internal candidate in an acting or stretch scope
+and the strength the director team lacks. Test an internal candidate in an acting or stretch scope
 with a review date; judge by how their managers perform. Interview an outside candidate against the
 written role (Chapter 7), take references from former reports, and agree a 90-day plan in week one.
 Let the other directors meet the candidates: they will be the newcomer's first team.
@@ -43986,7 +43986,7 @@ Menon (CFO), Amara Okafor (CPO), Marcus Oyelaran and Priya Raman (Billing and Or
 The core/permissions module is a [tier 1](#tier-1) part of Core, the monolith, that four
 teams change; its temporary exemption from having an owner has lapsed. Weeks count from the director's
 first week; the [mandate](#the-mandate) is the CTO's target of 15 or fewer Sev1 and Sev2
-incidents a quarter. The forum is the week 34 portfolio forum on a third deal feature, purchase approval
+incidents a quarter. The forum is the week 32 portfolio forum on a third deal feature, purchase approval
 rules, that Greg Tanaka requested in week 31.
 
 > **Engineering update to Victor Lindqvist, end of quarter 3 (week 40)**
@@ -44003,7 +44003,7 @@ rules, that Greg Tanaka requested in week 31.
 > | Multi-currency price lists (Greg Tanaka) | Forecast week 38 | not recorded | Date already given in an open deal |
 > | Catalog export (Greg Tanaka) | Forecast week 34 | not recorded | |
 > | Customer incident status notifications (Sofia Alvarez) | Forecast week 33 | not recorded | |
-> | Automated service-credit statements (Rajiv Menon) | Start about week 33 | not recorded | Depends on the week 34 forum outcome |
+> | Automated service-credit statements (Rajiv Menon) | Start about week 33 | not recorded | Depends on the week 32 forum outcome |
 >
 > | Measure | Quarter 1 | Quarter 2 | Quarter 3 plan | Quarter 3 |
 > |---|---|---|---|---|
@@ -49252,7 +49252,7 @@ each as open.
    on: 80 engineers today, 79 under the main organization proposal, 78 if a VP takes a seat.
 3. **No Core rewrite** (constraint 3 on the [Northstar overview](#page-case-studies-northstar-index)).
 4. **Open decisions stay open.** The year-2 organization, the VP question, the continuation (6 FTE, or 4
-   FTE plus two engineers on deal features), the workforce plan, the week 34 portfolio forum (on a third deal feature), the CI
+   FTE plus two engineers on deal features), the workforce plan, the week 32 portfolio forum (on a third deal feature), the CI
    target, ADR-0001, tax-svc, and the board's envelope. You may recommend; you must show how the strategy
    changes under each outcome you consider plausible.
 5. **No new cash assumed.** The $150,000 of tooling in the continuation needs Rajiv Menon's approval with an
@@ -49332,7 +49332,7 @@ earlier. You do not need to search the case pages for these.
 | Money | $185,000 per engineer-year; $3,558 per engineer-week, the planning rate; $46,250 per FTE-quarter; gross margin 72 percent; discount rate 10 percent; top-40 customers about $1.17M ARR each | Quarter 4 | [Quarter 4 assumptions](#assumptions-and-people-used-in-quarter-4) |
 
 **Facts you do not have.** Quarter 4 results; the outcome of the week 46 organization decision, the VP
-recommendation, the continuation, the workforce plan, the week 34 forum, and the board meeting; whether the
+recommendation, the continuation, the workforce plan, the week 32 forum, and the board meeting; whether the
 deployment-event store, CI consolidation phase 1, or a general invoice reconciliation job is running;
 quarter 3 change failure rate, recurrences, and customer-detected share; any committed-delivery figure
 after the baseline quarter; and how Victor will revise his draft after week 47. Treat each as a gap with an action, not a value.
@@ -58203,7 +58203,7 @@ measurement decision with a portfolio decision.
 though not the director's manager, is an executive above the director's level. Rational persuasion in
 finance's terms is the tactic that fits.
 
-### X1 — The week 34 forum decision
+### X1 — The week 32 forum decision
 
 **One defensible recommendation: option 1, queue it,** with the scoping sessions and a forecast range of
 weeks 44 to 47 for Greg to give the prospect.

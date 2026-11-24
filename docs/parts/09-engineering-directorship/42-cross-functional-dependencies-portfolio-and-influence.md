@@ -441,7 +441,7 @@ prospect in weeks 32 and 33 (a product manager and an Orders senior engineer, ou
 The director also offered a forecast range Greg could quote in week 35, then raised the possible swap with Rajiv before
 anyone proposed it in a meeting.
 
-**The decision.** The director brought three priced options to the week 34 portfolio forum, with
+**The decision.** The director brought three priced options to the week 32 portfolio forum, with
 Amara, Greg, Sofia, Rajiv, and Victor present:
 
 1. **Queue it.** Approval rules take the week 34 slot; forecast weeks 44 to 47; nothing displaced.
@@ -490,13 +490,13 @@ problem this exposes.
 into any team's work, bypassing intake. Prepare your response: her interests, what you can accept,
 what you cannot, and the evidence you would bring.
 
-**A3.** Write the interest map for Rajiv Menon going into the week 34 forum: his position on the swap,
+**A3.** Write the interest map for Rajiv Menon going into the week 32 forum: his position on the swap,
 the interests behind it, the evidence he trusts, and what the director should and should not offer him.
 Explain why exchange is a poor tactic with him.
 
 ### Executive Decision-Making
 
-**X1.** Using the case study, decide which option the week 34 forum should take. Write the
+**X1.** Using the case study, decide which option the week 32 forum should take. Write the
 recommendation as it would go to Victor Lindqvist: the options with costs in engineer-weeks and dates,
 who bears each cost, your recommendation, and what would make you change it.
 

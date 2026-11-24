@@ -100,7 +100,7 @@ Menon (CFO), Amara Okafor (CPO), Marcus Oyelaran and Priya Raman (Billing and Or
 The core/permissions module is a [tier 1](../glossary.md#tier-1) part of Core, the monolith, that four
 teams change; its temporary exemption from having an owner has lapsed. Weeks count from the director's
 first week; the [mandate](../glossary.md#the-mandate) is the CTO's target of 15 or fewer Sev1 and Sev2
-incidents a quarter. The forum is the week 34 portfolio forum on a third deal feature, purchase approval
+incidents a quarter. The forum is the week 32 portfolio forum on a third deal feature, purchase approval
 rules, that Greg Tanaka requested in week 31.
 
 > **Engineering update to Victor Lindqvist, end of quarter 3 (week 40)**
@@ -117,7 +117,7 @@ rules, that Greg Tanaka requested in week 31.
 > | Multi-currency price lists (Greg Tanaka) | Forecast week 38 | not recorded | Date already given in an open deal |
 > | Catalog export (Greg Tanaka) | Forecast week 34 | not recorded | |
 > | Customer incident status notifications (Sofia Alvarez) | Forecast week 33 | not recorded | |
-> | Automated service-credit statements (Rajiv Menon) | Start about week 33 | not recorded | Depends on the week 34 forum outcome |
+> | Automated service-credit statements (Rajiv Menon) | Start about week 33 | not recorded | Depends on the week 32 forum outcome |
 >
 > | Measure | Quarter 1 | Quarter 2 | Quarter 3 plan | Quarter 3 |
 > |---|---|---|---|---|

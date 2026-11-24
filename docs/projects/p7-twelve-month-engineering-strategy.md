@@ -93,7 +93,7 @@ each as open.
    on: 80 engineers today, 79 under the main organization proposal, 78 if a VP takes a seat.
 3. **No Core rewrite** (constraint 3 on the [Northstar overview](../case-studies/northstar/index.md)).
 4. **Open decisions stay open.** The year-2 organization, the VP question, the continuation (6 FTE, or 4
-   FTE plus two engineers on deal features), the workforce plan, the week 34 portfolio forum (on a third deal feature), the CI
+   FTE plus two engineers on deal features), the workforce plan, the week 32 portfolio forum (on a third deal feature), the CI
    target, ADR-0001, tax-svc, and the board's envelope. You may recommend; you must show how the strategy
    changes under each outcome you consider plausible.
 5. **No new cash assumed.** The $150,000 of tooling in the continuation needs Rajiv Menon's approval with an
@@ -173,7 +173,7 @@ earlier. You do not need to search the case pages for these.
 | Money | $185,000 per engineer-year; $3,558 per engineer-week, the planning rate; $46,250 per FTE-quarter; gross margin 72 percent; discount rate 10 percent; top-40 customers about $1.17M ARR each | Quarter 4 | [Quarter 4 assumptions](../case-studies/northstar/first-quarter.md#assumptions-and-people-used-in-quarter-4) |
 
 **Facts you do not have.** Quarter 4 results; the outcome of the week 46 organization decision, the VP
-recommendation, the continuation, the workforce plan, the week 34 forum, and the board meeting; whether the
+recommendation, the continuation, the workforce plan, the week 32 forum, and the board meeting; whether the
 deployment-event store, CI consolidation phase 1, or a general invoice reconciliation job is running;
 quarter 3 change failure rate, recurrences, and customer-detected share; any committed-delivery figure
 after the baseline quarter; and how Victor will revise his draft after week 47. Treat each as a gap with an action, not a value.
