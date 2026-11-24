@@ -14715,7 +14715,7 @@ the company knowing less than before. They also concede the executive's point: l
 answer will have someone else's answer imposed.
 
 Neither side offers controlled evidence; the book labels both **expert opinion**. The question is
-contested, and the next section states the book's position.
+contested, and the section after next states the book's position.
 
 #### How each metric is gamed, and its pair
 
@@ -14874,8 +14874,8 @@ owner, or is switched off (Chapter 37).
 
 At 50 to 150 engineers, measurement needs an owner, a definitions page, and plumbing.
 
-**Ownership.** One person, often a staff engineer with platform engineers, owns definitions and the data
-pipeline. The director decides which metrics exist and where they are used; managers act on their team's.
+**Ownership.** One person, often a staff engineer supported by platform engineers, owns definitions and the
+data pipeline. The director decides which metrics exist and where they are used; managers act on their team's.
 
 **Plumbing.** Every pipeline emits the same deployment event (service, version, time, commit range,
 result) to one store, and incidents are linked to deployments in the incident tool. Until then, every
