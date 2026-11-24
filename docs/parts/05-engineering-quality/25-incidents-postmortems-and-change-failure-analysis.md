@@ -311,8 +311,8 @@ flag, so recurrences get their own column. Several rows could reasonably go anot
     - **Logic and regression tests.** INC-401: invoice totals rounded wrongly for multi-currency
       orders. INC-403: order submission failed for legacy price lists. INC-409: duplicate invoices from
       a retried batch job. INC-411: catalog import rejected valid unit-of-measure values. INC-417:
-      payments posted to the wrong accounting period. INC-421: bulk upload dropped lines beyond row
-      500. INC-422: PDF invoices missing the tax breakdown for one region.
+      payments posted to the wrong accounting period. INC-421: bulk upload dropped lines beyond row 500.
+      INC-422: PDF invoices missing the tax breakdown for one region.
     - **Migration safety.** INC-406: a ledger index migration locked a table during business hours.
       INC-419: a pricing-rule migration ran before the code that expected it. INC-424: a long
       migration exceeded replication lag; replicas served stale balances. INC-427: credit notes

@@ -432,8 +432,8 @@ resigned. The replacement started 15 weeks later and, because the remaining thre
 was not on the rotation by the end of the baseline quarter.
 
 The previous management responded three times. It raised the on-call stipend. After each serious Billing
-incident it added an alert; some became the no-action pages that made up about a third of the quarter's
-180. And it asked the experts to "document as they go", without giving them time. Each response was
+incident it added an alert; some became the no-action pages that made up about a third of the quarter's 180.
+And it asked the experts to "document as they go", without giving them time. Each response was
 reasonable, and each was a parameter or an addition to the loop's inflow. None changed who learned from
 a page.
 

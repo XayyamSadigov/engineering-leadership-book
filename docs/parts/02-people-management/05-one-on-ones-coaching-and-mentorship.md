@@ -174,8 +174,8 @@ A manager helps a person in four distinct ways. Confusing them frustrates both s
 | Sponsoring | Uses influence to give the person opportunities and visibility | The helper's standing | Someone senior with a say in assignments and promotions |
 
 **Directing** is not a failure of leadership. When the person lacks the knowledge, the mistake would
-be costly, and time is short, telling is correct; it matches the lowest delegation levels in Chapter
-2. Its cost is that people learn to wait for the answer. Liz Wiseman's idea of multipliers and
+be costly, and time is short, telling is correct; it matches the lowest delegation levels in Chapter 2.
+Its cost is that people learn to wait for the answer. Liz Wiseman's idea of multipliers and
 diminishers is the check: a leader who supplies every answer gets people who stop thinking
 ([Wiseman, 2010](../../references/bibliography.md#wiseman2010multipliers)).
 

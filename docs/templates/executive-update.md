@@ -86,8 +86,8 @@ decided_since_last:
 
 !!! info "Northstar so far"
     Week 40 of the Engineering Director's first year at Northstar Technologies, a fictional company.
-    Quarter 3 is the first quarter at the CTO's incident target; the renewal features shipped in quarter
-    2. The director writes to Victor Lindqvist (CTO). See the
+    Quarter 3 is the first quarter at the CTO's incident target; the renewal features shipped in quarter 2.
+    The director writes to Victor Lindqvist (CTO). See the
     [timeline](../case-studies/northstar/timeline.md). New to Northstar? Read
     [the year in brief](../case-studies/northstar/year-in-brief.md) and the
     [cast](../case-studies/northstar/cast.md).

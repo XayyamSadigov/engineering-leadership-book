@@ -84,8 +84,8 @@ at 10 percent: $255,000 × 2.487 − $249,000 = about **+$386,000**, now above A
 rises to about $4,900 a week, level with A.
 
 **The bigger change is the shape.** The renewal term makes B partly a **deadline item**: its benefit
-depends on improvements the customer can see before the renewal conversation, perhaps by week 52 to
-56. B should be scheduled backward from that date, not just ranked.
+depends on improvements the customer can see before the renewal conversation, perhaps by week 52 to 56.
+B should be scheduled backward from that date, not just ranked.
 
 **Criteria for a good answer.** It checks that B's work actually targets the failures this customer
 raised (ask Sofia Alvarez for the account's incident history); it avoids double-counting credits the

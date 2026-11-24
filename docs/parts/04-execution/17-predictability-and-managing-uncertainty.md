@@ -160,8 +160,8 @@ flowchart TD
 ```
 
 Each trial treats the future as a random reshuffle of past weeks. Thousands of trials give a
-distribution: the 50th percentile is the date hit half the time, the 85th the date hit 85 times in
-100. The same history answers the reverse question: how many items will be done by a fixed date.
+distribution: the 50th percentile is the date hit half the time, the 85th the date hit 85 times in 100.
+The same history answers the reverse question: how many items will be done by a fixed date.
 Vacanti's practitioner guide to flow forecasting covers this method and warns against forecasting from
 averages ([Vacanti, 2018](../../references/bibliography.md#vacanti2018when)).
 

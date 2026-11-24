@@ -161,8 +161,8 @@ strategy holds at all three; only product capacity moves.
 **The 4-plus-2 option.** Prevention falls to 4 FTE (52 engineer-weeks) in quarters 5 and 6, and two
 engineers (about $185,000 of capacity) go to deal features through the forum. The strategy keeps the
 idempotency key, the reconciliation job, the tier 1 minimums, and the ledger second responders, and
-moves the Core framework migration to quarters 7 and 8, pushing the auditable-pipeline work past week
-104. The stage 2 exit criteria are unchanged; stage 3's pipeline criterion moves to year 3. This is the
+moves the Core framework migration to quarters 7 and 8, pushing the auditable-pipeline work past week 104.
+The stage 2 exit criteria are unchanged; stage 3's pipeline criterion moves to year 3. This is the
 trade the executive team is choosing between, written in its own terms.
 
 ### What we will not do

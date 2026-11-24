@@ -1,8 +1,8 @@
 # Project 1: Build an Engineering Management Operating System
 
 It is week 22, late in quarter 2 of your first year as Engineering Director at Northstar Technologies,
-the fictional company of the [case study](../case-studies/northstar/index.md). Quarter 3 starts in week
-27. Your calendar has filled the way calendars do: one review, one sync, one check-in at a time, each
+the fictional company of the [case study](../case-studies/northstar/index.md). Quarter 3 starts in week 27.
+Your calendar has filled the way calendars do: one review, one sync, one check-in at a time, each
 added for a good reason and none removed. Your job is to design the management operating system you
 will run in quarter 3: the forums, the written artifacts, the horizons, and the routing rules between
 them. The design comes with its cost, its transition, and the evidence that will tell you in six weeks

@@ -343,8 +343,8 @@ at which a reasonable check would have caught it. Unit: count per quarter. Taugh
 
 A quality specialist who sits in a product team and owns test strategy for the team's risk areas, does
 exploratory testing, coaches developers, and builds automation, rather than running every check
-personally. At Northstar the seven QA engineers became quality engineers in product teams from week
-10. Taught in
+personally. At Northstar the seven QA engineers became quality engineers in product teams from week 10.
+Taught in
 [Chapter 19](parts/05-engineering-quality/19-defining-measuring-and-owning-quality.md#the-four-ownership-models) and
 [Chapter 27](parts/05-engineering-quality/27-quality-transformation-at-enterprise-scale.md#changing-roles-without-losing-the-people).
 

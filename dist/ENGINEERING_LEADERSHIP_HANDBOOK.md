@@ -858,8 +858,8 @@ at which a reasonable check would have caught it. Unit: count per quarter. Taugh
 
 A quality specialist who sits in a product team and owns test strategy for the team's risk areas, does
 exploratory testing, coaches developers, and builds automation, rather than running every check
-personally. At Northstar the seven QA engineers became quality engineers in product teams from week
-10. Taught in
+personally. At Northstar the seven QA engineers became quality engineers in product teams from week 10.
+Taught in
 [Chapter 19](#the-four-ownership-models) and
 [Chapter 27](#changing-roles-without-losing-the-people).
 
@@ -6205,8 +6205,8 @@ resigned. The replacement started 15 weeks later and, because the remaining thre
 was not on the rotation by the end of the baseline quarter.
 
 The previous management responded three times. It raised the on-call stipend. After each serious Billing
-incident it added an alert; some became the no-action pages that made up about a third of the quarter's
-180. And it asked the experts to "document as they go", without giving them time. Each response was
+incident it added an alert; some became the no-action pages that made up about a third of the quarter's 180.
+And it asked the experts to "document as they go", without giving them time. Each response was
 reasonable, and each was a parameter or an addition to the loop's inflow. None changed who learned from
 a page.
 
@@ -7047,8 +7047,8 @@ A manager helps a person in four distinct ways. Confusing them frustrates both s
 | Sponsoring | Uses influence to give the person opportunities and visibility | The helper's standing | Someone senior with a say in assignments and promotions |
 
 **Directing** is not a failure of leadership. When the person lacks the knowledge, the mistake would
-be costly, and time is short, telling is correct; it matches the lowest delegation levels in Chapter
-2. Its cost is that people learn to wait for the answer. Liz Wiseman's idea of multipliers and
+be costly, and time is short, telling is correct; it matches the lowest delegation levels in Chapter 2.
+Its cost is that people learn to wait for the answer. Liz Wiseman's idea of multipliers and
 diminishers is the check: a leader who supplies every answer gets people who stop thinking
 ([Wiseman, 2010](#wiseman2010multipliers)).
 
@@ -14099,8 +14099,8 @@ flowchart TD
 ```
 
 Each trial treats the future as a random reshuffle of past weeks. Thousands of trials give a
-distribution: the 50th percentile is the date hit half the time, the 85th the date hit 85 times in
-100. The same history answers the reverse question: how many items will be done by a fixed date.
+distribution: the 50th percentile is the date hit half the time, the 85th the date hit 85 times in 100.
+The same history answers the reverse question: how many items will be done by a fixed date.
 Vacanti's practitioner guide to flow forecasting covers this method and warns against forecasting from
 averages ([Vacanti, 2018](#vacanti2018when)).
 
@@ -18989,8 +18989,8 @@ flag, so recurrences get their own column. Several rows could reasonably go anot
     - **Logic and regression tests.** INC-401: invoice totals rounded wrongly for multi-currency
       orders. INC-403: order submission failed for legacy price lists. INC-409: duplicate invoices from
       a retried batch job. INC-411: catalog import rejected valid unit-of-measure values. INC-417:
-      payments posted to the wrong accounting period. INC-421: bulk upload dropped lines beyond row
-      500. INC-422: PDF invoices missing the tax breakdown for one region.
+      payments posted to the wrong accounting period. INC-421: bulk upload dropped lines beyond row 500.
+      INC-422: PDF invoices missing the tax breakdown for one region.
     - **Migration safety.** INC-406: a ledger index migration locked a table during business hours.
       INC-419: a pricing-rule migration ran before the code that expected it. INC-424: a long
       migration exceeded replication lag; replicas served stale balances. INC-427: credit notes
@@ -43972,8 +43972,8 @@ decided_since_last:
 
 !!! info "Northstar so far"
     Week 40 of the Engineering Director's first year at Northstar Technologies, a fictional company.
-    Quarter 3 is the first quarter at the CTO's incident target; the renewal features shipped in quarter
-    2. The director writes to Victor Lindqvist (CTO). See the
+    Quarter 3 is the first quarter at the CTO's incident target; the renewal features shipped in quarter 2.
+    The director writes to Victor Lindqvist (CTO). See the
     [timeline](#page-case-studies-northstar-timeline). New to Northstar? Read
     [the year in brief](#page-case-studies-northstar-year-in-brief) and the
     [cast](#page-case-studies-northstar-cast).
@@ -45387,8 +45387,8 @@ Nothing from week 50 on is recorded, so no stage may use it.
 
 - **Produce:** the diagnosis and constraint statement of
   [Project 3](#page-projects-p3-quality-transformation-plan) (deliverables 1 and 2), applying
-  [Chapter 27](#page-parts-05-engineering-quality-27-quality-transformation-at-enterprise-scale)'s days 1 to
-  15. If you have done Project 3, reuse it.
+  [Chapter 27](#page-parts-05-engineering-quality-27-quality-transformation-at-enterprise-scale)'s days 1 to 15.
+  If you have done Project 3, reuse it.
 - **Add:** a trust table (each measure, how it is produced, its known weakness, whether you will compare
   it across quarters). Add counting rules for [severity](#severity-sev1-sev2-sev3), the
   [tier 1](#tier-1) population, period length, and the
@@ -45805,8 +45805,8 @@ All Northstar people, figures, and events are fictional. See the note on the
 ## Project 1: Build an Engineering Management Operating System
 
 It is week 22, late in quarter 2 of your first year as Engineering Director at Northstar Technologies,
-the fictional company of the [case study](#page-case-studies-northstar-index). Quarter 3 starts in week
-27. Your calendar has filled the way calendars do: one review, one sync, one check-in at a time, each
+the fictional company of the [case study](#page-case-studies-northstar-index). Quarter 3 starts in week 27.
+Your calendar has filled the way calendars do: one review, one sync, one check-in at a time, each
 added for a good reason and none removed. Your job is to design the management operating system you
 will run in quarter 3: the forums, the written artifacts, the horizons, and the routing rules between
 them. The design comes with its cost, its transition, and the evidence that will tell you in six weeks
@@ -49621,8 +49621,8 @@ strategy holds at all three; only product capacity moves.
 **The 4-plus-2 option.** Prevention falls to 4 FTE (52 engineer-weeks) in quarters 5 and 6, and two
 engineers (about $185,000 of capacity) go to deal features through the forum. The strategy keeps the
 idempotency key, the reconciliation job, the tier 1 minimums, and the ledger second responders, and
-moves the Core framework migration to quarters 7 and 8, pushing the auditable-pipeline work past week
-104. The stage 2 exit criteria are unchanged; stage 3's pipeline criterion moves to year 3. This is the
+moves the Core framework migration to quarters 7 and 8, pushing the auditable-pipeline work past week 104.
+The stage 2 exit criteria are unchanged; stage 3's pipeline criterion moves to year 3. This is the
 trade the executive team is choosing between, written in its own terms.
 
 #### What we will not do
@@ -49764,8 +49764,8 @@ Menon (CFO) will accept new cash only if it is offset inside the $4.2M cloud and
 Helena Marsh asks whether reliability will hold through six renewals of top-40 customers, while Greg
 Tanaka (VP Sales) argues that the prevention engineers belong on deal features.
 
-Your job is to build the technology investment proposal you would take to the executive team in week
-49. It is a portfolio of candidate investments, priced in capacity and cash, valued with scenarios,
+Your job is to build the technology investment proposal you would take to the executive team in week 49.
+It is a portfolio of candidate investments, priced in capacity and cash, valued with scenarios,
 sequenced by [cost of delay](#cost-of-delay), and fitted to the envelope. It ends with a
 recommended package, a one-page engineering input to the operating plan, and the gates that would stop
 the spending.
@@ -58674,8 +58674,8 @@ at 10 percent: $255,000 × 2.487 − $249,000 = about **+$386,000**, now above A
 rises to about $4,900 a week, level with A.
 
 **The bigger change is the shape.** The renewal term makes B partly a **deadline item**: its benefit
-depends on improvements the customer can see before the renewal conversation, perhaps by week 52 to
-56. B should be scheduled backward from that date, not just ranked.
+depends on improvements the customer can see before the renewal conversation, perhaps by week 52 to 56.
+B should be scheduled backward from that date, not just ranked.
 
 **Criteria for a good answer.** It checks that B's work actually targets the failures this customer
 raised (ask Sofia Alvarez for the account's incident history); it avoids double-counting credits the

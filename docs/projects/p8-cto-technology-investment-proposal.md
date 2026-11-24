@@ -15,8 +15,8 @@ Menon (CFO) will accept new cash only if it is offset inside the $4.2M cloud and
 Helena Marsh asks whether reliability will hold through six renewals of top-40 customers, while Greg
 Tanaka (VP Sales) argues that the prevention engineers belong on deal features.
 
-Your job is to build the technology investment proposal you would take to the executive team in week
-49. It is a portfolio of candidate investments, priced in capacity and cash, valued with scenarios,
+Your job is to build the technology investment proposal you would take to the executive team in week 49.
+It is a portfolio of candidate investments, priced in capacity and cash, valued with scenarios,
 sequenced by [cost of delay](../glossary.md#cost-of-delay), and fitted to the envelope. It ends with a
 recommended package, a one-page engineering input to the operating plan, and the gates that would stop
 the spending.

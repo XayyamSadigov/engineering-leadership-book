@@ -402,8 +402,8 @@ Nothing from week 50 on is recorded, so no stage may use it.
 
 - **Produce:** the diagnosis and constraint statement of
   [Project 3](../../projects/p3-quality-transformation-plan.md) (deliverables 1 and 2), applying
-  [Chapter 27](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)'s days 1 to
-  15. If you have done Project 3, reuse it.
+  [Chapter 27](../05-engineering-quality/27-quality-transformation-at-enterprise-scale.md)'s days 1 to 15.
+  If you have done Project 3, reuse it.
 - **Add:** a trust table (each measure, how it is produced, its known weakness, whether you will compare
   it across quarters). Add counting rules for [severity](../../glossary.md#severity-sev1-sev2-sev3), the
   [tier 1](../../glossary.md#tier-1) population, period length, and the
