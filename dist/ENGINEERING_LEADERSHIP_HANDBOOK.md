@@ -19171,7 +19171,7 @@ ledger migration and code that depended on it shipped in the same weekly train. 
 failed, because the migration had already changed the schema the previous version read, so service
 was restored by a forward fix. Helena Marsh (CEO) called the director to ask who had made the change.
 The director answered with the mechanism: two changes that should have been ordered had shipped
-together, and the check promised after INC-427 had slipped. The engineer involved led the review. Its
+together, and the check promised after INC-427 had slipped. The engineer involved took part in the review as a witness, not a defendant. Its
 first contributing factor was that the organization had known this failure mode since INC-406,
 reviewed it twice, and let the action slip without a substitute. An interim control (no release may
 contain a ledger migration and code that depends on it) was agreed in a day. The pipeline check landed
