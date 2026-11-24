@@ -59,7 +59,10 @@ def main() -> None:
         f"**[Read online]({SITE})** · "
         f"**[EPUB]({SITE}downloads/engineering-leadership-handbook.epub)** · "
         f"**[PDF]({SITE}downloads/engineering-leadership-handbook.pdf)** · "
-        f"[Русская версия]({SITE}ru/) (in progress)\n"
+        f"Русская версия: [онлайн]({SITE}ru/) · "
+        f"[EPUB]({SITE}downloads/engineering-leadership-handbook-ru.epub) · "
+        f"[PDF]({SITE}downloads/engineering-leadership-handbook-ru.pdf) (60 chapters; solutions, "
+        "templates, and projects in English)\n"
     )
     w("> **Status:** complete draft. All chapters, templates, and projects are written and checked by")
     w("> automated validation and independent review; the citations still await a human reviewer.\n")

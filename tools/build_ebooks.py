@@ -5,6 +5,7 @@
     python tools/build_ebooks.py --epub          # EPUB only
     python tools/build_ebooks.py --pdf           # PDF only
     python tools/build_ebooks.py --markdown-only # stop after build/ebook/book-*.md (no pandoc, no node)
+    python tools/build_ebooks.py --lang ru       # the Russian edition (pages that have a .ru.md)
 
 Requirements: pandoc 3.x (on PATH, or the pypandoc_binary wheel), Node.js 18+ and npm. The script
 installs @mermaid-js/mermaid-cli (which brings puppeteer and its Chromium) into build/ebook/node on
@@ -23,6 +24,13 @@ Pipeline:
 4. EPUB: pandoc with tools/ebook/epub.css. PDF: pandoc to standalone HTML with
    tools/ebook/print.css, printed by Chromium (tools/ebook/print.cjs), twice when PyMuPDF is
    available so the printed table of contents carries page numbers.
+
+Russian edition (--lang ru): every page that has a translated page.ru.md beside it, in the same
+order; pages without a translation (solutions, templates, projects) are left out, and links to them
+become plain text. The bibliography stays in its original form so citations remain links. Titles and
+labels the script adds come from tools/ebook/ru.yaml and the ru nav_translations in mkdocs.yml.
+IBM Plex Sans Condensed has no Cyrillic, so the Russian edition sets its sans-serif text in the
+variable IBM Plex Sans, narrowed with font-stretch.
 """
 from __future__ import annotations
 
@@ -38,8 +46,11 @@ import sys
 import unicodedata
 import urllib.request
 from pathlib import Path
+from urllib.parse import quote
 
-from booklib import DIST, DOCS, FENCE_RE, LINK_RE, REVIEW_BANNER, ROOT, load_curriculum
+import yaml
+
+from booklib import DIST, DOCS, FENCE_RE, LINK_RE, MKDOCS, REVIEW_BANNER, ROOT, load_curriculum, load_yaml
 from build_single_file import nav_groups, page_anchor
 
 BUILD = ROOT / "build" / "ebook"
@@ -61,6 +72,9 @@ FONT_FILES = [
     "ibmplexsanscondensed/IBMPlexSansCondensed-Italic.ttf",
     "ibmplexsanscondensed/IBMPlexSansCondensed-SemiBold.ttf",
     "ibmplexmono/IBMPlexMono-Regular.ttf",
+    # Variable IBM Plex Sans (wdth and wght axes): the Cyrillic sans-serif face of the Russian edition.
+    "ibmplexsans/IBMPlexSans[wdth,wght].ttf",
+    "ibmplexsans/IBMPlexSans-Italic[wdth,wght].ttf",
 ]
 # Pandoc extensions that Python-Markdown does not have and that would misread the book's prose:
 # "$120k and $80k" as math, "~30%" as subscript, "@name" as a citation, "A." as a list marker.
@@ -72,7 +86,47 @@ PANDOC_FROM = (
 ROMAN = re.compile(r"^([IVXL]+)\.\s+(.+)$")
 ADMONITION = re.compile(r'^(!!!|\?\?\?\+?)\s+([\w-]+)(?:\s+"([^"]*)")?\s*$')
 HEADING = re.compile(r"^(#{1,6})\s+(.*?)\s*(?:\{([^}]*)\})?\s*#*\s*$")
-CHAPTER_TITLE = re.compile(r"^Chapter (\d+) — (.+)$")
+CHAPTER_TITLE = re.compile(r"^(?:Chapter|Глава) (\d+) — (.+)$")
+
+
+class Edition:
+    """Language of the edition being built, and the words the script adds around the pages."""
+
+    def __init__(self, lang: str = "en") -> None:
+        self.lang = lang
+        self.ru = lang == "ru"
+        self.slug = SLUG + ("-ru" if self.ru else "")
+        self.words = {"part": "Part", "chapter": "Chapter", "introduction": "Introduction",
+                      "contents": "Contents", "diagram": "Diagram",
+                      "northstar": "Case study: Northstar Technologies", "references": "References"}
+        self.part_titles: dict[str, str] = {}
+        self.part_summaries: dict[str, str] = {}
+        self.meta: dict[str, str] = {}
+        if self.ru:
+            data = yaml.safe_load((ASSETS / "ru.yaml").read_text(encoding="utf-8"))
+            self.words.update(data["strings"])
+            self.part_summaries = {str(k): v for k, v in data["parts"].items()}
+            self.meta = {k: data[k] for k in ("title", "subtitle", "description")}
+            for plugin in load_yaml(MKDOCS).get("plugins", []):
+                if isinstance(plugin, dict) and "i18n" in plugin:
+                    for language in plugin["i18n"]["languages"]:
+                        if language.get("locale") == "ru":
+                            for en, ru in language.get("nav_translations", {}).items():
+                                m = ROMAN.match(ru)
+                                if m and ROMAN.match(en):
+                                    self.part_titles[m.group(1)] = m.group(2)
+
+    def source(self, rel_path: str) -> str | None:
+        """The file that holds this page's text in this edition, or None to leave the page out."""
+        if not self.ru:
+            return rel_path
+        ru = rel_path[:-3] + ".ru.md"
+        if (DOCS / ru).exists():
+            return ru
+        return rel_path if rel_path == "references/bibliography.md" else None
+
+
+ED = Edition()
 
 
 # --------------------------------------------------------------------------------------------
@@ -83,7 +137,8 @@ class Page:
     """One source page placed in the book at a heading level (1 = top-level division)."""
 
     def __init__(self, rel_path: str, level: int, kind: str = "page") -> None:
-        self.rel_path = rel_path
+        self.rel_path = rel_path  # the English path: links between pages use it
+        self.source = ED.source(rel_path) or rel_path  # the file read for this edition
         self.level = level
         self.kind = kind  # page | chapter | front | solution
 
@@ -108,7 +163,7 @@ def book_plan() -> list[tuple[str, dict, list[Page]]]:
     skip = {"curriculum.md", "exercises/index.md", "download.md"}
 
     def take(f: str) -> bool:
-        if f in seen or f in skip or not (DOCS / f).exists():
+        if f in seen or f in skip or not (DOCS / f).exists() or ED.source(f) is None:
             return False
         seen.add(f)
         return True
@@ -122,9 +177,14 @@ def book_plan() -> list[tuple[str, dict, list[Page]]]:
             pages = [
                 Page(f, 2, "chapter" if f.startswith("parts/") else "page") for f in files if take(f)
             ]
+            if not pages:
+                continue
+            roman = m.group(1)
+            ptitle = ED.part_titles.get(roman) or part.get("title", m.group(2))
+            summary = ED.part_summaries.get(roman, "") if ED.ru else part.get("summary", "")
             numbered.append((
-                f"[Part {m.group(1)}]{{.part-num}}[: ]{{.sep}}{part.get('title', m.group(2))}",
-                {"id": f"part-{m.group(1).lower()}", "class": "part", "summary": part.get("summary", "")},
+                f"[{ED.words['part']} {roman}]{{.part-num}}[: ]{{.sep}}{ptitle}",
+                {"id": f"part-{roman.lower()}", "class": "part", "summary": summary},
                 pages,
             ))
         elif title.startswith("Case study"):
@@ -157,10 +217,10 @@ def book_plan() -> list[tuple[str, dict, list[Page]]]:
     if projects:
         plan.append(("Projects", {"id": "div-projects", "class": "division"}, projects))
     if northstar:
-        plan.append(("Case study: Northstar Technologies",
+        plan.append((ED.words["northstar"],
                      {"id": "div-northstar", "class": "division"}, northstar))
     if references:
-        plan.append(("References", {"id": "div-references", "class": "division"}, references))
+        plan.append((ED.words["references"], {"id": "div-references", "class": "division"}, references))
     if solutions or project_solutions:
         plan.append(("Solutions", {"id": "div-solutions", "class": "division",
                                    "summary": "Worked solutions to the chapter exercises, then to "
@@ -217,7 +277,7 @@ def diagram_alt(body: str) -> str:
     alt = ", ".join(dict.fromkeys(w.strip() for w in words if w.strip()))
     alt = re.sub(r"<br\s*/?>", " ", alt)
     alt = re.sub(r"[\[\]]", "", alt)
-    return ("Diagram: " + alt)[:300] if alt else "Diagram"
+    return (ED.words["diagram"] + ": " + alt)[:300] if alt else ED.words["diagram"]
 
 
 def wrap_tables(lines: list[str]) -> list[str]:
@@ -249,7 +309,7 @@ def wrap_tables(lines: list[str]) -> list[str]:
 
 class Transformer:
     def __init__(self, pages: list[Page]) -> None:
-        self.texts = {p.rel_path: (DOCS / p.rel_path).read_text(encoding="utf-8") for p in pages}
+        self.texts = {p.rel_path: (DOCS / p.source).read_text(encoding="utf-8") for p in pages}
         self.anchors = {f: heading_ids(f, t) for f, t in self.texts.items()}
         self.diagrams: dict[str, str] = {}  # hash -> mermaid source
 
@@ -333,8 +393,10 @@ class Transformer:
                     i += 1
                 while body and not body[-1].strip():
                     body.pop()
-                drop = line.strip() == REVIEW_BANNER or (
-                    src == "index.md" and title.lower().startswith("status"))
+                # The home page's status notes (and the Russian note about the website's language
+                # switch) are restated once in the edition note.
+                drop = line.strip() == REVIEW_BANNER or (src == "index.md" and title.lower().startswith(
+                    ("status", "статус", "о русском издании")))
                 if not drop:
                     out += ["", f":::: {{.admonition .{adm.group(2)}}}"]
                     if title:
@@ -355,11 +417,12 @@ class Transformer:
                 if first_heading:
                     hid = page_anchor(src)
                     if src == "index.md":
-                        title = "Introduction"
+                        title = ED.words["introduction"]
                     if p.kind == "chapter":
                         cm = CHAPTER_TITLE.match(title)
                         if cm:
-                            title = f"[Chapter {cm.group(1)}]{{.ch-num}}[ — ]{{.sep}}{cm.group(2)}"
+                            title = (f"[{ED.words['chapter']} {cm.group(1)}]{{.ch-num}}[ — ]{{.sep}}"
+                                     f"{cm.group(2)}")
                     classes = f" .page-title .{p.kind}"
                     first_heading = False
                 else:
@@ -407,6 +470,36 @@ the website appear here as plain text; the website has them.
 """
 
 
+def edition_note_ru(commit: str, today: str) -> str:
+    built = f"{today}{f' из коммита `{commit}`' if commit else ''}"
+    return f"""# Об этом издании {{#edition-note .front}}
+
+Это EPUB- и PDF-издание русского перевода книги «{ED.meta['title']}». Оно собрано из тех же исходных
+файлов, что и сайт <{SITE}ru/>, {built} и пересобирается при каждом изменении книги, поэтому сайт
+и файлы для скачивания всегда совпадают.
+
+В издание вошли все 60 глав, вводные страницы, глоссарий и весь кейс Northstar. Решения упражнений,
+шаблоны и проекты пока не переведены: они есть в английском издании и на сайте, а ссылки на них здесь
+даны обычным текстом. Библиография оставлена в исходном виде, на языке источников.
+
+:::: {{.admonition .warning}}
+::: {{.admonition-title}}
+Книга ждёт проверки человеком
+:::
+
+Все главы прошли автоматические проверки книги, но ни одна ещё не прошла проверку человеком, который
+сверяет каждое утверждение с источником. Читайте текст как проверенный черновик и сообщайте о любом
+утверждении, которое не подтверждается его источником.
+
+Перевод сделан ИИ-агентами (Claude) в три этапа: перевод, литературная редактура русского текста и
+сверка смысла с оригиналом. Человек его пока не вычитывал. При расхождении прав английский оригинал.
+::::
+
+Текст распространяется по лицензии Creative Commons Attribution 4.0 International (CC BY 4.0);
+© 2026 {AUTHOR}. Northstar Technologies, Halvard Systems, все их сотрудники, цифры и данные вымышлены.
+"""
+
+
 def build_markdown(ext: str) -> tuple[str, dict[str, str]]:
     plan = book_plan()
     pages = [p for _, _, ps in plan for p in ps]
@@ -418,7 +511,7 @@ def build_markdown(ext: str) -> tuple[str, dict[str, str]]:
     except (OSError, subprocess.CalledProcessError):
         pass
     today = dt.date.today().isoformat()
-    chunks = [edition_note(commit, today)]
+    chunks = [(edition_note_ru if ED.ru else edition_note)(commit, today)]
     for title, attrs, ps in plan:
         if title:
             cls = " ".join("." + c for c in attrs.get("class", "division").split())
@@ -454,15 +547,15 @@ def ensure_node() -> Path:
 def ensure_fonts() -> None:
     FONTS.mkdir(parents=True, exist_ok=True)
     for f in FONT_FILES:
-        dest = FONTS / Path(f).name
+        dest = FONTS / Path(f).name.replace("[wdth,wght]", "-Variable")
         if dest.exists() and dest.stat().st_size > 10_000:
             continue
         print(f"downloading font {dest.name}")
         curl = shutil.which("curl")
         if curl:  # curl honours the system trust store (and corporate proxies) where Python may not
-            run([curl, "-fsSL", "--retry", "3", "-o", str(dest), FONT_BASE + f])
+            run([curl, "-fsSL", "--retry", "3", "-o", str(dest), FONT_BASE + quote(f)])
         else:
-            with urllib.request.urlopen(FONT_BASE + f, timeout=60) as resp:  # noqa: S310 - fixed URL
+            with urllib.request.urlopen(FONT_BASE + quote(f), timeout=60) as resp:  # noqa: S310 - fixed URL
                 dest.write_bytes(resp.read())
 
 
@@ -491,7 +584,8 @@ def render_diagrams(diagrams: dict[str, str], ext: str) -> None:
     (work / "puppeteer.json").write_text('{"args": ["--no-sandbox"]}', encoding="utf-8")
     (work / "mermaid.json").write_text(json.dumps({
         "theme": "neutral",
-        "themeVariables": {"fontFamily": "IBM Plex Sans Condensed, Arial Narrow, Arial, sans-serif",
+        "themeVariables": {"fontFamily": ("IBM Plex Sans, Arial, sans-serif" if ED.ru else
+                                          "IBM Plex Sans Condensed, Arial Narrow, Arial, sans-serif"),
                            "fontSize": "15px"},
         "flowchart": {"htmlLabels": ext == "svg", "useMaxWidth": False},
     }), encoding="utf-8")
@@ -516,7 +610,7 @@ def render_diagrams(diagrams: dict[str, str], ext: str) -> None:
 
 def metadata(cur: dict) -> Path:
     meta = BUILD / "metadata.json"
-    meta.write_text(json.dumps({
+    data = {
         "title": cur["book"]["title"],
         "subtitle": cur["book"]["subtitle"],
         "author": AUTHOR,
@@ -526,7 +620,12 @@ def metadata(cur: dict) -> Path:
         "description": "An open-source, evidence-informed textbook on building, leading, scaling, "
                        "and transforming software engineering organizations.",
         "identifier": [{"scheme": "URI", "text": SITE}],
-    }), encoding="utf-8")
+    }
+    if ED.ru:
+        data.update(ED.meta, lang="ru-RU", **{"toc-title": ED.words["contents"]},
+                    rights="CC BY 4.0. © 2026 " + AUTHOR + ".",
+                    identifier=[{"scheme": "URI", "text": SITE + "ru/"}])
+    meta.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     return meta
 
 
@@ -537,16 +636,35 @@ def metadata(cur: dict) -> Path:
 def build_cover(cur: dict) -> Path:
     cover = DIAGRAMS / "cover.png"
     html = BUILD / "cover.html"
+    page = (ASSETS / "cover.html").read_text(encoding="utf-8")
+    if ED.ru:
+        page = sans_for_cyrillic(page.replace('<html lang="en">', '<html lang="ru">'), "{{fonts}}")
     html.write_text(
-        (ASSETS / "cover.html").read_text(encoding="utf-8")
-        .replace("{{title}}", cur["book"]["title"])
-        .replace("{{subtitle}}", cur["book"]["subtitle"])
+        page
+        .replace("{{title}}", ED.meta.get("title", cur["book"]["title"]))
+        .replace("{{subtitle}}", ED.meta.get("subtitle", cur["book"]["subtitle"]))
         .replace("{{author}}", AUTHOR)
         .replace("{{fonts}}", FONTS.as_uri()),
         encoding="utf-8",
     )
     node_print("cover", html, cover)
     return cover
+
+
+def sans_for_cyrillic(css: str, fonts: str = "@FONTS@") -> str:
+    """Point the "Plex Cond" family at the variable IBM Plex Sans, which has Cyrillic, narrowed
+    with font-stretch. Works on a stylesheet or on an HTML page with one <style> block."""
+    css = re.sub(r'@font-face \{ font-family: "Plex Cond";[^}]*\}\n?', "", css)
+    faces = "".join(
+        f'@font-face {{ font-family: "Plex Cond"; font-weight: 100 700; font-stretch: 75% 100%;{style} '
+        f'src: url("{fonts}/{name}"); }}\n'
+        for style, name in (("", "IBMPlexSans-Variable.ttf"),
+                            (" font-style: italic;", "IBMPlexSans-Italic-Variable.ttf")))
+    extra = ("html { font-stretch: 87.5%; }\n"
+             f'nav#TOC::before {{ content: "{ED.words["contents"]}"; }}\n')
+    if "<style>" in css:
+        return css.replace("<style>", "<style>\n" + faces, 1).replace("</style>", extra + "</style>", 1)
+    return faces + css + "\n/* Russian edition */\n" + extra
 
 
 def build_epub(cur: dict) -> Path:
@@ -556,7 +674,7 @@ def build_epub(cur: dict) -> Path:
     ensure_fonts()  # before the diagrams, so mermaid-cli can use the fonts once installed
     render_diagrams(diagrams, "png")
     cover = build_cover(cur)
-    out = DIST / f"{SLUG}.epub"
+    out = DIST / f"{ED.slug}.epub"
     run([pandoc_bin(), str(src), "-f", PANDOC_FROM, "-t", "epub3", "-o", str(out),
          "--metadata-file", str(metadata(cur)), "--toc", "--toc-depth=2", "--split-level=2",
          "--css", str(ASSETS / "epub.css"), "--epub-cover-image", str(cover),
@@ -638,14 +756,16 @@ def build_pdf(cur: dict) -> Path:
     ensure_fonts()  # before the diagrams, so mermaid-cli can use the fonts once installed
     render_diagrams(diagrams, "svg")
     css = BUILD / "print.css"
-    css.write_text((ASSETS / "print.css").read_text(encoding="utf-8")
-                   .replace("@FONTS@", "fonts"), encoding="utf-8")
+    print_css = (ASSETS / "print.css").read_text(encoding="utf-8")
+    if ED.ru:
+        print_css = sans_for_cyrillic(print_css)
+    css.write_text(print_css.replace("@FONTS@", "fonts"), encoding="utf-8")
     html = BUILD / "book.html"
     run([pandoc_bin(), str(src), "-f", PANDOC_FROM, "-t", "html5", "-s", "-o", str(html),
          "--metadata-file", str(metadata(cur)), "--toc", "--toc-depth=2",
          "--css", "print.css", "--columns=10000", "--syntax-highlighting=none",
          "--metadata", "document-css=false", "--section-divs"], cwd=BUILD)
-    out = DIST / f"{SLUG}.pdf"
+    out = DIST / f"{ED.slug}.pdf"
     node_print("pdf", html, out)
     try:
         numbers = toc_page_numbers(out)
@@ -678,7 +798,11 @@ def main() -> int:
     ap.add_argument("--fonts-only", action="store_true",
                     help="download the fonts into build/ebook/fonts and stop (CI installs them)")
     ap.add_argument("--markdown-only", action="store_true", help="write the book Markdown and stop")
+    ap.add_argument("--lang", choices=["en", "ru"], default="en",
+                    help="edition language (ru: the pages that have a Russian translation)")
     args = ap.parse_args()
+    global ED
+    ED = Edition(args.lang)
     BUILD.mkdir(parents=True, exist_ok=True)
     DIST.mkdir(exist_ok=True)
     cur = load_curriculum()
@@ -688,7 +812,8 @@ def main() -> int:
     if args.markdown_only:
         for ext in ("png", "svg"):
             text, diagrams = build_markdown(ext)
-            (BUILD / f"book-{'epub' if ext == 'png' else 'pdf'}.md").write_text(text, encoding="utf-8")
+            (BUILD / f"book-{'epub' if ext == 'png' else 'pdf'}{'-ru' if ED.ru else ''}.md").write_text(
+                text, encoding="utf-8")
         print(f"[ebooks] wrote {BUILD.relative_to(ROOT)}/book-*.md, {len(diagrams)} diagrams")
         return 0
     both = not (args.epub or args.pdf)

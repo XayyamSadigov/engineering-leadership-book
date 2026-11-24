@@ -1760,6 +1760,10 @@ the website, such as the Northstar data files, appear in the downloads as plain 
 Like the website, every chapter is awaiting human review: the downloads say so once, at the front,
 rather than on every chapter. The text is licensed under CC BY 4.0.
 
+A Russian edition is available too, on the [Russian download page](https://xayyamsadigov.github.io/engineering-leadership-book/ru/download/):
+it has all 60 chapters, the front pages, the glossary, and the Northstar case; solutions, templates, and
+projects are not translated yet.
+
 
 ---
 

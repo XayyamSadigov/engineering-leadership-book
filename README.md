@@ -7,7 +7,7 @@ engineering organizations. Sixty chapters take you from your first team to the C
 one fictional company, Northstar Technologies, followed through a year of recovery as the running
 case.
 
-**[Read online](https://xayyamsadigov.github.io/engineering-leadership-book/)** · **[EPUB](https://xayyamsadigov.github.io/engineering-leadership-book/downloads/engineering-leadership-handbook.epub)** · **[PDF](https://xayyamsadigov.github.io/engineering-leadership-book/downloads/engineering-leadership-handbook.pdf)** · [Русская версия](https://xayyamsadigov.github.io/engineering-leadership-book/ru/) (in progress)
+**[Read online](https://xayyamsadigov.github.io/engineering-leadership-book/)** · **[EPUB](https://xayyamsadigov.github.io/engineering-leadership-book/downloads/engineering-leadership-handbook.epub)** · **[PDF](https://xayyamsadigov.github.io/engineering-leadership-book/downloads/engineering-leadership-handbook.pdf)** · Русская версия: [онлайн](https://xayyamsadigov.github.io/engineering-leadership-book/ru/) · [EPUB](https://xayyamsadigov.github.io/engineering-leadership-book/downloads/engineering-leadership-handbook-ru.epub) · [PDF](https://xayyamsadigov.github.io/engineering-leadership-book/downloads/engineering-leadership-handbook-ru.pdf) (60 chapters; solutions, templates, and projects in English)
 
 > **Status:** complete draft. All chapters, templates, and projects are written and checked by
 > automated validation and independent review; the citations still await a human reviewer.

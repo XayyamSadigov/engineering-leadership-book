@@ -57,10 +57,13 @@ jobs:
           fc-cache -f
       - name: Build the EPUB and PDF editions
         run: python tools/build_ebooks.py
+      - name: Build the Russian EPUB and PDF editions
+        run: python tools/build_ebooks.py --lang ru
       - name: Attach the EPUB and PDF to the site
         run: |
           mkdir -p site/downloads
           cp dist/engineering-leadership-handbook.epub dist/engineering-leadership-handbook.pdf site/downloads/
+          cp dist/engineering-leadership-handbook-ru.epub dist/engineering-leadership-handbook-ru.pdf site/downloads/
           ls -l site/downloads
       - name: Keep the e-books as a workflow artifact
         uses: actions/upload-artifact@v4
@@ -69,6 +72,8 @@ jobs:
           path: |
             dist/engineering-leadership-handbook.epub
             dist/engineering-leadership-handbook.pdf
+            dist/engineering-leadership-handbook-ru.epub
+            dist/engineering-leadership-handbook-ru.pdf
           retention-days: 30
 
       - uses: actions/upload-pages-artifact@v3

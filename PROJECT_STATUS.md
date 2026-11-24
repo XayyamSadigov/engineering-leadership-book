@@ -111,9 +111,13 @@ folder; the before-copies for unedited files live there.
 
 - **Done on `main` (translated, edited, meaning-checked): all 60 chapters**, plus front matter, glossary,
   evidence labels, all Northstar pages (2026-11-24). Branch `ru-wip` is merged and deleted.
+- **Russian EPUB and PDF** (2026-11-24): `tools/build_ebooks.py --lang ru` builds every page that has a
+  `.ru.md` (60 chapters, front pages, glossary, Northstar; bibliography in its original form); CI publishes
+  `downloads/engineering-leadership-handbook-ru.{epub,pdf}`, linked from `docs/download.ru.md` and the
+  README. Words the script adds live in `tools/ebook/ru.yaml`. The sans-serif face is the variable IBM
+  Plex Sans (Plex Sans Condensed has no Cyrillic). As pages are translated they join the books automatically.
 - **Next:** solutions (60 files, about 126,000 words), templates (25, about 41,000), projects and project
-  solutions (17, about 56,000), with the same three-step process; then a Russian download page and Russian
-  EPUB/PDF (`tools/build_ebooks.py` builds English only).
+  solutions (17, about 56,000), with the same three-step process.
 - English issues found by the meaning checks and not yet fixed: the "English problems" sections of
   `research/translation-ru/meaning-check-batch*.md` (access notes in reader text in several chapters,
   Failure Modes fields that do not match their labels, small ambiguities). Already fixed in English during
