@@ -29196,7 +29196,7 @@ Signal: polite nods, no change. Countermeasure: restate as revenue at risk, date
 
 ### Enterprise Application
 
-In an organization of 50 to 150 engineers, portfolio and cross-functional work needs four standing
+In an organization of 50 to 150 engineers, portfolio and cross-functional work needs five standing
 pieces.
 
 **One portfolio board** of every cross-team initiative, in progress and waiting, with sponsor, lead
