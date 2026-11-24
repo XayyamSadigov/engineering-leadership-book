@@ -1,6 +1,6 @@
 # Project status
 
-Last updated: 2026-11-23 (session 5: readability rounds 1–3, EPUB/PDF, README, Russian chapters 1–48). PAUSED by the user.
+Last updated: 2026-11-23 (session 5: readability rounds 1–3, EPUB/PDF, README, Russian chapters 1–60).
 
 **Summary.** The book is fully drafted: all 60 chapters (including the capstone), all 24 templates, and
 all 8 projects are written and on the site in `review` status. Each passed automated validation and an
@@ -109,14 +109,11 @@ Process per chapter (binding): translate (`research/translation-ru-brief.md`) �
 Pipeline at most three agents at a time (the user asked to go slowly). Each agent uses its own scratchpad
 folder; the before-copies for unedited files live there.
 
-- **Done on `main` (translated, edited, meaning-checked): chapters 1–48**, plus front matter, glossary,
-  evidence labels, all Northstar pages.
-- **On branch `ru-wip` (translated only, commit cbe469b): chapters 49–52.** To resume: `git checkout
-  ru-wip -- docs/parts/11-vp-engineering/49-*.ru.md docs/parts/12-cto-leadership/5[0-2]-*.ru.md
-  research/translation-ru/notes-t19.md research/translation-ru/notes-t20.md` on `main`, then edit and
-  meaning-check them before committing to `main` (the site deploys from `main`).
-- **Next:** translate 53–60; then solutions, templates, projects; a Russian download page and Russian
-  EPUB/PDF; update the note on `docs/index.ru.md` (it still says chapters 1–18).
+- **Done on `main` (translated, edited, meaning-checked): all 60 chapters**, plus front matter, glossary,
+  evidence labels, all Northstar pages (2026-11-24). Branch `ru-wip` is merged and deleted.
+- **Next:** solutions (60 files, about 126,000 words), templates (25, about 41,000), projects and project
+  solutions (17, about 56,000), with the same three-step process; then a Russian download page and Russian
+  EPUB/PDF (`tools/build_ebooks.py` builds English only).
 - English issues found by the meaning checks and not yet fixed: the "English problems" sections of
   `research/translation-ru/meaning-check-batch*.md` (access notes in reader text in several chapters,
   Failure Modes fields that do not match their labels, small ambiguities). Already fixed in English during
