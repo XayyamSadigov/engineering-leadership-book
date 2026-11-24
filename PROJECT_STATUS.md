@@ -1,6 +1,6 @@
 # Project status
 
-Last updated: 2026-11-23 (session 5: readability rounds 1–3, EPUB/PDF, README, Russian chapters 1–18). PAUSED by the user.
+Last updated: 2026-11-23 (session 5: readability rounds 1–3, EPUB/PDF, README, Russian chapters 1–48). PAUSED by the user.
 
 **Summary.** The book is fully drafted: all 60 chapters (including the capstone), all 24 templates, and
 all 8 projects are written and on the site in `review` status. Each passed automated validation and an
@@ -101,21 +101,26 @@ Read `CLAUDE.md`, then this file, then run `.venv/bin/python tools/validate_book
 - Next: translate chapters, solutions, templates, and projects once their rewrites settle; re-sync the
   translated pages whenever their English sources change (record lags in the term base, section 5).
 
-## Russian edition: state at the pause (2026-11-23)
+## Russian edition: state at the pause (2026-11-24)
 
 Process per chapter (binding): translate (`research/translation-ru-brief.md`) → Russian-only literary edit
 (`research/translation-ru-editing-brief.md`, editors see no English) → meaning check against the English
-(one bilingual agent per batch, report in `research/translation-ru/meaning-check-*.md`). At most three agents
-at a time (the user asked to go slowly to stay within usage limits).
+(one bilingual agent per pair of chapters, report in `research/translation-ru/meaning-check-batch*.md`).
+Pipeline at most three agents at a time (the user asked to go slowly). Each agent uses its own scratchpad
+folder; the before-copies for unedited files live there.
 
-- Translated: chapters 1–18, front matter, glossary, evidence labels, all Northstar pages.
-- Literary edit done: chapters 1–14 (meaning check for 8–12 and 14 done; 1–7 and 13 checked by the
-  maintainer). **Next:** edit chapters 15–18, meaning-check them; then translate chapters 19–60 in batches of
-  three agents × two chapters, each batch followed by edit and meaning check; then solutions, templates,
-  projects; then a Russian download page and Russian EPUB/PDF.
-- English issues found by the meaning checks, still to fix in the English chapters: see "Possible problems in
-  the English" in `research/translation-ru/meaning-check-batch2.md` (access notes in Ch 8 and 12, Ch 8 X2
-  "pay compression", Ch 14 reflection 1, and others).
+- **Done on `main` (translated, edited, meaning-checked): chapters 1–48**, plus front matter, glossary,
+  evidence labels, all Northstar pages.
+- **On branch `ru-wip` (translated only, commit cbe469b): chapters 49–52.** To resume: `git checkout
+  ru-wip -- docs/parts/11-vp-engineering/49-*.ru.md docs/parts/12-cto-leadership/5[0-2]-*.ru.md
+  research/translation-ru/notes-t19.md research/translation-ru/notes-t20.md` on `main`, then edit and
+  meaning-check them before committing to `main` (the site deploys from `main`).
+- **Next:** translate 53–60; then solutions, templates, projects; a Russian download page and Russian
+  EPUB/PDF; update the note on `docs/index.ru.md` (it still says chapters 1–18).
+- English issues found by the meaning checks and not yet fixed: the "English problems" sections of
+  `research/translation-ru/meaning-check-batch*.md` (access notes in reader text in several chapters,
+  Failure Modes fields that do not match their labels, small ambiguities). Already fixed in English during
+  translation: Ch 3, 4, 18, 21, 25, 42, 47, and the portfolio forum moved to week 32 (Ch 42, 45, case pages).
 
 ## Readability: state at the pause
 
